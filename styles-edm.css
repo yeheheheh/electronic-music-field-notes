@@ -4143,3 +4143,99 @@ main,
     font-size: 12px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Atlas filter bar and the corrections table were the last two places where
+   content could exceed the viewport. `body{overflow-x:hidden}` hid the table,
+   which is worse than scrolling: the third column was simply unreachable.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .atlas-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .atlas-search,
+  .atlas-toolbar .filter-select,
+  .atlas-toolbar .toolbar-group {
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-select {
+    min-width: 0;
+  }
+
+  .atlas-toolbar .toolbar-group {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .atlas-toolbar .filter-input {
+    flex: 1 1 90px;
+    width: auto;
+  }
+}
+
+/* Corrections table becomes stacked rows: three columns never fit a phone. */
+@media (max-width: 720px) {
+  .correction-table {
+    display: block;
+    margin-top: 14px;
+  }
+
+  .correction-table thead {
+    display: none;
+  }
+
+  .correction-table tbody,
+  .correction-table tr,
+  .correction-table td {
+    display: block;
+  }
+
+  .correction-table tr {
+    padding: 12px 0 13px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .correction-table tr:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .correction-table td {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 8px;
+    padding: 3px 0;
+    border: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .correction-table td::before {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--muted-2);
+  }
+
+  .correction-table td:nth-child(1)::before {
+    content: "转写";
+  }
+
+  .correction-table td:nth-child(2)::before {
+    content: "校正为";
+  }
+
+  .correction-table td:nth-child(3)::before {
+    content: "说明";
+  }
+
+  .correction-table th {
+    font-size: 11px;
+  }
+}
