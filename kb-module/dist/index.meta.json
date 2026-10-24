@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "tokenizer": "cjk-unigram-bigram-bm25-v1",
-  "builtAt": "2026-10-23T17:10:57.049Z",
-  "docCount": 1356,
+  "builtAt": "2026-10-24T12:06:05.591Z",
+  "docCount": 1541,
   "docs": [
     {
       "id": "g-383",
@@ -13818,6 +13818,2075 @@
       "length": 118
     },
     {
+      "id": "g-19376",
+      "docId": "g-19376",
+      "type": "entry",
+      "title": "Electronic Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 402
+    },
+    {
+      "id": "g-19390",
+      "docId": "g-19390",
+      "type": "entry",
+      "title": "Electropop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 360
+    },
+    {
+      "id": "g-19402",
+      "docId": "g-19402",
+      "type": "entry",
+      "title": "Glitch Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 265
+    },
+    {
+      "id": "g-19412",
+      "docId": "g-19412",
+      "type": "entry",
+      "title": "Synth-Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 412
+    },
+    {
+      "id": "g-19426",
+      "docId": "g-19426",
+      "type": "entry",
+      "title": "Chillwave",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 406
+    },
+    {
+      "id": "g-19438",
+      "docId": "g-19438",
+      "type": "entry",
+      "title": "Chillsynth",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": {
+        "min": 90,
+        "max": 110,
+        "label": "90–110"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 347
+    },
+    {
+      "id": "g-19450",
+      "docId": "g-19450",
+      "type": "entry",
+      "title": "Sovietwave",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 294
+    },
+    {
+      "id": "g-19460",
+      "docId": "g-19460",
+      "type": "entry",
+      "title": "New Romanticism",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 364
+    },
+    {
+      "id": "g-19472",
+      "docId": "g-19472",
+      "type": "entry",
+      "title": "City Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 362
+    },
+    {
+      "id": "g-19486",
+      "docId": "g-19486",
+      "type": "entry",
+      "title": "Dance-Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 280
+    },
+    {
+      "id": "g-19496",
+      "docId": "g-19496",
+      "type": "entry",
+      "title": "House-Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 350
+    },
+    {
+      "id": "g-19508",
+      "docId": "g-19508",
+      "type": "entry",
+      "title": "Bubblegum Dance",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": {
+        "min": 140,
+        "max": 140,
+        "label": "140"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 337
+    },
+    {
+      "id": "g-19520",
+      "docId": "g-19520",
+      "type": "entry",
+      "title": "Eurodance",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 379
+    },
+    {
+      "id": "g-19534",
+      "docId": "g-19534",
+      "type": "entry",
+      "title": "Eurobeat",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": {
+        "min": 150,
+        "max": 160,
+        "label": "150–160"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 358
+    },
+    {
+      "id": "g-19548",
+      "docId": "g-19548",
+      "type": "entry",
+      "title": "Hyperpop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 408
+    },
+    {
+      "id": "g-19562",
+      "docId": "g-19562",
+      "type": "entry",
+      "title": "Dariacore",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": {
+        "min": 170,
+        "max": 200,
+        "label": "170–200"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 330
+    },
+    {
+      "id": "g-19574",
+      "docId": "g-19574",
+      "type": "entry",
+      "title": "Digicore",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 358
+    },
+    {
+      "id": "g-19586",
+      "docId": "g-19586",
+      "type": "entry",
+      "title": "Robloxcore",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 269
+    },
+    {
+      "id": "g-19596",
+      "docId": "g-19596",
+      "type": "entry",
+      "title": "Glitchcore",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 272
+    },
+    {
+      "id": "g-19608",
+      "docId": "g-19608",
+      "type": "entry",
+      "title": "Electroclash",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 350
+    },
+    {
+      "id": "g-19620",
+      "docId": "g-19620",
+      "type": "entry",
+      "title": "Wonky Pop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 258
+    },
+    {
+      "id": "g-19630",
+      "docId": "g-19630",
+      "type": "entry",
+      "title": "Picopop",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 269
+    },
+    {
+      "id": "g-19642",
+      "docId": "g-19642",
+      "type": "entry",
+      "title": "Shibuya-Kei",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 308
+    },
+    {
+      "id": "g-19679",
+      "docId": "g-19679",
+      "type": "entry",
+      "title": "R&B",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 356
+    },
+    {
+      "id": "g-19691",
+      "docId": "g-19691",
+      "type": "entry",
+      "title": "Contemporary R&B",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 312
+    },
+    {
+      "id": "g-19703",
+      "docId": "g-19703",
+      "type": "entry",
+      "title": "Trap Soul",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": {
+        "min": 130,
+        "max": 150,
+        "label": "130–150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 349
+    },
+    {
+      "id": "g-19715",
+      "docId": "g-19715",
+      "type": "entry",
+      "title": "Alternative R&B",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 344
+    },
+    {
+      "id": "g-19727",
+      "docId": "g-19727",
+      "type": "entry",
+      "title": "Neo Soul",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 315
+    },
+    {
+      "id": "g-19739",
+      "docId": "g-19739",
+      "type": "entry",
+      "title": "Quiet Storm",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 303
+    },
+    {
+      "id": "g-19751",
+      "docId": "g-19751",
+      "type": "entry",
+      "title": "Slow Jam",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": {
+        "min": 60,
+        "max": 80,
+        "label": "60–80"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 268
+    },
+    {
+      "id": "g-19802",
+      "docId": "g-19802",
+      "type": "entry",
+      "title": "Electronic Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 366
+    },
+    {
+      "id": "g-19814",
+      "docId": "g-19814",
+      "type": "entry",
+      "title": "Electronic Metal",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 394
+    },
+    {
+      "id": "g-19826",
+      "docId": "g-19826",
+      "type": "entry",
+      "title": "Nintendocore",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 288
+    },
+    {
+      "id": "g-19836",
+      "docId": "g-19836",
+      "type": "entry",
+      "title": "Cybergrind",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 306
+    },
+    {
+      "id": "g-19848",
+      "docId": "g-19848",
+      "type": "entry",
+      "title": "Synth Metal",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 269
+    },
+    {
+      "id": "g-19858",
+      "docId": "g-19858",
+      "type": "entry",
+      "title": "Electronicore",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 432
+    },
+    {
+      "id": "g-19870",
+      "docId": "g-19870",
+      "type": "entry",
+      "title": "Gaze",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 311
+    },
+    {
+      "id": "g-19882",
+      "docId": "g-19882",
+      "type": "entry",
+      "title": "Blackgaze",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 273
+    },
+    {
+      "id": "g-19892",
+      "docId": "g-19892",
+      "type": "entry",
+      "title": "Doomgaze",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": {
+        "min": 70,
+        "max": 70,
+        "label": "70"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 250
+    },
+    {
+      "id": "g-19902",
+      "docId": "g-19902",
+      "type": "entry",
+      "title": "Nu gaze",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 294
+    },
+    {
+      "id": "g-19914",
+      "docId": "g-19914",
+      "type": "entry",
+      "title": "Shoegaze",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 390
+    },
+    {
+      "id": "g-19926",
+      "docId": "g-19926",
+      "type": "entry",
+      "title": "Indie Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 315
+    },
+    {
+      "id": "g-19938",
+      "docId": "g-19938",
+      "type": "entry",
+      "title": "Noise Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 231
+    },
+    {
+      "id": "g-19948",
+      "docId": "g-19948",
+      "type": "entry",
+      "title": "Progressive Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 434
+    },
+    {
+      "id": "g-19960",
+      "docId": "g-19960",
+      "type": "entry",
+      "title": "Psychedelic Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 325
+    },
+    {
+      "id": "g-19972",
+      "docId": "g-19972",
+      "type": "entry",
+      "title": "Space Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 269
+    },
+    {
+      "id": "g-19984",
+      "docId": "g-19984",
+      "type": "entry",
+      "title": "Industrial Rock",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 323
+    },
+    {
+      "id": "g-20027",
+      "docId": "g-20027",
+      "type": "entry",
+      "title": "Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 286
+    },
+    {
+      "id": "g-20039",
+      "docId": "g-20039",
+      "type": "entry",
+      "title": "Electro-Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 338
+    },
+    {
+      "id": "g-20051",
+      "docId": "g-20051",
+      "type": "entry",
+      "title": "Synth Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 301
+    },
+    {
+      "id": "g-20063",
+      "docId": "g-20063",
+      "type": "entry",
+      "title": "G-Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": {
+        "min": 90,
+        "max": 90,
+        "label": "90"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 323
+    },
+    {
+      "id": "g-20075",
+      "docId": "g-20075",
+      "type": "entry",
+      "title": "Jazz Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": {
+        "min": 100,
+        "max": 120,
+        "label": "100–120"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 299
+    },
+    {
+      "id": "g-20087",
+      "docId": "g-20087",
+      "type": "entry",
+      "title": "Funkstep",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 294
+    },
+    {
+      "id": "g-20099",
+      "docId": "g-20099",
+      "type": "entry",
+      "title": "UK Funky",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 235
+    },
+    {
+      "id": "g-20109",
+      "docId": "g-20109",
+      "type": "entry",
+      "title": "Nu-Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 248
+    },
+    {
+      "id": "g-20121",
+      "docId": "g-20121",
+      "type": "entry",
+      "title": "Ghetto Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": {
+        "min": 100,
+        "max": 115,
+        "label": "100–115"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 256
+    },
+    {
+      "id": "g-20131",
+      "docId": "g-20131",
+      "type": "entry",
+      "title": "Future Funk",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": {
+        "min": 120,
+        "max": 130,
+        "label": "120–130"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 293
+    },
+    {
+      "id": "g-20141",
+      "docId": "g-20141",
+      "type": "entry",
+      "title": "Funk Mandelão",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": {
+        "min": 130,
+        "max": 130,
+        "label": "130"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 300
+    },
+    {
+      "id": "g-20188",
+      "docId": "g-20188",
+      "type": "entry",
+      "title": "Chill-Out",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 307
+    },
+    {
+      "id": "g-20200",
+      "docId": "g-20200",
+      "type": "entry",
+      "title": "Downtempo",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": {
+        "min": 60,
+        "max": 110,
+        "label": "60–110"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 309
+    },
+    {
+      "id": "g-20212",
+      "docId": "g-20212",
+      "type": "entry",
+      "title": "Trip Hop",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": {
+        "min": 80,
+        "max": 100,
+        "label": "80–100"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 394
+    },
+    {
+      "id": "g-20224",
+      "docId": "g-20224",
+      "type": "entry",
+      "title": "Nu Jazz",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 289
+    },
+    {
+      "id": "g-20236",
+      "docId": "g-20236",
+      "type": "entry",
+      "title": "KetaPop",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 221
+    },
+    {
+      "id": "g-20246",
+      "docId": "g-20246",
+      "type": "entry",
+      "title": "Progressive Chill-Out",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 303
+    },
+    {
+      "id": "g-20256",
+      "docId": "g-20256",
+      "type": "entry",
+      "title": "Illbient",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 282
+    },
+    {
+      "id": "g-20268",
+      "docId": "g-20268",
+      "type": "entry",
+      "title": "Lounge Music",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 306
+    },
+    {
+      "id": "g-20280",
+      "docId": "g-20280",
+      "type": "entry",
+      "title": "Balearic Beat",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 371
+    },
+    {
+      "id": "g-20292",
+      "docId": "g-20292",
+      "type": "entry",
+      "title": "Chill House",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": {
+        "min": 100,
+        "max": 118,
+        "label": "100–118"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 309
+    },
+    {
+      "id": "g-20304",
+      "docId": "g-20304",
+      "type": "entry",
+      "title": "Chill Trance",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": {
+        "min": 100,
+        "max": 120,
+        "label": "100–120"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 259
+    },
+    {
+      "id": "g-20314",
+      "docId": "g-20314",
+      "type": "entry",
+      "title": "Chillstep",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 289
+    },
+    {
+      "id": "g-20361",
+      "docId": "g-20361",
+      "type": "entry",
+      "title": "Bass / Club",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 337
+    },
+    {
+      "id": "g-20373",
+      "docId": "g-20373",
+      "type": "entry",
+      "title": "Bass",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 310
+    },
+    {
+      "id": "g-20385",
+      "docId": "g-20385",
+      "type": "entry",
+      "title": "Club",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 130,
+        "max": 145,
+        "label": "130–145"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 274
+    },
+    {
+      "id": "g-20397",
+      "docId": "g-20397",
+      "type": "entry",
+      "title": "Bérite",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 140,
+        "max": 140,
+        "label": "140"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 249
+    },
+    {
+      "id": "g-20407",
+      "docId": "g-20407",
+      "type": "entry",
+      "title": "Jigg",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 233
+    },
+    {
+      "id": "g-20417",
+      "docId": "g-20417",
+      "type": "entry",
+      "title": "Jook",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 130,
+        "max": 140,
+        "label": "130–140"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 207
+    },
+    {
+      "id": "g-20427",
+      "docId": "g-20427",
+      "type": "entry",
+      "title": "Jersey Terror",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 251
+    },
+    {
+      "id": "g-20437",
+      "docId": "g-20437",
+      "type": "entry",
+      "title": "East Coast Club",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 332
+    },
+    {
+      "id": "g-20447",
+      "docId": "g-20447",
+      "type": "entry",
+      "title": "Electro Bass",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 319
+    },
+    {
+      "id": "g-20459",
+      "docId": "g-20459",
+      "type": "entry",
+      "title": "Car Audio Bass",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 301
+    },
+    {
+      "id": "g-20471",
+      "docId": "g-20471",
+      "type": "entry",
+      "title": "R&Bass",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 70,
+        "max": 90,
+        "label": "70–90"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 253
+    },
+    {
+      "id": "g-20481",
+      "docId": "g-20481",
+      "type": "entry",
+      "title": "Snap Music",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": {
+        "min": 70,
+        "max": 80,
+        "label": "70–80"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 263
+    },
+    {
+      "id": "g-20524",
+      "docId": "g-20524",
+      "type": "entry",
+      "title": "Chiptune",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 386
+    },
+    {
+      "id": "g-20536",
+      "docId": "g-20536",
+      "type": "entry",
+      "title": "Chip Rock",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 237
+    },
+    {
+      "id": "g-20548",
+      "docId": "g-20548",
+      "type": "entry",
+      "title": "Chip Punk",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": {
+        "min": 160,
+        "max": 200,
+        "label": "160–200"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 220
+    },
+    {
+      "id": "g-20558",
+      "docId": "g-20558",
+      "type": "entry",
+      "title": "Chipthrash",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 221
+    },
+    {
+      "id": "g-20568",
+      "docId": "g-20568",
+      "type": "entry",
+      "title": "Chip Metal",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 211
+    },
+    {
+      "id": "g-20578",
+      "docId": "g-20578",
+      "type": "entry",
+      "title": "Chip Hop",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": {
+        "min": 80,
+        "max": 100,
+        "label": "80–100"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 265
+    },
+    {
+      "id": "g-20590",
+      "docId": "g-20590",
+      "type": "entry",
+      "title": "Chipstep",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 210
+    },
+    {
+      "id": "g-20600",
+      "docId": "g-20600",
+      "type": "entry",
+      "title": "Chipbreak",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": {
+        "min": 160,
+        "max": 200,
+        "label": "160–200"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 257
+    },
+    {
+      "id": "g-20612",
+      "docId": "g-20612",
+      "type": "entry",
+      "title": "Chipcore",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": {
+        "min": 180,
+        "max": 180,
+        "label": "180"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 244
+    },
+    {
+      "id": "g-20622",
+      "docId": "g-20622",
+      "type": "entry",
+      "title": "Demostyle",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 399
+    },
+    {
+      "id": "g-20634",
+      "docId": "g-20634",
+      "type": "entry",
+      "title": "Amigacore",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 309
+    },
+    {
+      "id": "g-20675",
+      "docId": "g-20675",
+      "type": "entry",
+      "title": "Remix & Edit",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 303
+    },
+    {
+      "id": "g-20687",
+      "docId": "g-20687",
+      "type": "entry",
+      "title": "Remix",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 334
+    },
+    {
+      "id": "g-20699",
+      "docId": "g-20699",
+      "type": "entry",
+      "title": "Mashup",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 260
+    },
+    {
+      "id": "g-20711",
+      "docId": "g-20711",
+      "type": "entry",
+      "title": "Edit",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 241
+    },
+    {
+      "id": "g-20723",
+      "docId": "g-20723",
+      "type": "entry",
+      "title": "Bootleg",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 291
+    },
+    {
+      "id": "g-20735",
+      "docId": "g-20735",
+      "type": "entry",
+      "title": "Nightcore",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": {
+        "min": 170,
+        "max": 200,
+        "label": "170–200"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 402
+    },
+    {
+      "id": "g-20747",
+      "docId": "g-20747",
+      "type": "entry",
+      "title": "Daycore",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 225
+    },
+    {
+      "id": "g-20757",
+      "docId": "g-20757",
+      "type": "entry",
+      "title": "Nightstep",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 297
+    },
+    {
+      "id": "g-20767",
+      "docId": "g-20767",
+      "type": "entry",
+      "title": "Bass Boosted",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 272
+    },
+    {
+      "id": "g-20777",
+      "docId": "g-20777",
+      "type": "entry",
+      "title": "Chopped and Screwed",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 352
+    },
+    {
+      "id": "g-20822",
+      "docId": "g-20822",
+      "type": "entry",
+      "title": "Acousmatic Music",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 311
+    },
+    {
+      "id": "g-20834",
+      "docId": "g-20834",
+      "type": "entry",
+      "title": "Data Sonification",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 284
+    },
+    {
+      "id": "g-20846",
+      "docId": "g-20846",
+      "type": "entry",
+      "title": "Electronic Free Improvisation",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 360
+    },
+    {
+      "id": "g-20858",
+      "docId": "g-20858",
+      "type": "entry",
+      "title": "Field Recording",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 289
+    },
+    {
+      "id": "g-20870",
+      "docId": "g-20870",
+      "type": "entry",
+      "title": "Radio Broadcasting Recordings",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 328
+    },
+    {
+      "id": "g-20882",
+      "docId": "g-20882",
+      "type": "entry",
+      "title": "Graphical Sound",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 287
+    },
+    {
+      "id": "g-20894",
+      "docId": "g-20894",
+      "type": "entry",
+      "title": "Experimental Bass",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 267
+    },
+    {
+      "id": "g-20906",
+      "docId": "g-20906",
+      "type": "entry",
+      "title": "Colour Hop",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": {
+        "min": 100,
+        "max": 110,
+        "label": "100–110"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 270
+    },
+    {
+      "id": "g-20918",
+      "docId": "g-20918",
+      "type": "entry",
+      "title": "Live Electronics",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 280
+    },
+    {
+      "id": "g-20930",
+      "docId": "g-20930",
+      "type": "entry",
+      "title": "Livetronica",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 259
+    },
+    {
+      "id": "g-20942",
+      "docId": "g-20942",
+      "type": "entry",
+      "title": "Spectral Music",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 275
+    },
+    {
+      "id": "g-21029",
+      "docId": "g-21029",
+      "type": "entry",
+      "title": "Hard House",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 140,
+        "max": 150,
+        "label": "140–150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 297
+    },
+    {
+      "id": "g-21041",
+      "docId": "g-21041",
+      "type": "entry",
+      "title": "Indie House",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 221
+    },
+    {
+      "id": "g-21051",
+      "docId": "g-21051",
+      "type": "entry",
+      "title": "Drillcore",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 224
+    },
+    {
+      "id": "g-21061",
+      "docId": "g-21061",
+      "type": "entry",
+      "title": "Darkcore",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 160,
+        "max": 160,
+        "label": "160"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 295
+    },
+    {
+      "id": "g-21073",
+      "docId": "g-21073",
+      "type": "entry",
+      "title": "Dark Gabber",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 180,
+        "max": 200,
+        "label": "180–200"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 256
+    },
+    {
+      "id": "g-21085",
+      "docId": "g-21085",
+      "type": "entry",
+      "title": "UK Hardcore",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 170,
+        "max": 170,
+        "label": "170"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 275
+    },
+    {
+      "id": "g-21097",
+      "docId": "g-21097",
+      "type": "entry",
+      "title": "Hardtek",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 150,
+        "max": 180,
+        "label": "150–180"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 248
+    },
+    {
+      "id": "g-21109",
+      "docId": "g-21109",
+      "type": "entry",
+      "title": "Frenchcore",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 180,
+        "max": 220,
+        "label": "180–220"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 227
+    },
+    {
+      "id": "g-21119",
+      "docId": "g-21119",
+      "type": "entry",
+      "title": "Hands Up Trance",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 140,
+        "max": 150,
+        "label": "140–150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 266
+    },
+    {
+      "id": "g-21129",
+      "docId": "g-21129",
+      "type": "entry",
+      "title": "Psybient",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 70,
+        "max": 110,
+        "label": "70–110"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 257
+    },
+    {
+      "id": "g-21141",
+      "docId": "g-21141",
+      "type": "entry",
+      "title": "Chillgressive",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 110,
+        "max": 125,
+        "label": "110–125"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 233
+    },
+    {
+      "id": "g-21151",
+      "docId": "g-21151",
+      "type": "entry",
+      "title": "Minimal Ambient",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 246
+    },
+    {
+      "id": "g-21163",
+      "docId": "g-21163",
+      "type": "entry",
+      "title": "Compositional Ambient",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 217
+    },
+    {
+      "id": "g-21173",
+      "docId": "g-21173",
+      "type": "entry",
+      "title": "Dronegaze",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 195
+    },
+    {
+      "id": "g-21183",
+      "docId": "g-21183",
+      "type": "entry",
+      "title": "Dark Breaks",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 140,
+        "max": 170,
+        "label": "140–170"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 217
+    },
+    {
+      "id": "g-21193",
+      "docId": "g-21193",
+      "type": "entry",
+      "title": "Experimental Breaks",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 218
+    },
+    {
+      "id": "g-21203",
+      "docId": "g-21203",
+      "type": "entry",
+      "title": "Dancefloor Drum and Bass",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 174,
+        "max": 174,
+        "label": "174"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 321
+    },
+    {
+      "id": "g-21215",
+      "docId": "g-21215",
+      "type": "entry",
+      "title": "Deep Drum and Bass",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": {
+        "min": 170,
+        "max": 174,
+        "label": "170–174"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 241
+    },
+    {
+      "id": "g-21225",
+      "docId": "g-21225",
+      "type": "entry",
+      "title": "Glitchbreak",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 189
+    },
+    {
+      "id": "g-21235",
+      "docId": "g-21235",
+      "type": "entry",
+      "title": "Proto-Dubstep",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 252
+    },
+    {
+      "id": "g-21247",
+      "docId": "g-21247",
+      "type": "entry",
+      "title": "Tearout",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 206
+    },
+    {
+      "id": "g-21259",
+      "docId": "g-21259",
+      "type": "entry",
+      "title": "Weightless",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 193
+    },
+    {
+      "id": "g-21269",
+      "docId": "g-21269",
+      "type": "entry",
+      "title": "Sublow",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 157
+    },
+    {
+      "id": "g-21279",
+      "docId": "g-21279",
+      "type": "entry",
+      "title": "4×4 Garage",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 189
+    },
+    {
+      "id": "g-21289",
+      "docId": "g-21289",
+      "type": "entry",
+      "title": "Vaporpop",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 186
+    },
+    {
+      "id": "g-21299",
+      "docId": "g-21299",
+      "type": "entry",
+      "title": "Raggastep",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 215
+    },
+    {
+      "id": "g-21309",
+      "docId": "g-21309",
+      "type": "entry",
+      "title": "Lo-Fi Techno",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 197
+    },
+    {
+      "id": "g-21319",
+      "docId": "g-21319",
+      "type": "entry",
+      "title": "Stutter Techno",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 218
+    },
+    {
+      "id": "g-21329",
+      "docId": "g-21329",
+      "type": "entry",
+      "title": "Electro Hop",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 193
+    },
+    {
+      "id": "g-21339",
+      "docId": "g-21339",
+      "type": "entry",
+      "title": "Country Dance Music",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 253
+    },
+    {
+      "id": "g-21351",
+      "docId": "g-21351",
+      "type": "entry",
+      "title": "French Hip Hop",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 255
+    },
+    {
+      "id": "g-21361",
+      "docId": "g-21361",
+      "type": "entry",
+      "title": "Minimal Electro",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 220
+    },
+    {
+      "id": "g-21390",
+      "docId": "g-21390",
+      "type": "entry",
+      "title": "Hard House (UK)",
+      "family": "Hard Dance 补遗",
+      "familyId": "f-21372",
+      "bpm": {
+        "min": 145,
+        "max": 155,
+        "label": "145–155"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 323
+    },
+    {
+      "id": "g-21402",
+      "docId": "g-21402",
+      "type": "entry",
+      "title": "Hardstyle (Base)",
+      "family": "Hard Dance 补遗",
+      "familyId": "f-21372",
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 348
+    },
+    {
+      "id": "g-21414",
+      "docId": "g-21414",
+      "type": "entry",
+      "title": "Neo Rave",
+      "family": "Hard Dance 补遗",
+      "familyId": "f-21372",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 230
+    },
+    {
+      "id": "g-21424",
+      "docId": "g-21424",
+      "type": "entry",
+      "title": "Hard House (Chicago)",
+      "family": "Hard Dance 补遗",
+      "familyId": "f-21372",
+      "bpm": {
+        "min": 130,
+        "max": 140,
+        "label": "130–140"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 354
+    },
+    {
+      "id": "g-21487",
+      "docId": "g-21487",
+      "type": "entry",
+      "title": "Alternative Dance",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 270
+    },
+    {
+      "id": "g-21499",
+      "docId": "g-21499",
+      "type": "entry",
+      "title": "Dance-Punk",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": {
+        "min": 120,
+        "max": 140,
+        "label": "120–140"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 228
+    },
+    {
+      "id": "g-21509",
+      "docId": "g-21509",
+      "type": "entry",
+      "title": "Electro Punk",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 212
+    },
+    {
+      "id": "g-21519",
+      "docId": "g-21519",
+      "type": "entry",
+      "title": "Mathcore",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 257
+    },
+    {
+      "id": "g-21531",
+      "docId": "g-21531",
+      "type": "entry",
+      "title": "Sasscore",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 207
+    },
+    {
+      "id": "g-21541",
+      "docId": "g-21541",
+      "type": "entry",
+      "title": "Electrocore",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 204
+    },
+    {
+      "id": "g-21551",
+      "docId": "g-21551",
+      "type": "entry",
+      "title": "Brutal Prog",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 229
+    },
+    {
+      "id": "g-21563",
+      "docId": "g-21563",
+      "type": "entry",
+      "title": "Gothic Metal",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 244
+    },
+    {
+      "id": "g-21575",
+      "docId": "g-21575",
+      "type": "entry",
+      "title": "Thall",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 174
+    },
+    {
+      "id": "g-21585",
+      "docId": "g-21585",
+      "type": "entry",
+      "title": "Noise Pop",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 182
+    },
+    {
+      "id": "g-21595",
+      "docId": "g-21595",
+      "type": "entry",
+      "title": "Slacker Rock",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 232
+    },
+    {
+      "id": "g-21607",
+      "docId": "g-21607",
+      "type": "entry",
+      "title": "Visual Kei",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 273
+    },
+    {
+      "id": "g-21619",
+      "docId": "g-21619",
+      "type": "entry",
+      "title": "Psychedelic Trance",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": {
+        "min": 140,
+        "max": 150,
+        "label": "140–150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 385
+    },
+    {
+      "id": "g-21631",
+      "docId": "g-21631",
+      "type": "entry",
+      "title": "Raw Trance",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "sourceId": "feishu-taxonomy",
+      "length": 240
+    },
+    {
+      "id": "g-21641",
+      "docId": "g-21641",
+      "type": "entry",
+      "title": "Hypnotic Psy",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 194
+    },
+    {
+      "id": "g-21651",
+      "docId": "g-21651",
+      "type": "entry",
+      "title": "Psybass",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 200
+    },
+    {
+      "id": "g-21661",
+      "docId": "g-21661",
+      "type": "entry",
+      "title": "Trap EDM",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 257
+    },
+    {
+      "id": "g-21673",
+      "docId": "g-21673",
+      "type": "entry",
+      "title": "Phonkwave",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 208
+    },
+    {
+      "id": "g-21683",
+      "docId": "g-21683",
+      "type": "entry",
+      "title": "Punta Rock",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 208
+    },
+    {
+      "id": "g-21693",
+      "docId": "g-21693",
+      "type": "entry",
+      "title": "Manele",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 210
+    },
+    {
+      "id": "g-21716",
+      "docId": "g-21716",
+      "type": "entry",
+      "title": "Reggae",
+      "family": "Reggae 补遗",
+      "familyId": "f-21704",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 400
+    },
+    {
       "id": "family:house",
       "docId": "family:house",
       "type": "family",
@@ -14060,6 +16129,149 @@
       "length": 271
     },
     {
+      "id": "family:electronic-pop",
+      "docId": "family:electronic-pop",
+      "type": "family",
+      "title": "Electronic Pop / 电子流行",
+      "family": "Electronic Pop",
+      "familyId": "f-19330",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 497
+    },
+    {
+      "id": "family:r-b-rhythm-and-blues",
+      "docId": "family:r-b-rhythm-and-blues",
+      "type": "family",
+      "title": "R&B / Rhythm and Blues / 节奏布鲁斯",
+      "family": "R&B / Rhythm and Blues",
+      "familyId": "f-19655",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 569
+    },
+    {
+      "id": "family:electronic-rock",
+      "docId": "family:electronic-rock",
+      "type": "family",
+      "title": "Electronic Rock / 电子摇滚",
+      "family": "Electronic Rock",
+      "familyId": "f-19764",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 605
+    },
+    {
+      "id": "family:funk",
+      "docId": "family:funk",
+      "type": "family",
+      "title": "Funk / 放克",
+      "family": "Funk",
+      "familyId": "f-19995",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 591
+    },
+    {
+      "id": "family:chill-out",
+      "docId": "family:chill-out",
+      "type": "family",
+      "title": "Chill-Out / 休闲",
+      "family": "Chill-Out",
+      "familyId": "f-20154",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 470
+    },
+    {
+      "id": "family:bass-club",
+      "docId": "family:bass-club",
+      "type": "family",
+      "title": "Bass / Club / 低频俱乐部",
+      "family": "Bass / Club",
+      "familyId": "f-20327",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 493
+    },
+    {
+      "id": "family:chiptune",
+      "docId": "family:chiptune",
+      "type": "family",
+      "title": "Chiptune / 芯片音乐",
+      "family": "Chiptune",
+      "familyId": "f-20492",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 417
+    },
+    {
+      "id": "family:remix-edit",
+      "docId": "family:remix-edit",
+      "type": "family",
+      "title": "Remix & Edit / 重混与编辑",
+      "family": "Remix & Edit",
+      "familyId": "f-20645",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 352
+    },
+    {
+      "id": "family:zh-794ca857",
+      "docId": "family:zh-794ca857",
+      "type": "family",
+      "title": "实验电子补遗",
+      "family": "实验电子补遗",
+      "familyId": "f-20790",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 561
+    },
+    {
+      "id": "family:zh-6803cbee",
+      "docId": "family:zh-6803cbee",
+      "type": "family",
+      "title": "风格补遗",
+      "family": "风格补遗",
+      "familyId": "f-20955",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 648
+    },
+    {
+      "id": "family:hard-dance",
+      "docId": "family:hard-dance",
+      "type": "family",
+      "title": "Hard Dance 补遗",
+      "family": "Hard Dance 补遗",
+      "familyId": "f-21372",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 338
+    },
+    {
+      "id": "family:zh-17fcece0",
+      "docId": "family:zh-17fcece0",
+      "type": "family",
+      "title": "摇滚与极端风格补遗",
+      "family": "摇滚与极端风格补遗",
+      "familyId": "f-21437",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 375
+    },
+    {
+      "id": "family:reggae",
+      "docId": "family:reggae",
+      "type": "family",
+      "title": "Reggae 补遗",
+      "family": "Reggae 补遗",
+      "familyId": "f-21704",
+      "bpm": null,
+      "sourceId": "feishu-taxonomy",
+      "length": 226
+    },
+    {
       "id": "guide:overview",
       "docId": "guide:overview",
       "type": "guide",
@@ -14068,7 +16280,7 @@
       "familyId": null,
       "bpm": null,
       "sourceId": "curated-notes",
-      "length": 548
+      "length": 686
     },
     {
       "id": "guide:entry-points",
@@ -14090,7 +16302,7 @@
       "familyId": null,
       "bpm": null,
       "sourceId": "curated-notes",
-      "length": 328
+      "length": 822
     },
     {
       "id": "guide:listen-practice",
@@ -14101,7 +16313,7 @@
       "familyId": null,
       "bpm": null,
       "sourceId": "curated-notes",
-      "length": 191
+      "length": 813
     },
     {
       "id": "guide:listen-confusions",
@@ -14112,7 +16324,7 @@
       "familyId": null,
       "bpm": null,
       "sourceId": "curated-notes",
-      "length": 211
+      "length": 1020
     },
     {
       "id": "style:bigroom-house",
@@ -15409,7 +17621,7 @@
       "familyId": null,
       "bpm": null,
       "sourceId": "curated-notes",
-      "length": 143
+      "length": 208
     },
     {
       "id": "source:bilibili-ep01",
@@ -15467,6 +17679,17 @@
       "length": 87
     },
     {
+      "id": "source:electronic-music-wiki-list-of-genres",
+      "docId": "source:electronic-music-wiki-list-of-genres",
+      "type": "source",
+      "title": "来源：Electronic Music Wiki / List of Genres",
+      "family": null,
+      "familyId": null,
+      "bpm": null,
+      "sourceId": "curated-notes",
+      "length": 225
+    },
+    {
       "id": "guide:corrections",
       "docId": "guide:corrections",
       "type": "guide",
@@ -15486,7 +17709,7 @@
       "familyId": null,
       "bpm": null,
       "sourceId": "curated-notes",
-      "length": 208
+      "length": 346
     }
   ],
   "note": "Postings are rebuilt in memory by lib/retrieval.mjs to keep the artifact portable and small."

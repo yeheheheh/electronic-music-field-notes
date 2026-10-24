@@ -39,6 +39,13 @@
     ['hard dance', 'HDM'],
   ]);
 
+  // 三个字母的代号。兜底逻辑是 `name.slice(0, 3).toUpperCase()`，对中文名会切出
+  // 「实验电」这种半个词，对带斜杠或 & 的名字还会切出标点，所以每个会出现在界面上的
+  // 大族都必须显式登记。代号只在柱子够宽时才画出来，但窄屏隐藏不等于可以不写
+  // ——桌面端它是可见的，图谱页的大族卡片也会用到。
+  //
+  // 覆盖范围：全部正式大族（`!archive && !supplement`，当前 24 个）必须齐全；
+  // 补遗收纳桶（`supplement`，当前 5 个）用 X 前缀，与正式大族区分开。
   const FAMILY_CODES = {
     House: 'HOU',
     Techno: 'TEC',
@@ -57,31 +64,68 @@
     Ethnic: 'ETH',
     Fusion: 'FUS',
     '待归档': 'ARC',
+    // 2026-10 扩充新增的正式大族
+    'Electronic Pop': 'EPO',
+    'R&B / Rhythm and Blues': 'RNB',
+    'Electronic Rock': 'ERK',
+    Funk: 'FNK',
+    'Chill-Out': 'CHL',
+    'Bass / Club': 'BCL',
+    Chiptune: 'CHP',
+    'Remix & Edit': 'RMX',
+    // 补遗收纳桶：编辑性分组，不是音乐分类，故与正式大族在命名上区分
+    实验电子补遗: 'XEL',
+    风格补遗: 'XGN',
+    'Hard Dance 补遗': 'XHD',
+    摇滚与极端风格补遗: 'XRK',
+    'Reggae 补遗': 'XRG',
   };
 
+  // 导航按「意图」收敛成四个字：
+  // 听（我想知道这是什么）/ 查（我想查一个词）/ 练（我想练耳朵）/ 做（我想自己做）。
+  // 图谱、工作室、实验室、DJ 工具都还在，只是退到各自该在的位置，一条内容都没删。
   const NAV = [
-    { href: '#/learn', label: '制作课', icon: 'course', desc: '22 节课，按制作流程走', match: (path) => path === '/learn' || path.startsWith('/learn/') },
+    {
+      href: '#/listen',
+      label: '听',
+      icon: 'listen',
+      desc: '用速度与律动找风格',
+      match: (path) => path === '/listen' || path === '/quick' || path.startsWith('/card/'),
+    },
     {
       href: '#/library',
-      label: '知识库',
+      label: '查',
       icon: 'library',
-      desc: '查概念、找来源、反查课程',
+      desc: '知识库、图谱、全库检索',
       match: (path) =>
         path === '/library' ||
         path === '/search' ||
+        path === '/atlas' ||
         path.startsWith('/doc/') ||
         path.startsWith('/family/') ||
         path.startsWith('/genre/') ||
         path.startsWith('/guide/'),
     },
-    { href: '#/atlas', label: '图谱', icon: 'atlas', desc: '16 个大族与风格关系', match: (path) => path === '/atlas' },
-    { href: '#/practice', label: '练习', icon: 'practice', desc: '听辨与 BPM 估速', match: (path) => path === '/practice' },
-    { href: '#/lab', label: '实验室', icon: 'lab', desc: '七组音色实时开关', match: (path) => path === '/lab' },
+    {
+      href: '#/practice',
+      label: '练',
+      icon: 'practice',
+      desc: '听辨、BPM 估速、识曲',
+      match: (path) => path === '/practice' || path === '/identify',
+    },
+    {
+      href: '#/learn',
+      label: '做',
+      icon: 'course',
+      desc: '22 节制作课与九个工作室模块',
+      match: (path) => path === '/learn' || path.startsWith('/learn/') || path === '/studio' || path === '/lab',
+    },
   ];
 
   // Icons are drawn from hardware, not from a generic UI set:
   // step sequences, a record, a patch graph, a waveform, and a fader bank.
   const ICONS = {
+    listen: '<path d="M4 12h2.4M9 7.4v9.2M13.6 4.6v14.8M18.2 9.2v5.6M22 11.2v1.6"/>',
     course: '<path d="M3 9.4h3.3V19H3zM8.2 5.2h3.3V19H8.2zM13.4 11.6h3.3V19h-3.4zM18.6 7.8H21V19h-2.4z" fill="currentColor" stroke="none"/>',
     library: '<circle cx="12" cy="12" r="8.4"/><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/><path d="M12 3.6a8.4 8.4 0 0 1 8.4 8.4"/>',
     atlas: '<circle cx="6" cy="7" r="2.5" fill="currentColor" stroke="none"/><circle cx="18" cy="6" r="2.5" fill="currentColor" stroke="none"/><circle cx="12" cy="18" r="2.5" fill="currentColor" stroke="none"/><path d="M8.2 8.3 10.7 15.3M15.7 8.1 13.3 15.3M8.5 7h7"/>',
@@ -99,6 +143,7 @@
     solo: '<path d="M12 3.5 5 9v5.5L12 20l7-5.5V9z"/><circle cx="12" cy="11.5" r="2.4" fill="currentColor" stroke="none"/>',
     reset: '<path d="M4 10a8 8 0 1 1 2.6 7.4"/><path d="M4 4.5V10h5.5"/>',
     close: '<path d="M6 6l12 12M18 6 6 18"/>',
+    studio: '<rect x="3.4" y="3.8" width="4.3" height="4.3" fill="currentColor" stroke="none"/><rect x="9.85" y="3.8" width="4.3" height="4.3"/><rect x="16.3" y="3.8" width="4.3" height="4.3" fill="currentColor" stroke="none"/><rect x="3.4" y="10.25" width="4.3" height="4.3"/><rect x="9.85" y="10.25" width="4.3" height="4.3" fill="currentColor" stroke="none"/><rect x="16.3" y="10.25" width="4.3" height="4.3"/><rect x="3.4" y="16.7" width="4.3" height="4.3" fill="currentColor" stroke="none"/><rect x="9.85" y="16.7" width="4.3" height="4.3"/><rect x="16.3" y="16.7" width="4.3" height="4.3" fill="currentColor" stroke="none"/>',
   };
 
   const main = document.getElementById('main');
@@ -930,6 +975,10 @@
         }).join('')}
       </div>
       <div class="mobile-nav-secondary">
+        <a href="#/atlas">风格图谱</a>
+        <a href="#/lab">实验室</a>
+        <a href="#/studio">工作室</a>
+        <a href="#/dj">DJ 工具</a>
         <a href="#/search">全库检索</a>
         <a href="#/about">来源与勘误</a>
         <a href="#/module">知识库模块</a>
@@ -949,11 +998,14 @@
         <span>声音示例由浏览器实时合成，不是原曲。</span>
       </div>
       <div class="footer-links">
+        <a href="#/listen">听</a>
         <a href="#/learn">制作课</a>
         <a href="#/library">知识库</a>
         <a href="#/atlas">图谱</a>
         <a href="#/practice">练习</a>
         <a href="#/lab">实验室</a>
+        <a href="#/dj">DJ 工具</a>
+        <a href="#/quick">速查</a>
         <a href="#/search">全库检索</a>
         <a href="#/module">模块</a>
         <a href="#/about">来源</a>
@@ -1014,12 +1066,13 @@
   }
 
   function spectrumHTML() {
-    const families = KB.families.filter((family) => !family.archive);
+    const families = KB.families.filter((family) => !family.archive && !family.supplement);
+    const supplementCount = KB.families.filter((family) => family.supplement).length;
     const max = Math.max(...families.map((family) => family.count));
     return `
       <div class="spectrum-panel" aria-label="按大族浏览风格图谱">
         <div class="spectrum-head">
-          <span class="mono-label">SIGNAL / 16 个大族，按条目数量排列</span>
+          <span class="mono-label">SIGNAL / ${families.length} 个大族，按条目数量排列</span>
           <span class="mono-label">CLICK TO ENTER</span>
         </div>
         <div class="spectrum-bars" role="list">
@@ -1036,6 +1089,7 @@
         <div class="spectrum-legend">
           ${families.map((family) => `<a class="${familyClass(family.color)}" href="#/family/${family.id}">${escapeHtml(family.name)} <span>${family.count}</span></a>`).join('')}
         </div>
+        ${supplementCount ? `<div class="spectrum-foot"><span class="mono-label">另有 ${supplementCount} 个补充收纳桶（覆盖度补全用），见</span> <a href="#/atlas">风格图谱</a></div>` : ''}
       </div>`;
   }
 
@@ -1180,7 +1234,7 @@
     const completedCount = courseCompleted.size;
     const startHref = nextLesson ? `#/learn/${nextLesson.id}` : '#/learn';
     const total = COURSE_LESSONS.length;
-    const familyTotal = KB.families.filter((family) => !family.archive).length;
+    const familyTotal = KB.families.filter((family) => !family.archive && !family.supplement).length;
     heroPattern = {
       kick: [true, false, false, false, true, false, false, false],
       snare: [false, false, true, false, false, false, true, false],
@@ -1233,6 +1287,12 @@
           </div>
         </aside>
       </section>
+
+      <a class="listen-door" href="#/listen">
+        <span class="listen-door-kicker">ONLY WANT TO LISTEN? / 只想先听懂</span>
+        <p><b>不用记流派名。</b>多快、鼓怎么落地、低音什么样——三个问题就能把范围收到几个，每一个都能直接听 8 秒。</p>
+        <span class="listen-door-arrow">用 BPM 找风格 →</span>
+      </a>
 
       <section class="section home-path">
         <div class="home-path-head section-head">
@@ -1437,24 +1497,30 @@
 
   function treeHTML(state) {
     const selectedFamily = state.family;
+    const renderFamily = (family) => {
+      const isExpanded = expandedTree.has(family.id);
+      const isSelected = selectedFamily === family.id;
+      return `
+        <div class="tree-family ${familyClass(family.color)}${isSelected ? ' is-selected' : ''}">
+          <button class="tree-toggle${family.childIds.length ? '' : ' is-leaf'}" type="button" data-tree-toggle="${family.id}" aria-expanded="${isExpanded}" aria-label="${isExpanded ? '收起' : '展开'} ${escapeHtml(family.name)}">${family.childIds.length ? (isExpanded ? '−' : '+') : ''}</button>
+          <span class="tree-family-dot"></span>
+          <a class="tree-family-link" href="#/atlas?family=${family.id}" title="${escapeHtml(family.name)}${family.zh ? ` · ${escapeHtml(family.zh)}` : ''}" data-tooltip="${escapeHtml(`${family.name}${family.zh ? ` / ${family.zh}` : ''} · ${family.count} 个条目`)}">${escapeHtml(family.name)}</a>
+          <span class="tree-family-count">${family.count}</span>
+        </div>
+        ${isExpanded ? `<div class="tree-children">${family.childIds.map((id) => treeNodeHTML(entryById.get(id), state)).join('')}</div>` : ''}`;
+    };
+    const active = KB.families.filter((family) => !family.archive && !family.supplement);
+    const supplements = KB.families.filter((family) => family.supplement);
+    const archive = KB.families.filter((family) => family.archive);
     return `
       <div class="tree-panel-head">
         <span class="mono-label">INDEX / 分类浏览</span>
         <span class="mono-label">${formatNumber(KB.meta.stats.entries)}</span>
       </div>
       <div class="tree-root">
-        ${KB.families.map((family) => {
-          const isExpanded = expandedTree.has(family.id);
-          const isSelected = selectedFamily === family.id;
-          return `
-            <div class="tree-family ${familyClass(family.color)}${isSelected ? ' is-selected' : ''}">
-              <button class="tree-toggle${family.childIds.length ? '' : ' is-leaf'}" type="button" data-tree-toggle="${family.id}" aria-expanded="${isExpanded}" aria-label="${isExpanded ? '收起' : '展开'} ${escapeHtml(family.name)}">${family.childIds.length ? (isExpanded ? '−' : '+') : ''}</button>
-              <span class="tree-family-dot"></span>
-              <a class="tree-family-link" href="#/atlas?family=${family.id}" title="${escapeHtml(family.name)}${family.zh ? ` · ${escapeHtml(family.zh)}` : ''}" data-tooltip="${escapeHtml(`${family.name}${family.zh ? ` / ${family.zh}` : ''} · ${family.count} 个条目`)}">${escapeHtml(family.name)}</a>
-              <span class="tree-family-count">${family.count}</span>
-            </div>
-            ${isExpanded ? `<div class="tree-children">${family.childIds.map((id) => treeNodeHTML(entryById.get(id), state)).join('')}</div>` : ''}`;
-        }).join('')}
+        ${active.map(renderFamily).join('')}
+        ${supplements.length ? `<div class="tree-group-label">补充收纳桶</div>${supplements.map(renderFamily).join('')}` : ''}
+        ${archive.map(renderFamily).join('')}
       </div>`;
   }
 
@@ -1497,10 +1563,11 @@
   }
 
   function familyCard(family) {
+    const kind = family.archive ? 'ARCHIVE' : family.supplement ? 'SUPPLEMENT' : 'FAMILY';
     return `
       <a class="family-card ${familyClass(family.color)}" href="#/family/${family.id}">
         <div class="family-card-top">
-          <span class="mono-label">${family.archive ? 'ARCHIVE' : 'FAMILY'}</span>
+          <span class="mono-label">${kind}</span>
           <span class="mono-label">${family.count} ENTRIES</span>
         </div>
         <h3>${escapeHtml(family.name)}</h3>
@@ -1511,12 +1578,13 @@
   }
 
   function familyOverviewHTML() {
-    const active = KB.families.filter((family) => !family.archive);
+    const active = KB.families.filter((family) => !family.archive && !family.supplement);
+    const supplements = KB.families.filter((family) => family.supplement);
     const archive = KB.families.filter((family) => family.archive);
     return `
       <div class="atlas-overview-head">
         <div>
-          <div class="results-title">16 个大族，一张可继续修订的地图</div>
+          <div class="results-title">${active.length} 个大族，一张可继续修订的地图</div>
           <div class="results-meta">先选一个大族，或者直接用上方搜索与 BPM 筛选。也可以浏览全部 ${formatNumber(KB.meta.stats.entries)} 条。</div>
         </div>
         <div class="results-actions">
@@ -1526,16 +1594,30 @@
       </div>
       <div class="family-grid">
         ${active.map(familyCard).join('')}
-        ${archive.map(familyCard).join('')}
-      </div>`;
+      </div>
+      ${supplements.length ? `
+        <div class="atlas-overview-head is-secondary">
+          <div>
+            <div class="results-title">${supplements.length} 个补充收纳桶</div>
+            <div class="results-meta">为补齐覆盖度而追加的分组。桶内条目各自有正确的上位关系（例如 Psybient → Ambient），分组本身不代表音乐分类。</div>
+          </div>
+        </div>
+        <div class="family-grid">
+          ${supplements.map(familyCard).join('')}
+        </div>` : ''}
+      ${archive.length ? `
+        <div class="family-grid">
+          ${archive.map(familyCard).join('')}
+        </div>` : ''}`;
   }
 
   function familySummaryHTML(family, state) {
     if (!family) return '';
+    const kind = family.archive ? 'ARCHIVE / 待归档' : family.supplement ? 'SUPPLEMENT / 补充收纳桶' : 'FAMILY / 大族';
     return `
       <div class="family-summary ${familyClass(family.color)}">
         <div>
-          <div class="mono-label">FAMILY / 大族</div>
+          <div class="mono-label">${kind}</div>
           <h2>${escapeHtml(family.name)}${family.zh ? ` <span>${escapeHtml(family.zh)}</span>` : ''}</h2>
           <p>${escapeHtml(stripLong(family.introSummary || family.intro || '这个分组还没有简介。', 220))}</p>
         </div>
@@ -1627,7 +1709,10 @@
     const state = atlasStateFromParams(route.params);
     atlas = state;
     if (state.family) expandedTree.add(state.family);
-    const familiesOptions = KB.families.map((family) => `<option value="${family.id}"${state.family === family.id ? ' selected' : ''}>${escapeHtml(family.name)}${family.archive ? '（待归档）' : ''} · ${family.count}</option>`).join('');
+    const familiesOptions = KB.families.map((family) => {
+      const tag = family.archive ? '（待归档）' : family.supplement ? '（补充桶）' : '';
+      return `<option value="${family.id}"${state.family === family.id ? ' selected' : ''}>${escapeHtml(family.name)}${tag} · ${family.count}</option>`;
+    }).join('');
     main.innerHTML = `
       ${pageHead({
         code: '04',
@@ -1653,9 +1738,9 @@
         </select>
         <div class="toolbar-group">
           <span class="mono-label">BPM</span>
-          <input class="filter-input" id="bpmMin" type="number" inputmode="numeric" min="60" max="300" placeholder="60" value="${escapeHtml(state.bpmMin)}" aria-label="最低 BPM" data-tooltip="仅对原始资料明确写出 BPM 数字的 134 个条目生效">
+          <input class="filter-input" id="bpmMin" type="number" inputmode="numeric" min="60" max="300" placeholder="60" value="${escapeHtml(state.bpmMin)}" aria-label="最低 BPM" data-tooltip="仅对原始资料明确写出 BPM 数字的 ${formatNumber(KB.meta.stats.bpmEntries)} 个条目生效">
           <span class="mono-label">—</span>
-          <input class="filter-input" id="bpmMax" type="number" inputmode="numeric" min="60" max="300" placeholder="300" value="${escapeHtml(state.bpmMax)}" aria-label="最高 BPM" data-tooltip="仅对原始资料明确写出 BPM 数字的 134 个条目生效">
+          <input class="filter-input" id="bpmMax" type="number" inputmode="numeric" min="60" max="300" placeholder="300" value="${escapeHtml(state.bpmMax)}" aria-label="最高 BPM" data-tooltip="仅对原始资料明确写出 BPM 数字的 ${formatNumber(KB.meta.stats.bpmEntries)} 个条目生效">
         </div>
         <button class="toolbar-button${state.examplesOnly ? ' is-active' : ''}" id="examplesOnly" type="button" aria-pressed="${state.examplesOnly}" data-tooltip="只显示原始资料列有例曲的条目">有例曲</button>
         <button class="toolbar-button" id="atlasClear" type="button">清除</button>
@@ -1737,7 +1822,8 @@
     main.innerHTML = `
       <section class="atlas-hero ${familyClass(familyColor)}">
         <div class="breadcrumb"><a href="#/">首页</a><span class="sep">/</span><a href="#/atlas">风格图谱</a><span class="sep">/</span><span>${escapeHtml(family.name)}</span></div>
-        <div class="hero-kicker">FAMILY / 大族</div>
+        <div class="hero-kicker">${family.archive ? 'ARCHIVE / 待归档' : family.supplement ? 'SUPPLEMENT / 补充收纳桶' : 'FAMILY / 大族'}</div>
+        ${family.supplement ? `<p class="family-bucket-note">这是为补齐覆盖度而追加的收纳桶，不是一个音乐分类。桶内条目各自挂着正确的上位关系，可以从条目页回到它真正的母族。</p>` : ''}
         <div class="family-headline"><h1>${escapeHtml(family.name)}</h1><span>${escapeHtml(family.zh || '')}</span></div>
         <p class="family-intro is-clamped" id="familyIntro">${escapeHtml(family.intro || '这个分组还没有前言。你可以直接从下级分类或条目开始浏览。')}</p>
         <div class="family-actions">
@@ -1753,6 +1839,7 @@
         </div>
       </section>
       <section class="guide-body">
+        ${familyListenStrip(family)}
         ${relatedLessons.length ? `<div class="kb-course-panel"><span class="mono-label">COURSE / 在课程中学习</span><div class="chip-row">${lessonChipsHTML(relatedLessons)}</div></div>` : ''}
         ${children.length ? `
           <div class="guide-section-head"><h2>下级分类</h2><span class="mono-label">STRUCTURE / 只表示文档层级</span></div>
@@ -1777,6 +1864,23 @@
       toggle.addEventListener('click', () => {
         const clamped = intro.classList.toggle('is-clamped');
         toggle.textContent = clamped ? '展开简介' : '收起简介';
+      });
+    }
+
+    const familyPlay = document.querySelector('[data-family-play]');
+    if (familyPlay) {
+      familyPlay.addEventListener('click', () => {
+        const fam = LISTEN.families[family.id];
+        if (!fam) return;
+        const state = Audio?.getState();
+        if (state && state.playing && state.demoId === `fp:${fam.fp}`) {
+          Audio.stop();
+          return;
+        }
+        Audio?.playFingerprint(fam.fp, {
+          bpm: BAND_MID[fam.band] || 120,
+          label: `${family.name} · 这一族的声音`,
+        });
       });
     }
   }
@@ -1839,7 +1943,8 @@
           </div>
           ${bpmHint ? `<p class="bpm-source-note">原始分类库未标注 BPM；此处 ${escapeHtml(bpmHint.note || '补充来源')}：${escapeHtml(bpmHint.bpm.label)}。</p>` : ''}
         </header>
-        ${demo ? `<section class="detail-demo">
+        ${listenBlockHTML(entry)}
+        ${demo && !LISTEN.entries[entry.id] ? `<section class="detail-demo">
           <div>
             <span class="mono-label">SOUND / 合成试听</span>
             <h2>${escapeHtml(demo.name)} · ${demo.bpm} BPM</h2>
@@ -1895,6 +2000,7 @@
           </aside>
         </div>
       </article>`;
+    mountListenBlock(entry);
   }
 
   // Guides
@@ -2230,6 +2336,7 @@
             <div class="data-stat"><strong>${formatNumber(KB.meta.stats.bpmEntries)}</strong><span>有明确 BPM</span></div>
             <div class="data-stat"><strong>${formatNumber(KB.meta.stats.relationLinks)}</strong><span>关系链接</span></div>
             <div class="data-stat"><strong>${formatNumber(KB.meta.stats.families)}</strong><span>活跃大族</span></div>
+            ${KB.meta.stats.supplementFamilies ? `<div class="data-stat"><strong>${formatNumber(KB.meta.stats.supplementEntries)}</strong><span>补充桶条目</span></div>` : ''}
           </div>
         </div>
       </div>`;
@@ -2621,8 +2728,11 @@
             <input id="lessonMetronomeBpm" type="range" min="80" max="180" step="1" value="${widget.bpm || 120}">
             <output id="lessonMetronomeValue">${widget.bpm || 120}</output>
           </label>
-          <div class="lesson-beat-dots"><span>1</span><span>2</span><span>3</span><span>4</span></div>
-          <p class="lesson-widget-note">播放时跟着数 1-2-3-4；每四拍换一小节。</p>
+          <div class="lesson-beat-dots" data-lesson-beats>
+            <span data-beat-dot="0">1</span><span data-beat-dot="1">2</span><span data-beat-dot="2">3</span><span data-beat-dot="3">4</span>
+            <i class="lesson-beat-loop" data-lesson-beat-loop aria-hidden="true"></i>
+          </div>
+          <p class="lesson-widget-note">播放时跟着数 1-2-3-4；每四拍换一小节。<span class="lesson-loop-read" data-lesson-loop-read>循环 2 小节</span></p>
         </div>`;
     }
     if (widget.type === 'sequencer') {
@@ -2647,7 +2757,7 @@
               <div class="drum-row">
                 <span class="drum-label">${row.label}</span>
                 <div class="drum-steps">
-                  ${Array.from({ length: 8 }, (_, index) => `<button class="drum-step${pattern[row.id][index] ? ' is-on' : ''}" type="button" data-drum-step="${row.id}-${index}" aria-pressed="${Boolean(pattern[row.id][index])}" aria-label="${row.label} 第 ${index + 1} 格"></button>`).join('')}
+                  ${Array.from({ length: 8 }, (_, index) => `<button class="drum-step${pattern[row.id][index] ? ' is-on' : ''}${index % 4 === 0 ? ' is-beat' : ''}" type="button" data-drum-step="${row.id}-${index}" data-drum-col="${index}" aria-pressed="${Boolean(pattern[row.id][index])}" aria-label="${row.label} 第 ${index + 1} 格"></button>`).join('')}
                 </div>
               </div>`).join('')}
           </div>
@@ -2655,6 +2765,11 @@
             <input id="lessonDrumBpm" type="range" min="90" max="160" step="1" value="${widget.bpm || 118}">
             <output id="lessonDrumValue">${widget.bpm || 118}</output>
           </label>
+          <div class="lesson-loop-bar" data-lesson-loop data-lesson-loop-bars="1">
+            <span class="lesson-loop-label">循环</span>
+            <span class="lesson-loop-track"><i data-lesson-loop-fill></i></span>
+            <span class="lesson-loop-count" data-lesson-loop-count>1 / 1</span>
+          </div>
           <p class="lesson-widget-note">8 格代表一个小节里的八分音符。先保留 Kick 与 Clap，再试试点亮或关掉 Hi-hat。</p>
         </div>`;
     }
@@ -2669,6 +2784,7 @@
             ${demos.map((demo) => `<button class="lesson-demo" type="button" data-audio-demo="${demo.id}" data-audio-label="播放 ${escapeHtml(demo.name)}">
               <strong>${escapeHtml(demo.name)}</strong>
               <span>${escapeHtml(demo.zh)} · ${demo.bpm} BPM</span>
+              <i class="lesson-demo-ring" aria-hidden="true"></i>
             </button>`).join('')}
           </div>
           <p class="lesson-widget-note">每段循环 2 小节；先听鼓组，再听低频和主奏。</p>
@@ -2682,13 +2798,18 @@
             <div><span class="mono-label">INTERACTIVE / 分层实验室</span><h3>${escapeHtml(widget.prompt || '一次只加或减一层')}</h3></div>
             <button class="audio-play-button is-large" type="button" data-lesson-lab-play data-tooltip="浏览器实时合成的分层循环">▶ 播放实验室</button>
           </div>
-          <div class="lesson-lab-groups">
-            ${LAB_GROUPS.map((group) => `<button class="lesson-lab-toggle${groups[group.id] ? ' is-on' : ''} ${familyClass(['violet','heat','phosphor','ice','violet','ice','phosphor'][LAB_GROUPS.indexOf(group)])}" type="button" data-lesson-lab-group="${group.id}" aria-pressed="${Boolean(groups[group.id])}"><strong>${escapeHtml(group.name)}</strong><span>${escapeHtml(group.en)}</span></button>`).join('')}
+          <div class="lesson-lab-groups" data-lesson-lab-groups>
+            ${LAB_GROUPS.map((group) => `<button class="lesson-lab-toggle${groups[group.id] ? ' is-on' : ''} ${familyClass(['violet','heat','phosphor','ice','violet','ice','phosphor'][LAB_GROUPS.indexOf(group)])}" type="button" data-lesson-lab-group="${group.id}" aria-pressed="${Boolean(groups[group.id])}"><strong>${escapeHtml(group.name)}</strong><span>${escapeHtml(group.en)}</span><i class="lesson-lab-pulse" aria-hidden="true"></i></button>`).join('')}
           </div>
           <label class="lesson-bpm">BPM
             <input id="lessonLabBpm" type="range" min="100" max="160" step="1" value="${widget.bpm || 124}">
             <output id="lessonLabValue">${widget.bpm || 124}</output>
           </label>
+          <div class="lesson-loop-bar" data-lesson-loop data-lesson-loop-bars="2">
+            <span class="lesson-loop-label">循环</span>
+            <span class="lesson-loop-track"><i data-lesson-loop-fill></i></span>
+            <span class="lesson-loop-count" data-lesson-loop-count>1 / 2</span>
+          </div>
           <p class="lesson-widget-note">从默认层开始，一次只改变一个开关；先让每一层在自己的频段里清楚。</p>
         </div>`;
     }
@@ -2701,7 +2822,7 @@
           </div>
           <div class="structure-player-progress"><span id="structureProgress"></span></div>
           <div class="structure-player-sections">
-            ${CUR.production.sections.map((section, index) => `<div class="structure-player-section" data-structure-section="${index}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.name)}</strong><small>${escapeHtml(section.zh)}</small></div>`).join('')}
+            ${CUR.production.sections.map((section, index) => `<div class="structure-player-section" data-structure-section="${index}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.name)}</strong><small>${escapeHtml(section.zh)}</small><i class="structure-scan" aria-hidden="true"></i></div>`).join('')}
           </div>
           <p class="lesson-widget-note">不是完整歌曲，而是一段 30 秒的结构示意；注意每一段的层数与能量变化。</p>
         </div>`;
@@ -3008,6 +3129,7 @@
     const checkpoints = lesson.checkpoints?.length ? lesson.checkpoints : lesson.goals || [];
     const checks = lessonCheckState(lesson.id, checkpoints.length);
     const checkedCount = checks.filter(Boolean).length;
+    const studioEntry = lessonStudioEntry(lesson.id);
 
     // Each step of the lesson is a numbered block, so the reading order is explicit
     // instead of one undifferentiated column of paragraphs.
@@ -3022,8 +3144,8 @@
       widgetHTML ? { label: '先听', hint: '先建立听感，再动手', body: widgetHTML } : null,
       {
         label: '动手',
-        hint: '在 DAW 里完成',
-        body: `<div class="lesson-task"><h2>把一个概念变成一个可交付的声音。</h2><p>${escapeHtml(lesson.task)}</p></div>`,
+        hint: studioEntry ? '先在这里试，再回 DAW 做' : '在 DAW 里完成',
+        body: `<div class="lesson-task"><h2>把一个概念变成一个可交付的声音。</h2><p>${escapeHtml(lesson.task)}</p></div>${lessonPracticeHTML(lesson, studioEntry)}`,
       },
       checkpoints.length ? {
         label: '自检',
@@ -3123,6 +3245,11 @@
       </div>`;
     document.body.classList.add('has-lesson-bar');
     bindLessonWidget(lesson);
+    // The inline studio starts collapsed: the lesson page should stay light
+    // until you actually want to try something.
+    document.querySelectorAll('[data-lesson-studio-open]').forEach((button) => {
+      button.addEventListener('click', () => toggleLessonStudio(lesson, button));
+    });
     document.querySelectorAll('[data-check]').forEach((input) => {
       input.addEventListener('change', () => {
         const index = Number(input.dataset.check);
@@ -3166,13 +3293,94 @@
     });
   }
 
+  // The written task stays as-is; this adds a place to actually do it. The
+  // studio mounts right here rather than sending you to another page — going
+  // back and forth to read one line and try one thing was the whole problem.
+  function lessonPracticeHTML(lesson, studioEntry) {
+    if (!studioEntry) return '';
+    const mod = STUDIO_MODULE_META[studioEntry.module];
+    if (!mod) return '';
+    const fullHref = `#/studio?m=${studioEntry.module}&from=${encodeURIComponent(lesson.id)}`;
+    return `
+      <div class="lesson-practice">
+        <div class="practice-head">
+          <span class="mono-label">PRACTICE / 动手</span>
+          <span class="practice-module">${escapeHtml(mod.num)} · ${escapeHtml(mod.label)}</span>
+        </div>
+        <p class="practice-hint">${escapeHtml(studioEntry.hint)}</p>
+        <div class="practice-actions">
+          <button class="practice-cta" type="button" data-lesson-studio-open aria-expanded="false" aria-controls="lessonStudioHost">
+            <span data-lesson-studio-open-label>在这里动手</span>${uiIcon('play')}
+          </button>
+          <a class="practice-full" href="${fullHref}">去完整工作室${uiIcon('arrow')}</a>
+          <span class="practice-note">${escapeHtml(mod.lead)}</span>
+        </div>
+        <div class="practice-stage" id="lessonStudioHost" data-lesson-studio hidden></div>
+      </div>`;
+  }
+
+  // Mounts the studio into the lesson page. studio.js loads after app.js, so a
+  // first visit retries briefly instead of failing.
+  let lessonStudioAttempts = 0;
+
+  function mountLessonStudio(lesson) {
+    const entry = lessonStudioEntry(lesson.id);
+    const stage = document.querySelector('[data-lesson-studio]');
+    if (!entry || !stage) return;
+    if (stage.dataset.mounted === '1') return;
+    const kit = { pageHead, uiIcon, escapeHtml };
+    const mount = () => {
+      if (!window.EMStudio) return false;
+      window.EMStudio.mount(stage, kit, { module: entry.module, embedded: true, from: lesson.id });
+      stage.dataset.mounted = '1';
+      return true;
+    };
+    if (mount()) return;
+    if (lessonStudioAttempts > 25) return;
+    lessonStudioAttempts += 1;
+    setTimeout(() => {
+      if (parseRoute().path !== `/learn/${lesson.id}`) return;
+      mountLessonStudio(lesson);
+    }, 40);
+  }
+
+  function toggleLessonStudio(lesson, button) {
+    const stage = document.querySelector('[data-lesson-studio]');
+    if (!stage) return;
+    const open = !stage.hidden;
+    const label = button.querySelector('[data-lesson-studio-open-label]');
+    if (open) {
+      // Leaving the module tears the session down so the lesson's own players
+      // are not fighting the studio loop for the audio context.
+      if (window.EMStudio) window.EMStudio.unmount();
+      stage.dataset.mounted = '0';
+      stage.innerHTML = '';
+      stage.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+      if (label) label.textContent = '在这里动手';
+      return;
+    }
+    // One session at a time: if the lesson's own player is running, stop it so
+    // the studio loop is what you hear when it starts.
+    const state = Audio?.getState?.();
+    if (state?.playing && state.demoId !== 'studio') Audio.stop();
+    stage.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    if (label) label.textContent = '收起';
+    mountLessonStudio(lesson);
+    setTimeout(() => {
+      stage.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }, 60);
+  }
+
   function lessonChipsHTML(lessons) {
     return lessons.map((lesson) => `<a class="chip" href="#/learn/${lesson.id}">${lesson.chapterIndex} · ${escapeHtml(lesson.title)}</a>`).join('');
   }
 
   function renderLibrary() {
     const stats = WEB.manifest?.stats || KB.meta.stats || {};
-    const families = KB.families.filter((family) => !family.archive).slice(0, 8);
+    const activeFamilies = KB.families.filter((family) => !family.archive && !family.supplement);
+    const families = activeFamilies.slice(0, 8);
     const tools = [
       { title: '风格图谱', text: '按大族、BPM、别名与上下位关系查。', href: '#/atlas', meta: 'ATLAS', icon: 'atlas' },
       { title: '术语手册', text: '曲式、鼓组、音色、设备、乐理与效果。', href: '#/guide/glossary', meta: 'GLOSSARY', icon: 'library' },
@@ -3188,8 +3396,8 @@
         lead: '查概念、找来源、沿关系追踪，再回到对应的制作课。课程给顺序，知识库给依据。',
         stats: [
           { label: '条目', value: formatNumber(stats.entries || KB.meta.stats.entries) },
-          { label: '文档', value: formatNumber(stats.docs || stats.curatedDocs || 144) },
-          { label: '分块', value: formatNumber(stats.chunks || 1356) },
+          { label: '文档', value: formatNumber(stats.docs || stats.curatedDocs || 158) },
+          { label: '分块', value: formatNumber(stats.chunks || 1541) },
         ],
         action: { href: '#/search', label: '全库检索' },
       })}
@@ -3210,7 +3418,7 @@
           </a>`).join('')}
         </div>
         <div class="library-section">
-          ${sectionHead('大族', '从一个大族进入', { href: '#/atlas', label: '查看全部 16 个大族' }, '01')}
+          ${sectionHead('大族', '从一个大族进入', { href: '#/atlas', label: `查看全部 ${activeFamilies.length} 个大族` }, '01')}
           <div class="family-grid">${families.map(familyCard).join('')}</div>
         </div>
         <p class="cross-note">
@@ -3576,10 +3784,853 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
       </section>`;
   }
 
-  // Router
+  // --------------------------------------------------------------------------
+  // 听感层 / LISTEN LAYER
+  //
+  // 这一层不改知识库，只加三种「看法」：
+  //   · 用 BPM × 律动看全部风格（#/listen）
+  //   · 在条目页最上面加一张可听可分享的卡（#/genre/:id）
+  //   · 给 DJ 用的过渡检查（#/dj）
+  // 所有内容仍以 entryId 为准，detail 页才是唯一地址。
+  // --------------------------------------------------------------------------
+
+  const LISTEN = window.KB_LISTEN || { bands: [], grooves: [], lows: [], families: {}, entries: {} };
+  const FP_BANK = (window.EM_FINGERPRINTS && window.EM_FINGERPRINTS.recipes) || {};
+  const BAND_MID = { slow: 95, mid: 120, fast: 134, xfast: 155 };
+  const bandById = new Map(LISTEN.bands.map((band) => [band.id, band]));
+  const grooveById = new Map(LISTEN.grooves.map((groove) => [groove.id, groove]));
+  const lowById = new Map(LISTEN.lows.map((low) => [low.id, low]));
+
+  const listenState = { band: '', groove: '', low: '', selected: '', expanded: new Set(), muted: new Set() };
+
+  function slugify(text) {
+    return String(text || '')
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '') || 'style';
+  }
+
+  function shareUrl(id, slug, override) {
+    // 构建期传入 override 时，卡片上印短链 /s/{slug}/；否则印一定能打开的条目地址。
+    if (override) return `${override.replace(/\/$/, '')}/s/${slug}/`;
+    if (location.protocol === 'file:') return `#/genre/${id}`;
+    const path = location.pathname.replace(/index\.html$/, '');
+    return `${location.host}${path}#/genre/${id}`;
+  }
+
+  function listenStyles() {
+    return Object.entries(LISTEN.entries)
+      .map(([id, data]) => {
+        const entry = entryById.get(id);
+        if (!entry) return null;
+        return { id, data, entry, model: listenModel(entry) };
+      })
+      .filter(Boolean)
+      .sort((a, b) => (a.model.bpm - b.model.bpm) || a.entry.name.localeCompare(b.entry.name));
+  }
+
+  // 一条风格在「听感」视角下的全部信息。没有专属文案时返回 null，
+  // 由 familyModel() 兜底 —— 两条路必须分开，否则页面会假装所有条目都被编辑过。
+  function listenModel(entry, hostOverride) {
+    const data = LISTEN.entries[entry.id];
+    if (!data || !FP_BANK[data.fp]) return null;
+    const family = familyById.get(entry.familyId);
+    const band = bandById.get(data.band) || LISTEN.bands[0];
+    const groove = grooveById.get(data.groove) || LISTEN.grooves[0];
+    const low = lowById.get(data.low) || LISTEN.lows[0];
+    const bpm = Math.round((data.bpm.min + data.bpm.max) / 2);
+    return {
+      id: entry.id,
+      slug: slugify(entry.name),
+      name: entry.name,
+      zh: family ? (family.zh && family.zh.length <= 9 ? `${family.name} · ${family.zh}` : family.name) : entry.familyName,
+      bpm,
+      bpmLabel: `${data.bpm.min}–${data.bpm.max}`,
+      bpmSource: data.bpm.source,
+      band,
+      groove,
+      low,
+      bandName: band.name,
+      bandFeel: band.feel,
+      grooveName: groove.name,
+      lowName: low.name,
+      oneLine: data.oneLine,
+      hear: data.hear,
+      when: data.when,
+      felt: data.felt || null,
+      fp: data.fp,
+      fpLabel: (FP_BANK[data.fp] && FP_BANK[data.fp].label) || data.fp,
+      shortUrl: shareUrl(entry.id, slugify(entry.name), hostOverride),
+      hint: '浏览器实时合成 · 不是原曲',
+    };
+  }
+
+  function familyListenModel(entry) {
+    const fam = LISTEN.families[entry.familyId];
+    if (!fam || !FP_BANK[fam.fp]) return null;
+    const band = bandById.get(fam.band);
+    const groove = grooveById.get(fam.groove);
+    const kbBpm = entry.bpm && entry.bpm.min ? Math.round((entry.bpm.min + (entry.bpm.max || entry.bpm.min)) / 2) : null;
+    return {
+      band, groove, fp: fam.fp,
+      fpLabel: (FP_BANK[fam.fp] && FP_BANK[fam.fp].label) || fam.fp,
+      bpm: kbBpm || BAND_MID[fam.band] || 120,
+      bandName: band ? band.name : '',
+      grooveName: groove ? groove.name : '',
+    };
+  }
+
+  function listenMatches(data) {
+    if (listenState.band && data.band !== listenState.band) return false;
+    if (listenState.groove && data.groove !== listenState.groove) return false;
+    if (listenState.low && data.low !== listenState.low) return false;
+    return true;
+  }
+
+  // 大族页的声音入口：用这一族的默认配方，别让「Techno」这个词搜进来是一条哑页。
+  function familyListenStrip(family) {
+    const fam = LISTEN.families[family.id];
+    if (!fam || !FP_BANK[fam.fp]) return '';
+    const band = bandById.get(fam.band);
+    const groove = grooveById.get(fam.groove);
+    const label = FP_BANK[fam.fp].label;
+    return `
+      <section class="listen-ref" aria-label="这一族的声音">
+        <span class="mono-label">LISTEN / 这一族的声音</span>
+        <p>先听 <b>${escapeHtml(label)}</b> 的骨架，这是这一族最典型的落地方式（${band ? escapeHtml(band.name) : ''} · ${groove ? escapeHtml(groove.name) : ''}）。具体分支在下面，有专属卡片的会单独展示。</p>
+        <button class="button-ghost" type="button" data-family-play="${family.id}">播放这一族</button>
+        <a class="button-ghost" href="#/listen?band=${fam.band}">在矩阵里看</a>
+      </section>`;
+  }
+
+  function listenFilterActive() {
+    return Boolean(listenState.band || listenState.groove || listenState.low);
+  }
+
+  /* ---------------------------------------------------------------- 入口页 */
+
+  function renderListen(route) {
+    const styles = listenStyles();
+    // 支持从大族页深链进来：?band=fast&groove=floor
+    if (route.params.get('band')) listenState.band = route.params.get('band');
+    if (route.params.get('groove')) listenState.groove = route.params.get('groove');
+    const selectedId = route.params.get('s') || listenState.selected || (styles[0] && styles[0].id) || '';
+    listenState.selected = selectedId;
+
+    main.innerHTML = `
+      ${pageHead({
+        code: '00',
+        label: 'LISTEN',
+        title: '先听出区别，<em>再记名字</em>。',
+        lead: '不用先学会流派名。<b>多快</b>、<b>鼓怎么落地</b>、<b>低音什么样</b>——三个问题就能把范围收到几个。点任意风格直接听，卡片可以存成图发进群里。',
+        action: { href: '#/quick', label: '现场速查' },
+        stats: [
+          { label: '风格', value: String(styles.length) },
+          { label: '合成配方', value: String(Object.keys(FP_BANK).length) },
+          { label: '片段', value: '8 秒' },
+        ],
+      })}
+      <section class="listen-asks" aria-label="按听感筛选">
+        ${listenFilterRow('band', '多快', LISTEN.bands.map((band) => ({ id: band.id, label: band.name, note: band.range })), '01')}
+        ${listenFilterRow('groove', '鼓怎么落地', LISTEN.grooves.map((groove) => ({ id: groove.id, label: groove.name, note: groove.hint })), '02')}
+        ${listenFilterRow('low', '低音呢', LISTEN.lows.map((low) => ({ id: low.id, label: low.name })), '03')}
+      </section>
+      <p class="listen-count" id="listenCount"></p>
+      <p class="listen-scroll" aria-hidden="true">← 左右滑动，看 4 档速度 →</p>
+      <div class="listen-layout">
+        <div class="listen-matrix-wrap"><div class="listen-matrix" id="listenMatrix"></div></div>
+        <aside class="listen-panel" id="listenPanel"></aside>
+      </div>
+      <p class="listen-hint">横轴是每分钟多少拍，纵轴是鼓怎么落地。<b>真正决定身体感受的是纵轴</b>——所以 Trap 和 Hardstyle 都在最右一列，感受却完全相反。空白格标「少见」，是真的少见，不是没做完。</p>`;
+
+    renderListenBody();
+    bindListenFilters();
+  }
+
+  function listenFilterRow(kind, label, options, step) {
+    return `
+      <div class="lf-row">
+        <span class="lf-label"><b>${escapeHtml(step)}</b>${escapeHtml(label)}</span>
+        <div class="lf-opts">
+          ${options.map((option) => `
+            <button class="lf-chip${listenState[kind] === option.id ? ' is-on' : ''}" type="button" data-lf="${kind}" data-value="${option.id}">
+              ${escapeHtml(option.label)}${option.note ? `<small>${escapeHtml(option.note)}</small>` : ''}
+            </button>`).join('')}
+        </div>
+        <button class="lf-reset" type="button" data-lf-reset>${listenState[kind] ? '清除' : ''}</button>
+      </div>`;
+  }
+
+  function renderListenBody() {
+    const matrix = document.getElementById('listenMatrix');
+    const panel = document.getElementById('listenPanel');
+    const count = document.getElementById('listenCount');
+    if (!matrix || !panel) return;
+
+    const styles = listenStyles();
+    matrix.innerHTML = `
+      <div class="lm-head"></div>
+      ${LISTEN.bands.map((band) => `
+        <div class="lm-head">
+          <span>${escapeHtml(band.range)} BPM</span>
+          <strong>${escapeHtml(band.name)}</strong>
+          <em>${escapeHtml(band.feel)}</em>
+        </div>`).join('')}
+      ${LISTEN.grooves.map((groove) => `
+        <div class="lm-row">
+          <strong>${escapeHtml(groove.name)}</strong>
+          <span>${escapeHtml(groove.hint)}</span>
+          <span>${escapeHtml(groove.tech)}</span>
+        </div>
+        ${LISTEN.bands.map((band) => matrixCell(band, groove, styles)).join('')}`).join('')}`;
+
+    const matched = styles.filter((item) => listenMatches(item.data));
+    if (count) {
+      if (!matched.length) {
+        count.innerHTML = '没有完全匹配的风格。<b>少答一个问题</b>试试——三个条件同时成立的情况确实不多。';
+      } else if (listenFilterActive()) {
+        count.innerHTML = `收到 <b>${matched.length}</b> 个候选 · 点任意一个直接听`;
+      } else {
+        const familyCount = new Set(styles.map((item) => item.entry.familyId)).size;
+        count.innerHTML = `${styles.length} 个风格 · ${familyCount} 个大族 · 每个都能听 8 秒`;
+      }
+    }
+
+    const selected = styles.find((item) => item.id === listenState.selected) || matched[0] || styles[0];
+    panel.innerHTML = selected ? listenPanelHTML(selected) : '<p class="lp-empty">左边选一个风格。</p>';
+    bindListenPanel(selected);
+    matrix.querySelectorAll('[data-style]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = styles.find((style) => style.id === button.dataset.style);
+        if (!item) return;
+        listenState.selected = item.id;
+        replaceHash(`#/listen?s=${item.id}`);
+        renderListenBody();
+        playListen(item);
+      });
+    });
+    matrix.querySelectorAll('[data-more]').forEach((button) => {
+      button.addEventListener('click', () => {
+        listenState.expanded.add(button.dataset.more);
+        renderListenBody();
+      });
+    });
+  }
+
+  function matrixCell(band, groove, styles) {
+    const key = `${band.id}/${groove.id}`;
+    const items = styles.filter((item) => item.data.band === band.id && item.data.groove === groove.id);
+    if (!items.length) return '<div class="lm-cell"><span class="lm-empty">少见</span></div>';
+    const expanded = listenState.expanded.has(key);
+    const shown = expanded ? items : items.slice(0, 4);
+    const rest = items.length - shown.length;
+    const dim = listenFilterActive() && !items.some((item) => listenMatches(item.data));
+    return `
+      <div class="lm-cell${dim ? ' is-dim' : ''}">
+        ${shown.map((item) => {
+          const data = item.data;
+          return `<button class="lm-chip${item.id === listenState.selected ? ' is-on' : ''}" type="button" data-style="${item.id}">
+            <b>${escapeHtml(item.entry.name)}</b>
+            <span>${item.model.bpm}${data.felt ? ` · 像${data.felt}` : ''}${listenMatches(data) ? '' : ' ·'}</span>
+          </button>`;
+        }).join('')}
+        ${rest > 0 ? `<button class="lm-more" type="button" data-more="${key}">+${rest} 个</button>` : ''}
+      </div>`;
+  }
+
+  function listenPanelHTML(item) {
+    const model = item.model;
+    const source = model.bpmSource === 'source' ? '原文明确' : '编辑推断';
+    return `
+      <span class="mono-label">NOW / ${escapeHtml(model.bandName)} · ${model.bpm} BPM</span>
+      <h2 class="lp-name">${escapeHtml(model.name)}</h2>
+      <p class="lp-meta">${escapeHtml(model.zh)}</p>
+      <p class="lp-line">${escapeHtml(model.oneLine)}</p>
+      <ul class="lp-hear">
+        ${[['01', '鼓', model.hear[0]], ['02', '低音', model.hear[1]], ['03', '空间', model.hear[2]]].map((row) => `
+          <li><b>${row[0]}</b><em>${row[1]}</em><span>${escapeHtml(row[2])}</span></li>`).join('')}
+      </ul>
+      <p class="lp-when"><span>什么时候会听到</span>${escapeHtml(model.when)}</p>
+      <div class="lp-actions">
+        <button class="button-primary" type="button" data-lp-play>播放 8 秒</button>
+        ${['all', 'drums', 'bass', 'chord', 'lead'].map((layer) => `
+          <button class="lp-solo${layer === 'all' && listenState.muted.size === 0 ? ' is-on' : ''}${listenState.muted.has(layer) ? ' is-mute' : ''}"
+            type="button" data-solo="${layer}">${layer === 'all' ? '全奏' : layer === 'drums' ? '鼓' : layer === 'bass' ? '低音' : layer === 'chord' ? '和弦' : '主音'}</button>`).join('')}
+      </div>
+      <div class="lp-actions" style="margin-top:8px">
+        <button class="button-ghost" type="button" data-lp-share>做成卡片</button>
+        <a class="button-ghost" href="#/genre/${model.id}">完整条目 →</a>
+      </div>
+      <p class="lp-foot">BPM ${escapeHtml(model.bpmLabel)} · ${source} · 配方 ${escapeHtml(model.fpLabel)}</p>`;
+  }
+
+  function bindListenFilters() {
+    document.querySelectorAll('[data-lf]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const kind = button.dataset.lf;
+        const value = button.dataset.value;
+        listenState[kind] = listenState[kind] === value ? '' : value;
+        const row = button.closest('.lf-row');
+        row.parentElement.querySelectorAll(`[data-lf="${kind}"]`).forEach((chip) => {
+          chip.classList.toggle('is-on', listenState[kind] === chip.dataset.value);
+        });
+        const reset = row.querySelector('[data-lf-reset]');
+        if (reset) reset.textContent = listenState[kind] ? '清除' : '';
+        renderListenBody();
+      });
+    });
+    document.querySelectorAll('[data-lf-reset]').forEach((button) => {
+      button.addEventListener('click', () => {
+        listenState.band = '';
+        listenState.groove = '';
+        listenState.low = '';
+        document.querySelectorAll('[data-lf]').forEach((chip) => chip.classList.remove('is-on'));
+        document.querySelectorAll('[data-lf-reset]').forEach((reset) => { reset.textContent = ''; });
+        renderListenBody();
+      });
+    });
+  }
+
+  function listenPanelEls() {
+    return {
+      play: document.querySelector('[data-lp-play]'),
+      share: document.querySelector('[data-lp-share]'),
+      solos: [...document.querySelectorAll('[data-solo]')],
+    };
+  }
+
+  function bindListenPanel(item) {
+    if (!item) return;
+    const { play, share, solos } = listenPanelEls();
+    if (play) {
+      play.addEventListener('click', () => playListen(item));
+    }
+    if (share) {
+      share.addEventListener('click', () => {
+        if (!window.EMShare) return;
+        window.EMShare.open(item.model);
+      });
+    }
+    solos.forEach((button) => {
+      button.addEventListener('click', () => {
+        const layer = button.dataset.solo;
+        if (layer === 'all') listenState.muted.clear();
+        else if (listenState.muted.has(layer)) listenState.muted.delete(layer);
+        else listenState.muted.add(layer);
+        Audio?.setFingerprintLayers([...listenState.muted]);
+        renderListenBody();
+      });
+    });
+  }
+
+  function playListen(item) {
+    if (!Audio || !Audio.supported) return;
+    const state = Audio.getState();
+    const demoId = `fp:${item.model.fp}`;
+    if (state.playing && state.demoId === demoId) {
+      Audio.stop();
+      return;
+    }
+    const ok = Audio.playFingerprint(item.model.fp, {
+      bpm: item.model.bpm,
+      label: `${item.entry.name} · ${item.model.bpm} BPM`,
+    });
+    if (ok) {
+      // playFingerprint 会重置层级，所以重放时把静音状态写回去
+      Audio.setFingerprintLayers([...listenState.muted]);
+      document.querySelector('[data-lp-play]')?.classList.add('is-playing');
+    }
+  }
+
+  /* ------------------------------------------------------- 条目页的听感块 */
+
+  function listenBlockHTML(entry) {
+    const model = listenModel(entry);
+    if (model) {
+      const source = model.bpmSource === 'source' ? '原文明确' : '编辑推断';
+      return `
+        <section class="listen-card" aria-label="听感卡">
+          <div>
+            <div class="lc-kicker"><i aria-hidden="true"></i>LISTEN / 先听</div>
+            <h2 class="lc-line">${escapeHtml(model.oneLine)}</h2>
+            <div class="lc-dims">
+              <span>${model.bpm} BPM · ${escapeHtml(model.bpmLabel)}</span>
+              <span>${escapeHtml(model.bandName)} / ${escapeHtml(model.bandFeel)}</span>
+              <span>${escapeHtml(model.grooveName)}</span>
+              <span>低频 ${escapeHtml(model.lowName)}</span>
+            </div>
+            <div class="lc-hear">
+              ${[['01 / 鼓', model.hear[0]], ['02 / 低音', model.hear[1]], ['03 / 空间', model.hear[2]]].map((row) => `
+                <div><b>${escapeHtml(row[0])}</b><span>${escapeHtml(row[1])}</span></div>`).join('')}
+            </div>
+            <p class="lc-when">什么时候会听到：<b>${escapeHtml(model.when)}</b></p>
+            <div class="lc-actions">
+              <button class="button-primary" type="button" data-genre-play>播放 8 秒</button>
+              <button class="button-ghost" type="button" data-genre-share>做成卡片</button>
+            </div>
+            <p class="lc-note">BPM 来源：${source}（${escapeHtml(model.bpmLabel)}）。试听是浏览器实时合成的骨架，不是原曲；下面的正文才是完整的风格资料。</p>
+          </div>
+          <div class="lc-preview">
+            <canvas id="genreListenCanvas" width="1080" height="1440" aria-label="${escapeHtml(model.name)} 风格卡预览"></canvas>
+            <p>1080 × 1440 · 长按可保存 · 也能直接发进群里</p>
+          </div>
+        </section>`;
+    }
+
+    const fam = familyListenModel(entry);
+    if (!fam) return '';
+    return `
+      <section class="listen-ref" aria-label="同族试听">
+        <span class="mono-label">LISTEN / 同族参考</span>
+        <p>这一条还没有专属听感文案。先听 <b>${escapeHtml(fam.fpLabel)}</b> 的骨架——它属于这个族，但不是这一条独有的声音。</p>
+        <button class="button-ghost" type="button" data-ref-play>播放同族示例</button>
+        <a class="button-ghost" href="#/listen">用 BPM 找风格</a>
+      </section>`;
+  }
+
+  function mountListenBlock(entry) {
+    const canvas = document.getElementById('genreListenCanvas');
+    const model = listenModel(entry);
+    if (canvas && model && window.EMShare) window.EMShare.draw(canvas, model);
+
+    document.querySelectorAll('[data-genre-play]').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (!model) return;
+        const state = Audio?.getState();
+        if (state && state.playing && state.demoId === `fp:${model.fp}`) Audio.stop();
+        else Audio?.playFingerprint(model.fp, { bpm: model.bpm, label: `${model.name} · ${model.bpm} BPM` });
+      });
+    });
+    document.querySelectorAll('[data-genre-share]').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (model && window.EMShare) window.EMShare.open(model);
+      });
+    });
+
+    const refPlay = document.querySelector('[data-ref-play]');
+    if (refPlay) {
+      refPlay.addEventListener('click', () => {
+        const fam = familyListenModel(entry);
+        if (!fam) return;
+        const state = Audio?.getState();
+        if (state && state.playing && state.demoId === `fp:${fam.fp}`) Audio.stop();
+        else Audio?.playFingerprint(fam.fp, { bpm: fam.bpm, label: `${fam.fpLabel} · 同族示例` });
+      });
+    }
+  }
+
+  /* -------------------------------------------------------------- DJ 工具 */
+
+  function djStyles() {
+    return listenStyles().filter((item) => item.data.bpm);
+  }
+
+  function analyzePair(a, b) {
+    const delta = b.model.bpm - a.model.bpm;
+    const pct = (delta / a.model.bpm) * 100;
+    const half = Math.abs(a.model.bpm * 2 - b.model.bpm) <= 5 || Math.abs(b.model.bpm * 2 - a.model.bpm) <= 5;
+    let tag = '';
+    let cls = 'is-ok';
+    let note = '';
+
+    if (half) {
+      tag = '半速 / 双速';
+      cls = 'is-info';
+      note = `${a.model.bpm} 与 ${b.model.bpm} 差一倍：不要对拍，用 half-time 叠 8 小节，让两边的鼓互相填空。`;
+    } else if (Math.abs(pct) <= 3) {
+      tag = '可以直接接';
+      cls = 'is-ok';
+      note = `差 ${Math.abs(delta)} BPM（${Math.abs(pct).toFixed(1)}%），对拍即可，人声几乎听不出变化。`;
+    } else if (Math.abs(pct) <= 8) {
+      tag = '需要推速';
+      cls = 'is-ok';
+      note = `差 ${Math.abs(delta)} BPM，需要 pitch ${pct > 0 ? '+' : ''}${pct.toFixed(1)}%；超过 6% 人声会明显变调。`;
+    } else {
+      tag = '不要直接接';
+      cls = 'is-warn';
+      note = `差 ${Math.abs(Math.round(pct))}%，中间需要垫一首桥接曲。`;
+    }
+
+    const moves = [];
+    if (a.model.groove.id !== b.model.groove.id) {
+      moves.push({
+        text: `律动不同（${a.model.grooveName} → ${b.model.grooveName}）：不要在小节线上硬切，先用 8 小节只有鼓的段落过渡。`,
+        kb: 'EQ',
+      });
+    } else {
+      moves.push({ text: '律动相同：可以对小节线直接切，或者叠 16 小节做 layer。', kb: '八段结构' });
+    }
+    if (a.model.low.id === 'sustain' && b.model.low.id === 'sustain') {
+      moves.push({ text: '两边低频都是持续铺底：进 B 之前先把 A 的低频切掉，否则会糊成一片。', kb: 'Sidechain' });
+    } else if (a.model.low.id !== 'sustain' && b.model.low.id === 'sustain') {
+      moves.push({ text: 'B 的低频会突然变满：留 4 小节空档，让耳朵先适应。', kb: '低频' });
+    } else {
+      moves.push({ text: '低频形态接近：直接叠也不会打架，注意总电平。', kb: 'Limiter' });
+    }
+    if (half) {
+      moves.push({ text: '半速关系最适合做「突然加速」：A 播 1 小节，B 从第 2 拍进。', kb: 'Half-time' });
+    } else if (Math.abs(pct) > 3) {
+      moves.push({ text: '用 loop 把 A 的最后一小节锁住，边推 pitch 边进 B，比直接切更安全。', kb: '转场' });
+    } else {
+      moves.push({ text: 'BPM 接近时最容易犯的错是「接得太早」：等 A 的乐句走完再进。', kb: '乐句' });
+    }
+
+    return { delta, pct, tag, cls, note, moves };
+  }
+
+  function renderDj(route) {
+    const styles = djStyles();
+    const byId = new Map(styles.map((item) => [item.id, item]));
+    const a = byId.get(route.params.get('a')) || byId.get('g-10159') || styles[0];
+    const b = byId.get(route.params.get('b')) || byId.get('g-8566') || styles[1];
+    const result = analyzePair(a, b);
+
+    main.innerHTML = `
+      ${pageHead({
+        code: 'DJ',
+        label: 'TRANSITION',
+        title: '两首歌能不能接，<br><em>先看三件事</em>。',
+        lead: '速度差多少、鼓是不是同一种落地、低频会不会打架。判断是规则算的，建议是手写的，每一条都指向对应的课与词条。',
+        stats: [
+          { label: '可查风格', value: String(styles.length) },
+          { label: '规则', value: '3' },
+        ],
+      })}
+      <form class="dj-grid" id="djForm">
+        <div class="dj-field">
+          <label for="djA">A / 现在放的</label>
+          <select id="djA">${styles.map((item) => `<option value="${item.id}"${item.id === a.id ? ' selected' : ''}>${escapeHtml(item.entry.name)} · ${item.model.bpm} BPM</option>`).join('')}</select>
+        </div>
+        <div class="dj-field">
+          <label for="djB">B / 想接的</label>
+          <select id="djB">${styles.map((item) => `<option value="${item.id}"${item.id === b.id ? ' selected' : ''}>${escapeHtml(item.entry.name)} · ${item.model.bpm} BPM</option>`).join('')}</select>
+        </div>
+      </form>
+      <div class="dj-verdict" id="djVerdict">${djVerdictHTML(a, b, result)}</div>
+      <section class="dj-quick" aria-label="现场判定">
+        <div class="dj-quick-head">
+          <strong>现场判定</strong>
+          <span class="mono-label">不知道这是什么？按你听到的选三个</span>
+        </div>
+        <div class="dj-quick-grid">
+          <div class="dj-field">
+            <label for="dqGroove">鼓怎么落地</label>
+            <select id="dqGroove">
+              <option value="">不确定</option>
+              ${LISTEN.grooves.map((groove) => `<option value="${groove.id}">${escapeHtml(groove.name)} · ${escapeHtml(groove.hint)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="dj-field">
+            <label for="dqLow">低音</label>
+            <select id="dqLow">
+              <option value="">不确定</option>
+              ${LISTEN.lows.map((low) => `<option value="${low.id}">${escapeHtml(low.name)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="dj-field">
+            <label for="dqBand">速度</label>
+            <select id="dqBand">
+              <option value="">不确定</option>
+              ${LISTEN.bands.map((band) => `<option value="${band.id}">${escapeHtml(band.name)} · ${escapeHtml(band.range)}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        <div class="dj-quick-out" id="djQuickOut"></div>
+      </section>
+      <section class="dj-neighbors">
+        <div class="dj-neighbors-head">
+          <strong>BPM 邻接表</strong>
+          <span class="mono-label">在</span>
+          <input id="djBpm" type="number" min="60" max="200" step="1" value="${a.model.bpm}" aria-label="输入 BPM">
+          <span class="mono-label">附近能接什么</span>
+        </div>
+        <div id="djNeighbors">${djNeighborsHTML(a.model.bpm)}</div>
+      </section>
+      <p class="listen-hint">规则是保守的：它只会告诉你「能不能直接接」，真正好不好听还得你自己听。右侧的 BPM 都是编辑推断的区间中点，不是唱片上印的数字。</p>`;
+
+    const form = document.getElementById('djForm');
+    const update = () => {
+      const nextA = byId.get(document.getElementById('djA').value);
+      const nextB = byId.get(document.getElementById('djB').value);
+      if (!nextA || !nextB) return;
+      replaceHash(`#/dj?a=${nextA.id}&b=${nextB.id}`);
+      document.getElementById('djVerdict').innerHTML = djVerdictHTML(nextA, nextB, analyzePair(nextA, nextB));
+      bindDjLinks();
+    };
+    // 直接挂在两个 select 上：原生 change 会冒泡，但程序化触发的不会，
+    // 挂在这里两种都能收到，也避免 form 上再挂一次导致重复执行。
+    document.getElementById('djA')?.addEventListener('change', update);
+    document.getElementById('djB')?.addEventListener('change', update);
+    const bpmInput = document.getElementById('djBpm');
+    bpmInput?.addEventListener('input', () => {
+      const value = Number(bpmInput.value);
+      if (!Number.isFinite(value) || value < 60 || value > 200) return;
+      document.getElementById('djNeighbors').innerHTML = djNeighborsHTML(value);
+      bindDjNeighborChips();
+    });
+    bindDjLinks();
+    bindDjNeighborChips();
+
+    // 现场判定：三个问题 → 候选 ≤ 12 → 点一下直接听
+    const quickFields = ['dqGroove', 'dqLow', 'dqBand'].map((id) => document.getElementById(id));
+    const renderQuick = () => {
+      const [groove, low, band] = quickFields.map((field) => field?.value || '');
+      const hits = styles.filter((item) => (!groove || item.model.groove.id === groove)
+        && (!low || item.model.low.id === low)
+        && (!band || item.model.band.id === band));
+      const out = document.getElementById('djQuickOut');
+      if (!out) return;
+      if (!groove && !low && !band) {
+        out.innerHTML = '<p class="dj-quick-note">先选一个你听得出来的条件，不确定的就跳过。三个都不选等于把 60 条全列出来，那不叫判定。</p>';
+        return;
+      }
+      const shown = hits.slice(0, 12);
+      out.innerHTML = hits.length
+        ? `<div class="dj-quick-list">${shown.map((item) => `
+            <button class="dj-nb-chip" type="button" data-quick-play="${item.id}">
+              ${escapeHtml(item.entry.name)}<i>${item.model.bpm}${item.model.groove.id === 'floor' ? '' : ` · ${item.model.grooveName}`}</i>
+            </button>`).join('')}</div>
+            <p class="dj-quick-note">${hits.length} 个候选${hits.length > shown.length ? `，先列前 ${shown.length} 个` : ''}。点是直接听 8 秒；想看得更细就去 <a href="#/listen">听</a> 里看整张矩阵。</p>`
+        : '<p class="dj-quick-note">没有完全匹配的。把「低音」改成不确定再试——三个条件同时成立的情况确实不多。</p>';
+      out.querySelectorAll('[data-quick-play]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const item = styles.find((style) => style.id === button.dataset.quickPlay);
+          if (!item) return;
+          const state = Audio?.getState();
+          if (state && state.playing && state.demoId === `fp:${item.model.fp}`) Audio.stop();
+          else Audio?.playFingerprint(item.model.fp, { bpm: item.model.bpm, label: `${item.entry.name} · ${item.model.bpm} BPM` });
+        });
+      });
+    };
+    quickFields.forEach((field) => field?.addEventListener('change', renderQuick));
+    renderQuick();
+  }
+
+  function djVerdictHTML(a, b, result) {
+    return `
+      <div class="dj-top">
+        <div class="dj-delta">${result.delta > 0 ? '+' : ''}${result.delta}<small>BPM</small></div>
+        <span class="dj-tag ${result.cls}">${result.tag}</span>
+        <span class="mono-label">${escapeHtml(a.entry.name)} → ${escapeHtml(b.entry.name)}</span>
+      </div>
+      <p class="dj-note">${result.note}</p>
+      <ul class="dj-moves">
+        ${result.moves.slice(0, 3).map((move, index) => `
+          <li>
+            <span class="n">${String(index + 1).padStart(2, '0')}</span>${move.text}
+            <div class="links">
+              <a href="#/learn/transitions">过渡课 →</a>
+              <a href="#/search?q=${encodeURIComponent(move.kb)}">${escapeHtml(move.kb)} →</a>
+            </div>
+          </li>`).join('')}
+      </ul>`;
+  }
+
+  function djNeighborsHTML(bpm) {
+    const styles = djStyles();
+    const near = styles
+      .map((item) => ({ item, diff: item.model.bpm - bpm }))
+      .filter((row) => Math.abs(row.diff) <= 5)
+      .sort((a, b) => Math.abs(a.diff) - Math.abs(b.diff));
+    const half = styles
+      .map((item) => ({ item, diff: item.model.bpm - bpm }))
+      .filter((row) => Math.abs(row.item.model.bpm * 2 - bpm) <= 5 || Math.abs(bpm * 2 - row.item.model.bpm) <= 5);
+
+    const chip = (row) => `<button class="dj-nb-chip" type="button" data-nb="${row.item.id}">
+      ${escapeHtml(row.item.entry.name)}<i>${row.item.model.bpm}${row.item.model.groove.id === 'floor' ? '' : ` · ${row.item.model.grooveName}`}</i>
+    </button>`;
+
+    return `
+      <div class="dj-nb-row">
+        <span>±5 BPM</span>
+        <div>${near.length ? near.map(chip).join('') : '<span style="font-size:12px;color:var(--muted-2)">这个速度附近没有收录的风格</span>'}</div>
+      </div>
+      <div class="dj-nb-row">
+        <span>半速 / 双速</span>
+        <div>${half.length ? half.map(chip).join('') : '<span style="font-size:12px;color:var(--muted-2)">没有正好差一倍的风格</span>'}</div>
+      </div>`;
+  }
+
+  function bindDjNeighborChips() {
+    document.querySelectorAll('[data-nb]').forEach((button) => {
+      button.addEventListener('click', () => {
+        // 邻接表回答的是「下一步放什么」，所以点一下就把 B 换成它并重新判断，
+        // 而不是只把数字填进输入框。
+        const target = button.dataset.nb;
+        const select = document.getElementById('djB');
+        if (select) {
+          select.value = target;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      });
+    });
+  }
+
+  function bindDjLinks() {
+    // 链接是真实路由，交给浏览器即可；这里只保留钩子，便于以后加埋点。
+  }
+
+  /* ------------------------------------------------------ 现场速查（离线） */
+
+  let quickKeyHandler = null;
+
+  function renderQuick(route) {
+    const styles = listenStyles();
+    const target = route.params.get('s');
+    const startIndex = Math.max(0, styles.findIndex((item) => item.id === target));
+
+    main.innerHTML = `
+      <section class="quick">
+        <div class="quick-bar">
+          <span class="mono-label">QUICK / 现场速查</span>
+          <span class="quick-offline" id="quickOffline" hidden>离线可用</span>
+          <div class="quick-bar-actions">
+            <button class="lf-chip" type="button" id="quickWake">保持常亮</button>
+            <a class="lf-chip" href="#/listen">回到矩阵</a>
+          </div>
+        </div>
+        <div class="quick-deck" id="quickDeck">
+          ${styles.map((item) => `
+            <article class="quick-slide" data-slide="${item.id}">
+              <div class="quick-slide-top">
+                <span class="mono-label">${item.model.bandName} / ${item.model.bpm} BPM</span>
+                <span class="mono-label">${escapeHtml(item.model.grooveName)}</span>
+              </div>
+              <h1 class="quick-name">${escapeHtml(item.entry.name)}</h1>
+              <p class="quick-meta">${escapeHtml(item.model.zh)}</p>
+              <p class="quick-line">${escapeHtml(item.model.oneLine)}</p>
+              <ul class="quick-hear">
+                ${[['鼓', item.model.hear[0]], ['低音', item.model.hear[1]], ['空间', item.model.hear[2]]].map((row) => `
+                  <li><b>${row[0]}</b><span>${escapeHtml(row[1])}</span></li>`).join('')}
+              </ul>
+              <p class="quick-when">${escapeHtml(item.model.when)}</p>
+              <div class="quick-actions">
+                <button class="button-primary" type="button" data-quick-listen="${item.id}">播放 8 秒</button>
+                <a class="button-ghost" href="#/genre/${item.id}">完整条目 →</a>
+              </div>
+            </article>`).join('')}
+        </div>
+        <p class="quick-foot"><span id="quickPos">1 / ${styles.length}</span> · 左右滑动或按 ← → 换风格 · 飞行模式下也能打开</p>
+      </section>`;
+
+    const deck = document.getElementById('quickDeck');
+    const pos = document.getElementById('quickPos');
+    const sync = () => {
+      const width = deck.clientWidth || 1;
+      const index = Math.round(deck.scrollLeft / width);
+      if (pos) pos.textContent = `${Math.min(styles.length, index + 1)} / ${styles.length}`;
+      const item = styles[index];
+      if (item) replaceHash(`#/quick?s=${item.id}`);
+    };
+    deck?.addEventListener('scroll', () => {
+      window.clearTimeout(renderQuick.timer);
+      renderQuick.timer = window.setTimeout(sync, 120);
+    }, { passive: true });
+
+    if (startIndex > 0 && deck) {
+      requestAnimationFrame(() => {
+        deck.scrollLeft = deck.clientWidth * startIndex;
+        if (pos) pos.textContent = `${startIndex + 1} / ${styles.length}`;
+      });
+    }
+
+    document.querySelectorAll('[data-quick-listen]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = styles.find((style) => style.id === button.dataset.quickListen);
+        if (!item) return;
+        const state = Audio?.getState();
+        if (state && state.playing && state.demoId === `fp:${item.model.fp}`) Audio.stop();
+        else Audio?.playFingerprint(item.model.fp, { bpm: item.model.bpm, label: `${item.entry.name} · ${item.model.bpm} BPM` });
+      });
+    });
+
+    const offline = document.getElementById('quickOffline');
+    if (offline) offline.hidden = navigator.onLine !== false;
+
+    const wake = document.getElementById('quickWake');
+    let lock = null;
+    wake?.addEventListener('click', async () => {
+      if (lock) {
+        try { await lock.release(); } catch { /* 已释放 */ }
+        lock = null;
+        wake.textContent = '保持常亮';
+        wake.classList.remove('is-on');
+        return;
+      }
+      try {
+        lock = await navigator.wakeLock.request('screen');
+        wake.textContent = '已常亮';
+        wake.classList.add('is-on');
+        lock.addEventListener('release', () => {
+          lock = null;
+          wake.textContent = '保持常亮';
+          wake.classList.remove('is-on');
+        });
+      } catch {
+        wake.textContent = '此浏览器不支持';
+        wake.disabled = true;
+      }
+    });
+
+    quickKeyHandler = (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      if (!deck) return;
+      event.preventDefault();
+      const step = deck.clientWidth * (event.key === 'ArrowRight' ? 1 : -1);
+      deck.scrollBy({ left: step, behavior: 'smooth' });
+    };
+    document.addEventListener('keydown', quickKeyHandler);
+  }
+
+  /* ------------------------------------------------------------ 单独卡片页 */
+
+  function renderCardPage(route) {
+    const id = route.path.split('/')[2] || '';
+    const entry = entryById.get(id);
+    const model = entry ? listenModel(entry, route.params.get('h') || '') : null;
+    if (!model) {
+      renderNotFound('这一条还没有听感卡。先去「听」里找一个有卡片的风格。');
+      return;
+    }
+    main.innerHTML = `
+      <section class="card-page">
+        <div class="card-page-inner">
+          <canvas id="cardPageCanvas" width="1080" height="1440" aria-label="${escapeHtml(model.name)} 风格卡"></canvas>
+          <div class="card-page-actions">
+            <button class="button-primary" type="button" data-card-play>播放 8 秒</button>
+            <button class="button-ghost" type="button" data-card-download>下载 PNG</button>
+            <a class="button-ghost" href="#/genre/${model.id}">完整条目 →</a>
+          </div>
+          <p class="card-page-note">手机上长按图片即可保存。<br>这一页是给「发链接」准备的：微信里打开就只有一张卡。</p>
+        </div>
+      </section>`;
+    if (window.EMShare) window.EMShare.draw(document.getElementById('cardPageCanvas'), model);
+    document.querySelector('[data-card-play]')?.addEventListener('click', () => {
+      const state = Audio?.getState();
+      if (state && state.playing && state.demoId === `fp:${model.fp}`) Audio.stop();
+      else Audio?.playFingerprint(model.fp, { bpm: model.bpm, label: `${model.name} · ${model.bpm} BPM` });
+    });
+    document.querySelector('[data-card-download]')?.addEventListener('click', () => window.EMShare?.download(model));
+  }
+
 
   function render() {
     const route = parseRoute();
+    // Teardown must never block navigation: if a page module throws here the
+    // hash already changed and the user is left on stale content with no way
+    // forward except a refresh. Isolate it and keep routing.
+    if (window.EMStudio) {
+      try {
+        window.EMStudio.unmount();
+      } catch (error) {
+        console.error('Studio unmount failed; continuing route change', error);
+      }
+    }
+    if (quickKeyHandler) {
+      document.removeEventListener('keydown', quickKeyHandler);
+      quickKeyHandler = null;
+    }
     hideTooltip();
     hideHeaderSearchPopover();
     closeMobileNav();
@@ -3587,10 +4638,16 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     renderFooter();
     toastStack?.replaceChildren();
     document.body.classList.remove('has-lesson-bar');
+    document.body.classList.toggle('is-quick', route.path === '/quick');
     atlas = null;
     expandedTree = new Set(expandedTree);
 
     if (route.path === '/' || route.path === '') renderHome();
+    else if (route.path === '/listen') renderListen(route);
+    else if (route.path === '/dj') renderDj(route);
+    else if (route.path === '/quick') renderQuick(route);
+    else if (route.path.startsWith('/card/')) renderCardPage(route);
+    else if (route.path === '/studio') renderStudio();
     else if (route.path === '/learn') renderLearn();
     else if (route.path.startsWith('/learn/')) renderLesson(route);
     else if (route.path === '/library') renderLibrary();
@@ -3620,7 +4677,111 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     if (Audio?.supported) updateAudioUI(Audio.getState());
   }
 
+  // --------------------------------------------------------------------------
+  // Lesson -> studio bridge
+  //
+  // Every lesson already ends with a written task. This maps that task onto the
+  // studio module that actually lets you do it, so "动手" becomes a place you
+  // can go instead of a paragraph you read. A lesson without an entry here keeps
+  // the plain text task.
+  // --------------------------------------------------------------------------
+
+  // Mirrors the MODULES array in studio.js. Keep the num values in step: the
+  // lesson bridge prints them, and a mismatch would send people to the wrong tab.
+  const STUDIO_MODULE_META = {
+    chain: { num: '01', label: '信号链', lead: '五类轨道各放一个声部，再把效果器拖成一条链。' },
+    beats: { num: '02', label: '节拍', lead: '点亮格子放一个音，循环一直在响。' },
+    bass: { num: '03', label: '低音', lead: '三行分别是根音、五度、八度。' },
+    chords: { num: '04', label: '和弦', lead: '每一小节挑一个和弦，低音会自动跟着走。' },
+    melody: { num: '05', label: '旋律', lead: '只有八个音可选，怎么点都不会跑调。' },
+    sound: { num: '06', label: '音色', lead: '效果在总线上，会同时改变所有声部。' },
+    song: { num: '07', label: '结构', lead: '给段落分配小节数，播放时逐层加减。' },
+    mix: { num: '08', label: '混音', lead: '七层各自的电平、EQ、声像与发送量。' },
+    bounce: { num: '09', label: '导出', lead: '渲染整首编排，试听，下载 WAV。' },
+  };
+
+  const LESSON_STUDIO = {
+    'daw-and-tracks': { module: 'chain', hint: '给五类轨道各认一个声部，点轨道头试听它。' },
+    'signal-chain-basics': { module: 'chain', hint: '看清声音从 MIDI 走到总线的四步，再回来看效果器顺序。' },
+    'drum-programming': { module: 'beats', hint: '搭一个四拍 House 鼓型，再关掉 Hat 听差别。' },
+    'groove-and-half-time': { module: 'beats', hint: '把 Swing 拉到 30% 以上，再把 Kick 挪到第 8 格听 Half-time。' },
+    'drum-processing': { module: 'beats', hint: '先做鼓型，再切到 06 音色调滤波，听鼓组怎么变闷。' },
+    'kick-and-bass': { module: 'bass', hint: '用八分推进音型，让低音落在 Kick 的缝里。' },
+    'bass-sound-design': { module: 'bass', hint: '换低音的性格，听同一个音型怎么变长、变抖、变短。' },
+    'low-end-control': { module: 'bass', hint: '只留根音行，让低音与 Kick 各占一个位置。' },
+    'chord-progressions': { module: 'chords', hint: '选一组进行，听四个小节的情绪走向。' },
+    'chord-texture': { module: 'chords', hint: '先定进行，再去 06 音色把和弦切到 Pad 听空间变化。' },
+    'lead-hook': { module: 'melody', hint: '只用两三个音写一个动机，重复它。' },
+    'synth-controls': { module: 'sound', hint: '逐个拉滤波、共振、失真、延迟，一次只改一个。' },
+    'sampling-chops': { module: 'sound', hint: '把四个元音切片排成节奏型——切片当乐器用，就是这个意思。' },
+    'structure-eight': { module: 'song', hint: '给段落分配小节数，播放时听层数怎么加减。' },
+    'transitions': { module: 'song', hint: '在段落之间留一段零小节，听它被跳过。' },
+    'automation-energy': { module: 'song', hint: '排完段落再回 06 音色，播放中慢慢拉滤波，模拟能量曲线。' },
+    'gain-stage': { module: 'mix', hint: '七层各自留出余量，别让总线顶到红线。' },
+    'eq-space': { module: 'mix', hint: '让每层在自己的频段里清楚——低音和 Kick 不要抢同一段。' },
+    'space-stereo': { module: 'mix', hint: '给不同层不同的空间：一个近、一个远、一个宽。' },
+    'project-house': { module: 'bounce', hint: '套用 House 模板，再把九块过一遍，得到你的 House Loop。' },
+    'project-bass': { module: 'bounce', hint: '套用 Trap 模板，听半拍鼓与 808 怎么撑住低频。' },
+    'finish-export': { module: 'bounce', hint: '把结构排完，渲染整首，下载 WAV，再写五行复盘。' },
+  };
+
+  function lessonStudioEntry(lessonId) {
+    return LESSON_STUDIO[lessonId] || null;
+  }
+
+  // studio.js loads after this file, so a direct #/studio visit retries once the
+  // script has parsed instead of rendering a 404.
+  let studioRetry = 0;
+
+  function renderStudio() {
+    const kit = { pageHead, uiIcon, escapeHtml };
+    // Resolve the lesson the visitor came from, so the studio can name it and
+    // link back. Parsed here because app.js owns the course data.
+    try {
+      const params = new URLSearchParams(location.hash.split('?')[1] || '');
+      const fromId = params.get('from');
+      const lesson = fromId ? LESSON_BY_ID.get(fromId) : null;
+      if (lesson) {
+        const chapter = CHAPTER_BY_ID.get(lesson.chapterId);
+        kit.entry = {
+          id: lesson.id,
+          title: lesson.title,
+          chapter: chapter ? chapter.title : '',
+          task: lesson.task || '',
+        };
+      }
+    } catch (error) {
+      console.error('Studio entry lookup failed', error);
+    }
+    if (window.EMStudio) {
+      try {
+        window.EMStudio.mount(main, kit);
+      } catch (error) {
+        console.error('Studio mount failed', error);
+        main.innerHTML = `<div class="page-loading"><span class="mono-label">STUDIO</span><p>工作室载入失败，请刷新重试。</p><a class="section-link" href="#/learn">先去制作课</a></div>`;
+      }
+      return;
+    }
+    main.innerHTML = `<div class="page-loading"><span class="mono-label">STUDIO</span><p>正在载入工作室…</p></div>`;
+    if (studioRetry > 20) return;
+    studioRetry += 1;
+    setTimeout(() => {
+      if (!window.EMStudio || parseRoute().path !== '/studio') return;
+      studioRetry = 0;
+      try {
+        window.EMStudio.mount(main, kit);
+      } catch (error) {
+        console.error('Studio mount failed on retry', error);
+      }
+    }, 40);
+  }
+
   function pageTitle(path) {
+    if (path === '/listen') return '听：用速度与律动找风格 · 电音档案';
+    if (path === '/dj') return '过渡检查 · 电音档案';
+    if (path === '/quick') return '现场速查 · 电音档案';
+    if (path.startsWith('/card/')) return '风格卡 · 电音档案';
+    if (path === '/studio') return '工作室 · 电音入门';
     if (path === '/learn') return '制作课 · 电音入门';
     if (path.startsWith('/learn/')) {
       let id = path.split('/')[2] || '';
@@ -3896,14 +5057,110 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     const sections = [...document.querySelectorAll('[data-structure-section]')];
     if (!progress && !sections.length) return;
     const active = state.playing && state.demoId === 'structure';
-    if (progress) progress.style.width = `${active ? Math.round(state.progress * 100) : 0}%`;
-    sections.forEach((section, index) => {
-      const isActive = active && index === state.section;
-      section.classList.toggle('is-active', isActive);
-      section.classList.toggle('is-passed', active && index < state.section);
-      if (isActive) section.setAttribute('aria-current', 'step');
-      else section.removeAttribute('aria-current');
+    // The bar readout, the active cell and the scan line all come from the
+    // playhead. Reading the active section from state.section would use a
+    // different clock, and the three would drift apart.
+    const head = active && Audio?.getPlayhead ? Audio.getPlayhead('structure') : null;
+    const BARS_PER_SECTION = 2;
+    const section = head ? Math.min(sections.length - 1, Math.floor(head.bar / BARS_PER_SECTION)) : -1;
+    const ratio = head ? (head.bar + head.phase) / Math.max(1, head.bars) : 0;
+    if (progress) progress.style.width = `${active ? Math.round(ratio * 100) : 0}%`;
+    sections.forEach((item, index) => {
+      const isActive = active && index === section;
+      item.classList.toggle('is-active', isActive);
+      item.classList.toggle('is-passed', active && index < section);
+      const scan = item.querySelector('.structure-scan');
+      if (scan) {
+        // Advance within the two-bar cell, including the fractional bar.
+        const within = head ? ((head.bar % BARS_PER_SECTION) + head.phase) / BARS_PER_SECTION : 0;
+        scan.style.width = isActive ? `${Math.round(within * 100)}%` : '0%';
+      }
+      if (isActive) item.setAttribute('aria-current', 'step');
+      else item.removeAttribute('aria-current');
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // Lesson players: live loop feedback
+  //
+  // Everything here reads the audio clock through Audio.getPlayhead(), the same
+  // source the studio uses. A rAF loop paints; the audio never waits on the DOM.
+  // --------------------------------------------------------------------------
+
+  const lessonHeads = {
+    metronome: { beat: -1, bar: -1 },
+    drum: { col: -1 },
+    lab: { bar: -1 },
+  };
+
+  function clearLessonHeads() {
+    Object.values(lessonHeads).forEach((head) => { Object.keys(head).forEach((key) => { head[key] = -1; }); });
+    document.querySelectorAll('.is-lesson-now').forEach((el) => el.classList.remove('is-lesson-now'));
+    document.querySelectorAll('[data-lesson-loop-fill]').forEach((el) => { el.style.width = '0%'; });
+  }
+
+  // Beat dots: one dot per beat, the loop marker slides across the bar.
+  function paintMetronome(head) {
+    const dots = [...document.querySelectorAll('[data-beat-dot]')];
+    if (!dots.length) return;
+    const beat = head ? head.step % 4 : -1;
+    if (lessonHeads.metronome.beat === beat && lessonHeads.metronome.bar === (head ? head.bar : -1)) return;
+    lessonHeads.metronome.beat = beat;
+    lessonHeads.metronome.bar = head ? head.bar : -1;
+    dots.forEach((dot, index) => dot.classList.toggle('is-lesson-now', index === beat));
+    const read = document.querySelector('[data-lesson-loop-read]');
+    if (read) read.textContent = head ? `第 ${head.bar + 1} / ${head.bars} 小节` : '循环 2 小节';
+  }
+
+  // Sequencer: one column at a time, across all three rows at once.
+  function paintDrumHead(head) {
+    const cols = [...document.querySelectorAll('[data-drum-col]')];
+    if (!cols.length) return;
+    const col = head ? head.step : -1;
+    if (lessonHeads.drum.col === col) return;
+    lessonHeads.drum.col = col;
+    cols.forEach((cell) => cell.classList.toggle('is-lesson-now', Number(cell.dataset.drumCol) === col));
+  }
+
+  function paintLabHead(head) {
+    const buttons = [...document.querySelectorAll('[data-lesson-lab-group]')];
+    if (!buttons.length) return;
+    const bar = head ? head.bar : -1;
+    if (lessonHeads.lab.bar === bar) return;
+    lessonHeads.lab.bar = bar;
+    // Every enabled layer is sounding the whole time, so they all stay lit while
+    // the loop runs. Gating this on an even bar made the highlight flicker off
+    // for a whole bar at a time.
+    buttons.forEach((button) => {
+      const on = button.getAttribute('aria-pressed') === 'true';
+      button.classList.toggle('is-lesson-now', Boolean(head) && on);
+    });
+  }
+
+  function paintLoopBar(head) {
+    document.querySelectorAll('[data-lesson-loop]').forEach((bar) => {
+      const fill = bar.querySelector('[data-lesson-loop-fill]');
+      const count = bar.querySelector('[data-lesson-loop-count]');
+      if (fill) fill.style.width = `${head ? Math.round((head.progress || 0) * 100) : 0}%`;
+      if (count) count.textContent = head ? `${head.bar + 1} / ${head.bars}` : `1 / ${bar.dataset.lessonLoopBars || 1}`;
+    });
+  }
+
+  function paintLessonPlayheads() {
+    const state = Audio?.getState?.();
+    if (!state?.playing) {
+      clearLessonHeads();
+      paintLoopBar(null);
+      return;
+    }
+    const head = Audio.getPlayhead ? Audio.getPlayhead(state.demoId) : null;
+    if (state.demoId === 'metronome') paintMetronome(head);
+    else paintMetronome(null);
+    if (state.demoId === 'drum-machine') paintDrumHead(head);
+    else paintDrumHead(null);
+    if (state.demoId === 'lab') paintLabHead(head);
+    else paintLabHead(null);
+    paintLoopBar(head);
   }
 
   function updateHeroPlayhead(state) {
@@ -3950,6 +5207,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     paintDockWave(state.playing ? state.progress || 0 : 0);
     updateStructurePlayer(state);
     updateHeroPlayhead(state);
+    paintLessonPlayheads();
     updateTransport(state);
     paintHeaderMeter();
     if (state.playing) {
@@ -3960,12 +5218,29 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     }
   }
 
+  // A lesson page can host two players at once (its own widget and the inline
+  // studio). They share one audio session, so when a lesson player starts, the
+  // inline studio has to let go — otherwise its button keeps saying "stop" while
+  // a different loop is what you hear.
+  let lastSessionOwner = null;
+
+  function reconcileLessonSessions(state) {
+    const owner = state.playing ? state.demoId : null;
+    if (owner === lastSessionOwner) return;
+    lastSessionOwner = owner;
+    if (!window.EMStudio || typeof window.EMStudio.isEmbedded !== 'function') return;
+    if (!window.EMStudio.isEmbedded()) return;
+    // The studio owns the session only while it is the one playing.
+    if (owner && owner !== 'studio') window.EMStudio.releaseSession();
+  }
+
   function updateAudioUI(state) {
     if (!Audio || !Audio.supported) {
       if (soundToggle) soundToggle.disabled = true;
       if (audioDock) audioDock.hidden = true;
       return;
     }
+    reconcileLessonSessions(state);
     const soundOn = !state.muted;
     if (soundToggle) {
       soundToggle.classList.toggle('is-muted', state.muted);
@@ -4020,6 +5295,10 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     });
     updateStructurePlayer(state);
     updateHeroPlayhead(state);
+    // Also painted here, not only inside the rAF loop: when playback stops the
+    // loop ends, and without this call the last highlighted step would stay lit
+    // forever.
+    paintLessonPlayheads();
     updateTransport(state);
     paintHeaderMeter();
     if (state.playing && !audioProgressRaf) audioProgressRaf = requestAnimationFrame(audioProgressTick);
@@ -4255,4 +5534,14 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
   initAudioUI();
   if (!location.hash) replaceHash('#/');
   render();
+
+  // 离线速查：只在 http(s) 下注册（file:// 不支持 Service Worker）。
+  // 改完前端要记得同步 sw.js 里的 VERSION，否则老访客会继续吃缓存。
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {
+        // 注册失败不影响在线使用
+      });
+    });
+  }
 })();

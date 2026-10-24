@@ -18,7 +18,6 @@
     "South American and African Tribe music",
     "Ibiza Trance/Balearic Trance",
     "Soul",
-    "Funk",
     "Rock",
     "Pop",
     "Electronic Dance Music",
@@ -32,9 +31,7 @@
     "Electro Tech House",
     "Minimal Tech House",
     "Naughty Tech House",
-    "Nu-Jazz",
     "Rave",
-    "Bass Music",
     "Bro House",
     "Riddm Dubstep",
     "Trance",
@@ -43,12 +40,10 @@
     "Dubstep",
     "Mákina",
     "Vina Pop",
-    "R&B",
     "Gabber/Early Hardcore",
     "US Gabber",
     "Diva House/Hardbag",
     "Classic Scouse House",
-    "Hardstyle",
     "Hardcore",
     "Belgian Hard House",
     "US Bass",
@@ -68,7 +63,6 @@
     "EDM Progressive Trance",
     "Complextro Trance",
     "Future Bounce/Hands Up",
-    "Psychedelic Trance",
     "Old-School Nitzhonot",
     "Greek Uplifting",
     "Nitzhogoa",
@@ -81,11 +75,9 @@
     "Indonesian Folk",
     "Disko Tanah",
     "Proto Funk Carioca",
-    "Hard House",
     "Rave Piano",
     "Hardcore Breaks",
     "Breakcore Revival",
-    "Reggae",
     "Hardstep",
     "Atmospheric Breaks/Drum & Bass/Breakcore",
     "Drum & Bass(Hardstep",
@@ -97,10 +89,7 @@
     "Metal",
     "Noisecore",
     "Sadcore",
-    "Chiptune",
     "Drenchcore",
-    "Dariacore",
-    "Dancefloor Drum & Bass",
     "Nu Jump Up",
     "Jump up (Mainstream)/EDM Drum & Bass",
     "Halftime Neuro Funk (Tag)",
@@ -116,14 +105,11 @@
     "Donk",
     "Organ Bassline Revival",
     "Bassline/4×4 Bassline Garage",
-    "Indie Rock",
     "East Asian Traditional Music/Asian Underground",
     "Comtemporary R&B",
     "UK Dance",
     "Beat Scene",
-    "Alternative R&B",
     "Riddim/Trench",
-    "PC Music",
     "Future Drumstep",
     "Experimental Raw Hardstyle",
     "Driddim/Riddim Drumstep",
@@ -135,7 +121,6 @@
     "Death Metal",
     "Deathcore",
     "Doomstep",
-    "Tearout",
     "Slam Down",
     "Melodic Brostep",
     "Cinematic Music/Can Music",
@@ -146,18 +131,14 @@
     "Rockstep",
     "Horror Music",
     "Neuro Drumstep",
-    "Psy (Rock/Trance)",
-    "Shoegaze",
     "Industrial Music",
     "Doom Techno",
     "Gabba",
     "Early Hardcore",
     "Dark Ambient Scoress",
     "*Uptempo Hardcore",
-    "Darkcore",
     "Newskool Industrial Hardcore",
     "Oldskool Industrial Hardcore",
-    "Frenchcore",
     "Drum 'n' Core",
     "French Hardtek",
     "Cheapcore",
@@ -168,7 +149,6 @@
     "Extraflash",
     "Happy Speed Bass",
     "Anti Music Sport",
-    "Hardtek",
     "Tribetek",
     "Spiral Tribe (Personal Tag/Genre)",
     "Mental Hardfloor",
@@ -179,7 +159,6 @@
     "Modern Frenchcore",
     "Hardcore (Mainstream)",
     "Modern Frenchore",
-    "UK Hardcore",
     "Mash Up Tek",
     "Acidtek",
     "Japanese Pumpcore",
@@ -188,7 +167,6 @@
     "Acid",
     "*Makinastomp",
     "*Bigroom Hardcore",
-    "UK Hardcore (Modern)",
     "Garmen Trance",
     "Germen Trance",
     "Fake Makina",
@@ -229,7 +207,6 @@
     "Pop Music",
     "Mumble Rap",
     "Melodic Rap",
-    "Digicore",
     "Merengue",
     "Meren Rap",
     "Jazz Fusion",
@@ -237,7 +214,6 @@
     "Gansta Rap",
     "Indiehop",
     "Dirty South",
-    "Car Audio Bass",
     "Atlanta Rap",
     "Post Hardcore",
     "Snap&B",
@@ -258,25 +234,19 @@
     "Bronx Jersey Drill",
     "Bronx Snap",
     "SpaceJugg",
-    "Contemporary R&B",
     "Nod",
     "Chill Future Bass",
     "Future Urban",
     "EDM",
     "Philly Soul",
-    "Boogie",
-    "Eurobeat",
     "Hispanic American Music",
     "Urban Cowboy",
     "Morning Music",
     "Deep Disco",
-    "Synth Funk",
     "Modern Disco",
-    "Alternative Dance",
     "Super Eurobeat",
     "J-Euro",
     "Black Metal",
-    "Progressive Rock",
     "​",
     "Northern American Music",
     "Trillbient",
@@ -316,20 +286,16 @@
     "Hypnogogic Pop",
     "Chip Funk",
     "FM Synthesis Funk",
-    "Demoscene",
     "MIDI Piano",
     "PC Technology",
     "VOCALOID",
-    "Livetronica",
     "Music Programming Technology",
     "UTAU Technology",
-    "Electro-Boogie",
     "Midtempo Bass",
     "Emotional Dance Music",
     "Emo Dance Music",
     "Christian Music (Gospel",
     "Poem etc.)",
-    "Easy Listening",
     "Vapor",
     "Vapour",
     "Muzak",
@@ -345,14 +311,11 @@
     "Ocean Punk {Aesthetics}",
     "HexD Trance",
     "Hyper Pop/Sigilkore",
-    "Nightstep",
     "Slowed + Reverb",
-    "Hyperflip",
     "Comedy Hip-Hop",
     "下位：Plugg",
     "Memphis Revival",
     "Anime Soundtrack",
-    "Funk Mandelão",
     "Wave Music",
     "Cyber Wave (Tag)",
     "UK Dance(Jungle",
@@ -368,13 +331,10 @@
     "Dreamcore",
     "Traumacore {Aesthetics}",
     "Extremist Aesthetics",
-    "Industrial Rock",
-    "Industrial Metal",
     "Belgian Acid House",
     "Neofolk",
     "Neo Classicalism",
     "Electric Instrument",
-    "Acousmatic",
     "Free Improvisation",
     "Experimental Jazz",
     "Avant-Garde",
@@ -399,7 +359,6 @@
     "Himalaya Bowl",
     "Mixing Techniques",
     "Experimental Psy",
-    "PsyBient",
     "Afro Music",
     "Deejay",
     "Roots Reggae",
@@ -410,7 +369,6 @@
     "Asian Ethnic Music",
     "Sham Music",
     "Balkan Folk",
-    "Euro Beat",
     "Dirty Rap",
     "Percussion Music(Instrument: Djembe",
     "Balafon etc.)",
@@ -444,10 +402,8 @@
     "Psy Rock",
     "Britpop",
     "Dream Pop",
-    "Bristol Sound",
     "Electronics/Electro",
     "Disco/HI-NRG",
-    "Space Rock",
     "Pop Rock",
     "Indie Sleaze",
     "Kosmische Musik",
@@ -481,15 +437,12 @@
     "Synth Pop/Electro Pop",
     "Sophisti-Pop",
     "Chamber Pop",
-    "Lounge",
     "Yé-yé",
     "Akishibuya-kei",
     "Post Shibuya-kei",
     "J-Pop/Denpa",
     "Dark Pop",
     "Bedroom Pop",
-    "Psychedelic Rock",
-    "Chiptune (Plus)",
     "Eurodance/Euro Disco",
     "French Pop",
     "New Music",
@@ -509,14 +462,11 @@
     "Synth Djent",
     "Screamo Rap",
     "Nu Metalcore",
-    "Neo Soul",
     "Brega",
     "carimbó",
     "lambada",
     "Cumbia",
     "Tango Dance",
-    "Nu Jazz",
-    "Jazz Funk",
     "ECM Style Jazz",
     "Smooth Jazz",
     "Dark Jazz",
@@ -527,7 +477,40 @@
     "Furnishment music",
     "Italian Soundtrack",
     "Orchestral Soundtrack",
-    "Breakflash"
+    "Breakflash",
+    "Romo",
+    "Dance",
+    "Metalcore",
+    "Post-Hardcore",
+    "Grunge gaze",
+    "Doom Metal",
+    "Post-Shoegaze",
+    "Neo-Psychedelia",
+    "Post-Trip Hop",
+    "Trip Rock",
+    "Nu-Lounge",
+    "Exotica",
+    "Chilled Dubstep",
+    "Punk",
+    "Thrash Metal",
+    "Demoscene",
+    "Official Remix",
+    "Bootleg Remix",
+    "Club Remix",
+    "Extended Edit",
+    "DJ Edit",
+    "Experimental Electronic Music",
+    "Jam Band",
+    "Contemporary Classical",
+    "Indie",
+    "Classic Tearout",
+    "Country",
+    "Indie Dance",
+    "Extreme Metal",
+    "Djent",
+    "Regional Electronic Music",
+    "Latin",
+    "Balkan"
   ],
   "duplicateNames": [
     [
@@ -552,6 +535,18 @@
         "id": "g-17200",
         "name": "Bique",
         "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-695",
+        "name": "Balearic Beat",
+        "family": "House"
+      },
+      {
+        "id": "g-20280",
+        "name": "Balearic Beat",
+        "family": "Chill-Out"
       }
     ],
     [
@@ -600,6 +595,18 @@
         "id": "g-17276",
         "name": "Kidandali",
         "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-1243",
+        "name": "Chill House",
+        "family": "House"
+      },
+      {
+        "id": "g-20292",
+        "name": "Chill House",
+        "family": "Chill-Out"
       }
     ],
     [
@@ -880,6 +887,30 @@
     ],
     [
       {
+        "id": "g-3997",
+        "name": "Nu-Funk",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-20109",
+        "name": "Nu-Funk",
+        "family": "Funk"
+      }
+    ],
+    [
+      {
+        "id": "g-4013",
+        "name": "Ghetto Funk",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-20121",
+        "name": "Ghetto Funk",
+        "family": "Funk"
+      }
+    ],
+    [
+      {
         "id": "g-4065",
         "name": "Progressive Breaks",
         "family": "Breakbeat"
@@ -917,6 +948,23 @@
         "id": "g-14904",
         "name": "Glitchcore",
         "family": "Post-Internet"
+      },
+      {
+        "id": "g-19596",
+        "name": "Glitchcore",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-4651",
+        "name": "Chipcore",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-20612",
+        "name": "Chipcore",
+        "family": "Chiptune"
       }
     ],
     [
@@ -974,6 +1022,30 @@
     ],
     [
       {
+        "id": "g-5371",
+        "name": "4×4 Garage",
+        "family": "UK Bass"
+      },
+      {
+        "id": "g-21279",
+        "name": "4×4 Garage",
+        "family": "风格补遗"
+      }
+    ],
+    [
+      {
+        "id": "g-5495",
+        "name": "UK Funky",
+        "family": "UK Bass"
+      },
+      {
+        "id": "g-20099",
+        "name": "UK Funky",
+        "family": "Funk"
+      }
+    ],
+    [
+      {
         "id": "g-5677",
         "name": "UK Dubstep",
         "family": "UK Bass"
@@ -994,6 +1066,18 @@
         "id": "g-19298",
         "name": "UK Riddim",
         "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-6237",
+        "name": "Chillstep",
+        "family": "US Bass"
+      },
+      {
+        "id": "g-20314",
+        "name": "Chillstep",
+        "family": "Chill-Out"
       }
     ],
     [
@@ -1042,6 +1126,18 @@
         "id": "g-11297",
         "name": "Future-step",
         "family": "Hip-Hop / Trap / Future Bass"
+      }
+    ],
+    [
+      {
+        "id": "g-7249",
+        "name": "Amigacore",
+        "family": "HDM"
+      },
+      {
+        "id": "g-20634",
+        "name": "Amigacore",
+        "family": "Chiptune"
       }
     ],
     [
@@ -1106,6 +1202,42 @@
     ],
     [
       {
+        "id": "g-9505",
+        "name": "Electro-Funk",
+        "family": "Hip-Hop / Trap / Future Bass"
+      },
+      {
+        "id": "g-20039",
+        "name": "Electro-Funk",
+        "family": "Funk"
+      }
+    ],
+    [
+      {
+        "id": "g-9591",
+        "name": "G-Funk",
+        "family": "Hip-Hop / Trap / Future Bass"
+      },
+      {
+        "id": "g-20063",
+        "name": "G-Funk",
+        "family": "Funk"
+      }
+    ],
+    [
+      {
+        "id": "g-9619",
+        "name": "Trip Hop",
+        "family": "Hip-Hop / Trap / Future Bass"
+      },
+      {
+        "id": "g-20212",
+        "name": "Trip Hop",
+        "family": "Chill-Out"
+      }
+    ],
+    [
+      {
         "id": "g-9799",
         "name": "Surge",
         "family": "Hip-Hop / Trap / Future Bass"
@@ -1114,6 +1246,18 @@
         "id": "g-14762",
         "name": "Surge",
         "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-9939",
+        "name": "Funkstep",
+        "family": "Hip-Hop / Trap / Future Bass"
+      },
+      {
+        "id": "g-20087",
+        "name": "Funkstep",
+        "family": "Funk"
       }
     ],
     [
@@ -1150,6 +1294,30 @@
         "id": "g-18330",
         "name": "Disco Pop",
         "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-11777",
+        "name": "Eurodance",
+        "family": "Disco / Hi-NRG"
+      },
+      {
+        "id": "g-19520",
+        "name": "Eurodance",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-11815",
+        "name": "Bubblegum Dance",
+        "family": "Disco / Hi-NRG"
+      },
+      {
+        "id": "g-19508",
+        "name": "Bubblegum Dance",
+        "family": "Electronic Pop"
       }
     ],
     [
@@ -1191,6 +1359,18 @@
         "id": "g-16240",
         "name": "Microsound",
         "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-12231",
+        "name": "Illbient",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-20256",
+        "name": "Illbient",
+        "family": "Chill-Out"
       }
     ],
     [
@@ -1275,6 +1455,59 @@
         "id": "g-13178",
         "name": "Chillsynth",
         "family": "Indie"
+      },
+      {
+        "id": "g-19438",
+        "name": "Chillsynth",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-12810",
+        "name": "Sovietwave",
+        "family": "Indie"
+      },
+      {
+        "id": "g-19450",
+        "name": "Sovietwave",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-13160",
+        "name": "Chillwave",
+        "family": "Indie"
+      },
+      {
+        "id": "g-19426",
+        "name": "Chillwave",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-13232",
+        "name": "Downtempo",
+        "family": "Indie"
+      },
+      {
+        "id": "g-20200",
+        "name": "Downtempo",
+        "family": "Chill-Out"
+      }
+    ],
+    [
+      {
+        "id": "g-13248",
+        "name": "Chillout",
+        "family": "Indie"
+      },
+      {
+        "id": "g-20188",
+        "name": "Chill-Out",
+        "family": "Chill-Out"
       }
     ],
     [
@@ -1315,6 +1548,18 @@
     ],
     [
       {
+        "id": "g-14226",
+        "name": "Future Funk",
+        "family": "Post-Internet"
+      },
+      {
+        "id": "g-20131",
+        "name": "Future Funk",
+        "family": "Funk"
+      }
+    ],
+    [
+      {
         "id": "g-14380",
         "name": "Oceangrunge",
         "family": "Post-Internet"
@@ -1335,6 +1580,11 @@
         "id": "g-16352",
         "name": "Nightcore",
         "family": "早期流派 / 手法 / 理念"
+      },
+      {
+        "id": "g-20735",
+        "name": "Nightcore",
+        "family": "Remix & Edit"
       }
     ],
     [
@@ -1387,6 +1637,18 @@
     ],
     [
       {
+        "id": "g-16282",
+        "name": "Chopped & Screwed",
+        "family": "早期流派 / 手法 / 理念"
+      },
+      {
+        "id": "g-20777",
+        "name": "Chopped and Screwed",
+        "family": "Remix & Edit"
+      }
+    ],
+    [
+      {
         "id": "g-16518",
         "name": "Black Noise",
         "family": "早期流派 / 手法 / 理念"
@@ -1407,6 +1669,174 @@
         "id": "g-18932",
         "name": "Turbo-Folk",
         "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-17866",
+        "name": "Nintendocore",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19826",
+        "name": "Nintendocore",
+        "family": "Electronic Rock"
+      }
+    ],
+    [
+      {
+        "id": "g-17880",
+        "name": "Electronicore",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19858",
+        "name": "Electronicore",
+        "family": "Electronic Rock"
+      }
+    ],
+    [
+      {
+        "id": "g-17934",
+        "name": "Cybergrind",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19836",
+        "name": "Cybergrind",
+        "family": "Electronic Rock"
+      }
+    ],
+    [
+      {
+        "id": "g-17980",
+        "name": "Dance Punk",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-21499",
+        "name": "Dance-Punk",
+        "family": "摇滚与极端风格补遗"
+      }
+    ],
+    [
+      {
+        "id": "g-18226",
+        "name": "Synth Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19412",
+        "name": "Synth-Pop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18274",
+        "name": "Electroclash",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19608",
+        "name": "Electroclash",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18288",
+        "name": "Electro Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19390",
+        "name": "Electropop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18305",
+        "name": "Hyper Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19548",
+        "name": "Hyperpop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18311",
+        "name": "Dance-Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19486",
+        "name": "Dance-Pop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18472",
+        "name": "Shibuya-kei",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19642",
+        "name": "Shibuya-Kei",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18498",
+        "name": "Pico Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19630",
+        "name": "Picopop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18590",
+        "name": "Glitch Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19402",
+        "name": "Glitch Pop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18624",
+        "name": "City Pop",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19472",
+        "name": "City Pop",
+        "family": "Electronic Pop"
+      }
+    ],
+    [
+      {
+        "id": "g-18812",
+        "name": "Synth Metal",
+        "family": "Fusion"
+      },
+      {
+        "id": "g-19848",
+        "name": "Synth Metal",
+        "family": "Electronic Rock"
       }
     ]
   ]

@@ -20,6 +20,14 @@ const FAMILY_META = {
   '早期流派 / 手法 / 理念': { zh: '史前与技法', color: 'ice' },
   'Ethnic': { zh: '地域 / 民族', color: 'phosphor' },
   'Fusion': { zh: '融合', color: 'violet' },
+  'Electronic Pop': { zh: '电子流行', color: 'phosphor' },
+  'Electronic Rock': { zh: '电子摇滚', color: 'heat' },
+  'Funk': { zh: '放克', color: 'heat' },
+  'R&B / Rhythm and Blues': { zh: '节奏布鲁斯', color: 'ice' },
+  'Chill-Out': { zh: '休闲', color: 'ice' },
+  'Bass / Club': { zh: '低频俱乐部', color: 'violet' },
+  'Chiptune': { zh: '芯片音乐', color: 'phosphor' },
+  'Remix & Edit': { zh: '重混与编辑', color: 'ice' },
   '待归档': { zh: '待归档', color: 'muted' },
 };
 
@@ -79,6 +87,14 @@ function cleanFamilyName(value) {
   if (/^早期流派/.test(name)) return '早期流派 / 手法 / 理念';
   if (/^暂时移走/.test(name)) return '待归档';
   return name.replace(/\s*\/\s*/g, ' / ');
+}
+
+// 「补遗」类分桶：这些一级标题是为补齐覆盖度而追加的收纳桶，
+// 里面的条目各自都有正确的上位关系（例如 Psybient → Ambient）。
+// 它们不是音乐上的大族，只是文件末尾的编辑性分组，
+// 因此标记为 supplement，展示层不与 House / Techno 等正式大族并列。
+function isSupplementFamily(name) {
+  return /补遗/.test(name);
 }
 
 function parseEntryTitle(value) {
@@ -336,6 +352,7 @@ for (let index = 0; index < headings.length; index += 1) {
       entryIds: [],
       childIds: [],
       archive: familyName === '待归档',
+      supplement: isSupplementFamily(familyName),
     };
     families.push(currentFamily);
     continue;
@@ -491,7 +508,9 @@ const unresolvedRelations = entries.flatMap((entry) =>
     entry.relations[type].filter((relation) => !relation.id).map((relation) => relation.name)
   )
 );
-const activeFamilies = families.filter((family) => !family.archive);
+const activeFamilies = families.filter((family) => !family.archive && !family.supplement);
+const supplementFamilies = families.filter((family) => family.supplement);
+const supplementEntries = entries.filter((entry) => entry.familyName && isSupplementFamily(entry.familyName));
 
 const meta = {
   title: '电音知识库',
@@ -499,8 +518,11 @@ const meta = {
   generatedAt: new Date().toISOString(),
   source: sourceName,
   stats: {
+    // families 只统计正式大族；「补遗」收纳桶另计，避免把编辑性分组当成音乐分类。
     families: activeFamilies.length,
-    archivedFamilies: families.length - activeFamilies.length,
+    archivedFamilies: families.filter((family) => family.archive).length,
+    supplementFamilies: supplementFamilies.length,
+    supplementEntries: supplementEntries.length,
     entries: entries.length,
     activeEntries: entries.filter((entry) => entry.familyName !== '待归档').length,
     archiveEntries: entries.filter((entry) => entry.familyName === '待归档').length,
@@ -515,6 +537,7 @@ const meta = {
     zh: family.zh,
     color: family.color,
     archive: family.archive,
+    supplement: Boolean(family.supplement),
     count: family.entryIds.length,
     line: family.line,
     intro: family.intro,

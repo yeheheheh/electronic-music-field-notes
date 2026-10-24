@@ -41,10 +41,21 @@ test('build produces the expected module artifacts', () => {
   assert.ok(fs.existsSync(path.join(tempDir, 'manifest.json')));
   assert.ok(fs.existsSync(path.join(tempDir, 'chunks.jsonl')));
   assert.ok(fs.existsSync(path.join(tempDir, 'web.js')));
-  assert.equal(kb.stats().entries, 1205);
-  assert.equal(kb.stats().families, 16);
-  assert.ok(kb.stats().chunks > 1200);
-  assert.ok(kb.stats().curatedDocs >= 140);
+  // 断言下限而非绝对值：分类库会持续补充条目与大族，写死数字会让每次扩写都误报失败。
+  assert.ok(kb.stats().entries >= 1205, `entries=${kb.stats().entries} 应不少于 1205`);
+  assert.ok(kb.stats().families >= 16, `families=${kb.stats().families} 应不少于 16`);
+  assert.ok(kb.stats().chunks >= 1200, `chunks=${kb.stats().chunks} 应不少于 1200`);
+  assert.ok(kb.stats().curatedDocs >= 140, `curatedDocs=${kb.stats().curatedDocs} 应不少于 140`);
+
+  // 「补遗」收纳桶不能计入正式大族，否则 House、Techno 会和「风格补遗」并列，
+  // 看上去像「补遗」也是一种风格。统计口径必须保持拆开。
+  const supplementFamilies = kb.families().filter((family) => family.supplement);
+  assert.ok(supplementFamilies.length >= 1, 'supplementFamilies 应不少于 1');
+  assert.equal(
+    kb.stats().families + supplementFamilies.length + kb.stats().archivedFamilies,
+    kb.families().length,
+    '正式大族 + 补充收纳桶 + 待归档 应等于大族总数'
+  );
 });
 
 test('english search ranks the exact style first', () => {

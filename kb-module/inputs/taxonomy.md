@@ -19325,3 +19325,2402 @@ Deep Progressive Trance就是新式Deep Trance，BPM较慢，从90到120\+都有
 
 
 
+
+
+# **Electronic Pop\(已完成\)**
+
+## 前言
+
+Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。它的历史几乎与合成器本身同步：1970年代，Moog、ARP 等模块化合成器进入录音棚，Kraftwerk、Giorgio Moroder 把机器节拍放进流行歌曲的骨架里；1980年代，Synth-Pop 与新浪漫主义让"合成器乐队"成为主流形态，Depeche Mode、Pet Shop Boys、Eurythmics 用鼓机、合成贝斯和冷调人声定义了那个十年；1990年代，Eurodance 与 Eurobeat 把电子流行推向舞池与东亚市场，而 House-Pop 让俱乐部语汇回流到流行副歌。进入2010年代，Hyperpop 与 PC Music 把这种融合推到极端——人声被极端拉伸、失真、切片，变成一种关于"数字化可爱与过载"的美学。电子流行始终在做同一件事：把当时最先进的电子音色，装进最容易被记住的歌曲结构里。
+
+## 大纲
+
+Electronic Pop
+
+Electropop
+
+Synth-Pop
+
+New Romanticism
+
+City Pop
+
+Dance-Pop
+
+House-Pop
+
+Bubblegum Dance
+
+Eurodance
+
+Eurobeat
+
+Hyperpop
+
+Dariacore
+
+Digicore
+
+Robloxcore
+
+Glitchcore
+
+Electroclash
+
+Wonky Pop
+
+Picopop
+
+Shibuya-Kei
+
+## Electronic Pop
+
+上位：Electronic Music
+
+下位：Electropop、Synth-Pop、Dance-Pop、Hyperpop等
+
+A\.K\.A\. 电子流行
+
+Electronic Pop 是"以电子音色为主要织体、但服从流行歌曲结构"的一大类音乐的统称。它不是一个严格的流派界定，而是一个谱系位置：一端靠近纯粹的流行歌曲（副歌、主歌、桥段清晰），另一端靠近舞曲与实验电子。判断一首歌是否属于电子流行，关键不在"用了多少合成器"，而在"电子音色是否承担了歌曲的主要表情"——如果合成器只是伴奏配色，那更像流行摇滚；如果合成器、鼓机与处理过的人声共同决定了情绪与律动，那它就在这个谱系里。电子流行也是所有电子音乐子风格中与主流唱片工业关系最紧密的一支，很多电子音乐风格正是通过电子流行才被大众听到。
+
+例曲：Blue Monday \- New Order
+
+West End Girls \- Pet Shop Boys
+
+### Electropop
+
+上位：Electronic Pop、New Wave
+
+下位：Synth-Pop、Chillwave、Glitch Pop等
+
+A\.K\.A\. Electro-Pop、Techno-Pop
+
+Electropop 指以合成器为主导、节奏偏电子化、结构仍属于流行歌曲的形态。它常被当作 Synth-Pop 的近义词使用，但两者侧重不同：Synth-Pop 更强调合成器音色的"冷"与歌曲写作，Electropop 更强调电子化的节奏处理与更硬的音色。2000年代后期，随着软合成器与侧链压缩普及，Electropop 迎来第二次高峰，大量流行歌曲采用四四拍加合成琶音的编配。Electropop 与 EDM 的区别在于：前者服务于歌曲，后者服务于舞池。
+
+例曲：Just Dance \- Lady Gaga
+
+#### Glitch Pop
+
+上位：Electropop、Glitch
+
+下位：
+
+Glitch Pop 把故障美学（Glitch）的短促爆音、切片、卡顿引入流行歌曲结构。它不要求整首歌都是破碎的，通常只在过渡、鼓组缝隙或人声尾音处加入被切割的采样与数字爆音，让流行歌产生"信号出错"的质感。Glitch Pop 的听感介于甜蜜与不安之间，是2000年代后期到2010年代 Hyperpop 前史的重要一环。
+
+例曲：Fembot \- Robyn
+
+### Synth-Pop
+
+上位：Electronic Pop、New Wave
+
+下位：Chillwave、Chillsynth、Darksynth、Sovietwave等
+
+A\.K\.A\. Synthpop、合成器流行、Technopop
+
+Synth-Pop 兴起于1970年代末到1980年代初的英国与日本，核心是"用合成器与鼓机取代传统摇滚编制"。它的标志是：合成贝斯走稳定的低音线、鼓机给出机械而干脆的节拍、人声通常冷峻或略带疏离感、旋律却写得极为上口。Japan、Human League、Depeche Mode、YMO 是早期代表。Synth-Pop 在1980年代中后期进入主流，成为那个年代流行音乐的主要形态之一；2010年代它又被 Chillwave、Synthwave 与独立音乐重新发现，形成复古合成器浪潮。
+
+例曲：Tainted Love \- Soft Cell
+
+Rydeen \- Yellow Magic Orchestra
+
+#### Chillwave
+
+上位：Synth-Pop、Hauntology
+
+下位：Chillsynth、Glo-Fi
+
+A\.K\.A\. Glo-Fi、Dream Beat、Hypnagogic Pop
+
+Chillwave 兴起于2009年前后的互联网音乐场景，特征是把1980年代 Synth-Pop、软摇滚与流行歌曲的素材，经过磁带饱和、低通滤波与大量混响处理，做成一种"隔着水听老歌"的模糊质感。它的人声通常被埋在混音深处，歌词难以辨认，情绪介于怀旧与失落之间。Chillwave 是第一代完全依靠博客与流媒体传播的电子音乐风格之一，Washed Out、Toro y Moi、Neon Indian 是代表。它后来的分支 Chillsynth 把这种质感进一步推向纯器乐与更慢的速度。
+
+例曲：Feel It All Around \- Washed Out
+
+#### Chillsynth
+
+上位：Chillwave、Synthwave
+
+下位：
+
+A\.K\.A\. Chill Synth、Chillwave Synth
+
+Chillsynth 是 Synthwave 与 Chillwave 交汇后形成的器乐分支，速度通常较慢（90–110 BPM），以柔和的模拟合成垫音、稀疏的鼓机与温暖的低音线为主，几乎不使用失真吉他或强烈的 Lead。它常被用作学习、通勤与夜间驾驶的背景音乐。与 Chillwave 相比，Chillsynth 更少使用人声采样，结构也更接近 Ambient 与 Downtempo。
+
+例曲：Resonance \- HOME
+
+#### Sovietwave
+
+上位：Synth-Pop、Hauntology
+
+下位：
+
+Sovietwave 是2010年代在俄语互联网上形成的一种怀旧向 Synthwave 分支。它采样或模仿苏联时期的电子乐器（如 ANS 合成器）、电视广播音效、儿童合唱与电影配乐，配合柔和的合成垫音与简单的鼓机，营造一种对已消失时代的想象性追忆。它的情绪不是庆祝也不是控诉，而是一种带着距离感的温柔乡愁，与 Vaporwave 对消费社会的处理方式形成对照。
+
+例曲：Belaya Noch \- Molchat Doma
+
+### New Romanticism
+
+上位：Synth-Pop、New Wave
+
+下位：Romo
+
+A\.K\.A\. New Romantic、新浪漫主义、Blitz Kids
+
+New Romanticism 是1970年代末到1980年代初在英国（尤其伦敦 Blitz 俱乐部）形成的运动，音乐上是 Synth-Pop 的华丽化版本，视觉上则以戏剧化服装、浓妆与性别模糊形象为核心。它把流行音乐重新变成"表演"：合成器铺陈宏大而冷艳，人声常带夸张的颤音与戏剧腔。Duran Duran、Spandau Ballet、Visage 是代表。它直接影响了后来的 Goth、Dream Pop 与大量视觉系音乐。
+
+例曲：Fade To Grey \- Visage
+
+### City Pop
+
+上位：Electronic Pop、J-Pop、Fusion
+
+下位：Future Funk
+
+A\.K\.A\. シティポップ、城市流行
+
+City Pop 是1970年代末到1980年代在日本形成的都市流行音乐，融合 Funk、Disco、AOR、Jazz Fusion 与当时最时髦的合成器音色，题材多为夜间的都市生活：高速公路、海边的酒店、夏夜与失恋。它的编曲水准极高——真实的贝斯线、精细的鼓组、大量的电钢琴与合成垫音，配合清凉的女声或柔和的男声。City Pop 在2010年代被 Vaporwave 场景重新发现，通过互联网传播到全球，成为"被重新发现的日本1980年代"的代表声音。
+
+例曲：Plastic Love \- 竹内まりや
+
+Ride On Time \- 山下達郎
+
+### Dance-Pop
+
+上位：Electronic Pop、Dance
+
+下位：House-Pop、Nu-Disco、Disco-Pop等
+
+Dance-Pop 指以舞曲节拍为基础、但结构与演唱方式遵循流行歌曲的音乐。它通常使用稳定的四四拍、清晰的主歌副歌对比与强记忆点的副歌。Dance-Pop 与 EDM 的区别在于：Dance-Pop 的 Drop 通常是一个歌手的副歌，而不是一段器乐高潮；与 Disco 的区别在于，它更依赖电子音色与后期制作而非乐队演奏。
+
+例曲：Can't Get You Out Of My Head \- Kylie Minogue
+
+### House-Pop
+
+上位：Dance-Pop、House
+
+下位：
+
+A\.K\.A\. Pop House、Vocal House (Pop)
+
+House-Pop 指采用 House 音乐语汇（四四拍 Kick、Off-beat Hi-hat、钢琴或合成器 Stab、侧链处理）的流行歌曲。它在1990年代由大量欧美流行歌手带向主流，并在2010年代中期随 Deep House 的回潮再次流行。它的标志是：Drop 处出现一段被侧链压缩的钢琴或合成器和弦，人声在副歌与 Drop 之间交替。House-Pop 是俱乐部语汇进入主流的最稳定通道之一。
+
+例曲：One Kiss \- Calvin Harris / Dua Lipa
+
+### Bubblegum Dance
+
+上位：Dance-Pop、Eurodance
+
+下位：
+
+A\.K\.A\. Bubblegum Pop、Happy House
+
+Bubblegum Dance 是1990年代后期到2000年代初的欧洲舞曲分支，特征是极快的速度（140 BPM 上下）、甜到发腻的女声、简单的合成器旋律与儿童化的题材。它常与 Eurodance 一同出现，但比 Eurodance 更轻、更无攻击性，几乎完全服务于快乐。它在日本与东南亚特别受欢迎，也直接影响了后来的 Nightcore 与 Hyperpop 的素材选择。
+
+例曲：Barbie Girl \- Aqua
+
+### Eurodance
+
+上位：Dance-Pop、Euro House
+
+下位：Eurobeat、Bubblegum Dance、Hands Up
+
+A\.K\.A\. Euro-NRG、European Dance
+
+Eurodance 是1990年代欧洲（尤其德国、意大利、荷兰、瑞典）的主流舞曲形态，结构高度公式化：快速的四四拍、粗壮的合成贝斯、女声主歌加男声说唱段落、简单而明亮的合成器主旋律。它在1990年代统治了欧洲排行榜，也通过动漫与游戏进入东亚。Eurodance 的直接后继是 Eurobeat、Bubblegum Dance 与 Hands Up。它的制作美学（高响度、强调中高频、明确的段落切换）影响了此后几乎所有商业舞曲。
+
+例曲：Rhythm Is A Dancer \- Snap!
+
+Better Off Alone \- Alice Deejay
+
+#### Eurobeat
+
+上位：Eurodance、Italo-Disco
+
+下位：
+
+A\.K\.A\. Eurobeat、欧陆节拍
+
+Eurobeat 是 Eurodance 与 Italo-Disco 在意大利形成的更快、更亮的变体，速度通常在150–160 BPM，特征是密集的合成器琶音、明亮的 Lead、强烈的四四拍与激昂的人声。它在欧洲本土的影响力有限，却通过日本《头文字D》系列的配乐获得第二次生命，成为日本同人音乐与赛车文化的重要语汇，并催生了大量日本本土的 Eurobeat 制作人。
+
+例曲：Running In The 90s \- Max Coveri
+
+Deja Vu \- Dave Rodgers
+
+### Hyperpop
+
+上位：Electronic Pop、Post-Internet
+
+下位：Dariacore、Digicore、Glitchcore、Robloxcore等
+
+A\.K\.A\. Hyper Pop、超流行、PC Music
+
+Hyperpop 是2010年代中期在互联网上形成的一种极端化的电子流行，核心手法是"把流行音乐的每个元素都推到失真"：人声被极端升调、降调、拉伸、切片，合成器音色被故意做得刺耳，鼓组爆音被当作打击乐使用，副歌可以在一秒内切换情绪。它同时吸收了 Trance、Eurodance、Emo、Trap 与实验电子的素材。Hyperpop 的听感常常是矛盾的：既极度甜蜜又极度焦虑，既像广告音乐又像情绪崩溃。PC Music、100 gecs、SOPHIE 是这一场景的关键节点。它也是"后互联网"音乐最典型的形态之一。
+
+例曲：Money Machine \- 100 gecs
+
+Immaterial \- SOPHIE
+
+#### Dariacore
+
+上位：Hyperpop、Digicore
+
+下位：
+
+A\.K\.A\. Daria Core、Hyperflip
+
+Dariacore 是2021年前后在互联网上爆发的一种极高速 Hyperpop 分支，由制作人 leroy 命名。它的手法是把大量彼此无关的素材（动画配乐、游戏音效、流行歌曲片段、说唱 Acapella）以极高的速度（通常170–200 BPM 以上）拼接、切片、叠置，形成一种近乎信息过载的听觉体验。它的名字与美学都来自互联网亚文化，作品常以夸张的封面与标题发布在流媒体上。
+
+例曲：cute \- leroy
+
+#### Digicore
+
+上位：Hyperpop、Post-Internet
+
+下位：Dariacore、Glitchcore
+
+A\.K\.A\. Digi-Core、Digital Core
+
+Digicore 是2020年前后形成的场景，指一批完全在互联网上成长、使用极简制作工具（常是手机或基础 DAW）与高度处理人声的年轻制作人。它的音色介于 Hyperpop、Emo Rap 与 Glitch 之间，人声通常被 Auto-Tune 与切片处理到失去自然感，情绪偏向过度暴露的自白。Digicore 与 Hyperpop 常被混用，但 Digicore 更强调"场景"与"世代"，而不只是一种音色手法。
+
+例曲：hand crushed by a mallet \- 100 gecs
+
+#### Robloxcore
+
+上位：Hyperpop、Digicore
+
+下位：
+
+Robloxcore 是2020年代在互联网上形成的分支，素材与美学直接取自 Roblox 等在线游戏平台的音效、MIDI 与用户生成内容。它通常使用极简的合成器音色、游戏内音效与高速切片，听感刻意粗糙，带有强烈的"游戏内发生"的现场感。它体现了后互联网音乐的一个核心特征：平台本身成为风格来源。
+
+例曲：Roblox Theme (Hyperflip) \- Various
+
+#### Glitchcore
+
+上位：Hyperpop、Glitch
+
+下位：
+
+A\.K\.A\. Glitch Core
+
+Glitchcore 把 Glitch 的故障音效与 Hyperpop 的极端人声处理结合，特征是持续的数字爆音、卡顿、短促切片与突然的音量变化。它比 Glitch Pop 更激进，往往整首歌都建立在"信号崩坏"的听感上。它同时受到 Breakcore 与 Flashcore 在节奏密度上的影响。
+
+例曲：glitch \- Various
+
+### Electroclash
+
+上位：Electronic Pop、Electro、New Wave
+
+下位：
+
+A\.K\.A\. Electroclash、Electro-Clash
+
+Electroclash 是1990年代末到2000年代初在纽约与柏林形成的短暂但影响深远的场景。它把1980年代的 Synth-Pop、Italo-Disco 与 Electro 重新组合，配合刻意廉价感的合成器音色、冷感的念白式人声与强烈的时尚/性别表演元素。它是对当时主流电子舞曲的一种讽刺性回应，也直接预示了后来的 Electro House 与 Hyperpop 的视觉策略。
+
+例曲：Frank Sinatra \- Miss Kittin / The Hacker
+
+### Wonky Pop
+
+上位：Electronic Pop、Synth-Pop
+
+下位：
+
+Wonky Pop 是2000年代后期在英国出现的说法，指一批音色故意"歪斜"（wonky）的电子流行：合成器音高不稳、节拍故意错位、编曲带着笨拙的幽默感。它介于独立流行与电子舞曲之间，制作上常使用廉价的软合成器与刻意的失真。它与 Wonky（一种 UK Bass 的分支）在名字上重合，但音乐上并无直接关系。
+
+例曲：I'm Not Alone \- Calvin Harris
+
+### Picopop
+
+上位：Electronic Pop、Chiptune
+
+下位：
+
+A\.K\.A\. Pico Pico、ピコピコ
+
+Picopop 是日本1990年代末到2000年代的一种电子流行，把 Chiptune 的方波音色、极快的速度与可爱的女声结合，制作上刻意保留游戏机音效的颗粒感。它常与秋叶原系文化、同人音乐与 Denpa 歌曲一同出现。Picopop 在海外也影响了后来的 Chiptune 与 Hyperpop 制作人。
+
+例曲：Kawaii Girl \- Various
+
+### Shibuya-Kei
+
+上位：Electronic Pop、J-Pop、Fusion
+
+下位：Neo Shibuya-Kei
+
+A\.K\.A\. 涩谷系、渋谷系
+
+Shibuya-Kei 是1990年代在东京涩谷形成的一种高度折衷主义的流行音乐，把 Bossa Nova、Lounge、French Pop、Jazz、Shibuya 街头的俱乐部音乐与电子音色混合，制作极为精细、品味考究，常被称为"用唱片收藏做出来的流行音乐"。它体现了1990年代日本都市消费文化的审美取向，也通过后来的 City Pop 复兴被全球听众重新发现。
+
+例曲：今夜はブギー・バック \- 小沢健二 / スチャダラパー
+
+
+# **R&B / Rhythm and Blues\(已完成\)**
+
+## 前言
+
+R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对"面向黑人听众的流行音乐"的分类标签，用来替代当时带有种族色彩的"Race Music"一词。它的形态在几十年里不断置换：1940–50年代是带有强烈摇摆感与铜管编制的 Jump Blues 与 Doo-Wop；1960年代被 Motown 与 Stax 打磨成结构精密的 Soul；1970年代出现带有交响编制的 Philly Soul 与更粗粝的 Funk 化 R&B；1980年代，鼓机、合成贝斯与采样器进入录音棚，R&B 完成第一次大规模电子化，New Jack Swing 与 Quiet Storm 是这一时期的两个极点。1990年代是 R&B 的黄金年代，制作上大量使用 TR-808/909、合成垫音与多层人声和声。进入2010年代，Trap 的鼓组语汇与氛围化的合成器被引入，形成 Alternative R&B 与 Trap Soul。可以说，R&B 是电子音乐与歌唱传统结合最紧密、也最持久的一条线。
+
+例曲：Papa's Got A Brand New Bag \- James Brown
+
+## 大纲
+
+R&B
+
+Contemporary R&B
+
+Alternative R&B
+
+Trap Soul
+
+Neo Soul
+
+Quiet Storm
+
+Slow Jam
+
+## R&B
+
+上位：Electronic Music、Soul
+
+下位：Contemporary R&B、Neo Soul、Quiet Storm、New Jack Swing等
+
+A\.K\.A\. Rhythm and Blues、节奏布鲁斯
+
+R&B 是一个谱系而非单一风格：它始终以"人声表达"为核心，以当时最主流的流行编曲为外壳。判断一首歌是否属于 R&B，关键在演唱方式——大量使用的装饰音（Melisma）、Call and Response、多轨和声堆叠，以及围绕人声而非乐器展开的编曲。在电子音乐语境下，R&B 的重要性在于它是最早大规模采用鼓机与合成器的流行乐种之一：TR-808 的 Long Kick 与 Clap、DX7 的电钢琴、以及后来 Trap 的三连音 Hi-hat，都是通过 R&B 进入主流的。
+
+例曲：Sexual Healing \- Marvin Gaye
+
+### Contemporary R&B
+
+上位：R&B
+
+下位：Alternative R&B、Trap Soul、RnBass等
+
+A\.K\.A\. 当代 R&B、Modern R&B
+
+Contemporary R&B 指1980年代以后、以电子制作手段为基础的 R&B 形态。它的标志是：鼓机或采样鼓组替代真实鼓手、合成贝斯或低音合成器承担低频、大量使用电钢琴与合成垫音、人声经过多层叠加与精细的压缩处理。1990年代是它的鼎盛期，制作上形成了高度成熟的一套规范（如人声先压缩再叠加、副歌处加宽立体声像）。这套规范后来成为几乎所有流行音乐的制作基础。
+
+例曲：No Scrubs \- TLC
+
+#### Trap Soul
+
+上位：Contemporary R&B、Trap
+
+下位：
+
+A\.K\.A\. Trap R&B、Trap-Soul
+
+Trap Soul 是2010年代中期形成的融合形态，把 Trap 的鼓组（808 Long Kick、三连音 Hi-hat、稀疏的 Snare）与 R&B 的歌唱方式和和声堆叠结合。它通常速度较慢（60–75 BPM 感觉，实际多为 130–150 BPM 的半速感），空间感极强，人声常被大量 Auto-Tune 与混响包裹。Trap Soul 是当代流行与 R&B 之间最主要的桥梁。
+
+例曲：Don't \- Bryson Tiller
+
+### Alternative R&B
+
+上位：Contemporary R&B
+
+下位：Trap Soul
+
+A\.K\.A\. Alt-R&B、PBR&B、Indie R&B
+
+Alternative R&B 是2010年前后形成的说法，指一批脱离传统 R&B 制作规范、更接近独立音乐与实验电子的 R&B。它的特征是：编曲刻意留白、鼓组被处理到模糊、合成器音色偏冷或失真、人声常被降调或加厚到失去性别特征。它同时吸收了 Ambient、Dubstep 与 Post-Dubstep 的空间处理方式。Frank Ocean、The Weeknd（早期）、FKA twigs 是代表。
+
+例曲：The Hills \- The Weeknd
+
+### Neo Soul
+
+上位：R&B、Soul
+
+下位：
+
+A\.K\.A\. Neo-Soul、新灵魂乐
+
+Neo Soul 是1990年代中期形成的分支，把1970年代的 Soul 与 Jazz 的和声语言、真实的乐器演奏（尤其是电钢琴、贝斯与鼓）与 Hip-Hop 的节拍感结合。它的鼓组通常带有明显的"人性化"摇摆（Swung Feel），和声使用大量延伸音与调式交替，歌词偏向内省与社会意识。D'Angelo、Erykah Badu、Lauryn Hill 是代表。
+
+例曲：Untitled (How Does It Feel) \- D'Angelo
+
+### Quiet Storm
+
+上位：R&B、Soul
+
+下位：Slow Jam
+
+A\.K\.A\. 静storm、Quiet Storm R&B
+
+Quiet Storm 源自1976年 Smokey Robinson 的同名电台节目，后来成为一种风格标签，指节奏舒缓、编曲柔和、以浪漫题材为主的 R&B。它的标志是：慢速的鼓机或真实鼓组、温暖的 Rhodes 电钢琴、柔和的合成垫音、大量的人声和声。它几乎不使用强烈的高频或攻击性音色，整体响度偏低，是"夜间电台"美学的原型。
+
+例曲：Let's Get It On \- Marvin Gaye
+
+### Slow Jam
+
+上位：Quiet Storm、R&B
+
+下位：
+
+A\.K\.A\. Slow Jam、慢板情歌
+
+Slow Jam 指速度在60–80 BPM、以情爱或失恋为主题、编曲极简的 R&B 慢歌。它通常只有几个和弦循环、一层柔和鼓组与大量人声和声，制作重心完全在人声的表情处理上。Slow Jam 是 R&B 中最稳定的一个子类型，从1960年代延续至今，也是衡量一位 R&B 歌手演唱能力的主要场域。
+
+例曲：Adorn \- Miguel
+
+
+# **Electronic Rock\(已完成\)**
+
+## 前言
+
+Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。它的历史可以追溯到1960年代末：The Beatles 在《Revolver》里用磁带循环与人声倒放打开缺口，Pink Floyd 与 King Crimson 把 Mellotron 与合成器变成摇滚编曲的常规配置。1970年代，Kraftwerk 与 Suicide 让"朋克遇上合成器"成为可能，德国 Krautrock 与后朋克则提供了结构上的自由。1980年代，New Wave 与 Industrial Rock 把鼓机、采样与失真吉他并置，Nine Inch Nails 与 Ministry 确立了工业摇滚的范式。1990年代，Big Beat 与 Electronicore 让摇滚与电子舞曲的边界进一步模糊；2000年代，Nintendocore 与 Cybergrind 把游戏音效与极端金属拼在一起；2010年代后，Blackgaze 与 Nu Gaze 把 Shoegaze 的噪音墙与黑金属、电子氛围融合。电子摇滚的核心问题始终是：机器与人的演奏如何在同一首曲子里互相不让步，又彼此成立。
+
+例曲：Kashmir \- Led Zeppelin
+
+## 大纲
+
+Electronic Rock
+
+Electronic Metal
+
+Electronicore
+
+Nintendocore
+
+Cybergrind
+
+Gaze
+
+Shoegaze
+
+Blackgaze
+
+Indie Rock
+
+Noise Rock
+
+Progressive Rock
+
+Psychedelic Rock
+
+Space Rock
+
+Industrial Rock
+
+## Electronic Rock
+
+上位：Electronic Music、Rock
+
+下位：Electronic Metal、Dance-Rock、Alternative Dance、Electro Punk、Shoegaze等
+
+A\.K\.A\. 电子摇滚、Synth Rock
+
+Electronic Rock 指以摇滚编制（吉他、贝斯、鼓）为基础，但把合成器、鼓机、采样或电子处理放在同等甚至更主导位置的音乐。它不是一个统一的音色风格，而是一个"编制混合"的位置：从 Kraftwerk 的纯机器摇滚，到 Nine Inch Nails 的失真工业摇滚，再到 M83 的合成器噪音墙，都在这个谱系里。判断标准在于"电子手段是否参与决定了这首歌的骨架"——如果只是加了一层合成垫音，那仍是摇滚；如果鼓组来自鼓机、低音来自合成器、副歌靠合成器推进，那它就在电子摇滚的范围内。
+
+例曲：Closer \- Nine Inch Nails
+
+### Electronic Metal
+
+上位：Electronic Rock、Heavy Metal
+
+下位：Electronicore、Nintendocore、Cybergrind、Synth Metal、Trance Metal等
+
+A\.K\.A\. 电子金属、Industrial Metal、Synth Metal
+
+Electronic Metal 指把金属乐的失真吉他、双踩鼓与极端唱腔，与电子音色（合成器、鼓机、采样、Glitch 处理）结合的音乐。它的两个主要方向是：Industrial Metal（以 Ministry、Fear Factory 为代表，强调机械感与工业噪音）与 Synth Metal（强调明亮的合成器 Lead 与舞曲节拍）。Electronic Metal 的制作特点是把吉他当作"音色层"而非唯一主角，用合成器与采样填充中高频空间，鼓组常被替换或叠加上电子鼓。
+
+例曲：Du Hast \- Rammstein
+
+#### Nintendocore
+
+上位：Electronic Metal、Bit Music、Hardcore Punk
+
+下位：
+
+Nintendocore 是2000年代形成的分支，把 Chiptune 的方波旋律、游戏机音效与 Hardcore Punk／Metalcore 的失真吉他、Breakdown 拼在一起。它通常速度极快、情绪极度跳跃，可以在同一段里从可爱的八位旋律切到嘶吼与双踩。名字来自任天堂，体现了互联网一代制作人对童年游戏音效的重新使用。
+
+例曲：Birdo \- Horse The Band
+
+#### Cybergrind
+
+上位：Electronic Metal、Grindcore
+
+下位：Electrogrind
+
+A\.K\.A\. Electrogrind
+
+Cybergrind 是把 Grindcore 的高速blast beat、极端唱腔与电子音效（尤其是 Glitch、Breakcore 的爆音切片、8-bit 音色）结合的分支。它通常由单人用电脑完成全部制作，鼓组常是程序化的高速电子鼓，吉他被极度压缩或直接由合成器替代。它的听感近乎信息过载，是极端金属与电子音乐交叉处最激进的一端。
+
+例曲：Various \- Cybergrind
+
+#### Synth Metal
+
+上位：Electronic Metal
+
+下位：
+
+Synth Metal 指以合成器音色承担主旋律与和声、吉他承担节奏或失真墙、鼓组采用电子鼓的金属形态。它与 Industrial Metal 的区别在于音色取向：Industrial Metal 追求机械与噪音，Synth Metal 追求明亮、旋律化与舞台感。它在2010年代随合成器浪潮复兴。
+
+例曲：Various \- Synth Metal
+
+### Electronicore
+
+上位：Electronic Rock、Metalcore、Post-Hardcore
+
+下位：Trancecore
+
+A\.K\.A\. Synthcore、Trancecore、Electronic Core
+
+Electronicore 是2000年代后期形成的分支，把 Metalcore／Post-Hardcore 的 Breakdown、嘶吼与 Clean 唱腔，与 Trance、Eurodance 的合成器 Riff、四四拍节拍、以及 Auto-Tune 处理的人声结合。它的标志是：副歌处出现一段明亮的 Trance 合成器主旋律，然后立刻切回失真 Breakdown。Enter Shikari、Attack Attack! 是代表。它体现了2000年代后期 Myspace 场景下电子舞曲与硬核场景的相互渗透。
+
+例曲：Sorry You're Not A Winner \- Enter Shikari
+
+### Gaze
+
+上位：Electronic Rock、Shoegaze
+
+下位：Blackgaze、Doomgaze、Nu gaze、Grunge gaze
+
+A\.K\.A\. Gaze、Gaze Music
+
+Gaze 是2010年代在互联网上形成的集合名词，用来指一批共享 Shoegaze 手法（极厚的失真吉他墙、大量混响与延迟、被埋在混音中的人声）但具体素材来源各不相同的音乐。它把这些手法与其他风格嫁接，形成 Blackgaze（黑金属）、Doomgaze（Doom Metal）、Nu Gaze（后朋克与电子）等分支。Gaze 在制作上极度依赖效果器链与混响空间，人声几乎从不清晰，是"音色即情绪"的极端案例。
+
+例曲：Various \- Gaze
+
+#### Blackgaze
+
+上位：Gaze、Black Metal
+
+下位：
+
+Blackgaze 是把黑金属的高速 Tremolo 吉他、Blast Beat 与 Shoegaze 的厚实吉他墙、明亮和声、大混响结合的分支。它保留了黑金属的音色与速度，但把情绪从寒冷转向温暖甚至明亮。Alcest、Deafheaven 是代表。它在2010年代通过互联网场景获得广泛关注，也成为电子音乐听众进入极端金属的一个入口。
+
+例曲：Sunbather \- Deafheaven
+
+#### Doomgaze
+
+上位：Gaze、Doom Metal
+
+下位：
+
+Doomgaze 把 Doom Metal 的极慢速度、沉重低音与 Shoegaze 的失真墙、混响空间结合。速度通常在40–70 BPM，鼓组稀疏而沉重，吉他是持续的低频嗡鸣与厚实和弦，人声往往被埋到几乎不可辨认。它的听感是"极度缓慢的坍塌"，与 Blackgaze 的高速形成对照。
+
+例曲：Various \- Doomgaze
+
+#### Nu gaze
+
+上位：Gaze、Post-Punk、Electronic Rock
+
+下位：Post-Shoegaze
+
+A\.K\.A\. Nu-Gaze、Post-Shoegaze
+
+Nu Gaze 指2010年代把 Shoegaze 的吉他墙与 Post-Punk 的冷调、电子鼓组、Synth-Pop 的合成垫音结合的分支。它比传统 Shoegaze 更依赖电子制作手段：鼓组常来自鼓机，合成器承担和声铺底，吉他则用于制造噪音层。它同时是 Post-Punk Revival 与 Synthwave 之间的桥梁。
+
+例曲：Various \- Nu Gaze
+
+### Shoegaze
+
+上位：Electronic Rock、Alternative Rock
+
+下位：Gaze、Blackgaze、Nu gaze、Dream Pop
+
+A\.K\.A\. Shoegazing、自赏、瞪鞋
+
+Shoegaze 是1980年代末到1990年代初在英国形成的风格，名字来自乐手演出时低头看效果器踏板的姿态。它的核心是"吉他不再是独奏乐器，而是音色制造器"：通过失真、Fuzz、延迟、混响与颤音摇杆，把吉他做成一片持续的音墙；人声被埋进混音，歌词几乎不可辨认；鼓组通常简单而稳定，贝斯线温暖而模糊。My Bloody Valentine 的《Loveless》是这一风格的顶点。Shoegaze 在2010年代通过 Blackgaze 与 Nu Gaze 复兴，也被大量电子音乐制作人借鉴其空间处理方式。
+
+例曲：Only Shallow \- My Bloody Valentine
+
+### Indie Rock
+
+上位：Electronic Rock、Alternative Rock
+
+下位：Slacker Rock、Noise Pop、Dream Pop、Lo-Fi
+
+A\.K\.A\. 独立摇滚
+
+Indie Rock 指在独立厂牌发行、脱离主流唱片工业制作规范的摇滚乐。它的音乐特征不固定，但通常具有：制作预算有限带来的粗糙质感、对当时主流音色的刻意回避、以及更强的作者性。在电子音乐语境下，Indie Rock 的意义在于它是 Synth-Pop 与 Chillwave 复兴的重要载体：大量独立乐队在2010年代改用合成器与鼓机，形成了 Indietronica 与 Chillwave 的场景基础。
+
+例曲：Various \- Indie Rock
+
+### Noise Rock
+
+上位：Electronic Rock、Experimental
+
+下位：Noise Pop、No Wave
+
+Noise Rock 指把噪音（反馈、失真、无调性音块）当作主要表达手段的摇滚。它通常使用极简的编制（吉他、贝斯、鼓）与极大的音量，结构可以非常松散。它与电子音乐的交叉点在于对"音色本身即内容"的处理方式，以及大量使用效果器与非常规演奏技巧（如用金属片摩擦吉他弦）。
+
+例曲：Various \- Noise Rock
+
+### Progressive Rock
+
+上位：Electronic Rock、Rock
+
+下位：Krautrock、Space Rock、Brutal Prog
+
+A\.K\.A\. Prog Rock、前卫摇滚、Art Rock
+
+Progressive Rock 是1960年代末到1970年代形成的摇滚分支，核心是"把古典音乐的结构思维与爵士的和声复杂度引入摇滚"。它的标志是：长曲目与组曲结构、频繁的拍号变化、复杂的和声进行、大量使用 Mellotron 与早期合成器。它直接为后来的 Ambient、Berlin School 与 Progressive Electronic 提供了技术前提——这些电子音乐分支的第一批实践者（如 Tangerine Dream、Klaus Schulze）正是从 Krautrock 与 Prog Rock 场景中走出来的。
+
+例曲：21st Century Schizoid Man \- King Crimson
+
+### Psychedelic Rock
+
+上位：Electronic Rock、Rock
+
+下位：Space Rock、Neo-Psychedelia
+
+A\.K\.A\. Psychedelia、迷幻摇滚
+
+Psychedelic Rock 是1960年代中期形成的摇滚分支，用音乐模拟意识状态的改变：长时间的器乐即兴、大量的混响与延迟、左右声道大幅摆动的立体声效果、磁带倒放与人声倒放、以及非西方的音阶与乐器。它是电子音乐效果器文化的重要源头之一——Flanger、Phaser、Tape Delay 这些效果器最初正是为了制造迷幻空间而被大规模使用。
+
+例曲：Interstellar Overdrive \- Pink Floyd
+
+### Space Rock
+
+上位：Psychedelic Rock、Progressive Rock、Ambient
+
+下位：
+
+A\.K\.A\. Space Rock、太空摇滚
+
+Space Rock 指以太空、宇宙、失重为主题，使用大量合成器、长混响与缓慢推进结构的摇滚分支。它通常速度缓慢、结构松散，合成器负责制造持续的音场，吉他与贝斯在其中缓慢游动。它同时是 Berlin School 电子音乐与 Ambient 的近亲，两者在1970年代的德国场景中互相影响。
+
+例曲：Various \- Space Rock
+
+### Industrial Rock
+
+上位：Electronic Rock、Industrial
+
+下位：Industrial Metal、Neue Deutsche Härte
+
+Industrial Rock 是把工业音乐的机械噪音、采样、程序化鼓组与摇滚编制结合的分支。它的标志是：鼓组大量使用工业噪音采样（金属敲击、机械声）、吉他使用极重的失真与下行音型、人声常被加失真或嘶吼处理。Nine Inch Nails 的《The Downward Spiral》是这一风格的顶点。它直接影响了后来的 Industrial Metal 与 Neue Deutsche Härte。
+
+例曲：March Of The Pigs \- Nine Inch Nails
+
+
+# **Funk\(已完成\)**
+
+## 前言
+
+Funk 是电子音乐最重要的"节奏祖先"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹"One"，鼓只打一个稳定的"On the One"。这种"Everything is a drum"的思路，直接定义了此后所有舞曲的骨架。1970年代，Sly Stone 与 Parliament-Funkadelic 把合成器、Clavinet 与 Wah 效果器引入 Funk，形成 P-Funk 的宇宙。1980年代，Prince 与 Zapp 用 LinnDrum、Oberheim 与 Talk Box 把 Funk 推向电子化；同一时期，西海岸的 G-Funk 用 Moog 的滑音 Lead 与缓慢的节拍重新包装了 Funk；而 Miami Bass 与 Electro 则把 808 的 Kick 变成主角。1990年代后，Funk 的语汇被 Hip-Hop、House、Drum & Bass 与 Nu-Disco 大量采样与内化——今天几乎所有电子舞曲的低频与切分处理，都可以追溯到 Funk。
+
+例曲：Papa's Got A Brand New Bag \- James Brown
+
+## 大纲
+
+Funk
+
+Electro-Funk
+
+Synth Funk
+
+G-Funk
+
+Jazz Funk
+
+Funkstep
+
+UK Funky
+
+Nu-Funk
+
+Ghetto Funk
+
+Future Funk
+
+Funk Mandelão
+
+## Funk
+
+上位：Electronic Music、Soul
+
+下位：Electro-Funk、Synth Funk、G-Funk、Jazz Funk、UK Funky等
+
+A\.K\.A\. Funk Music、放克
+
+Funk 的核心不是和声，而是"节奏的分工与咬合"。它的标志是：贝斯以短促、重复、带有大量十六分音符的乐句承担低频与律动；鼓组强调 Snare 在二、四拍，Hi-hat 保持十六分音符；吉他或键盘只弹短促的切音和弦（Stab），几乎不演奏长音；整体以"一个和弦持续很久"为常态。在电子音乐中，Funk 的影响体现在三处：切分节奏的处理方式、低频与鼓的咬合关系、以及"留白比填满更重要"的编曲观念。
+
+例曲：Give Up The Funk \- Parliament
+
+### Electro-Funk
+
+上位：Funk、Electro
+
+下位：
+
+A\.K\.A\. Electro Funk、Electro-Boogie
+
+Electro-Funk 是1980年代初形成的融合形态，把 Funk 的律动与 Electro 的鼓机（TR-808）、合成器 Bass 与 Vocoder 结合。它的标志是：808 的 Kick 与 Clap 承担鼓组、合成贝斯用短促的低频音符、旋律由合成器或 Talk Box 演奏、歌词多为科幻或派对题材。它是 Hip-Hop 与 Techno 的共同前身之一，也是"机器可以 Funk"这一观念的第一次大规模验证。
+
+例曲：Planet Rock \- Afrika Bambaataa
+
+### Synth Funk
+
+上位：Funk、Synth-Pop
+
+下位：
+
+A\.K\.A\. Boogie、Synth-Funk、Electro Boogie
+
+Synth Funk 是1980年代 Funk 的电子化形态，特征是：鼓机（LinnDrum、Oberheim DMX）承担鼓组、合成贝斯走明亮的切分线、大量使用电钢琴、合成铜管与华丽的合成器 Solo。它比 Electro-Funk 更注重旋律与和声的精致度，听感更"亮"、更都市化。它是 Nu-Disco 与 Future Funk 的直接源头。
+
+例曲：I Feel For You \- Chaka Khan
+
+### G-Funk
+
+上位：Funk、Hip-Hop
+
+下位：
+
+A\.K\.A\. Gangsta Funk、西海岸 G-Funk
+
+G-Funk 是1990年代初美国西海岸 Hip-Hop 的分支，制作上大量采样1970年代的 P-Funk 与 Zapp，配合缓慢的节拍（90 BPM 上下）、Moog 或类似合成器的滑音 Lead、以及大量使用 Talk Box 的女声和声。它的音色特征是"油腻而温暖"：低频沉重、中频被合成器填满、高频有明亮的钟声与 Whine。G-Funk 定义了1990年代西海岸 Hip-Hop 的声音形象。
+
+例曲：Nuthin' But A 'G' Thang \- Dr. Dre
+
+### Jazz Funk
+
+上位：Funk、Jazz
+
+下位：Acid Jazz
+
+A\.K\.A\. Jazz-Funk、Funk Jazz
+
+Jazz Funk 是1970年代形成的分支，把 Funk 的律动与爵士的和声、即兴独奏结合。它的编制通常是真实的乐队：电贝斯、电钢琴、Clavinet、铜管组与打击乐。速度通常在中速（100–120 BPM），和声使用大量七和弦、九和弦与调式音阶，独奏部分保留爵士的即兴空间。它是 Acid Jazz、Nu-Disco 与 City Pop 的和声基础。
+
+例曲：Chameleon \- Herbie Hancock
+
+### Funkstep
+
+上位：Funk、Dubstep
+
+下位：
+
+A\.K\.A\. Funky Dubstep
+
+Funkstep 是2010年代形成的融合形态，把 Dubstep 的低频处理（Wobble Bass、Half-time 鼓组）与 Funk 的切分律动、明亮合成器与 Groove 结合。它比典型 Dubstep 更"活"，鼓组保留了 Funk 的细碎 Hi-hat 与 Syncopation，低频则使用 Wobble 或 Reese 处理。它同时是 Glitch Hop 与 Neurohop 的近亲。
+
+例曲：Various \- Funkstep
+
+### UK Funky
+
+上位：Funk、UK Garage、House
+
+下位：
+
+UK Funky 是2000年代后期在伦敦形成的分支，把 House 的四四拍与 UK Garage 的切分、以及非洲与加勒比鼓乐的节奏结合。它的标志是：稳定的四四拍 Kick 配合复杂的打击乐层、深沉的合成贝斯、以及大量使用的人声采样与 MC。它比 Deep House 更"碎"、比 Grime 更"舞"，是英国多文化场景的产物。
+
+例曲：Various \- UK Funky
+
+### Nu-Funk
+
+上位：Funk、Breakbeat
+
+下位：Ghetto Funk
+
+A\.K\.A\. Nu Funk、NuFunk
+
+Nu-Funk 是2000年代形成的分支，把1970–80年代的 Funk 素材重新采样、切片、加厚，配合现代的制作手段（侧链压缩、现代鼓组、更宽的立体声像）。它同时吸收了 Breakbeat 与 Nu-Disco 的节拍处理，听感既有复古的油脂感，又有当代的响度与清晰度。它是 Funk 在当代舞池中最稳定的形态。
+
+例曲：Various \- Nu-Funk
+
+### Ghetto Funk
+
+上位：Nu-Funk、Breakbeat
+
+下位：
+
+Ghetto Funk 是 Nu-Funk 的激进分支，把 Funk、Hip-Hop 与 Breakbeat 的素材以极高的能量拼接，速度通常在100–115 BPM，鼓组厚重、低频突出、采样密集。它常使用经过大幅处理的 Vocal 采样作为 Hook，整体听感粗粝而直接。它主要由互联网厂牌（如 Ghetto Funk）推动传播。
+
+例曲：Various \- Ghetto Funk
+
+### Future Funk
+
+上位：Funk、Vaporwave、Nu-Disco
+
+下位：J-Future Funk
+
+Future Funk 是2010年代从 Vaporwave 场景中分出的分支，把1980年代日本 City Pop、Disco 与 Funk 的素材加速、滤波、加厚，做成高能量的舞曲。它的标志是：采样自1970–80年代日本流行歌曲的女声段落、被加速到120–130 BPM 的四四拍、明亮的合成器与厚重的侧链压缩。它是"怀旧素材 + 当代舞曲处理"的典型，也是 City Pop 在海外复兴的重要推手。
+
+例曲：Various \- Future Funk
+
+### Funk Mandelão
+
+上位：Funk、Baile Funk
+
+下位：
+
+A\.K\.A\. Mandelão、Brazilian Funk
+
+Funk Mandelão 是2010年代后期在巴西圣保罗形成的 Baile Funk 分支，特征是极简而暴烈的低频：808 Kick 被拉长到几乎覆盖整拍、配合短促的 Clap 与高速的 Hi-hat 滚奏、人声以 MC 喊话为主。它的速度通常在130 BPM 上下，结构高度重复，完全服务于舞池。它是当代全球俱乐部场景中影响最大的南美声音之一。
+
+例曲：Various \- Funk Mandelão
+
+
+# **Chill-Out\(已完成\)**
+
+## 前言
+
+Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间"休息室"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。1990年代，Café del Mar 的日落套装、Kruder & Dorfmeister 的慢速重混、Air 与 Zero 7 的合成器流行，把这种"降速与放松"的做法发展成一整套声音美学：速度在70–110 BPM、鼓组稀疏或完全消失、大量使用 Rhodes 电钢琴与合成垫音、混响与延迟处理得极为宽阔。它的分支很多：一端靠近 Ambient 与 Downtempo，一端靠近 Trip Hop 与 Nu Jazz，还有一端靠近 Balearic 与 Lounge。Chill-Out 的核心不在于"安静"，而在于"把注意力从舞池转向空间"——同样的和声与音色，只是被放慢了、拉开了、留白了。
+
+例曲：Teardrop \- Massive Attack
+
+## 大纲
+
+Chill-Out
+
+Downtempo
+
+Trip Hop
+
+Illbient
+
+Nu Jazz
+
+Lounge Music
+
+Balearic Beat
+
+Chill House
+
+Chill Trance
+
+Chillstep
+
+KetaPop
+
+Progressive Chill-Out
+
+## Chill-Out
+
+上位：Electronic Music、Ambient
+
+下位：Downtempo、Trip Hop、Nu Jazz、Lounge Music、Balearic Beat等
+
+A\.K\.A\. Chillout、Chill Out、Chill
+
+Chill-Out 是一个场景性的集合概念，而不是单一音色。它的共同点是：速度偏慢、鼓组被简化或抽离、和声与音色承担主要表情、整体响度与动态都偏低。它与 Ambient 的区别在于通常仍保留明确的节拍与低音线；与 Downtempo 的区别在于它更强调整体的"氛围场景感"（如日落、海滩、深夜），而不只是速度。Chill-Out 是电子音乐中"把舞池语言用于非舞池场景"的第一个大规模实践。
+
+例曲：Teardrop \- Massive Attack
+
+### Downtempo
+
+上位：Chill-Out、Electronic Music
+
+下位：Trip Hop、Nu Jazz、Balearic Beat、KetaPop等
+
+A\.K\.A\. Downbeat、慢拍
+
+Downtempo 指速度在60–110 BPM、以放松的聆听体验为目标的电子音乐。它的标志是：鼓组通常使用采样或鼓机但节奏稀疏、低音线温暖而稳定、大量使用电钢琴、合成垫音与真实乐器采样（如长笛、萨克斯、弦乐）。Downtempo 与 Ambient 的关系很近，但保留了明确的律动；与 Hip-Hop 的关系也很近，但通常不使用说唱。它是1990年代"聆听型电子音乐"的主要形态。
+
+例曲：Glory Box \- Portishead
+
+#### Trip Hop
+
+上位：Downtempo、Hip-Hop
+
+下位：Post-Trip Hop、Trip Rock
+
+A\.K\.A\. Bristol Sound、Bristol Trip Hop、神游舞曲
+
+Trip Hop 是1990年代前期在英国布里斯托形成的分支，把 Hip-Hop 的缓慢节拍与采样手法、Dub 的低频处理、以及 Soul／Jazz 的女声结合。它的标志是：速度在80–100 BPM、鼓组使用采样并带有明显的"脏"质感（如黑胶噪声）、低频沉重而迟缓、女声通常低沉而疏离、大量使用弦乐或电影配乐采样。Massive Attack、Portishead、Tricky 是代表。Trip Hop 是电子音乐中情绪最阴郁、最接近电影感的一支。
+
+例曲：Unfinished Sympathy \- Massive Attack
+
+#### Nu Jazz
+
+上位：Downtempo、Jazz Funk
+
+下位：
+
+A\.K\.A\. Nu-Jazz、Jazztronica、Future Jazz
+
+Nu Jazz 是1990年代后期形成的分支，把爵士的和声与即兴素材、Funk 的律动与电子音乐的制作手段（采样、鼓机、合成器、效果处理）结合。它可以是纯器乐的，也可以加入人声；鼓组常在真实的 Swing 与电子节拍之间切换。它同时与 Broken Beat、Acid Jazz 与 Downtempo 有大量交集。
+
+例曲：Various \- Nu Jazz
+
+#### KetaPop
+
+上位：Downtempo、Chill-Out
+
+下位：
+
+KetaPop 是2010年代后期在互联网上形成的分支，把 Chill-Out 的柔和合成垫音、稀疏鼓组与流行歌曲结构结合，整体速度偏慢、混响极大、人声通常被处理得模糊而遥远。它的名字带有自我调侃意味，美学上介于梦幻流行与慢速电子之间，常被形容为"麻醉状态的流行歌"。
+
+例曲：Various \- KetaPop
+
+#### Progressive Chill-Out
+
+上位：Downtempo、Progressive Electronic
+
+下位：
+
+Progressive Chill-Out 指结构上更接近 Progressive 音乐（长时间缓慢演进、层次逐步叠加）但速度与情绪属于 Chill-Out 的分支。它通常长达6–10分钟，以缓慢推进的合成垫音、渐进的鼓组与持续的音色变化为主，几乎没有明显的段落切分。它是 Berlin School 与 Ambient 在1990年代的延续形态。
+
+例曲：Various \- Progressive Chill-Out
+
+### Illbient
+
+上位：Chill-Out、Hip-Hop、Ambient
+
+下位：
+
+A\.K\.A\. Illbient、Ill Bient
+
+Illbient 是1990年代中期在纽约形成的分支，名字是"Ill"与"Ambient"的组合。它把 Hip-Hop 的缓慢节拍与采样、Dub 的低频、Ambient 的空间处理、以及城市的噪音（街头录音、地铁声、无线电干扰）混合，形成一种压抑、肮脏、带有强烈都市感的聆听体验。它几乎不追求悦耳，与当时追求放松的 Chill-Out 形成鲜明对照。
+
+例曲：Various \- Illbient
+
+### Lounge Music
+
+上位：Chill-Out、Jazz
+
+下位：Nu-Lounge、Exotica
+
+A\.K\.A\. Lounge、Easy Listening、休闲音乐
+
+Lounge Music 原指1950–60年代在酒店大堂与酒吧播放的轻松器乐（如 Exotica、Bossa Nova 与轻爵士），1990年代被电子音乐场景重新发现：制作人开始采样这些老唱片，配合 Downtempo 节拍与电子处理，形成 Nu-Lounge。它的标志是：柔和的电钢琴与弦乐、拉丁或异国打击乐、缓慢的节拍、以及刻意的"背景音乐"属性。
+
+例曲：Various \- Lounge Music
+
+### Balearic Beat
+
+上位：Chill-Out、House
+
+下位：
+
+A\.K\.A\. Balearic、Ibiza Sound、Balearic House
+
+Balearic Beat 源自1980年代中后期西班牙伊比萨岛（Ibiza）的 DJ 实践，尤其以 Alfredo Fiorito 在 Amnesia 俱乐部的选曲为代表。它的定义不在音色而在"选曲策略"：把 House、Balearic Trance、Pop、Rock、Flamenco、Ambient 与 Dub 混在一起播放，依据日落与深夜的氛围而非风格一致性来安排。它后来成为"Balearic"这一整套审美（日落、海滩、慢速、明亮而不甜腻）的来源。
+
+例曲：Various \- Balearic Beat
+
+### Chill House
+
+上位：Chill-Out、House
+
+下位：
+
+A\.K\.A\. Lounge House、Chillhouse
+
+Chill House 把 House 的四四拍节拍放慢（通常100–118 BPM）、弱化 Kick 的冲击力、加入大量合成垫音与 Rhodes 电钢琴，形成一种适合白天或休息场景的 House。它与 Deep House 的区别在于更少依赖低频的推进力，更依赖和声与空间的舒适度。它是 Café del Mar 系列与大量"日落套装"的主要声音。
+
+例曲：Various \- Chill House
+
+### Chill Trance
+
+上位：Chill-Out、Trance
+
+下位：
+
+Chill Trance 指把 Trance 的合成器琶音、明亮和声与情感推进保留下来，但速度放慢（通常100–120 BPM）、鼓组简化、整体氛围转向放松的分支。它通常保留 Trance 标志性的 Supersaw 与长混响，但把 Drop 换成缓慢的层次叠加。它是 Trance 听众在非舞池场景的主要选择。
+
+例曲：Various \- Chill Trance
+
+### Chillstep
+
+上位：Chill-Out、Dubstep
+
+下位：Chilled Dubstep
+
+A\.K\.A\. Chilled Dubstep、Liquid Dubstep
+
+Chillstep 是把 Dubstep 的半速鼓组（Snare 落在第三拍）、深沉的 Sub Bass 与 Chill-Out 的柔和合成垫音、钢琴、女声结合的分支。它保留 Dubstep 的低频重量，但把 Wobble 换成持续的低音线与明亮的和声，整体情绪从攻击性转向内省。它是2010年代"情绪向电子音乐"中最流行的形态之一。
+
+例曲：Various \- Chillstep
+
+
+# **Bass / Club\(已完成\)**
+
+## 前言
+
+Bass / Club 是"低频驱动的俱乐部音乐"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。它的历史有两条线：一条来自美国南部与东海岸的俱乐部文化——Miami Bass 用 808 的 Long Kick 与极快的念白定义了佛罗里达的舞池；Baltimore Club 与 Jersey Club 把 Breakbeat 切碎、把人声切片循环、用三连音 Kick 制造急停急起；Ghettotech 与 Juke／Footwork 把底特律与芝加哥的速度推到150 BPM 以上，配合舞蹈。另一条来自互联网时代的低音文化——Bérite 把 Jersey Club 与非洲鼓乐结合，Jersey Terror 把节奏做得更暴烈，Snap Music 把极简的鼓与拍手变成钩子。这一族群共同的特征是：低频永远是主角，人声被当作打击乐使用，结构高度重复，完全服务于身体。
+
+例曲：Various \- Bass / Club
+
+## 大纲
+
+Bass / Club
+
+Bass
+
+Club
+
+Bérite
+
+Jigg
+
+Jook
+
+Jersey Terror
+
+East Coast Club
+
+Electro Bass
+
+Car Audio Bass
+
+R&Bass
+
+Snap Music
+
+## Bass / Club
+
+上位：Electronic Music
+
+下位：Bass、Club、Bérite、Jersey Terror、Electro Bass等
+
+A\.K\.A\. Bass Music、Club Music、低频俱乐部音乐
+
+Bass / Club 不是一种音色风格，而是一个按"功能"划定的族群：这些音乐的存在意义是让舞池的人动起来，且驱动力来自低频而非旋律或和声。它的共同制作特征是：Kick 与 Sub Bass 占据混音的主要空间、鼓组大量使用切分与三连音、人声被切片或处理成节奏元素、结构以短循环叠加为主。它与 EDM 的区别在于不追求"Drop 的爆发"，而追求持续的律动压力；与 Techno 的区别在于更依赖具体的低频音色设计而非氛围推进。
+
+例曲：Various \- Bass / Club
+
+### Bass
+
+上位：Bass / Club、Electronic Music
+
+下位：Bass House、Leftfield Bass、UK Bass、US Bass等
+
+A\.K\.A\. Bass Music、低频音乐
+
+Bass 作为集合名词，指一切以低频设计为核心卖点的电子音乐。它的边界很宽：从 Dubstep 的 Wobble、Drum & Bass 的 Reese、到 Trap 的 808 Long Kick，都属于 Bass 的范畴。判断标准是"如果去掉低频，这首歌还剩多少"——Bass 音乐在去掉低频后通常失去全部驱动力。Bass 在2010年代成为全球俱乐部场景最主要的语汇，也是唯一一个横跨英美、亚欧与南美的电子音乐大类。
+
+例曲：Various \- Bass
+
+### Club
+
+上位：Bass / Club
+
+下位：Jersey Club、Baltimore Club、Ballroom等
+
+A\.K\.A\. Club Music、俱乐部音乐
+
+Club 在这里特指美国东海岸的俱乐部舞曲传统，与欧洲的 House／Techno 传统并行发展。它的核心是"切分 + 切片 + 三连音"：鼓组不遵循四四拍的稳定律动，而是通过密集的 Kick 变化、Snare 的错位与人声切片制造急停感。它的速度通常在130–145 BPM，比 House 更快、更碎、更适合特定舞种。
+
+例曲：Various \- Club
+
+### Bérite
+
+上位：Bass / Club、Jersey Club
+
+下位：
+
+Bérite 是2010年代后期在法国形成的分支，把 Jersey Club 的切分鼓组、三连音 Kick 与北非／西非的鼓乐节奏、法语人声采样结合。它的速度通常在140 BPM 上下，鼓组极碎而密集，低频沉重，整体听感介于俱乐部音乐与全球低音（Global Bass）之间。它是当代法语俱乐部场景中最有辨识度的声音之一。
+
+例曲：Various \- Bérite
+
+### Jigg
+
+上位：Bass / Club、Jersey Club
+
+下位：
+
+Jigg 是2010年代在美国南部形成的分支，把 Jersey Club 的切分与三连音鼓组进一步加速（通常150 BPM 以上）、简化旋律、突出低频与短促的人声切片。它比 Jersey Club 更暴烈、更少装饰，几乎只保留 Kick、Clap 与人声切片三个元素。它是"极简俱乐部音乐"的极端形态。
+
+例曲：Various \- Jigg
+
+### Jook
+
+上位：Bass / Club、Jersey Club
+
+下位：
+
+Jook 是2010年代中期形成的分支，与 Jersey Club 同源，但更强调"怪异"的音色选择：使用卡通音效、游戏音效、非常规采样与突然的节奏断裂。它的速度通常在130–140 BPM，结构刻意不规整，是互联网一代对俱乐部音乐的再加工。
+
+例曲：Various \- Jook
+
+### Jersey Terror
+
+上位：Bass / Club、Jersey Club
+
+下位：
+
+Jersey Terror 是 Jersey Club 的极端化分支，把切分鼓组、三连音 Kick 与强烈的失真低频、噪音层、恐怖电影采样结合。它的速度更快（通常150 BPM 以上）、低频更具攻击性，整体情绪从"跳舞"转向"压迫"。它是俱乐部音乐与 Hardcore 语汇的交叉点。
+
+例曲：Various \- Jersey Terror
+
+### East Coast Club
+
+上位：Bass / Club、Club
+
+下位：Jersey Club、Baltimore Club、Philly Club
+
+East Coast Club 是美国东海岸俱乐部音乐传统的集合称呼，涵盖 Baltimore Club、Jersey Club、Philly Club、Bmore 等分支。它们的共同祖先是1980年代巴尔的摩的 Breakbeat 与 Hip-Hop 混音实践，特征是：采样 Breakbeat 并加速、把 Vocal 切碎循环、用 808 或类似鼓机承担低频。这一传统在2010年代通过互联网被全球制作人重新发现，成为当代俱乐部音乐的主要源头之一。
+
+例曲：Various \- East Coast Club
+
+### Electro Bass
+
+上位：Bass / Club、Miami Bass、Electro
+
+下位：
+
+A\.K\.A\. Florida Bass
+
+Electro Bass 是1980年代佛罗里达 Miami Bass 场景的分支，把 Electro 的 808 鼓机、Vocoder 与 Funk 的律动结合，配合极快的念白与强调低频的混音。它的标志是：808 Long Kick 连续敲击、Snare 与 Clap 交替、合成器演奏简单的旋律 Hook。它是 Hip-Hop 与电子舞曲在南方的交汇点，也是 Car Audio Bass 的前身。
+
+例曲：Various \- Electro Bass
+
+### Car Audio Bass
+
+上位：Bass / Club、Miami Bass
+
+下位：
+
+A\.K\.A\. Car Bass、Spl Bass
+
+Car Audio Bass 是1980年代末到1990年代初在佛罗里达形成的极端低频分支，制作目的就是让汽车音响系统的低频单元产生最大位移。它的特征是：极简的鼓组、几乎完全由 Sub Bass 构成的主体、以及刻意压低的中高频。它几乎不是为了家用聆听设计的，而是"低频竞赛"的产物，也是 Bass 文化中"低频即内容"这一观念的极端体现。
+
+例曲：Various \- Car Audio Bass
+
+### R&Bass
+
+上位：Bass / Club、R&B
+
+下位：
+
+R&Bass 是把 R&B 的歌唱方式与 Bass 音乐的低频设计结合的形态，特征是：R&B 式的人声演唱与和声堆叠、配合 808 Long Kick 与稀疏的鼓组、速度偏慢（通常在70–90 BPM 感觉）。它是2010年代 Trap Soul 与 Bass 场景的交叉产物，制作上强调人声的清晰度与低频的重量感之间的对比。
+
+例曲：Various \- R&Bass
+
+### Snap Music
+
+上位：Bass / Club、Hip-Hop
+
+下位：
+
+Snap Music 是2000年代中期在美国亚特兰大形成的 Hip-Hop 分支，特征是极简的制作：主要由手指打响（Snap）、简单的 Kick 与 808 Bass 构成，几乎没有旋律乐器。它的速度偏慢（约70–80 BPM），编曲留白极大，人声以轻松、口语化的念唱为主。它体现了"用最少元素驱动舞池"的极简主义思路。
+
+例曲：Various \- Snap Music
+
+
+# **Chiptune\(已完成\)**
+
+## 前言
+
+Chiptune（芯片音乐）是电子音乐里唯一一个"由硬件限制定义"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片有三个通道加滤波器。作曲家必须在"只有几条声部"的条件下写出旋律、低音、鼓组与和声。当这些机器被淘汰、限制消失之后，制作人反而开始主动追求这种限制带来的音色：方波的尖锐、噪声通道的沙哑、琶音器模拟和弦的错觉、以及通道数不足逼出来的极简编配。Chiptune 因此成为"限制即风格"的典范——它证明音色的辨识度可以来自工具，而不只是来自创作意图。
+
+例曲：The Moon \(8\-bit Version\) \- 殿村裕誠
+
+## 大纲
+
+Chiptune
+
+Chip Rock
+
+Chip Metal
+
+Chipthrash
+
+Chip Punk
+
+Chip Hop
+
+Chipstep
+
+Chipbreak
+
+Chipcore
+
+Demostyle
+
+Amigacore
+
+## Chiptune
+
+上位：Bit Music、Electronic Music
+
+下位：Chip Rock、Chip Metal、Chip Punk、Chip Hop、Chipstep、Chipbreak等
+
+A\.K\.A\. Chip Music、Chip Tune、芯片音乐
+
+Chiptune 指用视频游戏机、家用电脑的声音芯片创作，或刻意模拟这些芯片音色的音乐。它的音色标志是：方波与三角波承担旋律与低音、噪声通道承担鼓组、琶音器（Arpeggio）用极快的音高切换模拟和弦、几乎不使用混响与延迟。Chiptune 在制作上与现代电子音乐几乎相反：它没有真实的低频，没有立体声宽度，动态范围极小，但正因为如此，它的旋律与编配必须极其精准才能成立。本地知识库中 Bit Music 一节记录了它的技术谱系（PSG 芯片 → 8-bit → FM 合成 → Tracker），本节补充它与各类音乐杂交后形成的分支。
+
+例曲：The Moon \(8\-bit Version\) \- 殿村裕誠
+
+### Chip Rock
+
+上位：Chiptune、Rock
+
+下位：Chip Punk、Chipthrash
+
+A\.K\.A\. Chiptune Rock、Chiprock
+
+Chip Rock 把 Chiptune 的方波旋律与失真吉他、真实鼓组结合，编制通常是"芯片负责旋律与和声、摇滚编制负责节奏与重量"。它比 Nintendocore 更接近传统摇滚，失真程度较低，旋律性更强。它常出现在同人音乐与游戏改编作品中。
+
+例曲：Various \- Chip Rock
+
+#### Chip Punk
+
+上位：Chip Rock、Punk
+
+下位：
+
+Chip Punk 把 Chiptune 的方波音色与朋克的快速节奏、粗糙失真结合。速度通常在160–200 BPM，结构极简（主歌—副歌—主歌），吉他失真明显但编配简单，芯片音色承担主旋律。它的听感介于游戏配乐与车库朋克之间。
+
+例曲：Various \- Chip Punk
+
+#### Chipthrash
+
+上位：Chip Rock、Thrash Metal
+
+下位：
+
+Chipthrash 把 Chiptune 的芯片音色与 Thrash Metal 的高速吉他、双踩鼓与复杂节奏型结合。它保留了 Thrash 的速度与攻击性，但旋律由方波合成器承担，低频通常偏薄。它是芯片音乐与极端金属交叉处最具技术要求的形态之一。
+
+例曲：Various \- Chipthrash
+
+### Chip Metal
+
+上位：Chiptune、Electronic Metal
+
+下位：
+
+Chip Metal 把 Chiptune 的芯片音色与金属乐的失真吉他、双踩鼓、极端唱腔结合。它与 Nintendocore 的区别在于更接近金属而非硬核，结构更复杂，吉他 Riff 更强调技术性。它常使用真实的金属编制配合芯片音色，而不是纯电子制作。
+
+例曲：Various \- Chip Metal
+
+### Chip Hop
+
+上位：Chiptune、Hip-Hop
+
+下位：
+
+A\.K\.A\. Chiphop、Chiptune Hip Hop
+
+Chip Hop 把 Chiptune 的芯片音色与 Hip-Hop 的节拍、采样手法结合。它的鼓组通常使用芯片的噪声通道或简单采样，旋律由方波承担，速度偏慢（80–100 BPM）。它同时受到 Glitch Hop 与 Wonky 的影响，常出现在游戏文化与互联网亚文化场景中。
+
+例曲：Various \- Chip Hop
+
+### Chipstep
+
+上位：Chiptune、Dubstep
+
+下位：
+
+Chipstep 把 Chiptune 的芯片音色与 Dubstep 的低频处理、Half-time 鼓组结合。它的 Wobble Bass 常由芯片风格的波形构成，听感比典型 Dubstep 更"轻"、更方硬，低频不如现代 Dubstep 那么厚，但节奏感更碎。
+
+例曲：Various \- Chipstep
+
+### Chipbreak
+
+上位：Chiptune、Breakbeat、Breakcore
+
+下位：Breakbit
+
+A\.K\.A\. Breakbit
+
+Chipbreak 把 Chiptune 的芯片音色与 Breakbeat／Breakcore 的高速碎拍结合。它的鼓组通常使用芯片噪声通道或极短采样，速度常在160–200 BPM，结构密集而急促。它是芯片音乐与 Breakcore 场景的交叉点，也是 Demoscene 文化的重要产物。
+
+例曲：Various \- Chipbreak
+
+### Chipcore
+
+上位：Chiptune、Hardcore Techno
+
+下位：
+
+Chipcore 把 Chiptune 的芯片音色与 Hardcore Techno 的高速四四拍、失真 Kick 结合。速度通常在180 BPM 以上，芯片音色承担旋律与 Riff，低频则由失真 Kick 提供。它是芯片音乐最激烈的一支，也常与 Breakcore 的 Chipbreak 一同出现在同人场景中。
+
+例曲：Various \- Chipcore
+
+### Demostyle
+
+上位：Chiptune、Demoscene
+
+下位：
+
+A\.K\.A\. Demoscene Music、Demomusic、Demoscene
+
+Demostyle 指 Demoscene（演示场景）中产生的音乐。Demoscene 是1980–90年代黑客与程序员的亚文化：他们用极小的文件体积（常见限制为 64KB 甚至 4KB）做出包含图形与音乐的实时演示程序。Demostyle 因此有两个硬约束：文件体积极小、必须由程序实时生成而非播放音频。它的音乐手法包括极度精简的采样、Tracker 编曲、以及程序化生成的音色。Demostyle 是 Chiptune 与 Tracker Music 的技术源头之一，也直接影响了 Keygen Music 与后来的 Algorave。
+
+例曲：Various \- Demostyle
+
+### Amigacore
+
+上位：Chiptune、Demoscene
+
+下位：
+
+Amigacore 指以 Commodore Amiga 电脑的音色与制作方式为核心的音乐，是 Demoscene 文化的一个具体分支。Amiga 的 Paula 芯片提供四个 8-bit 采样通道，没有滤波器，因此 Amigacore 的音色特征是：采样极短、颗粒感强、鼓组由短促的采样构成、旋律常使用 Tracker 音序器编写。它在1990年代的欧洲 Demoscene 中极为流行，也是 Breakcore 与 Chipbreak 的素材来源之一。
+
+例曲：Various \- Amigacore
+
+
+# **Remix & Edit\(已完成\)**
+
+## 前言
+
+Remix & Edit 是电子音乐中最特殊的一族：它们不是"原创作品"，而是对已有录音的再加工。这一族的边界由技术与法律共同划定——从1970年代 DJ 用双唱盘把两首歌拼在一起，到1980年代采样器让"取一段素材重做一首歌"成为常规，再到2000年代后互联网让任何人都能对任意歌曲进行速度与音高的重新处理。它的手法其实高度一致：改变速度、改变音高、切碎素材、叠加层、重新编排结构。区别只在于"改动多少"与"是否获得授权"。理解这一族对制作学习特别有价值，因为它是"结构可以被拆开重装"这一观念最直接的证明。
+
+例曲：Various \- Remix & Edit
+
+## 大纲
+
+Remix & Edit
+
+Remix
+
+Mashup
+
+Edit
+
+Bootleg
+
+Nightcore
+
+Daycore
+
+Nightstep
+
+Bass Boosted
+
+Chopped and Screwed
+
+## Remix & Edit
+
+上位：Electronic Music
+
+下位：Remix、Mashup、Edit、Bootleg、Nightcore等
+
+A\.K\.A\. Remix Culture、Edit Culture、重混文化
+
+Remix & Edit 是一个按"创作方式"而非"音色"划分的族群。它包含的所有形态都建立在一个共同前提上：素材已经存在，创作是对素材的重新组织。因此这一族的评价标准也与原创作品不同——它衡量的是"改动是否让素材获得了新的意义"，而不是"是否写出了新东西"。这一族的技术门槛主要在于素材处理（时间拉伸、音高变换、切片、对齐）与结构重组，而不是作曲。
+
+例曲：Various \- Remix & Edit
+
+### Remix
+
+上位：Remix & Edit
+
+下位：Official Remix、Bootleg Remix、Club Remix
+
+A\.K\.A\. 重混、混音版
+
+Remix 指在获得授权的前提下，对已有录音的重新制作。它通常保留原曲的人声（Vocal）或主要旋律，但替换鼓组、低音、和声与结构。Remix 的技术核心是"素材对齐"：必须把原曲的人声轨精确对到新的速度与小节网格上，这需要时间拉伸（Time Stretching）与音高变换（Pitch Shifting）工具。Remix 在电子音乐中不只是商业行为，也是制作人展示风格的主要方式——同一段人声在不同制作人手里可以变成 House、Drum & Bass 或 Ambient。
+
+例曲：Various \- Remix
+
+### Mashup
+
+上位：Remix & Edit
+
+下位：
+
+A\.K\.A\. 混搭、拼贴
+
+Mashup 指把两首或更多歌曲的素材（通常是一首的人声与另一首的伴奏）叠加成一首新作品。它的技术要求是调性一致与速度一致：两首歌必须能对到同一个调与同一个 BPM，否则会产生不协和。Mashup 在2000年代中期随互联网与音频软件普及而爆发，成为"人人都能做"的第一种电子音乐创作形式。它也是理解调性与节拍对齐的最佳练习。
+
+例曲：Various \- Mashup
+
+### Edit
+
+上位：Remix & Edit
+
+下位：Extended Edit、DJ Edit
+
+A\.K\.A\. 编辑版、DJ Edit
+
+Edit 指对原曲做较小幅度的改动，通常是为了适应 DJ 播放需求：延长前奏与尾奏（便于对拍）、加强低频与鼓组、删减不需要的段落、或重排段落顺序。Edit 的核心是"不改变原曲的听感身份"，只做功能性调整。它与 Remix 的区别在于改动幅度，与 Bootleg 的区别在于通常获得授权。
+
+例曲：Various \- Edit
+
+### Bootleg
+
+上位：Remix & Edit
+
+下位：Bootleg Remix
+
+A\.K\.A\. 私制版、未授权 Remix
+
+Bootleg 指未获得授权的 Remix 或 Edit。它在技术上与官方 Remix 没有区别，区别只在法律状态。Bootleg 在电子音乐历史上扮演了关键角色：很多风格的诞生与传播都依靠未经授权的编辑与再混（如早期 House 与 Disco Edit）。它在当代主要通过网络（如 SoundCloud、Bootleg 合集）流通，并常以"免费下载"的形式发布。
+
+例曲：Various \- Bootleg
+
+### Nightcore
+
+上位：Remix & Edit、Eurodance
+
+下位：Post-Nightcore、Froggycore
+
+A\.K\.A\. 夜核
+
+Nightcore 是一种具体而明确的手法：把一首歌加速（通常提高20–30%，BPM 提到170–200）并相应升调，使人声听起来更高、更"可爱"。它始于2000年代初挪威制作人 Thomas S. Nilsen 与 Steffen Ojala Søderholm 的合作项目，后来成为互联网上最常见的音乐再加工形式之一。Nightcore 的素材最初集中在 Eurodance、Vocal Trance 与 Hands Up，后来扩展到任何歌曲。它的制作成本极低（只需一个速度与音高变换），因此作品数量极其庞大，很多甚至没有正式的发布信息。
+
+例曲：Kiss Me Again \(Nightcore\) \- Roy Bee
+
+### Daycore
+
+上位：Remix & Edit、Nightcore
+
+下位：
+
+Daycore 是 Nightcore 的反向手法：把歌曲减速并降调，使人声听起来更低、更沉重、更缓慢。它在2010年代后期随互联网场景出现，常被用来把原本轻快的歌曲处理成阴郁、失重或"悲伤"的版本。Daycore 与 Slowed + Reverb 的手法高度重合，两者常被混用。
+
+例曲：Various \- Daycore
+
+### Nightstep
+
+上位：Remix & Edit、Nightcore、Dubstep
+
+下位：
+
+Nightstep 是 Nightcore 手法在 Dubstep 上的应用：把 Dubstep 或 Heavy Dubstep 的曲目加速升调，形成高音、高速、攻击性更强的版本。它属于 Post-Nightcore 场景的一部分，通常以 Mix 形式发布。它的听感介于 Nightcore 的"可爱"与 Dubstep 的"压迫"之间，是互联网亚文化特有的混合产物。
+
+例曲：Summer Ashes \(Nightstep Edit\) \- Kevin Drew
+
+### Bass Boosted
+
+上位：Remix & Edit
+
+下位：
+
+Bass Boosted 是最简单的再加工形式：把原曲的低频大幅提升，通常配合整体响度提高。它在 YouTube 与流媒体上以"Bass Boosted"为标题大量存在，主要服务于汽车音响与耳机听感需求。它本身不涉及结构或速度改动，因此严格来说不算创作，但它反映了 Bass 文化中"低频即内容"的观念——对这类听众来说，低频量本身就是版本差异。
+
+例曲：Various \- Bass Boosted
+
+### Chopped and Screwed
+
+上位：Remix & Edit、Hip-Hop
+
+下位：
+
+A\.K\.A\. Chopped & Screwed、Screwed、Slowed & Chopped
+
+Chopped and Screwed 是1990年代初由休斯敦 DJ Screw 创立的再加工手法：把歌曲大幅减速（通常降低到原速的60–70%）、把关键音节重复并做磁带暂停式切断（Chop）、配合整体的低频加强。它的听感是迟缓、黏稠、失重的，与休斯敦的气候与驾驶文化直接相关。它是 Slowed + Reverb 与大量当代互联网慢速版本的技术祖先。
+
+例曲：Various \- Chopped and Screwed
+
+
+# **实验电子补遗\(已完成\)**
+
+## 前言
+
+这一节补充实验电子音乐中几个"以方法命名"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成音轨，Live Coding 与 Algorave 关心代码如何在现场实时生成音乐。它们的共同点是：音乐的重心从"写什么音符"移到了"用什么方法产生声音"。这也是实验电子最核心的贡献——它把制作过程本身变成了作品的一部分。
+
+例曲：Various \- Experimental Electronic
+
+## 大纲
+
+Acousmatic Music
+
+Data Sonification
+
+Electronic Free Improvisation
+
+Field Recording
+
+Radio Broadcasting Recordings
+
+Graphical Sound
+
+Experimental Bass
+
+Colour Hop
+
+Live Electronics
+
+Livetronica
+
+Spectral Music
+
+## Acousmatic Music
+
+上位：Electroacoustic Music、Musique concrète
+
+下位：
+
+A\.K\.A\. 听觉音乐、Acousmatic
+
+Acousmatic Music 指专门为扬声器播放而创作、不以现场演奏为呈现方式的电子音乐。它的概念来自 Pierre Schaeffer：听众听到声音但看不到声源，因此注意力完全落在声音本身（音色、包络、空间）而非演奏动作上。它的创作材料多为录制的声音（Musique concrète 手法）或纯电子合成，结构通常不依赖节拍与旋律，而依赖音色变化与空间位置。它是当代声音艺术与电影声音设计的共同祖先。
+
+例曲：Various \- Acousmatic Music
+
+## Data Sonification
+
+上位：Experimental Electronic Music
+
+下位：
+
+A\.K\.A\. 数据可听化、Sonification
+
+Data Sonification 指把非音频数据（如气候记录、股票波动、脑电波、天体光谱）映射为声音参数（音高、时长、音色、声像），从而"听出"数据的形态。它的目的既可以是科学研究（用听觉发现视觉图表难以察觉的周期与异常），也可以是艺术表达。制作上通常需要程序化生成，因此它天然属于 Algorave 与 Live Coding 的近亲。
+
+例曲：Various \- Data Sonification
+
+## Electronic Free Improvisation
+
+上位：Experimental Electronic Music、Free Improvisation
+
+下位：EAI
+
+A\.K\.A\. EAI、Electroacoustic Improvisation
+
+Electronic Free Improvisation 指以电子设备（笔记本、模块合成器、反馈电路、接触麦克风）进行完全即兴的演奏，不预设结构、调性或节拍。它强调"实时的声音决定"，演奏者更多是在"选择声音"而非"演奏音符"。它的极端形式是 EAI（Electroacoustic Improvisation），特点是音量极低、素材极简（可能只有电流噪声与极短采样），需要听众极度专注。
+
+例曲：Various \- Electronic Free Improvisation
+
+## Field Recording
+
+上位：Experimental Electronic Music、Soundscape
+
+下位：
+
+A\.K\.A\. 实地录音、田野录音
+
+Field Recording 指在非录音棚环境中录制真实世界的声音（街道、森林、工厂、市场、雨、冰层开裂），既可以作为音乐素材，也可以作为独立的作品形式。它在电子音乐中的应用方式有三种：作为采样素材（放入节拍或音景中）、作为 Ambient 与 Soundscape 的主体、以及作为 Musique concrète 的原材料。它也是"声音生态学"与"声音地图"等实践的基础。
+
+例曲：Various \- Field Recording
+
+## Radio Broadcasting Recordings
+
+上位：Experimental Electronic Music、Field Recording
+
+下位：
+
+A\.K\.A\. Radio Art、Shortwave Recordings
+
+Radio Broadcasting Recordings 指把无线电广播（尤其是短波）作为音乐素材的实践。短波广播的衰减、漂移、干扰与信号丢失本身构成一种独特的音色与节奏，被大量用于 Ambient、Industrial 与实验电子。它在1990年代成为一种独立的创作手法，也是"发现声音"（而非"制作声音"）这一思路的典型体现。
+
+例曲：Various \- Radio Broadcasting Recordings
+
+## Graphical Sound
+
+上位：Experimental Electronic Music
+
+下位：
+
+A\.K\.A\. 图形声音、Drawn Sound、Graphical Sound
+
+Graphical Sound 指直接把图形（手绘的音轨、几何图案、计算机图像）转译为声音的实践。它的历史可以追溯到1930年代的苏联（如 Arseny Avraamov 手绘光学音轨）与战后的实验动画。在当代，它通常通过程序实现：把图像的行列像素映射为波形或频谱，再合成声音。它是"视觉与听觉同源"这一观念最直接的实现方式。
+
+例曲：Various \- Graphical Sound
+
+## Experimental Bass
+
+上位：Experimental Electronic Music、Bass
+
+下位：
+
+A\.K\.A\. Leftfield Bass、Freeform Bass
+
+Experimental Bass 指以低频设计为核心但完全脱离舞曲结构约束的分支。它的低频音色可以极其抽象（无固定音高、极端滤波、金属质感的共鸣），节奏可以完全碎片化，结构不服务舞池而服务听感探索。它是 Bass 音乐与实验电子交叉处最自由的一端，也是当代声音设计最重要的实验场之一。
+
+例曲：Various \- Experimental Bass
+
+## Colour Hop
+
+上位：Experimental Electronic Music、Glitch Hop
+
+下位：
+
+A\.K\.A\. Color Hop
+
+Colour Hop 是 Glitch Hop 的一个分支，特点是使用极为明亮、带有金属光泽或水晶质感的合成器音色，配合复杂的 Glitch 处理与中速节拍（通常100–110 BPM）。它的名字来自"音色如色彩"的听觉通感——制作人追求的是音色在频谱上的"颜色"而非旋律。它在2010年代由一批互联网制作人推动，与 Neurohop 同源但更明亮。
+
+例曲：Various \- Colour Hop
+
+## Live Electronics
+
+上位：Experimental Electronic Music
+
+下位：Laptronica、Live Coding、Algorave
+
+A\.K\.A\. 现场电子、Live Electronic
+
+Live Electronics 指在现场演出中用电子设备实时生成与处理声音的实践。它与 DJ 播放的区别在于声音是当场生成的；与使用预录工程的区别在于结构是即时的。它的形式包括：模块合成器实时接线、笔记本上的实时处理、接触麦克风与反馈电路、以及实时编程（Live Coding）。它是"电子音乐也可以是现场演奏"这一观念的核心载体。
+
+例曲：Various \- Live Electronics
+
+## Livetronica
+
+上位：Live Electronics、Jam Band
+
+下位：
+
+A\.K\.A\. Jamtronica、Live Electronic Band
+
+Livetronica 指以真实乐队编制（吉他、贝斯、鼓、键盘）实时演奏电子音乐语言的分支，通常带有大量即兴与长段落的推进。它与 DJ 演出相反：结构由乐手当场决定，常出现长于10分钟的曲目。它同时吸收了 Jam Band 的即兴传统与电子舞曲的节拍语汇，是"电子音乐如何被演奏"这一问题的现场答案。
+
+例曲：Various \- Livetronica
+
+## Spectral Music
+
+上位：Experimental Electronic Music、Contemporary Classical
+
+下位：
+
+A\.K\.A\. 频谱音乐、Spectralism
+
+Spectral Music 是1970年代在法国形成、以频谱分析为创作基础的流派。它的做法是：先对一段声音（如长号的某个音、钟声、人声）做频谱分析，得到它的泛音结构，然后用乐器或电子手段"演奏"这个频谱——让乐器去模拟声音内部的泛音分布，而不是演奏传统的旋律与和声。它改变了"音色"与"和声"的边界，也是当代声音设计与电子音乐的重要理论来源。
+
+例曲：Various \- Spectral Music
+
+
+# **风格补遗\(已完成\)**
+
+## 前言
+
+这一节集中补充此前各大族中"Wiki 有、本地未展开"的条目，以及一些因命名习惯不同而被漏记的分支。它们分布在 House、Hardcore、Trance、Drum & Bass、UK Garage、Dubstep、Ambient、Reggae、Techno、Regional、Hauntology 等族下，按"同一族内的上下位关系"排列，不单独成族。补录的原则与本地分类库一致：只记录有明确听辨特征与来源的说法，不补写没有依据的内容。
+
+例曲：Various \- Genre Supplement
+
+## 大纲
+
+Hard House
+
+Indie House
+
+Drillcore
+
+Darkcore
+
+Dark Gabber
+
+UK Hardcore
+
+Hardtek
+
+Frenchcore
+
+Hands Up Trance
+
+Psybient
+
+Chillgressive
+
+Minimal Ambient
+
+Compositional Ambient
+
+Dronegaze
+
+Dark Breaks
+
+Experimental Breaks
+
+Dancefloor Drum and Bass
+
+Deep Drum and Bass
+
+Glitchbreak
+
+Proto-Dubstep
+
+Tearout
+
+Weightless
+
+Sublow
+
+4×4 Garage
+
+Vaporpop
+
+Raggastep
+
+Lo-Fi Techno
+
+Stutter Techno
+
+Electro Hop
+
+Country Dance Music
+
+French Hip Hop
+
+Minimal Electro
+
+## Hard House
+
+上位：House、Hard Dance
+
+下位：UK Hard House、Chicago Hard House、LA Hard House
+
+A\.K\.A\. Hardhouse
+
+Hard House 是1990年代中期形成的分支，把 House 的四四拍结构提速到140–150 BPM，配合极具攻击性的失真 Kick、Hoover 或 Screech 音色、以及简短的 Vocal 采样。它的 Drop 处通常出现强烈的合成器 Riff 与节奏断裂，比 Progressive House 更直接、更少铺垫。它是 UK Hard House 与 Hard Dance 场景的共同源头。
+
+例曲：Various \- Hard House
+
+## Indie House
+
+上位：House、Indie
+
+下位：
+
+Indie House 指2010年代由独立音乐场景转向 House 语汇的一批制作人，特征是：使用真实乐器（吉他、贝斯、人声）采样与合成器混合、编曲保留独立摇滚的粗糙质感、节拍采用 House 的四四拍但不追求舞池响度。它的听感比典型的 Club House 更"散"、更接近歌曲，同时保留了长段落的律动推进。
+
+例曲：Various \- Indie House
+
+## Drillcore
+
+上位：Hardcore Techno、Breakcore
+
+下位：
+
+Drillcore 是把 Breakcore 的高速碎拍与 Drill（英国 Drill 说唱）的低频、人声与阴郁氛围结合的分支。它保留了 Drill 的 808 滑音低音与念唱人声，但把鼓组替换为 Breakcore 的高速切分与爆音。它是2010年代后期英国地下场景的产物，也体现了"极端节奏 + 当代街头语汇"这一融合方向。
+
+例曲：Various \- Drillcore
+
+## Darkcore
+
+上位：Hardcore Techno、Breakbeat Hardcore
+
+下位：Darkcore Jungle
+
+A\.K\.A\. Darkside、Darkcore Hardcore
+
+Darkcore 是1990年代前期从 Breakbeat Hardcore 分出的黑暗分支，特征是：速度在160 BPM 上下、使用极度阴暗的合成器音色（下行 Pad、失真的低音）、大量采样恐怖电影与说唱人声、鼓组以 Amen Break 为基础并大幅加速。它是 Jungle 与 Drum & Bass 的直接前身之一，也是 Hardcore 场景从"欢乐"转向"黑暗"的关键转折。
+
+例曲：Various \- Darkcore
+
+## Dark Gabber
+
+上位：Gabber、Hardcore Techno
+
+下位：
+
+A\.K\.A\. Dark Hardcore
+
+Dark Gabber 是 Gabber 的黑暗变体，特征是：速度在180–200 BPM、Kick 极度失真并带有低沉共鸣、加入阴暗的合成器 Pad 或合唱采样、整体情绪从"暴力欢快"转向"压抑恐怖"。它与 Industrial Hardcore 有大量交集，是欧洲地下 Hardcore 场景中最阴郁的一支。
+
+例曲：Various \- Dark Gabber
+
+## UK Hardcore
+
+上位：Hardcore Techno、Happy Hardcore
+
+下位：
+
+A\.K\.A\. UK Hardcore、Happy Hardcore
+
+UK Hardcore 是1990年代英国形成的分支，特征是：速度在170 BPM 上下、明亮的钢琴 Riff 与合成器 Lead、甜美的女声 Vocal、以及欢快而高速的四四拍 Kick。它比 Gabber 更旋律化、更少失真，情绪完全正向。它在2000年代后继续演化，并成为 Hands Up 与 J-Core 的素材来源。
+
+例曲：Various \- UK Hardcore
+
+## Hardtek
+
+上位：Hardcore Techno、Free Tekno
+
+下位：Frenchcore
+
+A\.K\.A\. Hardtekno、Hard Tek
+
+Hardtek 是法国与比利时 Free Tekno 场景的核心风格，特征是：速度在150–180 BPM、Kick 沉重而干燥、使用简单的合成器 Riff 与大量人声采样、结构以循环叠加为主。它与 Tekno 的区别在于更强调四四拍的稳定驱动力与更硬的 Kick。它是 Frenchcore 的直接前身。
+
+例曲：Various \- Hardtek
+
+## Frenchcore
+
+上位：Hardtek、Hardcore Techno
+
+下位：Euphoric Frenchcore
+
+Frenchcore 是1990年代后期在法国形成的分支，速度通常在180–220 BPM，特征是：极度失真且带有长尾的 Kick、快速而密集的 Hi-hat、明亮或阴暗的合成器 Lead、以及大量使用人声采样。它在2010年代通过互联网场景获得全球关注，成为当代 Hardcore 中最活跃的分支之一。
+
+例曲：Various \- Frenchcore
+
+## Hands Up Trance
+
+上位：Hands Up、Trance
+
+下位：
+
+Hands Up Trance 是 Hands Up 与 Trance 的结合形态，特征是：速度在140–150 BPM、明亮的 Supersaw 与 Trance Lead、强烈而简化的四四拍 Kick、以及 Hands Up 标志性的"每拍推进"结构。它比 Uplifting Trance 更简单、更直接，情绪高度正向，常用于商业舞曲与欧陆市场。
+
+例曲：Various \- Hands Up Trance
+
+## Psybient
+
+上位：Ambient、Psychedelic Trance
+
+下位：Psychill
+
+A\.K\.A\. Psychill、Psychedelic Ambient
+
+Psybient 是把 Psychedelic Trance 的合成器音色、调式与音效，与 Ambient 的缓慢结构与宽松空间结合的分支。它的速度通常在70–110 BPM，鼓组稀疏或完全缺席，合成器使用大量延迟与调制制造流动感，常使用东方音阶与人声采样。它是"舞池之后的房间"这一场景的典型声音。
+
+例曲：Various \- Psybient
+
+## Chillgressive
+
+上位：Psybient、Progressive Psytrance
+
+下位：
+
+Chillgressive 是 Progressive Psytrance 与 Chill-Out 的结合形态，特征是：保留了 Progressive Psy 的缓慢演进结构与合成器层次，但速度降到110–125 BPM、鼓组简化、氛围更宽松。它通常长达8–12分钟，适合在日出时段或休息场景播放。
+
+例曲：Various \- Chillgressive
+
+## Minimal Ambient
+
+上位：Ambient
+
+下位：
+
+A\.K\.A\. Minimalism Ambient、Lowercase Ambient
+
+Minimal Ambient 指素材极简、变化极缓的 Ambient，特征是：极少的音层、极长的音符、极小的动态变化。它的极端形式（Lowercase）音量极低，几乎与环境噪声难以区分。它的听感接近"静止"，要求听众主动去注意极其细微的变化。
+
+例曲：Various \- Minimal Ambient
+
+## Compositional Ambient
+
+上位：Ambient
+
+下位：
+
+Compositional Ambient 指结构上更接近当代古典作曲的 Ambient，特征是：使用真实的弦乐、管风琴、钢琴或合唱，和声进行有明确的写作意图，而不仅是音色铺陈。它通常由受过古典训练的音乐家创作，听感更"有内容"、更接近室内乐。
+
+例曲：Various \- Compositional Ambient
+
+## Dronegaze
+
+上位：Ambient、Shoegaze
+
+下位：
+
+Dronegaze 是 Drone 与 Shoegaze 的结合形态，特征是：吉他或合成器制造持续数分钟不变化的低频嗡鸣，配合极慢的鼓组与大量混响，人声若有若无。它几乎没有段落切换，整体是一块持续的音墙。它是 Drone 的吉他化版本，也是 Shoegaze 的极端延伸。
+
+例曲：Various \- Dronegaze
+
+## Dark Breaks
+
+上位：Breakbeat
+
+下位：
+
+Dark Breaks 是 Breakbeat 的黑暗分支，特征是：碎拍鼓组配合阴暗的合成器 Pad、低沉的 Sub Bass、以及大量采样（恐怖电影对白、工业噪音）。速度通常在140–170 BPM，情绪压抑而紧张。它是 Breakbeat 与 Darkcore 的交叉产物。
+
+例曲：Various \- Dark Breaks
+
+## Experimental Breaks
+
+上位：Breakbeat、Experimental
+
+下位：
+
+Experimental Breaks 指脱离舞曲功能、以声音实验为目的的碎拍音乐，特征是：鼓组切分极度不规则、使用非常规采样（金属、玻璃、人声碎片）、结构不服务舞池。它是 Breakbeat 与 Glitch、Musique concrète 的交叉地带。
+
+例曲：Various \- Experimental Breaks
+
+## Dancefloor Drum and Bass
+
+上位：Drum & Bass
+
+下位：
+
+A\.K\.A\. Dancefloor DnB、Mainstream DnB
+
+Dancefloor Drum and Bass 指以舞池功能性为优先的 Drum & Bass，特征是：速度在174 BPM、明亮的合成器 Lead 与 Vocal、清晰而有力的鼓组、以及明确的 Drop 结构。它比 Liquid 更强调能量，比 Neurofunk 更强调旋律，是 Drum & Bass 在主流市场中最常见的形式。
+
+例曲：Various \- Dancefloor Drum and Bass
+
+## Deep Drum and Bass
+
+上位：Drum & Bass
+
+下位：
+
+Deep Drum and Bass 指氛围更内敛、低频更深的 Drum & Bass，特征是：速度在170–174 BPM、鼓组处理得较为柔和、大量使用混响与延迟、Sub Bass 沉重而少变化、旋律与和声偏冷。它介于 Liquid 与 Atmospheric 之间，适合耳机聆听。
+
+例曲：Various \- Deep Drum and Bass
+
+## Glitchbreak
+
+上位：Drum & Bass、Breakcore
+
+下位：
+
+Glitchbreak 是 Drum & Bass 与 Glitch 的结合形态，特征是：保留 Drum & Bass 的速度与低频，但鼓组被大量 Glitch 处理（切片、卡顿、爆音），结构碎片化。它同时与 Breakcore 的现代分支有交集。
+
+例曲：Various \- Glitchbreak
+
+## Proto-Dubstep
+
+上位：Dubstep、UK Garage
+
+下位：Dark Garage
+
+A\.K\.A\. Proto Dubstep、Dubstep 前身
+
+Proto-Dubstep 指2000年代初 Dubstep 形成之前的过渡形态，特征是：UK Garage 的切分鼓组被简化、低频被大幅加强、加入 Dub 的延迟与混响处理。它还没有形成 Dubstep 标志性的 Half-time 鼓组，但已经具备了"低频主导 + 空间处理"的核心特征。
+
+例曲：Various \- Proto-Dubstep
+
+## Tearout
+
+上位：Dubstep
+
+下位：Tearout Dubstep、Classic Tearout
+
+A\.K\.A\. Tearout Dubstep
+
+Tearout 是 Dubstep 中攻击性最强的一支，特征是：极度失真的 Mid-range Bass（Growl、Screech）、暴烈的鼓组、以及以"撕裂感"为核心的声音设计。它在2000年代后期达到顶峰，是 Brostep 的近亲但更极端、更少旋律。
+
+例曲：Various \- Tearout
+
+## Weightless
+
+上位：UK Garage、Grime
+
+下位：
+
+Weightless 是2010年代中期形成的分支，特征是：鼓组极其稀疏甚至完全缺席、以环境音与合成垫音为主、人声以清唱或碎片形式出现。它的名字来自"失重"的听感——音乐放弃了舞池所需的律动压力，转向空间与情绪。它是 Grime 与 Ambient 的交叉产物。
+
+例曲：Various \- Weightless
+
+## Sublow
+
+上位：UK Garage、Grime
+
+下位：
+
+Sublow 指以极低频率的 Sub Bass 为主要特征的分支，特征是：低频在极低的音域持续滑行、鼓组稀疏、中高频被大幅削减。它的听感更接近"震动"而非"音乐"，是英国低音文化中"低频即内容"这一观念的极端体现。
+
+例曲：Various \- Sublow
+
+## 4×4 Garage
+
+上位：UK Garage
+
+下位：
+
+4×4 Garage 是 UK Garage 的早期形态，特征是：稳定的四四拍 Kick（区别于 2-Step 的切分鼓组）、明亮的合成器和弦、切分的 Vocal 采样。它是 UK Garage 在1990年代中期的主流形式，后来被 2-Step 取代。
+
+例曲：Various \- 4×4 Garage
+
+## Vaporpop
+
+上位：Vaporwave、Electronic Pop
+
+下位：
+
+Vaporpop 是 Vaporwave 与流行歌曲结构的结合形态，特征是：保留 Vaporwave 的柔和合成垫音、混响与怀旧采样，但使用更完整的流行歌曲结构（主歌—副歌）与更清晰的人声。它比典型 Vaporwave 更"可听"、更接近 Dream Pop。
+
+例曲：Various \- Vaporpop
+
+## Raggastep
+
+上位：Reggae、Dubstep
+
+下位：
+
+Raggastep 是 Reggae 与 Dubstep 的结合形态，特征是：Reggae 的人声与节奏处理（尤其是 Ragga 风格的念唱）、配合 Dubstep 的 Half-time 鼓组与深沉 Sub Bass、以及大量 Dub 风格的延迟与混响。它比 Reggaestep 更接近 Reggae 传统。
+
+例曲：Various \- Raggastep
+
+## Lo-Fi Techno
+
+上位：Techno
+
+下位：
+
+Lo-Fi Techno 指刻意保留粗糙质感的 Techno，特征是：使用磁带饱和、采样降位（Bit Crush）、低保真鼓机音色、以及刻意的噪声层。它不追求现代混音的清晰度，而追求"旧机器"的质感，是 Techno 与 Lo-Fi House 的交叉产物。
+
+例曲：Various \- Lo-Fi Techno
+
+## Stutter Techno
+
+上位：Techno
+
+下位：
+
+Stutter Techno 是2010年代后期形成的分支，特征是：使用 Stutter（卡顿、重复截断）处理人声或合成器，制造急促的节奏断裂；配合硬朗的 Techno 鼓组与工业化的音色。它是 Techno 与 Glitch 的结合，也是当代 Hard Techno 场景中的常见手法。
+
+例曲：Various \- Stutter Techno
+
+## Electro Hop
+
+上位：Electro、Hip-Hop
+
+下位：
+
+Electro Hop 指 Electro 与 Hip-Hop 的结合形态，特征是：使用 808 鼓机与合成器（类似 Electro-Funk）、配合说唱人声与采样。它比 Electro-Funk 更强调人声，比主流 Hip-Hop 更依赖合成器而非采样。
+
+例曲：Various \- Electro Hop
+
+## Country Dance Music
+
+上位：Electronic Pop、Country
+
+下位：
+
+A\.K\.A\. CDM、Country Dance
+
+Country Dance Music 指 Country 与 Dance-Pop 的结合形态，特征是：Country 的叙事性歌词与吉他音色、配合 Dance-Pop 的四四拍节拍与合成器编曲。它在2010年代成为北美市场的重要形态，体现了流行舞曲语汇向乡村音乐的渗透。
+
+例曲：Various \- Country Dance Music
+
+## French Hip Hop
+
+上位：Hip-Hop
+
+下位：
+
+French Hip Hop 指以法语演唱的 Hip-Hop，起源于1980年代的法国郊区。它的音乐特征与美式 Hip-Hop 有明确差异：更常使用电子化的节拍（受 French House 与 Electro 影响）、更注重文本的密度与韵律、以及更强的社会议题取向。它在1990年代形成成熟的本地场景，并影响了 French Touch 与后来的全球法语音乐。
+
+例曲：Various \- French Hip Hop
+
+## Minimal Electro
+
+上位：Industrial、Electro
+
+下位：
+
+Minimal Electro 是1980年代初形成的分支，特征是：极简的鼓机节拍、冰冷的合成器音色、稀疏的编曲、以及带有距离感的人声。它同时属于早期 Electro 与 Industrial 场景，是 Minimal Wave 的近亲，也是后来 Techno 与 EBM 的重要前身。
+
+例曲：Various \- Minimal Electro
+
+
+# **Hard Dance 补遗\(已完成\)**
+
+## 前言
+
+这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个"以能量与速度为核心"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。这里补录的四项分别对应：Hard House 在英国的本地化形态、Hardstyle 之外的 Neo Rave 回潮、以及同名不同义的 "Hard House" 在美国芝加哥的形态。
+
+例曲：Various \- Hard Dance Supplement
+
+## 大纲
+
+Hard House (UK)
+
+Hardstyle (Base)
+
+Neo Rave
+
+Hard House (Chicago)
+
+## Hard House \(UK\)
+
+上位：Hard House、UK Hard House
+
+下位：Hardbass、Scouse House、Poky
+
+A\.K\.A\. UK Hard House
+
+英国 Hard House 是1990年代中后期在英国北部形成的分支，特征是：速度在145–155 BPM、Kick 极度失真且带有"bounce"的弹跳感、使用 Hoover 或 Screech 音色作为主 Riff、以及大量简短的人声切片。它的 Drop 结构比美式 Hard House 更复杂，常出现节奏突然断裂再重新进入。它是 Scouse House、Poky 与 Hardbass 的共同源头。
+
+例曲：Various \- UK Hard House
+
+## Hardstyle \(Base\)
+
+上位：Hard Dance
+
+下位：Euphoric Hardstyle、Rawstyle、Reverse Bass
+
+A\.K\.A\. Hardstyle
+
+Hardstyle 是2000年代初在荷兰形成的分支，特征是：速度在150 BPM 上下、Kick 使用"Reverse Bass"处理（低频先上扬再急收）、配合失真且带长尾的鼓组、以及大量使用 Screech 与 Euphoric Lead。它分为两大方向：Euphoric Hardstyle 强调明亮的合成器旋律与情感高潮；Rawstyle 强调失真的 Kick 与攻击性。Hardstyle 是欧洲 Hard Dance 场景中规模最大的分支，拥有独立的大型音乐节生态。
+
+例曲：Various \- Hardstyle
+
+## Neo Rave
+
+上位：Hard Dance、Rave
+
+下位：
+
+Neo Rave 是2010年代后期形成的回潮形态，把1990年代早期 Rave 的钢琴 Riff、Breakbeat 与明亮合成器，与当代 Hard Dance 的失真 Kick 与响度处理结合。它比原版 Rave 更硬、更快，比 Hardstyle 更少规则化。它体现了当代俱乐部场景对1990年代 Rave 美学的重新使用。
+
+例曲：Various \- Neo Rave
+
+## Hard House \(Chicago\)
+
+上位：House、Hard House
+
+下位：
+
+A\.K\.A\. Chicago Hard House
+
+芝加哥 Hard House 是1990年代中期在芝加哥形成的分支，特征是：速度在130–140 BPM（比英国 Hard House 更慢）、Kick 沉重但失真程度较低、使用大量的 Loop 与采样叠加、以及持续的高能量推进。它更接近 Tracky 的 Chicago House 传统，而不是英国 Hard House 的 Riff 驱动结构。两者同名但音乐上差异明确，是本地知识库中需要靠大族与路径消歧的一组同名条目之一。
+
+例曲：Various \- Chicago Hard House
+
+
+# **摇滚与极端风格补遗\(已完成\)**
+
+## 前言
+
+这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。补录原则同前：只记录有明确听辨特征与来源的说法。
+
+例曲：Various \- Supplement
+
+## 大纲
+
+Alternative Dance
+
+Dance-Punk
+
+Electro Punk
+
+Mathcore
+
+Sasscore
+
+Electrocore
+
+Brutal Prog
+
+Gothic Metal
+
+Thall
+
+Noise Pop
+
+Slacker Rock
+
+Visual Kei
+
+Psychedelic Trance
+
+Raw Trance
+
+Hypnotic Psy
+
+Psybass
+
+Trap EDM
+
+Phonkwave
+
+Punta Rock
+
+Manele
+
+## Alternative Dance
+
+上位：Electronic Rock、Indie Dance
+
+下位：Dance-Punk、New Rave
+
+A\.K\.A\. Indie Dance、Alt Dance
+
+Alternative Dance 是1980年代形成的分支，把独立摇滚的吉他、贝斯与演唱方式，与舞曲的四四拍节拍、合成器与鼓机结合。它的标志是：歌曲结构仍是摇滚，但律动来自舞池；吉他通常演奏切分音型而非和弦推进。它是 Indie Dance、Dance-Punk 与 New Rave 的共同母体。
+
+例曲：Various \- Alternative Dance
+
+### Dance-Punk
+
+上位：Alternative Dance、Punk
+
+下位：
+
+Dance-Punk 是2000年代形成的分支，把朋克的短促结构与能量，与舞曲的四四拍、Disco 的贝斯线结合。它的速度通常在120–140 BPM，吉他使用高音区的切分音型，鼓组强调稳定的四拍。它比 Alternative Dance 更粗糙、更急促。
+
+例曲：Various \- Dance-Punk
+
+### Electro Punk
+
+上位：Alternative Dance、Electro
+
+下位：
+
+Electro Punk 把朋克的演唱方式与 Electro 的鼓机、合成器结合。它的特征是：使用 808 或类似鼓机、合成器演奏简单的低音线、人声保留朋克的喊唱方式。它是 New Wave 与 Electroclash 之间的过渡形态。
+
+例曲：Various \- Electro Punk
+
+## Mathcore
+
+上位：Electronic Rock、Hardcore Punk
+
+下位：Sasscore
+
+A\.K\.A\. Mathcore、Math Metal
+
+Mathcore 是1990年代形成的分支，把 Hardcore Punk 的强度与极其复杂的节拍变化结合：曲目频繁在多个拍号之间切换（如5/8、7/8、11/8），吉他 Riff 短促而错位，鼓组密集且不重复。它的听感是"高度技术化的混乱"。它在电子音乐语境中的意义在于：它是"节奏可以被任意切割重组"这一观念在摇滚中的极端实现。
+
+例曲：Various \- Mathcore
+
+### Sasscore
+
+上位：Mathcore、Post-Hardcore
+
+下位：
+
+Sasscore 是2000年代形成的 Mathcore 分支，特征是：保留复杂的节拍变化，但加入大量高音区的尖叫式唱腔（Sass）、夸张的戏剧化编曲、以及 Glitch 与电子音效。它的情绪从 Mathcore 的冷峻转向歇斯底里，是互联网亚文化与硬核场景的交叉产物。
+
+例曲：Various \- Sasscore
+
+## Electrocore
+
+上位：Electronic Rock、Electronicore
+
+下位：
+
+Electrocore 是 Electronicore 的电子化更强的一端，特征是：Breakdown 处使用大量的合成器 Riff 与舞曲节拍，吉他失真被压缩成节奏元素，人声大量使用 Auto-Tune。它比 Trancecore 更依赖电子音色，吉他的存在感更弱。
+
+例曲：Various \- Electrocore
+
+## Brutal Prog
+
+上位：Progressive Rock、Extreme Metal
+
+下位：
+
+A\.K\.A\. Brutal Progressive
+
+Brutal Prog 是把 Progressive Rock 的复杂结构与极端金属的失真、嘶吼、高速段落结合的形态。它的特征是在同一首曲目中频繁切换复杂拍号、极速段落与突然的静默，结构完全不可预测。它是 Progressive Rock 在极端音乐方向上的延伸。
+
+例曲：Various \- Brutal Prog
+
+## Gothic Metal
+
+上位：Electronic Metal、Doom Metal
+
+下位：
+
+A\.K\.A\. Dark Metal
+
+Gothic Metal 是1990年代形成的分支，把 Doom Metal 的缓慢沉重与哥特摇滚的阴暗氛围、男女双主唱（男声嘶吼或低吟 + 女声美声）结合，常使用键盘、弦乐与合唱。它的编曲比 Doom Metal 更华丽，情绪更戏剧化。它与 Dark Wave、Ethereal Wave 有大量交集。
+
+例曲：Various \- Gothic Metal
+
+## Thall
+
+上位：Electronic Metal、Djent
+
+下位：
+
+Thall 是2010年代形成的分支，特征是：使用极强的低音失真与"拍击式"的吉他演奏（Thall 音色，带有明显的金属共鸣与不规则的音高滑动）、配合 Djent 的切分节奏与电子化处理。它的听感是极度沉重而带有机械感，低频被处理得近乎合成器。
+
+例曲：Various \- Thall
+
+## Noise Pop
+
+上位：Indie Rock、Noise Rock
+
+下位：
+
+Noise Pop 把流行歌曲的旋律结构与噪音吉他的失真墙结合。它的特征是：旋律与和声写得非常"上口"，但吉他被大量失真、反馈与效果器处理，人声被埋在混音中。它比 Shoegaze 更强调歌曲结构，比 Noise Rock 更强调旋律。
+
+例曲：Various \- Noise Pop
+
+## Slacker Rock
+
+上位：Indie Rock
+
+下位：Lo-Fi
+
+A\.K\.A\. Slacker Rock、Slack Rock
+
+Slacker Rock 指1990年代形成的独立摇滚分支，特征是：刻意的松散演奏、粗糙的录音质量、慵懒的演唱方式、以及对技术精度的明确放弃。它的美学核心是"不努力"，与同期追求高制作水准的另类摇滚形成对照。它是 Lo-Fi 美学在摇滚中的直接体现。
+
+例曲：Various \- Slacker Rock
+
+## Visual Kei
+
+上位：Electronic Rock、J-Rock
+
+下位：
+
+A\.K\.A\. V系、Visual Kei
+
+Visual Kei 是1980年代在日本形成的运动，音乐上涵盖 Hard Rock、Gothic Metal、Electronic Rock 与 Synth-Pop，视觉上以夸张的造型、浓妆与戏剧化舞台表演为核心。在电子音乐方向上，它产生了大量把金属失真与合成器、鼓机结合的乐队。它的核心特征与 New Romanticism 类似：音乐与视觉形象共同构成作品。
+
+例曲：Various \- Visual Kei
+
+## Psychedelic Trance
+
+上位：Trance、Psy Trance
+
+下位：Dark Psytrance、Full-On、Progressive Psytrance、Psybient
+
+A\.K\.A\. Psytrance、Psy Trance、Psy
+
+Psychedelic Trance 是1990年代初在印度果阿（Goa）形成的分支，从 Goa Trance 演化而来。它的特征是：速度在140–150 BPM、使用极其复杂的合成器音效（不断变化的调制、滤波、延迟）、低频以稳定的 Sub Bass 推进、旋律使用东方音阶或酸性音型、结构以持续演进而非明确 Drop 为特点。它的分支包括 Full-On（明亮高能量）、Dark Psytrance（阴暗高速）、Progressive Psy（缓慢演进）与 Psybient（氛围向）。
+
+例曲：Various \- Psychedelic Trance
+
+## Raw Trance
+
+上位：Trance、Rawstyle
+
+下位：
+
+Raw Trance 是2010年代形成的融合形态，把 Trance 的合成器琶音与情感推进，与 Rawstyle 的失真 Kick 与攻击性结合。它的速度通常在150 BPM 上下，Drop 处出现失真 Kick 与明亮的 Trance Lead 并置。它体现了 Hard Dance 与 Trance 场景在当代的相互渗透。
+
+例曲：Various \- Raw Trance
+
+## Hypnotic Psy
+
+上位：Psychedelic Trance
+
+下位：
+
+Hypnotic Psy 是 Psytrance 的极简分支，特征是：大幅削减旋律与音效变化，专注于持续的、几乎不变化的低频推进与重复的节奏型，制造催眠式的听感。它比典型 Psytrance 更少"信息量"，更接近 Techno 的推进逻辑。
+
+例曲：Various \- Hypnotic Psy
+
+## Psybass
+
+上位：Bass、Psychedelic Trance
+
+下位：
+
+Psybass 是把 Psytrance 的音效设计与调制手法，与 Bass 音乐的低频重量、Half-time 鼓组结合的分支。它的低频通常使用复杂的调制与滤波，而不是简单的 Wobble；整体氛围带有 Psy 特有的"迷幻流动感"。它是 Bass 音乐与 Psy 场景的交叉产物。
+
+例曲：Various \- Psybass
+
+## Trap EDM
+
+上位：Trap、EDM
+
+下位：
+
+A\.K\.A\. EDM Trap、Festival Trap
+
+Trap EDM 是2010年代形成的分支，把 Trap 的 808 低频、三连音 Hi-hat 与 Half-time 鼓组，放进 EDM 的节庆结构（Build-up + Drop）。它的 Drop 通常使用失真 Lead、Supersaw 或采样切片，配合极具冲击力的低频。它是 Trap 进入主流音乐节场景的主要形态。
+
+例曲：Various \- Trap EDM
+
+## Phonkwave
+
+上位：Trap、Phonk
+
+下位：
+
+Phonkwave 是2010年代后期形成的分支，把 Phonk 的 Memphis 说唱采样、808 低频、Cowbell 与失真处理，与 Wave 的合成器氛围、混响空间结合。它的速度偏慢、氛围阴暗，低频沉重而带有大量失真。它是当代互联网场景中 Phonk 与 Wave 交叉的产物。
+
+例曲：Various \- Phonkwave
+
+## Punta Rock
+
+上位：Regional Electronic Music、Latin
+
+下位：
+
+Punta Rock 是中美洲（尤其伯利兹与洪都拉斯）形成的分支，把加里富纳（Garifuna）传统的 Punta 鼓乐与电吉他、合成器、鼓机结合。它的节奏以快速的切分与呼应式的人声为特征，速度偏快。它是 Regional Electronic Music 中加勒比海岸的代表声音。
+
+例曲：Various \- Punta Rock
+
+## Manele
+
+上位：Regional Electronic Music、Balkan
+
+下位：
+
+Manele 是巴尔干地区（尤其罗马尼亚与保加利亚）形成的流行音乐，把土耳其与中东的音阶、吉普赛音乐的装饰音与节奏，与合成器、鼓机、以及当代舞曲节拍结合。它的速度通常偏快，旋律使用大量微分音装饰，编曲以合成器为主。它同时受到 Turbo-Folk 与 Chalga 的影响，是巴尔干流行文化中辨识度极高的声音。
+
+例曲：Various \- Manele
+
+
+# **Reggae 补遗\(已完成\)**
+
+## 前言
+
+补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。这一节只补这一个条目，说明 Reggae 与电子音乐的技术血缘——Dub 正是电子音乐中"制作即作曲"这一观念的第一个成熟范例。
+
+例曲：Various \- Reggae
+
+## 大纲
+
+Reggae
+
+## Reggae
+
+上位：Electronic Music、Caribbean Music
+
+下位：Dub、Dub Reggae、Euro Reggae、Reggaestep、Dancehall、Reggaeton
+
+A\.K\.A\. 雷鬼
+
+Reggae 是1960年代末在牙买加形成的音乐，从 Ska 与 Rocksteady 演化而来。它的节奏特征是：强调第二、四拍的反拍重音（Skank）、贝斯线沉重而旋律化、鼓组简洁、以及大量使用切分的吉他或键盘音型。Reggae 对电子音乐的核心贡献在它的录音室实践：1970年代，King Tubby 与 Lee "Scratch" Perry 在混音台上实时去掉人声、加强鼓与贝斯、加入大量延迟与混响，创造了 Dub。这是音乐史上第一次把"混音台当作乐器"、把"制作过程本身当作作品"——此后所有电子音乐的制作观念都建立在这一点上。Reggae 的另一个直接分支是 Dancehall，它把速度加快、人声改为念唱，成为 Hip-Hop 与大量现代舞曲的节奏来源。
+
+例曲：Various \- Reggae

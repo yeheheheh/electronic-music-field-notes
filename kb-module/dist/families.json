@@ -49,6 +49,7 @@
       "g-2065"
     ],
     "archive": false,
+    "supplement": false,
     "count": 122
   },
   {
@@ -91,6 +92,7 @@
       "g-2677"
     ],
     "archive": false,
+    "supplement": false,
     "count": 38
   },
   {
@@ -124,6 +126,7 @@
       "g-3579"
     ],
     "archive": false,
+    "supplement": false,
     "count": 58
   },
   {
@@ -143,6 +146,7 @@
       "g-4775"
     ],
     "archive": false,
+    "supplement": false,
     "count": 96
   },
   {
@@ -166,6 +170,7 @@
       "g-5861"
     ],
     "archive": false,
+    "supplement": false,
     "count": 43
   },
   {
@@ -182,6 +187,7 @@
       "g-6167"
     ],
     "archive": false,
+    "supplement": false,
     "count": 47
   },
   {
@@ -208,6 +214,7 @@
       "g-9036"
     ],
     "archive": false,
+    "supplement": false,
     "count": 160
   },
   {
@@ -225,6 +232,7 @@
       "g-11151"
     ],
     "archive": false,
+    "supplement": false,
     "count": 134
   },
   {
@@ -243,6 +251,7 @@
       "g-11871"
     ],
     "archive": false,
+    "supplement": false,
     "count": 37
   },
   {
@@ -261,6 +270,7 @@
       "g-12434"
     ],
     "archive": false,
+    "supplement": false,
     "count": 43
   },
   {
@@ -288,6 +298,7 @@
       "g-13682"
     ],
     "archive": false,
+    "supplement": false,
     "count": 65
   },
   {
@@ -323,6 +334,7 @@
       "g-15324"
     ],
     "archive": false,
+    "supplement": false,
     "count": 92
   },
   {
@@ -339,6 +351,7 @@
       "g-15462"
     ],
     "archive": false,
+    "supplement": false,
     "count": 32
   },
   {
@@ -361,6 +374,7 @@
       "g-16544"
     ],
     "archive": false,
+    "supplement": false,
     "count": 59
   },
   {
@@ -410,6 +424,7 @@
       "g-17464"
     ],
     "archive": false,
+    "supplement": false,
     "count": 51
   },
   {
@@ -464,6 +479,7 @@
       "g-19114"
     ],
     "archive": false,
+    "supplement": false,
     "count": 109
   },
   {
@@ -491,6 +507,275 @@
       "g-19286"
     ],
     "archive": true,
+    "supplement": false,
     "count": 19
+  },
+  {
+    "id": "f-19330",
+    "name": "Electronic Pop",
+    "rawName": "Electronic Pop(已完成)",
+    "zh": "电子流行",
+    "color": "phosphor",
+    "line": 19330,
+    "intro": "Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。它的历史几乎与合成器本身同步：1970年代，Moog、ARP 等模块化合成器进入录音棚，Kraftwerk、Giorgio Moroder 把机器节拍放进流行歌曲的骨架里；1980年代，Synth-Pop 与新浪漫主义让\"合成器乐队\"成为主流形态，Depeche Mode、Pet Shop Boys、Eurythmics 用鼓机、合成贝斯和冷调人声定义了那个十年；1990年代，Eurodance 与 Eurobeat 把电子流行推向舞池与东亚市场，而 House-Pop 让俱乐部语汇回流到流行副歌。进入2010年代，Hyperpop 与 PC Music 把这种融合推到极端——人声被极端拉伸、失真、切片，变成一种关于\"数字化可爱与过载\"的美学。电子流行始终在做同一件事：把当时最先进的电子音色，装进最容易被记住的歌曲结构里。",
+    "introSummary": "Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。",
+    "childIds": [
+      "g-19376"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 23
+  },
+  {
+    "id": "f-19655",
+    "name": "R&B / Rhythm and Blues",
+    "rawName": "R&B / Rhythm and Blues(已完成)",
+    "zh": "节奏布鲁斯",
+    "color": "ice",
+    "line": 19655,
+    "intro": "R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。它的形态在几十年里不断置换：1940–50年代是带有强烈摇摆感与铜管编制的 Jump Blues 与 Doo-Wop；1960年代被 Motown 与 Stax 打磨成结构精密的 Soul；1970年代出现带有交响编制的 Philly Soul 与更粗粝的 Funk 化 R&B；1980年代，鼓机、合成贝斯与采样器进入录音棚，R&B 完成第一次大规模电子化，New Jack Swing 与 Quiet Storm 是这一时期的两个极点。1990年代是 R&B 的黄金年代，制作上大量使用 TR-808/909、合成垫音与多层人声和声。进入2010年代，Trap 的鼓组语汇与氛围化的合成器被引入，形成 Alternative R&B 与 Trap Soul。可以说，R&B 是电子音乐与歌唱传统结合最紧密、也最持久的一条线。 例曲：Papa's Got A Brand New Bag - James Brown",
+    "introSummary": "R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。",
+    "childIds": [
+      "g-19679"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 7
+  },
+  {
+    "id": "f-19764",
+    "name": "Electronic Rock",
+    "rawName": "Electronic Rock(已完成)",
+    "zh": "电子摇滚",
+    "color": "heat",
+    "line": 19764,
+    "intro": "Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。它的历史可以追溯到1960年代末：The Beatles 在《Revolver》里用磁带循环与人声倒放打开缺口，Pink Floyd 与 King Crimson 把 Mellotron 与合成器变成摇滚编曲的常规配置。1970年代，Kraftwerk 与 Suicide 让\"朋克遇上合成器\"成为可能，德国 Krautrock 与后朋克则提供了结构上的自由。1980年代，New Wave 与 Industrial Rock 把鼓机、采样与失真吉他并置，Nine Inch Nails 与 Ministry 确立了工业摇滚的范式。1990年代，Big Beat 与 Electronicore 让摇滚与电子舞曲的边界进一步模糊；2000年代，Nintendocore 与 Cybergrind 把游戏音效与极端金属拼在一起；2010年代后，Blackgaze 与 Nu Gaze 把 Shoegaze 的噪音墙与黑金属、电子氛围融合。电子摇滚的核心问题始终是：机器与人的演奏如何在同一首曲子里互相不让步，又彼此成立。 例曲：Kashmir - Led Zeppelin",
+    "introSummary": "Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。",
+    "childIds": [
+      "g-19802"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 17
+  },
+  {
+    "id": "f-19995",
+    "name": "Funk",
+    "rawName": "Funk(已完成)",
+    "zh": "放克",
+    "color": "heat",
+    "line": 19995,
+    "intro": "Funk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。这种\"Everything is a drum\"的思路，直接定义了此后所有舞曲的骨架。1970年代，Sly Stone 与 Parliament-Funkadelic 把合成器、Clavinet 与 Wah 效果器引入 Funk，形成 P-Funk 的宇宙。1980年代，Prince 与 Zapp 用 LinnDrum、Oberheim 与 Talk Box 把 Funk 推向电子化；同一时期，西海岸的 G-Funk 用 Moog 的滑音 Lead 与缓慢的节拍重新包装了 Funk；而 Miami Bass 与 Electro 则把 808 的 Kick 变成主角。1990年代后，Funk 的语汇被 Hip-Hop、House、Drum & Bass 与 Nu-Disco 大量采样与内化——今天几乎所有电子舞曲的低频与切分处理，都可以追溯到 Funk。 例曲：Papa's Got A Brand New Bag - James Brown",
+    "introSummary": "Funk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。",
+    "childIds": [
+      "g-20027"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 11
+  },
+  {
+    "id": "f-20154",
+    "name": "Chill-Out",
+    "rawName": "Chill-Out(已完成)",
+    "zh": "休闲",
+    "color": "ice",
+    "line": 20154,
+    "intro": "Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。1990年代，Café del Mar 的日落套装、Kruder & Dorfmeister 的慢速重混、Air 与 Zero 7 的合成器流行，把这种\"降速与放松\"的做法发展成一整套声音美学：速度在70–110 BPM、鼓组稀疏或完全消失、大量使用 Rhodes 电钢琴与合成垫音、混响与延迟处理得极为宽阔。它的分支很多：一端靠近 Ambient 与 Downtempo，一端靠近 Trip Hop 与 Nu Jazz，还有一端靠近 Balearic 与 Lounge。Chill-Out 的核心不在于\"安静\"，而在于\"把注意力从舞池转向空间\"——同样的和声与音色，只是被放慢了、拉开了、留白了。 例曲：Teardrop - Massive Attack",
+    "introSummary": "Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。",
+    "childIds": [
+      "g-20188"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 12
+  },
+  {
+    "id": "f-20327",
+    "name": "Bass / Club",
+    "rawName": "Bass / Club(已完成)",
+    "zh": "低频俱乐部",
+    "color": "violet",
+    "line": 20327,
+    "intro": "Bass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。它的历史有两条线：一条来自美国南部与东海岸的俱乐部文化——Miami Bass 用 808 的 Long Kick 与极快的念白定义了佛罗里达的舞池；Baltimore Club 与 Jersey Club 把 Breakbeat 切碎、把人声切片循环、用三连音 Kick 制造急停急起；Ghettotech 与 Juke／Footwork 把底特律与芝加哥的速度推到150 BPM 以上，配合舞蹈。另一条来自互联网时代的低音文化——Bérite 把 Jersey Club 与非洲鼓乐结合，Jersey Terror 把节奏做得更暴烈，Snap Music 把极简的鼓与拍手变成钩子。这一族群共同的特征是：低频永远是主角，人声被当作打击乐使用，结构高度重复，完全服务于身体。 例曲：Various - Bass / Club",
+    "introSummary": "Bass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。",
+    "childIds": [
+      "g-20361"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 12
+  },
+  {
+    "id": "f-20492",
+    "name": "Chiptune",
+    "rawName": "Chiptune(已完成)",
+    "zh": "芯片音乐",
+    "color": "phosphor",
+    "line": 20492,
+    "intro": "Chiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片有三个通道加滤波器。作曲家必须在\"只有几条声部\"的条件下写出旋律、低音、鼓组与和声。当这些机器被淘汰、限制消失之后，制作人反而开始主动追求这种限制带来的音色：方波的尖锐、噪声通道的沙哑、琶音器模拟和弦的错觉、以及通道数不足逼出来的极简编配。Chiptune 因此成为\"限制即风格\"的典范——它证明音色的辨识度可以来自工具，而不只是来自创作意图。 例曲：The Moon (8-bit Version) - 殿村裕誠",
+    "introSummary": "Chiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片…",
+    "childIds": [
+      "g-20524"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 11
+  },
+  {
+    "id": "f-20645",
+    "name": "Remix & Edit",
+    "rawName": "Remix & Edit(已完成)",
+    "zh": "重混与编辑",
+    "color": "ice",
+    "line": 20645,
+    "intro": "Remix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。这一族的边界由技术与法律共同划定——从1970年代 DJ 用双唱盘把两首歌拼在一起，到1980年代采样器让\"取一段素材重做一首歌\"成为常规，再到2000年代后互联网让任何人都能对任意歌曲进行速度与音高的重新处理。它的手法其实高度一致：改变速度、改变音高、切碎素材、叠加层、重新编排结构。区别只在于\"改动多少\"与\"是否获得授权\"。理解这一族对制作学习特别有价值，因为它是\"结构可以被拆开重装\"这一观念最直接的证明。 例曲：Various - Remix & Edit",
+    "introSummary": "Remix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。",
+    "childIds": [
+      "g-20675"
+    ],
+    "archive": false,
+    "supplement": false,
+    "count": 10
+  },
+  {
+    "id": "f-20790",
+    "name": "实验电子补遗",
+    "rawName": "实验电子补遗(已完成)",
+    "zh": "",
+    "color": "muted",
+    "line": 20790,
+    "intro": "这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成音轨，Live Coding 与 Algorave 关心代码如何在现场实时生成音乐。它们的共同点是：音乐的重心从\"写什么音符\"移到了\"用什么方法产生声音\"。这也是实验电子最核心的贡献——它把制作过程本身变成了作品的一部分。 例曲：Various - Experimental Electronic",
+    "introSummary": "这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成…",
+    "childIds": [
+      "g-20822",
+      "g-20834",
+      "g-20846",
+      "g-20858",
+      "g-20870",
+      "g-20882",
+      "g-20894",
+      "g-20906",
+      "g-20918",
+      "g-20930",
+      "g-20942"
+    ],
+    "archive": false,
+    "supplement": true,
+    "count": 11
+  },
+  {
+    "id": "f-20955",
+    "name": "风格补遗",
+    "rawName": "风格补遗(已完成)",
+    "zh": "",
+    "color": "muted",
+    "line": 20955,
+    "intro": "这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。它们分布在 House、Hardcore、Trance、Drum & Bass、UK Garage、Dubstep、Ambient、Reggae、Techno、Regional、Hauntology 等族下，按\"同一族内的上下位关系\"排列，不单独成族。补录的原则与本地分类库一致：只记录有明确听辨特征与来源的说法，不补写没有依据的内容。 例曲：Various - Genre Supplement",
+    "introSummary": "这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。",
+    "childIds": [
+      "g-21029",
+      "g-21041",
+      "g-21051",
+      "g-21061",
+      "g-21073",
+      "g-21085",
+      "g-21097",
+      "g-21109",
+      "g-21119",
+      "g-21129",
+      "g-21141",
+      "g-21151",
+      "g-21163",
+      "g-21173",
+      "g-21183",
+      "g-21193",
+      "g-21203",
+      "g-21215",
+      "g-21225",
+      "g-21235",
+      "g-21247",
+      "g-21259",
+      "g-21269",
+      "g-21279",
+      "g-21289",
+      "g-21299",
+      "g-21309",
+      "g-21319",
+      "g-21329",
+      "g-21339",
+      "g-21351",
+      "g-21361"
+    ],
+    "archive": false,
+    "supplement": true,
+    "count": 32
+  },
+  {
+    "id": "f-21372",
+    "name": "Hard Dance 补遗",
+    "rawName": "Hard Dance 补遗(已完成)",
+    "zh": "",
+    "color": "muted",
+    "line": 21372,
+    "intro": "这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。这里补录的四项分别对应：Hard House 在英国的本地化形态、Hardstyle 之外的 Neo Rave 回潮、以及同名不同义的 \"Hard House\" 在美国芝加哥的形态。 例曲：Various - Hard Dance Supplement",
+    "introSummary": "这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。",
+    "childIds": [
+      "g-21390",
+      "g-21402",
+      "g-21414",
+      "g-21424"
+    ],
+    "archive": false,
+    "supplement": true,
+    "count": 4
+  },
+  {
+    "id": "f-21437",
+    "name": "摇滚与极端风格补遗",
+    "rawName": "摇滚与极端风格补遗(已完成)",
+    "zh": "",
+    "color": "muted",
+    "line": 21437,
+    "intro": "这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。补录原则同前：只记录有明确听辨特征与来源的说法。 例曲：Various - Supplement",
+    "introSummary": "这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。",
+    "childIds": [
+      "g-21487",
+      "g-21519",
+      "g-21541",
+      "g-21551",
+      "g-21563",
+      "g-21575",
+      "g-21585",
+      "g-21595",
+      "g-21607",
+      "g-21619",
+      "g-21631",
+      "g-21641",
+      "g-21651",
+      "g-21661",
+      "g-21673",
+      "g-21683",
+      "g-21693"
+    ],
+    "archive": false,
+    "supplement": true,
+    "count": 20
+  },
+  {
+    "id": "f-21704",
+    "name": "Reggae 补遗",
+    "rawName": "Reggae 补遗(已完成)",
+    "zh": "",
+    "color": "muted",
+    "line": 21704,
+    "intro": "补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。这一节只补这一个条目，说明 Reggae 与电子音乐的技术血缘——Dub 正是电子音乐中\"制作即作曲\"这一观念的第一个成熟范例。 例曲：Various - Reggae",
+    "introSummary": "补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。",
+    "childIds": [
+      "g-21716"
+    ],
+    "archive": false,
+    "supplement": true,
+    "count": 1
   }
 ]

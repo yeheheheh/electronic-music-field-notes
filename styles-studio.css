@@ -1,0 +1,2460 @@
+/* ==========================================================================
+   STUDIO · 可动手的制作模块
+   Building on the Club Rig system: the same amber / cyan / magenta signals,
+   square corners and step-grid grammar, but with bigger targets and a calmer
+   surface — this is the page you actually *play*, not the page you read.
+   ========================================================================== */
+
+.st-body {
+  padding-bottom: clamp(28px, 4vw, 56px);
+}
+
+/* ---- Transport: one strip that stays reachable while you edit ---- */
+
+.st-transport {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 22px);
+  margin: 0 calc(var(--shell-pad) * -1) 18px;
+  padding: 12px var(--shell-pad);
+  border-bottom: 1px solid var(--line-strong);
+  background: rgba(8, 9, 11, 0.96);
+  backdrop-filter: blur(14px);
+}
+
+.st-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 132px;
+  height: 46px;
+  padding: 0 22px;
+  border: 1px solid rgba(6, 6, 7, 0.55);
+  background: var(--sodium);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 0 0 1px rgba(255, 176, 0, 0.24),
+    0 10px 24px -10px rgba(255, 176, 0, 0.55);
+  transition: background 0.1s var(--cut), box-shadow 0.1s var(--cut), transform 0.1s var(--cut);
+}
+
+.st-play:hover {
+  background: #ffc42a;
+  transform: translateY(-1px);
+}
+
+.st-play:active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 5px rgba(6, 6, 7, 0.3);
+}
+
+.st-play.is-playing {
+  background: transparent;
+  border-color: var(--sodium);
+  color: var(--sodium);
+  box-shadow: inset 0 0 0 1px rgba(255, 176, 0, 0.16);
+}
+
+.st-play-icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+}
+
+.st-play-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.st-transport-meta {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 30px);
+  min-width: 0;
+}
+
+.st-bpm,
+.st-swing {
+  display: grid;
+  grid-template-columns: auto minmax(72px, 150px) auto;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+}
+
+.st-bpm output,
+.st-swing output {
+  min-width: 34px;
+  font-size: 12px;
+  color: var(--paper);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-transport input[type="range"] {
+  width: 100%;
+  height: 18px;
+  accent-color: var(--sodium);
+  cursor: pointer;
+}
+
+.st-barread {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: clamp(10px, 1.4vw, 20px);
+  border-left: 1px solid var(--line);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.st-barread-label {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--muted-2);
+}
+
+.st-barread-value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-barread-of {
+  font-size: 10px;
+  color: var(--muted-2);
+}
+
+.st-ghost {
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: border-color 0.1s var(--cut), color 0.1s var(--cut);
+}
+
+.st-ghost:hover {
+  border-color: var(--muted);
+  color: var(--paper);
+}
+
+/* ---- Module tabs ---- */
+
+.st-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2px;
+  margin-bottom: 22px;
+}
+
+.st-tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 11px 12px 12px;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.014);
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.1s var(--cut), background 0.1s var(--cut), color 0.1s var(--cut);
+}
+
+.st-tab:hover {
+  border-color: var(--line-strong);
+  background: rgba(242, 237, 227, 0.04);
+  color: var(--paper);
+}
+
+.st-tab.is-active {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.08);
+  color: var(--paper);
+}
+
+.st-tab-num {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-tab.is-active .st-tab-num {
+  color: var(--sodium);
+}
+
+.st-tab-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.st-tab-en {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  color: var(--muted-2);
+}
+
+.st-tab-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--line-strong);
+}
+
+.st-tab.is-done .st-tab-dot {
+  background: var(--sodium);
+  box-shadow: 0 0 8px rgba(255, 176, 0, 0.7);
+}
+
+/* ---- Module header ---- */
+
+.st-module-host {
+  min-height: 320px;
+}
+
+.st-module-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: clamp(14px, 2vw, 26px);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.st-module-index {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 2px;
+}
+
+.st-module-index span {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-module-index em {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-style: normal;
+  letter-spacing: 0.16em;
+  color: var(--muted-2);
+}
+
+.st-module-copy h2 {
+  font-size: clamp(1.3rem, 1.9vw, 1.72rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.st-module-copy p {
+  max-width: 62ch;
+  margin-top: 7px;
+  font-size: 14.5px;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.st-module-lesson {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.st-module-lesson:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.st-module-lesson svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* ---- Presets ---- */
+
+.st-presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 0 16px;
+}
+
+.st-presets-label {
+  margin-right: 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--muted-2);
+}
+
+.st-preset {
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 0.1s var(--cut), color 0.1s var(--cut), background 0.1s var(--cut);
+}
+
+.st-preset:hover {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.07);
+  color: var(--paper);
+}
+
+.st-preset.is-clear {
+  border-color: rgba(255, 46, 99, 0.32);
+  color: #ff8298;
+}
+
+.st-preset.is-clear:hover {
+  border-color: var(--laser);
+  background: rgba(255, 46, 99, 0.08);
+  color: var(--laser);
+}
+
+/* ---- Step grid: the central object of the page ---- */
+
+.st-grid {
+  border: 1px solid var(--line-strong);
+  background: rgba(242, 237, 227, 0.014);
+}
+
+.st-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+}
+
+.st-row:last-child {
+  border-bottom: 0;
+}
+
+.st-row-head-only {
+  border-bottom: 1px solid var(--line-strong);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.st-row-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  padding: 6px 10px;
+  border-right: 1px solid var(--line);
+}
+
+.st-row-head-only .st-row-head {
+  min-height: 22px;
+}
+
+.st-row-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--paper);
+}
+
+.st-row-zh {
+  font-size: 10.5px;
+  color: var(--muted-2);
+}
+
+.st-cells {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  gap: 3px;
+  padding: 5px 6px;
+}
+
+.st-cells-head {
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.st-cell-head {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.st-cell-head.is-beat {
+  color: var(--muted);
+}
+
+.st-cell-head.is-now {
+  color: var(--cyan);
+}
+
+.st-cell {
+  position: relative;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.05);
+  cursor: pointer;
+  /* Panning stays native so the grid can still be scrolled on a phone; a tap
+     is separated from a scroll by travel distance in studio.js. */
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background 0.08s var(--cut), border-color 0.08s var(--cut), box-shadow 0.08s var(--cut);
+}
+
+.st-cell.is-beat {
+  border-left-color: var(--line-strong);
+}
+
+.st-cell:hover {
+  background: rgba(242, 237, 227, 0.14);
+  border-color: var(--line-strong);
+}
+
+.st-cell.is-on {
+  background: var(--sodium);
+  border-color: var(--sodium);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.st-cell.is-on:hover {
+  background: #ffc42a;
+}
+
+/* Playhead: cyan ring, so it reads on both empty and filled cells. */
+.st-cell.is-now {
+  box-shadow: inset 0 0 0 2px var(--cyan);
+}
+
+.st-cell.is-on.is-now {
+  box-shadow: inset 0 0 0 2px var(--cyan), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.st-cell:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 1px;
+}
+
+/* Bass / melody grids use the family hues to separate rows. */
+.st-grid[data-st-grid="bass"] .st-row:nth-child(2) .st-cell.is-on {
+  background: #ff5c1a;
+  border-color: #ff5c1a;
+}
+
+.st-grid[data-st-grid="melody"] .st-row:nth-child(2) .st-cell.is-on,
+.st-grid[data-st-grid="melody"] .st-row:nth-child(5) .st-cell.is-on {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.st-grid[data-st-grid="melody"] .st-row:nth-child(3) .st-cell.is-on,
+.st-grid[data-st-grid="melody"] .st-row:nth-child(6) .st-cell.is-on {
+  background: #ff2e63;
+  border-color: #ff2e63;
+}
+
+/* ---- Readout under each grid ---- */
+
+.st-readout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 22px;
+  padding: 14px 0 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: var(--muted-2);
+}
+
+.st-readout b {
+  font-weight: 600;
+  color: var(--paper);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-readout-hint {
+  margin-left: auto;
+  color: var(--muted-2);
+}
+
+.st-tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px 22px;
+  margin: 16px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.st-tips li {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted-2);
+}
+
+.st-tips span {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--sodium);
+}
+
+/* ---- Chords ---- */
+
+.st-chord-bars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.st-chord-bar {
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.014);
+}
+
+.st-chord-bar-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.st-chord-bar-num {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-chord-bar-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+}
+
+.st-chord-listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  height: 26px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  cursor: pointer;
+}
+
+.st-chord-listen:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.st-chord-listen svg {
+  width: 11px;
+  height: 11px;
+}
+
+.st-chord-options {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.st-chord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 8px 2px 7px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.08s var(--cut), border-color 0.08s var(--cut), color 0.08s var(--cut);
+}
+
+.st-chord strong {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.st-chord small {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--muted-2);
+}
+
+.st-chord:hover {
+  border-color: var(--line-strong);
+  color: var(--paper);
+}
+
+.st-chord.is-active {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.12);
+  color: var(--sodium);
+}
+
+.st-chord.is-active small {
+  color: rgba(255, 176, 0, 0.72);
+}
+
+.st-chord-mood {
+  margin-top: 9px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted-2);
+}
+
+.st-barctx {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  margin-bottom: 8px;
+  padding-left: 92px;
+}
+
+.st-barctx-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.st-barctx-item i {
+  font-style: normal;
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.st-scale-strip {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 8px;
+  padding-left: 92px;
+}
+
+.st-scale-strip span {
+  flex: 1;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-align: center;
+  color: var(--muted-2);
+}
+
+/* ---- Sound ---- */
+
+.st-sound-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 22px;
+  padding: 18px 0 6px;
+}
+
+.st-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.st-slider-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.st-slider-head b {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.st-slider-head output {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-slider input[type="range"] {
+  width: 100%;
+  height: 20px;
+  accent-color: var(--sodium);
+  cursor: pointer;
+}
+
+.st-slider small {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--muted-2);
+}
+
+.st-voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  align-items: end;
+  gap: 14px;
+  padding: 16px 0 6px;
+  border-top: 1px solid var(--line);
+}
+
+.st-voice {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted-2);
+}
+
+.st-voice select {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.st-voice select:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.st-audition {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--sodium);
+  background: rgba(255, 176, 0, 0.1);
+  color: var(--sodium);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.st-audition:hover {
+  background: var(--sodium);
+  color: var(--ink);
+}
+
+.st-audition svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ---- Song structure ---- */
+
+.st-song {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: 8px;
+  padding-top: 18px;
+}
+
+.st-song-block {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 11px;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.014);
+  transition: border-color 0.1s var(--cut), background 0.1s var(--cut);
+}
+
+.st-song-block.is-active {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.1);
+}
+
+.st-song-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.st-song-num {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+}
+
+.st-song-head select {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.st-song-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted-2);
+  cursor: pointer;
+}
+
+.st-song-remove:hover {
+  border-color: rgba(255, 46, 99, 0.4);
+  color: var(--laser);
+}
+
+.st-song-remove svg {
+  width: 11px;
+  height: 11px;
+}
+
+.st-song-bars {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: 4px;
+}
+
+.st-song-bars button {
+  height: 28px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--paper);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.st-song-bars button:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.st-song-bars strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-song-bars small {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 400;
+  color: var(--muted-2);
+}
+
+.st-song-layers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.st-song-layers i {
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+}
+
+.st-song-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 96px;
+  border: 1px dashed var(--line-strong);
+  background: transparent;
+  color: var(--muted-2);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.st-song-add:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.st-song-add svg {
+  width: 13px;
+  height: 13px;
+}
+
+.st-song-play {
+  height: 34px;
+  padding: 0 16px;
+  border: 1px solid var(--sodium);
+  background: rgba(255, 176, 0, 0.1);
+  color: var(--sodium);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.st-song-play:hover,
+.st-song-play[aria-pressed="true"] {
+  background: var(--sodium);
+  color: var(--ink);
+}
+
+/* ---- Status strip ---- */
+
+.st-readout-host {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.st-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.014);
+}
+
+.st-status-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  background: var(--line-strong);
+}
+
+.st-status-dot.is-ready {
+  background: var(--sodium);
+  box-shadow: 0 0 10px rgba(255, 176, 0, 0.8);
+}
+
+.st-status-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.st-status-copy strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.st-status-copy small {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--muted-2);
+}
+
+.st-status-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--paper);
+  white-space: nowrap;
+}
+
+.st-status-link:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.st-status-link svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 1180px) {
+  .st-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .st-sound-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .st-voice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .st-transport {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    row-gap: 10px;
+  }
+
+  .st-barread {
+    order: 2;
+  }
+
+  .st-ghost {
+    order: 3;
+  }
+
+  .st-transport-meta {
+    order: 4;
+    grid-column: 1 / -1;
+    gap: 16px;
+  }
+
+  .st-chord-bars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .st-transport {
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .st-play {
+    min-width: 106px;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .st-bpm,
+  .st-swing {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    font-size: 9.5px;
+  }
+
+  .st-bpm output,
+  .st-swing output {
+    font-size: 11px;
+  }
+
+  .st-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px;
+    margin-bottom: 18px;
+  }
+
+  .st-tab {
+    padding: 9px 9px 10px;
+  }
+
+  .st-tab-num {
+    font-size: 1rem;
+  }
+
+  .st-tab-label {
+    font-size: 12.5px;
+  }
+
+  .st-tab-en {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .st-tab-dot {
+    top: 8px;
+    right: 8px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .st-module-head {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .st-module-index span {
+    font-size: 1.6rem;
+  }
+
+  .st-module-copy p {
+    font-size: 14px;
+  }
+
+  .st-module-lesson {
+    grid-column: 1 / -1;
+    justify-content: center;
+    min-height: 40px;
+  }
+
+  /* Row head shrinks, cells keep a usable 20px minimum. */
+  .st-row {
+    grid-template-columns: 62px minmax(0, 1fr);
+  }
+
+  .st-row-head {
+    padding: 5px 7px;
+  }
+
+  .st-row-label {
+    font-size: 9.5px;
+  }
+
+  .st-row-zh {
+    font-size: 9.5px;
+  }
+
+  .st-cells {
+    gap: 2px;
+    padding: 4px;
+  }
+
+  .st-cell {
+    height: 30px;
+  }
+
+  .st-cell-head {
+    font-size: 8px;
+  }
+
+  .st-barctx,
+  .st-scale-strip {
+    padding-left: 62px;
+  }
+
+  .st-barctx-item {
+    padding: 4px 5px;
+    font-size: 10px;
+  }
+
+  .st-scale-strip span {
+    font-size: 9px;
+  }
+
+  .st-chord-options {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .st-chord {
+    padding: 9px 2px 8px;
+  }
+
+  .st-sound-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .st-voice-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .st-voice select {
+    height: 42px;
+  }
+
+  .st-audition {
+    height: 42px;
+  }
+
+  .st-song {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .st-readout-hint {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .st-status {
+    flex-wrap: wrap;
+  }
+
+  .st-status-link {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    min-height: 38px;
+  }
+}
+
+@media (max-width: 380px) {
+  .st-row {
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+
+  .st-cells {
+    gap: 1.5px;
+    padding: 3px;
+  }
+
+  .st-cell {
+    height: 26px;
+  }
+
+  .st-barctx,
+  .st-scale-strip {
+    padding-left: 54px;
+  }
+
+  .st-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .st-song {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Grid proportions
+   16 steps across a 1400px shell made each pad 75×34 — a bar, not a pad.
+   Cells get taller with the viewport, and on narrow screens the grid scrolls
+   horizontally with the row labels pinned, so a step never becomes a sliver.
+   -------------------------------------------------------------------------- */
+
+.st-grid {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.st-cell {
+  height: clamp(34px, 4.1vw, 52px);
+}
+
+.st-row-head {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background: #0a0b0c;
+}
+
+.st-row-head-only .st-row-head {
+  background: #08090a;
+}
+
+@media (max-width: 900px) {
+  .st-row,
+  .st-row-head-only {
+    min-width: 600px;
+  }
+
+  .st-cell {
+    height: 40px;
+  }
+
+  .st-cells {
+    gap: 3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .st-row,
+  .st-row-head-only {
+    min-width: 548px;
+  }
+
+  .st-cell {
+    height: 38px;
+  }
+}
+
+/* The status link is a button now: same look, no navigation, no page reload. */
+button.st-status-link {
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   Lesson bridge
+   The 动手 block used to be a paragraph. It now leads somewhere, so it gets a
+   button-shaped call to action and a quiet line of context.
+   -------------------------------------------------------------------------- */
+
+.lesson-practice {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--sodium);
+  background: rgba(255, 176, 0, 0.04);
+}
+
+.practice-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.practice-module {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sodium);
+  border: 1px solid rgba(255, 176, 0, 0.4);
+  padding: 2px 7px;
+}
+
+.practice-hint {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-2, #cfcabd);
+}
+
+.practice-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.practice-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 18px;
+  background: var(--sodium);
+  color: #060607;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(6, 6, 7, 0.55);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px rgba(255, 176, 0, 0.25), 0 0 18px rgba(255, 176, 0, 0.18);
+  transition: background 0.12s var(--cut), transform 0.12s var(--cut), box-shadow 0.12s var(--cut);
+}
+
+.practice-cta:hover {
+  background: #ffc42a;
+  transform: translateY(-1px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 0 1px rgba(255, 176, 0, 0.4), 0 0 26px rgba(255, 176, 0, 0.3);
+}
+
+.practice-cta:active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 5px rgba(6, 6, 7, 0.3);
+}
+
+.practice-cta:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.practice-cta svg {
+  width: 14px;
+  height: 14px;
+}
+
+.practice-note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted-2);
+}
+
+/* Studio-side banner: only rendered when you arrive from a lesson. */
+.st-entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--cyan);
+  background: rgba(110, 231, 255, 0.045);
+}
+
+.st-entry-tag {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+  border: 1px solid rgba(110, 231, 255, 0.4);
+  padding: 2px 7px;
+}
+
+.st-entry-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.st-entry-copy strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.st-entry-copy small {
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.st-entry-back {
+  margin-left: auto;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid rgba(110, 231, 255, 0.35);
+  transition: background 0.12s var(--cut), color 0.12s var(--cut);
+}
+
+.st-entry-back:hover {
+  background: rgba(110, 231, 255, 0.12);
+}
+
+.st-entry-back svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 720px) {
+  .practice-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .st-entry {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .st-entry-back {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Embedded studio (inside a lesson page)
+   The full-page transport is sticky and bleeds past the shell padding; inside a
+   lesson block that would push through the article column, so it becomes a
+   normal panel header instead.
+   -------------------------------------------------------------------------- */
+
+.practice-cta {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.practice-full {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 4px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(110, 231, 255, 0.35);
+  transition: color 0.12s var(--cut), border-color 0.12s var(--cut);
+}
+
+.practice-full:hover {
+  color: #9df0ff;
+  border-color: rgba(110, 231, 255, 0.7);
+}
+
+.practice-full svg {
+  width: 12px;
+  height: 12px;
+}
+
+.practice-stage {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.st-body-embedded {
+  padding-bottom: 0;
+}
+
+.st-body-embedded .st-transport {
+  position: static;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  backdrop-filter: none;
+}
+
+.st-body-embedded .st-transport-meta {
+  gap: 14px;
+}
+
+.st-body-embedded .st-module-host {
+  margin-top: 0;
+}
+
+.st-body-embedded .st-module-head {
+  padding-top: 0;
+}
+
+.st-embed-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted-2);
+}
+
+.st-embed-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid rgba(110, 231, 255, 0.35);
+  transition: background 0.12s var(--cut);
+}
+
+.st-embed-link:hover {
+  background: rgba(110, 231, 255, 0.12);
+}
+
+.st-embed-link svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* The embedded module sits inside the article column, so it needs a little more
+   room than the full page: the lesson text is 13-14px and the grid must not feel
+   cramped next to it. */
+.st-body-embedded .st-grid {
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .practice-full {
+    min-height: 34px;
+  }
+
+  .st-body-embedded .st-transport {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: 10px;
+  }
+
+  .st-body-embedded .st-transport-meta {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+
+  .st-body-embedded .st-barread {
+    order: 2;
+  }
+
+  .st-body-embedded .st-ghost {
+    grid-column: 1 / -1;
+    order: 4;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Nine modules · tab bar, step nav, roadmap panels
+   --------------------------------------------------------------------------
+   The module set grew from six to nine. Nine does not divide by two, so the
+   old 6 / 3 / 2 column ladder leaves a ragged last row (and one orphan tab at
+   the 2-column breakpoint). The ladder below is chosen so every breakpoint
+   fills its rows evenly:
+     9 columns   desktop, one row
+     5 columns   5 + 4, two rows
+     3 columns   3 + 3 + 3, three rows
+   Kept as a grid rather than a horizontal scroller on purpose: seeing all nine
+   at once is what communicates "there are nine steps and I am on step five".
+   A scroller would hide half the path.
+   ========================================================================== */
+
+/* The base rule at the top of this file still says repeat(6). Override it only
+   from the width where nine columns actually fit — an unconditional rule here
+   would sit later in the cascade and wipe out every media query above it. */
+@media (min-width: 1181px) {
+  .st-tabs {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+}
+
+/* The step nav is a fifth child in a four-column grid, which overflows. Widen
+   the grid to five tracks on desktop and give the nav its own column. */
+.st-transport {
+  grid-template-columns: auto minmax(0, 1fr) auto auto auto;
+}
+
+/* The step nav sits in the transport; at narrow widths it wraps to its own row. */
+.st-stepnav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.st-stepnav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.st-stepnav-btn svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* The "previous" arrow points the other way; the icon is a shared chevron. */
+[data-st-module-prev] svg {
+  transform: rotate(180deg);
+}
+
+.st-stepnav-btn[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* --- roadmap panels (chain / mix / bounce) ------------------------------- */
+
+.st-roadmap {
+  display: grid;
+  gap: 20px;
+}
+
+.st-roadmap-note {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--amber, #ffb000);
+  background: rgba(255, 176, 0, 0.04);
+}
+
+.st-roadmap-note strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--ink, #f2ede3);
+}
+
+.st-roadmap-note p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.st-roadmap-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.st-roadmap-cols h3 {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.st-roadmap-list,
+.st-roadmap-tasks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.st-roadmap-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink, #f2ede3);
+}
+
+.st-roadmap-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--amber, #ffb000);
+}
+
+.st-roadmap-tasks li {
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.014);
+}
+
+.st-roadmap-tasks a {
+  font-size: 12.5px;
+  color: var(--ink, #f2ede3);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.st-roadmap-tasks a:hover {
+  border-bottom-color: var(--amber, #ffb000);
+}
+
+.st-roadmap-tasks span {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.st-roadmap-foot {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.st-roadmap-foot a {
+  color: var(--amber, #ffb000);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 176, 0, 0.35);
+}
+
+@media (max-width: 1180px) {
+  .st-tabs {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* The transport now holds five children. On narrow screens they cannot share
+   one row: the play button, the bar readout and two ghost buttons would each
+   shrink below their content width and push past the viewport. So below 900px
+   the step nav moves to its own full-width row, and the two text buttons share
+   the last row evenly. */
+@media (max-width: 900px) {
+  .st-transport {
+    grid-template-columns: auto auto minmax(0, 1fr);
+  }
+
+  .st-stepnav {
+    order: 5;
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .st-stepnav-btn {
+    flex: 1 1 0;
+    justify-content: center;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .st-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px;
+  }
+
+  /* Two words plus an English subtitle will not fit three-up on a phone.
+     The number and the Chinese label carry the meaning; drop the rest. */
+  .st-tab-en {
+    display: none;
+  }
+
+  .st-tab {
+    padding: 8px 8px 9px;
+  }
+
+  .st-roadmap-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .st-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .st-tab-label {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================================================
+   MODULE 01 · SIGNAL CHAIN
+   --------------------------------------------------------------------------
+   Two stacked exercises: the five tracks (listen to one), then the insert
+   chain (change the order). The flow diagram sits on top because it answers
+   the question the module is named after — where does the sound actually go.
+   ========================================================================== */
+
+/* ---- Signal flow ---- */
+
+.st-signal-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.st-signal {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  background: var(--ink-soft);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.st-signal::-webkit-scrollbar {
+  display: none;
+}
+
+.st-signal-node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  flex: 1 0 auto;
+  min-width: 78px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  transition: border-color 0.16s var(--ease), background 0.16s var(--ease), box-shadow 0.16s var(--ease);
+}
+
+.st-signal-node strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--paper);
+  white-space: nowrap;
+}
+
+.st-signal-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.st-signal-node.is-source {
+  border-color: rgba(67, 217, 255, 0.34);
+}
+
+.st-signal-node.is-source .st-signal-tag {
+  color: var(--cyan);
+}
+
+.st-signal-node.is-bus {
+  border-color: rgba(255, 176, 0, 0.4);
+}
+
+.st-signal-node.is-bus .st-signal-tag {
+  color: var(--sodium);
+}
+
+/* The sweep after a reorder. Lights the whole path in sequence, because every
+   insert processes every note — the order is what changed, not the active one. */
+.st-signal-node.is-live {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.09);
+  box-shadow: 0 0 0 1px rgba(255, 176, 0, 0.24);
+}
+
+.st-signal-node.is-live .st-signal-tag {
+  color: var(--sodium);
+}
+
+.st-signal-arrow {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  color: var(--muted-2);
+}
+
+.st-signal-arrow svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ---- Two columns: tracks | chain ---- */
+
+.st-chain-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: clamp(18px, 2.4vw, 34px);
+  align-items: start;
+}
+
+.st-chain-col {
+  min-width: 0;
+}
+
+.st-chain-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.st-chain-title span {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted-2);
+}
+
+/* ---- The five tracks ---- */
+
+.st-tracks {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.st-track {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--panel);
+}
+
+.st-track-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.st-track-play {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  transition: border-color 0.14s var(--ease), color 0.14s var(--ease), background 0.14s var(--ease);
+}
+
+.st-track-play svg {
+  width: 11px;
+  height: 11px;
+}
+
+.st-track-head:hover .st-track-play,
+.st-track-head:focus-visible .st-track-play {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.1);
+  color: var(--sodium);
+}
+
+.st-track-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.st-track-name strong {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+}
+
+.st-track-name small {
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.st-track-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+
+.st-track-voice {
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  color: var(--cyan);
+}
+
+.st-track-edit {
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: color 0.14s var(--ease), border-color 0.14s var(--ease);
+}
+
+.st-track-edit:hover {
+  color: var(--sodium);
+  border-bottom-color: var(--sodium);
+}
+
+/* ---- A/B slots ---- */
+
+.st-chain-board {
+  display: grid;
+  gap: 12px;
+}
+
+.st-chain-slots {
+  display: grid;
+  grid-template-columns: auto repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 8px;
+}
+
+.st-chain-slots-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.st-chain-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.14s var(--ease), background 0.14s var(--ease);
+}
+
+.st-chain-slot:hover {
+  border-color: var(--line-strong);
+}
+
+.st-chain-slot strong {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.st-chain-slot small {
+  font-size: 10.5px;
+  line-height: 1.4;
+  color: var(--muted-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.st-chain-slot.is-active {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.07);
+}
+
+.st-chain-slot.is-active strong {
+  color: var(--sodium);
+}
+
+.st-chain-slot.is-active small {
+  color: var(--paper);
+}
+
+/* ---- The draggable chain ---- */
+
+.st-chain {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.st-chain-node {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: stretch;
+  gap: 0;
+  background: var(--panel);
+  transition: background 0.14s var(--ease), box-shadow 0.14s var(--ease);
+}
+
+.st-chain-node.is-dragging {
+  background: var(--panel-hi);
+  box-shadow: inset 3px 0 0 var(--sodium);
+  opacity: 0.72;
+}
+
+.st-chain-node.is-drop-target {
+  box-shadow: inset 0 0 0 1px var(--sodium);
+}
+
+.st-chain-grip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  width: 30px;
+  padding: 0 9px;
+  border-right: 1px solid var(--line);
+  cursor: grab;
+  touch-action: none;
+}
+
+.st-chain-grip:active {
+  cursor: grabbing;
+}
+
+.st-chain-grip i {
+  display: block;
+  height: 1px;
+  background: var(--line-strong);
+  transition: background 0.14s var(--ease);
+}
+
+.st-chain-grip:hover i,
+.st-chain-grip:focus-visible i {
+  background: var(--sodium);
+}
+
+.st-chain-grip:focus-visible {
+  outline: 1px solid var(--sodium);
+  outline-offset: -2px;
+}
+
+.st-chain-body {
+  min-width: 0;
+  padding: 11px 13px;
+}
+
+.st-chain-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.st-chain-order {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.st-chain-head strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.st-chain-head em {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+}
+
+.st-chain-role {
+  margin: 0 0 3px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.st-chain-when {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--muted-2);
+}
+
+.st-chain-move {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 9px;
+  border-left: 1px solid var(--line);
+}
+
+.st-chain-btn {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--ink-soft);
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.14s var(--ease), color 0.14s var(--ease), background 0.14s var(--ease);
+}
+
+.st-chain-btn svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* The first button points up, the second down: one icon, two rotations. */
+.st-chain-btn[data-st-chain-move$=":-1"] svg {
+  transform: rotate(-90deg);
+}
+
+.st-chain-btn[data-st-chain-move$=":1"] svg {
+  transform: rotate(90deg);
+}
+
+.st-chain-btn:hover:not([disabled]) {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.1);
+  color: var(--sodium);
+}
+
+.st-chain-btn[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* ---- Narrow screens ---- */
+
+@media (max-width: 1000px) {
+  .st-chain-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .st-signal {
+    padding: 12px;
+  }
+
+  .st-signal-node {
+    min-width: 66px;
+    padding: 8px 10px;
+  }
+
+  .st-signal-node strong {
+    font-size: 11.5px;
+  }
+
+  /* The chain nodes stack their controls: a 30px grip plus a 44px button
+     column leaves too little for the copy on a phone. */
+  .st-chain-node {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "grip body"
+      "move move";
+  }
+
+  .st-chain-grip {
+    grid-area: grip;
+  }
+
+  .st-chain-body {
+    grid-area: body;
+  }
+
+  .st-chain-move {
+    grid-area: move;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 8px 12px;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .st-chain-btn {
+    width: 44px;
+    height: 34px;
+  }
+
+  .st-chain-slots {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .st-chain-slots-label {
+    display: none;
+  }
+
+  .st-track {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 6px;
+  }
+
+  .st-track-meta {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+
+  /* Comfortable tap target for the audition button on a phone. */
+  .st-track-play {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* The signal-flow strip scrolls on narrow screens and hides its scrollbar, so
+   state the gesture the same way the course page does. */
+@media (max-width: 620px) {
+  .st-signal-head::after {
+    content: "可左右滑动";
+    margin-left: 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--sodium);
+  }
+}
+
+@media (min-width: 621px) {
+  .st-signal-head::after {
+    content: none;
+  }
+}

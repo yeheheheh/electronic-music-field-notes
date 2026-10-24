@@ -13,6 +13,12 @@
 # 构建临时目录（kb.mjs build 运行时自动生成）
 kb-module/.kb-build-*/
 
+# 分享壳页产物（scripts/build-share.mjs 生成，含 60 张 og 图约 11 MB，不入库）
+dist-share/
+
+# 数据编辑前的本地快照（*.bak），不随仓库分发
+.backup/
+
 # Floating UI 上游源码 clone；站点只引用 vendor/floating-ui-1.8.0-umd/ 的构建产物
 vendor/floating-ui/
 

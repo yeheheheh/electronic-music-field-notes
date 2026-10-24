@@ -475,8 +475,7 @@ p {
 .hero-kicker::before,
 .section-kicker::before {
   content: "";
-  width: 28px;
-  height: 1px;
+  width: 28px;  height: 1px;
   background: currentColor;
 }
 
@@ -846,6 +845,22 @@ p {
   width: 6px;
   height: 6px;
   background: var(--family);
+}
+
+/* 补充收纳桶提示：正式大族之外还有用于覆盖度补全的分组。 */
+.spectrum-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 0 0 18px;
+  font-size: 10px;
+  color: var(--muted-2);
+}
+
+.spectrum-foot a {
+  color: var(--amber);
+  border-bottom: 1px solid currentColor;
 }
 
 .spectrum-legend a:hover {
@@ -1592,6 +1607,17 @@ a.chip:hover {
   color: var(--muted-2);
 }
 
+/* 分类树里的分组小标题：把「补充收纳桶」与正式大族分开。 */
+.tree-group-label {
+  margin-top: 12px;
+  padding: 6px 4px 4px;
+  border-top: 1px dashed var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+}
+
 .tree-children {
   padding-left: 10px;
   border-left: 1px solid var(--line);
@@ -1692,6 +1718,21 @@ a.chip:hover {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+/* 图谱概览标题：主分组与「补充收纳桶」共用同一套间距。 */
+.atlas-overview-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.atlas-overview-head.is-secondary {
+  margin-top: 42px;
+  border-bottom-style: dashed;
 }
 
 .family-grid {
@@ -1931,6 +1972,17 @@ a.chip:hover {
   line-height: 1.8;
   color: var(--muted);
   white-space: pre-line;
+}
+
+/* 补充收纳桶的说明：桶本身不是音乐分类，避免读者误把它当成一个风格族。 */
+.family-bucket-note {
+  max-width: 760px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-left: 2px solid var(--line-strong);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted-2);
 }
 
 .family-intro.is-clamped {
@@ -6049,8 +6101,15 @@ code {
     height: 92px;
   }
 
+  /* 大族数量会持续增长（当前 29 个）。窄屏下让柱子按 flex 均分，
+     不再给 min-width，否则「12px × 大族数 + 间距」会撑破视口。 */
+  .spectrum-bar {
+    min-width: 0;
+  }
+
+  /* 柱子窄到不足以放下三字母代号时，直接交给下方 legend 承载名称。 */
   .spectrum-bar .bar-code {
-    font-size: 7px;
+    display: none;
   }
 
   .spectrum-legend {

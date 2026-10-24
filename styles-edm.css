@@ -4239,3 +4239,365 @@ main,
     font-size: 11px;
   }
 }
+
+/* ==========================================================================
+   LESSON ACTION BAR · PRIMARY ACTION ("标记完成")
+   --------------------------------------------------------------------------
+   The bar holds four items: a prev link, a read-only progress meter, this
+   button and a next link. Only one of them is a decision, so only this one is
+   allowed to carry the full amber signal: largest target, only solid fill,
+   only element in the bar with a glow. Everything else stays quiet on purpose.
+   ========================================================================== */
+
+.lesson-action-complete {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid rgba(6, 6, 7, 0.55);
+  border-radius: 0;
+  background: var(--sodium);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 0 0 1px rgba(255, 176, 0, 0.26),
+    0 10px 24px -8px rgba(255, 176, 0, 0.5);
+  transition:
+    background 0.12s var(--cut),
+    box-shadow 0.12s var(--cut),
+    transform 0.12s var(--cut),
+    color 0.12s var(--cut);
+}
+
+/* Default: 12px/700 on #ffb000 ≈ 11:1 contrast. */
+.lesson-action-complete small {
+  padding-left: 9px;
+  border-left: 1px solid rgba(6, 6, 7, 0.32);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 1;
+}
+
+/* Hover: brighten and lift. Stays amber so the "primary action" colour
+   promise is never broken — the previous rule turned it to paper white. */
+.lesson-action-complete:hover:not(:disabled) {
+  background: #ffc42a;
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    0 0 0 1px rgba(255, 176, 0, 0.4),
+    0 14px 30px -8px rgba(255, 176, 0, 0.62);
+}
+
+/* Press: settle back down, glow tightens — a physical switch. */
+.lesson-action-complete:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow:
+    inset 0 2px 5px rgba(6, 6, 7, 0.32),
+    0 0 0 1px rgba(255, 176, 0, 0.34),
+    0 4px 12px -6px rgba(255, 176, 0, 0.4);
+}
+
+/* Keyboard focus: ice-blue ring, the site's "focus" colour. */
+.lesson-action-complete:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+/* Activated / done: same amber hue, inverted to outline + tint, plus the
+   check glyph already rendered by the markup. */
+.lesson-action-complete.is-complete {
+  background: rgba(255, 176, 0, 0.1);
+  border-color: rgba(255, 176, 0, 0.6);
+  color: var(--sodium);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 176, 0, 0.12),
+    0 0 0 1px rgba(255, 176, 0, 0.14);
+}
+
+.lesson-action-complete.is-complete:hover {
+  background: rgba(255, 176, 0, 0.16);
+  border-color: var(--sodium);
+  color: #ffc42a;
+}
+
+/* Disabled: same hue at 75% alpha on a faint tint. Contrast stays >= 5:1 and
+   the loss of fill + glow makes the state unmistakable. */
+.lesson-action-complete:disabled {
+  background: rgba(255, 176, 0, 0.08);
+  border-color: rgba(255, 176, 0, 0.22);
+  color: rgba(255, 176, 0, 0.75);
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.lesson-action-complete:disabled small {
+  border-left-color: rgba(255, 176, 0, 0.3);
+  color: rgba(255, 176, 0, 0.75);
+}
+
+/* The progress meter next to it must never compete: text-only, no fill. */
+.lesson-action-progress {
+  gap: 8px;
+}
+
+.lesson-action-progress .mono-label,
+.lesson-action-progress strong {
+  font-size: 11px;
+}
+
+.lesson-action-progress i {
+  width: 96px;
+  height: 3px;
+}
+
+.lesson-action-step {
+  min-height: 38px;
+}
+
+.lesson-action-step.is-disabled {
+  opacity: 0.42;
+}
+
+/* Phones: the primary action stays the biggest thing on the bar. */
+@media (max-width: 720px) {
+  /* Progress read-out moves into the lesson page itself on phones, so the bar
+     keeps three cells and the primary action gets the freed width. */
+  .lesson-actionbar {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .lesson-action-complete {
+    flex: 1 1 auto;
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 12.5px;
+  }
+
+  .lesson-action-complete small {
+    font-size: 10px;
+  }
+
+  .lesson-action-progress {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .lesson-action-complete {
+    min-width: 116px;
+    min-height: 46px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .lesson-action-complete small {
+    display: none;
+  }
+}
+
+/* Studio uses six nav items now; tighten the header rhythm before it wraps. */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .site-nav {
+    gap: clamp(12px, 1.6vw, 20px);
+  }
+
+  .site-nav a {
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.page-loading {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  min-height: 46vh;
+  color: var(--muted-2);
+}
+
+/* --------------------------------------------------------------------------
+   Lesson players · live loop feedback
+   These read the audio clock (Audio.getPlayhead), so the highlight is a readout
+   of the sound rather than an animation on a timer.
+   -------------------------------------------------------------------------- */
+
+/* Beat dots: the current beat lights up, the loop marker slides underneath. */
+.lesson-beat-dots {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.lesson-beat-dots span {
+  position: relative;
+  transition: color 0.1s var(--cut), border-color 0.1s var(--cut), background 0.1s var(--cut), box-shadow 0.1s var(--cut);
+}
+
+.lesson-beat-dots span.is-lesson-now {
+  color: #060607;
+  background: var(--sodium);
+  border-color: var(--sodium);
+  box-shadow: 0 0 0 1px rgba(255, 176, 0, 0.35), 0 0 18px rgba(255, 176, 0, 0.28);
+  font-weight: 700;
+}
+
+.lesson-beat-dots span.is-lesson-now::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  background: var(--sodium);
+}
+
+.lesson-loop-read {
+  margin-left: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--sodium);
+}
+
+/* Sequencer: one column at a time across all rows. */
+.drum-step {
+  position: relative;
+}
+
+.drum-step.is-beat {
+  border-left-color: var(--line-strong);
+}
+
+.drum-step.is-lesson-now {
+  box-shadow: inset 0 0 0 1px var(--cyan), 0 0 12px rgba(110, 231, 255, 0.22);
+  background: rgba(110, 231, 255, 0.1);
+}
+
+.drum-step.is-on.is-lesson-now {
+  background: var(--phosphor);
+  box-shadow: inset 0 0 0 1px #060607, 0 0 16px rgba(110, 231, 255, 0.4);
+}
+
+/* Shared loop bar: how far through the loop, and which bar. */
+.lesson-loop-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.lesson-loop-label {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.lesson-loop-track {
+  position: relative;
+  flex: 1;
+  height: 3px;
+  background: rgba(242, 237, 227, 0.08);
+  overflow: hidden;
+}
+
+.lesson-loop-track i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--sodium);
+  transition: width 0.08s linear;
+}
+
+.lesson-loop-count {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lab: enabled layers pulse while they are sounding. */
+.lesson-lab-toggle {
+  position: relative;
+}
+
+.lesson-lab-pulse {
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.1s var(--cut), box-shadow 0.1s var(--cut);
+}
+
+.lesson-lab-toggle.is-lesson-now .lesson-lab-pulse {
+  border-color: var(--sodium);
+  box-shadow: 0 0 16px rgba(255, 176, 0, 0.3), inset 0 0 12px rgba(255, 176, 0, 0.08);
+}
+
+/* Compare: a ring shows which sample is currently sounding. */
+.lesson-demo {
+  position: relative;
+}
+
+.lesson-demo-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.12s var(--cut), box-shadow 0.12s var(--cut);
+}
+
+.lesson-demo.is-playing .lesson-demo-ring {
+  border-color: var(--cyan);
+  box-shadow: 0 0 18px rgba(110, 231, 255, 0.25), inset 0 0 14px rgba(110, 231, 255, 0.07);
+}
+
+/* Structure: a scan line sweeps each two-bar section. */
+.structure-player-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.structure-scan {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sodium);
+  box-shadow: 0 0 12px rgba(255, 176, 0, 0.6);
+}
+
+.structure-player-section.is-active .structure-scan {
+  transition: width 0.12s linear;
+}
+
+@media (max-width: 720px) {
+  .lesson-loop-bar {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .lesson-loop-track {
+    order: 3;
+    flex-basis: 100%;
+  }
+}

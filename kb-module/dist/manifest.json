@@ -7,21 +7,23 @@
     "language": "zh-CN",
     "description": "可独立生成、可被 Agent 直接接入的电子音乐知识库模块。"
   },
-  "builtAt": "2026-10-23T17:10:57.071Z",
+  "builtAt": "2026-10-24T12:06:05.618Z",
   "tokenizer": "cjk-unigram-bigram-bm25-v1",
   "stats": {
-    "families": 16,
+    "families": 24,
     "archivedFamilies": 1,
-    "entries": 1205,
-    "activeEntries": 1186,
+    "supplementFamilies": 5,
+    "supplementEntries": 68,
+    "entries": 1376,
+    "activeEntries": 1357,
     "archiveEntries": 19,
     "stubs": 90,
-    "examples": 1477,
-    "bpmEntries": 134,
-    "relationLinks": 3883,
-    "curatedDocs": 144,
-    "docs": 144,
-    "chunks": 1356,
+    "examples": 1654,
+    "bpmEntries": 181,
+    "relationLinks": 4374,
+    "curatedDocs": 158,
+    "docs": 158,
+    "chunks": 1541,
     "sourceFiles": 7
   },
   "retrieval": {
@@ -69,13 +71,13 @@
     "kb_manifest"
   ],
   "sourceHashes": {
-    "feishu-taxonomy": "06c38b756ef55dc3c8e2eea54e5eb4a08b295902b7e3084d14680197f35c7b9e",
+    "feishu-taxonomy": "28b0e2a98d187be0cb3baff52c96887648de56138be6e342d564650061d88f18",
     "bilibili-ep01": "d082e2ff3ccbef437ead87fdfb279560ba8153a96f7e74dc911b5b1a0b2b1212",
     "bilibili-ep02": "6ba89ac594dddb5085239245da65a4a2b10d813064b36c3c087209eccd5471da",
     "bilibili-ep03": "24334944cb222a36bcbcc00be86e0fbaa715cf889cc6b9b092640028f5f24b21",
     "bilibili-ep04": "c3805fe212ec04c9f8c43f196c20a02e2efcc8240aef1cd820e6c3fee2d62ee3",
     "bilibili-podcast-ep31": "f05576060f890e56d61cd33a23fe1b6bdd8b30fea976099756c7e6f4e0b7b964",
-    "curated-notes": "dad2731bc1aa32d4bca4d7a21432f60c1bb2f90f6e7b3b253995906349bedb56"
+    "curated-notes": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0"
   },
   "sources": [
     {
@@ -85,8 +87,8 @@
       "author": "Tim2354 及编辑团队",
       "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc",
       "exists": true,
-      "bytes": 1026107,
-      "sha256": "06c38b756ef55dc3c8e2eea54e5eb4a08b295902b7e3084d14680197f35c7b9e",
+      "bytes": 1128514,
+      "sha256": "28b0e2a98d187be0cb3baff52c96887648de56138be6e342d564650061d88f18",
       "licenseNote": "民间协作整理；公开分发前请确认原作者授权。",
       "note": "约 1200 个风格/概念条目，含上下位关系、别名、例曲与原文行号。"
     },
@@ -157,63 +159,63 @@
       "author": "本知识库编辑",
       "url": null,
       "exists": true,
-      "bytes": 50692,
-      "sha256": "dad2731bc1aa32d4bca4d7a21432f60c1bb2f90f6e7b3b253995906349bedb56",
+      "bytes": 56738,
+      "sha256": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0",
       "licenseNote": "二次整理内容；引用请注明原文档与视频。",
       "note": "听辨、制作、历史、现场、术语与勘误。"
     }
   ],
   "files": {
     "chunks.jsonl": {
-      "bytes": 1947959,
-      "sha256": "86a7c22f579c1021609a30c8d6d6cebfdfe540c27777963fc9cc7ab79730ee34"
+      "bytes": 2181256,
+      "sha256": "7653b9fd186cf897ab51ea53e85148157d3758f31ec2c4ff01054ae078b27265"
     },
     "curated.json": {
-      "bytes": 50692,
-      "sha256": "dad2731bc1aa32d4bca4d7a21432f60c1bb2f90f6e7b3b253995906349bedb56"
+      "bytes": 56738,
+      "sha256": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0"
     },
     "docs.json": {
-      "bytes": 163313,
-      "sha256": "2498dc532a70a787c630ff89882124f0c38c0be03f69d71e982b4ae33425dc8a"
+      "bytes": 190279,
+      "sha256": "60608dc2852fae735d98b97809d04193db1a51b191471aff558dddf60f821145"
     },
     "entries.csv": {
-      "bytes": 440878,
-      "sha256": "ffcd9a89d4d70aa191a61f316d8f7984edee7d5d5768d91662a065b540b5433f"
+      "bytes": 499455,
+      "sha256": "7cba11668df6adf64468acc290562411b99150c646c26e682b5c29a0f84723ea"
     },
     "families.json": {
-      "bytes": 51778,
-      "sha256": "8803e591eb7251bf2fd2e34bf3e952a34599e943ad58e438f0fe09c38e18c664"
+      "bytes": 69309,
+      "sha256": "50746f791aa5c34273d8142342d5fd2c1ac1a1fe551a3721e30ac3fdb88a50db"
     },
     "index.meta.json": {
-      "bytes": 353480,
-      "sha256": "008f455d2fa416c584bedb86dad064dd5bee580bbfba58f6f280ff4b029f578d"
+      "bytes": 404384,
+      "sha256": "2525757df58bcd1928e7a1dd3dfb99a10ef4d905e6a051a86c570d5b033ecef9"
     },
     "kb.json": {
-      "bytes": 3012781,
-      "sha256": "94ab1e836b079eec5dc7acbc2def8804e140350327e3db8cc2fe666d87a719b9"
+      "bytes": 3430039,
+      "sha256": "d0e3fbffa133e04b9098efeb212209ff512c5f33c0ca40eb4e596ac224f905ed"
     },
     "sources.json": {
       "bytes": 4160,
-      "sha256": "e4b9319151a65ebcda69aa96f8ee06888e3644f330c99496078186a4b5775c28"
+      "sha256": "80b645e6ab9eb19c5ea69b8896f83bbe1e93058be7178a0bdb6cdf0bfc9b3cb6"
     },
     "unresolved.json": {
-      "bytes": 27191,
-      "sha256": "e9d6e1c45664859a5e5342cf5125b8e2d7223d7e9deac50c0362e0102dd4bb1c"
+      "bytes": 35064,
+      "sha256": "02d7643e7e9b0e424987172d91a1c4dacc53f0e25ed0c9a48192e0633bf77d8d"
     },
     "manifest.json": {
-      "bytes": 7345,
-      "sha256": "ec6997e08af7fa7e1e017bf8f2ec30519651f9e82196bcca94e21d352711487e"
+      "bytes": 7403,
+      "sha256": "414d7bed4b67fb731afa45e0b71059c14913f2336dd026df9443356c62196d1c"
     },
     "web.js": {
-      "bytes": 2092817,
-      "sha256": "41042c4771d9e79ac8a7f57794ce03830d1d9ea61cafc802136648e57a95649e"
+      "bytes": 2350178,
+      "sha256": "349f4ea8f27a037f7e5d0ed28a783bcfef4a1fa000750a9e281878f216e50235"
     }
   },
   "counts": {
-    "entries": 1205,
-    "families": 17,
-    "docs": 144,
-    "chunks": 1356,
+    "entries": 1376,
+    "families": 30,
+    "docs": 158,
+    "chunks": 1541,
     "transcriptChunks": 0
   }
 }

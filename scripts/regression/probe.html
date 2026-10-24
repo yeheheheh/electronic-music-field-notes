@@ -1,0 +1,88 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>全站回归探针</title>
+<style>body{margin:0;background:#111;color:#ddd;font:11px monospace}iframe{border:0}pre{white-space:pre-wrap}</style>
+<!--
+  全站回归探针。由 run.sh 以 query 参数驱动：
+    ?w=宽度&r=路由&open=0|1
+  open=1 时会点击页面里的「在这里动手」按钮，再检查内嵌工作室是否挂载。
+  结果以一段带前后缀标记的 JSON 写入 #out，run.sh 用正则抓取后判定。
+
+  这个文件不要删：它是 run.sh 的被测页面，缺了会直接报 NOOUT（曾经发生过）。
+  它是探针不是站点资源，放在 scripts/regression/ 下，不参与线上部署。
+-->
+<iframe id="f"></iframe><pre id="out">P</pre>
+<script>
+const q = new URLSearchParams(location.search);
+const W = +q.get('w');
+const R = q.get('r') || '';
+const OPEN = q.get('open') === '1';
+const f = document.getElementById('f');
+f.style.width = W + 'px';
+f.style.height = '1200px';
+f.src = '../../index.html' + (R ? '#/' + R : '');
+
+// 溢出检测：找出右边界超出视口的元素。
+// 排除「设计上就会横向滚动」的容器，否则会满屏误报：
+//   .st-grid            工作室步进格（窄屏刻意横向滚动）
+//   .route              课程路线图（横向时间轴）
+//   .structure-blocks   结构播放器的段块条
+// 另外通用地排除「祖先里有真的在横向滚动的容器」的元素：信号链 .st-signal
+// 就是这样——节点本来就比窄屏宽，容器自己带滚动条，页面本身并没有溢出。
+// 手写清单只能覆盖已知容器，这个通用判定让新增的可滚动模块不必再登记一次。
+const HSCROLL_OWNERS = '.st-grid,.route,.structure-blocks';
+
+function insideHScroll(el, d) {
+  let node = el.parentElement;
+  while (node && node !== d.body) {
+    const s = d.defaultView.getComputedStyle(node);
+    if ((s.overflowX === 'auto' || s.overflowX === 'scroll') && node.scrollWidth > node.clientWidth + 1) return true;
+    node = node.parentElement;
+  }
+  return false;
+}
+
+function overflow(d, vw) {
+  return [...d.querySelectorAll('body *')].filter((el) => {
+    const r = el.getBoundingClientRect();
+    const s = d.defaultView.getComputedStyle(el);
+    if (s.display === 'none' || s.visibility === 'hidden' || r.width < 2) return false;
+    if (el.closest(HSCROLL_OWNERS)) return false;
+    if (insideHScroll(el, d)) return false;
+    return r.right > vw + 1.5;
+  }).slice(0, 3).map((el) => el.tagName.toLowerCase() + '.' + String(el.className).split(' ')[0]);
+}
+
+function emit(payload) {
+  document.getElementById('out').textContent = 'RG::' + JSON.stringify(payload) + '::END';
+}
+
+f.addEventListener('load', () => setTimeout(() => {
+  const d = f.contentDocument;
+  const w = f.contentWindow;
+  const vw = w.innerWidth;
+  const docW = d.documentElement.scrollWidth;
+  const btn = d.querySelector('[data-lesson-studio-open]');
+
+  if (OPEN && !btn) {
+    // 该路由没有动手模块。明确标记，别让上层把「没有按钮」误判成「挂了但空白」。
+    emit({ w: W, r: R || '/', open: 'nobtn', hasBtn: 0, docW, vw, over: [] });
+    return;
+  }
+
+  if (OPEN && btn) {
+    btn.click();
+    setTimeout(() => {
+      const stage = d.querySelector('[data-lesson-studio]');
+      emit({
+        w: W, r: R || '/', open: 1, hasBtn: 1, docW, vw,
+        over: overflow(d, vw),
+        content: stage ? stage.innerHTML.length : 0,
+      });
+    }, 900);
+    return;
+  }
+
+  emit({ w: W, r: R || '/', open: 0, docW, vw, over: overflow(d, vw) });
+}, 700));
+</script>

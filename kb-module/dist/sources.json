@@ -11,8 +11,8 @@
       "licenseNote": "民间协作整理；公开分发前请确认原作者授权。",
       "note": "约 1200 个风格/概念条目，含上下位关系、别名、例曲与原文行号。",
       "exists": true,
-      "bytes": 1026107,
-      "sha256": "06c38b756ef55dc3c8e2eea54e5eb4a08b295902b7e3084d14680197f35c7b9e"
+      "bytes": 1128514,
+      "sha256": "28b0e2a98d187be0cb3baff52c96887648de56138be6e342d564650061d88f18"
     },
     {
       "id": "bilibili-ep01",
@@ -89,8 +89,8 @@
       "licenseNote": "二次整理内容；引用请注明原文档与视频。",
       "note": "听辨、制作、历史、现场、术语与勘误。",
       "exists": true,
-      "bytes": 50692,
-      "sha256": "dad2731bc1aa32d4bca4d7a21432f60c1bb2f90f6e7b3b253995906349bedb56"
+      "bytes": 56738,
+      "sha256": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0"
     }
   ]
 }

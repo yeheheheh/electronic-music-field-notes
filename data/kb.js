@@ -3,18 +3,20 @@ window.KB_DATA = {
   "meta": {
     "title": "电音知识库",
     "subtitle": "ELECTRONIC MUSIC FIELD NOTES",
-    "generatedAt": "2026-10-23T17:10:57.013Z",
+    "generatedAt": "2026-10-24T12:06:05.539Z",
     "source": "feishu-taxonomy",
     "stats": {
-      "families": 16,
+      "families": 24,
       "archivedFamilies": 1,
-      "entries": 1205,
-      "activeEntries": 1186,
+      "supplementFamilies": 5,
+      "supplementEntries": 68,
+      "entries": 1376,
+      "activeEntries": 1357,
       "archiveEntries": 19,
       "stubs": 90,
-      "examples": 1477,
-      "bpmEntries": 134,
-      "relationLinks": 3883
+      "examples": 1654,
+      "bpmEntries": 181,
+      "relationLinks": 4374
     },
     "families": [
       {
@@ -23,6 +25,7 @@ window.KB_DATA = {
         "zh": "浩室",
         "color": "violet",
         "archive": false,
+        "supplement": false,
         "count": 122,
         "line": 165,
         "intro": "1970s，在美国芝加哥俱乐部Warehouse驻场的Frankie Knuckles发现，自己手头上的Disco唱片长度满足不了台下的听众，于是把不同的唱片拼接在一起，拉高BPM，精心编排后播放时；他怎么也不会想到，这一满足听众欲望而做出的举动，竟会影响当今电子音乐最大的分支之一：House音乐。 之后DJ们把Disco、各种采样、人声、军鼓等元素融入到这种重复的44排的结构中，一种120-130bpm的音乐逐渐脱胎于Disco，以“House”的名称在俱乐部中流行起来，并给不少当时年轻的黑人和同性恋带来了极大的冲击。他们一进入俱乐部，发现那里播放的音乐并非他们熟悉的样子，他们脑子里的第一反应是：\"What's this?I‘ve never heard of it!\"随后他们被人群裹挟着，不知不觉间舞动起来。来自社会上的歧视，时代背景下的种族隔离，各种无形的压力，统统都抛在了脑后，只顾着享受着精湛的DJ技艺和这种神奇的音乐。 来到1980s，当时的人们开始不满足于越来越无聊的House音乐，有些人便大胆尝试，开始往里头加入更尖锐，更酸的Acid元素；有些人从嘻哈获取灵感，将这说唱的形式融入音乐中；有人看中了这一音乐的潜质，研究如何让House音乐走上流行市场......从EuroCharts，到各国的大街小巷，甚至是隐蔽在角落的地下Club，House音乐开始走进千家万户，不仅仅为所有喜欢Rave的人提供了肥沃的土壤，也为许多处在社会边缘地带的人提供了身份认同、友善交流的平台。House就在这几十年的发展中扎稳了根基，并确立的它的定位：一个以广泛的群众为基础的电子音乐。 来到21世纪，更多艺术化，先锋的理念开始涉猎House音乐。但在人民百姓之间，House仍然以与当地的文化结合、丰富多样的形式广泛流传。到了2010年，The Black Eyed Peas / David Guetta / Swedish House Mafia等人带来的EDM浪潮席卷了全球，并由此开启House音乐的黄金时刻（至少热度上是），不少各位熟悉的百大DJ也如涌泉般迸发，在Tomorrow Land，EDC等大型音乐节点燃了一次又一次的舞池炸弹，“电音”这一名词也顺势进入包括笔者在内的许多电音爱好者的世界。 2020的疫情大爆发让所有人猝不及防，也暴露了不少EDM过度市场化和高速发展所带来的问题。面对EDM质量大不如前的现状，很多人放下了对EDM的热爱。不过House仍然用自己的方式发展，比如Fred again..将“接地气”这一House音乐本质发挥极致、各路Deep Progressive House大神诠释自己对音乐的理解、Amapiano / Afro House等第三世界的异军突起...无论我们怎么看待，House音乐这与人民生活息息相关，与各地文化具有高度兼容性的特性，已经预示了House音乐将持续不断地给我们带来惊喜。",
@@ -74,6 +77,7 @@ window.KB_DATA = {
         "zh": "科技舞曲",
         "color": "ice",
         "archive": false,
+        "supplement": false,
         "count": 38,
         "line": 2077,
         "intro": "20世纪80年代中期，密歇根州底特律市的“贝勒维尔三人组”——Juan Atkins，Kevin Saunderson和Derrick May，开发出了Techno音乐最初的蓝图。Techno最初仅由芝加哥、纽约和英格兰北部的少数几家House音乐俱乐部支持，后来底特律俱乐部也开始接纳这种音乐。1987年，《Strings of Life》的发行一瞬间让俱乐部的House听众与Techno听众都震惊了。随后，合辑《The mid-1988 UK release of Techno! The New Dance Sound of Detroit》让“Techno”一词进入了音乐新闻界的词典。人们听过这种音乐之后，都开始发疯了：DJ沉迷于Techno的混音，让俱乐部里充满Techno的声音；卧室制作人抱着自己的音序器和TB303，在放了一堆神秘黑色机器的屋子里没日没夜地倒弄音乐；Raver们从未听过这种全新的音乐，每个人在忘记一切的摇头晃脑中，都成为了这场狂欢的一部分。 “第一批Acid House制作人有意模仿了Techno的声音，为了将House音乐与Disco音乐区分开来。”——Juan Atkins “Techno的声音......完全是个错误......这就像是一种将George Clinton、Kraftwerk困在电梯里，只有一台音序器陪伴着他们时，他们创作出来的音乐。”——Derrick May 第一波浪潮由底特律掀起：抛弃了House中灵魂乐影响的、咏叹调般的声音，底特律制作人将金属撞击声、机械化人声和重复的Hooks填满在歌曲里，代表着底特律这座工业城市的缩影。90年代初，英格兰北部诞生了Bleep Techno的声音，这是英国本土电子舞曲风格的首次尝试。同时Rave场景也从中诞生，Belgian New Beat的姊妹流派——Belgian Techno也来参与其中，Hardcore的祖先便孕育而生，从此开始了硬核场景雨后春笋般的发展。 随着底特律当地音乐厂牌的消失和“贝勒维尔三人组”的离开，第一波浪潮结束了，Underground Resistance、Carl Craig等制作人为了填补这一时期欧洲留下的空白，开启了第二波浪潮。80年代中期的Acid House音乐深刻地印在了年轻人的脑中，久久无法散去，于是他们放弃了Chicago House“温暖”的声音，用Acid音色给他们的Techno音乐调味。这一调，彻底开启了大Techno时代。Ambient Techno从中先一步问世，卧室制作人们将自己的想象力调到最高马力，90年代初便出现了IDM的雏形。随后还有反对Hardcore Techno声音的Minimal Techno，以及它的孪生兄弟Dub Techno，不仅如此，世界各地的Techno热潮也早已爆发，加拿大场景（Plus 8厂牌）、柏林场景（Tresor厂牌）、意大利场景“Roman Techno”、UK Techno、布莱顿之声“Wonky Techno”、法国场景、荷兰场景...... 2000年代之后，第三波Techno浪潮开始了，制作手法的进步与音乐市场的进一步要求，使得Techno音乐彻底改头换面，将自己的名字贯彻到极致。909鼓与失真的碰撞——Schranz、Industrial Techno和Dark Techno，是彻骨的冷酷、苍白的工业时代；氛围与Dub的灵魂交融——Hypnotic Techno，外冷内热的印象派画家；琶音旋律的单人舞——Melodic Techno，人和机器人之间联系的终极思考；商业化的新声音——Peak Time Techno，冰冷而黑暗的合成器，思考着科技与人类的未来。 Techno，是机器为人类写的音乐，也是人类写给机器的音乐，在繁杂中的极简，在缤纷中的苍白，在嘶吼中的内省，纯粹的理性，极致的冷酷。在鼓编与旋律一遍又一遍的重复中，隐约听见的，便是听众的心跳与之律动的声音。 Machine Music——The Soul of Techno",
@@ -115,6 +119,7 @@ window.KB_DATA = {
         "zh": "迷幻舞曲",
         "color": "phosphor",
         "archive": false,
+        "supplement": false,
         "count": 58,
         "line": 2703,
         "intro": "Trance的黄金年代早已逝去......? 由锐舞常客的往复律动，到流行歌者之天籁拍档；由奥运圣火间华光闪耀，到寻常巷陌里低吟浅唱。Trance的血脉绵延在世界的每一个角落——无论肤色，无论信仰，无论意识形态；爱好者们收藏者“三剑客”的黑胶唱片，直面鼓点与全频乐音的138红色冲击，在或激扬或渐进的旋律中谈笑风生——“PLUR”精神，也就是Peace/Love/Unity/Respect，大概是最真实的写照。 时至今日，往昔的舞池中坚力量仍在商业与文化间寻求平衡，衍生场景的交叉融合仍跨地域与时代而生机勃发。打破？融合？再生？我们看到：辉煌仍在续写，传思动人依旧。 是的，Trance的黄金年代，从未逝去。 Trance歌单： BGM：Tuvan - GAIA",
@@ -147,6 +152,7 @@ window.KB_DATA = {
         "zh": "碎拍",
         "color": "heat",
         "archive": false,
+        "supplement": false,
         "count": 96,
         "line": 3585,
         "intro": "第一章——The Amen Break 或许我将Amen Break叫做“一种大规模杀伤性武器”很多人会不理解是什么意思，但是我想说，它值得这个叫法。Amen Break在某种程度上说像是被冷落了30年后才被真正发掘并发挥了它真正的作用，“the Prince of Breaks”的名号实在是迟来了太久。其实碎拍小王子在这一场景真正兴起之前就已经作为采样出现在其他曲目里了，比如Mantronix的《King of the Beats》，但只有在碎拍场景中，Amen Break才找到了它真正的归宿。The Winstons，这支一直默默无闻的放克/灵魂乐组合，很平常地制作了一首名为《Amen, Brother》的B-side。Amen Break于现在听来感觉在这首歌中格格不入，就好像这首听起来欢快又轻松的乐曲突然被六秒的一瞬间的无法预测的未来打断，然后又恢复了正常。他们又怎么会想到，就是因为这短短的六秒，开启了一段多么辉煌的音乐历史。 第二章——Rave！Rave！Rave！ 碎拍诞生于20世纪70年代末至80年代初的美国嘻哈场景，在那里，碎拍还只是未脱离嘻哈的附属流派，不过也产生了不小的影响，一经诞生便迅速成为了每个嘻哈DJ的必修课。但当这种音乐传入英国时，便立刻产生了翻天覆地的变化。90年代初，当Hardcore Techno在欧洲舞曲场景如火如荼的时候，碎拍的加入犹如一颗舞池炸弹，直接开启了含金量十足的英国锐舞时代。人们对于这种“采样”来的声音如痴如狂，继续贯彻了这一“拿来主义”：鼓组？是Amen Break采样；旋律？是从不知道哪里截来的片段做成的Rave Stab；人声？更是从各种R&B曲目、流行曲目、甚至电视节目广播电台等直接拿过来的。也许在现在的很多人看来，这是一种很吵闹、乱七八糟的音乐，但是当时的Raver们就会告诉你：我们就是要吵！就是要硬核！无Old School不Rave！无Breakbeat不Hardcore！当时的人们不会知道，这种音乐完全不仅仅是用来Rave的，这种声音的两个后代，无一例外全都成为了当今电子音乐界非常著名的两个场景。 第三章——Jungle以上，DnB未满 1994年Breakbeat Hardcore场景一分为二：Jungle与Happy Hardcore。当Suburban Base Records和Reinforced Records等厂牌的Breakbeat Hardcore制作人开始尝试更快的节奏、更深邃的Bass和更复杂的歌曲创作时，Drum & Bass的前身——Jungle便诞生了。1991~1994年期间，便已经出现了很多Jungle/DnB的雏形。4hero、Danny Breaks的Droppin' Science 12\" 系列或多或少都可以被认为属于Atmospheric Drum & Bass；而Here Come the Drumz、Darkrider等的音乐则是对Darkstep和Techstep产生巨大影响的Darkcore；Renegade的《Terrorist》又何尝不能认为影响了后来的Jump-Up。随着Jungle不再流行，寻找Drum & Bass新的定位的的大规模试验成为当务之急。在这一时期，出现了四种截然不同的声音：DJ Rap和Ed Rush的更加朴实粗犷的Hardstep；DJ Zinc和Aphrodite的嘻哈采样、舞池友好型Jump-Up；LTJ Bukem及其追随者的已经相当成熟的Atmospheric Drum & Bass；以及由Roni Size和Alex Reece发展出的较新的流派Jazzstep。 第四章——结束了？ 1997年，这些更“智能”的Drum & Bass已被主流所接受，Goldie和LTJ Bukem的CD收藏遍布世界各地，很快，Roni Size & Reprazent和Photek也加入了，在俱乐部中，Jump-Up类似嘻哈音乐的声音及其趣味性也吸引了很多人。而这时候比较“Hardcore”的Jungle就不高兴了，不鸣则已，一鸣惊人，就像当年Breakbeat Hardcore的突然流行一样，Techstep和Darkstep开始占据市场，当UK Garage吸引走了许多DnB乐迷后，它们便一统天下，在Drum & Bass上冠以它们的名字。Drum & Bass的时代已然来临，进入21世纪之后的新声音如雨后春笋般发展起来。Twisted Individual的《Bandwagon Blues》（2003），Clownstep的前身；Black Sun Empire的《Driving Insane》（2004），主流Neurofunk初具雏形；Pendulum的《Hold Your Colour》（2005），Liquid声音的一次代表性尝试；Sub Focus的《Join the Dots》（2008），主流DnB开始显现...... Drum & Bass的未来到底会怎样，我们不知道，但是我们可以回顾历史。英国的音乐就像一座不动的大图书馆，或是一间立体的历史博物馆，阅览这一篇章就像进行一次免费的时光旅行。无论屏幕前的你是不是碎拍爱好者，不管你有没有听说过这种音乐，经过这次旅行后，或许你也不得不承认，这是一个多么有魅力的音乐场景。",
@@ -165,6 +171,7 @@ window.KB_DATA = {
         "zh": "英式低音",
         "color": "violet",
         "archive": false,
+        "supplement": false,
         "count": 43,
         "line": 5217,
         "intro": "虽然名为UK Bass，但此类音乐所体现的是以牙买加、非洲裔黑人为代表的第三世界音乐与欧洲舞曲文化交流碰撞的结果。从华盛顿DC灵魂乐组合无意间创作的Amen Break为开端，再到美国Garage House声音的引进，英国音乐场景的又一无价之宝——英国车库音乐就此诞生，2-step节奏型的创新，再次有力地撼动了传统4/4拍舞曲的无上王座，并证明了这一音乐宝库的深刻底蕴。 在节拍的无限创新中，UK Garage、Grime、UK Dubstep、Wonky、Bubblegum Bass......一个个新的世界被开启，一颗颗形态各异充满想象的星球等待听众的发掘。 与华丽奔放的后辈US Bass不同，UK Bass是低调、淡泊与朴素的，就如出门带伞生活规律的英国绅士，看似沉闷无聊，却有着丰富的历史底蕴和无法替代的气质。 Burial说道：在进行音乐创作的时间之外，他会花大把大把的时间在伦敦的街头漫无目的地闲逛。有时他会觉得，有一个幽灵陪伴着他，在迷宫般曲折蜿蜒的街道中感受这座城市。这就是UK Bass的精神内涵，以手术刀般冷酷而精准的目光，凝视着21世纪后工业都市的沧桑变迁，在荒芜表象下构建丰富的后现代艺术。 UK Bass歌单：",
@@ -187,6 +194,7 @@ window.KB_DATA = {
         "zh": "美式低音",
         "color": "heat",
         "archive": false,
+        "supplement": false,
         "count": 47,
         "line": 5889,
         "intro": "US Bass大致可分为两类——一类是Riddim Dubstep及其分支，一类是Heavy Dubstep（Brostep）及其分支。 US Bass可能是所有曲风领域中最年轻的一个——自2010年Brostep诞生以来到现在也才区区15年。 从最早的Brostep出现，到后来的Briddim浪潮，经历Melodic Dubstep的兴起，再到现在的Color Bass。尽管US Bass一直只是在主流的边缘徘徊，总有一批人在不断创新。曾经，US Dubstep的各个分支并没有本质上的差异，各个不同的曲风/标签其实都是同一结构下不同的表现手法构成的。而随着诸如Color Bass和Polyriddim等曲风/标签的出现，US Bass的多样性和可塑性也终于被发掘。 也许有些人会说US Bass是个没底蕴的曲风，但正是因为US Bass如此年轻，它才得以继续多样的变化。它既可以变成Chillstep令人心旷神怡，也可以变成Deathstep凶猛暴戾。他可以旅行到挪威峡湾，催生出勇猛的Viking Riddim；也可以现身于极北之境，创造出寒冷的Psystep。与金属乐碰撞，就有了Metalstep；与管弦乐碰撞，则产生了Dubchestral。正是US Bass能够千变万化的活力，让十余年来源源不断有不同国家怀着不同理念的制作人创造出他们自己的US Bass声音，每一种曲风标签，都是制作人们的心血与智慧结晶...... 海纳百川、有容乃大：这就是US Bass的深厚底蕴 US Bass（US Dubstep）歌单：",
@@ -202,6 +210,7 @@ window.KB_DATA = {
         "zh": "硬舞曲",
         "color": "phosphor",
         "archive": false,
+        "supplement": false,
         "count": 160,
         "line": 6652,
         "intro": "如今Hard Dance Music在电子音乐中固然有着重要的地位。自从第一首Hardcore Techno于1990年诞生以来，就开始源源不断地为电子音乐注入新的活力，让电子音乐更加多元化。HDM也对许多风格起到了继往开来的作用，在传承中有创新，在创新中不断改进。 并且不同派系和场景的发展也有着天悬地隔。比如英国硬核的发展和荷兰硬核的发展，就是两个截然不同的方向。他们在Happy Gabber和Happy Hardcore交流的场景之后便相去甚远。荷兰显然更追求更难接受的更为扭曲的音乐，后续演化的Hardstyle也有很大的受众；而英国硬核的发展就偏向随大流。在日本，HDM的主要发展形式则是同人音乐和音游，他们将其他场景的HDM本土化改造，形成了自己独特的风味，也衍生出不少自己的标签。 因为一场席卷全球的浩劫，在过去4年的HDM场景受到了极大的影响，整体颇为低迷。不过在这场风波过去，HDM场景的Next Generation/New Gen，如雨后春笋般崭露头角。有着新鲜血液带来的全新Flavor，我坚信，HDM场景的又一个巅峰时代来临了，未来HDM的发展，就让我们沸腾期待吧 这里分成五个大栏目：Hardcore (Dutch)(荷兰式硬核)，Tekno，Ardkore(英式硬核)，Hard Dance以及Jaycore。 HDM歌单：",
@@ -227,6 +236,7 @@ window.KB_DATA = {
         "zh": "嘻哈 / Trap / 未来贝斯",
         "color": "ice",
         "archive": false,
+        "supplement": false,
         "count": 134,
         "line": 9207,
         "intro": "20世纪70年代初，Disco音乐在美国纽约流行起来，所有人都盛装打扮去到舞厅和俱乐部，沉迷于Disco的节奏中。在当时，全世界的人们都认为纽约是天堂，但当时的布朗克斯区可谓深陷火海。南布郎克斯一带逐渐贫民窟化，1973年到1977年，光是纵火案就高达三万起，贫穷、犯罪、暴力执法层出不穷。由于当时的种族主义还较为严重，黑人不能进入一些舞厅和俱乐部，南布朗克斯的黑人青少年就在街头举办露天派对。对他们来说，电台里播放的Disco和Philly Soul(费城灵魂乐)太过精致和商业化，于是就在派对上播放James Brown式的Funk乐。 1973年8月11日，纽约布鲁克斯区的DJ Kool Herc为了给自己的妹妹筹备学费，在塞治威克大道1520号举办了一场派对，这场派对是公认的史上第一场Hip-Hop派对。起初，他的做法和当时那些播放Disco的DJ一样，用两个唱盘加一个调音台交替播放唱片，为的是音乐可以不间断地播放。后来，他发现台下的听众跳得最嗨的时候并不是歌曲的高潮部分，而是曲子最后只剩下鼓声的一段，即“鼓间奏(Drum Break)”。最后，Herc通过购买相同的唱片，利用调音台的渐变功能持续不断地播放鼓间奏(这也是Dub音乐的手法)，Hip-Hop音乐就此诞生了。 70年代末，世界各地诞生了诸如Kraftwerk、Y.M.O.和Gary Numan这样的电子乐队和音乐人，Hip-Hop自然也受到了一定冲击。到了80年代，合成器在主流乐界得到了广泛运用，Hip-Hop终于不可避免地走向了电子化，最终在电子音乐里形成了一套自己的体系。 21世纪10年代的电子音乐听众们的耳朵变刁了，他们迫切需要⼀种主流而旋律化的2-step式流行曲风，于是我们得到了Future Bass。它主要脱离于EDM Trap/（Melodic）Trap场景，再加入Post-Dubstep的柔和元素，使得无数人沉醉于这种新兴的浪漫的曲风。Future Bass是现时代的EDM，也将是Post-EDM的主要载体，正是它，成功地在当今百花齐放的EDM界杀出⼀条血路。 本篇章着重强调Hip-Hop中带有电子成分的流派，故删除了一些和电子音乐关系不大的词条(如Old School和New School，East Coast和West Caost，Disco Rap和Gansta Rap等等)，一些词条不得不单独列举出来(如总领的词条“Hip-Hop”)，而在云文档中则会保留完整的(有电子成分的)Hip-Hop及其(视频中没有展示的)分支。 Hip-Hop&Trap&Future Bass歌单：",
@@ -243,6 +253,7 @@ window.KB_DATA = {
         "zh": "迪斯科 / Hi-NRG",
         "color": "heat",
         "archive": false,
+        "supplement": false,
         "count": 37,
         "line": 11315,
         "intro": "在爵士、蓝调、放克、灵魂乐这些较为基础的音乐类型中，诞生了很多融合风格，比如Acid Jazz、Jazz-Funk、Soul Jazz、Jump Blues/Swing Blues、Soul Blues等，但是并没有一种叫“Soul Funk”或者叫“Funky Soul”的流派，那是因为它有一个另外的名字——Disco，并由此开创了一系列当时的人们难以想象的子分支、体系、后代流派和一段光辉的音乐历史。 为什么只有这种融合对音乐界产生了巨大的影响呢？也许是因为这个主意实在是太天才了——Funk是一种干燥的、火辣的、热情的音乐，充满了能量，有着阳刚之气；Soul是一种湿润的、柔和的、流畅的音乐，孕育着生机，富有阴柔之美。正是由于这两种看似不应该融合的音乐被融合在了一起，音乐界一位“重量级的选手”才能在20世纪70年代至80年代左右的这段时间诞生并以可怕的速度疯狂流行开来，哪怕是随便一位不常听音乐的普通人，他也大概率会听说过“迪斯科”这个词。这个来自号称“黄金年代”的流派就是如此有影响力，正是它开启了电子音乐的锐舞狂潮，没有了它，如今的EDM界的魅力将会大打折扣。 这种流派就是这么简单而纯粹，简单纯粹到了被人扣上了“土嗨”“俗气”的帽子。然而它诞生的理由，就是用简单的旋律、简单的节拍来带给人们快乐。那“俗”得不能再“俗”的旋律，正是人们由衷的对生命的赞叹，对生活的期盼和对美好世界的向往。我们确实需要这样一种纯粹的音乐形式，将自己轻松的跳舞姿态融入进舞池当中。 如果你心情烦闷、失落，或者只是单纯的无聊，那么就听一听这些音乐来拯救不开心吧。 这一篇章从70年代最初的Disco音乐开始，到70年代末80年代初的Boogie/Post-Disco，标志着传统Disco的灭亡。在后迪斯科时代之后紧随而来的是一系列Modern Disco及其子分支，从80年代对Disco声音的更多探索，到本世纪10年代的EDM化。又回到70年代末，我们来到了属传统Disco体系但由于其特殊性所以单独拿出来介绍的Electro-Disco体系，并引出其子分支Hi-NRG，随着Hi-NRG声音的不断发展与变化，Eurobeat的声音也分阶段地从中诞生。到了90年代，欧陆舞曲Eurodance横空出世并迅速流行，同时标志着Eurobeat的衰落。最后在本世纪00年代初，我们将介绍本属Euro-Trance体系，但与Eurodance、Hi-NRG有着密切联系的Hands Up音乐。 推荐前言BGM：YMCA - Village People Disco/Hi-NRG歌单：",
@@ -260,6 +271,7 @@ window.KB_DATA = {
         "zh": "氛围",
         "color": "ice",
         "archive": false,
+        "supplement": false,
         "count": 43,
         "line": 11895,
         "intro": "1917年，作曲家、钢琴家Eric Satie提出了一种叫“装饰音乐/Furnishing Music”的流派，首次发掘到了音乐的“功能性”。音乐并不是只能在金色厅堂中由音乐家现场演奏，还可以在生活中的任何时候作为“背景配乐”而响起；音乐并不是只能从各种各样复杂而笨重的乐器中被演奏出来，还可以是由自然界“被发现的声音”随性演奏出来。1978年，Brian Eno创造了“氛围音乐/Ambient Music”一词，他认为，“氛围音乐是一种存在于‘旋律与质感之间’的音乐，根据听众的选择不同，氛围音乐既可以被专心致志地聆听，也可以被轻易地忽略”。Brian Eno自称“Non-Musician”，他坚信自己的声音实验是一种“处理/treatments”，而并非传统的表演。雨滴声不是雨滴声，而是轻柔而流畅的钢琴声；鸟鸣声不是鸟鸣声，而是挑逗听众的高声部弦乐；风在耳边的呼啸声，也变成了私人管弦乐团的即兴演奏；而合成器、采样器、音序器的参与，更是给了氛围音乐艺术家们模拟一切的可能性，满足了他们最天马行空的想象、最不着边际的白日梦。 1971~1973年是“前Ambient/前Brian Eno”时期，在Brian Eno之前，可以被归类为“氛围音乐”的作品就已经存在，只不过并没有专门的流派标签和完整的专辑。1972年Wendy Carlos的专辑《Sonic Seasonings》，首次完全抛弃了电影配乐中宏大的合成器音景与古典音乐的作曲手法，在这个还没有“氛围”、“自然录音”，甚至“New Age”的说法的年代，转而录制了大量的自然声音，用鸟叫声、雷雨声等大自然的馈赠之物完成了这张记录四季之声的专辑。同年，吉他手Michael Rother和鼓手Klaus Dinger在离开了Kraftwerk之后组建了自己的乐队“NEU!”，从此改变了德国摇滚乐的面貌。他们的乐队同名专辑对摇滚乐、电子乐以及后来的氛围乐的影响已无须多言，时至今日听起来仍然领先于时代。而Kraftwerk乐队则更是对氛围音乐的影响最大的祖先，1973年的专辑《Ralf & Florian》，那好似用迷幻药熏制过的、贯彻极简主义的德国前卫音乐，带给听众失重般的体验，优雅而洁净。这些音乐家、乐队与专辑，都代表了氛围音乐最早的蓝图。 1974~1982年，不出所料，这便是Brian Eno在音乐领域最有成就最有影响力的时期。Brian Eno与Harold Budd、Laraaji等艺术家前后发行了四张专辑《Ambient 1: Music for Airports》《Ambient 2: The Plateaux of Mirror》《Ambient 3: Day of Radiance》《Ambient 4: On Land》，其中一专（1978年）更是直接给这一流传已久的流派命上了确定的名字。这是一系列为现代生活配乐的专辑，与城市、社会面对面对话，观察着沧海桑田人间冷暖。不断变换着的音景，从薄如蝉翼的钢琴演奏到大气磅礴的合成器墙，从地区化特色声音到世界音乐，从结构的极简到配器的极繁......这四张专辑有着无以言表的历史意义与重要程度，成为了氛围音乐爱好者/制作人的必修课。 在Brian Eno获得成功之后，艺术家Steve Roach也在氛围音乐中开创了自己的一席之地，专辑《Structures From Silence》（1984）被许多人誉为史上最优秀的氛围音乐作品之一，可与《Ambient 1: Music for Airports》齐名，并且实至名归。这张专辑有着最纯粹、最清晰的美，让“Space Ambient”奠定了自己在氛围音乐众多子分支中的地位与重要性。1988年的专辑《Dreamtime Return》，象征着Roach式氛围乐的延续，比起《Structures From Silence》来说仍然毫不逊色，堪称完美。 1988~1997年，更多音乐家参与其中。The KLF的《Chill Out》（1990），一次对无定形氛围音乐的探索，是梦境中脑内不清晰的记忆，是后迷幻时代万千景色的泡影。Aphex Twin的《Selected Ambient Works Volume II》（1994），相比于第一张Ambient Work更加黑暗而诡异，像是多维空间中的不确定集合体，无法描述也无法想象其形状与姿态。The Future Sound of London的《Lifeforms》（1994），被认为是90年代最佳Experimental Techno作品之一，对“无定形”音乐的又一次阐述。单首歌曲可能没有Aphex Twin的《Selected Ambient Works》那样让人过目难忘，但是作为一个整体，《Lifeforms》则是一次别出心裁、引人入胜的听觉体验。此外，地牢合成器也在第二波黑金属浪潮中定型，虽然将地牢合成器归类到氛围音乐中并不是什么严格的分类方法，但其中令人耳目一新的合成器与神话、古城、中世纪风的歌曲氛围营造，使得这一流派无愧于在氛围音乐中有着一席之地。 1997~2007年，氛围音乐走入了更现代的领域。Boards of Canada的专辑《Music Has the Right to Children》（1998）已无可置疑地成为电子音乐/Ambient/Electronica领域的一块巨石，是IDM、Downtempo、Trip Hop等多种元素的集大成者。William Basinski的《The Disintegration Loops》（2002），用旧录音带记录了一切——音乐随着时间流逝而瓦解、腐坏、消失。还有The Caretaker的二专《A Stairway to the Stars》（2002），继承了他独特的“Hauntology”风格氛围音乐，带着20世纪20年代欧洲舞厅模糊的画面与温馨但可怖的记忆。 2007年至今，我们得到了更多独立艺术家对于氛围音乐独特的见解。Tim Hecker - 《Harmony in Ultraviolet》（2006），能让听众脱离现实，进入音乐所构建的虚拟空间中；Oneohtrix Point Never - 《Replica》（2011），使用大量的采样来代替合成器，每一首歌曲都是完美的梦境模拟器；The Caretaker - 《An Empty Bliss Beyond This World》（2011），走入大众的一张专辑，采样的音乐已经磨损了太多，没人记得它们原来是什么样子，满是破碎的梦与破碎的梦；t e l e p a t h テレパシー能力者 - 《向かい合って》（2014），融合蒸汽波/Dreampunk的氛围音乐，探索着十一种不一样的蓝色与其之下的阴影...... 氛围音乐是如何做到在当今EDM盛行的年代下在电子音乐中仍然稳稳地保留着重要的地位的？ 它没有强劲的节拍，却能表达出更震撼的音景； 它没有复杂的结构，却能描绘出更宏大的诗篇； 它是电子音乐与古典音乐的完美融合，它是实验音乐与前卫音乐的宝贵产物； 它从Kraftwerk、Brian Eno、Steve Roach等大师手中诞生，被众多音乐家得到继承并继续发展，它是小众音乐人圈子的世外桃源，给听众们最能接近宇宙真理的体验。从1970年代开始的这一段电子音乐发展期间，电子音乐界中常常没有它，却依旧处处都流传着它的传说。 没有了氛围音乐的电子音乐，就是毫无意义的。 Ambient歌单：",
@@ -277,6 +289,7 @@ window.KB_DATA = {
         "zh": "独立 / 合成器流行",
         "color": "phosphor",
         "archive": false,
+        "supplement": false,
         "count": 65,
         "line": 12570,
         "intro": "初听电子音乐的听众，尤其是因为EDM入坑的Raver，对电子音乐的非舞曲区域大多都是不感兴趣或者一知半解的，但是“Synthwave”这个词做到了“即使电音圈的人没听过也多少听说过”的程度。合成器浪潮不仅是一种令人着迷的音乐形式，更是一种新时代的美术形式，合成波的落日、超跑、霓虹线等意象，代表了新时代的制作人们对80年代所有美好的向往；合成波的太空、赛博朋克、星际穿越等意象，又代表了科幻爱好者们对未来科技所有疯狂的想象。 IDM是国内电子音乐爱好者第一批接收到的电子音乐风格之一，妙趣横生的旋律，光怪陆离的节拍，使得大量制作人对它着迷并从事制作。也许现在我们无法想象当时的IDM究竟有多么火，如果从小就对音乐感兴趣并且一直在听的话，现在回首过去，才发现IDM的影子原来随处可见。而所谓，历史是一个环。当今时代的Au5、Mr.Bill等音乐人开始转而复兴这一充满魅力的音乐流派，将更为先进的音色设计和更加难以把控的氛围感营造加入其中，促成了新型IDM的诞生，国内的很多前卫音乐人也不例外，他们将IDM与Color Bass融合、与爵士融合、与Breakcore融合，赋予了IDM新的形式与理念。 Electronica以及它所牵带着的一系列音乐流派如此特殊，除了“音乐”这一大概念外，没有任何一个其他词可以限制它跳脱的艺术与独特的表达方式。它拒绝了毫无疑问是主流的EDM的喧闹，转而营造一个隐士所居之地，在这片自然的土壤里，各种音乐形式得以以新的形式复兴。难以走入大众的爵士，在这里变成了Jazztronica；无法再满足当代听众的Funk，在这里变成了Funktronica。在2000年代的独立摇滚场景与Electronica的融合中，没落的民谣音乐摇身变成了Folktronica，原声乐器与实验、IDM、Glitch的碰撞，为Lei Music、Botanica的诞生铺平了道路。另类舞曲下诞生的Indietronica，以及其分支——集天地之精华的Chillwave，仅仅是它们本身的名字，就是对这些音乐至高的赞美。哪怕“Chillwave”这个词最初是用来讽刺这一流派的，我也只能说，“嘘声是给挑战者的勋章。” ...... 这一章是无法被囊括进大类的独立流派，脱离了在大类下条条框框的定义，它们是真正的自由者，一个流派是这样的听感，另一个流派会以完全不同的姿态展现。不需要非得用什么华丽的语言去总结，“独立”“特殊”这几个词已足够表达出它们的含金量了。",
@@ -303,6 +316,7 @@ window.KB_DATA = {
         "zh": "后互联网",
         "color": "violet",
         "archive": false,
+        "supplement": false,
         "count": 92,
         "line": 13700,
         "intro": "Post-Internet/后互联网，一场21世纪的艺术运动。2000年代中期，艺术家Marisa Olson就开始使用“后互联网”一词来描述她的作品，用来形容深受互联网美学启发的艺术。“后互联网”指的并不是一个“时代”，而是人的一种“心态”：人们已经深深地嵌入并受到互联网的推动，以至于没有互联网或互联网之外的世界或文化的概念变得越来越难以想象、难以存在。“后互联网”运动直接引领了蒸汽波和Seapunk两种流派，2010年时Grimes也开始使用“后互联网”来描述她的音乐，此后“后互联网”一词开始在各种各样的地方出现，包括2013年的PC Music和2020年进入主流的Hyperpop。 以前的互联网在人们心中是高科技的产物，甚至是值得敬畏的对象，但在千禧年之后，人们逐渐理解了“互联网”的本质——它就是虚拟的，它不能改变任何东西。以前互联网“神秘”“可怖”的形象在此刻轰然崩塌，人们开始娱乐至死，疯狂得像是终于找到了什么玩不坏的发泄玩具。 在后互联网时代，包括“音乐”在内的各种艺术流派，从最开始的可远观不可亵玩，到现在变得每个人都触手可及。新的艺术形式的诞生再也没有虚假的仪式感，一切都是人类的玩物，热度流量的牺牲品。一个新生儿诞生，大众舆论便会将它推上热度的最高峰，每个人都在庆祝着这场狂欢，当参观的人们逐渐离开后，新生儿便会来到它极其短暂的一生的终点，在一地的残骸中等待死亡。一些人依然会恋恋不舍地聚拢在它的身边来陪伴它，但大多数人都仅仅只会路过或旁观，而且每个人都可以过来踢一脚。 不管怎么说，“互联网”都算是广大网友共同书写的一部“作品”，当然这部作品有好有坏，但我们珍惜的也并不是“好”的那部分或“坏”的那部分，而是我们共同创造的回忆。 BGM: Defective Pixel - Theme 140 (友情と勇气と光の口まん Theme 1) - ミツキヨ backrooms. - Deaven Wink",
@@ -337,6 +351,7 @@ window.KB_DATA = {
         "zh": "工业",
         "color": "heat",
         "archive": false,
+        "supplement": false,
         "count": 32,
         "line": 15336,
         "intro": "工业运动开始于1976年，工业音乐与朋克摇滚流行于同一时期，是20世纪70年代末英国反文化运动中一场至关重要的运动。这类音乐描绘了工业社会阴郁病态的生活，以刺耳而机械的声音迅速传遍了欧洲和北美的地下音乐场景，也影响了一系列实验风格。从20世纪80年代开始，工业音乐受到了流行和古典音乐的影响而发展成了一个独立的流派。 这一篇章按照听感不同的工业元素将工业音乐分成两个部分——Industrial和Post-Industrial。前工业的声音更加粗粝、偏向噪音，是实打实的苍白、冷酷、无情的音乐。而后工业要温和许多，更多着眼于舞池中，也是听众接受较多的工业音乐，我们熟知的那些一提“工业”就会想到的音乐，如Industrial Techno、Industrial Hardcore、EBM、Witch House等，都在后工业的范畴中。",
@@ -352,6 +367,7 @@ window.KB_DATA = {
         "zh": "史前与技法",
         "color": "ice",
         "archive": false,
+        "supplement": false,
         "count": 59,
         "line": 15794,
         "intro": "电子音乐的成就因素是多方面的。与摇滚的融合在于工业摇滚、前卫摇滚、泡菜摇滚等；与金属的融合在于工业金属、赛博金属等；与朋克的融合在于后朋、舞曲朋克等；与流行的融合在于Synth-pop、Euro-pop等。电子音乐与古典音乐的交融区域看似不起眼，实际上这方面的手法与流派一个比一个重要，一个比一个有历史意义。正是自由即兴，成就了爵士的经典演奏方式和自由爵士；正是Plunderphonics，成就了蒸汽波、后夜核等现代化的流派的诞生；正是未来主义，成就了影响重大的噪音音乐；正是声音拼贴，成就了将音景抽象化的Microsound乃至Glitch；正是序列主义，成就了现在电子音乐的基本制作手法。 当今时代的电子音乐制作人们也开始不满足于单一、无聊的EDM制作，转而重新钟情于那极其迷人的电子音乐与古典音乐的交汇之界。对“孤立主义”的再诠释，对“实验音乐”提出更先进的实验手法，给“实验电子”的领域扩充更多的内容。国内的制作人也不例外，他们制作抽象化、碎片化的Glitch、Microsound、Ambient，开始复兴微分音音乐并让“十九平均律”在编曲圈带起一波热潮。 这一篇章对于“流派”的定义就不只是相当于“风格”那么简单了，对一些流派更准确的描述应该是“手法”、“理念”，如“实验”、“Plunderphonics”、“声音拼贴”、“Tape Music”、“Turntable Music”等以现在看来就是作曲手法，“极简主义”、“还原主义”、“未来主义”等就是作曲理念。",
@@ -373,6 +389,7 @@ window.KB_DATA = {
         "zh": "地域 / 民族",
         "color": "phosphor",
         "archive": false,
+        "supplement": false,
         "count": 51,
         "line": 16656,
         "intro": "在盛行电子舞曲的欧美等国家之外，第三世界的力量正在崛起，他们之中的很多制作人，有的参与了国际电音节展示自己国家的风采，但是也有些人留在自己的祖国，立志创造属于自己国家的电子音乐风格。这些风格多半是几乎独立发展起来的民族电子音乐，有的甚至早于Disco、Techno、House诞生的年代，如从劣质铝制唱片发展出来的牙买加Dub乐；也有的虽然是近15年才出现但是瞬间火爆全网却又叫不上名号的风格，如科特迪瓦的Zouglou舞曲；还有些是无法确切归类的电子舞曲风格，如挪威的Russ音乐场景（暂时未选入）......所以这就是这个章节设立的目的：发现那些诞生于电子音乐世界的旮旯拐角的风格，探寻这些风格意想不到的美，并且抛砖引玉，让更多人看到、理解、尊重这些独特而灿烂的电子音乐文化。 本章节采用的介绍顺序同样按照从成大体系的到成小体系或不成体系的独立民族电子乐推进，前者主要包括四部分：牙买加Dub乐和Dancehall乐、巴拿马和美国波多黎各Reggaeton乐和特立尼达和多巴哥Soca乐，后者部分则大体按照“亚洲→欧洲→非洲→美洲→大洋洲”的顺序进行介绍，涉及国家涵盖巴勒斯坦、塞尔维亚、保加利亚、葡萄牙、法国、马里、乌干达、埃及、尼日利亚、安哥拉、加纳、科特迪瓦、莫桑比克、南非、古巴、海地、圣卢西亚、墨西哥、委内瑞拉、巴西、斐济等。希望大家能在这短短十余分钟时间里尽情领略这来自世界各地意料之外的异域风情吧！ BGM: Waka Waka (This Time for Africa) - Shakira / Freshlyground",
@@ -421,6 +438,7 @@ window.KB_DATA = {
         "zh": "融合",
         "color": "violet",
         "archive": false,
+        "supplement": false,
         "count": 109,
         "line": 17480,
         "intro": "电子音乐的发展从来不是由始至终孤芳自赏的，与非电子音乐的融合始终在与时俱进。打开手机的音乐软件，你会发现很多流行歌，从钱婆到水果姐，从Gaga到贾斯汀比伯，歌曲里的电子成分无法忽视；而在线下，一些电子核、工业金属乐队的演出时，不论是Rammstein、Marilyn Manson还是Rabbit Junk、PassCode，你也会惊讶的发现这些乐队用上了大量的合成器和电子乐器——事实就是如此，电子音乐与非电子音乐的融合早已走近我们身边，它不再是晦涩冰冷的节拍和索然无味的杂音，而是我们能听到的各种未来感、复古感音色的来源。“Fusion”这一篇章，就是为了展示音乐的中和美，电子音效与主流音乐的纠缠交融，和而不同，美美与共。 本章节以摇滚乐各自分支的关系作为主要衔接，以“融合摇滚→融合朋克→New Wave→融合流行→融合金属→黑人音乐融合→古典跨界&原声带”的顺序依次介绍。请注意本篇文案与视频展示略有不同，视频内选取的风格大多是与电子音乐有明显关系或互相影响的重要风格及其衍生产物，部分风格如Post Punk、Electronicore等不选入视频，但是保留在文案里，如果想要查看后朋克、电子核、电子碾、合成器金属、Trapcore等风格，请移步查询该篇章的文案部分。 开篇曲目：Monopoly - EASYFUN / Noonie Bao",
@@ -474,6 +492,7 @@ window.KB_DATA = {
         "zh": "待归档",
         "color": "muted",
         "archive": true,
+        "supplement": false,
         "count": 19,
         "line": 19142,
         "intro": "",
@@ -492,6 +511,261 @@ window.KB_DATA = {
           "g-19270",
           "g-19280",
           "g-19286"
+        ]
+      },
+      {
+        "id": "f-19330",
+        "name": "Electronic Pop",
+        "zh": "电子流行",
+        "color": "phosphor",
+        "archive": false,
+        "supplement": false,
+        "count": 23,
+        "line": 19330,
+        "intro": "Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。它的历史几乎与合成器本身同步：1970年代，Moog、ARP 等模块化合成器进入录音棚，Kraftwerk、Giorgio Moroder 把机器节拍放进流行歌曲的骨架里；1980年代，Synth-Pop 与新浪漫主义让\"合成器乐队\"成为主流形态，Depeche Mode、Pet Shop Boys、Eurythmics 用鼓机、合成贝斯和冷调人声定义了那个十年；1990年代，Eurodance 与 Eurobeat 把电子流行推向舞池与东亚市场，而 House-Pop 让俱乐部语汇回流到流行副歌。进入2010年代，Hyperpop 与 PC Music 把这种融合推到极端——人声被极端拉伸、失真、切片，变成一种关于\"数字化可爱与过载\"的美学。电子流行始终在做同一件事：把当时最先进的电子音色，装进最容易被记住的歌曲结构里。",
+        "introSummary": "Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。",
+        "childIds": [
+          "g-19376"
+        ]
+      },
+      {
+        "id": "f-19655",
+        "name": "R&B / Rhythm and Blues",
+        "zh": "节奏布鲁斯",
+        "color": "ice",
+        "archive": false,
+        "supplement": false,
+        "count": 7,
+        "line": 19655,
+        "intro": "R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。它的形态在几十年里不断置换：1940–50年代是带有强烈摇摆感与铜管编制的 Jump Blues 与 Doo-Wop；1960年代被 Motown 与 Stax 打磨成结构精密的 Soul；1970年代出现带有交响编制的 Philly Soul 与更粗粝的 Funk 化 R&B；1980年代，鼓机、合成贝斯与采样器进入录音棚，R&B 完成第一次大规模电子化，New Jack Swing 与 Quiet Storm 是这一时期的两个极点。1990年代是 R&B 的黄金年代，制作上大量使用 TR-808/909、合成垫音与多层人声和声。进入2010年代，Trap 的鼓组语汇与氛围化的合成器被引入，形成 Alternative R&B 与 Trap Soul。可以说，R&B 是电子音乐与歌唱传统结合最紧密、也最持久的一条线。 例曲：Papa's Got A Brand New Bag - James Brown",
+        "introSummary": "R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。",
+        "childIds": [
+          "g-19679"
+        ]
+      },
+      {
+        "id": "f-19764",
+        "name": "Electronic Rock",
+        "zh": "电子摇滚",
+        "color": "heat",
+        "archive": false,
+        "supplement": false,
+        "count": 17,
+        "line": 19764,
+        "intro": "Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。它的历史可以追溯到1960年代末：The Beatles 在《Revolver》里用磁带循环与人声倒放打开缺口，Pink Floyd 与 King Crimson 把 Mellotron 与合成器变成摇滚编曲的常规配置。1970年代，Kraftwerk 与 Suicide 让\"朋克遇上合成器\"成为可能，德国 Krautrock 与后朋克则提供了结构上的自由。1980年代，New Wave 与 Industrial Rock 把鼓机、采样与失真吉他并置，Nine Inch Nails 与 Ministry 确立了工业摇滚的范式。1990年代，Big Beat 与 Electronicore 让摇滚与电子舞曲的边界进一步模糊；2000年代，Nintendocore 与 Cybergrind 把游戏音效与极端金属拼在一起；2010年代后，Blackgaze 与 Nu Gaze 把 Shoegaze 的噪音墙与黑金属、电子氛围融合。电子摇滚的核心问题始终是：机器与人的演奏如何在同一首曲子里互相不让步，又彼此成立。 例曲：Kashmir - Led Zeppelin",
+        "introSummary": "Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。",
+        "childIds": [
+          "g-19802"
+        ]
+      },
+      {
+        "id": "f-19995",
+        "name": "Funk",
+        "zh": "放克",
+        "color": "heat",
+        "archive": false,
+        "supplement": false,
+        "count": 11,
+        "line": 19995,
+        "intro": "Funk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。这种\"Everything is a drum\"的思路，直接定义了此后所有舞曲的骨架。1970年代，Sly Stone 与 Parliament-Funkadelic 把合成器、Clavinet 与 Wah 效果器引入 Funk，形成 P-Funk 的宇宙。1980年代，Prince 与 Zapp 用 LinnDrum、Oberheim 与 Talk Box 把 Funk 推向电子化；同一时期，西海岸的 G-Funk 用 Moog 的滑音 Lead 与缓慢的节拍重新包装了 Funk；而 Miami Bass 与 Electro 则把 808 的 Kick 变成主角。1990年代后，Funk 的语汇被 Hip-Hop、House、Drum & Bass 与 Nu-Disco 大量采样与内化——今天几乎所有电子舞曲的低频与切分处理，都可以追溯到 Funk。 例曲：Papa's Got A Brand New Bag - James Brown",
+        "introSummary": "Funk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。",
+        "childIds": [
+          "g-20027"
+        ]
+      },
+      {
+        "id": "f-20154",
+        "name": "Chill-Out",
+        "zh": "休闲",
+        "color": "ice",
+        "archive": false,
+        "supplement": false,
+        "count": 12,
+        "line": 20154,
+        "intro": "Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。1990年代，Café del Mar 的日落套装、Kruder & Dorfmeister 的慢速重混、Air 与 Zero 7 的合成器流行，把这种\"降速与放松\"的做法发展成一整套声音美学：速度在70–110 BPM、鼓组稀疏或完全消失、大量使用 Rhodes 电钢琴与合成垫音、混响与延迟处理得极为宽阔。它的分支很多：一端靠近 Ambient 与 Downtempo，一端靠近 Trip Hop 与 Nu Jazz，还有一端靠近 Balearic 与 Lounge。Chill-Out 的核心不在于\"安静\"，而在于\"把注意力从舞池转向空间\"——同样的和声与音色，只是被放慢了、拉开了、留白了。 例曲：Teardrop - Massive Attack",
+        "introSummary": "Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。",
+        "childIds": [
+          "g-20188"
+        ]
+      },
+      {
+        "id": "f-20327",
+        "name": "Bass / Club",
+        "zh": "低频俱乐部",
+        "color": "violet",
+        "archive": false,
+        "supplement": false,
+        "count": 12,
+        "line": 20327,
+        "intro": "Bass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。它的历史有两条线：一条来自美国南部与东海岸的俱乐部文化——Miami Bass 用 808 的 Long Kick 与极快的念白定义了佛罗里达的舞池；Baltimore Club 与 Jersey Club 把 Breakbeat 切碎、把人声切片循环、用三连音 Kick 制造急停急起；Ghettotech 与 Juke／Footwork 把底特律与芝加哥的速度推到150 BPM 以上，配合舞蹈。另一条来自互联网时代的低音文化——Bérite 把 Jersey Club 与非洲鼓乐结合，Jersey Terror 把节奏做得更暴烈，Snap Music 把极简的鼓与拍手变成钩子。这一族群共同的特征是：低频永远是主角，人声被当作打击乐使用，结构高度重复，完全服务于身体。 例曲：Various - Bass / Club",
+        "introSummary": "Bass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。",
+        "childIds": [
+          "g-20361"
+        ]
+      },
+      {
+        "id": "f-20492",
+        "name": "Chiptune",
+        "zh": "芯片音乐",
+        "color": "phosphor",
+        "archive": false,
+        "supplement": false,
+        "count": 11,
+        "line": 20492,
+        "intro": "Chiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片有三个通道加滤波器。作曲家必须在\"只有几条声部\"的条件下写出旋律、低音、鼓组与和声。当这些机器被淘汰、限制消失之后，制作人反而开始主动追求这种限制带来的音色：方波的尖锐、噪声通道的沙哑、琶音器模拟和弦的错觉、以及通道数不足逼出来的极简编配。Chiptune 因此成为\"限制即风格\"的典范——它证明音色的辨识度可以来自工具，而不只是来自创作意图。 例曲：The Moon (8-bit Version) - 殿村裕誠",
+        "introSummary": "Chiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片…",
+        "childIds": [
+          "g-20524"
+        ]
+      },
+      {
+        "id": "f-20645",
+        "name": "Remix & Edit",
+        "zh": "重混与编辑",
+        "color": "ice",
+        "archive": false,
+        "supplement": false,
+        "count": 10,
+        "line": 20645,
+        "intro": "Remix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。这一族的边界由技术与法律共同划定——从1970年代 DJ 用双唱盘把两首歌拼在一起，到1980年代采样器让\"取一段素材重做一首歌\"成为常规，再到2000年代后互联网让任何人都能对任意歌曲进行速度与音高的重新处理。它的手法其实高度一致：改变速度、改变音高、切碎素材、叠加层、重新编排结构。区别只在于\"改动多少\"与\"是否获得授权\"。理解这一族对制作学习特别有价值，因为它是\"结构可以被拆开重装\"这一观念最直接的证明。 例曲：Various - Remix & Edit",
+        "introSummary": "Remix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。",
+        "childIds": [
+          "g-20675"
+        ]
+      },
+      {
+        "id": "f-20790",
+        "name": "实验电子补遗",
+        "zh": "",
+        "color": "muted",
+        "archive": false,
+        "supplement": true,
+        "count": 11,
+        "line": 20790,
+        "intro": "这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成音轨，Live Coding 与 Algorave 关心代码如何在现场实时生成音乐。它们的共同点是：音乐的重心从\"写什么音符\"移到了\"用什么方法产生声音\"。这也是实验电子最核心的贡献——它把制作过程本身变成了作品的一部分。 例曲：Various - Experimental Electronic",
+        "introSummary": "这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成…",
+        "childIds": [
+          "g-20822",
+          "g-20834",
+          "g-20846",
+          "g-20858",
+          "g-20870",
+          "g-20882",
+          "g-20894",
+          "g-20906",
+          "g-20918",
+          "g-20930",
+          "g-20942"
+        ]
+      },
+      {
+        "id": "f-20955",
+        "name": "风格补遗",
+        "zh": "",
+        "color": "muted",
+        "archive": false,
+        "supplement": true,
+        "count": 32,
+        "line": 20955,
+        "intro": "这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。它们分布在 House、Hardcore、Trance、Drum & Bass、UK Garage、Dubstep、Ambient、Reggae、Techno、Regional、Hauntology 等族下，按\"同一族内的上下位关系\"排列，不单独成族。补录的原则与本地分类库一致：只记录有明确听辨特征与来源的说法，不补写没有依据的内容。 例曲：Various - Genre Supplement",
+        "introSummary": "这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。",
+        "childIds": [
+          "g-21029",
+          "g-21041",
+          "g-21051",
+          "g-21061",
+          "g-21073",
+          "g-21085",
+          "g-21097",
+          "g-21109",
+          "g-21119",
+          "g-21129",
+          "g-21141",
+          "g-21151",
+          "g-21163",
+          "g-21173",
+          "g-21183",
+          "g-21193",
+          "g-21203",
+          "g-21215",
+          "g-21225",
+          "g-21235",
+          "g-21247",
+          "g-21259",
+          "g-21269",
+          "g-21279",
+          "g-21289",
+          "g-21299",
+          "g-21309",
+          "g-21319",
+          "g-21329",
+          "g-21339",
+          "g-21351",
+          "g-21361"
+        ]
+      },
+      {
+        "id": "f-21372",
+        "name": "Hard Dance 补遗",
+        "zh": "",
+        "color": "muted",
+        "archive": false,
+        "supplement": true,
+        "count": 4,
+        "line": 21372,
+        "intro": "这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。这里补录的四项分别对应：Hard House 在英国的本地化形态、Hardstyle 之外的 Neo Rave 回潮、以及同名不同义的 \"Hard House\" 在美国芝加哥的形态。 例曲：Various - Hard Dance Supplement",
+        "introSummary": "这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。",
+        "childIds": [
+          "g-21390",
+          "g-21402",
+          "g-21414",
+          "g-21424"
+        ]
+      },
+      {
+        "id": "f-21437",
+        "name": "摇滚与极端风格补遗",
+        "zh": "",
+        "color": "muted",
+        "archive": false,
+        "supplement": true,
+        "count": 20,
+        "line": 21437,
+        "intro": "这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。补录原则同前：只记录有明确听辨特征与来源的说法。 例曲：Various - Supplement",
+        "introSummary": "这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。",
+        "childIds": [
+          "g-21487",
+          "g-21519",
+          "g-21541",
+          "g-21551",
+          "g-21563",
+          "g-21575",
+          "g-21585",
+          "g-21595",
+          "g-21607",
+          "g-21619",
+          "g-21631",
+          "g-21641",
+          "g-21651",
+          "g-21661",
+          "g-21673",
+          "g-21683",
+          "g-21693"
+        ]
+      },
+      {
+        "id": "f-21704",
+        "name": "Reggae 补遗",
+        "zh": "",
+        "color": "muted",
+        "archive": false,
+        "supplement": true,
+        "count": 1,
+        "line": 21704,
+        "intro": "补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。这一节只补这一个条目，说明 Reggae 与电子音乐的技术血缘——Dub 正是电子音乐中\"制作即作曲\"这一观念的第一个成熟范例。 例曲：Various - Reggae",
+        "introSummary": "补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。",
+        "childIds": [
+          "g-21716"
         ]
       }
     ]
@@ -547,6 +821,7 @@ window.KB_DATA = {
         "g-2065"
       ],
       "archive": false,
+      "supplement": false,
       "count": 122
     },
     {
@@ -589,6 +864,7 @@ window.KB_DATA = {
         "g-2677"
       ],
       "archive": false,
+      "supplement": false,
       "count": 38
     },
     {
@@ -622,6 +898,7 @@ window.KB_DATA = {
         "g-3579"
       ],
       "archive": false,
+      "supplement": false,
       "count": 58
     },
     {
@@ -641,6 +918,7 @@ window.KB_DATA = {
         "g-4775"
       ],
       "archive": false,
+      "supplement": false,
       "count": 96
     },
     {
@@ -664,6 +942,7 @@ window.KB_DATA = {
         "g-5861"
       ],
       "archive": false,
+      "supplement": false,
       "count": 43
     },
     {
@@ -680,6 +959,7 @@ window.KB_DATA = {
         "g-6167"
       ],
       "archive": false,
+      "supplement": false,
       "count": 47
     },
     {
@@ -706,6 +986,7 @@ window.KB_DATA = {
         "g-9036"
       ],
       "archive": false,
+      "supplement": false,
       "count": 160
     },
     {
@@ -723,6 +1004,7 @@ window.KB_DATA = {
         "g-11151"
       ],
       "archive": false,
+      "supplement": false,
       "count": 134
     },
     {
@@ -741,6 +1023,7 @@ window.KB_DATA = {
         "g-11871"
       ],
       "archive": false,
+      "supplement": false,
       "count": 37
     },
     {
@@ -759,6 +1042,7 @@ window.KB_DATA = {
         "g-12434"
       ],
       "archive": false,
+      "supplement": false,
       "count": 43
     },
     {
@@ -786,6 +1070,7 @@ window.KB_DATA = {
         "g-13682"
       ],
       "archive": false,
+      "supplement": false,
       "count": 65
     },
     {
@@ -821,6 +1106,7 @@ window.KB_DATA = {
         "g-15324"
       ],
       "archive": false,
+      "supplement": false,
       "count": 92
     },
     {
@@ -837,6 +1123,7 @@ window.KB_DATA = {
         "g-15462"
       ],
       "archive": false,
+      "supplement": false,
       "count": 32
     },
     {
@@ -859,6 +1146,7 @@ window.KB_DATA = {
         "g-16544"
       ],
       "archive": false,
+      "supplement": false,
       "count": 59
     },
     {
@@ -908,6 +1196,7 @@ window.KB_DATA = {
         "g-17464"
       ],
       "archive": false,
+      "supplement": false,
       "count": 51
     },
     {
@@ -962,6 +1251,7 @@ window.KB_DATA = {
         "g-19114"
       ],
       "archive": false,
+      "supplement": false,
       "count": 109
     },
     {
@@ -989,7 +1279,276 @@ window.KB_DATA = {
         "g-19286"
       ],
       "archive": true,
+      "supplement": false,
       "count": 19
+    },
+    {
+      "id": "f-19330",
+      "name": "Electronic Pop",
+      "rawName": "Electronic Pop(已完成)",
+      "zh": "电子流行",
+      "color": "phosphor",
+      "line": 19330,
+      "intro": "Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。它的历史几乎与合成器本身同步：1970年代，Moog、ARP 等模块化合成器进入录音棚，Kraftwerk、Giorgio Moroder 把机器节拍放进流行歌曲的骨架里；1980年代，Synth-Pop 与新浪漫主义让\"合成器乐队\"成为主流形态，Depeche Mode、Pet Shop Boys、Eurythmics 用鼓机、合成贝斯和冷调人声定义了那个十年；1990年代，Eurodance 与 Eurobeat 把电子流行推向舞池与东亚市场，而 House-Pop 让俱乐部语汇回流到流行副歌。进入2010年代，Hyperpop 与 PC Music 把这种融合推到极端——人声被极端拉伸、失真、切片，变成一种关于\"数字化可爱与过载\"的美学。电子流行始终在做同一件事：把当时最先进的电子音色，装进最容易被记住的歌曲结构里。",
+      "introSummary": "Electronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。",
+      "childIds": [
+        "g-19376"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 23
+    },
+    {
+      "id": "f-19655",
+      "name": "R&B / Rhythm and Blues",
+      "rawName": "R&B / Rhythm and Blues(已完成)",
+      "zh": "节奏布鲁斯",
+      "color": "ice",
+      "line": 19655,
+      "intro": "R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。它的形态在几十年里不断置换：1940–50年代是带有强烈摇摆感与铜管编制的 Jump Blues 与 Doo-Wop；1960年代被 Motown 与 Stax 打磨成结构精密的 Soul；1970年代出现带有交响编制的 Philly Soul 与更粗粝的 Funk 化 R&B；1980年代，鼓机、合成贝斯与采样器进入录音棚，R&B 完成第一次大规模电子化，New Jack Swing 与 Quiet Storm 是这一时期的两个极点。1990年代是 R&B 的黄金年代，制作上大量使用 TR-808/909、合成垫音与多层人声和声。进入2010年代，Trap 的鼓组语汇与氛围化的合成器被引入，形成 Alternative R&B 与 Trap Soul。可以说，R&B 是电子音乐与歌唱传统结合最紧密、也最持久的一条线。 例曲：Papa's Got A Brand New Bag - James Brown",
+      "introSummary": "R&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。",
+      "childIds": [
+        "g-19679"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 7
+    },
+    {
+      "id": "f-19764",
+      "name": "Electronic Rock",
+      "rawName": "Electronic Rock(已完成)",
+      "zh": "电子摇滚",
+      "color": "heat",
+      "line": 19764,
+      "intro": "Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。它的历史可以追溯到1960年代末：The Beatles 在《Revolver》里用磁带循环与人声倒放打开缺口，Pink Floyd 与 King Crimson 把 Mellotron 与合成器变成摇滚编曲的常规配置。1970年代，Kraftwerk 与 Suicide 让\"朋克遇上合成器\"成为可能，德国 Krautrock 与后朋克则提供了结构上的自由。1980年代，New Wave 与 Industrial Rock 把鼓机、采样与失真吉他并置，Nine Inch Nails 与 Ministry 确立了工业摇滚的范式。1990年代，Big Beat 与 Electronicore 让摇滚与电子舞曲的边界进一步模糊；2000年代，Nintendocore 与 Cybergrind 把游戏音效与极端金属拼在一起；2010年代后，Blackgaze 与 Nu Gaze 把 Shoegaze 的噪音墙与黑金属、电子氛围融合。电子摇滚的核心问题始终是：机器与人的演奏如何在同一首曲子里互相不让步，又彼此成立。 例曲：Kashmir - Led Zeppelin",
+      "introSummary": "Electronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。",
+      "childIds": [
+        "g-19802"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 17
+    },
+    {
+      "id": "f-19995",
+      "name": "Funk",
+      "rawName": "Funk(已完成)",
+      "zh": "放克",
+      "color": "heat",
+      "line": 19995,
+      "intro": "Funk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。这种\"Everything is a drum\"的思路，直接定义了此后所有舞曲的骨架。1970年代，Sly Stone 与 Parliament-Funkadelic 把合成器、Clavinet 与 Wah 效果器引入 Funk，形成 P-Funk 的宇宙。1980年代，Prince 与 Zapp 用 LinnDrum、Oberheim 与 Talk Box 把 Funk 推向电子化；同一时期，西海岸的 G-Funk 用 Moog 的滑音 Lead 与缓慢的节拍重新包装了 Funk；而 Miami Bass 与 Electro 则把 808 的 Kick 变成主角。1990年代后，Funk 的语汇被 Hip-Hop、House、Drum & Bass 与 Nu-Disco 大量采样与内化——今天几乎所有电子舞曲的低频与切分处理，都可以追溯到 Funk。 例曲：Papa's Got A Brand New Bag - James Brown",
+      "introSummary": "Funk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。",
+      "childIds": [
+        "g-20027"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 11
+    },
+    {
+      "id": "f-20154",
+      "name": "Chill-Out",
+      "rawName": "Chill-Out(已完成)",
+      "zh": "休闲",
+      "color": "ice",
+      "line": 20154,
+      "intro": "Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。1990年代，Café del Mar 的日落套装、Kruder & Dorfmeister 的慢速重混、Air 与 Zero 7 的合成器流行，把这种\"降速与放松\"的做法发展成一整套声音美学：速度在70–110 BPM、鼓组稀疏或完全消失、大量使用 Rhodes 电钢琴与合成垫音、混响与延迟处理得极为宽阔。它的分支很多：一端靠近 Ambient 与 Downtempo，一端靠近 Trip Hop 与 Nu Jazz，还有一端靠近 Balearic 与 Lounge。Chill-Out 的核心不在于\"安静\"，而在于\"把注意力从舞池转向空间\"——同样的和声与音色，只是被放慢了、拉开了、留白了。 例曲：Teardrop - Massive Attack",
+      "introSummary": "Chill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。",
+      "childIds": [
+        "g-20188"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 12
+    },
+    {
+      "id": "f-20327",
+      "name": "Bass / Club",
+      "rawName": "Bass / Club(已完成)",
+      "zh": "低频俱乐部",
+      "color": "violet",
+      "line": 20327,
+      "intro": "Bass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。它的历史有两条线：一条来自美国南部与东海岸的俱乐部文化——Miami Bass 用 808 的 Long Kick 与极快的念白定义了佛罗里达的舞池；Baltimore Club 与 Jersey Club 把 Breakbeat 切碎、把人声切片循环、用三连音 Kick 制造急停急起；Ghettotech 与 Juke／Footwork 把底特律与芝加哥的速度推到150 BPM 以上，配合舞蹈。另一条来自互联网时代的低音文化——Bérite 把 Jersey Club 与非洲鼓乐结合，Jersey Terror 把节奏做得更暴烈，Snap Music 把极简的鼓与拍手变成钩子。这一族群共同的特征是：低频永远是主角，人声被当作打击乐使用，结构高度重复，完全服务于身体。 例曲：Various - Bass / Club",
+      "introSummary": "Bass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。",
+      "childIds": [
+        "g-20361"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 12
+    },
+    {
+      "id": "f-20492",
+      "name": "Chiptune",
+      "rawName": "Chiptune(已完成)",
+      "zh": "芯片音乐",
+      "color": "phosphor",
+      "line": 20492,
+      "intro": "Chiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片有三个通道加滤波器。作曲家必须在\"只有几条声部\"的条件下写出旋律、低音、鼓组与和声。当这些机器被淘汰、限制消失之后，制作人反而开始主动追求这种限制带来的音色：方波的尖锐、噪声通道的沙哑、琶音器模拟和弦的错觉、以及通道数不足逼出来的极简编配。Chiptune 因此成为\"限制即风格\"的典范——它证明音色的辨识度可以来自工具，而不只是来自创作意图。 例曲：The Moon (8-bit Version) - 殿村裕誠",
+      "introSummary": "Chiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片…",
+      "childIds": [
+        "g-20524"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 11
+    },
+    {
+      "id": "f-20645",
+      "name": "Remix & Edit",
+      "rawName": "Remix & Edit(已完成)",
+      "zh": "重混与编辑",
+      "color": "ice",
+      "line": 20645,
+      "intro": "Remix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。这一族的边界由技术与法律共同划定——从1970年代 DJ 用双唱盘把两首歌拼在一起，到1980年代采样器让\"取一段素材重做一首歌\"成为常规，再到2000年代后互联网让任何人都能对任意歌曲进行速度与音高的重新处理。它的手法其实高度一致：改变速度、改变音高、切碎素材、叠加层、重新编排结构。区别只在于\"改动多少\"与\"是否获得授权\"。理解这一族对制作学习特别有价值，因为它是\"结构可以被拆开重装\"这一观念最直接的证明。 例曲：Various - Remix & Edit",
+      "introSummary": "Remix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。",
+      "childIds": [
+        "g-20675"
+      ],
+      "archive": false,
+      "supplement": false,
+      "count": 10
+    },
+    {
+      "id": "f-20790",
+      "name": "实验电子补遗",
+      "rawName": "实验电子补遗(已完成)",
+      "zh": "",
+      "color": "muted",
+      "line": 20790,
+      "intro": "这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成音轨，Live Coding 与 Algorave 关心代码如何在现场实时生成音乐。它们的共同点是：音乐的重心从\"写什么音符\"移到了\"用什么方法产生声音\"。这也是实验电子最核心的贡献——它把制作过程本身变成了作品的一部分。 例曲：Various - Experimental Electronic",
+      "introSummary": "这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成…",
+      "childIds": [
+        "g-20822",
+        "g-20834",
+        "g-20846",
+        "g-20858",
+        "g-20870",
+        "g-20882",
+        "g-20894",
+        "g-20906",
+        "g-20918",
+        "g-20930",
+        "g-20942"
+      ],
+      "archive": false,
+      "supplement": true,
+      "count": 11
+    },
+    {
+      "id": "f-20955",
+      "name": "风格补遗",
+      "rawName": "风格补遗(已完成)",
+      "zh": "",
+      "color": "muted",
+      "line": 20955,
+      "intro": "这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。它们分布在 House、Hardcore、Trance、Drum & Bass、UK Garage、Dubstep、Ambient、Reggae、Techno、Regional、Hauntology 等族下，按\"同一族内的上下位关系\"排列，不单独成族。补录的原则与本地分类库一致：只记录有明确听辨特征与来源的说法，不补写没有依据的内容。 例曲：Various - Genre Supplement",
+      "introSummary": "这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。",
+      "childIds": [
+        "g-21029",
+        "g-21041",
+        "g-21051",
+        "g-21061",
+        "g-21073",
+        "g-21085",
+        "g-21097",
+        "g-21109",
+        "g-21119",
+        "g-21129",
+        "g-21141",
+        "g-21151",
+        "g-21163",
+        "g-21173",
+        "g-21183",
+        "g-21193",
+        "g-21203",
+        "g-21215",
+        "g-21225",
+        "g-21235",
+        "g-21247",
+        "g-21259",
+        "g-21269",
+        "g-21279",
+        "g-21289",
+        "g-21299",
+        "g-21309",
+        "g-21319",
+        "g-21329",
+        "g-21339",
+        "g-21351",
+        "g-21361"
+      ],
+      "archive": false,
+      "supplement": true,
+      "count": 32
+    },
+    {
+      "id": "f-21372",
+      "name": "Hard Dance 补遗",
+      "rawName": "Hard Dance 补遗(已完成)",
+      "zh": "",
+      "color": "muted",
+      "line": 21372,
+      "intro": "这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。这里补录的四项分别对应：Hard House 在英国的本地化形态、Hardstyle 之外的 Neo Rave 回潮、以及同名不同义的 \"Hard House\" 在美国芝加哥的形态。 例曲：Various - Hard Dance Supplement",
+      "introSummary": "这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。",
+      "childIds": [
+        "g-21390",
+        "g-21402",
+        "g-21414",
+        "g-21424"
+      ],
+      "archive": false,
+      "supplement": true,
+      "count": 4
+    },
+    {
+      "id": "f-21437",
+      "name": "摇滚与极端风格补遗",
+      "rawName": "摇滚与极端风格补遗(已完成)",
+      "zh": "",
+      "color": "muted",
+      "line": 21437,
+      "intro": "这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。补录原则同前：只记录有明确听辨特征与来源的说法。 例曲：Various - Supplement",
+      "introSummary": "这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。",
+      "childIds": [
+        "g-21487",
+        "g-21519",
+        "g-21541",
+        "g-21551",
+        "g-21563",
+        "g-21575",
+        "g-21585",
+        "g-21595",
+        "g-21607",
+        "g-21619",
+        "g-21631",
+        "g-21641",
+        "g-21651",
+        "g-21661",
+        "g-21673",
+        "g-21683",
+        "g-21693"
+      ],
+      "archive": false,
+      "supplement": true,
+      "count": 20
+    },
+    {
+      "id": "f-21704",
+      "name": "Reggae 补遗",
+      "rawName": "Reggae 补遗(已完成)",
+      "zh": "",
+      "color": "muted",
+      "line": 21704,
+      "intro": "补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。这一节只补这一个条目，说明 Reggae 与电子音乐的技术血缘——Dub 正是电子音乐中\"制作即作曲\"这一观念的第一个成熟范例。 例曲：Various - Reggae",
+      "introSummary": "补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。",
+      "childIds": [
+        "g-21716"
+      ],
+      "archive": false,
+      "supplement": true,
+      "count": 1
     }
   ],
   "entries": [
@@ -1667,7 +2226,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-19520",
+          "fromName": "Eurodance",
+          "type": "up"
+        }
+      ]
     },
     {
       "id": "g-489",
@@ -3177,7 +3742,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Disco",
@@ -3318,6 +3883,16 @@ window.KB_DATA = {
           "fromId": "g-18330",
           "fromName": "Disco Pop",
           "type": "down"
+        },
+        {
+          "fromId": "g-19486",
+          "fromName": "Dance-Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20131",
+          "fromName": "Future Funk",
+          "type": "up"
         }
       ]
     },
@@ -3975,7 +4550,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-20385",
+          "fromName": "Club",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-925",
@@ -4060,6 +4641,16 @@ window.KB_DATA = {
           "fromId": "g-939",
           "fromName": "Jersey Club",
           "type": "up"
+        },
+        {
+          "fromId": "g-20385",
+          "fromName": "Club",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20437",
+          "fromName": "East Coast Club",
+          "type": "down"
         }
       ]
     },
@@ -4164,6 +4755,36 @@ window.KB_DATA = {
           "fromId": "g-15146",
           "fromName": "Deconstructed Club",
           "type": "up"
+        },
+        {
+          "fromId": "g-20385",
+          "fromName": "Club",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20397",
+          "fromName": "Bérite",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20407",
+          "fromName": "Jigg",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20417",
+          "fromName": "Jook",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20427",
+          "fromName": "Jersey Terror",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20437",
+          "fromName": "East Coast Club",
+          "type": "down"
         }
       ]
     },
@@ -4315,6 +4936,11 @@ window.KB_DATA = {
         {
           "fromId": "g-925",
           "fromName": "Baltimore Club",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20437",
+          "fromName": "East Coast Club",
           "type": "down"
         }
       ]
@@ -5514,8 +6140,8 @@ window.KB_DATA = {
         "down": [],
         "related": [
           {
-            "name": "Nu-Jazz",
-            "id": null
+            "name": "Nu Jazz",
+            "id": "g-20224"
           }
         ]
       },
@@ -6391,7 +7017,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           }
         ],
         "down": [],
@@ -6511,8 +7137,8 @@ window.KB_DATA = {
             "id": "g-1135"
           },
           {
-            "name": "Bass Music",
-            "id": null
+            "name": "Bass / Club",
+            "id": "g-20361"
           }
         ],
         "down": [],
@@ -6569,6 +7195,11 @@ window.KB_DATA = {
         {
           "fromId": "g-5403",
           "fromName": "UK Jackin'",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20373",
+          "fromName": "Bass",
           "type": "down"
         }
       ]
@@ -8675,7 +9306,7 @@ window.KB_DATA = {
           },
           {
             "name": "R&B",
-            "id": null
+            "id": "g-19679"
           },
           {
             "name": "Jazz",
@@ -8790,6 +9421,11 @@ window.KB_DATA = {
           "fromId": "g-1979",
           "fromName": "Belgian Jump",
           "type": "up"
+        },
+        {
+          "fromId": "g-21029",
+          "fromName": "Hard House",
+          "type": "down"
         }
       ]
     },
@@ -8910,6 +9546,11 @@ window.KB_DATA = {
         {
           "fromId": "g-1723",
           "fromName": "UC Hard House",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21029",
+          "fromName": "Hard House",
           "type": "down"
         }
       ]
@@ -9287,6 +9928,16 @@ window.KB_DATA = {
           "fromId": "g-19260",
           "fromName": "Bumping",
           "type": "up"
+        },
+        {
+          "fromId": "g-21029",
+          "fromName": "Hard House",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21390",
+          "fromName": "Hard House (UK)",
+          "type": "up"
         }
       ]
     },
@@ -9463,8 +10114,8 @@ window.KB_DATA = {
             "id": "g-8349"
           },
           {
-            "name": "Old School Happycore",
-            "id": "g-8032"
+            "name": "UK Hardcore",
+            "id": "g-21085"
           },
           {
             "name": "Bouncy Techno",
@@ -9631,6 +10282,11 @@ window.KB_DATA = {
           "fromId": "g-19260",
           "fromName": "Bumping",
           "type": "up"
+        },
+        {
+          "fromId": "g-21390",
+          "fromName": "Hard House (UK)",
+          "type": "down"
         }
       ]
     },
@@ -9926,7 +10582,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-21390",
+          "fromName": "Hard House (UK)",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-1947",
@@ -9964,8 +10626,8 @@ window.KB_DATA = {
             "id": "g-1855"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "UK Hard House",
@@ -10148,8 +10810,8 @@ window.KB_DATA = {
             "id": "g-7027"
           },
           {
-            "name": "Old School Happycore",
-            "id": "g-8032"
+            "name": "UK Hardcore",
+            "id": "g-21085"
           },
           {
             "name": "UC Hard House",
@@ -10235,8 +10897,8 @@ window.KB_DATA = {
             "id": "g-1807"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           }
         ],
         "down": [],
@@ -11790,8 +12452,8 @@ window.KB_DATA = {
             "id": null
           },
           {
-            "name": "Nu-Jazz",
-            "id": null
+            "name": "Nu Jazz",
+            "id": "g-20224"
           }
         ],
         "down": [],
@@ -15624,7 +16286,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Psychedelic Trance",
-            "id": null
+            "id": "g-21619"
           },
           {
             "name": "New Beat",
@@ -15960,7 +16622,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Psychedelic Trance",
-            "id": null
+            "id": "g-21619"
           },
           {
             "name": "Goa Trance",
@@ -16106,6 +16768,11 @@ window.KB_DATA = {
           "fromId": "g-15548",
           "fromName": "Frankfurt Sound",
           "type": "down"
+        },
+        {
+          "fromId": "g-21619",
+          "fromName": "Psychedelic Trance",
+          "type": "up"
         }
       ]
     },
@@ -16220,6 +16887,11 @@ window.KB_DATA = {
           "fromId": "g-3419",
           "fromName": "Twilight Full-On",
           "type": "up"
+        },
+        {
+          "fromId": "g-21619",
+          "fromName": "Psychedelic Trance",
+          "type": "down"
         }
       ]
     },
@@ -16814,6 +17486,11 @@ window.KB_DATA = {
           "fromId": "g-3435",
           "fromName": "J-Hi-Tech",
           "type": "up"
+        },
+        {
+          "fromId": "g-21619",
+          "fromName": "Psychedelic Trance",
+          "type": "down"
         }
       ]
     },
@@ -17261,6 +17938,16 @@ window.KB_DATA = {
           "fromId": "g-3509",
           "fromName": "Zenonesque",
           "type": "up"
+        },
+        {
+          "fromId": "g-21141",
+          "fromName": "Chillgressive",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21619",
+          "fromName": "Psychedelic Trance",
+          "type": "down"
         }
       ]
     },
@@ -17496,6 +18183,11 @@ window.KB_DATA = {
           "fromId": "g-2893",
           "fromName": "Deep Trance",
           "type": "up"
+        },
+        {
+          "fromId": "g-21129",
+          "fromName": "Psybient",
+          "type": "down"
         }
       ]
     },
@@ -18094,6 +18786,31 @@ window.KB_DATA = {
         {
           "fromId": "g-17922",
           "fromName": "Digital Hardcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20109",
+          "fromName": "Nu-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20121",
+          "fromName": "Ghetto Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20600",
+          "fromName": "Chipbreak",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21183",
+          "fromName": "Dark Breaks",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21193",
+          "fromName": "Experimental Breaks",
           "type": "up"
         }
       ]
@@ -19003,7 +19720,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Soul",
@@ -19848,6 +20565,11 @@ window.KB_DATA = {
           "fromId": "g-4651",
           "fromName": "Chipcore",
           "type": "down"
+        },
+        {
+          "fromId": "g-20600",
+          "fromName": "Chipbreak",
+          "type": "down"
         }
       ]
     },
@@ -20038,11 +20760,11 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "R&B",
-            "id": null
+            "id": "g-19679"
           },
           {
             "name": "Indonesian Folk",
@@ -20588,7 +21310,7 @@ window.KB_DATA = {
           },
           {
             "name": "Hard House",
-            "id": null
+            "id": "g-21029"
           },
           {
             "name": "New Jack Swing",
@@ -20688,8 +21410,8 @@ window.KB_DATA = {
             "id": "g-4775"
           },
           {
-            "name": "Old School Happycore",
-            "id": "g-8032"
+            "name": "UK Hardcore",
+            "id": "g-21085"
           }
         ],
         "related": []
@@ -20826,6 +21548,11 @@ window.KB_DATA = {
         {
           "fromId": "g-19182",
           "fromName": "Breakcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21061",
+          "fromName": "Darkcore",
           "type": "up"
         }
       ]
@@ -21596,7 +22323,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "Dancehall",
@@ -21941,6 +22668,11 @@ window.KB_DATA = {
           "fromId": "g-4837",
           "fromName": "Darkstep",
           "type": "up"
+        },
+        {
+          "fromId": "g-21061",
+          "fromName": "Darkcore",
+          "type": "down"
         }
       ]
     },
@@ -22827,8 +23559,8 @@ window.KB_DATA = {
             "id": "g-4269"
           },
           {
-            "name": "Old School Happycore",
-            "id": "g-8032"
+            "name": "UK Hardcore",
+            "id": "g-21085"
           },
           {
             "name": "Mashcore",
@@ -22905,7 +23637,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           },
           {
             "name": "Breakcore",
@@ -23409,7 +24141,7 @@ window.KB_DATA = {
           },
           {
             "name": "Dariacore",
-            "id": null
+            "id": "g-19562"
           }
         ],
         "related": []
@@ -23700,8 +24432,8 @@ window.KB_DATA = {
             "id": "g-4923"
           },
           {
-            "name": "Dancefloor Drum & Bass",
-            "id": null
+            "name": "Dancefloor Drum and Bass",
+            "id": "g-21203"
           },
           {
             "name": "Artcore",
@@ -23914,6 +24646,21 @@ window.KB_DATA = {
         {
           "fromId": "g-19182",
           "fromName": "Breakcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21203",
+          "fromName": "Dancefloor Drum and Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21215",
+          "fromName": "Deep Drum and Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21225",
+          "fromName": "Glitchbreak",
           "type": "up"
         }
       ]
@@ -25811,8 +26558,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Dancefloor Drum & Bass",
-            "id": null
+            "name": "Dancefloor Drum and Bass",
+            "id": "g-21203"
           },
           {
             "name": "Trance",
@@ -26112,7 +26859,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           }
         ],
         "down": [
@@ -26256,6 +27003,31 @@ window.KB_DATA = {
           "fromId": "g-15076",
           "fromName": "NEO-Trance",
           "type": "up"
+        },
+        {
+          "fromId": "g-20099",
+          "fromName": "UK Funky",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21235",
+          "fromName": "Proto-Dubstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21259",
+          "fromName": "Weightless",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21269",
+          "fromName": "Sublow",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21279",
+          "fromName": "4×4 Garage",
+          "type": "up"
         }
       ]
     },
@@ -26327,6 +27099,11 @@ window.KB_DATA = {
           "fromId": "g-5677",
           "fromName": "UK Dubstep",
           "type": "up"
+        },
+        {
+          "fromId": "g-21235",
+          "fromName": "Proto-Dubstep",
+          "type": "down"
         }
       ]
     },
@@ -27597,6 +28374,16 @@ window.KB_DATA = {
           "fromId": "g-15146",
           "fromName": "Deconstructed Club",
           "type": "up"
+        },
+        {
+          "fromId": "g-21259",
+          "fromName": "Weightless",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21269",
+          "fromName": "Sublow",
+          "type": "up"
         }
       ]
     },
@@ -27631,7 +28418,7 @@ window.KB_DATA = {
           },
           {
             "name": "Indie Rock",
-            "id": null
+            "id": "g-19926"
           }
         ],
         "down": [],
@@ -28174,6 +28961,11 @@ window.KB_DATA = {
           "fromId": "g-13576",
           "fromName": "Lei Music",
           "type": "up"
+        },
+        {
+          "fromId": "g-20373",
+          "fromName": "Bass",
+          "type": "down"
         }
       ]
     },
@@ -28587,7 +29379,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-21247",
+          "fromName": "Tearout",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-5735",
@@ -29062,7 +29860,7 @@ window.KB_DATA = {
           },
           {
             "name": "Alternative R&B",
-            "id": null
+            "id": "g-19715"
           },
           {
             "name": "UK Funky",
@@ -29322,8 +30120,8 @@ window.KB_DATA = {
         ],
         "related": [
           {
-            "name": "PC Music",
-            "id": null
+            "name": "Hyperpop",
+            "id": "g-19548"
           }
         ]
       },
@@ -29430,6 +30228,11 @@ window.KB_DATA = {
           "fromId": "g-6636",
           "fromName": "Substep",
           "type": "up"
+        },
+        {
+          "fromId": "g-20373",
+          "fromName": "Bass",
+          "type": "down"
         }
       ]
     },
@@ -29574,7 +30377,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "Dancehall",
@@ -30852,7 +31655,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           }
         ],
         "down": [],
@@ -30877,7 +31680,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-21716",
+          "fromName": "Reggae",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-6207",
@@ -31162,7 +31971,7 @@ window.KB_DATA = {
           },
           {
             "name": "Tearout",
-            "id": null
+            "id": "g-21247"
           },
           {
             "name": "Slam Down",
@@ -32381,8 +33190,8 @@ window.KB_DATA = {
             "id": "g-6167"
           },
           {
-            "name": "EDM Trap",
-            "id": "g-10453"
+            "name": "Trap EDM",
+            "id": "g-21661"
           }
         ],
         "down": [
@@ -32939,12 +33748,12 @@ window.KB_DATA = {
             "id": "g-6167"
           },
           {
-            "name": "Psy (Rock/Trance)",
-            "id": null
+            "name": "Psychedelic Trance",
+            "id": "g-21619"
           },
           {
             "name": "Shoegaze",
-            "id": null
+            "id": "g-19914"
           }
         ],
         "down": [],
@@ -33299,6 +34108,41 @@ window.KB_DATA = {
           "fromId": "g-15246",
           "fromName": "Tänzelcore",
           "type": "up"
+        },
+        {
+          "fromId": "g-20612",
+          "fromName": "Chipcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21051",
+          "fromName": "Drillcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21061",
+          "fromName": "Darkcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21073",
+          "fromName": "Dark Gabber",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21085",
+          "fromName": "UK Hardcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21097",
+          "fromName": "Hardtek",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21109",
+          "fromName": "Frenchcore",
+          "type": "up"
         }
       ]
     },
@@ -33613,6 +34457,11 @@ window.KB_DATA = {
         {
           "fromId": "g-19318",
           "fromName": "German Happy Gabber（待写）",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21073",
+          "fromName": "Dark Gabber",
           "type": "up"
         }
       ]
@@ -34468,7 +35317,7 @@ window.KB_DATA = {
           },
           {
             "name": "Darkcore",
-            "id": null
+            "id": "g-21061"
           },
           {
             "name": "Newskool Industrial Hardcore",
@@ -34538,11 +35387,11 @@ window.KB_DATA = {
           },
           {
             "name": "Darkcore",
-            "id": null
+            "id": "g-21061"
           },
           {
             "name": "Frenchcore",
-            "id": null
+            "id": "g-21109"
           },
           {
             "name": "Crossbreed",
@@ -34727,7 +35576,7 @@ window.KB_DATA = {
           },
           {
             "name": "Frenchcore",
-            "id": null
+            "id": "g-21109"
           }
         ],
         "related": []
@@ -36571,7 +37420,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           }
         ],
         "related": []
@@ -36659,6 +37508,11 @@ window.KB_DATA = {
         {
           "fromId": "g-17168",
           "fromName": "Shangaan Electro",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21097",
+          "fromName": "Hardtek",
           "type": "up"
         }
       ]
@@ -37351,11 +38205,11 @@ window.KB_DATA = {
           },
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           },
           {
             "name": "Frenchcore",
-            "id": null
+            "id": "g-21109"
           }
         ],
         "down": [
@@ -37516,7 +38370,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           },
           {
             "name": "Tribe",
@@ -37582,7 +38436,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           },
           {
             "name": "Belgian Techno",
@@ -38085,7 +38939,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           },
           {
             "name": "French Tek",
@@ -38156,11 +39010,11 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Frenchcore",
-            "id": null
+            "id": "g-21109"
           },
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           }
         ],
         "down": [
@@ -38330,8 +39184,8 @@ window.KB_DATA = {
             "id": "g-7908"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Hardcore (Mainstream)",
@@ -38447,6 +39301,11 @@ window.KB_DATA = {
           "fromId": "g-7882",
           "fromName": "Frenchcore (Modern)",
           "type": "down"
+        },
+        {
+          "fromId": "g-21109",
+          "fromName": "Frenchcore",
+          "type": "down"
         }
       ]
     },
@@ -38479,15 +39338,15 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           },
           {
             "name": "Frenchcore",
-            "id": null
+            "id": "g-21109"
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           }
         ],
         "down": [
@@ -38764,7 +39623,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "Ragga Jungle",
@@ -39350,7 +40209,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Freefrom Hardcore",
@@ -39384,29 +40243,9 @@ window.KB_DATA = {
       ],
       "backlinks": [
         {
-          "fromId": "g-1839",
-          "fromName": "Spanish Hard House",
-          "type": "up"
-        },
-        {
-          "fromId": "g-1979",
-          "fromName": "Belgian Jump",
-          "type": "up"
-        },
-        {
-          "fromId": "g-4269",
-          "fromName": "Breakbeat Hardcore",
-          "type": "down"
-        },
-        {
           "fromId": "g-4305",
           "fromName": "Piano Hardcore",
           "type": "down"
-        },
-        {
-          "fromId": "g-4633",
-          "fromName": "Ravecore",
-          "type": "up"
         },
         {
           "fromId": "g-7053",
@@ -39462,6 +40301,11 @@ window.KB_DATA = {
           "fromId": "g-15598",
           "fromName": "Hard Beat",
           "type": "down"
+        },
+        {
+          "fromId": "g-21085",
+          "fromName": "UK Hardcore",
+          "type": "up"
         }
       ]
     },
@@ -39574,7 +40418,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "J-Trancecore",
@@ -39619,13 +40463,8 @@ window.KB_DATA = {
           "type": "up"
         },
         {
-          "fromId": "g-17880",
+          "fromId": "g-19858",
           "fromName": "Electronicore",
-          "type": "down"
-        },
-        {
-          "fromId": "g-18826",
-          "fromName": "Trance Metal",
           "type": "down"
         }
       ]
@@ -40206,7 +41045,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           }
         ],
         "down": [
@@ -40294,7 +41133,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           }
         ],
         "down": [
@@ -40360,7 +41199,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Electro House",
@@ -40433,7 +41272,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Euphoric Hardstyle",
@@ -40504,7 +41343,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           }
         ],
         "down": [],
@@ -40556,8 +41395,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "UK Hardcore (Modern)",
-            "id": null
+            "name": "UK Hardcore",
+            "id": "g-21085"
           },
           {
             "name": "Raw Hardstyle",
@@ -40918,7 +41757,7 @@ window.KB_DATA = {
           },
           {
             "name": "Dariacore",
-            "id": null
+            "id": "g-19562"
           }
         ],
         "related": []
@@ -41050,8 +41889,8 @@ window.KB_DATA = {
             "id": "g-6989"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           }
         ],
         "related": []
@@ -41086,6 +41925,21 @@ window.KB_DATA = {
         {
           "fromId": "g-11871",
           "fromName": "Hands Up (2 stage)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21029",
+          "fromName": "Hard House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21402",
+          "fromName": "Hardstyle (Base)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21414",
+          "fromName": "Neo Rave",
           "type": "up"
         }
       ]
@@ -41488,7 +42342,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           }
         ],
         "down": [
@@ -41911,8 +42765,8 @@ window.KB_DATA = {
             "id": "g-1855"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "UK Hard House",
@@ -41952,6 +42806,11 @@ window.KB_DATA = {
         {
           "fromId": "g-19260",
           "fromName": "Bumping",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21390",
+          "fromName": "Hard House (UK)",
           "type": "down"
         }
       ]
@@ -42311,7 +43170,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Techno",
@@ -42559,7 +43418,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Hardtek",
-            "id": null
+            "id": "g-21097"
           },
           {
             "name": "Jumpstyle",
@@ -42861,8 +43720,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Dubstep",
@@ -43002,6 +43861,11 @@ window.KB_DATA = {
           "fromId": "g-8656",
           "fromName": "Rawphoric",
           "type": "up"
+        },
+        {
+          "fromId": "g-21402",
+          "fromName": "Hardstyle (Base)",
+          "type": "down"
         }
       ]
     },
@@ -43116,6 +43980,16 @@ window.KB_DATA = {
         {
           "fromId": "g-8730",
           "fromName": "Experimental Rawstyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21402",
+          "fromName": "Hardstyle (Base)",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21631",
+          "fromName": "Raw Trance",
           "type": "up"
         }
       ]
@@ -43611,8 +44485,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Jumpstyle",
@@ -43689,8 +44563,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           }
         ],
         "down": [
@@ -43833,8 +44707,8 @@ window.KB_DATA = {
             "id": null
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Freestyle",
@@ -43897,8 +44771,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Lento Violento",
@@ -43957,12 +44831,12 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Hardcore",
@@ -44030,8 +44904,8 @@ window.KB_DATA = {
             "id": null
           },
           {
-            "name": "EDM Trap",
-            "id": "g-10453"
+            "name": "Trap EDM",
+            "id": "g-21661"
           }
         ],
         "down": [],
@@ -44094,8 +44968,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Bigroom House",
@@ -44162,8 +45036,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           }
         ],
         "down": [],
@@ -44185,7 +45059,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-21402",
+          "fromName": "Hardstyle (Base)",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-8878",
@@ -44219,8 +45099,8 @@ window.KB_DATA = {
             "id": "g-3285"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Hardcore",
@@ -44665,7 +45545,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Trancecore",
@@ -44845,7 +45725,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "UK Freeform",
@@ -45010,7 +45890,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Mainstream Hardcore",
@@ -45116,7 +45996,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "Old School Happycore",
@@ -45257,7 +46137,7 @@ window.KB_DATA = {
           },
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
             "name": "EDM Hardfloor",
@@ -45512,7 +46392,7 @@ window.KB_DATA = {
           },
           {
             "name": "Frenchcore",
-            "id": null
+            "id": "g-21109"
           }
         ],
         "down": [],
@@ -45622,11 +46502,11 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Dozens Culture",
@@ -45929,6 +46809,46 @@ window.KB_DATA = {
           "fromId": "g-19232",
           "fromName": "Japanese Hip Hop",
           "type": "up"
+        },
+        {
+          "fromId": "g-20063",
+          "fromName": "G-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20212",
+          "fromName": "Trip Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20256",
+          "fromName": "Illbient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20481",
+          "fromName": "Snap Music",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20578",
+          "fromName": "Chip Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20777",
+          "fromName": "Chopped and Screwed",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21329",
+          "fromName": "Electro Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21351",
+          "fromName": "French Hip Hop",
+          "type": "up"
         }
       ]
     },
@@ -46026,7 +46946,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           }
         ],
         "down": [
@@ -47240,6 +48160,16 @@ window.KB_DATA = {
           "fromId": "g-15304",
           "fromName": "Webcore",
           "type": "up"
+        },
+        {
+          "fromId": "g-19926",
+          "fromName": "Indie Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21595",
+          "fromName": "Slacker Rock",
+          "type": "down"
         }
       ]
     },
@@ -47657,8 +48587,8 @@ window.KB_DATA = {
             "id": "g-9829"
           },
           {
-            "name": "Chopped & Screwed",
-            "id": "g-16282"
+            "name": "Chopped and Screwed",
+            "id": "g-20777"
           }
         ],
         "down": [],
@@ -47859,7 +48789,7 @@ window.KB_DATA = {
           },
           {
             "name": "Digicore",
-            "id": null
+            "id": "g-19574"
           },
           {
             "name": "Phonk",
@@ -48050,6 +48980,11 @@ window.KB_DATA = {
           "fromId": "g-16160",
           "fromName": "Glitch",
           "type": "down"
+        },
+        {
+          "fromId": "g-20906",
+          "fromName": "Colour Hop",
+          "type": "up"
         }
       ]
     },
@@ -48875,8 +49810,8 @@ window.KB_DATA = {
             "id": "g-9979"
           },
           {
-            "name": "Chopped & Screwed",
-            "id": "g-16282"
+            "name": "Chopped and Screwed",
+            "id": "g-20777"
           },
           {
             "name": "Gansta Rap",
@@ -49205,6 +50140,16 @@ window.KB_DATA = {
           "fromId": "g-18996",
           "fromName": "Funk Carioca",
           "type": "up"
+        },
+        {
+          "fromId": "g-20447",
+          "fromName": "Electro Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20459",
+          "fromName": "Car Audio Bass",
+          "type": "up"
         }
       ]
     },
@@ -49315,7 +50260,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Car Audio Bass",
-            "id": null
+            "id": "g-20459"
           }
         ],
         "related": []
@@ -50034,6 +50979,21 @@ window.KB_DATA = {
           "fromId": "g-15764",
           "fromName": "Witch House Rap",
           "type": "up"
+        },
+        {
+          "fromId": "g-19703",
+          "fromName": "Trap Soul",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21661",
+          "fromName": "Trap EDM",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21673",
+          "fromName": "Phonkwave",
+          "type": "up"
         }
       ]
     },
@@ -50517,6 +51477,11 @@ window.KB_DATA = {
           "fromId": "g-10263",
           "fromName": "Drift Phonk",
           "type": "up"
+        },
+        {
+          "fromId": "g-21673",
+          "fromName": "Phonkwave",
+          "type": "up"
         }
       ]
     },
@@ -50641,7 +51606,7 @@ window.KB_DATA = {
           },
           {
             "name": "Hard House",
-            "id": null
+            "id": "g-21029"
           }
         ],
         "down": [
@@ -51478,7 +52443,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           }
         ],
         "down": [],
@@ -51587,16 +52552,6 @@ window.KB_DATA = {
         "g-10621"
       ],
       "backlinks": [
-        {
-          "fromId": "g-6472",
-          "fromName": "Trapstep",
-          "type": "up"
-        },
-        {
-          "fromId": "g-8834",
-          "fromName": "Trapstyle",
-          "type": "up"
-        },
         {
           "fromId": "g-10159",
           "fromName": "Trap",
@@ -54564,7 +55519,7 @@ window.KB_DATA = {
           },
           {
             "name": "Contemporary R&B",
-            "id": null
+            "id": "g-19691"
           }
         ],
         "down": [
@@ -55460,7 +56415,7 @@ window.KB_DATA = {
           },
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           },
           {
             "name": "J-Pop",
@@ -55750,7 +56705,7 @@ window.KB_DATA = {
           },
           {
             "name": "R&B",
-            "id": null
+            "id": "g-19679"
           },
           {
             "name": "Dubstep",
@@ -55817,7 +56772,7 @@ window.KB_DATA = {
           },
           {
             "name": "Alternative R&B",
-            "id": null
+            "id": "g-19715"
           }
         ],
         "down": [
@@ -55887,7 +56842,7 @@ window.KB_DATA = {
           },
           {
             "name": "Contemporary R&B",
-            "id": null
+            "id": "g-19691"
           },
           {
             "name": "EDM",
@@ -56067,7 +57022,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Philly Soul",
@@ -56084,8 +57039,8 @@ window.KB_DATA = {
             "id": "g-11451"
           },
           {
-            "name": "Boogie",
-            "id": null
+            "name": "Synth Funk",
+            "id": "g-20051"
           }
         ],
         "related": []
@@ -56388,7 +57343,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Eurobeat",
-            "id": null
+            "id": "g-19534"
           },
           {
             "name": "Eurodance",
@@ -56710,12 +57665,12 @@ window.KB_DATA = {
             "id": "g-11415"
           },
           {
-            "name": "Boogie",
-            "id": null
+            "name": "Synth Funk",
+            "id": "g-20051"
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           }
         ],
         "down": [],
@@ -56788,7 +57743,7 @@ window.KB_DATA = {
           },
           {
             "name": "Contemporary R&B",
-            "id": null
+            "id": "g-19691"
           }
         ],
         "down": [
@@ -56800,7 +57755,7 @@ window.KB_DATA = {
         "related": [
           {
             "name": "Synth Funk",
-            "id": null
+            "id": "g-20051"
           }
         ]
       },
@@ -57219,7 +58174,13 @@ window.KB_DATA = {
       "stub": true,
       "stubReason": "empty",
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-19486",
+          "fromName": "Dance-Pop",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-11639",
@@ -57300,7 +58261,7 @@ window.KB_DATA = {
           },
           {
             "name": "Alternative Dance",
-            "id": null
+            "id": "g-21487"
           },
           {
             "name": "Midtempo",
@@ -57558,7 +58519,7 @@ window.KB_DATA = {
           },
           {
             "name": "Eurobeat",
-            "id": null
+            "id": "g-19534"
           }
         ],
         "related": []
@@ -57627,6 +58588,11 @@ window.KB_DATA = {
         {
           "fromId": "g-13118",
           "fromName": "Funktronica",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19534",
+          "fromName": "Eurobeat",
           "type": "up"
         }
       ]
@@ -57812,7 +58778,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Eurobeat",
-            "id": null
+            "id": "g-19534"
           },
           {
             "name": "British Eurobeat",
@@ -57956,7 +58922,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Eurobeat",
-            "id": null
+            "id": "g-19534"
           }
         ],
         "related": []
@@ -58334,6 +59300,11 @@ window.KB_DATA = {
           "fromId": "g-18786",
           "fromName": "Pon-Chak Disco",
           "type": "up"
+        },
+        {
+          "fromId": "g-20735",
+          "fromName": "Nightcore",
+          "type": "up"
         }
       ]
     },
@@ -58427,7 +59398,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "House",
@@ -58453,7 +59424,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-21716",
+          "fromName": "Reggae",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-11815",
@@ -58707,8 +59684,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Italo Dance",
@@ -58826,6 +59803,16 @@ window.KB_DATA = {
         {
           "fromId": "g-8152",
           "fromName": "UK Hardcore (Oldskool)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19520",
+          "fromName": "Eurodance",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21119",
+          "fromName": "Hands Up Trance",
           "type": "up"
         }
       ]
@@ -59286,6 +60273,41 @@ window.KB_DATA = {
         {
           "fromId": "g-19114",
           "fromName": "Soundtrack",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19972",
+          "fromName": "Space Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20188",
+          "fromName": "Chill-Out",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20256",
+          "fromName": "Illbient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21129",
+          "fromName": "Psybient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21151",
+          "fromName": "Minimal Ambient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21163",
+          "fromName": "Compositional Ambient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21173",
+          "fromName": "Dronegaze",
           "type": "up"
         }
       ]
@@ -60058,7 +61080,7 @@ window.KB_DATA = {
           },
           {
             "name": "Progressive Rock",
-            "id": null
+            "id": "g-19948"
           }
         ],
         "down": [
@@ -60101,6 +61123,11 @@ window.KB_DATA = {
         {
           "fromId": "g-12952",
           "fromName": "Horror Synth Revival",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20246",
+          "fromName": "Progressive Chill-Out",
           "type": "up"
         }
       ]
@@ -60654,7 +61681,7 @@ window.KB_DATA = {
           },
           {
             "name": "Shoegaze",
-            "id": null
+            "id": "g-19914"
           }
         ],
         "down": [],
@@ -61353,6 +62380,16 @@ window.KB_DATA = {
           "fromId": "g-18512",
           "fromName": "Hypnagogic Pop",
           "type": "up"
+        },
+        {
+          "fromId": "g-19426",
+          "fromName": "Chillwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19450",
+          "fromName": "Sovietwave",
+          "type": "up"
         }
       ]
     },
@@ -61977,7 +63014,7 @@ window.KB_DATA = {
           },
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           }
         ],
         "down": [],
@@ -62264,6 +63301,11 @@ window.KB_DATA = {
         {
           "fromId": "g-13026",
           "fromName": "Freshwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19438",
+          "fromName": "Chillsynth",
           "type": "up"
         }
       ]
@@ -62996,6 +64038,11 @@ window.KB_DATA = {
           "fromId": "g-12926",
           "fromName": "Horror Synth",
           "type": "up"
+        },
+        {
+          "fromId": "g-19412",
+          "fromName": "Synth-Pop",
+          "type": "down"
         }
       ]
     },
@@ -63432,7 +64479,7 @@ window.KB_DATA = {
           },
           {
             "name": "Synth Funk",
-            "id": null
+            "id": "g-20051"
           }
         ],
         "down": [],
@@ -63548,7 +64595,7 @@ window.KB_DATA = {
           },
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           }
         ],
         "down": [],
@@ -63658,7 +64705,7 @@ window.KB_DATA = {
           },
           {
             "name": "R&B",
-            "id": null
+            "id": "g-19679"
           },
           {
             "name": "Freestyle",
@@ -64098,6 +65145,11 @@ window.KB_DATA = {
           "fromId": "g-13456",
           "fromName": "Algorave",
           "type": "up"
+        },
+        {
+          "fromId": "g-20918",
+          "fromName": "Live Electronics",
+          "type": "down"
         }
       ]
     },
@@ -64253,7 +65305,7 @@ window.KB_DATA = {
           },
           {
             "name": "Synth Funk",
-            "id": null
+            "id": "g-20051"
           },
           {
             "name": "Italo-Disco",
@@ -64325,8 +65377,8 @@ window.KB_DATA = {
         "down": [],
         "related": [
           {
-            "name": "Nu-Jazz",
-            "id": null
+            "name": "Nu Jazz",
+            "id": "g-20224"
           },
           {
             "name": "Electro Jazz",
@@ -64399,11 +65451,11 @@ window.KB_DATA = {
           },
           {
             "name": "Alternative Dance",
-            "id": null
+            "id": "g-21487"
           },
           {
             "name": "Indie Rock",
-            "id": null
+            "id": "g-19926"
           },
           {
             "name": "Synth Pop",
@@ -65215,6 +66267,16 @@ window.KB_DATA = {
           "fromId": "g-14940",
           "fromName": "Dariacore/Hyperflip",
           "type": "up"
+        },
+        {
+          "fromId": "g-19826",
+          "fromName": "Nintendocore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "up"
         }
       ]
     },
@@ -65320,7 +66382,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           }
         ],
         "down": [],
@@ -65421,7 +66483,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           },
           {
             "name": "Bit Music",
@@ -65856,8 +66918,8 @@ window.KB_DATA = {
             "id": "g-13352"
           },
           {
-            "name": "Demoscene",
-            "id": null
+            "name": "Demostyle",
+            "id": "g-20622"
           }
         ],
         "down": [],
@@ -66127,7 +67189,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Livetronica",
-            "id": null
+            "id": "g-20930"
           },
           {
             "name": "Computer Music",
@@ -66155,6 +67217,11 @@ window.KB_DATA = {
         {
           "fromId": "g-13432",
           "fromName": "Computer Music",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20918",
+          "fromName": "Live Electronics",
           "type": "down"
         }
       ]
@@ -66226,6 +67293,11 @@ window.KB_DATA = {
         {
           "fromId": "g-13432",
           "fromName": "Computer Music",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20918",
+          "fromName": "Live Electronics",
           "type": "down"
         }
       ]
@@ -66345,8 +67417,8 @@ window.KB_DATA = {
             "id": "g-9505"
           },
           {
-            "name": "Electro-Boogie",
-            "id": null
+            "name": "Electro-Funk",
+            "id": "g-20039"
           }
         ]
       },
@@ -66448,6 +67520,36 @@ window.KB_DATA = {
         {
           "fromId": "g-19270",
           "fromName": "Electro Techno",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19608",
+          "fromName": "Electroclash",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20039",
+          "fromName": "Electro-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20447",
+          "fromName": "Electro Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21329",
+          "fromName": "Electro Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21361",
+          "fromName": "Minimal Electro",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21509",
+          "fromName": "Electro Punk",
           "type": "up"
         }
       ]
@@ -66609,11 +67711,11 @@ window.KB_DATA = {
           },
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           },
           {
             "name": "Synth Funk",
-            "id": null
+            "id": "g-20051"
           }
         ],
         "down": [],
@@ -67065,8 +68167,8 @@ window.KB_DATA = {
             "id": "g-16246"
           },
           {
-            "name": "Easy Listening",
-            "id": null
+            "name": "Lounge Music",
+            "id": "g-20268"
           }
         ],
         "down": [
@@ -67302,6 +68404,16 @@ window.KB_DATA = {
           "fromId": "g-18624",
           "fromName": "City Pop",
           "type": "down"
+        },
+        {
+          "fromId": "g-20131",
+          "fromName": "Future Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21289",
+          "fromName": "Vaporpop",
+          "type": "up"
         }
       ]
     },
@@ -67454,6 +68566,16 @@ window.KB_DATA = {
         {
           "fromId": "g-16358",
           "fromName": "Deep Internet",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19548",
+          "fromName": "Hyperpop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19574",
+          "fromName": "Digicore",
           "type": "up"
         }
       ]
@@ -68571,6 +69693,11 @@ window.KB_DATA = {
           "fromId": "g-18512",
           "fromName": "Hypnagogic Pop",
           "type": "up"
+        },
+        {
+          "fromId": "g-19426",
+          "fromName": "Chillwave",
+          "type": "down"
         }
       ]
     },
@@ -68907,7 +70034,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "House",
@@ -68981,6 +70108,11 @@ window.KB_DATA = {
           "fromId": "g-18624",
           "fromName": "City Pop",
           "type": "down"
+        },
+        {
+          "fromId": "g-19472",
+          "fromName": "City Pop",
+          "type": "down"
         }
       ]
     },
@@ -69016,8 +70148,8 @@ window.KB_DATA = {
             "id": "g-14226"
           },
           {
-            "name": "Boogie",
-            "id": null
+            "name": "Synth Funk",
+            "id": "g-20051"
           }
         ],
         "down": [],
@@ -69164,6 +70296,11 @@ window.KB_DATA = {
           "fromId": "g-14284",
           "fromName": "Anime Groove",
           "type": "up"
+        },
+        {
+          "fromId": "g-20131",
+          "fromName": "Future Funk",
+          "type": "down"
         }
       ]
     },
@@ -71144,8 +72281,8 @@ window.KB_DATA = {
             "id": "g-14686"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Jumpstyle",
@@ -71539,7 +72676,7 @@ window.KB_DATA = {
         "related": [
           {
             "name": "Nightstep",
-            "id": null
+            "id": "g-20757"
           }
         ]
       },
@@ -71570,6 +72707,11 @@ window.KB_DATA = {
       "backlinks": [
         {
           "fromId": "g-14768",
+          "fromName": "Nightcore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20735",
           "fromName": "Nightcore",
           "type": "down"
         }
@@ -71636,6 +72778,11 @@ window.KB_DATA = {
       "backlinks": [
         {
           "fromId": "g-14768",
+          "fromName": "Nightcore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20735",
           "fromName": "Nightcore",
           "type": "down"
         }
@@ -71733,8 +72880,8 @@ window.KB_DATA = {
             "id": "g-18288"
           },
           {
-            "name": "Bass Music",
-            "id": null
+            "name": "Bass / Club",
+            "id": "g-20361"
           },
           {
             "name": "Bubblegum Bass",
@@ -71771,8 +72918,8 @@ window.KB_DATA = {
             "id": "g-14904"
           },
           {
-            "name": "Hyperflip",
-            "id": null
+            "name": "Dariacore",
+            "id": "g-19562"
           },
           {
             "name": "Sigilkore",
@@ -71980,7 +73127,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Digicore",
-            "id": null
+            "id": "g-19574"
           },
           {
             "name": "Glitchcore",
@@ -72116,7 +73263,7 @@ window.KB_DATA = {
           },
           {
             "name": "Digicore",
-            "id": null
+            "id": "g-19574"
           },
           {
             "name": "JerknB",
@@ -72332,7 +73479,7 @@ window.KB_DATA = {
           },
           {
             "name": "Digicore",
-            "id": null
+            "id": "g-19574"
           },
           {
             "name": "J-Pop",
@@ -72466,7 +73613,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk Mandelão",
-            "id": null
+            "id": "g-20141"
           },
           {
             "name": "Post-Industrial",
@@ -74126,6 +75273,16 @@ window.KB_DATA = {
           "fromId": "g-19182",
           "fromName": "Breakcore",
           "type": "up"
+        },
+        {
+          "fromId": "g-19984",
+          "fromName": "Industrial Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21361",
+          "fromName": "Minimal Electro",
+          "type": "up"
         }
       ]
     },
@@ -74393,11 +75550,11 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Industrial Rock",
-            "id": null
+            "id": "g-19984"
           },
           {
-            "name": "Industrial Metal",
-            "id": null
+            "name": "Electronic Metal",
+            "id": "g-19814"
           },
           {
             "name": "Deconstructed Club",
@@ -76239,12 +77396,12 @@ window.KB_DATA = {
             "id": "g-15462"
           },
           {
-            "name": "Chopped & Screwed",
-            "id": "g-16282"
+            "name": "Chopped and Screwed",
+            "id": "g-20777"
           },
           {
             "name": "Shoegaze",
-            "id": null
+            "id": "g-19914"
           },
           {
             "name": "Dark Wave",
@@ -76609,8 +77766,8 @@ window.KB_DATA = {
             "id": "g-15960"
           },
           {
-            "name": "Acousmatic",
-            "id": null
+            "name": "Acousmatic Music",
+            "id": "g-20822"
           },
           {
             "name": "Experimental",
@@ -76664,6 +77821,11 @@ window.KB_DATA = {
           "fromId": "g-16048",
           "fromName": "Experimental",
           "type": "up"
+        },
+        {
+          "fromId": "g-20822",
+          "fromName": "Acousmatic Music",
+          "type": "up"
         }
       ]
     },
@@ -76711,7 +77873,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Livetronica",
-            "id": null
+            "id": "g-20930"
           }
         ],
         "related": []
@@ -76732,7 +77894,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-20846",
+          "fromName": "Electronic Free Improvisation",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-15960",
@@ -76812,6 +77980,11 @@ window.KB_DATA = {
         {
           "fromId": "g-16358",
           "fromName": "Deep Internet",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20822",
+          "fromName": "Acousmatic Music",
           "type": "up"
         }
       ]
@@ -77182,6 +78355,11 @@ window.KB_DATA = {
           "fromId": "g-16036",
           "fromName": "Biomusic",
           "type": "up"
+        },
+        {
+          "fromId": "g-20858",
+          "fromName": "Field Recording",
+          "type": "up"
         }
       ]
     },
@@ -77424,6 +78602,16 @@ window.KB_DATA = {
         {
           "fromId": "g-17996",
           "fromName": "No Wave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19938",
+          "fromName": "Noise Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21193",
+          "fromName": "Experimental Breaks",
           "type": "up"
         }
       ]
@@ -78210,6 +79398,16 @@ window.KB_DATA = {
           "fromId": "g-18590",
           "fromName": "Glitch Pop",
           "type": "up"
+        },
+        {
+          "fromId": "g-19402",
+          "fromName": "Glitch Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19596",
+          "fromName": "Glitchcore",
+          "type": "up"
         }
       ]
     },
@@ -78938,21 +80136,6 @@ window.KB_DATA = {
         "g-16298"
       ],
       "backlinks": [
-        {
-          "fromId": "g-9799",
-          "fromName": "Surge",
-          "type": "up"
-        },
-        {
-          "fromId": "g-10009",
-          "fromName": "Memphis Rap",
-          "type": "up"
-        },
-        {
-          "fromId": "g-15748",
-          "fromName": "Witch House",
-          "type": "up"
-        },
         {
           "fromId": "g-16246",
           "fromName": "Plunderphonics",
@@ -80969,7 +82152,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "Electronic Music",
@@ -81090,6 +82273,11 @@ window.KB_DATA = {
           "fromId": "g-16830",
           "fromName": "Dubtronica",
           "type": "up"
+        },
+        {
+          "fromId": "g-21716",
+          "fromName": "Reggae",
+          "type": "down"
         }
       ]
     },
@@ -81173,7 +82361,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           }
         ],
         "down": [],
@@ -81209,6 +82397,11 @@ window.KB_DATA = {
         {
           "fromId": "g-16746",
           "fromName": "Dub",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21716",
+          "fromName": "Reggae",
           "type": "down"
         }
       ]
@@ -81247,8 +82440,8 @@ window.KB_DATA = {
             "id": null
           },
           {
-            "name": "PsyBient",
-            "id": null
+            "name": "Psybient",
+            "id": "g-21129"
           }
         ],
         "down": [],
@@ -81510,7 +82703,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           },
           {
             "name": "Electronic Dance Music",
@@ -81597,6 +82790,11 @@ window.KB_DATA = {
           "fromId": "g-17464",
           "fromName": "Vude",
           "type": "up"
+        },
+        {
+          "fromId": "g-21716",
+          "fromName": "Reggae",
+          "type": "down"
         }
       ]
     },
@@ -81793,6 +82991,11 @@ window.KB_DATA = {
           "fromId": "g-18372",
           "fromName": "Dancehall Pop",
           "type": "up"
+        },
+        {
+          "fromId": "g-21716",
+          "fromName": "Reggae",
+          "type": "down"
         }
       ]
     },
@@ -82425,8 +83628,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Euro Beat",
-            "id": null
+            "name": "Eurobeat",
+            "id": "g-19534"
           },
           {
             "name": "Eurodance",
@@ -83259,7 +84462,7 @@ window.KB_DATA = {
           },
           {
             "name": "R&B",
-            "id": null
+            "id": "g-19679"
           }
         ],
         "down": [],
@@ -84171,6 +85374,11 @@ window.KB_DATA = {
           "fromId": "g-10293",
           "fromName": "Brazilian Phonk",
           "type": "up"
+        },
+        {
+          "fromId": "g-20141",
+          "fromName": "Funk Mandelão",
+          "type": "up"
         }
       ]
     },
@@ -84337,7 +85545,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Alternative Dance",
-            "id": null
+            "id": "g-21487"
           },
           {
             "name": "Psy Rock",
@@ -84345,7 +85553,7 @@ window.KB_DATA = {
           },
           {
             "name": "Indie Rock",
-            "id": null
+            "id": "g-19926"
           },
           {
             "name": "Britpop",
@@ -84359,8 +85567,8 @@ window.KB_DATA = {
         "down": [],
         "related": [
           {
-            "name": "Bristol Sound",
-            "id": null
+            "name": "Trip Hop",
+            "id": "g-20212"
           }
         ]
       },
@@ -84425,7 +85633,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Alternative Dance",
-            "id": null
+            "id": "g-21487"
           }
         ],
         "down": [],
@@ -84603,6 +85811,11 @@ window.KB_DATA = {
           "fromId": "g-17968",
           "fromName": "Synth Punk",
           "type": "down"
+        },
+        {
+          "fromId": "g-19802",
+          "fromName": "Electronic Rock",
+          "type": "down"
         }
       ]
     },
@@ -84637,7 +85850,7 @@ window.KB_DATA = {
           },
           {
             "name": "Space Rock",
-            "id": null
+            "id": "g-19972"
           },
           {
             "name": "Hardcore Punk",
@@ -84769,7 +85982,7 @@ window.KB_DATA = {
           },
           {
             "name": "Alternative R&B",
-            "id": null
+            "id": "g-19715"
           }
         ],
         "down": [],
@@ -84820,7 +86033,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Progressive Rock",
-            "id": null
+            "id": "g-19948"
           },
           {
             "name": "Noise",
@@ -84879,6 +86092,11 @@ window.KB_DATA = {
           "fromId": "g-17848",
           "fromName": "Düsseldorf School",
           "type": "up"
+        },
+        {
+          "fromId": "g-19948",
+          "fromName": "Progressive Rock",
+          "type": "down"
         }
       ]
     },
@@ -85207,8 +86425,8 @@ window.KB_DATA = {
             "id": "g-18274"
           },
           {
-            "name": "Trancecore",
-            "id": "g-8058"
+            "name": "Electronicore",
+            "id": "g-19858"
           },
           {
             "name": "Cybergrind",
@@ -85261,6 +86479,11 @@ window.KB_DATA = {
         {
           "fromId": "g-17934",
           "fromName": "Cybergrind",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21541",
+          "fromName": "Electrocore",
           "type": "up"
         }
       ]
@@ -85597,6 +86820,11 @@ window.KB_DATA = {
           "fromId": "g-17922",
           "fromName": "Digital Hardcore",
           "type": "down"
+        },
+        {
+          "fromId": "g-19836",
+          "fromName": "Cybergrind",
+          "type": "down"
         }
       ]
     },
@@ -85705,6 +86933,11 @@ window.KB_DATA = {
         {
           "fromId": "g-18064",
           "fromName": "New Wave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19902",
+          "fromName": "Nu gaze",
           "type": "up"
         }
       ]
@@ -85924,7 +87157,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-19938",
+          "fromName": "Noise Rock",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-18008",
@@ -86176,7 +87415,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-21487",
+          "fromName": "Alternative Dance",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-18050",
@@ -86219,7 +87464,7 @@ window.KB_DATA = {
           },
           {
             "name": "Chiptune",
-            "id": null
+            "id": "g-20524"
           },
           {
             "name": "Synth Pop",
@@ -86383,6 +87628,26 @@ window.KB_DATA = {
         {
           "fromId": "g-18240",
           "fromName": "New Romantism",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19390",
+          "fromName": "Electropop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19412",
+          "fromName": "Synth-Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19460",
+          "fromName": "New Romanticism",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19608",
+          "fromName": "Electroclash",
           "type": "up"
         }
       ]
@@ -87477,6 +88742,11 @@ window.KB_DATA = {
         {
           "fromId": "g-18956",
           "fromName": "Electro/Synth Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20051",
+          "fromName": "Synth Funk",
           "type": "up"
         }
       ]
@@ -88755,7 +90025,7 @@ window.KB_DATA = {
           },
           {
             "name": "Contemporary R&B",
-            "id": null
+            "id": "g-19691"
           },
           {
             "name": "Dance-Pop",
@@ -88763,7 +90033,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Boom Bap",
@@ -88799,6 +90069,11 @@ window.KB_DATA = {
         {
           "fromId": "g-9525",
           "fromName": "Hardcore Hip-Hop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19679",
+          "fromName": "R&B",
           "type": "down"
         }
       ]
@@ -88924,8 +90199,8 @@ window.KB_DATA = {
             "id": "g-18458"
           },
           {
-            "name": "Lounge",
-            "id": null
+            "name": "Lounge Music",
+            "id": "g-20268"
           },
           {
             "name": "Pop Rock",
@@ -89058,6 +90333,11 @@ window.KB_DATA = {
         {
           "fromId": "g-18472",
           "fromName": "Shibuya-kei",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19642",
+          "fromName": "Shibuya-Kei",
           "type": "down"
         }
       ]
@@ -89429,7 +90709,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Psychedelic Rock",
-            "id": null
+            "id": "g-19960"
           },
           {
             "name": "Pop",
@@ -89481,8 +90761,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Chiptune (Plus)",
-            "id": null
+            "name": "Chiptune",
+            "id": "g-20524"
           },
           {
             "name": "Electro Pop",
@@ -89707,7 +90987,7 @@ window.KB_DATA = {
           },
           {
             "name": "Synth Funk",
-            "id": null
+            "id": "g-20051"
           },
           {
             "name": "Jazz Fusion",
@@ -89899,6 +91179,16 @@ window.KB_DATA = {
         {
           "fromId": "g-18700",
           "fromName": "Denpa",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19472",
+          "fromName": "City Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19642",
+          "fromName": "Shibuya-Kei",
           "type": "up"
         }
       ]
@@ -90300,8 +91590,8 @@ window.KB_DATA = {
             "id": null
           },
           {
-            "name": "Bass Music",
-            "id": null
+            "name": "Bass / Club",
+            "id": "g-20361"
           }
         ],
         "down": [
@@ -90863,8 +92153,8 @@ window.KB_DATA = {
         ],
         "down": [
           {
-            "name": "Trancecore",
-            "id": "g-8058"
+            "name": "Electronicore",
+            "id": "g-19858"
           }
         ],
         "related": []
@@ -90891,6 +92181,11 @@ window.KB_DATA = {
         {
           "fromId": "g-18812",
           "fromName": "Synth Metal",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19814",
+          "fromName": "Electronic Metal",
           "type": "down"
         }
       ]
@@ -91001,8 +92296,8 @@ window.KB_DATA = {
             "id": null
           },
           {
-            "name": "Industrial Metal",
-            "id": null
+            "name": "Electronic Metal",
+            "id": "g-19814"
           },
           {
             "name": "Electronic Music",
@@ -91054,8 +92349,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Industrial Metal",
-            "id": null
+            "name": "Electronic Metal",
+            "id": "g-19814"
           },
           {
             "name": "Deathcore",
@@ -91122,8 +92417,8 @@ window.KB_DATA = {
       "relations": {
         "up": [
           {
-            "name": "Industrial Metal",
-            "id": null
+            "name": "Electronic Metal",
+            "id": "g-19814"
           },
           {
             "name": "Neue Deutsche Welle",
@@ -91159,6 +92454,11 @@ window.KB_DATA = {
         {
           "fromId": "g-18076",
           "fromName": "Neue Deutsche Welle",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19984",
+          "fromName": "Industrial Rock",
           "type": "down"
         }
       ]
@@ -91264,7 +92564,7 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Neo Soul",
-            "id": null
+            "id": "g-19727"
           },
           {
             "name": "Future Soul",
@@ -91337,7 +92637,7 @@ window.KB_DATA = {
         "related": [
           {
             "name": "Neo Soul",
-            "id": null
+            "id": "g-19727"
           }
         ]
       },
@@ -91455,8 +92755,8 @@ window.KB_DATA = {
             "id": "g-9479"
           },
           {
-            "name": "Bass Music",
-            "id": null
+            "name": "Bass / Club",
+            "id": "g-20361"
           },
           {
             "name": "Electro Pop",
@@ -91482,7 +92782,13 @@ window.KB_DATA = {
       "stub": false,
       "stubReason": null,
       "childrenIds": [],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-19691",
+          "fromName": "Contemporary R&B",
+          "type": "down"
+        }
+      ]
     },
     {
       "id": "g-18956",
@@ -91509,7 +92815,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Synth Pop",
@@ -91579,7 +92885,7 @@ window.KB_DATA = {
         "up": [
           {
             "name": "Synth Funk",
-            "id": null
+            "id": "g-20051"
           },
           {
             "name": "Dance-Pop",
@@ -91656,7 +92962,7 @@ window.KB_DATA = {
           },
           {
             "name": "Funk",
-            "id": null
+            "id": "g-20027"
           },
           {
             "name": "Comtemporary R&B",
@@ -91691,6 +92997,11 @@ window.KB_DATA = {
         {
           "fromId": "g-9673",
           "fromName": "Jazz Hip-Hop (Old School)",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20075",
+          "fromName": "Jazz Funk",
           "type": "down"
         }
       ]
@@ -92075,11 +93386,11 @@ window.KB_DATA = {
         "down": [
           {
             "name": "Nu Jazz",
-            "id": null
+            "id": "g-20224"
           },
           {
             "name": "Jazz Funk",
-            "id": null
+            "id": "g-20075"
           },
           {
             "name": "ECM Style Jazz",
@@ -92113,7 +93424,7 @@ window.KB_DATA = {
         "related": [
           {
             "name": "Nu Jazz",
-            "id": null
+            "id": "g-20224"
           }
         ]
       },
@@ -92150,7 +93461,18 @@ window.KB_DATA = {
       "childrenIds": [
         "g-19086"
       ],
-      "backlinks": []
+      "backlinks": [
+        {
+          "fromId": "g-19472",
+          "fromName": "City Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19642",
+          "fromName": "Shibuya-Kei",
+          "type": "up"
+        }
+      ]
     },
     {
       "id": "g-19086",
@@ -92873,6 +94195,21 @@ window.KB_DATA = {
           "fromId": "g-17922",
           "fromName": "Digital Hardcore",
           "type": "down"
+        },
+        {
+          "fromId": "g-20600",
+          "fromName": "Chipbreak",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21051",
+          "fromName": "Drillcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21225",
+          "fromName": "Glitchbreak",
+          "type": "up"
         }
       ]
     },
@@ -93161,11 +94498,11 @@ window.KB_DATA = {
         "up": [
           {
             "name": "UK Hardcore",
-            "id": null
+            "id": "g-21085"
           },
           {
-            "name": "Hardstyle",
-            "id": null
+            "name": "Hardstyle (Base)",
+            "id": "g-21402"
           },
           {
             "name": "Trance",
@@ -93476,7 +94813,7 @@ window.KB_DATA = {
           },
           {
             "name": "Reggae",
-            "id": null
+            "id": "g-21716"
           }
         ],
         "down": [
@@ -93607,6 +94944,12890 @@ window.KB_DATA = {
       "stubReason": "empty",
       "childrenIds": [],
       "backlinks": []
+    },
+    {
+      "id": "g-19376",
+      "name": "Electronic Pop",
+      "rawTitle": "Electronic Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 2,
+      "line": 19376,
+      "sourceLine": 19376,
+      "parentId": "f-19330",
+      "pathIds": [
+        "g-19376"
+      ],
+      "pathNames": [
+        "Electronic Pop"
+      ],
+      "aliases": [
+        "电子流行"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Electropop",
+            "id": "g-19390"
+          },
+          {
+            "name": "Synth-Pop",
+            "id": "g-19412"
+          },
+          {
+            "name": "Dance-Pop",
+            "id": "g-19486"
+          },
+          {
+            "name": "Hyperpop",
+            "id": "g-19548"
+          }
+        ],
+        "related": []
+      },
+      "description": "Electronic Pop 是\"以电子音色为主要织体、但服从流行歌曲结构\"的一大类音乐的统称。它不是一个严格的流派界定，而是一个谱系位置：一端靠近纯粹的流行歌曲（副歌、主歌、桥段清晰），另一端靠近舞曲与实验电子。判断一首歌是否属于电子流行，关键不在\"用了多少合成器\"，而在\"电子音色是否承担了歌曲的主要表情\"——如果合成器只是伴奏配色，那更像流行摇滚；如果合成器、鼓机与处理过的人声共同决定了情绪与律动，那它就在这个谱系里。电子流行也是所有电子音乐子风格中与主流唱片工业关系最紧密的一支，很多电子音乐风格正是通过电子流行才被大众听到。",
+      "summary": "Electronic Pop 是\"以电子音色为主要织体、但服从流行歌曲结构\"的一大类音乐的统称。",
+      "examples": [
+        {
+          "title": "Blue Monday",
+          "artist": "New Order",
+          "url": null
+        },
+        {
+          "title": "West End Girls",
+          "artist": "Pet Shop Boys",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19390",
+        "g-19412",
+        "g-19460",
+        "g-19472",
+        "g-19486",
+        "g-19496",
+        "g-19508",
+        "g-19520",
+        "g-19548",
+        "g-19608",
+        "g-19620",
+        "g-19630",
+        "g-19642"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-19390",
+          "fromName": "Electropop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19412",
+          "fromName": "Synth-Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19472",
+          "fromName": "City Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19486",
+          "fromName": "Dance-Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19548",
+          "fromName": "Hyperpop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19608",
+          "fromName": "Electroclash",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19620",
+          "fromName": "Wonky Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19630",
+          "fromName": "Picopop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19642",
+          "fromName": "Shibuya-Kei",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21289",
+          "fromName": "Vaporpop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21339",
+          "fromName": "Country Dance Music",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19390",
+      "name": "Electropop",
+      "rawTitle": "Electropop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19390,
+      "sourceLine": 19390,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19390"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Electropop"
+      ],
+      "aliases": [
+        "Electro-Pop",
+        "Techno-Pop"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "New Wave",
+            "id": "g-18064"
+          }
+        ],
+        "down": [
+          {
+            "name": "Synth-Pop",
+            "id": "g-19412"
+          },
+          {
+            "name": "Chillwave",
+            "id": "g-19426"
+          },
+          {
+            "name": "Glitch Pop",
+            "id": "g-19402"
+          }
+        ],
+        "related": []
+      },
+      "description": "Electropop 指以合成器为主导、节奏偏电子化、结构仍属于流行歌曲的形态。它常被当作 Synth-Pop 的近义词使用，但两者侧重不同：Synth-Pop 更强调合成器音色的\"冷\"与歌曲写作，Electropop 更强调电子化的节奏处理与更硬的音色。2000年代后期，随着软合成器与侧链压缩普及，Electropop 迎来第二次高峰，大量流行歌曲采用四四拍加合成琶音的编配。Electropop 与 EDM 的区别在于：前者服务于歌曲，后者服务于舞池。",
+      "summary": "Electropop 指以合成器为主导、节奏偏电子化、结构仍属于流行歌曲的形态。它常被当作 Synth-Pop 的近义词使用，但两者侧重不同：Synth-Pop 更强调合成器音色的\"冷\"与歌曲写作，Electropop 更强调电子化的节奏处理与更硬的音色。",
+      "examples": [
+        {
+          "title": "Just Dance",
+          "artist": "Lady Gaga",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19402"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-19376",
+          "fromName": "Electronic Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19402",
+          "fromName": "Glitch Pop",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19402",
+      "name": "Glitch Pop",
+      "rawTitle": "Glitch Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19402,
+      "sourceLine": 19402,
+      "parentId": "g-19390",
+      "pathIds": [
+        "g-19376",
+        "g-19390",
+        "g-19402"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Electropop",
+        "Glitch Pop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electropop",
+            "id": "g-19390"
+          },
+          {
+            "name": "Glitch",
+            "id": "g-16160"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Glitch Pop 把故障美学（Glitch）的短促爆音、切片、卡顿引入流行歌曲结构。它不要求整首歌都是破碎的，通常只在过渡、鼓组缝隙或人声尾音处加入被切割的采样与数字爆音，让流行歌产生\"信号出错\"的质感。Glitch Pop 的听感介于甜蜜与不安之间，是2000年代后期到2010年代 Hyperpop 前史的重要一环。",
+      "summary": "Glitch Pop 把故障美学（Glitch）的短促爆音、切片、卡顿引入流行歌曲结构。",
+      "examples": [
+        {
+          "title": "Fembot",
+          "artist": "Robyn",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19390",
+          "fromName": "Electropop",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19412",
+      "name": "Synth-Pop",
+      "rawTitle": "Synth-Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19412,
+      "sourceLine": 19412,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19412"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Synth-Pop"
+      ],
+      "aliases": [
+        "Synthpop",
+        "合成器流行",
+        "Technopop"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "New Wave",
+            "id": "g-18064"
+          }
+        ],
+        "down": [
+          {
+            "name": "Chillwave",
+            "id": "g-19426"
+          },
+          {
+            "name": "Chillsynth",
+            "id": "g-19438"
+          },
+          {
+            "name": "Darksynth",
+            "id": "g-12884"
+          },
+          {
+            "name": "Sovietwave",
+            "id": "g-19450"
+          }
+        ],
+        "related": []
+      },
+      "description": "Synth-Pop 兴起于1970年代末到1980年代初的英国与日本，核心是\"用合成器与鼓机取代传统摇滚编制\"。它的标志是：合成贝斯走稳定的低音线、鼓机给出机械而干脆的节拍、人声通常冷峻或略带疏离感、旋律却写得极为上口。Japan、Human League、Depeche Mode、YMO 是早期代表。Synth-Pop 在1980年代中后期进入主流，成为那个年代流行音乐的主要形态之一；2010年代它又被 Chillwave、Synthwave 与独立音乐重新发现，形成复古合成器浪潮。",
+      "summary": "Synth-Pop 兴起于1970年代末到1980年代初的英国与日本，核心是\"用合成器与鼓机取代传统摇滚编制\"。",
+      "examples": [
+        {
+          "title": "Tainted Love",
+          "artist": "Soft Cell",
+          "url": null
+        },
+        {
+          "title": "Rydeen",
+          "artist": "Yellow Magic Orchestra",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "人声",
+        "工业",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19426",
+        "g-19438",
+        "g-19450"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-19376",
+          "fromName": "Electronic Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19390",
+          "fromName": "Electropop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19426",
+          "fromName": "Chillwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19450",
+          "fromName": "Sovietwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19460",
+          "fromName": "New Romanticism",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19620",
+          "fromName": "Wonky Pop",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19426",
+      "name": "Chillwave",
+      "rawTitle": "Chillwave",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19426,
+      "sourceLine": 19426,
+      "parentId": "g-19412",
+      "pathIds": [
+        "g-19376",
+        "g-19412",
+        "g-19426"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Synth-Pop",
+        "Chillwave"
+      ],
+      "aliases": [
+        "Glo-Fi",
+        "Dream Beat",
+        "Hypnagogic Pop"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Synth-Pop",
+            "id": "g-19412"
+          },
+          {
+            "name": "Hauntology",
+            "id": "g-12420"
+          }
+        ],
+        "down": [
+          {
+            "name": "Chillsynth",
+            "id": "g-19438"
+          },
+          {
+            "name": "Glo-Fi",
+            "id": "g-14142"
+          }
+        ],
+        "related": []
+      },
+      "description": "Chillwave 兴起于2009年前后的互联网音乐场景，特征是把1980年代 Synth-Pop、软摇滚与流行歌曲的素材，经过磁带饱和、低通滤波与大量混响处理，做成一种\"隔着水听老歌\"的模糊质感。它的人声通常被埋在混音深处，歌词难以辨认，情绪介于怀旧与失落之间。Chillwave 是第一代完全依靠博客与流媒体传播的电子音乐风格之一，Washed Out、Toro y Moi、Neon Indian 是代表。它后来的分支 Chillsynth 把这种质感进一步推向纯器乐与更慢的速度。",
+      "summary": "Chillwave 兴起于2009年前后的互联网音乐场景，特征是把1980年代 Synth-Pop、软摇滚与流行歌曲的素材，经过磁带饱和、低通滤波与大量混响处理，做成一种\"隔着水听老歌\"的模糊质感。",
+      "examples": [
+        {
+          "title": "Feel It All Around",
+          "artist": "Washed Out",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19390",
+          "fromName": "Electropop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19412",
+          "fromName": "Synth-Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19438",
+          "fromName": "Chillsynth",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19438",
+      "name": "Chillsynth",
+      "rawTitle": "Chillsynth",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19438,
+      "sourceLine": 19438,
+      "parentId": "g-19412",
+      "pathIds": [
+        "g-19376",
+        "g-19412",
+        "g-19438"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Synth-Pop",
+        "Chillsynth"
+      ],
+      "aliases": [
+        "Chill Synth",
+        "Chillwave Synth"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chillwave",
+            "id": "g-19426"
+          },
+          {
+            "name": "Synthwave",
+            "id": "g-12730"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chillsynth 是 Synthwave 与 Chillwave 交汇后形成的器乐分支，速度通常较慢（90–110 BPM），以柔和的模拟合成垫音、稀疏的鼓机与温暖的低音线为主，几乎不使用失真吉他或强烈的 Lead。它常被用作学习、通勤与夜间驾驶的背景音乐。与 Chillwave 相比，Chillsynth 更少使用人声采样，结构也更接近 Ambient 与 Downtempo。",
+      "summary": "Chillsynth 是 Synthwave 与 Chillwave 交汇后形成的器乐分支，速度通常较慢（90–110 BPM），以柔和的模拟合成垫音、稀疏的鼓机与温暖的低音线为主，几乎不使用失真吉他或强烈的 Lead。",
+      "examples": [
+        {
+          "title": "Resonance",
+          "artist": "HOME",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 90,
+        "max": 110,
+        "label": "90–110"
+      },
+      "traits": [
+        "失真",
+        "氛围",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19412",
+          "fromName": "Synth-Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19426",
+          "fromName": "Chillwave",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19450",
+      "name": "Sovietwave",
+      "rawTitle": "Sovietwave",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19450,
+      "sourceLine": 19450,
+      "parentId": "g-19412",
+      "pathIds": [
+        "g-19376",
+        "g-19412",
+        "g-19450"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Synth-Pop",
+        "Sovietwave"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Synth-Pop",
+            "id": "g-19412"
+          },
+          {
+            "name": "Hauntology",
+            "id": "g-12420"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Sovietwave 是2010年代在俄语互联网上形成的一种怀旧向 Synthwave 分支。它采样或模仿苏联时期的电子乐器（如 ANS 合成器）、电视广播音效、儿童合唱与电影配乐，配合柔和的合成垫音与简单的鼓机，营造一种对已消失时代的想象性追忆。它的情绪不是庆祝也不是控诉，而是一种带着距离感的温柔乡愁，与 Vaporwave 对消费社会的处理方式形成对照。",
+      "summary": "Sovietwave 是2010年代在俄语互联网上形成的一种怀旧向 Synthwave 分支。",
+      "examples": [
+        {
+          "title": "Belaya Noch",
+          "artist": "Molchat Doma",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19412",
+          "fromName": "Synth-Pop",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19460",
+      "name": "New Romanticism",
+      "rawTitle": "New Romanticism",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19460,
+      "sourceLine": 19460,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19460"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "New Romanticism"
+      ],
+      "aliases": [
+        "New Romantic",
+        "新浪漫主义",
+        "Blitz Kids"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Synth-Pop",
+            "id": "g-19412"
+          },
+          {
+            "name": "New Wave",
+            "id": "g-18064"
+          }
+        ],
+        "down": [
+          {
+            "name": "Romo",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "New Romanticism 是1970年代末到1980年代初在英国（尤其伦敦 Blitz 俱乐部）形成的运动，音乐上是 Synth-Pop 的华丽化版本，视觉上则以戏剧化服装、浓妆与性别模糊形象为核心。它把流行音乐重新变成\"表演\"：合成器铺陈宏大而冷艳，人声常带夸张的颤音与戏剧腔。Duran Duran、Spandau Ballet、Visage 是代表。它直接影响了后来的 Goth、Dream Pop 与大量视觉系音乐。",
+      "summary": "New Romanticism 是1970年代末到1980年代初在英国（尤其伦敦 Blitz 俱乐部）形成的运动，音乐上是 Synth-Pop 的华丽化版本，视觉上则以戏剧化服装、浓妆与性别模糊形象为核心。",
+      "examples": [
+        {
+          "title": "Fade To Grey",
+          "artist": "Visage",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-19472",
+      "name": "City Pop",
+      "rawTitle": "City Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19472,
+      "sourceLine": 19472,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19472"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "City Pop"
+      ],
+      "aliases": [
+        "シティポップ",
+        "城市流行"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "J-Pop",
+            "id": "g-18654"
+          },
+          {
+            "name": "Jazz Fusion / Electro Jazz",
+            "id": "g-19062"
+          }
+        ],
+        "down": [
+          {
+            "name": "Future Funk",
+            "id": "g-14226"
+          }
+        ],
+        "related": []
+      },
+      "description": "City Pop 是1970年代末到1980年代在日本形成的都市流行音乐，融合 Funk、Disco、AOR、Jazz Fusion 与当时最时髦的合成器音色，题材多为夜间的都市生活：高速公路、海边的酒店、夏夜与失恋。它的编曲水准极高——真实的贝斯线、精细的鼓组、大量的电钢琴与合成垫音，配合清凉的女声或柔和的男声。City Pop 在2010年代被 Vaporwave 场景重新发现，通过互联网传播到全球，成为\"被重新发现的日本1980年代\"的代表声音。",
+      "summary": "City Pop 是1970年代末到1980年代在日本形成的都市流行音乐，融合 Funk、Disco、AOR、Jazz Fusion 与当时最时髦的合成器音色，题材多为夜间的都市生活：高速公路、海边的酒店、夏夜与失恋。",
+      "examples": [
+        {
+          "title": "Plastic Love",
+          "artist": "竹内まりや",
+          "url": null
+        },
+        {
+          "title": "Ride On Time",
+          "artist": "山下達郎",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-19486",
+      "name": "Dance-Pop",
+      "rawTitle": "Dance-Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19486,
+      "sourceLine": 19486,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19486"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Dance-Pop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "Dance",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "House-Pop",
+            "id": "g-19496"
+          },
+          {
+            "name": "Nu-Disco",
+            "id": "g-777"
+          },
+          {
+            "name": "Disco Pop",
+            "id": "g-11633"
+          }
+        ],
+        "related": []
+      },
+      "description": "Dance-Pop 指以舞曲节拍为基础、但结构与演唱方式遵循流行歌曲的音乐。它通常使用稳定的四四拍、清晰的主歌副歌对比与强记忆点的副歌。Dance-Pop 与 EDM 的区别在于：Dance-Pop 的 Drop 通常是一个歌手的副歌，而不是一段器乐高潮；与 Disco 的区别在于，它更依赖电子音色与后期制作而非乐队演奏。",
+      "summary": "Dance-Pop 指以舞曲节拍为基础、但结构与演唱方式遵循流行歌曲的音乐。它通常使用稳定的四四拍、清晰的主歌副歌对比与强记忆点的副歌。",
+      "examples": [
+        {
+          "title": "Can't Get You Out Of My Head",
+          "artist": "Kylie Minogue",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19376",
+          "fromName": "Electronic Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19496",
+          "fromName": "House-Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19508",
+          "fromName": "Bubblegum Dance",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19520",
+          "fromName": "Eurodance",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19496",
+      "name": "House-Pop",
+      "rawTitle": "House-Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19496,
+      "sourceLine": 19496,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19496"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "House-Pop"
+      ],
+      "aliases": [
+        "Pop House",
+        "Vocal House (Pop)"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Dance-Pop",
+            "id": "g-19486"
+          },
+          {
+            "name": "House",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "House-Pop 指采用 House 音乐语汇（四四拍 Kick、Off-beat Hi-hat、钢琴或合成器 Stab、侧链处理）的流行歌曲。它在1990年代由大量欧美流行歌手带向主流，并在2010年代中期随 Deep House 的回潮再次流行。它的标志是：Drop 处出现一段被侧链压缩的钢琴或合成器和弦，人声在副歌与 Drop 之间交替。House-Pop 是俱乐部语汇进入主流的最稳定通道之一。",
+      "summary": "House-Pop 指采用 House 音乐语汇（四四拍 Kick、Off-beat Hi-hat、钢琴或合成器 Stab、侧链处理）的流行歌曲。",
+      "examples": [
+        {
+          "title": "One Kiss",
+          "artist": "Calvin Harris / Dua Lipa",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19486",
+          "fromName": "Dance-Pop",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19508",
+      "name": "Bubblegum Dance",
+      "rawTitle": "Bubblegum Dance",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19508,
+      "sourceLine": 19508,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19508"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Bubblegum Dance"
+      ],
+      "aliases": [
+        "Bubblegum Pop",
+        "Happy House"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Dance-Pop",
+            "id": "g-19486"
+          },
+          {
+            "name": "Eurodance",
+            "id": "g-19520"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Bubblegum Dance 是1990年代后期到2000年代初的欧洲舞曲分支，特征是极快的速度（140 BPM 上下）、甜到发腻的女声、简单的合成器旋律与儿童化的题材。它常与 Eurodance 一同出现，但比 Eurodance 更轻、更无攻击性，几乎完全服务于快乐。它在日本与东南亚特别受欢迎，也直接影响了后来的 Nightcore 与 Hyperpop 的素材选择。",
+      "summary": "Bubblegum Dance 是1990年代后期到2000年代初的欧洲舞曲分支，特征是极快的速度（140 BPM 上下）、甜到发腻的女声、简单的合成器旋律与儿童化的题材。",
+      "examples": [
+        {
+          "title": "Barbie Girl",
+          "artist": "Aqua",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 140,
+        "max": 140,
+        "label": "140"
+      },
+      "traits": [
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19520",
+          "fromName": "Eurodance",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19520",
+      "name": "Eurodance",
+      "rawTitle": "Eurodance",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19520,
+      "sourceLine": 19520,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19520"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Eurodance"
+      ],
+      "aliases": [
+        "Euro-NRG",
+        "European Dance"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Dance-Pop",
+            "id": "g-19486"
+          },
+          {
+            "name": "Euro House",
+            "id": "g-473"
+          }
+        ],
+        "down": [
+          {
+            "name": "Eurobeat",
+            "id": "g-19534"
+          },
+          {
+            "name": "Bubblegum Dance",
+            "id": "g-19508"
+          },
+          {
+            "name": "Hands Up (2 stage)",
+            "id": "g-11871"
+          }
+        ],
+        "related": []
+      },
+      "description": "Eurodance 是1990年代欧洲（尤其德国、意大利、荷兰、瑞典）的主流舞曲形态，结构高度公式化：快速的四四拍、粗壮的合成贝斯、女声主歌加男声说唱段落、简单而明亮的合成器主旋律。它在1990年代统治了欧洲排行榜，也通过动漫与游戏进入东亚。Eurodance 的直接后继是 Eurobeat、Bubblegum Dance 与 Hands Up。它的制作美学（高响度、强调中高频、明确的段落切换）影响了此后几乎所有商业舞曲。",
+      "summary": "Eurodance 是1990年代欧洲（尤其德国、意大利、荷兰、瑞典）的主流舞曲形态，结构高度公式化：快速的四四拍、粗壮的合成贝斯、女声主歌加男声说唱段落、简单而明亮的合成器主旋律。",
+      "examples": [
+        {
+          "title": "Rhythm Is A Dancer",
+          "artist": "Snap!",
+          "url": null
+        },
+        {
+          "title": "Better Off Alone",
+          "artist": "Alice Deejay",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "明亮",
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19534"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-19508",
+          "fromName": "Bubblegum Dance",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19534",
+          "fromName": "Eurobeat",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19534",
+      "name": "Eurobeat",
+      "rawTitle": "Eurobeat",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19534,
+      "sourceLine": 19534,
+      "parentId": "g-19520",
+      "pathIds": [
+        "g-19376",
+        "g-19520",
+        "g-19534"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Eurodance",
+        "Eurobeat"
+      ],
+      "aliases": [
+        "Eurobeat",
+        "欧陆节拍"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Eurodance",
+            "id": "g-19520"
+          },
+          {
+            "name": "Italo-Disco",
+            "id": "g-11687"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Eurobeat 是 Eurodance 与 Italo-Disco 在意大利形成的更快、更亮的变体，速度通常在150–160 BPM，特征是密集的合成器琶音、明亮的 Lead、强烈的四四拍与激昂的人声。它在欧洲本土的影响力有限，却通过日本《头文字D》系列的配乐获得第二次生命，成为日本同人音乐与赛车文化的重要语汇，并催生了大量日本本土的 Eurobeat 制作人。",
+      "summary": "Eurobeat 是 Eurodance 与 Italo-Disco 在意大利形成的更快、更亮的变体，速度通常在150–160 BPM，特征是密集的合成器琶音、明亮的 Lead、强烈的四四拍与激昂的人声。",
+      "examples": [
+        {
+          "title": "Running In The 90s",
+          "artist": "Max Coveri",
+          "url": null
+        },
+        {
+          "title": "Deja Vu",
+          "artist": "Dave Rodgers",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 150,
+        "max": 160,
+        "label": "150–160"
+      },
+      "traits": [
+        "4/4",
+        "明亮",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-11451",
+          "fromName": "Euro-Disco",
+          "type": "down"
+        },
+        {
+          "fromId": "g-11687",
+          "fromName": "Italo-Disco",
+          "type": "down"
+        },
+        {
+          "fromId": "g-11729",
+          "fromName": "Hi-NRG",
+          "type": "down"
+        },
+        {
+          "fromId": "g-11743",
+          "fromName": "British Eurobeat",
+          "type": "down"
+        },
+        {
+          "fromId": "g-17024",
+          "fromName": "Russ",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19520",
+          "fromName": "Eurodance",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19548",
+      "name": "Hyperpop",
+      "rawTitle": "Hyperpop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19548,
+      "sourceLine": 19548,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19548"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Hyperpop"
+      ],
+      "aliases": [
+        "Hyper Pop",
+        "超流行",
+        "PC Music"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "Post-Internet Vaporwave",
+            "id": "g-13922"
+          }
+        ],
+        "down": [
+          {
+            "name": "Dariacore",
+            "id": "g-19562"
+          },
+          {
+            "name": "Digicore",
+            "id": "g-19574"
+          },
+          {
+            "name": "Glitchcore",
+            "id": "g-19596"
+          },
+          {
+            "name": "Robloxcore",
+            "id": "g-19586"
+          }
+        ],
+        "related": []
+      },
+      "description": "Hyperpop 是2010年代中期在互联网上形成的一种极端化的电子流行，核心手法是\"把流行音乐的每个元素都推到失真\"：人声被极端升调、降调、拉伸、切片，合成器音色被故意做得刺耳，鼓组爆音被当作打击乐使用，副歌可以在一秒内切换情绪。它同时吸收了 Trance、Eurodance、Emo、Trap 与实验电子的素材。Hyperpop 的听感常常是矛盾的：既极度甜蜜又极度焦虑，既像广告音乐又像情绪崩溃。PC Music、100 gecs、SOPHIE 是这一场景的关键节点。它也是\"后互联网\"音乐最典型的形态之一。",
+      "summary": "Hyperpop 是2010年代中期在互联网上形成的一种极端化的电子流行，核心手法是\"把流行音乐的每个元素都推到失真\"：人声被极端升调、降调、拉伸、切片，合成器音色被故意做得刺耳，鼓组爆音被当作打击乐使用，副歌可以在一秒内切换情绪。",
+      "examples": [
+        {
+          "title": "Money Machine",
+          "artist": "100 gecs",
+          "url": null
+        },
+        {
+          "title": "Immaterial",
+          "artist": "SOPHIE",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19562",
+        "g-19574",
+        "g-19586",
+        "g-19596"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-5847",
+          "fromName": "Bubblegum Bass",
+          "type": "related"
+        },
+        {
+          "fromId": "g-19376",
+          "fromName": "Electronic Pop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19562",
+          "fromName": "Dariacore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19574",
+          "fromName": "Digicore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19586",
+          "fromName": "Robloxcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19596",
+          "fromName": "Glitchcore",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19562",
+      "name": "Dariacore",
+      "rawTitle": "Dariacore",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19562,
+      "sourceLine": 19562,
+      "parentId": "g-19548",
+      "pathIds": [
+        "g-19376",
+        "g-19548",
+        "g-19562"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Hyperpop",
+        "Dariacore"
+      ],
+      "aliases": [
+        "Daria Core",
+        "Hyperflip"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hyperpop",
+            "id": "g-19548"
+          },
+          {
+            "name": "Digicore",
+            "id": "g-19574"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Dariacore 是2021年前后在互联网上爆发的一种极高速 Hyperpop 分支，由制作人 leroy 命名。它的手法是把大量彼此无关的素材（动画配乐、游戏音效、流行歌曲片段、说唱 Acapella）以极高的速度（通常170–200 BPM 以上）拼接、切片、叠置，形成一种近乎信息过载的听觉体验。它的名字与美学都来自互联网亚文化，作品常以夸张的封面与标题发布在流媒体上。",
+      "summary": "Dariacore 是2021年前后在互联网上爆发的一种极高速 Hyperpop 分支，由制作人 leroy 命名。",
+      "examples": [
+        {
+          "title": "cute",
+          "artist": "leroy",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 170,
+        "max": 200,
+        "label": "170–200"
+      },
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-4737",
+          "fromName": "Atmospheric Breakcore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-8289",
+          "fromName": "Atmospheric Breakcore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-14840",
+          "fromName": "Hyper Pop（3 stage/China）",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19548",
+          "fromName": "Hyperpop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19574",
+          "fromName": "Digicore",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19574",
+      "name": "Digicore",
+      "rawTitle": "Digicore",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19574,
+      "sourceLine": 19574,
+      "parentId": "g-19548",
+      "pathIds": [
+        "g-19376",
+        "g-19548",
+        "g-19574"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Hyperpop",
+        "Digicore"
+      ],
+      "aliases": [
+        "Digi-Core",
+        "Digital Core"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hyperpop",
+            "id": "g-19548"
+          },
+          {
+            "name": "Post-Internet Vaporwave",
+            "id": "g-13922"
+          }
+        ],
+        "down": [
+          {
+            "name": "Dariacore",
+            "id": "g-19562"
+          },
+          {
+            "name": "Glitchcore",
+            "id": "g-19596"
+          }
+        ],
+        "related": []
+      },
+      "description": "Digicore 是2020年前后形成的场景，指一批完全在互联网上成长、使用极简制作工具（常是手机或基础 DAW）与高度处理人声的年轻制作人。它的音色介于 Hyperpop、Emo Rap 与 Glitch 之间，人声通常被 Auto-Tune 与切片处理到失去自然感，情绪偏向过度暴露的自白。Digicore 与 Hyperpop 常被混用，但 Digicore 更强调\"场景\"与\"世代\"，而不只是一种音色手法。",
+      "summary": "Digicore 是2020年前后形成的场景，指一批完全在互联网上成长、使用极简制作工具（常是手机或基础 DAW）与高度处理人声的年轻制作人。",
+      "examples": [
+        {
+          "title": "hand crushed by a mallet",
+          "artist": "100 gecs",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-9829",
+          "fromName": "Cloud Rap",
+          "type": "down"
+        },
+        {
+          "fromId": "g-14904",
+          "fromName": "Glitchcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-14922",
+          "fromName": "Glitchsphere",
+          "type": "up"
+        },
+        {
+          "fromId": "g-14970",
+          "fromName": "Animecore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19548",
+          "fromName": "Hyperpop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19562",
+          "fromName": "Dariacore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19586",
+          "fromName": "Robloxcore",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19586",
+      "name": "Robloxcore",
+      "rawTitle": "Robloxcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19586,
+      "sourceLine": 19586,
+      "parentId": "g-19548",
+      "pathIds": [
+        "g-19376",
+        "g-19548",
+        "g-19586"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Hyperpop",
+        "Robloxcore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Hyperpop",
+            "id": "g-19548"
+          },
+          {
+            "name": "Digicore",
+            "id": "g-19574"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Robloxcore 是2020年代在互联网上形成的分支，素材与美学直接取自 Roblox 等在线游戏平台的音效、MIDI 与用户生成内容。它通常使用极简的合成器音色、游戏内音效与高速切片，听感刻意粗糙，带有强烈的\"游戏内发生\"的现场感。它体现了后互联网音乐的一个核心特征：平台本身成为风格来源。",
+      "summary": "Robloxcore 是2020年代在互联网上形成的分支，素材与美学直接取自 Roblox 等在线游戏平台的音效、MIDI 与用户生成内容。",
+      "examples": [
+        {
+          "title": "Roblox Theme (Hyperflip)",
+          "artist": "Various",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19548",
+          "fromName": "Hyperpop",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19596",
+      "name": "Glitchcore",
+      "rawTitle": "Glitchcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 19596,
+      "sourceLine": 19596,
+      "parentId": "g-19548",
+      "pathIds": [
+        "g-19376",
+        "g-19548",
+        "g-19596"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Hyperpop",
+        "Glitchcore"
+      ],
+      "aliases": [
+        "Glitch Core"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hyperpop",
+            "id": "g-19548"
+          },
+          {
+            "name": "Glitch",
+            "id": "g-16160"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Glitchcore 把 Glitch 的故障音效与 Hyperpop 的极端人声处理结合，特征是持续的数字爆音、卡顿、短促切片与突然的音量变化。它比 Glitch Pop 更激进，往往整首歌都建立在\"信号崩坏\"的听感上。它同时受到 Breakcore 与 Flashcore 在节奏密度上的影响。",
+      "summary": "Glitchcore 把 Glitch 的故障音效与 Hyperpop 的极端人声处理结合，特征是持续的数字爆音、卡顿、短促切片与突然的音量变化。",
+      "examples": [
+        {
+          "title": "glitch",
+          "artist": "Various",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19548",
+          "fromName": "Hyperpop",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19574",
+          "fromName": "Digicore",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19608",
+      "name": "Electroclash",
+      "rawTitle": "Electroclash",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19608,
+      "sourceLine": 19608,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19608"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Electroclash"
+      ],
+      "aliases": [
+        "Electroclash",
+        "Electro-Clash"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "Electro",
+            "id": "g-13484"
+          },
+          {
+            "name": "New Wave",
+            "id": "g-18064"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Electroclash 是1990年代末到2000年代初在纽约与柏林形成的短暂但影响深远的场景。它把1980年代的 Synth-Pop、Italo-Disco 与 Electro 重新组合，配合刻意廉价感的合成器音色、冷感的念白式人声与强烈的时尚/性别表演元素。它是对当时主流电子舞曲的一种讽刺性回应，也直接预示了后来的 Electro House 与 Hyperpop 的视觉策略。",
+      "summary": "Electroclash 是1990年代末到2000年代初在纽约与柏林形成的短暂但影响深远的场景。",
+      "examples": [
+        {
+          "title": "Frank Sinatra",
+          "artist": "Miss Kittin / The Hacker",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-19620",
+      "name": "Wonky Pop",
+      "rawTitle": "Wonky Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19620,
+      "sourceLine": 19620,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19620"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Wonky Pop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "Synth-Pop",
+            "id": "g-19412"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Wonky Pop 是2000年代后期在英国出现的说法，指一批音色故意\"歪斜\"（wonky）的电子流行：合成器音高不稳、节拍故意错位、编曲带着笨拙的幽默感。它介于独立流行与电子舞曲之间，制作上常使用廉价的软合成器与刻意的失真。它与 Wonky（一种 UK Bass 的分支）在名字上重合，但音乐上并无直接关系。",
+      "summary": "Wonky Pop 是2000年代后期在英国出现的说法，指一批音色故意\"歪斜\"（wonky）的电子流行：合成器音高不稳、节拍故意错位、编曲带着笨拙的幽默感。",
+      "examples": [
+        {
+          "title": "I'm Not Alone",
+          "artist": "Calvin Harris",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-19630",
+      "name": "Picopop",
+      "rawTitle": "Picopop",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19630,
+      "sourceLine": 19630,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19630"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Picopop"
+      ],
+      "aliases": [
+        "Pico Pico",
+        "ピコピコ"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Picopop 是日本1990年代末到2000年代的一种电子流行，把 Chiptune 的方波音色、极快的速度与可爱的女声结合，制作上刻意保留游戏机音效的颗粒感。它常与秋叶原系文化、同人音乐与 Denpa 歌曲一同出现。Picopop 在海外也影响了后来的 Chiptune 与 Hyperpop 制作人。",
+      "summary": "Picopop 是日本1990年代末到2000年代的一种电子流行，把 Chiptune 的方波音色、极快的速度与可爱的女声结合，制作上刻意保留游戏机音效的颗粒感。",
+      "examples": [
+        {
+          "title": "Kawaii Girl",
+          "artist": "Various",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-19642",
+      "name": "Shibuya-Kei",
+      "rawTitle": "Shibuya-Kei",
+      "status": null,
+      "group": null,
+      "familyId": "f-19330",
+      "familyName": "Electronic Pop",
+      "familyZh": "电子流行",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 19642,
+      "sourceLine": 19642,
+      "parentId": "g-19376",
+      "pathIds": [
+        "g-19376",
+        "g-19642"
+      ],
+      "pathNames": [
+        "Electronic Pop",
+        "Shibuya-Kei"
+      ],
+      "aliases": [
+        "涩谷系",
+        "渋谷系"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "J-Pop",
+            "id": "g-18654"
+          },
+          {
+            "name": "Jazz Fusion / Electro Jazz",
+            "id": "g-19062"
+          }
+        ],
+        "down": [
+          {
+            "name": "Neo Shibuya-kei",
+            "id": "g-18484"
+          }
+        ],
+        "related": []
+      },
+      "description": "Shibuya-Kei 是1990年代在东京涩谷形成的一种高度折衷主义的流行音乐，把 Bossa Nova、Lounge、French Pop、Jazz、Shibuya 街头的俱乐部音乐与电子音色混合，制作极为精细、品味考究，常被称为\"用唱片收藏做出来的流行音乐\"。它体现了1990年代日本都市消费文化的审美取向，也通过后来的 City Pop 复兴被全球听众重新发现。",
+      "summary": "Shibuya-Kei 是1990年代在东京涩谷形成的一种高度折衷主义的流行音乐，把 Bossa Nova、Lounge、French Pop、Jazz、Shibuya 街头的俱乐部音乐与电子音色混合，制作极为精细、品味考究，常被称为\"用唱片收藏做出来的流行音乐\"。",
+      "examples": [
+        {
+          "title": "今夜はブギー・バック",
+          "artist": "小沢健二 / スチャダラパー",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-19679",
+      "name": "R&B",
+      "rawTitle": "R&B",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 2,
+      "line": 19679,
+      "sourceLine": 19679,
+      "parentId": "f-19655",
+      "pathIds": [
+        "g-19679"
+      ],
+      "pathNames": [
+        "R&B"
+      ],
+      "aliases": [
+        "Rhythm and Blues",
+        "节奏布鲁斯"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Soul",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Contemporary R&B",
+            "id": "g-19691"
+          },
+          {
+            "name": "Neo Soul",
+            "id": "g-19727"
+          },
+          {
+            "name": "Quiet Storm",
+            "id": "g-19739"
+          },
+          {
+            "name": "New Jack Swing",
+            "id": "g-18446"
+          }
+        ],
+        "related": []
+      },
+      "description": "R&B 是一个谱系而非单一风格：它始终以\"人声表达\"为核心，以当时最主流的流行编曲为外壳。判断一首歌是否属于 R&B，关键在演唱方式——大量使用的装饰音（Melisma）、Call and Response、多轨和声堆叠，以及围绕人声而非乐器展开的编曲。在电子音乐语境下，R&B 的重要性在于它是最早大规模采用鼓机与合成器的流行乐种之一：TR-808 的 Long Kick 与 Clap、DX7 的电钢琴、以及后来 Trap 的三连音 Hi-hat，都是通过 R&B 进入主流的。",
+      "summary": "R&B 是一个谱系而非单一风格：它始终以\"人声表达\"为核心，以当时最主流的流行编曲为外壳。",
+      "examples": [
+        {
+          "title": "Sexual Healing",
+          "artist": "Marvin Gaye",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "三连音",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19691",
+        "g-19715",
+        "g-19727",
+        "g-19739",
+        "g-19751"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-1711",
+          "fromName": "Moombahsoul",
+          "type": "up"
+        },
+        {
+          "fromId": "g-4173",
+          "fromName": "Dangdut",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11261",
+          "fromName": "Lovestep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13026",
+          "fromName": "Freshwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-17232",
+          "fromName": "Bongo Flava",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19691",
+          "fromName": "Contemporary R&B",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19727",
+          "fromName": "Neo Soul",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19739",
+          "fromName": "Quiet Storm",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19751",
+          "fromName": "Slow Jam",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20471",
+          "fromName": "R&Bass",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19691",
+      "name": "Contemporary R&B",
+      "rawTitle": "Contemporary R&B",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 19691,
+      "sourceLine": 19691,
+      "parentId": "g-19679",
+      "pathIds": [
+        "g-19679",
+        "g-19691"
+      ],
+      "pathNames": [
+        "R&B",
+        "Contemporary R&B"
+      ],
+      "aliases": [
+        "当代 R&B",
+        "Modern R&B"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "R&B",
+            "id": "g-19679"
+          }
+        ],
+        "down": [
+          {
+            "name": "Alternative R&B",
+            "id": "g-19715"
+          },
+          {
+            "name": "Trap Soul",
+            "id": "g-19703"
+          },
+          {
+            "name": "RnBass",
+            "id": "g-18944"
+          }
+        ],
+        "related": []
+      },
+      "description": "Contemporary R&B 指1980年代以后、以电子制作手段为基础的 R&B 形态。它的标志是：鼓机或采样鼓组替代真实鼓手、合成贝斯或低音合成器承担低频、大量使用电钢琴与合成垫音、人声经过多层叠加与精细的压缩处理。1990年代是它的鼎盛期，制作上形成了高度成熟的一套规范（如人声先压缩再叠加、副歌处加宽立体声像）。这套规范后来成为几乎所有流行音乐的制作基础。",
+      "summary": "Contemporary R&B 指1980年代以后、以电子制作手段为基础的 R&B 形态。",
+      "examples": [
+        {
+          "title": "No Scrubs",
+          "artist": "TLC",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19703"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-11023",
+          "fromName": "PluggnB",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11285",
+          "fromName": "Future Bass Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11533",
+          "fromName": "Boogie/Post-Disco",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18446",
+          "fromName": "New Jack Swing",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19679",
+          "fromName": "R&B",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19703",
+          "fromName": "Trap Soul",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19715",
+          "fromName": "Alternative R&B",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19703",
+      "name": "Trap Soul",
+      "rawTitle": "Trap Soul",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 4,
+      "line": 19703,
+      "sourceLine": 19703,
+      "parentId": "g-19691",
+      "pathIds": [
+        "g-19679",
+        "g-19691",
+        "g-19703"
+      ],
+      "pathNames": [
+        "R&B",
+        "Contemporary R&B",
+        "Trap Soul"
+      ],
+      "aliases": [
+        "Trap R&B",
+        "Trap-Soul"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Contemporary R&B",
+            "id": "g-19691"
+          },
+          {
+            "name": "Trap",
+            "id": "g-10159"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Trap Soul 是2010年代中期形成的融合形态，把 Trap 的鼓组（808 Long Kick、三连音 Hi-hat、稀疏的 Snare）与 R&B 的歌唱方式和和声堆叠结合。它通常速度较慢（60–75 BPM 感觉，实际多为 130–150 BPM 的半速感），空间感极强，人声常被大量 Auto-Tune 与混响包裹。Trap Soul 是当代流行与 R&B 之间最主要的桥梁。",
+      "summary": "Trap Soul 是2010年代中期形成的融合形态，把 Trap 的鼓组（808 Long Kick、三连音 Hi-hat、稀疏的 Snare）与 R&B 的歌唱方式和和声堆叠结合。",
+      "examples": [
+        {
+          "title": "Don't",
+          "artist": "Bryson Tiller",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 130,
+        "max": 150,
+        "label": "130–150"
+      },
+      "traits": [
+        "Half-time",
+        "三连音",
+        "氛围",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19691",
+          "fromName": "Contemporary R&B",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19715",
+          "fromName": "Alternative R&B",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19715",
+      "name": "Alternative R&B",
+      "rawTitle": "Alternative R&B",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 19715,
+      "sourceLine": 19715,
+      "parentId": "g-19679",
+      "pathIds": [
+        "g-19679",
+        "g-19715"
+      ],
+      "pathNames": [
+        "R&B",
+        "Alternative R&B"
+      ],
+      "aliases": [
+        "Alt-R&B",
+        "PBR&B",
+        "Indie R&B"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Contemporary R&B",
+            "id": "g-19691"
+          }
+        ],
+        "down": [
+          {
+            "name": "Trap Soul",
+            "id": "g-19703"
+          }
+        ],
+        "related": []
+      },
+      "description": "Alternative R&B 是2010年前后形成的说法，指一批脱离传统 R&B 制作规范、更接近独立音乐与实验电子的 R&B。它的特征是：编曲刻意留白、鼓组被处理到模糊、合成器音色偏冷或失真、人声常被降调或加厚到失去性别特征。它同时吸收了 Ambient、Dubstep 与 Post-Dubstep 的空间处理方式。Frank Ocean、The Weeknd（早期）、FKA twigs 是代表。",
+      "summary": "Alternative R&B 是2010年前后形成的说法，指一批脱离传统 R&B 制作规范、更接近独立音乐与实验电子的 R&B。",
+      "examples": [
+        {
+          "title": "The Hills",
+          "artist": "The Weeknd",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "氛围",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-5801",
+          "fromName": "Post-Dubstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11273",
+          "fromName": "Future R&B",
+          "type": "up"
+        },
+        {
+          "fromId": "g-17804",
+          "fromName": "Indie Sleaze Revival",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19691",
+          "fromName": "Contemporary R&B",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19727",
+      "name": "Neo Soul",
+      "rawTitle": "Neo Soul",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 19727,
+      "sourceLine": 19727,
+      "parentId": "g-19679",
+      "pathIds": [
+        "g-19679",
+        "g-19727"
+      ],
+      "pathNames": [
+        "R&B",
+        "Neo Soul"
+      ],
+      "aliases": [
+        "Neo-Soul",
+        "新灵魂乐"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "R&B",
+            "id": "g-19679"
+          },
+          {
+            "name": "Soul",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Neo Soul 是1990年代中期形成的分支，把1970年代的 Soul 与 Jazz 的和声语言、真实的乐器演奏（尤其是电钢琴、贝斯与鼓）与 Hip-Hop 的节拍感结合。它的鼓组通常带有明显的\"人性化\"摇摆（Swung Feel），和声使用大量延伸音与调式交替，歌词偏向内省与社会意识。D'Angelo、Erykah Badu、Lauryn Hill 是代表。",
+      "summary": "Neo Soul 是1990年代中期形成的分支，把1970年代的 Soul 与 Jazz 的和声语言、真实的乐器演奏（尤其是电钢琴、贝斯与鼓）与 Hip-Hop 的节拍感结合。",
+      "examples": [
+        {
+          "title": "Untitled (How Does It Feel)",
+          "artist": "D'Angelo",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-18904",
+          "fromName": "Electro Soul",
+          "type": "down"
+        },
+        {
+          "fromId": "g-18916",
+          "fromName": "Future Soul",
+          "type": "related"
+        },
+        {
+          "fromId": "g-19679",
+          "fromName": "R&B",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19739",
+      "name": "Quiet Storm",
+      "rawTitle": "Quiet Storm",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 19739,
+      "sourceLine": 19739,
+      "parentId": "g-19679",
+      "pathIds": [
+        "g-19679",
+        "g-19739"
+      ],
+      "pathNames": [
+        "R&B",
+        "Quiet Storm"
+      ],
+      "aliases": [
+        "静storm",
+        "Quiet Storm R&B"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "R&B",
+            "id": "g-19679"
+          },
+          {
+            "name": "Soul",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Slow Jam",
+            "id": "g-19751"
+          }
+        ],
+        "related": []
+      },
+      "description": "Quiet Storm 源自1976年 Smokey Robinson 的同名电台节目，后来成为一种风格标签，指节奏舒缓、编曲柔和、以浪漫题材为主的 R&B。它的标志是：慢速的鼓机或真实鼓组、温暖的 Rhodes 电钢琴、柔和的合成垫音、大量的人声和声。它几乎不使用强烈的高频或攻击性音色，整体响度偏低，是\"夜间电台\"美学的原型。",
+      "summary": "Quiet Storm 源自1976年 Smokey Robinson 的同名电台节目，后来成为一种风格标签，指节奏舒缓、编曲柔和、以浪漫题材为主的 R&B。",
+      "examples": [
+        {
+          "title": "Let's Get It On",
+          "artist": "Marvin Gaye",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19679",
+          "fromName": "R&B",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19751",
+          "fromName": "Slow Jam",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19751",
+      "name": "Slow Jam",
+      "rawTitle": "Slow Jam",
+      "status": null,
+      "group": null,
+      "familyId": "f-19655",
+      "familyName": "R&B / Rhythm and Blues",
+      "familyZh": "节奏布鲁斯",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 19751,
+      "sourceLine": 19751,
+      "parentId": "g-19679",
+      "pathIds": [
+        "g-19679",
+        "g-19751"
+      ],
+      "pathNames": [
+        "R&B",
+        "Slow Jam"
+      ],
+      "aliases": [
+        "Slow Jam",
+        "慢板情歌"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Quiet Storm",
+            "id": "g-19739"
+          },
+          {
+            "name": "R&B",
+            "id": "g-19679"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Slow Jam 指速度在60–80 BPM、以情爱或失恋为主题、编曲极简的 R&B 慢歌。它通常只有几个和弦循环、一层柔和鼓组与大量人声和声，制作重心完全在人声的表情处理上。Slow Jam 是 R&B 中最稳定的一个子类型，从1960年代延续至今，也是衡量一位 R&B 歌手演唱能力的主要场域。",
+      "summary": "Slow Jam 指速度在60–80 BPM、以情爱或失恋为主题、编曲极简的 R&B 慢歌。",
+      "examples": [
+        {
+          "title": "Adorn",
+          "artist": "Miguel",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 60,
+        "max": 80,
+        "label": "60–80"
+      },
+      "traits": [
+        "极简",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19739",
+          "fromName": "Quiet Storm",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19802",
+      "name": "Electronic Rock",
+      "rawTitle": "Electronic Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 2,
+      "line": 19802,
+      "sourceLine": 19802,
+      "parentId": "f-19764",
+      "pathIds": [
+        "g-19802"
+      ],
+      "pathNames": [
+        "Electronic Rock"
+      ],
+      "aliases": [
+        "电子摇滚",
+        "Synth Rock"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Rock",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          },
+          {
+            "name": "Dance Rock",
+            "id": "g-17766"
+          },
+          {
+            "name": "Alternative Dance",
+            "id": "g-21487"
+          },
+          {
+            "name": "Electro Punk",
+            "id": "g-21509"
+          },
+          {
+            "name": "Shoegaze",
+            "id": "g-19914"
+          }
+        ],
+        "related": []
+      },
+      "description": "Electronic Rock 指以摇滚编制（吉他、贝斯、鼓）为基础，但把合成器、鼓机、采样或电子处理放在同等甚至更主导位置的音乐。它不是一个统一的音色风格，而是一个\"编制混合\"的位置：从 Kraftwerk 的纯机器摇滚，到 Nine Inch Nails 的失真工业摇滚，再到 M83 的合成器噪音墙，都在这个谱系里。判断标准在于\"电子手段是否参与决定了这首歌的骨架\"——如果只是加了一层合成垫音，那仍是摇滚；如果鼓组来自鼓机、低音来自合成器、副歌靠合成器推进，那它就在电子摇滚的范围内。",
+      "summary": "Electronic Rock 指以摇滚编制（吉他、贝斯、鼓）为基础，但把合成器、鼓机、采样或电子处理放在同等甚至更主导位置的音乐。",
+      "examples": [
+        {
+          "title": "Closer",
+          "artist": "Nine Inch Nails",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "工业",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19814",
+        "g-19858",
+        "g-19870",
+        "g-19914",
+        "g-19926",
+        "g-19938",
+        "g-19948",
+        "g-19960",
+        "g-19972",
+        "g-19984"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-19814",
+          "fromName": "Electronic Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19858",
+          "fromName": "Electronicore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19870",
+          "fromName": "Gaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19902",
+          "fromName": "Nu gaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19914",
+          "fromName": "Shoegaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19926",
+          "fromName": "Indie Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19938",
+          "fromName": "Noise Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19948",
+          "fromName": "Progressive Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19960",
+          "fromName": "Psychedelic Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19984",
+          "fromName": "Industrial Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21487",
+          "fromName": "Alternative Dance",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21519",
+          "fromName": "Mathcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21541",
+          "fromName": "Electrocore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21607",
+          "fromName": "Visual Kei",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19814",
+      "name": "Electronic Metal",
+      "rawTitle": "Electronic Metal",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19814,
+      "sourceLine": 19814,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19814"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Electronic Metal"
+      ],
+      "aliases": [
+        "电子金属",
+        "Industrial Metal",
+        "Synth Metal"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Heavy Metal",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Electronicore",
+            "id": "g-19858"
+          },
+          {
+            "name": "Nintendocore",
+            "id": "g-19826"
+          },
+          {
+            "name": "Cybergrind",
+            "id": "g-19836"
+          },
+          {
+            "name": "Synth Metal",
+            "id": "g-19848"
+          },
+          {
+            "name": "Trance Metal",
+            "id": "g-18826"
+          }
+        ],
+        "related": []
+      },
+      "description": "Electronic Metal 指把金属乐的失真吉他、双踩鼓与极端唱腔，与电子音色（合成器、鼓机、采样、Glitch 处理）结合的音乐。它的两个主要方向是：Industrial Metal（以 Ministry、Fear Factory 为代表，强调机械感与工业噪音）与 Synth Metal（强调明亮的合成器 Lead 与舞曲节拍）。Electronic Metal 的制作特点是把吉他当作\"音色层\"而非唯一主角，用合成器与采样填充中高频空间，鼓组常被替换或叠加上电子鼓。",
+      "summary": "Electronic Metal 指把金属乐的失真吉他、双踩鼓与极端唱腔，与电子音色（合成器、鼓机、采样、Glitch 处理）结合的音乐。",
+      "examples": [
+        {
+          "title": "Du Hast",
+          "artist": "Rammstein",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "明亮",
+        "失真",
+        "人声",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19826",
+        "g-19836",
+        "g-19848"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-15462",
+          "fromName": "Post-Industrial",
+          "type": "down"
+        },
+        {
+          "fromId": "g-18850",
+          "fromName": "Industrial/Electronic Black Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18862",
+          "fromName": "Cyber Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18878",
+          "fromName": "Neue Deutsche Härte",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19802",
+          "fromName": "Electronic Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19826",
+          "fromName": "Nintendocore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19836",
+          "fromName": "Cybergrind",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19848",
+          "fromName": "Synth Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19984",
+          "fromName": "Industrial Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20568",
+          "fromName": "Chip Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21563",
+          "fromName": "Gothic Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21575",
+          "fromName": "Thall",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19826",
+      "name": "Nintendocore",
+      "rawTitle": "Nintendocore",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 4,
+      "line": 19826,
+      "sourceLine": 19826,
+      "parentId": "g-19814",
+      "pathIds": [
+        "g-19802",
+        "g-19814",
+        "g-19826"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Electronic Metal",
+        "Nintendocore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          },
+          {
+            "name": "Bit Music",
+            "id": "g-13264"
+          },
+          {
+            "name": "Hardcore Punk",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Nintendocore 是2000年代形成的分支，把 Chiptune 的方波旋律、游戏机音效与 Hardcore Punk／Metalcore 的失真吉他、Breakdown 拼在一起。它通常速度极快、情绪极度跳跃，可以在同一段里从可爱的八位旋律切到嘶吼与双踩。名字来自任天堂，体现了互联网一代制作人对童年游戏音效的重新使用。",
+      "summary": "Nintendocore 是2000年代形成的分支，把 Chiptune 的方波旋律、游戏机音效与 Hardcore Punk／Metalcore 的失真吉他、Breakdown 拼在一起。",
+      "examples": [
+        {
+          "title": "Birdo",
+          "artist": "Horse The Band",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19814",
+          "fromName": "Electronic Metal",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19836",
+      "name": "Cybergrind",
+      "rawTitle": "Cybergrind",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 4,
+      "line": 19836,
+      "sourceLine": 19836,
+      "parentId": "g-19814",
+      "pathIds": [
+        "g-19802",
+        "g-19814",
+        "g-19836"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Electronic Metal",
+        "Cybergrind"
+      ],
+      "aliases": [
+        "Electrogrind"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          },
+          {
+            "name": "Grindcore",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Cybergrind",
+            "id": "g-17934"
+          }
+        ],
+        "related": []
+      },
+      "description": "Cybergrind 是把 Grindcore 的高速blast beat、极端唱腔与电子音效（尤其是 Glitch、Breakcore 的爆音切片、8-bit 音色）结合的分支。它通常由单人用电脑完成全部制作，鼓组常是程序化的高速电子鼓，吉他被极度压缩或直接由合成器替代。它的听感近乎信息过载，是极端金属与电子音乐交叉处最激进的一端。",
+      "summary": "Cybergrind 是把 Grindcore 的高速blast beat、极端唱腔与电子音效（尤其是 Glitch、Breakcore 的爆音切片、8-bit 音色）结合的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Cybergrind",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19814",
+          "fromName": "Electronic Metal",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19848",
+      "name": "Synth Metal",
+      "rawTitle": "Synth Metal",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 4,
+      "line": 19848,
+      "sourceLine": 19848,
+      "parentId": "g-19814",
+      "pathIds": [
+        "g-19802",
+        "g-19814",
+        "g-19848"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Electronic Metal",
+        "Synth Metal"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Synth Metal 指以合成器音色承担主旋律与和声、吉他承担节奏或失真墙、鼓组采用电子鼓的金属形态。它与 Industrial Metal 的区别在于音色取向：Industrial Metal 追求机械与噪音，Synth Metal 追求明亮、旋律化与舞台感。它在2010年代随合成器浪潮复兴。",
+      "summary": "Synth Metal 指以合成器音色承担主旋律与和声、吉他承担节奏或失真墙、鼓组采用电子鼓的金属形态。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Synth Metal",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "明亮",
+        "旋律",
+        "失真",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19814",
+          "fromName": "Electronic Metal",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19858",
+      "name": "Electronicore",
+      "rawTitle": "Electronicore",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19858,
+      "sourceLine": 19858,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19858"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Electronicore"
+      ],
+      "aliases": [
+        "Synthcore",
+        "Trancecore",
+        "Electronic Core"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Metalcore",
+            "id": null
+          },
+          {
+            "name": "Post-Hardcore",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Trancecore",
+            "id": "g-8058"
+          }
+        ],
+        "related": []
+      },
+      "description": "Electronicore 是2000年代后期形成的分支，把 Metalcore／Post-Hardcore 的 Breakdown、嘶吼与 Clean 唱腔，与 Trance、Eurodance 的合成器 Riff、四四拍节拍、以及 Auto-Tune 处理的人声结合。它的标志是：副歌处出现一段明亮的 Trance 合成器主旋律，然后立刻切回失真 Breakdown。Enter Shikari、Attack Attack! 是代表。它体现了2000年代后期 Myspace 场景下电子舞曲与硬核场景的相互渗透。",
+      "summary": "Electronicore 是2000年代后期形成的分支，把 Metalcore／Post-Hardcore 的 Breakdown、嘶吼与 Clean 唱腔，与 Trance、Eurodance 的合成器 Riff、四四拍节拍、以及 Auto-Tune 处理的人声结合。",
+      "examples": [
+        {
+          "title": "Sorry You're Not A Winner",
+          "artist": "Enter Shikari",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "明亮",
+        "旋律",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-17880",
+          "fromName": "Electronicore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-18826",
+          "fromName": "Trance Metal",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19814",
+          "fromName": "Electronic Metal",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19870",
+      "name": "Gaze",
+      "rawTitle": "Gaze",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19870,
+      "sourceLine": 19870,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19870"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Gaze"
+      ],
+      "aliases": [
+        "Gaze",
+        "Gaze Music"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Shoegaze",
+            "id": "g-19914"
+          }
+        ],
+        "down": [
+          {
+            "name": "Blackgaze",
+            "id": "g-19882"
+          },
+          {
+            "name": "Doomgaze",
+            "id": "g-19892"
+          },
+          {
+            "name": "Nu gaze",
+            "id": "g-19902"
+          },
+          {
+            "name": "Grunge gaze",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Gaze 是2010年代在互联网上形成的集合名词，用来指一批共享 Shoegaze 手法（极厚的失真吉他墙、大量混响与延迟、被埋在混音中的人声）但具体素材来源各不相同的音乐。它把这些手法与其他风格嫁接，形成 Blackgaze（黑金属）、Doomgaze（Doom Metal）、Nu Gaze（后朋克与电子）等分支。Gaze 在制作上极度依赖效果器链与混响空间，人声几乎从不清晰，是\"音色即情绪\"的极端案例。",
+      "summary": "Gaze 是2010年代在互联网上形成的集合名词，用来指一批共享 Shoegaze 手法（极厚的失真吉他墙、大量混响与延迟、被埋在混音中的人声）但具体素材来源各不相同的音乐。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Gaze",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "暗色",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-19882",
+        "g-19892",
+        "g-19902"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-19882",
+          "fromName": "Blackgaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19892",
+          "fromName": "Doomgaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19902",
+          "fromName": "Nu gaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19914",
+          "fromName": "Shoegaze",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19882",
+      "name": "Blackgaze",
+      "rawTitle": "Blackgaze",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 4,
+      "line": 19882,
+      "sourceLine": 19882,
+      "parentId": "g-19870",
+      "pathIds": [
+        "g-19802",
+        "g-19870",
+        "g-19882"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Gaze",
+        "Blackgaze"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Gaze",
+            "id": "g-19870"
+          },
+          {
+            "name": "Black Metal",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Blackgaze 是把黑金属的高速 Tremolo 吉他、Blast Beat 与 Shoegaze 的厚实吉他墙、明亮和声、大混响结合的分支。它保留了黑金属的音色与速度，但把情绪从寒冷转向温暖甚至明亮。Alcest、Deafheaven 是代表。它在2010年代通过互联网场景获得广泛关注，也成为电子音乐听众进入极端金属的一个入口。",
+      "summary": "Blackgaze 是把黑金属的高速 Tremolo 吉他、Blast Beat 与 Shoegaze 的厚实吉他墙、明亮和声、大混响结合的分支。",
+      "examples": [
+        {
+          "title": "Sunbather",
+          "artist": "Deafheaven",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "明亮"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19870",
+          "fromName": "Gaze",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19914",
+          "fromName": "Shoegaze",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19892",
+      "name": "Doomgaze",
+      "rawTitle": "Doomgaze",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 4,
+      "line": 19892,
+      "sourceLine": 19892,
+      "parentId": "g-19870",
+      "pathIds": [
+        "g-19802",
+        "g-19870",
+        "g-19892"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Gaze",
+        "Doomgaze"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Gaze",
+            "id": "g-19870"
+          },
+          {
+            "name": "Doom Metal",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Doomgaze 把 Doom Metal 的极慢速度、沉重低音与 Shoegaze 的失真墙、混响空间结合。速度通常在40–70 BPM，鼓组稀疏而沉重，吉他是持续的低频嗡鸣与厚实和弦，人声往往被埋到几乎不可辨认。它的听感是\"极度缓慢的坍塌\"，与 Blackgaze 的高速形成对照。",
+      "summary": "Doomgaze 把 Doom Metal 的极慢速度、沉重低音与 Shoegaze 的失真墙、混响空间结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Doomgaze",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 70,
+        "max": 70,
+        "label": "70"
+      },
+      "traits": [
+        "暗色",
+        "失真",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19870",
+          "fromName": "Gaze",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19902",
+      "name": "Nu gaze",
+      "rawTitle": "Nu gaze",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 4,
+      "line": 19902,
+      "sourceLine": 19902,
+      "parentId": "g-19870",
+      "pathIds": [
+        "g-19802",
+        "g-19870",
+        "g-19902"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Gaze",
+        "Nu gaze"
+      ],
+      "aliases": [
+        "Nu-Gaze",
+        "Post-Shoegaze"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Gaze",
+            "id": "g-19870"
+          },
+          {
+            "name": "Post Punk",
+            "id": "g-17950"
+          },
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          }
+        ],
+        "down": [
+          {
+            "name": "Post-Shoegaze",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Nu Gaze 指2010年代把 Shoegaze 的吉他墙与 Post-Punk 的冷调、电子鼓组、Synth-Pop 的合成垫音结合的分支。它比传统 Shoegaze 更依赖电子制作手段：鼓组常来自鼓机，合成器承担和声铺底，吉他则用于制造噪音层。它同时是 Post-Punk Revival 与 Synthwave 之间的桥梁。",
+      "summary": "Nu Gaze 指2010年代把 Shoegaze 的吉他墙与 Post-Punk 的冷调、电子鼓组、Synth-Pop 的合成垫音结合的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Nu Gaze",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19870",
+          "fromName": "Gaze",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19914",
+          "fromName": "Shoegaze",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19914",
+      "name": "Shoegaze",
+      "rawTitle": "Shoegaze",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19914,
+      "sourceLine": 19914,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19914"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Shoegaze"
+      ],
+      "aliases": [
+        "Shoegazing",
+        "自赏",
+        "瞪鞋"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Alternative Rock",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Gaze",
+            "id": "g-19870"
+          },
+          {
+            "name": "Blackgaze",
+            "id": "g-19882"
+          },
+          {
+            "name": "Nu gaze",
+            "id": "g-19902"
+          },
+          {
+            "name": "Dream Pop",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Shoegaze 是1980年代末到1990年代初在英国形成的风格，名字来自乐手演出时低头看效果器踏板的姿态。它的核心是\"吉他不再是独奏乐器，而是音色制造器\"：通过失真、Fuzz、延迟、混响与颤音摇杆，把吉他做成一片持续的音墙；人声被埋进混音，歌词几乎不可辨认；鼓组通常简单而稳定，贝斯线温暖而模糊。My Bloody Valentine 的《Loveless》是这一风格的顶点。Shoegaze 在2010年代通过 Blackgaze 与 Nu Gaze 复兴，也被大量电子音乐制作人借鉴其空间处理方式。",
+      "summary": "Shoegaze 是1980年代末到1990年代初在英国形成的风格，名字来自乐手演出时低头看效果器踏板的姿态。",
+      "examples": [
+        {
+          "title": "Only Shallow",
+          "artist": "My Bloody Valentine",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-6592",
+          "fromName": "Psystep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-12295",
+          "fromName": "Fuzzbient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-15748",
+          "fromName": "Witch House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19802",
+          "fromName": "Electronic Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19870",
+          "fromName": "Gaze",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21173",
+          "fromName": "Dronegaze",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19926",
+      "name": "Indie Rock",
+      "rawTitle": "Indie Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19926,
+      "sourceLine": 19926,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19926"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Indie Rock"
+      ],
+      "aliases": [
+        "独立摇滚"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Alternative Rock",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Slacker Rock",
+            "id": "g-21595"
+          },
+          {
+            "name": "Noise Pop",
+            "id": "g-21585"
+          },
+          {
+            "name": "Dream Pop",
+            "id": null
+          },
+          {
+            "name": "Lofi Hip-Hop",
+            "id": "g-9713"
+          }
+        ],
+        "related": []
+      },
+      "description": "Indie Rock 指在独立厂牌发行、脱离主流唱片工业制作规范的摇滚乐。它的音乐特征不固定，但通常具有：制作预算有限带来的粗糙质感、对当时主流音色的刻意回避、以及更强的作者性。在电子音乐语境下，Indie Rock 的意义在于它是 Synth-Pop 与 Chillwave 复兴的重要载体：大量独立乐队在2010年代改用合成器与鼓机，形成了 Indietronica 与 Chillwave 的场景基础。",
+      "summary": "Indie Rock 指在独立厂牌发行、脱离主流唱片工业制作规范的摇滚乐。它的音乐特征不固定，但通常具有：制作预算有限带来的粗糙质感、对当时主流音色的刻意回避、以及更强的作者性。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Indie Rock",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-5559",
+          "fromName": "Grindie",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13146",
+          "fromName": "Indietronica",
+          "type": "up"
+        },
+        {
+          "fromId": "g-17718",
+          "fromName": "Baggy",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21585",
+          "fromName": "Noise Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21595",
+          "fromName": "Slacker Rock",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19938",
+      "name": "Noise Rock",
+      "rawTitle": "Noise Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19938,
+      "sourceLine": 19938,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19938"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Noise Rock"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Experimental",
+            "id": "g-16048"
+          }
+        ],
+        "down": [
+          {
+            "name": "Noise Pop",
+            "id": "g-21585"
+          },
+          {
+            "name": "No Wave",
+            "id": "g-17996"
+          }
+        ],
+        "related": []
+      },
+      "description": "Noise Rock 指把噪音（反馈、失真、无调性音块）当作主要表达手段的摇滚。它通常使用极简的编制（吉他、贝斯、鼓）与极大的音量，结构可以非常松散。它与电子音乐的交叉点在于对\"音色本身即内容\"的处理方式，以及大量使用效果器与非常规演奏技巧（如用金属片摩擦吉他弦）。",
+      "summary": "Noise Rock 指把噪音（反馈、失真、无调性音块）当作主要表达手段的摇滚。它通常使用极简的编制（吉他、贝斯、鼓）与极大的音量，结构可以非常松散。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Noise Rock",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-21585",
+          "fromName": "Noise Pop",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19948",
+      "name": "Progressive Rock",
+      "rawTitle": "Progressive Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19948,
+      "sourceLine": 19948,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19948"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Progressive Rock"
+      ],
+      "aliases": [
+        "Prog Rock",
+        "前卫摇滚",
+        "Art Rock"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Rock",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Krautrock",
+            "id": "g-17816"
+          },
+          {
+            "name": "Space Rock",
+            "id": "g-19972"
+          },
+          {
+            "name": "Brutal Prog",
+            "id": "g-21551"
+          }
+        ],
+        "related": []
+      },
+      "description": "Progressive Rock 是1960年代末到1970年代形成的摇滚分支，核心是\"把古典音乐的结构思维与爵士的和声复杂度引入摇滚\"。它的标志是：长曲目与组曲结构、频繁的拍号变化、复杂的和声进行、大量使用 Mellotron 与早期合成器。它直接为后来的 Ambient、Berlin School 与 Progressive Electronic 提供了技术前提——这些电子音乐分支的第一批实践者（如 Tangerine Dream、Klaus Schulze）正是从 Krautrock 与 Prog Rock 场景中走出来的。",
+      "summary": "Progressive Rock 是1960年代末到1970年代形成的摇滚分支，核心是\"把古典音乐的结构思维与爵士的和声复杂度引入摇滚\"。",
+      "examples": [
+        {
+          "title": "21st Century Schizoid Man",
+          "artist": "King Crimson",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-12177",
+          "fromName": "Progressive Electronic",
+          "type": "up"
+        },
+        {
+          "fromId": "g-17816",
+          "fromName": "Krautrock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19972",
+          "fromName": "Space Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21551",
+          "fromName": "Brutal Prog",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19960",
+      "name": "Psychedelic Rock",
+      "rawTitle": "Psychedelic Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19960,
+      "sourceLine": 19960,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19960"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Psychedelic Rock"
+      ],
+      "aliases": [
+        "Psychedelia",
+        "迷幻摇滚"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Rock",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Space Rock",
+            "id": "g-19972"
+          },
+          {
+            "name": "Neo-Psychedelia",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Psychedelic Rock 是1960年代中期形成的摇滚分支，用音乐模拟意识状态的改变：长时间的器乐即兴、大量的混响与延迟、左右声道大幅摆动的立体声效果、磁带倒放与人声倒放、以及非西方的音阶与乐器。它是电子音乐效果器文化的重要源头之一——Flanger、Phaser、Tape Delay 这些效果器最初正是为了制造迷幻空间而被大规模使用。",
+      "summary": "Psychedelic Rock 是1960年代中期形成的摇滚分支，用音乐模拟意识状态的改变：长时间的器乐即兴、大量的混响与延迟、左右声道大幅摆动的立体声效果、磁带倒放与人声倒放、以及非西方的音阶与乐器。",
+      "examples": [
+        {
+          "title": "Interstellar Overdrive",
+          "artist": "Pink Floyd",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-18564",
+          "fromName": "Psychedelic Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19972",
+          "fromName": "Space Rock",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-19972",
+      "name": "Space Rock",
+      "rawTitle": "Space Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19972,
+      "sourceLine": 19972,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19972"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Space Rock"
+      ],
+      "aliases": [
+        "Space Rock",
+        "太空摇滚"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Psychedelic Rock",
+            "id": "g-19960"
+          },
+          {
+            "name": "Progressive Rock",
+            "id": "g-19948"
+          },
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Space Rock 指以太空、宇宙、失重为主题，使用大量合成器、长混响与缓慢推进结构的摇滚分支。它通常速度缓慢、结构松散，合成器负责制造持续的音场，吉他与贝斯在其中缓慢游动。它同时是 Berlin School 电子音乐与 Ambient 的近亲，两者在1970年代的德国场景中互相影响。",
+      "summary": "Space Rock 指以太空、宇宙、失重为主题，使用大量合成器、长混响与缓慢推进结构的摇滚分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Space Rock",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-17780",
+          "fromName": "Future Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19948",
+          "fromName": "Progressive Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19960",
+          "fromName": "Psychedelic Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-19984",
+      "name": "Industrial Rock",
+      "rawTitle": "Industrial Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-19764",
+      "familyName": "Electronic Rock",
+      "familyZh": "电子摇滚",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 19984,
+      "sourceLine": 19984,
+      "parentId": "g-19802",
+      "pathIds": [
+        "g-19802",
+        "g-19984"
+      ],
+      "pathNames": [
+        "Electronic Rock",
+        "Industrial Rock"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Industrial",
+            "id": "g-15410"
+          }
+        ],
+        "down": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          },
+          {
+            "name": "Neue Deutsche Härte",
+            "id": "g-18878"
+          }
+        ],
+        "related": []
+      },
+      "description": "Industrial Rock 是把工业音乐的机械噪音、采样、程序化鼓组与摇滚编制结合的分支。它的标志是：鼓组大量使用工业噪音采样（金属敲击、机械声）、吉他使用极重的失真与下行音型、人声常被加失真或嘶吼处理。Nine Inch Nails 的《The Downward Spiral》是这一风格的顶点。它直接影响了后来的 Industrial Metal 与 Neue Deutsche Härte。",
+      "summary": "Industrial Rock 是把工业音乐的机械噪音、采样、程序化鼓组与摇滚编制结合的分支。",
+      "examples": [
+        {
+          "title": "March Of The Pigs",
+          "artist": "Nine Inch Nails",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "人声",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-15462",
+          "fromName": "Post-Industrial",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20027",
+      "name": "Funk",
+      "rawTitle": "Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 2,
+      "line": 20027,
+      "sourceLine": 20027,
+      "parentId": "f-19995",
+      "pathIds": [
+        "g-20027"
+      ],
+      "pathNames": [
+        "Funk"
+      ],
+      "aliases": [
+        "Funk Music",
+        "放克"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Soul",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Electro-Funk",
+            "id": "g-20039"
+          },
+          {
+            "name": "Synth Funk",
+            "id": "g-20051"
+          },
+          {
+            "name": "G-Funk",
+            "id": "g-20063"
+          },
+          {
+            "name": "Jazz Funk",
+            "id": "g-20075"
+          },
+          {
+            "name": "UK Funky",
+            "id": "g-20099"
+          }
+        ],
+        "related": []
+      },
+      "description": "Funk 的核心不是和声，而是\"节奏的分工与咬合\"。它的标志是：贝斯以短促、重复、带有大量十六分音符的乐句承担低频与律动；鼓组强调 Snare 在二、四拍，Hi-hat 保持十六分音符；吉他或键盘只弹短促的切音和弦（Stab），几乎不演奏长音；整体以\"一个和弦持续很久\"为常态。在电子音乐中，Funk 的影响体现在三处：切分节奏的处理方式、低频与鼓的咬合关系、以及\"留白比填满更重要\"的编曲观念。",
+      "summary": "Funk 的核心不是和声，而是\"节奏的分工与咬合\"。它的标志是：贝斯以短促、重复、带有大量十六分音符的乐句承担低频与律动；鼓组强调 Snare 在二、四拍，Hi-hat 保持十六分音符；吉他或键盘只弹短促的切音和弦（Stab），几乎不演奏长音；整体以\"一个和弦持续很久\"为常态。",
+      "examples": [
+        {
+          "title": "Give Up The Funk",
+          "artist": "Parliament",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20039",
+        "g-20051",
+        "g-20063",
+        "g-20075",
+        "g-20087",
+        "g-20099",
+        "g-20109",
+        "g-20121",
+        "g-20131",
+        "g-20141"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-765",
+          "fromName": "Funky House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-1333",
+          "fromName": "Future Groove",
+          "type": "up"
+        },
+        {
+          "fromId": "g-3983",
+          "fromName": "Funky Breaks",
+          "type": "up"
+        },
+        {
+          "fromId": "g-4173",
+          "fromName": "Dangdut",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9479",
+          "fromName": "Hip-Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9505",
+          "fromName": "Electro-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11415",
+          "fromName": "Disco",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11519",
+          "fromName": "Sleaze Disco",
+          "type": "up"
+        },
+        {
+          "fromId": "g-14226",
+          "fromName": "Future Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18446",
+          "fromName": "New Jack Swing",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18956",
+          "fromName": "Electro/Synth Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18982",
+          "fromName": "Acid Jazz",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20039",
+          "fromName": "Electro-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20051",
+          "fromName": "Synth Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20063",
+          "fromName": "G-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20075",
+          "fromName": "Jazz Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20087",
+          "fromName": "Funkstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20099",
+          "fromName": "UK Funky",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20109",
+          "fromName": "Nu-Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20131",
+          "fromName": "Future Funk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20141",
+          "fromName": "Funk Mandelão",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20039",
+      "name": "Electro-Funk",
+      "rawTitle": "Electro-Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20039,
+      "sourceLine": 20039,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20039"
+      ],
+      "pathNames": [
+        "Funk",
+        "Electro-Funk"
+      ],
+      "aliases": [
+        "Electro Funk",
+        "Electro-Boogie"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Electro",
+            "id": "g-13484"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Electro-Funk 是1980年代初形成的融合形态，把 Funk 的律动与 Electro 的鼓机（TR-808）、合成器 Bass 与 Vocoder 结合。它的标志是：808 的 Kick 与 Clap 承担鼓组、合成贝斯用短促的低频音符、旋律由合成器或 Talk Box 演奏、歌词多为科幻或派对题材。它是 Hip-Hop 与 Techno 的共同前身之一，也是\"机器可以 Funk\"这一观念的第一次大规模验证。",
+      "summary": "Electro-Funk 是1980年代初形成的融合形态，把 Funk 的律动与 Electro 的鼓机（TR-808）、合成器 Bass 与 Vocoder 结合。",
+      "examples": [
+        {
+          "title": "Planet Rock",
+          "artist": "Afrika Bambaataa",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-13484",
+          "fromName": "Electro",
+          "type": "related"
+        },
+        {
+          "fromId": "g-20027",
+          "fromName": "Funk",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20051",
+      "name": "Synth Funk",
+      "rawTitle": "Synth Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20051,
+      "sourceLine": 20051,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20051"
+      ],
+      "pathNames": [
+        "Funk",
+        "Synth Funk"
+      ],
+      "aliases": [
+        "Boogie",
+        "Synth-Funk",
+        "Electro Boogie"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Synth Pop",
+            "id": "g-18226"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Synth Funk 是1980年代 Funk 的电子化形态，特征是：鼓机（LinnDrum、Oberheim DMX）承担鼓组、合成贝斯走明亮的切分线、大量使用电钢琴、合成铜管与华丽的合成器 Solo。它比 Electro-Funk 更注重旋律与和声的精致度，听感更\"亮\"、更都市化。它是 Nu-Disco 与 Future Funk 的直接源头。",
+      "summary": "Synth Funk 是1980年代 Funk 的电子化形态，特征是：鼓机（LinnDrum、Oberheim DMX）承担鼓组、合成贝斯走明亮的切分线、大量使用电钢琴、合成铜管与华丽的合成器 Solo。",
+      "examples": [
+        {
+          "title": "I Feel For You",
+          "artist": "Chaka Khan",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "明亮",
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-11415",
+          "fromName": "Disco",
+          "type": "down"
+        },
+        {
+          "fromId": "g-11519",
+          "fromName": "Sleaze Disco",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11533",
+          "fromName": "Boogie/Post-Disco",
+          "type": "related"
+        },
+        {
+          "fromId": "g-12976",
+          "fromName": "Sexwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13118",
+          "fromName": "Funktronica",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13530",
+          "fromName": "Skweee",
+          "type": "up"
+        },
+        {
+          "fromId": "g-14244",
+          "fromName": "Vaporboogie",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18624",
+          "fromName": "City Pop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18970",
+          "fromName": "Tecnobrega",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20027",
+          "fromName": "Funk",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20063",
+      "name": "G-Funk",
+      "rawTitle": "G-Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20063,
+      "sourceLine": 20063,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20063"
+      ],
+      "pathNames": [
+        "Funk",
+        "G-Funk"
+      ],
+      "aliases": [
+        "Gangsta Funk",
+        "西海岸 G-Funk"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "G-Funk 是1990年代初美国西海岸 Hip-Hop 的分支，制作上大量采样1970年代的 P-Funk 与 Zapp，配合缓慢的节拍（90 BPM 上下）、Moog 或类似合成器的滑音 Lead、以及大量使用 Talk Box 的女声和声。它的音色特征是\"油腻而温暖\"：低频沉重、中频被合成器填满、高频有明亮的钟声与 Whine。G-Funk 定义了1990年代西海岸 Hip-Hop 的声音形象。",
+      "summary": "G-Funk 是1990年代初美国西海岸 Hip-Hop 的分支，制作上大量采样1970年代的 P-Funk 与 Zapp，配合缓慢的节拍（90 BPM 上下）、Moog 或类似合成器的滑音 Lead、以及大量使用 Talk Box 的女声和声。",
+      "examples": [
+        {
+          "title": "Nuthin' But A 'G' Thang",
+          "artist": "Dr. Dre",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 90,
+        "max": 90,
+        "label": "90"
+      },
+      "traits": [
+        "明亮"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20027",
+          "fromName": "Funk",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20075",
+      "name": "Jazz Funk",
+      "rawTitle": "Jazz Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20075,
+      "sourceLine": 20075,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20075"
+      ],
+      "pathNames": [
+        "Funk",
+        "Jazz Funk"
+      ],
+      "aliases": [
+        "Jazz-Funk",
+        "Funk Jazz"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Jazz",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Acid Jazz",
+            "id": "g-18982"
+          }
+        ],
+        "related": []
+      },
+      "description": "Jazz Funk 是1970年代形成的分支，把 Funk 的律动与爵士的和声、即兴独奏结合。它的编制通常是真实的乐队：电贝斯、电钢琴、Clavinet、铜管组与打击乐。速度通常在中速（100–120 BPM），和声使用大量七和弦、九和弦与调式音阶，独奏部分保留爵士的即兴空间。它是 Acid Jazz、Nu-Disco 与 City Pop 的和声基础。",
+      "summary": "Jazz Funk 是1970年代形成的分支，把 Funk 的律动与爵士的和声、即兴独奏结合。",
+      "examples": [
+        {
+          "title": "Chameleon",
+          "artist": "Herbie Hancock",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 100,
+        "max": 120,
+        "label": "100–120"
+      },
+      "traits": [
+        "酸性"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19062",
+          "fromName": "Jazz Fusion / Electro Jazz",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20027",
+          "fromName": "Funk",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20224",
+          "fromName": "Nu Jazz",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20087",
+      "name": "Funkstep",
+      "rawTitle": "Funkstep",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20087,
+      "sourceLine": 20087,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20087"
+      ],
+      "pathNames": [
+        "Funk",
+        "Funkstep"
+      ],
+      "aliases": [
+        "Funky Dubstep"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Dubstep",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Funkstep 是2010年代形成的融合形态，把 Dubstep 的低频处理（Wobble Bass、Half-time 鼓组）与 Funk 的切分律动、明亮合成器与 Groove 结合。它比典型 Dubstep 更\"活\"，鼓组保留了 Funk 的细碎 Hi-hat 与 Syncopation，低频则使用 Wobble 或 Reese 处理。它同时是 Glitch Hop 与 Neurohop 的近亲。",
+      "summary": "Funkstep 是2010年代形成的融合形态，把 Dubstep 的低频处理（Wobble Bass、Half-time 鼓组）与 Funk 的切分律动、明亮合成器与 Groove 结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Funkstep",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "Half-time",
+        "明亮"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20099",
+      "name": "UK Funky",
+      "rawTitle": "UK Funky",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20099,
+      "sourceLine": 20099,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20099"
+      ],
+      "pathNames": [
+        "Funk",
+        "UK Funky"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "UK Garage",
+            "id": "g-5315"
+          },
+          {
+            "name": "House",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "UK Funky 是2000年代后期在伦敦形成的分支，把 House 的四四拍与 UK Garage 的切分、以及非洲与加勒比鼓乐的节奏结合。它的标志是：稳定的四四拍 Kick 配合复杂的打击乐层、深沉的合成贝斯、以及大量使用的人声采样与 MC。它比 Deep House 更\"碎\"、比 Grime 更\"舞\"，是英国多文化场景的产物。",
+      "summary": "UK Funky 是2000年代后期在伦敦形成的分支，把 House 的四四拍与 UK Garage 的切分、以及非洲与加勒比鼓乐的节奏结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "UK Funky",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "碎拍",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20027",
+          "fromName": "Funk",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20109",
+      "name": "Nu-Funk",
+      "rawTitle": "Nu-Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20109,
+      "sourceLine": 20109,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20109"
+      ],
+      "pathNames": [
+        "Funk",
+        "Nu-Funk"
+      ],
+      "aliases": [
+        "Nu Funk",
+        "NuFunk"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Breakbeat",
+            "id": "g-3813"
+          }
+        ],
+        "down": [
+          {
+            "name": "Ghetto Funk",
+            "id": "g-20121"
+          }
+        ],
+        "related": []
+      },
+      "description": "Nu-Funk 是2000年代形成的分支，把1970–80年代的 Funk 素材重新采样、切片、加厚，配合现代的制作手段（侧链压缩、现代鼓组、更宽的立体声像）。它同时吸收了 Breakbeat 与 Nu-Disco 的节拍处理，听感既有复古的油脂感，又有当代的响度与清晰度。它是 Funk 在当代舞池中最稳定的形态。",
+      "summary": "Nu-Funk 是2000年代形成的分支，把1970–80年代的 Funk 素材重新采样、切片、加厚，配合现代的制作手段（侧链压缩、现代鼓组、更宽的立体声像）。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Nu-Funk",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20121",
+          "fromName": "Ghetto Funk",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20121",
+      "name": "Ghetto Funk",
+      "rawTitle": "Ghetto Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20121,
+      "sourceLine": 20121,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20121"
+      ],
+      "pathNames": [
+        "Funk",
+        "Ghetto Funk"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Nu-Funk",
+            "id": "g-20109"
+          },
+          {
+            "name": "Breakbeat",
+            "id": "g-3813"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Ghetto Funk 是 Nu-Funk 的激进分支，把 Funk、Hip-Hop 与 Breakbeat 的素材以极高的能量拼接，速度通常在100–115 BPM，鼓组厚重、低频突出、采样密集。它常使用经过大幅处理的 Vocal 采样作为 Hook，整体听感粗粝而直接。它主要由互联网厂牌（如 Ghetto Funk）推动传播。",
+      "summary": "Ghetto Funk 是 Nu-Funk 的激进分支，把 Funk、Hip-Hop 与 Breakbeat 的素材以极高的能量拼接，速度通常在100–115 BPM，鼓组厚重、低频突出、采样密集。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Ghetto Funk",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 100,
+        "max": 115,
+        "label": "100–115"
+      },
+      "traits": [
+        "碎拍",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20109",
+          "fromName": "Nu-Funk",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20131",
+      "name": "Future Funk",
+      "rawTitle": "Future Funk",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20131,
+      "sourceLine": 20131,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20131"
+      ],
+      "pathNames": [
+        "Funk",
+        "Future Funk"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Vaporwave",
+            "id": "g-13882"
+          },
+          {
+            "name": "Nu-Disco",
+            "id": "g-777"
+          }
+        ],
+        "down": [
+          {
+            "name": "J-Future Funk",
+            "id": "g-14270"
+          }
+        ],
+        "related": []
+      },
+      "description": "Future Funk 是2010年代从 Vaporwave 场景中分出的分支，把1980年代日本 City Pop、Disco 与 Funk 的素材加速、滤波、加厚，做成高能量的舞曲。它的标志是：采样自1970–80年代日本流行歌曲的女声段落、被加速到120–130 BPM 的四四拍、明亮的合成器与厚重的侧链压缩。它是\"怀旧素材 + 当代舞曲处理\"的典型，也是 City Pop 在海外复兴的重要推手。",
+      "summary": "Future Funk 是2010年代从 Vaporwave 场景中分出的分支，把1980年代日本 City Pop、Disco 与 Funk 的素材加速、滤波、加厚，做成高能量的舞曲。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Future Funk",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 120,
+        "max": 130,
+        "label": "120–130"
+      },
+      "traits": [
+        "4/4",
+        "明亮"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20141",
+      "name": "Funk Mandelão",
+      "rawTitle": "Funk Mandelão",
+      "status": null,
+      "group": null,
+      "familyId": "f-19995",
+      "familyName": "Funk",
+      "familyZh": "放克",
+      "familyColor": "heat",
+      "level": 3,
+      "line": 20141,
+      "sourceLine": 20141,
+      "parentId": "g-20027",
+      "pathIds": [
+        "g-20027",
+        "g-20141"
+      ],
+      "pathNames": [
+        "Funk",
+        "Funk Mandelão"
+      ],
+      "aliases": [
+        "Mandelão",
+        "Brazilian Funk"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Funk",
+            "id": "g-20027"
+          },
+          {
+            "name": "Baile Funk",
+            "id": "g-17456"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Funk Mandelão 是2010年代后期在巴西圣保罗形成的 Baile Funk 分支，特征是极简而暴烈的低频：808 Kick 被拉长到几乎覆盖整拍、配合短促的 Clap 与高速的 Hi-hat 滚奏、人声以 MC 喊话为主。它的速度通常在130 BPM 上下，结构高度重复，完全服务于舞池。它是当代全球俱乐部场景中影响最大的南美声音之一。",
+      "summary": "Funk Mandelão 是2010年代后期在巴西圣保罗形成的 Baile Funk 分支，特征是极简而暴烈的低频：808 Kick 被拉长到几乎覆盖整拍、配合短促的 Clap 与高速的 Hi-hat 滚奏、人声以 MC 喊话为主。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Funk Mandelão",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 130,
+        "max": 130,
+        "label": "130"
+      },
+      "traits": [
+        "极简",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-14996",
+          "fromName": "Hyper Mandelão",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20188",
+      "name": "Chill-Out",
+      "rawTitle": "Chill-Out",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 2,
+      "line": 20188,
+      "sourceLine": 20188,
+      "parentId": "f-20154",
+      "pathIds": [
+        "g-20188"
+      ],
+      "pathNames": [
+        "Chill-Out"
+      ],
+      "aliases": [
+        "Chillout",
+        "Chill Out",
+        "Chill"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          }
+        ],
+        "down": [
+          {
+            "name": "Downtempo",
+            "id": "g-20200"
+          },
+          {
+            "name": "Trip Hop",
+            "id": "g-20212"
+          },
+          {
+            "name": "Nu Jazz",
+            "id": "g-20224"
+          },
+          {
+            "name": "Lounge Music",
+            "id": "g-20268"
+          },
+          {
+            "name": "Balearic Beat",
+            "id": "g-20280"
+          }
+        ],
+        "related": []
+      },
+      "description": "Chill-Out 是一个场景性的集合概念，而不是单一音色。它的共同点是：速度偏慢、鼓组被简化或抽离、和声与音色承担主要表情、整体响度与动态都偏低。它与 Ambient 的区别在于通常仍保留明确的节拍与低音线；与 Downtempo 的区别在于它更强调整体的\"氛围场景感\"（如日落、海滩、深夜），而不只是速度。Chill-Out 是电子音乐中\"把舞池语言用于非舞池场景\"的第一个大规模实践。",
+      "summary": "Chill-Out 是一个场景性的集合概念，而不是单一音色。它的共同点是：速度偏慢、鼓组被简化或抽离、和声与音色承担主要表情、整体响度与动态都偏低。",
+      "examples": [
+        {
+          "title": "Teardrop",
+          "artist": "Massive Attack",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20200",
+        "g-20256",
+        "g-20268",
+        "g-20280",
+        "g-20292",
+        "g-20304",
+        "g-20314"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-20200",
+          "fromName": "Downtempo",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20236",
+          "fromName": "KetaPop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20256",
+          "fromName": "Illbient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20268",
+          "fromName": "Lounge Music",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20280",
+          "fromName": "Balearic Beat",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20292",
+          "fromName": "Chill House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20304",
+          "fromName": "Chill Trance",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20314",
+          "fromName": "Chillstep",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20200",
+      "name": "Downtempo",
+      "rawTitle": "Downtempo",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20200,
+      "sourceLine": 20200,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20200"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Downtempo"
+      ],
+      "aliases": [
+        "Downbeat",
+        "慢拍"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Trip Hop",
+            "id": "g-20212"
+          },
+          {
+            "name": "Nu Jazz",
+            "id": "g-20224"
+          },
+          {
+            "name": "Balearic Beat",
+            "id": "g-20280"
+          },
+          {
+            "name": "KetaPop",
+            "id": "g-20236"
+          }
+        ],
+        "related": []
+      },
+      "description": "Downtempo 指速度在60–110 BPM、以放松的聆听体验为目标的电子音乐。它的标志是：鼓组通常使用采样或鼓机但节奏稀疏、低音线温暖而稳定、大量使用电钢琴、合成垫音与真实乐器采样（如长笛、萨克斯、弦乐）。Downtempo 与 Ambient 的关系很近，但保留了明确的律动；与 Hip-Hop 的关系也很近，但通常不使用说唱。它是1990年代\"聆听型电子音乐\"的主要形态。",
+      "summary": "Downtempo 指速度在60–110 BPM、以放松的聆听体验为目标的电子音乐。",
+      "examples": [
+        {
+          "title": "Glory Box",
+          "artist": "Portishead",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 60,
+        "max": 110,
+        "label": "60–110"
+      },
+      "traits": [
+        "氛围",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20212",
+        "g-20224",
+        "g-20236",
+        "g-20246"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-20188",
+          "fromName": "Chill-Out",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20212",
+          "fromName": "Trip Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20224",
+          "fromName": "Nu Jazz",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20236",
+          "fromName": "KetaPop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20246",
+          "fromName": "Progressive Chill-Out",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20212",
+      "name": "Trip Hop",
+      "rawTitle": "Trip Hop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 4,
+      "line": 20212,
+      "sourceLine": 20212,
+      "parentId": "g-20200",
+      "pathIds": [
+        "g-20188",
+        "g-20200",
+        "g-20212"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Downtempo",
+        "Trip Hop"
+      ],
+      "aliases": [
+        "Bristol Sound",
+        "Bristol Trip Hop",
+        "神游舞曲"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Downtempo",
+            "id": "g-20200"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [
+          {
+            "name": "Post-Trip Hop",
+            "id": null
+          },
+          {
+            "name": "Trip Rock",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Trip Hop 是1990年代前期在英国布里斯托形成的分支，把 Hip-Hop 的缓慢节拍与采样手法、Dub 的低频处理、以及 Soul／Jazz 的女声结合。它的标志是：速度在80–100 BPM、鼓组使用采样并带有明显的\"脏\"质感（如黑胶噪声）、低频沉重而迟缓、女声通常低沉而疏离、大量使用弦乐或电影配乐采样。Massive Attack、Portishead、Tricky 是代表。Trip Hop 是电子音乐中情绪最阴郁、最接近电影感的一支。",
+      "summary": "Trip Hop 是1990年代前期在英国布里斯托形成的分支，把 Hip-Hop 的缓慢节拍与采样手法、Dub 的低频处理、以及 Soul／Jazz 的女声结合。",
+      "examples": [
+        {
+          "title": "Unfinished Sympathy",
+          "artist": "Massive Attack",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 80,
+        "max": 100,
+        "label": "80–100"
+      },
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-17718",
+          "fromName": "Baggy",
+          "type": "related"
+        },
+        {
+          "fromId": "g-20188",
+          "fromName": "Chill-Out",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20200",
+          "fromName": "Downtempo",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20224",
+      "name": "Nu Jazz",
+      "rawTitle": "Nu Jazz",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 4,
+      "line": 20224,
+      "sourceLine": 20224,
+      "parentId": "g-20200",
+      "pathIds": [
+        "g-20188",
+        "g-20200",
+        "g-20224"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Downtempo",
+        "Nu Jazz"
+      ],
+      "aliases": [
+        "Nu-Jazz",
+        "Jazztronica",
+        "Future Jazz"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Downtempo",
+            "id": "g-20200"
+          },
+          {
+            "name": "Jazz Funk",
+            "id": "g-20075"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Nu Jazz 是1990年代后期形成的分支，把爵士的和声与即兴素材、Funk 的律动与电子音乐的制作手段（采样、鼓机、合成器、效果处理）结合。它可以是纯器乐的，也可以加入人声；鼓组常在真实的 Swing 与电子节拍之间切换。它同时与 Broken Beat、Acid Jazz 与 Downtempo 有大量交集。",
+      "summary": "Nu Jazz 是1990年代后期形成的分支，把爵士的和声与即兴素材、Funk 的律动与电子音乐的制作手段（采样、鼓机、合成器、效果处理）结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Nu Jazz",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声",
+        "酸性"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-1163",
+          "fromName": "Jazz House",
+          "type": "related"
+        },
+        {
+          "fromId": "g-2403",
+          "fromName": "Hi-Tech Jazz",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13130",
+          "fromName": "Jazztronica",
+          "type": "related"
+        },
+        {
+          "fromId": "g-19062",
+          "fromName": "Jazz Fusion / Electro Jazz",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19062",
+          "fromName": "Jazz Fusion / Electro Jazz",
+          "type": "related"
+        },
+        {
+          "fromId": "g-20188",
+          "fromName": "Chill-Out",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20200",
+          "fromName": "Downtempo",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20236",
+      "name": "KetaPop",
+      "rawTitle": "KetaPop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 4,
+      "line": 20236,
+      "sourceLine": 20236,
+      "parentId": "g-20200",
+      "pathIds": [
+        "g-20188",
+        "g-20200",
+        "g-20236"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Downtempo",
+        "KetaPop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Downtempo",
+            "id": "g-20200"
+          },
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "KetaPop 是2010年代后期在互联网上形成的分支，把 Chill-Out 的柔和合成垫音、稀疏鼓组与流行歌曲结构结合，整体速度偏慢、混响极大、人声通常被处理得模糊而遥远。它的名字带有自我调侃意味，美学上介于梦幻流行与慢速电子之间，常被形容为\"麻醉状态的流行歌\"。",
+      "summary": "KetaPop 是2010年代后期在互联网上形成的分支，把 Chill-Out 的柔和合成垫音、稀疏鼓组与流行歌曲结构结合，整体速度偏慢、混响极大、人声通常被处理得模糊而遥远。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "KetaPop",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20200",
+          "fromName": "Downtempo",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20246",
+      "name": "Progressive Chill-Out",
+      "rawTitle": "Progressive Chill-Out",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 4,
+      "line": 20246,
+      "sourceLine": 20246,
+      "parentId": "g-20200",
+      "pathIds": [
+        "g-20188",
+        "g-20200",
+        "g-20246"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Downtempo",
+        "Progressive Chill-Out"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Downtempo",
+            "id": "g-20200"
+          },
+          {
+            "name": "Progressive Electronic",
+            "id": "g-12177"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Progressive Chill-Out 指结构上更接近 Progressive 音乐（长时间缓慢演进、层次逐步叠加）但速度与情绪属于 Chill-Out 的分支。它通常长达6–10分钟，以缓慢推进的合成垫音、渐进的鼓组与持续的音色变化为主，几乎没有明显的段落切分。它是 Berlin School 与 Ambient 在1990年代的延续形态。",
+      "summary": "Progressive Chill-Out 指结构上更接近 Progressive 音乐（长时间缓慢演进、层次逐步叠加）但速度与情绪属于 Chill-Out 的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Progressive Chill-Out",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20256",
+      "name": "Illbient",
+      "rawTitle": "Illbient",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20256,
+      "sourceLine": 20256,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20256"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Illbient"
+      ],
+      "aliases": [
+        "Illbient",
+        "Ill Bient"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          },
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Illbient 是1990年代中期在纽约形成的分支，名字是\"Ill\"与\"Ambient\"的组合。它把 Hip-Hop 的缓慢节拍与采样、Dub 的低频、Ambient 的空间处理、以及城市的噪音（街头录音、地铁声、无线电干扰）混合，形成一种压抑、肮脏、带有强烈都市感的聆听体验。它几乎不追求悦耳，与当时追求放松的 Chill-Out 形成鲜明对照。",
+      "summary": "Illbient 是1990年代中期在纽约形成的分支，名字是\"Ill\"与\"Ambient\"的组合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Illbient",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "暗色",
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20268",
+      "name": "Lounge Music",
+      "rawTitle": "Lounge Music",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20268,
+      "sourceLine": 20268,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20268"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Lounge Music"
+      ],
+      "aliases": [
+        "Lounge",
+        "Easy Listening",
+        "休闲音乐"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "Jazz",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Nu-Lounge",
+            "id": null
+          },
+          {
+            "name": "Exotica",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Lounge Music 原指1950–60年代在酒店大堂与酒吧播放的轻松器乐（如 Exotica、Bossa Nova 与轻爵士），1990年代被电子音乐场景重新发现：制作人开始采样这些老唱片，配合 Downtempo 节拍与电子处理，形成 Nu-Lounge。它的标志是：柔和的电钢琴与弦乐、拉丁或异国打击乐、缓慢的节拍、以及刻意的\"背景音乐\"属性。",
+      "summary": "Lounge Music 原指1950–60年代在酒店大堂与酒吧播放的轻松器乐（如 Exotica、Bossa Nova 与轻爵士），1990年代被电子音乐场景重新发现：制作人开始采样这些老唱片，配合 Downtempo 节拍与电子处理，形成 Nu-Lounge。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Lounge Music",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-13882",
+          "fromName": "Vaporwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18472",
+          "fromName": "Shibuya-kei",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20188",
+          "fromName": "Chill-Out",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20280",
+      "name": "Balearic Beat",
+      "rawTitle": "Balearic Beat",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20280,
+      "sourceLine": 20280,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20280"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Balearic Beat"
+      ],
+      "aliases": [
+        "Balearic",
+        "Ibiza Sound",
+        "Balearic House"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "House",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Balearic Beat 源自1980年代中后期西班牙伊比萨岛（Ibiza）的 DJ 实践，尤其以 Alfredo Fiorito 在 Amnesia 俱乐部的选曲为代表。它的定义不在音色而在\"选曲策略\"：把 House、Balearic Trance、Pop、Rock、Flamenco、Ambient 与 Dub 混在一起播放，依据日落与深夜的氛围而非风格一致性来安排。它后来成为\"Balearic\"这一整套审美（日落、海滩、慢速、明亮而不甜腻）的来源。",
+      "summary": "Balearic Beat 源自1980年代中后期西班牙伊比萨岛（Ibiza）的 DJ 实践，尤其以 Alfredo Fiorito 在 Amnesia 俱乐部的选曲为代表。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Balearic Beat",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "明亮",
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20188",
+          "fromName": "Chill-Out",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20200",
+          "fromName": "Downtempo",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20292",
+      "name": "Chill House",
+      "rawTitle": "Chill House",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20292,
+      "sourceLine": 20292,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20292"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Chill House"
+      ],
+      "aliases": [
+        "Lounge House",
+        "Chillhouse"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "House",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chill House 把 House 的四四拍节拍放慢（通常100–118 BPM）、弱化 Kick 的冲击力、加入大量合成垫音与 Rhodes 电钢琴，形成一种适合白天或休息场景的 House。它与 Deep House 的区别在于更少依赖低频的推进力，更依赖和声与空间的舒适度。它是 Café del Mar 系列与大量\"日落套装\"的主要声音。",
+      "summary": "Chill House 把 House 的四四拍节拍放慢（通常100–118 BPM）、弱化 Kick 的冲击力、加入大量合成垫音与 Rhodes 电钢琴，形成一种适合白天或休息场景的 House。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chill House",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 100,
+        "max": 118,
+        "label": "100–118"
+      },
+      "traits": [
+        "4/4"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20304",
+      "name": "Chill Trance",
+      "rawTitle": "Chill Trance",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20304,
+      "sourceLine": 20304,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20304"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Chill Trance"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "Trance",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chill Trance 指把 Trance 的合成器琶音、明亮和声与情感推进保留下来，但速度放慢（通常100–120 BPM）、鼓组简化、整体氛围转向放松的分支。它通常保留 Trance 标志性的 Supersaw 与长混响，但把 Drop 换成缓慢的层次叠加。它是 Trance 听众在非舞池场景的主要选择。",
+      "summary": "Chill Trance 指把 Trance 的合成器琶音、明亮和声与情感推进保留下来，但速度放慢（通常100–120 BPM）、鼓组简化、整体氛围转向放松的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chill Trance",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 100,
+        "max": 120,
+        "label": "100–120"
+      },
+      "traits": [
+        "明亮",
+        "旋律",
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20314",
+      "name": "Chillstep",
+      "rawTitle": "Chillstep",
+      "status": null,
+      "group": null,
+      "familyId": "f-20154",
+      "familyName": "Chill-Out",
+      "familyZh": "休闲",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20314,
+      "sourceLine": 20314,
+      "parentId": "g-20188",
+      "pathIds": [
+        "g-20188",
+        "g-20314"
+      ],
+      "pathNames": [
+        "Chill-Out",
+        "Chillstep"
+      ],
+      "aliases": [
+        "Chilled Dubstep",
+        "Liquid Dubstep"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chill-Out",
+            "id": "g-20188"
+          },
+          {
+            "name": "Dubstep",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Chilled Dubstep",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Chillstep 是把 Dubstep 的半速鼓组（Snare 落在第三拍）、深沉的 Sub Bass 与 Chill-Out 的柔和合成垫音、钢琴、女声结合的分支。它保留 Dubstep 的低频重量，但把 Wobble 换成持续的低音线与明亮的和声，整体情绪从攻击性转向内省。它是2010年代\"情绪向电子音乐\"中最流行的形态之一。",
+      "summary": "Chillstep 是把 Dubstep 的半速鼓组（Snare 落在第三拍）、深沉的 Sub Bass 与 Chill-Out 的柔和合成垫音、钢琴、女声结合的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chillstep",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "Half-time",
+        "明亮",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20361",
+      "name": "Bass / Club",
+      "rawTitle": "Bass / Club",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 2,
+      "line": 20361,
+      "sourceLine": 20361,
+      "parentId": "f-20327",
+      "pathIds": [
+        "g-20361"
+      ],
+      "pathNames": [
+        "Bass / Club"
+      ],
+      "aliases": [
+        "Bass Music",
+        "Club Music",
+        "低频俱乐部音乐"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Bass",
+            "id": "g-20373"
+          },
+          {
+            "name": "Club",
+            "id": "g-20385"
+          },
+          {
+            "name": "Bérite",
+            "id": "g-20397"
+          },
+          {
+            "name": "Jersey Terror",
+            "id": "g-20427"
+          },
+          {
+            "name": "Electro Bass",
+            "id": "g-20447"
+          }
+        ],
+        "related": []
+      },
+      "description": "Bass / Club 不是一种音色风格，而是一个按\"功能\"划定的族群：这些音乐的存在意义是让舞池的人动起来，且驱动力来自低频而非旋律或和声。它的共同制作特征是：Kick 与 Sub Bass 占据混音的主要空间、鼓组大量使用切分与三连音、人声被切片或处理成节奏元素、结构以短循环叠加为主。它与 EDM 的区别在于不追求\"Drop 的爆发\"，而追求持续的律动压力；与 Techno 的区别在于更依赖具体的低频音色设计而非氛围推进。",
+      "summary": "Bass / Club 不是一种音色风格，而是一个按\"功能\"划定的族群：这些音乐的存在意义是让舞池的人动起来，且驱动力来自低频而非旋律或和声。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Bass / Club",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "三连音",
+        "旋律",
+        "氛围",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20373",
+        "g-20385",
+        "g-20397",
+        "g-20407",
+        "g-20417",
+        "g-20427",
+        "g-20437",
+        "g-20447",
+        "g-20459",
+        "g-20471",
+        "g-20481"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-1357",
+          "fromName": "Bass House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-14840",
+          "fromName": "Hyper Pop（3 stage/China）",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18732",
+          "fromName": "K-Pop (5 stages)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18944",
+          "fromName": "RnBass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20373",
+          "fromName": "Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20385",
+          "fromName": "Club",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20397",
+          "fromName": "Bérite",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20407",
+          "fromName": "Jigg",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20417",
+          "fromName": "Jook",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20427",
+          "fromName": "Jersey Terror",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20437",
+          "fromName": "East Coast Club",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20447",
+          "fromName": "Electro Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20459",
+          "fromName": "Car Audio Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20471",
+          "fromName": "R&Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20481",
+          "fromName": "Snap Music",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20373",
+      "name": "Bass",
+      "rawTitle": "Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20373,
+      "sourceLine": 20373,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20373"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Bass"
+      ],
+      "aliases": [
+        "Bass Music",
+        "低频音乐"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Bass House",
+            "id": "g-1357"
+          },
+          {
+            "name": "Leftfield Bass",
+            "id": "g-5861"
+          },
+          {
+            "name": "UK Bass",
+            "id": "g-5651"
+          },
+          {
+            "name": "US Bass",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Bass 作为集合名词，指一切以低频设计为核心卖点的电子音乐。它的边界很宽：从 Dubstep 的 Wobble、Drum & Bass 的 Reese、到 Trap 的 808 Long Kick，都属于 Bass 的范畴。判断标准是\"如果去掉低频，这首歌还剩多少\"——Bass 音乐在去掉低频后通常失去全部驱动力。Bass 在2010年代成为全球俱乐部场景最主要的语汇，也是唯一一个横跨英美、亚欧与南美的电子音乐大类。",
+      "summary": "Bass 作为集合名词，指一切以低频设计为核心卖点的电子音乐。它的边界很宽：从 Dubstep 的 Wobble、Drum & Bass 的 Reese、到 Trap 的 808 Long Kick，都属于 Bass 的范畴。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Bass",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20361",
+          "fromName": "Bass / Club",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20894",
+          "fromName": "Experimental Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21651",
+          "fromName": "Psybass",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20385",
+      "name": "Club",
+      "rawTitle": "Club",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20385,
+      "sourceLine": 20385,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20385"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Club"
+      ],
+      "aliases": [
+        "Club Music",
+        "俱乐部音乐"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          }
+        ],
+        "down": [
+          {
+            "name": "Jersey Club",
+            "id": "g-939"
+          },
+          {
+            "name": "Baltimore Club",
+            "id": "g-925"
+          },
+          {
+            "name": "Ballroom",
+            "id": "g-907"
+          }
+        ],
+        "related": []
+      },
+      "description": "Club 在这里特指美国东海岸的俱乐部舞曲传统，与欧洲的 House／Techno 传统并行发展。它的核心是\"切分 + 切片 + 三连音\"：鼓组不遵循四四拍的稳定律动，而是通过密集的 Kick 变化、Snare 的错位与人声切片制造急停感。它的速度通常在130–145 BPM，比 House 更快、更碎、更适合特定舞种。",
+      "summary": "Club 在这里特指美国东海岸的俱乐部舞曲传统，与欧洲的 House／Techno 传统并行发展。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Club",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 130,
+        "max": 145,
+        "label": "130–145"
+      },
+      "traits": [
+        "4/4",
+        "碎拍",
+        "三连音",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20361",
+          "fromName": "Bass / Club",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20437",
+          "fromName": "East Coast Club",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20397",
+      "name": "Bérite",
+      "rawTitle": "Bérite",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20397,
+      "sourceLine": 20397,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20397"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Bérite"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Jersey Club",
+            "id": "g-939"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Bérite 是2010年代后期在法国形成的分支，把 Jersey Club 的切分鼓组、三连音 Kick 与北非／西非的鼓乐节奏、法语人声采样结合。它的速度通常在140 BPM 上下，鼓组极碎而密集，低频沉重，整体听感介于俱乐部音乐与全球低音（Global Bass）之间。它是当代法语俱乐部场景中最有辨识度的声音之一。",
+      "summary": "Bérite 是2010年代后期在法国形成的分支，把 Jersey Club 的切分鼓组、三连音 Kick 与北非／西非的鼓乐节奏、法语人声采样结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Bérite",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 140,
+        "max": 140,
+        "label": "140"
+      },
+      "traits": [
+        "碎拍",
+        "三连音",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20361",
+          "fromName": "Bass / Club",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20407",
+      "name": "Jigg",
+      "rawTitle": "Jigg",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20407,
+      "sourceLine": 20407,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20407"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Jigg"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Jersey Club",
+            "id": "g-939"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Jigg 是2010年代在美国南部形成的分支，把 Jersey Club 的切分与三连音鼓组进一步加速（通常150 BPM 以上）、简化旋律、突出低频与短促的人声切片。它比 Jersey Club 更暴烈、更少装饰，几乎只保留 Kick、Clap 与人声切片三个元素。它是\"极简俱乐部音乐\"的极端形态。",
+      "summary": "Jigg 是2010年代在美国南部形成的分支，把 Jersey Club 的切分与三连音鼓组进一步加速（通常150 BPM 以上）、简化旋律、突出低频与短促的人声切片。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Jigg",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "traits": [
+        "碎拍",
+        "三连音",
+        "旋律",
+        "极简",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20417",
+      "name": "Jook",
+      "rawTitle": "Jook",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20417,
+      "sourceLine": 20417,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20417"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Jook"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Jersey Club",
+            "id": "g-939"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Jook 是2010年代中期形成的分支，与 Jersey Club 同源，但更强调\"怪异\"的音色选择：使用卡通音效、游戏音效、非常规采样与突然的节奏断裂。它的速度通常在130–140 BPM，结构刻意不规整，是互联网一代对俱乐部音乐的再加工。",
+      "summary": "Jook 是2010年代中期形成的分支，与 Jersey Club 同源，但更强调\"怪异\"的音色选择：使用卡通音效、游戏音效、非常规采样与突然的节奏断裂。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Jook",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 130,
+        "max": 140,
+        "label": "130–140"
+      },
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20427",
+      "name": "Jersey Terror",
+      "rawTitle": "Jersey Terror",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20427,
+      "sourceLine": 20427,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20427"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Jersey Terror"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Jersey Club",
+            "id": "g-939"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Jersey Terror 是 Jersey Club 的极端化分支，把切分鼓组、三连音 Kick 与强烈的失真低频、噪音层、恐怖电影采样结合。它的速度更快（通常150 BPM 以上）、低频更具攻击性，整体情绪从\"跳舞\"转向\"压迫\"。它是俱乐部音乐与 Hardcore 语汇的交叉点。",
+      "summary": "Jersey Terror 是 Jersey Club 的极端化分支，把切分鼓组、三连音 Kick 与强烈的失真低频、噪音层、恐怖电影采样结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Jersey Terror",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "traits": [
+        "碎拍",
+        "三连音",
+        "暗色",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20361",
+          "fromName": "Bass / Club",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20437",
+      "name": "East Coast Club",
+      "rawTitle": "East Coast Club",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20437,
+      "sourceLine": 20437,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20437"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "East Coast Club"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Club",
+            "id": "g-20385"
+          }
+        ],
+        "down": [
+          {
+            "name": "Jersey Club",
+            "id": "g-939"
+          },
+          {
+            "name": "Baltimore Club",
+            "id": "g-925"
+          },
+          {
+            "name": "Philly Club",
+            "id": "g-963"
+          }
+        ],
+        "related": []
+      },
+      "description": "East Coast Club 是美国东海岸俱乐部音乐传统的集合称呼，涵盖 Baltimore Club、Jersey Club、Philly Club、Bmore 等分支。它们的共同祖先是1980年代巴尔的摩的 Breakbeat 与 Hip-Hop 混音实践，特征是：采样 Breakbeat 并加速、把 Vocal 切碎循环、用 808 或类似鼓机承担低频。这一传统在2010年代通过互联网被全球制作人重新发现，成为当代俱乐部音乐的主要源头之一。",
+      "summary": "East Coast Club 是美国东海岸俱乐部音乐传统的集合称呼，涵盖 Baltimore Club、Jersey Club、Philly Club、Bmore 等分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "East Coast Club",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20447",
+      "name": "Electro Bass",
+      "rawTitle": "Electro Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20447,
+      "sourceLine": 20447,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20447"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Electro Bass"
+      ],
+      "aliases": [
+        "Florida Bass"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Miami Bass",
+            "id": "g-10051"
+          },
+          {
+            "name": "Electro",
+            "id": "g-13484"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Electro Bass 是1980年代佛罗里达 Miami Bass 场景的分支，把 Electro 的 808 鼓机、Vocoder 与 Funk 的律动结合，配合极快的念白与强调低频的混音。它的标志是：808 Long Kick 连续敲击、Snare 与 Clap 交替、合成器演奏简单的旋律 Hook。它是 Hip-Hop 与电子舞曲在南方的交汇点，也是 Car Audio Bass 的前身。",
+      "summary": "Electro Bass 是1980年代佛罗里达 Miami Bass 场景的分支，把 Electro 的 808 鼓机、Vocoder 与 Funk 的律动结合，配合极快的念白与强调低频的混音。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Electro Bass",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20361",
+          "fromName": "Bass / Club",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20459",
+      "name": "Car Audio Bass",
+      "rawTitle": "Car Audio Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20459,
+      "sourceLine": 20459,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20459"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Car Audio Bass"
+      ],
+      "aliases": [
+        "Car Bass",
+        "Spl Bass"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Miami Bass",
+            "id": "g-10051"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Car Audio Bass 是1980年代末到1990年代初在佛罗里达形成的极端低频分支，制作目的就是让汽车音响系统的低频单元产生最大位移。它的特征是：极简的鼓组、几乎完全由 Sub Bass 构成的主体、以及刻意压低的中高频。它几乎不是为了家用聆听设计的，而是\"低频竞赛\"的产物，也是 Bass 文化中\"低频即内容\"这一观念的极端体现。",
+      "summary": "Car Audio Bass 是1980年代末到1990年代初在佛罗里达形成的极端低频分支，制作目的就是让汽车音响系统的低频单元产生最大位移。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Car Audio Bass",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-10083",
+          "fromName": "Techno Bass",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20471",
+      "name": "R&Bass",
+      "rawTitle": "R&Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20471,
+      "sourceLine": 20471,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20471"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "R&Bass"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "R&B",
+            "id": "g-19679"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "R&Bass 是把 R&B 的歌唱方式与 Bass 音乐的低频设计结合的形态，特征是：R&B 式的人声演唱与和声堆叠、配合 808 Long Kick 与稀疏的鼓组、速度偏慢（通常在70–90 BPM 感觉）。它是2010年代 Trap Soul 与 Bass 场景的交叉产物，制作上强调人声的清晰度与低频的重量感之间的对比。",
+      "summary": "R&Bass 是把 R&B 的歌唱方式与 Bass 音乐的低频设计结合的形态，特征是：R&B 式的人声演唱与和声堆叠、配合 808 Long Kick 与稀疏的鼓组、速度偏慢（通常在70–90 BPM 感觉）。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "R&Bass",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 70,
+        "max": 90,
+        "label": "70–90"
+      },
+      "traits": [
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20481",
+      "name": "Snap Music",
+      "rawTitle": "Snap Music",
+      "status": null,
+      "group": null,
+      "familyId": "f-20327",
+      "familyName": "Bass / Club",
+      "familyZh": "低频俱乐部",
+      "familyColor": "violet",
+      "level": 3,
+      "line": 20481,
+      "sourceLine": 20481,
+      "parentId": "g-20361",
+      "pathIds": [
+        "g-20361",
+        "g-20481"
+      ],
+      "pathNames": [
+        "Bass / Club",
+        "Snap Music"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass / Club",
+            "id": "g-20361"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Snap Music 是2000年代中期在美国亚特兰大形成的 Hip-Hop 分支，特征是极简的制作：主要由手指打响（Snap）、简单的 Kick 与 808 Bass 构成，几乎没有旋律乐器。它的速度偏慢（约70–80 BPM），编曲留白极大，人声以轻松、口语化的念唱为主。它体现了\"用最少元素驱动舞池\"的极简主义思路。",
+      "summary": "Snap Music 是2000年代中期在美国亚特兰大形成的 Hip-Hop 分支，特征是极简的制作：主要由手指打响（Snap）、简单的 Kick 与 808 Bass 构成，几乎没有旋律乐器。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Snap Music",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 70,
+        "max": 80,
+        "label": "70–80"
+      },
+      "traits": [
+        "旋律",
+        "极简",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20524",
+      "name": "Chiptune",
+      "rawTitle": "Chiptune",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 2,
+      "line": 20524,
+      "sourceLine": 20524,
+      "parentId": "f-20492",
+      "pathIds": [
+        "g-20524"
+      ],
+      "pathNames": [
+        "Chiptune"
+      ],
+      "aliases": [
+        "Chip Music",
+        "Chip Tune",
+        "芯片音乐"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Bit Music",
+            "id": "g-13264"
+          },
+          {
+            "name": "Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Chip Rock",
+            "id": "g-20536"
+          },
+          {
+            "name": "Chip Metal",
+            "id": "g-20568"
+          },
+          {
+            "name": "Chip Punk",
+            "id": "g-20548"
+          },
+          {
+            "name": "Chip Hop",
+            "id": "g-20578"
+          },
+          {
+            "name": "Chipstep",
+            "id": "g-20590"
+          },
+          {
+            "name": "Chipbreak",
+            "id": "g-20600"
+          }
+        ],
+        "related": []
+      },
+      "description": "Chiptune 指用视频游戏机、家用电脑的声音芯片创作，或刻意模拟这些芯片音色的音乐。它的音色标志是：方波与三角波承担旋律与低音、噪声通道承担鼓组、琶音器（Arpeggio）用极快的音高切换模拟和弦、几乎不使用混响与延迟。Chiptune 在制作上与现代电子音乐几乎相反：它没有真实的低频，没有立体声宽度，动态范围极小，但正因为如此，它的旋律与编配必须极其精准才能成立。本地知识库中 Bit Music 一节记录了它的技术谱系（PSG 芯片 → 8-bit → FM 合成 → Tracker），本节补充它与各类音乐杂交后形成的分支。",
+      "summary": "Chiptune 指用视频游戏机、家用电脑的声音芯片创作，或刻意模拟这些芯片音色的音乐。",
+      "examples": [
+        {
+          "title": "The Moon (8-bit Version)",
+          "artist": "殿村裕誠",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20536",
+        "g-20568",
+        "g-20578",
+        "g-20590",
+        "g-20600",
+        "g-20612",
+        "g-20622",
+        "g-20634"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-4651",
+          "fromName": "Chipcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11203",
+          "fromName": "Kawaii Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-12546",
+          "fromName": "Dungeon Chiptune",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13000",
+          "fromName": "Chipwave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13290",
+          "fromName": "Fakebit",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13310",
+          "fromName": "Game Boy Music",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13530",
+          "fromName": "Skweee",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18050",
+          "fromName": "Maidcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-18578",
+          "fromName": "Bitpop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19630",
+          "fromName": "Picopop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20536",
+          "fromName": "Chip Rock",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20568",
+          "fromName": "Chip Metal",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20578",
+          "fromName": "Chip Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20590",
+          "fromName": "Chipstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20600",
+          "fromName": "Chipbreak",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20612",
+          "fromName": "Chipcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20622",
+          "fromName": "Demostyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20634",
+          "fromName": "Amigacore",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20536",
+      "name": "Chip Rock",
+      "rawTitle": "Chip Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20536,
+      "sourceLine": 20536,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20536"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chip Rock"
+      ],
+      "aliases": [
+        "Chiptune Rock",
+        "Chiprock"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Rock",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Chip Punk",
+            "id": "g-20548"
+          },
+          {
+            "name": "Chipthrash",
+            "id": "g-20558"
+          }
+        ],
+        "related": []
+      },
+      "description": "Chip Rock 把 Chiptune 的方波旋律与失真吉他、真实鼓组结合，编制通常是\"芯片负责旋律与和声、摇滚编制负责节奏与重量\"。它比 Nintendocore 更接近传统摇滚，失真程度较低，旋律性更强。它常出现在同人音乐与游戏改编作品中。",
+      "summary": "Chip Rock 把 Chiptune 的方波旋律与失真吉他、真实鼓组结合，编制通常是\"芯片负责旋律与和声、摇滚编制负责节奏与重量\"。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chip Rock",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20548",
+        "g-20558"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20548",
+          "fromName": "Chip Punk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20558",
+          "fromName": "Chipthrash",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20548",
+      "name": "Chip Punk",
+      "rawTitle": "Chip Punk",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 20548,
+      "sourceLine": 20548,
+      "parentId": "g-20536",
+      "pathIds": [
+        "g-20524",
+        "g-20536",
+        "g-20548"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chip Rock",
+        "Chip Punk"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chip Rock",
+            "id": "g-20536"
+          },
+          {
+            "name": "Punk",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chip Punk 把 Chiptune 的方波音色与朋克的快速节奏、粗糙失真结合。速度通常在160–200 BPM，结构极简（主歌—副歌—主歌），吉他失真明显但编配简单，芯片音色承担主旋律。它的听感介于游戏配乐与车库朋克之间。",
+      "summary": "Chip Punk 把 Chiptune 的方波音色与朋克的快速节奏、粗糙失真结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chip Punk",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 160,
+        "max": 200,
+        "label": "160–200"
+      },
+      "traits": [
+        "旋律",
+        "失真",
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20536",
+          "fromName": "Chip Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20558",
+      "name": "Chipthrash",
+      "rawTitle": "Chipthrash",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 4,
+      "line": 20558,
+      "sourceLine": 20558,
+      "parentId": "g-20536",
+      "pathIds": [
+        "g-20524",
+        "g-20536",
+        "g-20558"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chip Rock",
+        "Chipthrash"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chip Rock",
+            "id": "g-20536"
+          },
+          {
+            "name": "Thrash Metal",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chipthrash 把 Chiptune 的芯片音色与 Thrash Metal 的高速吉他、双踩鼓与复杂节奏型结合。它保留了 Thrash 的速度与攻击性，但旋律由方波合成器承担，低频通常偏薄。它是芯片音乐与极端金属交叉处最具技术要求的形态之一。",
+      "summary": "Chipthrash 把 Chiptune 的芯片音色与 Thrash Metal 的高速吉他、双踩鼓与复杂节奏型结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chipthrash",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20536",
+          "fromName": "Chip Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20568",
+      "name": "Chip Metal",
+      "rawTitle": "Chip Metal",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20568,
+      "sourceLine": 20568,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20568"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chip Metal"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chip Metal 把 Chiptune 的芯片音色与金属乐的失真吉他、双踩鼓、极端唱腔结合。它与 Nintendocore 的区别在于更接近金属而非硬核，结构更复杂，吉他 Riff 更强调技术性。它常使用真实的金属编制配合芯片音色，而不是纯电子制作。",
+      "summary": "Chip Metal 把 Chiptune 的芯片音色与金属乐的失真吉他、双踩鼓、极端唱腔结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chip Metal",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20578",
+      "name": "Chip Hop",
+      "rawTitle": "Chip Hop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20578,
+      "sourceLine": 20578,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20578"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chip Hop"
+      ],
+      "aliases": [
+        "Chiphop",
+        "Chiptune Hip Hop"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chip Hop 把 Chiptune 的芯片音色与 Hip-Hop 的节拍、采样手法结合。它的鼓组通常使用芯片的噪声通道或简单采样，旋律由方波承担，速度偏慢（80–100 BPM）。它同时受到 Glitch Hop 与 Wonky 的影响，常出现在游戏文化与互联网亚文化场景中。",
+      "summary": "Chip Hop 把 Chiptune 的芯片音色与 Hip-Hop 的节拍、采样手法结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chip Hop",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 80,
+        "max": 100,
+        "label": "80–100"
+      },
+      "traits": [
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20590",
+      "name": "Chipstep",
+      "rawTitle": "Chipstep",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20590,
+      "sourceLine": 20590,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20590"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chipstep"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Dubstep",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chipstep 把 Chiptune 的芯片音色与 Dubstep 的低频处理、Half-time 鼓组结合。它的 Wobble Bass 常由芯片风格的波形构成，听感比典型 Dubstep 更\"轻\"、更方硬，低频不如现代 Dubstep 那么厚，但节奏感更碎。",
+      "summary": "Chipstep 把 Chiptune 的芯片音色与 Dubstep 的低频处理、Half-time 鼓组结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chipstep",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "Half-time",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20600",
+      "name": "Chipbreak",
+      "rawTitle": "Chipbreak",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20600,
+      "sourceLine": 20600,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20600"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chipbreak"
+      ],
+      "aliases": [
+        "Breakbit"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Breakbeat",
+            "id": "g-3813"
+          },
+          {
+            "name": "Breakcore",
+            "id": "g-19182"
+          }
+        ],
+        "down": [
+          {
+            "name": "Chip Breaks",
+            "id": "g-4131"
+          }
+        ],
+        "related": []
+      },
+      "description": "Chipbreak 把 Chiptune 的芯片音色与 Breakbeat／Breakcore 的高速碎拍结合。它的鼓组通常使用芯片噪声通道或极短采样，速度常在160–200 BPM，结构密集而急促。它是芯片音乐与 Breakcore 场景的交叉点，也是 Demoscene 文化的重要产物。",
+      "summary": "Chipbreak 把 Chiptune 的芯片音色与 Breakbeat／Breakcore 的高速碎拍结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chipbreak",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 160,
+        "max": 200,
+        "label": "160–200"
+      },
+      "traits": [
+        "碎拍"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20524",
+          "fromName": "Chiptune",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20612",
+      "name": "Chipcore",
+      "rawTitle": "Chipcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20612,
+      "sourceLine": 20612,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20612"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Chipcore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chipcore 把 Chiptune 的芯片音色与 Hardcore Techno 的高速四四拍、失真 Kick 结合。速度通常在180 BPM 以上，芯片音色承担旋律与 Riff，低频则由失真 Kick 提供。它是芯片音乐最激烈的一支，也常与 Breakcore 的 Chipbreak 一同出现在同人场景中。",
+      "summary": "Chipcore 把 Chiptune 的芯片音色与 Hardcore Techno 的高速四四拍、失真 Kick 结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chipcore",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 180,
+        "max": 180,
+        "label": "180"
+      },
+      "traits": [
+        "4/4",
+        "旋律",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20622",
+      "name": "Demostyle",
+      "rawTitle": "Demostyle",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20622,
+      "sourceLine": 20622,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20622"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Demostyle"
+      ],
+      "aliases": [
+        "Demoscene Music",
+        "Demomusic",
+        "Demoscene"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Demoscene",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Demostyle 指 Demoscene（演示场景）中产生的音乐。Demoscene 是1980–90年代黑客与程序员的亚文化：他们用极小的文件体积（常见限制为 64KB 甚至 4KB）做出包含图形与音乐的实时演示程序。Demostyle 因此有两个硬约束：文件体积极小、必须由程序实时生成而非播放音频。它的音乐手法包括极度精简的采样、Tracker 编曲、以及程序化生成的音色。Demostyle 是 Chiptune 与 Tracker Music 的技术源头之一，也直接影响了 Keygen Music 与后来的 Algorave。",
+      "summary": "Demostyle 指 Demoscene（演示场景）中产生的音乐。Demoscene 是1980–90年代黑客与程序员的亚文化：他们用极小的文件体积（常见限制为 64KB 甚至 4KB）做出包含图形与音乐的实时演示程序。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Demostyle",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-13392",
+          "fromName": "Keygen Music",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20634",
+          "fromName": "Amigacore",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20634",
+      "name": "Amigacore",
+      "rawTitle": "Amigacore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20492",
+      "familyName": "Chiptune",
+      "familyZh": "芯片音乐",
+      "familyColor": "phosphor",
+      "level": 3,
+      "line": 20634,
+      "sourceLine": 20634,
+      "parentId": "g-20524",
+      "pathIds": [
+        "g-20524",
+        "g-20634"
+      ],
+      "pathNames": [
+        "Chiptune",
+        "Amigacore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Chiptune",
+            "id": "g-20524"
+          },
+          {
+            "name": "Demostyle",
+            "id": "g-20622"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Amigacore 指以 Commodore Amiga 电脑的音色与制作方式为核心的音乐，是 Demoscene 文化的一个具体分支。Amiga 的 Paula 芯片提供四个 8-bit 采样通道，没有滤波器，因此 Amigacore 的音色特征是：采样极短、颗粒感强、鼓组由短促的采样构成、旋律常使用 Tracker 音序器编写。它在1990年代的欧洲 Demoscene 中极为流行，也是 Breakcore 与 Chipbreak 的素材来源之一。",
+      "summary": "Amigacore 指以 Commodore Amiga 电脑的音色与制作方式为核心的音乐，是 Demoscene 文化的一个具体分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Amigacore",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20675",
+      "name": "Remix & Edit",
+      "rawTitle": "Remix & Edit",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 2,
+      "line": 20675,
+      "sourceLine": 20675,
+      "parentId": "f-20645",
+      "pathIds": [
+        "g-20675"
+      ],
+      "pathNames": [
+        "Remix & Edit"
+      ],
+      "aliases": [
+        "Remix Culture",
+        "Edit Culture",
+        "重混文化"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Remix",
+            "id": "g-20687"
+          },
+          {
+            "name": "Mashup",
+            "id": "g-20699"
+          },
+          {
+            "name": "Edit",
+            "id": "g-20711"
+          },
+          {
+            "name": "Bootleg",
+            "id": "g-20723"
+          },
+          {
+            "name": "Nightcore",
+            "id": "g-20735"
+          }
+        ],
+        "related": []
+      },
+      "description": "Remix & Edit 是一个按\"创作方式\"而非\"音色\"划分的族群。它包含的所有形态都建立在一个共同前提上：素材已经存在，创作是对素材的重新组织。因此这一族的评价标准也与原创作品不同——它衡量的是\"改动是否让素材获得了新的意义\"，而不是\"是否写出了新东西\"。这一族的技术门槛主要在于素材处理（时间拉伸、音高变换、切片、对齐）与结构重组，而不是作曲。",
+      "summary": "Remix & Edit 是一个按\"创作方式\"而非\"音色\"划分的族群。它包含的所有形态都建立在一个共同前提上：素材已经存在，创作是对素材的重新组织。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Remix & Edit",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-20687",
+        "g-20699",
+        "g-20711",
+        "g-20723",
+        "g-20735",
+        "g-20747",
+        "g-20757",
+        "g-20767",
+        "g-20777"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-20687",
+          "fromName": "Remix",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20699",
+          "fromName": "Mashup",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20711",
+          "fromName": "Edit",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20723",
+          "fromName": "Bootleg",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20735",
+          "fromName": "Nightcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20747",
+          "fromName": "Daycore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20757",
+          "fromName": "Nightstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20767",
+          "fromName": "Bass Boosted",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20777",
+          "fromName": "Chopped and Screwed",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20687",
+      "name": "Remix",
+      "rawTitle": "Remix",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20687,
+      "sourceLine": 20687,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20687"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Remix"
+      ],
+      "aliases": [
+        "重混",
+        "混音版"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          }
+        ],
+        "down": [
+          {
+            "name": "Official Remix",
+            "id": null
+          },
+          {
+            "name": "Bootleg Remix",
+            "id": null
+          },
+          {
+            "name": "Club Remix",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Remix 指在获得授权的前提下，对已有录音的重新制作。它通常保留原曲的人声（Vocal）或主要旋律，但替换鼓组、低音、和声与结构。Remix 的技术核心是\"素材对齐\"：必须把原曲的人声轨精确对到新的速度与小节网格上，这需要时间拉伸（Time Stretching）与音高变换（Pitch Shifting）工具。Remix 在电子音乐中不只是商业行为，也是制作人展示风格的主要方式——同一段人声在不同制作人手里可以变成 House、Drum & Bass 或 Ambient。",
+      "summary": "Remix 指在获得授权的前提下，对已有录音的重新制作。它通常保留原曲的人声（Vocal）或主要旋律，但替换鼓组、低音、和声与结构。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Remix",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "氛围",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20675",
+          "fromName": "Remix & Edit",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20699",
+      "name": "Mashup",
+      "rawTitle": "Mashup",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20699,
+      "sourceLine": 20699,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20699"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Mashup"
+      ],
+      "aliases": [
+        "混搭",
+        "拼贴"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Mashup 指把两首或更多歌曲的素材（通常是一首的人声与另一首的伴奏）叠加成一首新作品。它的技术要求是调性一致与速度一致：两首歌必须能对到同一个调与同一个 BPM，否则会产生不协和。Mashup 在2000年代中期随互联网与音频软件普及而爆发，成为\"人人都能做\"的第一种电子音乐创作形式。它也是理解调性与节拍对齐的最佳练习。",
+      "summary": "Mashup 指把两首或更多歌曲的素材（通常是一首的人声与另一首的伴奏）叠加成一首新作品。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Mashup",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20675",
+          "fromName": "Remix & Edit",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20711",
+      "name": "Edit",
+      "rawTitle": "Edit",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20711,
+      "sourceLine": 20711,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20711"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Edit"
+      ],
+      "aliases": [
+        "编辑版",
+        "DJ Edit"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          }
+        ],
+        "down": [
+          {
+            "name": "Extended Edit",
+            "id": null
+          },
+          {
+            "name": "DJ Edit",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Edit 指对原曲做较小幅度的改动，通常是为了适应 DJ 播放需求：延长前奏与尾奏（便于对拍）、加强低频与鼓组、删减不需要的段落、或重排段落顺序。Edit 的核心是\"不改变原曲的听感身份\"，只做功能性调整。它与 Remix 的区别在于改动幅度，与 Bootleg 的区别在于通常获得授权。",
+      "summary": "Edit 指对原曲做较小幅度的改动，通常是为了适应 DJ 播放需求：延长前奏与尾奏（便于对拍）、加强低频与鼓组、删减不需要的段落、或重排段落顺序。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Edit",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20675",
+          "fromName": "Remix & Edit",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20723",
+      "name": "Bootleg",
+      "rawTitle": "Bootleg",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20723,
+      "sourceLine": 20723,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20723"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Bootleg"
+      ],
+      "aliases": [
+        "私制版",
+        "未授权 Remix"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          }
+        ],
+        "down": [
+          {
+            "name": "Bootleg Remix",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Bootleg 指未获得授权的 Remix 或 Edit。它在技术上与官方 Remix 没有区别，区别只在法律状态。Bootleg 在电子音乐历史上扮演了关键角色：很多风格的诞生与传播都依靠未经授权的编辑与再混（如早期 House 与 Disco Edit）。它在当代主要通过网络（如 SoundCloud、Bootleg 合集）流通，并常以\"免费下载\"的形式发布。",
+      "summary": "Bootleg 指未获得授权的 Remix 或 Edit。它在技术上与官方 Remix 没有区别，区别只在法律状态。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Bootleg",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20675",
+          "fromName": "Remix & Edit",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20735",
+      "name": "Nightcore",
+      "rawTitle": "Nightcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20735,
+      "sourceLine": 20735,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20735"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Nightcore"
+      ],
+      "aliases": [
+        "夜核"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          },
+          {
+            "name": "Eurodance",
+            "id": "g-11777"
+          }
+        ],
+        "down": [
+          {
+            "name": "Post-Nightcore",
+            "id": "g-14788"
+          },
+          {
+            "name": "Froggycore",
+            "id": "g-14810"
+          }
+        ],
+        "related": []
+      },
+      "description": "Nightcore 是一种具体而明确的手法：把一首歌加速（通常提高20–30%，BPM 提到170–200）并相应升调，使人声听起来更高、更\"可爱\"。它始于2000年代初挪威制作人 Thomas S. Nilsen 与 Steffen Ojala Søderholm 的合作项目，后来成为互联网上最常见的音乐再加工形式之一。Nightcore 的素材最初集中在 Eurodance、Vocal Trance 与 Hands Up，后来扩展到任何歌曲。它的制作成本极低（只需一个速度与音高变换），因此作品数量极其庞大，很多甚至没有正式的发布信息。",
+      "summary": "Nightcore 是一种具体而明确的手法：把一首歌加速（通常提高20–30%，BPM 提到170–200）并相应升调，使人声听起来更高、更\"可爱\"。",
+      "examples": [
+        {
+          "title": "Kiss Me Again (Nightcore)",
+          "artist": "Roy Bee",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 170,
+        "max": 200,
+        "label": "170–200"
+      },
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20675",
+          "fromName": "Remix & Edit",
+          "type": "down"
+        },
+        {
+          "fromId": "g-20747",
+          "fromName": "Daycore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-20757",
+          "fromName": "Nightstep",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20747",
+      "name": "Daycore",
+      "rawTitle": "Daycore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20747,
+      "sourceLine": 20747,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20747"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Daycore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          },
+          {
+            "name": "Nightcore",
+            "id": "g-20735"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Daycore 是 Nightcore 的反向手法：把歌曲减速并降调，使人声听起来更低、更沉重、更缓慢。它在2010年代后期随互联网场景出现，常被用来把原本轻快的歌曲处理成阴郁、失重或\"悲伤\"的版本。Daycore 与 Slowed + Reverb 的手法高度重合，两者常被混用。",
+      "summary": "Daycore 是 Nightcore 的反向手法：把歌曲减速并降调，使人声听起来更低、更沉重、更缓慢。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Daycore",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20757",
+      "name": "Nightstep",
+      "rawTitle": "Nightstep",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20757,
+      "sourceLine": 20757,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20757"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Nightstep"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          },
+          {
+            "name": "Nightcore",
+            "id": "g-20735"
+          },
+          {
+            "name": "Dubstep",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Nightstep 是 Nightcore 手法在 Dubstep 上的应用：把 Dubstep 或 Heavy Dubstep 的曲目加速升调，形成高音、高速、攻击性更强的版本。它属于 Post-Nightcore 场景的一部分，通常以 Mix 形式发布。它的听感介于 Nightcore 的\"可爱\"与 Dubstep 的\"压迫\"之间，是互联网亚文化特有的混合产物。",
+      "summary": "Nightstep 是 Nightcore 手法在 Dubstep 上的应用：把 Dubstep 或 Heavy Dubstep 的曲目加速升调，形成高音、高速、攻击性更强的版本。",
+      "examples": [
+        {
+          "title": "Summer Ashes (Nightstep Edit)",
+          "artist": "Kevin Drew",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-14788",
+          "fromName": "Post-Nightcore",
+          "type": "related"
+        }
+      ]
+    },
+    {
+      "id": "g-20767",
+      "name": "Bass Boosted",
+      "rawTitle": "Bass Boosted",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20767,
+      "sourceLine": 20767,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20767"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Bass Boosted"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Bass Boosted 是最简单的再加工形式：把原曲的低频大幅提升，通常配合整体响度提高。它在 YouTube 与流媒体上以\"Bass Boosted\"为标题大量存在，主要服务于汽车音响与耳机听感需求。它本身不涉及结构或速度改动，因此严格来说不算创作，但它反映了 Bass 文化中\"低频即内容\"的观念——对这类听众来说，低频量本身就是版本差异。",
+      "summary": "Bass Boosted 是最简单的再加工形式：把原曲的低频大幅提升，通常配合整体响度提高。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Bass Boosted",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20777",
+      "name": "Chopped and Screwed",
+      "rawTitle": "Chopped and Screwed",
+      "status": null,
+      "group": null,
+      "familyId": "f-20645",
+      "familyName": "Remix & Edit",
+      "familyZh": "重混与编辑",
+      "familyColor": "ice",
+      "level": 3,
+      "line": 20777,
+      "sourceLine": 20777,
+      "parentId": "g-20675",
+      "pathIds": [
+        "g-20675",
+        "g-20777"
+      ],
+      "pathNames": [
+        "Remix & Edit",
+        "Chopped and Screwed"
+      ],
+      "aliases": [
+        "Chopped & Screwed",
+        "Screwed",
+        "Slowed & Chopped"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Remix & Edit",
+            "id": "g-20675"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chopped and Screwed 是1990年代初由休斯敦 DJ Screw 创立的再加工手法：把歌曲大幅减速（通常降低到原速的60–70%）、把关键音节重复并做磁带暂停式切断（Chop）、配合整体的低频加强。它的听感是迟缓、黏稠、失重的，与休斯敦的气候与驾驶文化直接相关。它是 Slowed + Reverb 与大量当代互联网慢速版本的技术祖先。",
+      "summary": "Chopped and Screwed 是1990年代初由休斯敦 DJ Screw 创立的再加工手法：把歌曲大幅减速（通常降低到原速的60–70%）、把关键音节重复并做磁带暂停式切断（Chop）、配合整体的低频加强。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chopped and Screwed",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-9799",
+          "fromName": "Surge",
+          "type": "up"
+        },
+        {
+          "fromId": "g-10009",
+          "fromName": "Memphis Rap",
+          "type": "up"
+        },
+        {
+          "fromId": "g-15748",
+          "fromName": "Witch House",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20822",
+      "name": "Acousmatic Music",
+      "rawTitle": "Acousmatic Music",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20822,
+      "sourceLine": 20822,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20822"
+      ],
+      "pathNames": [
+        "Acousmatic Music"
+      ],
+      "aliases": [
+        "听觉音乐",
+        "Acousmatic"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electroacoustic Music",
+            "id": "g-15930"
+          },
+          {
+            "name": "Musique concrète",
+            "id": "g-15960"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Acousmatic Music 指专门为扬声器播放而创作、不以现场演奏为呈现方式的电子音乐。它的概念来自 Pierre Schaeffer：听众听到声音但看不到声源，因此注意力完全落在声音本身（音色、包络、空间）而非演奏动作上。它的创作材料多为录制的声音（Musique concrète 手法）或纯电子合成，结构通常不依赖节拍与旋律，而依赖音色变化与空间位置。它是当代声音艺术与电影声音设计的共同祖先。",
+      "summary": "Acousmatic Music 指专门为扬声器播放而创作、不以现场演奏为呈现方式的电子音乐。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Acousmatic Music",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-15930",
+          "fromName": "Electroacoustic Music",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20834",
+      "name": "Data Sonification",
+      "rawTitle": "Data Sonification",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20834,
+      "sourceLine": 20834,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20834"
+      ],
+      "pathNames": [
+        "Data Sonification"
+      ],
+      "aliases": [
+        "数据可听化",
+        "Sonification"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Data Sonification 指把非音频数据（如气候记录、股票波动、脑电波、天体光谱）映射为声音参数（音高、时长、音色、声像），从而\"听出\"数据的形态。它的目的既可以是科学研究（用听觉发现视觉图表难以察觉的周期与异常），也可以是艺术表达。制作上通常需要程序化生成，因此它天然属于 Algorave 与 Live Coding 的近亲。",
+      "summary": "Data Sonification 指把非音频数据（如气候记录、股票波动、脑电波、天体光谱）映射为声音参数（音高、时长、音色、声像），从而\"听出\"数据的形态。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Data Sonification",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20846",
+      "name": "Electronic Free Improvisation",
+      "rawTitle": "Electronic Free Improvisation",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20846,
+      "sourceLine": 20846,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20846"
+      ],
+      "pathNames": [
+        "Electronic Free Improvisation"
+      ],
+      "aliases": [
+        "EAI",
+        "Electroacoustic Improvisation"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Free Improvisation",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "EAI",
+            "id": "g-15946"
+          }
+        ],
+        "related": []
+      },
+      "description": "Electronic Free Improvisation 指以电子设备（笔记本、模块合成器、反馈电路、接触麦克风）进行完全即兴的演奏，不预设结构、调性或节拍。它强调\"实时的声音决定\"，演奏者更多是在\"选择声音\"而非\"演奏音符\"。它的极端形式是 EAI（Electroacoustic Improvisation），特点是音量极低、素材极简（可能只有电流噪声与极短采样），需要听众极度专注。",
+      "summary": "Electronic Free Improvisation 指以电子设备（笔记本、模块合成器、反馈电路、接触麦克风）进行完全即兴的演奏，不预设结构、调性或节拍。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Electronic Free Improvisation",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20858",
+      "name": "Field Recording",
+      "rawTitle": "Field Recording",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20858,
+      "sourceLine": 20858,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20858"
+      ],
+      "pathNames": [
+        "Field Recording"
+      ],
+      "aliases": [
+        "实地录音",
+        "田野录音"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Soundscape",
+            "id": "g-16024"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Field Recording 指在非录音棚环境中录制真实世界的声音（街道、森林、工厂、市场、雨、冰层开裂），既可以作为音乐素材，也可以作为独立的作品形式。它在电子音乐中的应用方式有三种：作为采样素材（放入节拍或音景中）、作为 Ambient 与 Soundscape 的主体、以及作为 Musique concrète 的原材料。它也是\"声音生态学\"与\"声音地图\"等实践的基础。",
+      "summary": "Field Recording 指在非录音棚环境中录制真实世界的声音（街道、森林、工厂、市场、雨、冰层开裂），既可以作为音乐素材，也可以作为独立的作品形式。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Field Recording",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20870",
+          "fromName": "Radio Broadcasting Recordings",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20870",
+      "name": "Radio Broadcasting Recordings",
+      "rawTitle": "Radio Broadcasting Recordings",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20870,
+      "sourceLine": 20870,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20870"
+      ],
+      "pathNames": [
+        "Radio Broadcasting Recordings"
+      ],
+      "aliases": [
+        "Radio Art",
+        "Shortwave Recordings"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Field Recording",
+            "id": "g-20858"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Radio Broadcasting Recordings 指把无线电广播（尤其是短波）作为音乐素材的实践。短波广播的衰减、漂移、干扰与信号丢失本身构成一种独特的音色与节奏，被大量用于 Ambient、Industrial 与实验电子。它在1990年代成为一种独立的创作手法，也是\"发现声音\"（而非\"制作声音\"）这一思路的典型体现。",
+      "summary": "Radio Broadcasting Recordings 指把无线电广播（尤其是短波）作为音乐素材的实践。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Radio Broadcasting Recordings",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20882",
+      "name": "Graphical Sound",
+      "rawTitle": "Graphical Sound",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20882,
+      "sourceLine": 20882,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20882"
+      ],
+      "pathNames": [
+        "Graphical Sound"
+      ],
+      "aliases": [
+        "图形声音",
+        "Drawn Sound",
+        "Graphical Sound"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Graphical Sound 指直接把图形（手绘的音轨、几何图案、计算机图像）转译为声音的实践。它的历史可以追溯到1930年代的苏联（如 Arseny Avraamov 手绘光学音轨）与战后的实验动画。在当代，它通常通过程序实现：把图像的行列像素映射为波形或频谱，再合成声音。它是\"视觉与听觉同源\"这一观念最直接的实现方式。",
+      "summary": "Graphical Sound 指直接把图形（手绘的音轨、几何图案、计算机图像）转译为声音的实践。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Graphical Sound",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20894",
+      "name": "Experimental Bass",
+      "rawTitle": "Experimental Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20894,
+      "sourceLine": 20894,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20894"
+      ],
+      "pathNames": [
+        "Experimental Bass"
+      ],
+      "aliases": [
+        "Leftfield Bass",
+        "Freeform Bass"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Bass",
+            "id": "g-20373"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Experimental Bass 指以低频设计为核心但完全脱离舞曲结构约束的分支。它的低频音色可以极其抽象（无固定音高、极端滤波、金属质感的共鸣），节奏可以完全碎片化，结构不服务舞池而服务听感探索。它是 Bass 音乐与实验电子交叉处最自由的一端，也是当代声音设计最重要的实验场之一。",
+      "summary": "Experimental Bass 指以低频设计为核心但完全脱离舞曲结构约束的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Experimental Bass",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20906",
+      "name": "Colour Hop",
+      "rawTitle": "Colour Hop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20906,
+      "sourceLine": 20906,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20906"
+      ],
+      "pathNames": [
+        "Colour Hop"
+      ],
+      "aliases": [
+        "Color Hop"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Glitch Hop",
+            "id": "g-9857"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Colour Hop 是 Glitch Hop 的一个分支，特点是使用极为明亮、带有金属光泽或水晶质感的合成器音色，配合复杂的 Glitch 处理与中速节拍（通常100–110 BPM）。它的名字来自\"音色如色彩\"的听觉通感——制作人追求的是音色在频谱上的\"颜色\"而非旋律。它在2010年代由一批互联网制作人推动，与 Neurohop 同源但更明亮。",
+      "summary": "Colour Hop 是 Glitch Hop 的一个分支，特点是使用极为明亮、带有金属光泽或水晶质感的合成器音色，配合复杂的 Glitch 处理与中速节拍（通常100–110 BPM）。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Colour Hop",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 100,
+        "max": 110,
+        "label": "100–110"
+      },
+      "traits": [
+        "明亮",
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-20918",
+      "name": "Live Electronics",
+      "rawTitle": "Live Electronics",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20918,
+      "sourceLine": 20918,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20918"
+      ],
+      "pathNames": [
+        "Live Electronics"
+      ],
+      "aliases": [
+        "现场电子",
+        "Live Electronic"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Laptronica",
+            "id": "g-13444"
+          },
+          {
+            "name": "Live Coding",
+            "id": "g-13092"
+          },
+          {
+            "name": "Algorave",
+            "id": "g-13456"
+          }
+        ],
+        "related": []
+      },
+      "description": "Live Electronics 指在现场演出中用电子设备实时生成与处理声音的实践。它与 DJ 播放的区别在于声音是当场生成的；与使用预录工程的区别在于结构是即时的。它的形式包括：模块合成器实时接线、笔记本上的实时处理、接触麦克风与反馈电路、以及实时编程（Live Coding）。它是\"电子音乐也可以是现场演奏\"这一观念的核心载体。",
+      "summary": "Live Electronics 指在现场演出中用电子设备实时生成与处理声音的实践。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Live Electronics",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-20930",
+          "fromName": "Livetronica",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-20930",
+      "name": "Livetronica",
+      "rawTitle": "Livetronica",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20930,
+      "sourceLine": 20930,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20930"
+      ],
+      "pathNames": [
+        "Livetronica"
+      ],
+      "aliases": [
+        "Jamtronica",
+        "Live Electronic Band"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Live Electronics",
+            "id": "g-20918"
+          },
+          {
+            "name": "Jam Band",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Livetronica 指以真实乐队编制（吉他、贝斯、鼓、键盘）实时演奏电子音乐语言的分支，通常带有大量即兴与长段落的推进。它与 DJ 演出相反：结构由乐手当场决定，常出现长于10分钟的曲目。它同时吸收了 Jam Band 的即兴传统与电子舞曲的节拍语汇，是\"电子音乐如何被演奏\"这一问题的现场答案。",
+      "summary": "Livetronica 指以真实乐队编制（吉他、贝斯、鼓、键盘）实时演奏电子音乐语言的分支，通常带有大量即兴与长段落的推进。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Livetronica",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-13444",
+          "fromName": "Laptronica",
+          "type": "up"
+        },
+        {
+          "fromId": "g-15946",
+          "fromName": "EAI",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-20942",
+      "name": "Spectral Music",
+      "rawTitle": "Spectral Music",
+      "status": null,
+      "group": null,
+      "familyId": "f-20790",
+      "familyName": "实验电子补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 20942,
+      "sourceLine": 20942,
+      "parentId": "f-20790",
+      "pathIds": [
+        "g-20942"
+      ],
+      "pathNames": [
+        "Spectral Music"
+      ],
+      "aliases": [
+        "频谱音乐",
+        "Spectralism"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Experimental Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Contemporary Classical",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Spectral Music 是1970年代在法国形成、以频谱分析为创作基础的流派。它的做法是：先对一段声音（如长号的某个音、钟声、人声）做频谱分析，得到它的泛音结构，然后用乐器或电子手段\"演奏\"这个频谱——让乐器去模拟声音内部的泛音分布，而不是演奏传统的旋律与和声。它改变了\"音色\"与\"和声\"的边界，也是当代声音设计与电子音乐的重要理论来源。",
+      "summary": "Spectral Music 是1970年代在法国形成、以频谱分析为创作基础的流派。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Spectral Music",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21029",
+      "name": "Hard House",
+      "rawTitle": "Hard House",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21029,
+      "sourceLine": 21029,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21029"
+      ],
+      "pathNames": [
+        "Hard House"
+      ],
+      "aliases": [
+        "Hardhouse"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "House",
+            "id": null
+          },
+          {
+            "name": "Hard Dance",
+            "id": "g-8309"
+          }
+        ],
+        "down": [
+          {
+            "name": "UK Hard House",
+            "id": "g-1807"
+          },
+          {
+            "name": "UC Hard House",
+            "id": "g-1723"
+          },
+          {
+            "name": "LA Hard House",
+            "id": "g-1753"
+          }
+        ],
+        "related": []
+      },
+      "description": "Hard House 是1990年代中期形成的分支，把 House 的四四拍结构提速到140–150 BPM，配合极具攻击性的失真 Kick、Hoover 或 Screech 音色、以及简短的 Vocal 采样。它的 Drop 处通常出现强烈的合成器 Riff 与节奏断裂，比 Progressive House 更直接、更少铺垫。它是 UK Hard House 与 Hard Dance 场景的共同源头。",
+      "summary": "Hard House 是1990年代中期形成的分支，把 House 的四四拍结构提速到140–150 BPM，配合极具攻击性的失真 Kick、Hoover 或 Screech 音色、以及简短的 Vocal 采样。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Hard House",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 140,
+        "max": 150,
+        "label": "140–150"
+      },
+      "traits": [
+        "4/4",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-4255",
+          "fromName": "Taikerave",
+          "type": "up"
+        },
+        {
+          "fromId": "g-10275",
+          "fromName": "Drift House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21390",
+          "fromName": "Hard House (UK)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21424",
+          "fromName": "Hard House (Chicago)",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21041",
+      "name": "Indie House",
+      "rawTitle": "Indie House",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21041,
+      "sourceLine": 21041,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21041"
+      ],
+      "pathNames": [
+        "Indie House"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "House",
+            "id": null
+          },
+          {
+            "name": "Indie",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Indie House 指2010年代由独立音乐场景转向 House 语汇的一批制作人，特征是：使用真实乐器（吉他、贝斯、人声）采样与合成器混合、编曲保留独立摇滚的粗糙质感、节拍采用 House 的四四拍但不追求舞池响度。它的听感比典型的 Club House 更\"散\"、更接近歌曲，同时保留了长段落的律动推进。",
+      "summary": "Indie House 指2010年代由独立音乐场景转向 House 语汇的一批制作人，特征是：使用真实乐器（吉他、贝斯、人声）采样与合成器混合、编曲保留独立摇滚的粗糙质感、节拍采用 House 的四四拍但不追求舞池响度。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Indie House",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21051",
+      "name": "Drillcore",
+      "rawTitle": "Drillcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21051,
+      "sourceLine": 21051,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21051"
+      ],
+      "pathNames": [
+        "Drillcore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          },
+          {
+            "name": "Breakcore",
+            "id": "g-19182"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Drillcore 是把 Breakcore 的高速碎拍与 Drill（英国 Drill 说唱）的低频、人声与阴郁氛围结合的分支。它保留了 Drill 的 808 滑音低音与念唱人声，但把鼓组替换为 Breakcore 的高速切分与爆音。它是2010年代后期英国地下场景的产物，也体现了\"极端节奏 + 当代街头语汇\"这一融合方向。",
+      "summary": "Drillcore 是把 Breakcore 的高速碎拍与 Drill（英国 Drill 说唱）的低频、人声与阴郁氛围结合的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Drillcore",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "氛围",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21061",
+      "name": "Darkcore",
+      "rawTitle": "Darkcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21061,
+      "sourceLine": 21061,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21061"
+      ],
+      "pathNames": [
+        "Darkcore"
+      ],
+      "aliases": [
+        "Darkside",
+        "Darkcore Hardcore"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          },
+          {
+            "name": "Breakbeat Hardcore",
+            "id": "g-4269"
+          }
+        ],
+        "down": [
+          {
+            "name": "Darkcore Jungle",
+            "id": "g-4449"
+          }
+        ],
+        "related": []
+      },
+      "description": "Darkcore 是1990年代前期从 Breakbeat Hardcore 分出的黑暗分支，特征是：速度在160 BPM 上下、使用极度阴暗的合成器音色（下行 Pad、失真的低音）、大量采样恐怖电影与说唱人声、鼓组以 Amen Break 为基础并大幅加速。它是 Jungle 与 Drum & Bass 的直接前身之一，也是 Hardcore 场景从\"欢乐\"转向\"黑暗\"的关键转折。",
+      "summary": "Darkcore 是1990年代前期从 Breakbeat Hardcore 分出的黑暗分支，特征是：速度在160 BPM 上下、使用极度阴暗的合成器音色（下行 Pad、失真的低音）、大量采样恐怖电影与说唱人声、鼓组以 Amen Break 为基础并大幅加速。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Darkcore",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 160,
+        "max": 160,
+        "label": "160"
+      },
+      "traits": [
+        "碎拍",
+        "暗色",
+        "失真",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-7189",
+          "fromName": "Industrial Hardcore (Oldskool)",
+          "type": "down"
+        },
+        {
+          "fromId": "g-7201",
+          "fromName": "Industrial Hardcore (Nuskool)",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21073",
+      "name": "Dark Gabber",
+      "rawTitle": "Dark Gabber",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21073,
+      "sourceLine": 21073,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21073"
+      ],
+      "pathNames": [
+        "Dark Gabber"
+      ],
+      "aliases": [
+        "Dark Hardcore"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Gabber",
+            "id": "g-7027"
+          },
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Dark Gabber 是 Gabber 的黑暗变体，特征是：速度在180–200 BPM、Kick 极度失真并带有低沉共鸣、加入阴暗的合成器 Pad 或合唱采样、整体情绪从\"暴力欢快\"转向\"压抑恐怖\"。它与 Industrial Hardcore 有大量交集，是欧洲地下 Hardcore 场景中最阴郁的一支。",
+      "summary": "Dark Gabber 是 Gabber 的黑暗变体，特征是：速度在180–200 BPM、Kick 极度失真并带有低沉共鸣、加入阴暗的合成器 Pad 或合唱采样、整体情绪从\"暴力欢快\"转向\"压抑恐怖\"。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Dark Gabber",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 180,
+        "max": 200,
+        "label": "180–200"
+      },
+      "traits": [
+        "暗色",
+        "明亮",
+        "失真",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21085",
+      "name": "UK Hardcore",
+      "rawTitle": "UK Hardcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21085,
+      "sourceLine": 21085,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21085"
+      ],
+      "pathNames": [
+        "UK Hardcore"
+      ],
+      "aliases": [
+        "UK Hardcore",
+        "Happy Hardcore"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          },
+          {
+            "name": "Old School Happycore",
+            "id": "g-8032"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "UK Hardcore 是1990年代英国形成的分支，特征是：速度在170 BPM 上下、明亮的钢琴 Riff 与合成器 Lead、甜美的女声 Vocal、以及欢快而高速的四四拍 Kick。它比 Gabber 更旋律化、更少失真，情绪完全正向。它在2000年代后继续演化，并成为 Hands Up 与 J-Core 的素材来源。",
+      "summary": "UK Hardcore 是1990年代英国形成的分支，特征是：速度在170 BPM 上下、明亮的钢琴 Riff 与合成器 Lead、甜美的女声 Vocal、以及欢快而高速的四四拍 Kick。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "UK Hardcore",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 170,
+        "max": 170,
+        "label": "170"
+      },
+      "traits": [
+        "4/4",
+        "明亮",
+        "旋律",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-1839",
+          "fromName": "Spanish Hard House",
+          "type": "up"
+        },
+        {
+          "fromId": "g-1979",
+          "fromName": "Belgian Jump",
+          "type": "up"
+        },
+        {
+          "fromId": "g-4269",
+          "fromName": "Breakbeat Hardcore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-4633",
+          "fromName": "Ravecore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7908",
+          "fromName": "Modern Hardtek",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8032",
+          "fromName": "Old School Happycore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-8058",
+          "fromName": "Trancecore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-8164",
+          "fromName": "Powerstomp",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8178",
+          "fromName": "UK Hardcore (2012-2015)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8192",
+          "fromName": "Complexcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8206",
+          "fromName": "UK Hardcore (Modern/2015至今)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8222",
+          "fromName": "Bigroom Hardcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8236",
+          "fromName": "Trancey Hardcore (Modern)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8375",
+          "fromName": "UK Makina",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8506",
+          "fromName": "Liquid Hardcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8816",
+          "fromName": "Stylecore (不选入)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9036",
+          "fromName": "J-core",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9056",
+          "fromName": "J-Trancecore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9082",
+          "fromName": "Symphonic Hardcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9105",
+          "fromName": "J-Happy Hardcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9129",
+          "fromName": "Techcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19244",
+          "fromName": "UK Hardcore (Future)",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21097",
+      "name": "Hardtek",
+      "rawTitle": "Hardtek",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21097,
+      "sourceLine": 21097,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21097"
+      ],
+      "pathNames": [
+        "Hardtek"
+      ],
+      "aliases": [
+        "Hardtekno",
+        "Hard Tek"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          },
+          {
+            "name": "Free Tekno",
+            "id": "g-7579"
+          }
+        ],
+        "down": [
+          {
+            "name": "Frenchcore",
+            "id": "g-21109"
+          }
+        ],
+        "related": []
+      },
+      "description": "Hardtek 是法国与比利时 Free Tekno 场景的核心风格，特征是：速度在150–180 BPM、Kick 沉重而干燥、使用简单的合成器 Riff 与大量人声采样、结构以循环叠加为主。它与 Tekno 的区别在于更强调四四拍的稳定驱动力与更硬的 Kick。它是 Frenchcore 的直接前身。",
+      "summary": "Hardtek 是法国与比利时 Free Tekno 场景的核心风格，特征是：速度在150–180 BPM、Kick 沉重而干燥、使用简单的合成器 Riff 与大量人声采样、结构以循环叠加为主。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Hardtek",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 150,
+        "max": 180,
+        "label": "150–180"
+      },
+      "traits": [
+        "4/4",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-7579",
+          "fromName": "Free Tekno",
+          "type": "down"
+        },
+        {
+          "fromId": "g-7723",
+          "fromName": "Tribecore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7746",
+          "fromName": "Pumpin",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7760",
+          "fromName": "Hardfloor",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7842",
+          "fromName": "Frenchcore/French Hardtek",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7858",
+          "fromName": "Early Frenchcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7908",
+          "fromName": "Modern Hardtek",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8546",
+          "fromName": "Tekstyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21109",
+          "fromName": "Frenchcore",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21109",
+      "name": "Frenchcore",
+      "rawTitle": "Frenchcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21109,
+      "sourceLine": 21109,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21109"
+      ],
+      "pathNames": [
+        "Frenchcore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Hardtek",
+            "id": "g-21097"
+          },
+          {
+            "name": "Hardcore Techno",
+            "id": "g-6989"
+          }
+        ],
+        "down": [
+          {
+            "name": "Euphoric Frenchcore",
+            "id": "g-7896"
+          }
+        ],
+        "related": []
+      },
+      "description": "Frenchcore 是1990年代后期在法国形成的分支，速度通常在180–220 BPM，特征是：极度失真且带有长尾的 Kick、快速而密集的 Hi-hat、明亮或阴暗的合成器 Lead、以及大量使用人声采样。它在2010年代通过互联网场景获得全球关注，成为当代 Hardcore 中最活跃的分支之一。",
+      "summary": "Frenchcore 是1990年代后期在法国形成的分支，速度通常在180–220 BPM，特征是：极度失真且带有长尾的 Kick、快速而密集的 Hi-hat、明亮或阴暗的合成器 Lead、以及大量使用人声采样。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Frenchcore",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 180,
+        "max": 220,
+        "label": "180–220"
+      },
+      "traits": [
+        "明亮",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-7201",
+          "fromName": "Industrial Hardcore (Nuskool)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7237",
+          "fromName": "French Hardcore",
+          "type": "down"
+        },
+        {
+          "fromId": "g-7723",
+          "fromName": "Tribecore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7858",
+          "fromName": "Early Frenchcore",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7908",
+          "fromName": "Modern Hardtek",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9181",
+          "fromName": "Drenchcore (个人标签)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21097",
+          "fromName": "Hardtek",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21119",
+      "name": "Hands Up Trance",
+      "rawTitle": "Hands Up Trance",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21119,
+      "sourceLine": 21119,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21119"
+      ],
+      "pathNames": [
+        "Hands Up Trance"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Hands Up (2 stage)",
+            "id": "g-11871"
+          },
+          {
+            "name": "Trance",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Hands Up Trance 是 Hands Up 与 Trance 的结合形态，特征是：速度在140–150 BPM、明亮的 Supersaw 与 Trance Lead、强烈而简化的四四拍 Kick、以及 Hands Up 标志性的\"每拍推进\"结构。它比 Uplifting Trance 更简单、更直接，情绪高度正向，常用于商业舞曲与欧陆市场。",
+      "summary": "Hands Up Trance 是 Hands Up 与 Trance 的结合形态，特征是：速度在140–150 BPM、明亮的 Supersaw 与 Trance Lead、强烈而简化的四四拍 Kick、以及 Hands Up 标志性的\"每拍推进\"结构。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Hands Up Trance",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 140,
+        "max": 150,
+        "label": "140–150"
+      },
+      "traits": [
+        "4/4",
+        "明亮"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21129",
+      "name": "Psybient",
+      "rawTitle": "Psybient",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21129,
+      "sourceLine": 21129,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21129"
+      ],
+      "pathNames": [
+        "Psybient"
+      ],
+      "aliases": [
+        "Psychill",
+        "Psychedelic Ambient"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          },
+          {
+            "name": "Psychedelic Trance",
+            "id": "g-21619"
+          }
+        ],
+        "down": [
+          {
+            "name": "Psychill",
+            "id": "g-3543"
+          }
+        ],
+        "related": []
+      },
+      "description": "Psybient 是把 Psychedelic Trance 的合成器音色、调式与音效，与 Ambient 的缓慢结构与宽松空间结合的分支。它的速度通常在70–110 BPM，鼓组稀疏或完全缺席，合成器使用大量延迟与调制制造流动感，常使用东方音阶与人声采样。它是\"舞池之后的房间\"这一场景的典型声音。",
+      "summary": "Psybient 是把 Psychedelic Trance 的合成器音色、调式与音效，与 Ambient 的缓慢结构与宽松空间结合的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Psybient",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 70,
+        "max": 110,
+        "label": "70–110"
+      },
+      "traits": [
+        "氛围",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-16788",
+          "fromName": "Psydub",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21141",
+          "fromName": "Chillgressive",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21619",
+          "fromName": "Psychedelic Trance",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21141",
+      "name": "Chillgressive",
+      "rawTitle": "Chillgressive",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21141,
+      "sourceLine": 21141,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21141"
+      ],
+      "pathNames": [
+        "Chillgressive"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Psybient",
+            "id": "g-21129"
+          },
+          {
+            "name": "Progressive Psytrance",
+            "id": "g-3493"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Chillgressive 是 Progressive Psytrance 与 Chill-Out 的结合形态，特征是：保留了 Progressive Psy 的缓慢演进结构与合成器层次，但速度降到110–125 BPM、鼓组简化、氛围更宽松。它通常长达8–12分钟，适合在日出时段或休息场景播放。",
+      "summary": "Chillgressive 是 Progressive Psytrance 与 Chill-Out 的结合形态，特征是：保留了 Progressive Psy 的缓慢演进结构与合成器层次，但速度降到110–125 BPM、鼓组简化、氛围更宽松。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chillgressive",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 110,
+        "max": 125,
+        "label": "110–125"
+      },
+      "traits": [
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21151",
+      "name": "Minimal Ambient",
+      "rawTitle": "Minimal Ambient",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21151,
+      "sourceLine": 21151,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21151"
+      ],
+      "pathNames": [
+        "Minimal Ambient"
+      ],
+      "aliases": [
+        "Minimalism Ambient",
+        "Lowercase Ambient"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Minimal Ambient 指素材极简、变化极缓的 Ambient，特征是：极少的音层、极长的音符、极小的动态变化。它的极端形式（Lowercase）音量极低，几乎与环境噪声难以区分。它的听感接近\"静止\"，要求听众主动去注意极其细微的变化。",
+      "summary": "Minimal Ambient 指素材极简、变化极缓的 Ambient，特征是：极少的音层、极长的音符、极小的动态变化。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Minimal Ambient",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围",
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21163",
+      "name": "Compositional Ambient",
+      "rawTitle": "Compositional Ambient",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21163,
+      "sourceLine": 21163,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21163"
+      ],
+      "pathNames": [
+        "Compositional Ambient"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Compositional Ambient 指结构上更接近当代古典作曲的 Ambient，特征是：使用真实的弦乐、管风琴、钢琴或合唱，和声进行有明确的写作意图，而不仅是音色铺陈。它通常由受过古典训练的音乐家创作，听感更\"有内容\"、更接近室内乐。",
+      "summary": "Compositional Ambient 指结构上更接近当代古典作曲的 Ambient，特征是：使用真实的弦乐、管风琴、钢琴或合唱，和声进行有明确的写作意图，而不仅是音色铺陈。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Compositional Ambient",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21173",
+      "name": "Dronegaze",
+      "rawTitle": "Dronegaze",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21173,
+      "sourceLine": 21173,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21173"
+      ],
+      "pathNames": [
+        "Dronegaze"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Ambient",
+            "id": "g-12029"
+          },
+          {
+            "name": "Shoegaze",
+            "id": "g-19914"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Dronegaze 是 Drone 与 Shoegaze 的结合形态，特征是：吉他或合成器制造持续数分钟不变化的低频嗡鸣，配合极慢的鼓组与大量混响，人声若有若无。它几乎没有段落切换，整体是一块持续的音墙。它是 Drone 的吉他化版本，也是 Shoegaze 的极端延伸。",
+      "summary": "Dronegaze 是 Drone 与 Shoegaze 的结合形态，特征是：吉他或合成器制造持续数分钟不变化的低频嗡鸣，配合极慢的鼓组与大量混响，人声若有若无。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Dronegaze",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21183",
+      "name": "Dark Breaks",
+      "rawTitle": "Dark Breaks",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21183,
+      "sourceLine": 21183,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21183"
+      ],
+      "pathNames": [
+        "Dark Breaks"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Breakbeat",
+            "id": "g-3813"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Dark Breaks 是 Breakbeat 的黑暗分支，特征是：碎拍鼓组配合阴暗的合成器 Pad、低沉的 Sub Bass、以及大量采样（恐怖电影对白、工业噪音）。速度通常在140–170 BPM，情绪压抑而紧张。它是 Breakbeat 与 Darkcore 的交叉产物。",
+      "summary": "Dark Breaks 是 Breakbeat 的黑暗分支，特征是：碎拍鼓组配合阴暗的合成器 Pad、低沉的 Sub Bass、以及大量采样（恐怖电影对白、工业噪音）。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Dark Breaks",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 140,
+        "max": 170,
+        "label": "140–170"
+      },
+      "traits": [
+        "碎拍",
+        "暗色",
+        "工业",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21193",
+      "name": "Experimental Breaks",
+      "rawTitle": "Experimental Breaks",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21193,
+      "sourceLine": 21193,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21193"
+      ],
+      "pathNames": [
+        "Experimental Breaks"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Breakbeat",
+            "id": "g-3813"
+          },
+          {
+            "name": "Experimental",
+            "id": "g-16048"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Experimental Breaks 指脱离舞曲功能、以声音实验为目的的碎拍音乐，特征是：鼓组切分极度不规则、使用非常规采样（金属、玻璃、人声碎片）、结构不服务舞池。它是 Breakbeat 与 Glitch、Musique concrète 的交叉地带。",
+      "summary": "Experimental Breaks 指脱离舞曲功能、以声音实验为目的的碎拍音乐，特征是：鼓组切分极度不规则、使用非常规采样（金属、玻璃、人声碎片）、结构不服务舞池。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Experimental Breaks",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21203",
+      "name": "Dancefloor Drum and Bass",
+      "rawTitle": "Dancefloor Drum and Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21203,
+      "sourceLine": 21203,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21203"
+      ],
+      "pathNames": [
+        "Dancefloor Drum and Bass"
+      ],
+      "aliases": [
+        "Dancefloor DnB",
+        "Mainstream DnB"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Drum & Bass",
+            "id": "g-4775"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Dancefloor Drum and Bass 指以舞池功能性为优先的 Drum & Bass，特征是：速度在174 BPM、明亮的合成器 Lead 与 Vocal、清晰而有力的鼓组、以及明确的 Drop 结构。它比 Liquid 更强调能量，比 Neurofunk 更强调旋律，是 Drum & Bass 在主流市场中最常见的形式。",
+      "summary": "Dancefloor Drum and Bass 指以舞池功能性为优先的 Drum & Bass，特征是：速度在174 BPM、明亮的合成器 Lead 与 Vocal、清晰而有力的鼓组、以及明确的 Drop 结构。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Dancefloor Drum and Bass",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 174,
+        "max": 174,
+        "label": "174"
+      },
+      "traits": [
+        "明亮",
+        "旋律",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-4775",
+          "fromName": "Drum & Bass",
+          "type": "down"
+        },
+        {
+          "fromId": "g-5155",
+          "fromName": "Trancestep (DnB)",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21215",
+      "name": "Deep Drum and Bass",
+      "rawTitle": "Deep Drum and Bass",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21215,
+      "sourceLine": 21215,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21215"
+      ],
+      "pathNames": [
+        "Deep Drum and Bass"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Drum & Bass",
+            "id": "g-4775"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Deep Drum and Bass 指氛围更内敛、低频更深的 Drum & Bass，特征是：速度在170–174 BPM、鼓组处理得较为柔和、大量使用混响与延迟、Sub Bass 沉重而少变化、旋律与和声偏冷。它介于 Liquid 与 Atmospheric 之间，适合耳机聆听。",
+      "summary": "Deep Drum and Bass 指氛围更内敛、低频更深的 Drum & Bass，特征是：速度在170–174 BPM、鼓组处理得较为柔和、大量使用混响与延迟、Sub Bass 沉重而少变化、旋律与和声偏冷。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Deep Drum and Bass",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 170,
+        "max": 174,
+        "label": "170–174"
+      },
+      "traits": [
+        "旋律",
+        "氛围",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21225",
+      "name": "Glitchbreak",
+      "rawTitle": "Glitchbreak",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21225,
+      "sourceLine": 21225,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21225"
+      ],
+      "pathNames": [
+        "Glitchbreak"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Drum & Bass",
+            "id": "g-4775"
+          },
+          {
+            "name": "Breakcore",
+            "id": "g-19182"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Glitchbreak 是 Drum & Bass 与 Glitch 的结合形态，特征是：保留 Drum & Bass 的速度与低频，但鼓组被大量 Glitch 处理（切片、卡顿、爆音），结构碎片化。它同时与 Breakcore 的现代分支有交集。",
+      "summary": "Glitchbreak 是 Drum & Bass 与 Glitch 的结合形态，特征是：保留 Drum & Bass 的速度与低频，但鼓组被大量 Glitch 处理（切片、卡顿、爆音），结构碎片化。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Glitchbreak",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21235",
+      "name": "Proto-Dubstep",
+      "rawTitle": "Proto-Dubstep",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21235,
+      "sourceLine": 21235,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21235"
+      ],
+      "pathNames": [
+        "Proto-Dubstep"
+      ],
+      "aliases": [
+        "Proto Dubstep",
+        "Dubstep 前身"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Dubstep",
+            "id": null
+          },
+          {
+            "name": "UK Garage",
+            "id": "g-5315"
+          }
+        ],
+        "down": [
+          {
+            "name": "Dark Garage",
+            "id": "g-5329"
+          }
+        ],
+        "related": []
+      },
+      "description": "Proto-Dubstep 指2000年代初 Dubstep 形成之前的过渡形态，特征是：UK Garage 的切分鼓组被简化、低频被大幅加强、加入 Dub 的延迟与混响处理。它还没有形成 Dubstep 标志性的 Half-time 鼓组，但已经具备了\"低频主导 + 空间处理\"的核心特征。",
+      "summary": "Proto-Dubstep 指2000年代初 Dubstep 形成之前的过渡形态，特征是：UK Garage 的切分鼓组被简化、低频被大幅加强、加入 Dub 的延迟与混响处理。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Proto-Dubstep",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "Half-time"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21247",
+      "name": "Tearout",
+      "rawTitle": "Tearout",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21247,
+      "sourceLine": 21247,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21247"
+      ],
+      "pathNames": [
+        "Tearout"
+      ],
+      "aliases": [
+        "Tearout Dubstep"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Dubstep",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Tearout (UK Bass)",
+            "id": "g-5721"
+          },
+          {
+            "name": "Classic Tearout",
+            "id": null
+          }
+        ],
+        "related": []
+      },
+      "description": "Tearout 是 Dubstep 中攻击性最强的一支，特征是：极度失真的 Mid-range Bass（Growl、Screech）、暴烈的鼓组、以及以\"撕裂感\"为核心的声音设计。它在2000年代后期达到顶峰，是 Brostep 的近亲但更极端、更少旋律。",
+      "summary": "Tearout 是 Dubstep 中攻击性最强的一支，特征是：极度失真的 Mid-range Bass（Growl、Screech）、暴烈的鼓组、以及以\"撕裂感\"为核心的声音设计。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Tearout",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-6253",
+          "fromName": "Deathstep",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21259",
+      "name": "Weightless",
+      "rawTitle": "Weightless",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21259,
+      "sourceLine": 21259,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21259"
+      ],
+      "pathNames": [
+        "Weightless"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "UK Garage",
+            "id": "g-5315"
+          },
+          {
+            "name": "Grime",
+            "id": "g-5543"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Weightless 是2010年代中期形成的分支，特征是：鼓组极其稀疏甚至完全缺席、以环境音与合成垫音为主、人声以清唱或碎片形式出现。它的名字来自\"失重\"的听感——音乐放弃了舞池所需的律动压力，转向空间与情绪。它是 Grime 与 Ambient 的交叉产物。",
+      "summary": "Weightless 是2010年代中期形成的分支，特征是：鼓组极其稀疏甚至完全缺席、以环境音与合成垫音为主、人声以清唱或碎片形式出现。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Weightless",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "氛围",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21269",
+      "name": "Sublow",
+      "rawTitle": "Sublow",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21269,
+      "sourceLine": 21269,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21269"
+      ],
+      "pathNames": [
+        "Sublow"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "UK Garage",
+            "id": "g-5315"
+          },
+          {
+            "name": "Grime",
+            "id": "g-5543"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Sublow 指以极低频率的 Sub Bass 为主要特征的分支，特征是：低频在极低的音域持续滑行、鼓组稀疏、中高频被大幅削减。它的听感更接近\"震动\"而非\"音乐\"，是英国低音文化中\"低频即内容\"这一观念的极端体现。",
+      "summary": "Sublow 指以极低频率的 Sub Bass 为主要特征的分支，特征是：低频在极低的音域持续滑行、鼓组稀疏、中高频被大幅削减。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Sublow",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21279",
+      "name": "4×4 Garage",
+      "rawTitle": "4×4 Garage",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21279,
+      "sourceLine": 21279,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21279"
+      ],
+      "pathNames": [
+        "4×4 Garage"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "UK Garage",
+            "id": "g-5315"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "4×4 Garage 是 UK Garage 的早期形态，特征是：稳定的四四拍 Kick（区别于 2-Step 的切分鼓组）、明亮的合成器和弦、切分的 Vocal 采样。它是 UK Garage 在1990年代中期的主流形式，后来被 2-Step 取代。",
+      "summary": "4×4 Garage 是 UK Garage 的早期形态，特征是：稳定的四四拍 Kick（区别于 2-Step 的切分鼓组）、明亮的合成器和弦、切分的 Vocal 采样。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "4×4 Garage",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "碎拍",
+        "明亮",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21289",
+      "name": "Vaporpop",
+      "rawTitle": "Vaporpop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21289,
+      "sourceLine": 21289,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21289"
+      ],
+      "pathNames": [
+        "Vaporpop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Vaporwave",
+            "id": "g-13882"
+          },
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Vaporpop 是 Vaporwave 与流行歌曲结构的结合形态，特征是：保留 Vaporwave 的柔和合成垫音、混响与怀旧采样，但使用更完整的流行歌曲结构（主歌—副歌）与更清晰的人声。它比典型 Vaporwave 更\"可听\"、更接近 Dream Pop。",
+      "summary": "Vaporpop 是 Vaporwave 与流行歌曲结构的结合形态，特征是：保留 Vaporwave 的柔和合成垫音、混响与怀旧采样，但使用更完整的流行歌曲结构（主歌—副歌）与更清晰的人声。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Vaporpop",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21299",
+      "name": "Raggastep",
+      "rawTitle": "Raggastep",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21299,
+      "sourceLine": 21299,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21299"
+      ],
+      "pathNames": [
+        "Raggastep"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Reggae",
+            "id": "g-21716"
+          },
+          {
+            "name": "Dubstep",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Raggastep 是 Reggae 与 Dubstep 的结合形态，特征是：Reggae 的人声与节奏处理（尤其是 Ragga 风格的念唱）、配合 Dubstep 的 Half-time 鼓组与深沉 Sub Bass、以及大量 Dub 风格的延迟与混响。它比 Reggaestep 更接近 Reggae 传统。",
+      "summary": "Raggastep 是 Reggae 与 Dubstep 的结合形态，特征是：Reggae 的人声与节奏处理（尤其是 Ragga 风格的念唱）、配合 Dubstep 的 Half-time 鼓组与深沉 Sub Bass、以及大量 Dub 风格的延迟与混响。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Raggastep",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "Half-time",
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21309",
+      "name": "Lo-Fi Techno",
+      "rawTitle": "Lo-Fi Techno",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21309,
+      "sourceLine": 21309,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21309"
+      ],
+      "pathNames": [
+        "Lo-Fi Techno"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Techno",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Lo-Fi Techno 指刻意保留粗糙质感的 Techno，特征是：使用磁带饱和、采样降位（Bit Crush）、低保真鼓机音色、以及刻意的噪声层。它不追求现代混音的清晰度，而追求\"旧机器\"的质感，是 Techno 与 Lo-Fi House 的交叉产物。",
+      "summary": "Lo-Fi Techno 指刻意保留粗糙质感的 Techno，特征是：使用磁带饱和、采样降位（Bit Crush）、低保真鼓机音色、以及刻意的噪声层。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Lo-Fi Techno",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21319",
+      "name": "Stutter Techno",
+      "rawTitle": "Stutter Techno",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21319,
+      "sourceLine": 21319,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21319"
+      ],
+      "pathNames": [
+        "Stutter Techno"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Techno",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Stutter Techno 是2010年代后期形成的分支，特征是：使用 Stutter（卡顿、重复截断）处理人声或合成器，制造急促的节奏断裂；配合硬朗的 Techno 鼓组与工业化的音色。它是 Techno 与 Glitch 的结合，也是当代 Hard Techno 场景中的常见手法。",
+      "summary": "Stutter Techno 是2010年代后期形成的分支，特征是：使用 Stutter（卡顿、重复截断）处理人声或合成器，制造急促的节奏断裂；配合硬朗的 Techno 鼓组与工业化的音色。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Stutter Techno",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "极简",
+        "人声",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21329",
+      "name": "Electro Hop",
+      "rawTitle": "Electro Hop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21329,
+      "sourceLine": 21329,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21329"
+      ],
+      "pathNames": [
+        "Electro Hop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electro",
+            "id": "g-13484"
+          },
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Electro Hop 指 Electro 与 Hip-Hop 的结合形态，特征是：使用 808 鼓机与合成器（类似 Electro-Funk）、配合说唱人声与采样。它比 Electro-Funk 更强调人声，比主流 Hip-Hop 更依赖合成器而非采样。",
+      "summary": "Electro Hop 指 Electro 与 Hip-Hop 的结合形态，特征是：使用 808 鼓机与合成器（类似 Electro-Funk）、配合说唱人声与采样。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Electro Hop",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21339",
+      "name": "Country Dance Music",
+      "rawTitle": "Country Dance Music",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21339,
+      "sourceLine": 21339,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21339"
+      ],
+      "pathNames": [
+        "Country Dance Music"
+      ],
+      "aliases": [
+        "CDM",
+        "Country Dance"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Pop",
+            "id": "g-19376"
+          },
+          {
+            "name": "Country",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Country Dance Music 指 Country 与 Dance-Pop 的结合形态，特征是：Country 的叙事性歌词与吉他音色、配合 Dance-Pop 的四四拍节拍与合成器编曲。它在2010年代成为北美市场的重要形态，体现了流行舞曲语汇向乡村音乐的渗透。",
+      "summary": "Country Dance Music 指 Country 与 Dance-Pop 的结合形态，特征是：Country 的叙事性歌词与吉他音色、配合 Dance-Pop 的四四拍节拍与合成器编曲。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Country Dance Music",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21351",
+      "name": "French Hip Hop",
+      "rawTitle": "French Hip Hop",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21351,
+      "sourceLine": 21351,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21351"
+      ],
+      "pathNames": [
+        "French Hip Hop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Hip-Hop",
+            "id": "g-9479"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "French Hip Hop 指以法语演唱的 Hip-Hop，起源于1980年代的法国郊区。它的音乐特征与美式 Hip-Hop 有明确差异：更常使用电子化的节拍（受 French House 与 Electro 影响）、更注重文本的密度与韵律、以及更强的社会议题取向。它在1990年代形成成熟的本地场景，并影响了 French Touch 与后来的全球法语音乐。",
+      "summary": "French Hip Hop 指以法语演唱的 Hip-Hop，起源于1980年代的法国郊区。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "French Hip Hop",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21361",
+      "name": "Minimal Electro",
+      "rawTitle": "Minimal Electro",
+      "status": null,
+      "group": null,
+      "familyId": "f-20955",
+      "familyName": "风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21361,
+      "sourceLine": 21361,
+      "parentId": "f-20955",
+      "pathIds": [
+        "g-21361"
+      ],
+      "pathNames": [
+        "Minimal Electro"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Industrial",
+            "id": "g-15410"
+          },
+          {
+            "name": "Electro",
+            "id": "g-13484"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Minimal Electro 是1980年代初形成的分支，特征是：极简的鼓机节拍、冰冷的合成器音色、稀疏的编曲、以及带有距离感的人声。它同时属于早期 Electro 与 Industrial 场景，是 Minimal Wave 的近亲，也是后来 Techno 与 EBM 的重要前身。",
+      "summary": "Minimal Electro 是1980年代初形成的分支，特征是：极简的鼓机节拍、冰冷的合成器音色、稀疏的编曲、以及带有距离感的人声。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Minimal Electro",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简",
+        "人声",
+        "工业"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21390",
+      "name": "Hard House (UK)",
+      "rawTitle": "Hard House (UK)",
+      "status": null,
+      "group": null,
+      "familyId": "f-21372",
+      "familyName": "Hard Dance 补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21390,
+      "sourceLine": 21390,
+      "parentId": "f-21372",
+      "pathIds": [
+        "g-21390"
+      ],
+      "pathNames": [
+        "Hard House (UK)"
+      ],
+      "aliases": [
+        "UK Hard House"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hard House",
+            "id": "g-21029"
+          },
+          {
+            "name": "UK Hard House",
+            "id": "g-1807"
+          }
+        ],
+        "down": [
+          {
+            "name": "Hard Bass",
+            "id": "g-8444"
+          },
+          {
+            "name": "Scouse House",
+            "id": "g-1855"
+          },
+          {
+            "name": "Poky",
+            "id": "g-1933"
+          }
+        ],
+        "related": []
+      },
+      "description": "英国 Hard House 是1990年代中后期在英国北部形成的分支，特征是：速度在145–155 BPM、Kick 极度失真且带有\"bounce\"的弹跳感、使用 Hoover 或 Screech 音色作为主 Riff、以及大量简短的人声切片。它的 Drop 结构比美式 Hard House 更复杂，常出现节奏突然断裂再重新进入。它是 Scouse House、Poky 与 Hardbass 的共同源头。",
+      "summary": "英国 Hard House 是1990年代中后期在英国北部形成的分支，特征是：速度在145–155 BPM、Kick 极度失真且带有\"bounce\"的弹跳感、使用 Hoover 或 Screech 音色作为主 Riff、以及大量简短的人声切片。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "UK Hard House",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 145,
+        "max": 155,
+        "label": "145–155"
+      },
+      "traits": [
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21402",
+      "name": "Hardstyle (Base)",
+      "rawTitle": "Hardstyle (Base)",
+      "status": null,
+      "group": null,
+      "familyId": "f-21372",
+      "familyName": "Hard Dance 补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21402,
+      "sourceLine": 21402,
+      "parentId": "f-21372",
+      "pathIds": [
+        "g-21402"
+      ],
+      "pathNames": [
+        "Hardstyle (Base)"
+      ],
+      "aliases": [
+        "Hardstyle"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Hard Dance",
+            "id": "g-8309"
+          }
+        ],
+        "down": [
+          {
+            "name": "Euphoric Hardstyle",
+            "id": "g-8608"
+          },
+          {
+            "name": "Raw Hardstyle",
+            "id": "g-8630"
+          },
+          {
+            "name": "Reverse Bass",
+            "id": "g-8866"
+          }
+        ],
+        "related": []
+      },
+      "description": "Hardstyle 是2000年代初在荷兰形成的分支，特征是：速度在150 BPM 上下、Kick 使用\"Reverse Bass\"处理（低频先上扬再急收）、配合失真且带长尾的鼓组、以及大量使用 Screech 与 Euphoric Lead。它分为两大方向：Euphoric Hardstyle 强调明亮的合成器旋律与情感高潮；Rawstyle 强调失真的 Kick 与攻击性。Hardstyle 是欧洲 Hard Dance 场景中规模最大的分支，拥有独立的大型音乐节生态。",
+      "summary": "Hardstyle 是2000年代初在荷兰形成的分支，特征是：速度在150 BPM 上下、Kick 使用\"Reverse Bass\"处理（低频先上扬再急收）、配合失真且带长尾的鼓组、以及大量使用 Screech 与 Euphoric Lead。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Hardstyle",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "traits": [
+        "明亮",
+        "旋律",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-1947",
+          "fromName": "Hard Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-1999",
+          "fromName": "Hard Bounce",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7882",
+          "fromName": "Frenchcore (Modern)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8309",
+          "fromName": "Hard Dance",
+          "type": "down"
+        },
+        {
+          "fromId": "g-8444",
+          "fromName": "Hard Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8590",
+          "fromName": "Dubstyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8744",
+          "fromName": "Freestyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8756",
+          "fromName": "Hard Drop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8784",
+          "fromName": "Techstyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8798",
+          "fromName": "Undersound (不选入)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8816",
+          "fromName": "Stylecore (不选入)",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8848",
+          "fromName": "Bigroom Hardstyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8866",
+          "fromName": "Reverse Bass",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8878",
+          "fromName": "Psystyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11857",
+          "fromName": "Lento Violento",
+          "type": "up"
+        },
+        {
+          "fromId": "g-14706",
+          "fromName": "Xpiritualism Jumpstyle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19244",
+          "fromName": "UK Hardcore (Future)",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21414",
+      "name": "Neo Rave",
+      "rawTitle": "Neo Rave",
+      "status": null,
+      "group": null,
+      "familyId": "f-21372",
+      "familyName": "Hard Dance 补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21414,
+      "sourceLine": 21414,
+      "parentId": "f-21372",
+      "pathIds": [
+        "g-21414"
+      ],
+      "pathNames": [
+        "Neo Rave"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Hard Dance",
+            "id": "g-8309"
+          },
+          {
+            "name": "Rave",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Neo Rave 是2010年代后期形成的回潮形态，把1990年代早期 Rave 的钢琴 Riff、Breakbeat 与明亮合成器，与当代 Hard Dance 的失真 Kick 与响度处理结合。它比原版 Rave 更硬、更快，比 Hardstyle 更少规则化。它体现了当代俱乐部场景对1990年代 Rave 美学的重新使用。",
+      "summary": "Neo Rave 是2010年代后期形成的回潮形态，把1990年代早期 Rave 的钢琴 Riff、Breakbeat 与明亮合成器，与当代 Hard Dance 的失真 Kick 与响度处理结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Neo Rave",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "明亮",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21424",
+      "name": "Hard House (Chicago)",
+      "rawTitle": "Hard House (Chicago)",
+      "status": null,
+      "group": null,
+      "familyId": "f-21372",
+      "familyName": "Hard Dance 补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21424,
+      "sourceLine": 21424,
+      "parentId": "f-21372",
+      "pathIds": [
+        "g-21424"
+      ],
+      "pathNames": [
+        "Hard House (Chicago)"
+      ],
+      "aliases": [
+        "Chicago Hard House"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "House",
+            "id": null
+          },
+          {
+            "name": "Hard House",
+            "id": "g-21029"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "芝加哥 Hard House 是1990年代中期在芝加哥形成的分支，特征是：速度在130–140 BPM（比英国 Hard House 更慢）、Kick 沉重但失真程度较低、使用大量的 Loop 与采样叠加、以及持续的高能量推进。它更接近 Tracky 的 Chicago House 传统，而不是英国 Hard House 的 Riff 驱动结构。两者同名但音乐上差异明确，是本地知识库中需要靠大族与路径消歧的一组同名条目之一。",
+      "summary": "芝加哥 Hard House 是1990年代中期在芝加哥形成的分支，特征是：速度在130–140 BPM（比英国 Hard House 更慢）、Kick 沉重但失真程度较低、使用大量的 Loop 与采样叠加、以及持续的高能量推进。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Chicago Hard House",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 130,
+        "max": 140,
+        "label": "130–140"
+      },
+      "traits": [
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21487",
+      "name": "Alternative Dance",
+      "rawTitle": "Alternative Dance",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21487,
+      "sourceLine": 21487,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21487"
+      ],
+      "pathNames": [
+        "Alternative Dance"
+      ],
+      "aliases": [
+        "Indie Dance",
+        "Alt Dance"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Indie Dance",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Dance-Punk",
+            "id": "g-21499"
+          },
+          {
+            "name": "New Rave",
+            "id": "g-18034"
+          }
+        ],
+        "related": []
+      },
+      "description": "Alternative Dance 是1980年代形成的分支，把独立摇滚的吉他、贝斯与演唱方式，与舞曲的四四拍节拍、合成器与鼓机结合。它的标志是：歌曲结构仍是摇滚，但律动来自舞池；吉他通常演奏切分音型而非和弦推进。它是 Indie Dance、Dance-Punk 与 New Rave 的共同母体。",
+      "summary": "Alternative Dance 是1980年代形成的分支，把独立摇滚的吉他、贝斯与演唱方式，与舞曲的四四拍节拍、合成器与鼓机结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Alternative Dance",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "4/4",
+        "碎拍"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-21499",
+        "g-21509"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-11645",
+          "fromName": "Indie Dance [EDM]",
+          "type": "up"
+        },
+        {
+          "fromId": "g-13146",
+          "fromName": "Indietronica",
+          "type": "up"
+        },
+        {
+          "fromId": "g-17718",
+          "fromName": "Baggy",
+          "type": "up"
+        },
+        {
+          "fromId": "g-17736",
+          "fromName": "Grebo",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19802",
+          "fromName": "Electronic Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-21499",
+          "fromName": "Dance-Punk",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21509",
+          "fromName": "Electro Punk",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21499",
+      "name": "Dance-Punk",
+      "rawTitle": "Dance-Punk",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 3,
+      "line": 21499,
+      "sourceLine": 21499,
+      "parentId": "g-21487",
+      "pathIds": [
+        "g-21487",
+        "g-21499"
+      ],
+      "pathNames": [
+        "Alternative Dance",
+        "Dance-Punk"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Alternative Dance",
+            "id": "g-21487"
+          },
+          {
+            "name": "Punk",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Dance-Punk 是2000年代形成的分支，把朋克的短促结构与能量，与舞曲的四四拍、Disco 的贝斯线结合。它的速度通常在120–140 BPM，吉他使用高音区的切分音型，鼓组强调稳定的四拍。它比 Alternative Dance 更粗糙、更急促。",
+      "summary": "Dance-Punk 是2000年代形成的分支，把朋克的短促结构与能量，与舞曲的四四拍、Disco 的贝斯线结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Dance-Punk",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 120,
+        "max": 140,
+        "label": "120–140"
+      },
+      "traits": [
+        "4/4",
+        "碎拍"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-21487",
+          "fromName": "Alternative Dance",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21509",
+      "name": "Electro Punk",
+      "rawTitle": "Electro Punk",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 3,
+      "line": 21509,
+      "sourceLine": 21509,
+      "parentId": "g-21487",
+      "pathIds": [
+        "g-21487",
+        "g-21509"
+      ],
+      "pathNames": [
+        "Alternative Dance",
+        "Electro Punk"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Alternative Dance",
+            "id": "g-21487"
+          },
+          {
+            "name": "Electro",
+            "id": "g-13484"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Electro Punk 把朋克的演唱方式与 Electro 的鼓机、合成器结合。它的特征是：使用 808 或类似鼓机、合成器演奏简单的低音线、人声保留朋克的喊唱方式。它是 New Wave 与 Electroclash 之间的过渡形态。",
+      "summary": "Electro Punk 把朋克的演唱方式与 Electro 的鼓机、合成器结合。它的特征是：使用 808 或类似鼓机、合成器演奏简单的低音线、人声保留朋克的喊唱方式。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Electro Punk",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "人声",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19802",
+          "fromName": "Electronic Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21519",
+      "name": "Mathcore",
+      "rawTitle": "Mathcore",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21519,
+      "sourceLine": 21519,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21519"
+      ],
+      "pathNames": [
+        "Mathcore"
+      ],
+      "aliases": [
+        "Mathcore",
+        "Math Metal"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Hardcore Punk",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Sasscore",
+            "id": "g-21531"
+          }
+        ],
+        "related": []
+      },
+      "description": "Mathcore 是1990年代形成的分支，把 Hardcore Punk 的强度与极其复杂的节拍变化结合：曲目频繁在多个拍号之间切换（如5/8、7/8、11/8），吉他 Riff 短促而错位，鼓组密集且不重复。它的听感是\"高度技术化的混乱\"。它在电子音乐语境中的意义在于：它是\"节奏可以被任意切割重组\"这一观念在摇滚中的极端实现。",
+      "summary": "Mathcore 是1990年代形成的分支，把 Hardcore Punk 的强度与极其复杂的节拍变化结合：曲目频繁在多个拍号之间切换（如5/8、7/8、11/8），吉他 Riff 短促而错位，鼓组密集且不重复。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Mathcore",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [
+        "g-21531"
+      ],
+      "backlinks": [
+        {
+          "fromId": "g-21531",
+          "fromName": "Sasscore",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21531",
+      "name": "Sasscore",
+      "rawTitle": "Sasscore",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 3,
+      "line": 21531,
+      "sourceLine": 21531,
+      "parentId": "g-21519",
+      "pathIds": [
+        "g-21519",
+        "g-21531"
+      ],
+      "pathNames": [
+        "Mathcore",
+        "Sasscore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Mathcore",
+            "id": "g-21519"
+          },
+          {
+            "name": "Post-Hardcore",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Sasscore 是2000年代形成的 Mathcore 分支，特征是：保留复杂的节拍变化，但加入大量高音区的尖叫式唱腔（Sass）、夸张的戏剧化编曲、以及 Glitch 与电子音效。它的情绪从 Mathcore 的冷峻转向歇斯底里，是互联网亚文化与硬核场景的交叉产物。",
+      "summary": "Sasscore 是2000年代形成的 Mathcore 分支，特征是：保留复杂的节拍变化，但加入大量高音区的尖叫式唱腔（Sass）、夸张的戏剧化编曲、以及 Glitch 与电子音效。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Sasscore",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-21519",
+          "fromName": "Mathcore",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21541",
+      "name": "Electrocore",
+      "rawTitle": "Electrocore",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21541,
+      "sourceLine": 21541,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21541"
+      ],
+      "pathNames": [
+        "Electrocore"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "Electronicore",
+            "id": "g-17880"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Electrocore 是 Electronicore 的电子化更强的一端，特征是：Breakdown 处使用大量的合成器 Riff 与舞曲节拍，吉他失真被压缩成节奏元素，人声大量使用 Auto-Tune。它比 Trancecore 更依赖电子音色，吉他的存在感更弱。",
+      "summary": "Electrocore 是 Electronicore 的电子化更强的一端，特征是：Breakdown 处使用大量的合成器 Riff 与舞曲节拍，吉他失真被压缩成节奏元素，人声大量使用 Auto-Tune。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Electrocore",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21551",
+      "name": "Brutal Prog",
+      "rawTitle": "Brutal Prog",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21551,
+      "sourceLine": 21551,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21551"
+      ],
+      "pathNames": [
+        "Brutal Prog"
+      ],
+      "aliases": [
+        "Brutal Progressive"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Progressive Rock",
+            "id": "g-19948"
+          },
+          {
+            "name": "Extreme Metal",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Brutal Prog 是把 Progressive Rock 的复杂结构与极端金属的失真、嘶吼、高速段落结合的形态。它的特征是在同一首曲目中频繁切换复杂拍号、极速段落与突然的静默，结构完全不可预测。它是 Progressive Rock 在极端音乐方向上的延伸。",
+      "summary": "Brutal Prog 是把 Progressive Rock 的复杂结构与极端金属的失真、嘶吼、高速段落结合的形态。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Brutal Prog",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19948",
+          "fromName": "Progressive Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21563",
+      "name": "Gothic Metal",
+      "rawTitle": "Gothic Metal",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21563,
+      "sourceLine": 21563,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21563"
+      ],
+      "pathNames": [
+        "Gothic Metal"
+      ],
+      "aliases": [
+        "Dark Metal"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          },
+          {
+            "name": "Doom Metal",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Gothic Metal 是1990年代形成的分支，把 Doom Metal 的缓慢沉重与哥特摇滚的阴暗氛围、男女双主唱（男声嘶吼或低吟 + 女声美声）结合，常使用键盘、弦乐与合唱。它的编曲比 Doom Metal 更华丽，情绪更戏剧化。它与 Dark Wave、Ethereal Wave 有大量交集。",
+      "summary": "Gothic Metal 是1990年代形成的分支，把 Doom Metal 的缓慢沉重与哥特摇滚的阴暗氛围、男女双主唱（男声嘶吼或低吟 + 女声美声）结合，常使用键盘、弦乐与合唱。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Gothic Metal",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "暗色",
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21575",
+      "name": "Thall",
+      "rawTitle": "Thall",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21575,
+      "sourceLine": 21575,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21575"
+      ],
+      "pathNames": [
+        "Thall"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Metal",
+            "id": "g-19814"
+          },
+          {
+            "name": "Djent",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Thall 是2010年代形成的分支，特征是：使用极强的低音失真与\"拍击式\"的吉他演奏（Thall 音色，带有明显的金属共鸣与不规则的音高滑动）、配合 Djent 的切分节奏与电子化处理。它的听感是极度沉重而带有机械感，低频被处理得近乎合成器。",
+      "summary": "Thall 是2010年代形成的分支，特征是：使用极强的低音失真与\"拍击式\"的吉他演奏（Thall 音色，带有明显的金属共鸣与不规则的音高滑动）、配合 Djent 的切分节奏与电子化处理。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Thall",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "失真",
+        "工业",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21585",
+      "name": "Noise Pop",
+      "rawTitle": "Noise Pop",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21585,
+      "sourceLine": 21585,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21585"
+      ],
+      "pathNames": [
+        "Noise Pop"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Indie Rock",
+            "id": "g-19926"
+          },
+          {
+            "name": "Noise Rock",
+            "id": "g-19938"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Noise Pop 把流行歌曲的旋律结构与噪音吉他的失真墙结合。它的特征是：旋律与和声写得非常\"上口\"，但吉他被大量失真、反馈与效果器处理，人声被埋在混音中。它比 Shoegaze 更强调歌曲结构，比 Noise Rock 更强调旋律。",
+      "summary": "Noise Pop 把流行歌曲的旋律结构与噪音吉他的失真墙结合。它的特征是：旋律与和声写得非常\"上口\"，但吉他被大量失真、反馈与效果器处理，人声被埋在混音中。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Noise Pop",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "失真",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19926",
+          "fromName": "Indie Rock",
+          "type": "down"
+        },
+        {
+          "fromId": "g-19938",
+          "fromName": "Noise Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21595",
+      "name": "Slacker Rock",
+      "rawTitle": "Slacker Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21595,
+      "sourceLine": 21595,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21595"
+      ],
+      "pathNames": [
+        "Slacker Rock"
+      ],
+      "aliases": [
+        "Slacker Rock",
+        "Slack Rock"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Indie Rock",
+            "id": "g-19926"
+          }
+        ],
+        "down": [
+          {
+            "name": "Lofi Hip-Hop",
+            "id": "g-9713"
+          }
+        ],
+        "related": []
+      },
+      "description": "Slacker Rock 指1990年代形成的独立摇滚分支，特征是：刻意的松散演奏、粗糙的录音质量、慵懒的演唱方式、以及对技术精度的明确放弃。它的美学核心是\"不努力\"，与同期追求高制作水准的另类摇滚形成对照。它是 Lo-Fi 美学在摇滚中的直接体现。",
+      "summary": "Slacker Rock 指1990年代形成的独立摇滚分支，特征是：刻意的松散演奏、粗糙的录音质量、慵懒的演唱方式、以及对技术精度的明确放弃。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Slacker Rock",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-19926",
+          "fromName": "Indie Rock",
+          "type": "down"
+        }
+      ]
+    },
+    {
+      "id": "g-21607",
+      "name": "Visual Kei",
+      "rawTitle": "Visual Kei",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21607,
+      "sourceLine": 21607,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21607"
+      ],
+      "pathNames": [
+        "Visual Kei"
+      ],
+      "aliases": [
+        "V系",
+        "Visual Kei"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Rock",
+            "id": "g-19802"
+          },
+          {
+            "name": "J-Rock",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Visual Kei 是1980年代在日本形成的运动，音乐上涵盖 Hard Rock、Gothic Metal、Electronic Rock 与 Synth-Pop，视觉上以夸张的造型、浓妆与戏剧化舞台表演为核心。在电子音乐方向上，它产生了大量把金属失真与合成器、鼓机结合的乐队。它的核心特征与 New Romanticism 类似：音乐与视觉形象共同构成作品。",
+      "summary": "Visual Kei 是1980年代在日本形成的运动，音乐上涵盖 Hard Rock、Gothic Metal、Electronic Rock 与 Synth-Pop，视觉上以夸张的造型、浓妆与戏剧化舞台表演为核心。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Visual Kei",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21619",
+      "name": "Psychedelic Trance",
+      "rawTitle": "Psychedelic Trance",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21619,
+      "sourceLine": 21619,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21619"
+      ],
+      "pathNames": [
+        "Psychedelic Trance"
+      ],
+      "aliases": [
+        "Psytrance",
+        "Psy Trance",
+        "Psy"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Trance",
+            "id": null
+          },
+          {
+            "name": "Psy Trance",
+            "id": "g-3285"
+          }
+        ],
+        "down": [
+          {
+            "name": "Dark Psytrance",
+            "id": "g-3299"
+          },
+          {
+            "name": "Full-On",
+            "id": "g-3403"
+          },
+          {
+            "name": "Progressive Psytrance",
+            "id": "g-3493"
+          },
+          {
+            "name": "Psybient",
+            "id": "g-21129"
+          }
+        ],
+        "related": []
+      },
+      "description": "Psychedelic Trance 是1990年代初在印度果阿（Goa）形成的分支，从 Goa Trance 演化而来。它的特征是：速度在140–150 BPM、使用极其复杂的合成器音效（不断变化的调制、滤波、延迟）、低频以稳定的 Sub Bass 推进、旋律使用东方音阶或酸性音型、结构以持续演进而非明确 Drop 为特点。它的分支包括 Full-On（明亮高能量）、Dark Psytrance（阴暗高速）、Progressive Psy（缓慢演进）与 Psybient（氛围向）。",
+      "summary": "Psychedelic Trance 是1990年代初在印度果阿（Goa）形成的分支，从 Goa Trance 演化而来。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Psychedelic Trance",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 140,
+        "max": 150,
+        "label": "140–150"
+      },
+      "traits": [
+        "暗色",
+        "明亮",
+        "旋律",
+        "氛围",
+        "酸性",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-3225",
+          "fromName": "Goa Trance",
+          "type": "up"
+        },
+        {
+          "fromId": "g-3285",
+          "fromName": "Psy Trance",
+          "type": "up"
+        },
+        {
+          "fromId": "g-6592",
+          "fromName": "Psystep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21129",
+          "fromName": "Psybient",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21641",
+          "fromName": "Hypnotic Psy",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21651",
+          "fromName": "Psybass",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21631",
+      "name": "Raw Trance",
+      "rawTitle": "Raw Trance",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21631,
+      "sourceLine": 21631,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21631"
+      ],
+      "pathNames": [
+        "Raw Trance"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Trance",
+            "id": null
+          },
+          {
+            "name": "Raw Hardstyle",
+            "id": "g-8630"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Raw Trance 是2010年代形成的融合形态，把 Trance 的合成器琶音与情感推进，与 Rawstyle 的失真 Kick 与攻击性结合。它的速度通常在150 BPM 上下，Drop 处出现失真 Kick 与明亮的 Trance Lead 并置。它体现了 Hard Dance 与 Trance 场景在当代的相互渗透。",
+      "summary": "Raw Trance 是2010年代形成的融合形态，把 Trance 的合成器琶音与情感推进，与 Rawstyle 的失真 Kick 与攻击性结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Raw Trance",
+          "url": null
+        }
+      ],
+      "bpm": {
+        "min": 150,
+        "max": 150,
+        "label": "150"
+      },
+      "traits": [
+        "明亮",
+        "旋律",
+        "失真"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21641",
+      "name": "Hypnotic Psy",
+      "rawTitle": "Hypnotic Psy",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21641,
+      "sourceLine": 21641,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21641"
+      ],
+      "pathNames": [
+        "Hypnotic Psy"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Psychedelic Trance",
+            "id": "g-21619"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Hypnotic Psy 是 Psytrance 的极简分支，特征是：大幅削减旋律与音效变化，专注于持续的、几乎不变化的低频推进与重复的节奏型，制造催眠式的听感。它比典型 Psytrance 更少\"信息量\"，更接近 Techno 的推进逻辑。",
+      "summary": "Hypnotic Psy 是 Psytrance 的极简分支，特征是：大幅削减旋律与音效变化，专注于持续的、几乎不变化的低频推进与重复的节奏型，制造催眠式的听感。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Hypnotic Psy",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律",
+        "极简"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21651",
+      "name": "Psybass",
+      "rawTitle": "Psybass",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21651,
+      "sourceLine": 21651,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21651"
+      ],
+      "pathNames": [
+        "Psybass"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Bass",
+            "id": "g-20373"
+          },
+          {
+            "name": "Psychedelic Trance",
+            "id": "g-21619"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Psybass 是把 Psytrance 的音效设计与调制手法，与 Bass 音乐的低频重量、Half-time 鼓组结合的分支。它的低频通常使用复杂的调制与滤波，而不是简单的 Wobble；整体氛围带有 Psy 特有的\"迷幻流动感\"。它是 Bass 音乐与 Psy 场景的交叉产物。",
+      "summary": "Psybass 是把 Psytrance 的音效设计与调制手法，与 Bass 音乐的低频重量、Half-time 鼓组结合的分支。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Psybass",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "Half-time",
+        "氛围"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21661",
+      "name": "Trap EDM",
+      "rawTitle": "Trap EDM",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21661,
+      "sourceLine": 21661,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21661"
+      ],
+      "pathNames": [
+        "Trap EDM"
+      ],
+      "aliases": [
+        "EDM Trap",
+        "Festival Trap"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Trap",
+            "id": "g-10159"
+          },
+          {
+            "name": "EDM",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Trap EDM 是2010年代形成的分支，把 Trap 的 808 低频、三连音 Hi-hat 与 Half-time 鼓组，放进 EDM 的节庆结构（Build-up + Drop）。它的 Drop 通常使用失真 Lead、Supersaw 或采样切片，配合极具冲击力的低频。它是 Trap 进入主流音乐节场景的主要形态。",
+      "summary": "Trap EDM 是2010年代形成的分支，把 Trap 的 808 低频、三连音 Hi-hat 与 Half-time 鼓组，放进 EDM 的节庆结构（Build-up + Drop）。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Trap EDM",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "Half-time",
+        "三连音",
+        "失真",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-6472",
+          "fromName": "Trapstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-8834",
+          "fromName": "Trapstyle",
+          "type": "up"
+        }
+      ]
+    },
+    {
+      "id": "g-21673",
+      "name": "Phonkwave",
+      "rawTitle": "Phonkwave",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21673,
+      "sourceLine": 21673,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21673"
+      ],
+      "pathNames": [
+        "Phonkwave"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Trap",
+            "id": "g-10159"
+          },
+          {
+            "name": "Phonk",
+            "id": "g-10247"
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Phonkwave 是2010年代后期形成的分支，把 Phonk 的 Memphis 说唱采样、808 低频、Cowbell 与失真处理，与 Wave 的合成器氛围、混响空间结合。它的速度偏慢、氛围阴暗，低频沉重而带有大量失真。它是当代互联网场景中 Phonk 与 Wave 交叉的产物。",
+      "summary": "Phonkwave 是2010年代后期形成的分支，把 Phonk 的 Memphis 说唱采样、808 低频、Cowbell 与失真处理，与 Wave 的合成器氛围、混响空间结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Phonkwave",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "失真",
+        "氛围",
+        "低音"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21683",
+      "name": "Punta Rock",
+      "rawTitle": "Punta Rock",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21683,
+      "sourceLine": 21683,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21683"
+      ],
+      "pathNames": [
+        "Punta Rock"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Regional Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Latin",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Punta Rock 是中美洲（尤其伯利兹与洪都拉斯）形成的分支，把加里富纳（Garifuna）传统的 Punta 鼓乐与电吉他、合成器、鼓机结合。它的节奏以快速的切分与呼应式的人声为特征，速度偏快。它是 Regional Electronic Music 中加勒比海岸的代表声音。",
+      "summary": "Punta Rock 是中美洲（尤其伯利兹与洪都拉斯）形成的分支，把加里富纳（Garifuna）传统的 Punta 鼓乐与电吉他、合成器、鼓机结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Punta Rock",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21693",
+      "name": "Manele",
+      "rawTitle": "Manele",
+      "status": null,
+      "group": null,
+      "familyId": "f-21437",
+      "familyName": "摇滚与极端风格补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21693,
+      "sourceLine": 21693,
+      "parentId": "f-21437",
+      "pathIds": [
+        "g-21693"
+      ],
+      "pathNames": [
+        "Manele"
+      ],
+      "aliases": [],
+      "relations": {
+        "up": [
+          {
+            "name": "Regional Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Balkan",
+            "id": null
+          }
+        ],
+        "down": [],
+        "related": []
+      },
+      "description": "Manele 是巴尔干地区（尤其罗马尼亚与保加利亚）形成的流行音乐，把土耳其与中东的音阶、吉普赛音乐的装饰音与节奏，与合成器、鼓机、以及当代舞曲节拍结合。它的速度通常偏快，旋律使用大量微分音装饰，编曲以合成器为主。它同时受到 Turbo-Folk 与 Chalga 的影响，是巴尔干流行文化中辨识度极高的声音。",
+      "summary": "Manele 是巴尔干地区（尤其罗马尼亚与保加利亚）形成的流行音乐，把土耳其与中东的音阶、吉普赛音乐的装饰音与节奏，与合成器、鼓机、以及当代舞曲节拍结合。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Manele",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "旋律"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": []
+    },
+    {
+      "id": "g-21716",
+      "name": "Reggae",
+      "rawTitle": "Reggae",
+      "status": null,
+      "group": null,
+      "familyId": "f-21704",
+      "familyName": "Reggae 补遗",
+      "familyZh": "",
+      "familyColor": "muted",
+      "level": 2,
+      "line": 21716,
+      "sourceLine": 21716,
+      "parentId": "f-21704",
+      "pathIds": [
+        "g-21716"
+      ],
+      "pathNames": [
+        "Reggae"
+      ],
+      "aliases": [
+        "雷鬼"
+      ],
+      "relations": {
+        "up": [
+          {
+            "name": "Electronic Music",
+            "id": null
+          },
+          {
+            "name": "Caribbean Music",
+            "id": null
+          }
+        ],
+        "down": [
+          {
+            "name": "Dub",
+            "id": "g-16746"
+          },
+          {
+            "name": "Dub Reggae",
+            "id": "g-16776"
+          },
+          {
+            "name": "Euro Reggae",
+            "id": "g-11803"
+          },
+          {
+            "name": "Reggaestep",
+            "id": "g-6193"
+          },
+          {
+            "name": "Dancehall",
+            "id": "g-16874"
+          },
+          {
+            "name": "Reggaeton",
+            "id": "g-16842"
+          }
+        ],
+        "related": []
+      },
+      "description": "Reggae 是1960年代末在牙买加形成的音乐，从 Ska 与 Rocksteady 演化而来。它的节奏特征是：强调第二、四拍的反拍重音（Skank）、贝斯线沉重而旋律化、鼓组简洁、以及大量使用切分的吉他或键盘音型。Reggae 对电子音乐的核心贡献在它的录音室实践：1970年代，King Tubby 与 Lee \"Scratch\" Perry 在混音台上实时去掉人声、加强鼓与贝斯、加入大量延迟与混响，创造了 Dub。这是音乐史上第一次把\"混音台当作乐器\"、把\"制作过程本身当作作品\"——此后所有电子音乐的制作观念都建立在这一点上。Reggae 的另一个直接分支是 Dancehall，它把速度加快、人声改为念唱，成为 Hip-Hop 与大量现代舞曲的节奏来源。",
+      "summary": "Reggae 是1960年代末在牙买加形成的音乐，从 Ska 与 Rocksteady 演化而来。",
+      "examples": [
+        {
+          "title": "Various",
+          "artist": "Reggae",
+          "url": null
+        }
+      ],
+      "bpm": null,
+      "traits": [
+        "碎拍",
+        "旋律",
+        "人声"
+      ],
+      "stub": false,
+      "stubReason": null,
+      "childrenIds": [],
+      "backlinks": [
+        {
+          "fromId": "g-4413",
+          "fromName": "Ragga Jungle",
+          "type": "up"
+        },
+        {
+          "fromId": "g-5315",
+          "fromName": "UK Garage",
+          "type": "up"
+        },
+        {
+          "fromId": "g-6001",
+          "fromName": "Riddim Dubstep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-6193",
+          "fromName": "Reggaestep",
+          "type": "up"
+        },
+        {
+          "fromId": "g-7946",
+          "fromName": "Raggatek",
+          "type": "up"
+        },
+        {
+          "fromId": "g-9479",
+          "fromName": "Hip-Hop",
+          "type": "up"
+        },
+        {
+          "fromId": "g-10437",
+          "fromName": "Latin Trap",
+          "type": "up"
+        },
+        {
+          "fromId": "g-11803",
+          "fromName": "Euro Reggae",
+          "type": "up"
+        },
+        {
+          "fromId": "g-16746",
+          "fromName": "Dub",
+          "type": "up"
+        },
+        {
+          "fromId": "g-16776",
+          "fromName": "Dub Reggae",
+          "type": "up"
+        },
+        {
+          "fromId": "g-16842",
+          "fromName": "Reggaeton",
+          "type": "up"
+        },
+        {
+          "fromId": "g-19298",
+          "fromName": "UK Riddim",
+          "type": "up"
+        },
+        {
+          "fromId": "g-21299",
+          "fromName": "Raggastep",
+          "type": "up"
+        }
+      ]
     }
   ]
 }

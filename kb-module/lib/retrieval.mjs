@@ -359,6 +359,8 @@ class KnowledgeBase {
       zh: family.zh,
       count: family.count,
       archive: family.archive,
+      // 「补遗」收纳桶：为补齐覆盖度而追加的编辑性分组，不是音乐分类。
+      supplement: Boolean(family.supplement),
       introSummary: family.introSummary,
       childCount: (family.childIds || []).length,
     }));

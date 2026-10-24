@@ -715,10 +715,424 @@
     }
   },
   {
+    "id": "family:electronic-pop",
+    "type": "family",
+    "title": "Electronic Pop / 电子流行",
+    "text": "# Electronic Pop / 电子流行\n\n本族收录 23 个条目，1 个直接下级。\n\nElectronic Pop（电子流行）是流行音乐与电子音乐制作手段结合后形成的一整个谱系，而不是某一种固定音色。它的历史几乎与合成器本身同步：1970年代，Moog、ARP 等模块化合成器进入录音棚，Kraftwerk、Giorgio Moroder 把机器节拍放进流行歌曲的骨架里；1980年代，Synth-Pop 与新浪漫主义让\"合成器乐队\"成为主流形态，Depeche Mode、Pet Shop Boys、Eurythmics 用鼓机、合成贝斯和冷调人声定义了那个十年；1990年代，Eurodance 与 Eurobeat 把电子流行推向舞池与东亚市场，而 House-Pop 让俱乐部语汇回流到流行副歌。进入2010年代，Hyperpop 与 PC Music 把这种融合推到极端——人声被极端拉伸、失真、切片，变成一种关于\"数字化可爱与过载\"的美学。电子流行始终在做同一件事：把当时最先进的电子音色，装进最容易被记住的歌曲结构里。\n\n## 直接下级\n\n- Electronic Pop",
+    "family": "Electronic Pop",
+    "familyId": "f-19330",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "电子流行"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-19330",
+      "count": 23,
+      "archive": false,
+      "childIds": [
+        "g-19376"
+      ]
+    }
+  },
+  {
+    "id": "family:r-b-rhythm-and-blues",
+    "type": "family",
+    "title": "R&B / Rhythm and Blues / 节奏布鲁斯",
+    "text": "# R&B / Rhythm and Blues / 节奏布鲁斯\n\n本族收录 7 个条目，1 个直接下级。\n\nR&B（Rhythm and Blues，节奏布鲁斯）最初是1940年代美国唱片工业对\"面向黑人听众的流行音乐\"的分类标签，用来替代当时带有种族色彩的\"Race Music\"一词。它的形态在几十年里不断置换：1940–50年代是带有强烈摇摆感与铜管编制的 Jump Blues 与 Doo-Wop；1960年代被 Motown 与 Stax 打磨成结构精密的 Soul；1970年代出现带有交响编制的 Philly Soul 与更粗粝的 Funk 化 R&B；1980年代，鼓机、合成贝斯与采样器进入录音棚，R&B 完成第一次大规模电子化，New Jack Swing 与 Quiet Storm 是这一时期的两个极点。1990年代是 R&B 的黄金年代，制作上大量使用 TR-808/909、合成垫音与多层人声和声。进入2010年代，Trap 的鼓组语汇与氛围化的合成器被引入，形成 Alternative R&B 与 Trap Soul。可以说，R&B 是电子音乐与歌唱传统结合最紧密、也最持久的一条线。 例曲：Papa's Got A Brand New Bag - James Brown\n\n## 直接下级\n\n- R&B",
+    "family": "R&B / Rhythm and Blues",
+    "familyId": "f-19655",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "节奏布鲁斯"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-19655",
+      "count": 7,
+      "archive": false,
+      "childIds": [
+        "g-19679"
+      ]
+    }
+  },
+  {
+    "id": "family:electronic-rock",
+    "type": "family",
+    "title": "Electronic Rock / 电子摇滚",
+    "text": "# Electronic Rock / 电子摇滚\n\n本族收录 17 个条目，1 个直接下级。\n\nElectronic Rock（电子摇滚）是电吉他与合成器在同一首作品里争夺主权的产物。它的历史可以追溯到1960年代末：The Beatles 在《Revolver》里用磁带循环与人声倒放打开缺口，Pink Floyd 与 King Crimson 把 Mellotron 与合成器变成摇滚编曲的常规配置。1970年代，Kraftwerk 与 Suicide 让\"朋克遇上合成器\"成为可能，德国 Krautrock 与后朋克则提供了结构上的自由。1980年代，New Wave 与 Industrial Rock 把鼓机、采样与失真吉他并置，Nine Inch Nails 与 Ministry 确立了工业摇滚的范式。1990年代，Big Beat 与 Electronicore 让摇滚与电子舞曲的边界进一步模糊；2000年代，Nintendocore 与 Cybergrind 把游戏音效与极端金属拼在一起；2010年代后，Blackgaze 与 Nu Gaze 把 Shoegaze 的噪音墙与黑金属、电子氛围融合。电子摇滚的核心问题始终是：机器与人的演奏如何在同一首曲子里互相不让步，又彼此成立。 例曲：Kashmir - Led Zeppelin\n\n## 直接下级\n\n- Electronic Rock",
+    "family": "Electronic Rock",
+    "familyId": "f-19764",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "电子摇滚"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-19764",
+      "count": 17,
+      "archive": false,
+      "childIds": [
+        "g-19802"
+      ]
+    }
+  },
+  {
+    "id": "family:funk",
+    "type": "family",
+    "title": "Funk / 放克",
+    "text": "# Funk / 放克\n\n本族收录 11 个条目，1 个直接下级。\n\nFunk 是电子音乐最重要的\"节奏祖先\"。1960年代中期，James Brown 把重心从和声与旋律移开，让每一件乐器都变成打击乐器——吉他只弹一个和弦的短促切音，贝斯只弹\"One\"，鼓只打一个稳定的\"On the One\"。这种\"Everything is a drum\"的思路，直接定义了此后所有舞曲的骨架。1970年代，Sly Stone 与 Parliament-Funkadelic 把合成器、Clavinet 与 Wah 效果器引入 Funk，形成 P-Funk 的宇宙。1980年代，Prince 与 Zapp 用 LinnDrum、Oberheim 与 Talk Box 把 Funk 推向电子化；同一时期，西海岸的 G-Funk 用 Moog 的滑音 Lead 与缓慢的节拍重新包装了 Funk；而 Miami Bass 与 Electro 则把 808 的 Kick 变成主角。1990年代后，Funk 的语汇被 Hip-Hop、House、Drum & Bass 与 Nu-Disco 大量采样与内化——今天几乎所有电子舞曲的低频与切分处理，都可以追溯到 Funk。 例曲：Papa's Got A Brand New Bag - James Brown\n\n## 直接下级\n\n- Funk",
+    "family": "Funk",
+    "familyId": "f-19995",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "放克"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-19995",
+      "count": 11,
+      "archive": false,
+      "childIds": [
+        "g-20027"
+      ]
+    }
+  },
+  {
+    "id": "family:chill-out",
+    "type": "family",
+    "title": "Chill-Out / 休闲",
+    "text": "# Chill-Out / 休闲\n\n本族收录 12 个条目，1 个直接下级。\n\nChill-Out 既是场景也是风格。它最早指的是1980年代末伦敦俱乐部里的一间\"休息室\"——DJ 在这里放慢速度、放下鼓点，让跳累的人有个可以坐下来的空间。1990年代，Café del Mar 的日落套装、Kruder & Dorfmeister 的慢速重混、Air 与 Zero 7 的合成器流行，把这种\"降速与放松\"的做法发展成一整套声音美学：速度在70–110 BPM、鼓组稀疏或完全消失、大量使用 Rhodes 电钢琴与合成垫音、混响与延迟处理得极为宽阔。它的分支很多：一端靠近 Ambient 与 Downtempo，一端靠近 Trip Hop 与 Nu Jazz，还有一端靠近 Balearic 与 Lounge。Chill-Out 的核心不在于\"安静\"，而在于\"把注意力从舞池转向空间\"——同样的和声与音色，只是被放慢了、拉开了、留白了。 例曲：Teardrop - Massive Attack\n\n## 直接下级\n\n- Chill-Out",
+    "family": "Chill-Out",
+    "familyId": "f-20154",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "休闲"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-20154",
+      "count": 12,
+      "archive": false,
+      "childIds": [
+        "g-20188"
+      ]
+    }
+  },
+  {
+    "id": "family:bass-club",
+    "type": "family",
+    "title": "Bass / Club / 低频俱乐部",
+    "text": "# Bass / Club / 低频俱乐部\n\n本族收录 12 个条目，1 个直接下级。\n\nBass / Club 是\"低频驱动的俱乐部音乐\"这一族群的集合称呼，它的核心不在旋律，而在低频与鼓组如何组织身体的动作。它的历史有两条线：一条来自美国南部与东海岸的俱乐部文化——Miami Bass 用 808 的 Long Kick 与极快的念白定义了佛罗里达的舞池；Baltimore Club 与 Jersey Club 把 Breakbeat 切碎、把人声切片循环、用三连音 Kick 制造急停急起；Ghettotech 与 Juke／Footwork 把底特律与芝加哥的速度推到150 BPM 以上，配合舞蹈。另一条来自互联网时代的低音文化——Bérite 把 Jersey Club 与非洲鼓乐结合，Jersey Terror 把节奏做得更暴烈，Snap Music 把极简的鼓与拍手变成钩子。这一族群共同的特征是：低频永远是主角，人声被当作打击乐使用，结构高度重复，完全服务于身体。 例曲：Various - Bass / Club\n\n## 直接下级\n\n- Bass / Club",
+    "family": "Bass / Club",
+    "familyId": "f-20327",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "低频俱乐部"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-20327",
+      "count": 12,
+      "archive": false,
+      "childIds": [
+        "g-20361"
+      ]
+    }
+  },
+  {
+    "id": "family:chiptune",
+    "type": "family",
+    "title": "Chiptune / 芯片音乐",
+    "text": "# Chiptune / 芯片音乐\n\n本族收录 11 个条目，1 个直接下级。\n\nChiptune（芯片音乐）是电子音乐里唯一一个\"由硬件限制定义\"的风格族。它的起点不是审美选择，而是技术约束：1980年代的视频游戏机与家用电脑只能用极有限的通道发声——任天堂的 2A03 芯片只有五个通道（两个方波、一个三角波、一个噪声、一个采样），Commodore 64 的 SID 芯片有三个通道加滤波器。作曲家必须在\"只有几条声部\"的条件下写出旋律、低音、鼓组与和声。当这些机器被淘汰、限制消失之后，制作人反而开始主动追求这种限制带来的音色：方波的尖锐、噪声通道的沙哑、琶音器模拟和弦的错觉、以及通道数不足逼出来的极简编配。Chiptune 因此成为\"限制即风格\"的典范——它证明音色的辨识度可以来自工具，而不只是来自创作意图。 例曲：The Moon (8-bit Version) - 殿村裕誠\n\n## 直接下级\n\n- Chiptune",
+    "family": "Chiptune",
+    "familyId": "f-20492",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "芯片音乐"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-20492",
+      "count": 11,
+      "archive": false,
+      "childIds": [
+        "g-20524"
+      ]
+    }
+  },
+  {
+    "id": "family:remix-edit",
+    "type": "family",
+    "title": "Remix & Edit / 重混与编辑",
+    "text": "# Remix & Edit / 重混与编辑\n\n本族收录 10 个条目，1 个直接下级。\n\nRemix & Edit 是电子音乐中最特殊的一族：它们不是\"原创作品\"，而是对已有录音的再加工。这一族的边界由技术与法律共同划定——从1970年代 DJ 用双唱盘把两首歌拼在一起，到1980年代采样器让\"取一段素材重做一首歌\"成为常规，再到2000年代后互联网让任何人都能对任意歌曲进行速度与音高的重新处理。它的手法其实高度一致：改变速度、改变音高、切碎素材、叠加层、重新编排结构。区别只在于\"改动多少\"与\"是否获得授权\"。理解这一族对制作学习特别有价值，因为它是\"结构可以被拆开重装\"这一观念最直接的证明。 例曲：Various - Remix & Edit\n\n## 直接下级\n\n- Remix & Edit",
+    "family": "Remix & Edit",
+    "familyId": "f-20645",
+    "path": null,
+    "bpm": null,
+    "aliases": [
+      "重混与编辑"
+    ],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-20645",
+      "count": 10,
+      "archive": false,
+      "childIds": [
+        "g-20675"
+      ]
+    }
+  },
+  {
+    "id": "family:zh-794ca857",
+    "type": "family",
+    "title": "实验电子补遗",
+    "text": "# 实验电子补遗\n\n本族收录 11 个条目，11 个直接下级。\n\n这一节补充实验电子音乐中几个\"以方法命名\"的分支。它们与按音色或场景划分的风格不同：Acousmatic Music 与 Musique concrète 关心声音的录制与还原方式，Data Sonification 关心数据如何被转译成声音，Graphical Sound 关心图形如何直接生成音轨，Live Coding 与 Algorave 关心代码如何在现场实时生成音乐。它们的共同点是：音乐的重心从\"写什么音符\"移到了\"用什么方法产生声音\"。这也是实验电子最核心的贡献——它把制作过程本身变成了作品的一部分。 例曲：Various - Experimental Electronic\n\n## 直接下级\n\n- Acousmatic Music\n- Data Sonification\n- Electronic Free Improvisation\n- Field Recording\n- Radio Broadcasting Recordings\n- Graphical Sound\n- Experimental Bass\n- Colour Hop\n- Live Electronics\n- Livetronica\n- Spectral Music",
+    "family": "实验电子补遗",
+    "familyId": "f-20790",
+    "path": null,
+    "bpm": null,
+    "aliases": [],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-20790",
+      "count": 11,
+      "archive": false,
+      "childIds": [
+        "g-20822",
+        "g-20834",
+        "g-20846",
+        "g-20858",
+        "g-20870",
+        "g-20882",
+        "g-20894",
+        "g-20906",
+        "g-20918",
+        "g-20930",
+        "g-20942"
+      ]
+    }
+  },
+  {
+    "id": "family:zh-6803cbee",
+    "type": "family",
+    "title": "风格补遗",
+    "text": "# 风格补遗\n\n本族收录 32 个条目，32 个直接下级。\n\n这一节集中补充此前各大族中\"Wiki 有、本地未展开\"的条目，以及一些因命名习惯不同而被漏记的分支。它们分布在 House、Hardcore、Trance、Drum & Bass、UK Garage、Dubstep、Ambient、Reggae、Techno、Regional、Hauntology 等族下，按\"同一族内的上下位关系\"排列，不单独成族。补录的原则与本地分类库一致：只记录有明确听辨特征与来源的说法，不补写没有依据的内容。 例曲：Various - Genre Supplement\n\n## 直接下级\n\n- Hard House\n- Indie House\n- Drillcore\n- Darkcore\n- Dark Gabber\n- UK Hardcore\n- Hardtek\n- Frenchcore\n- Hands Up Trance\n- Psybient\n- Chillgressive\n- Minimal Ambient\n- Compositional Ambient\n- Dronegaze\n- Dark Breaks\n- Experimental Breaks\n- Dancefloor Drum and Bass\n- Deep Drum and Bass\n- Glitchbreak\n- Proto-Dubstep\n- Tearout\n- Weightless\n- Sublow\n- 4×4 Garage",
+    "family": "风格补遗",
+    "familyId": "f-20955",
+    "path": null,
+    "bpm": null,
+    "aliases": [],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-20955",
+      "count": 32,
+      "archive": false,
+      "childIds": [
+        "g-21029",
+        "g-21041",
+        "g-21051",
+        "g-21061",
+        "g-21073",
+        "g-21085",
+        "g-21097",
+        "g-21109",
+        "g-21119",
+        "g-21129",
+        "g-21141",
+        "g-21151",
+        "g-21163",
+        "g-21173",
+        "g-21183",
+        "g-21193",
+        "g-21203",
+        "g-21215",
+        "g-21225",
+        "g-21235",
+        "g-21247",
+        "g-21259",
+        "g-21269",
+        "g-21279",
+        "g-21289",
+        "g-21299",
+        "g-21309",
+        "g-21319",
+        "g-21329",
+        "g-21339",
+        "g-21351",
+        "g-21361"
+      ]
+    }
+  },
+  {
+    "id": "family:hard-dance",
+    "type": "family",
+    "title": "Hard Dance 补遗",
+    "text": "# Hard Dance 补遗\n\n本族收录 4 个条目，4 个直接下级。\n\n这一节补充 Hard Dance 谱系中本地此前未展开的条目。Hard Dance 是一个\"以能量与速度为核心\"的族群，它的分支主要按 Kick 的失真程度、速度、以及旋律的明暗来区分。这里补录的四项分别对应：Hard House 在英国的本地化形态、Hardstyle 之外的 Neo Rave 回潮、以及同名不同义的 \"Hard House\" 在美国芝加哥的形态。 例曲：Various - Hard Dance Supplement\n\n## 直接下级\n\n- Hard House (UK)\n- Hardstyle (Base)\n- Neo Rave\n- Hard House (Chicago)",
+    "family": "Hard Dance 补遗",
+    "familyId": "f-21372",
+    "path": null,
+    "bpm": null,
+    "aliases": [],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-21372",
+      "count": 4,
+      "archive": false,
+      "childIds": [
+        "g-21390",
+        "g-21402",
+        "g-21414",
+        "g-21424"
+      ]
+    }
+  },
+  {
+    "id": "family:zh-17fcece0",
+    "type": "family",
+    "title": "摇滚与极端风格补遗",
+    "text": "# 摇滚与极端风格补遗\n\n本族收录 20 个条目，17 个直接下级。\n\n这一节补充 Electronic Rock 与极端风格交叉处剩余的条目，以及若干区域性与 Psy 谱系的缺口。补录原则同前：只记录有明确听辨特征与来源的说法。 例曲：Various - Supplement\n\n## 直接下级\n\n- Alternative Dance\n- Mathcore\n- Electrocore\n- Brutal Prog\n- Gothic Metal\n- Thall\n- Noise Pop\n- Slacker Rock\n- Visual Kei\n- Psychedelic Trance\n- Raw Trance\n- Hypnotic Psy\n- Psybass\n- Trap EDM\n- Phonkwave\n- Punta Rock\n- Manele",
+    "family": "摇滚与极端风格补遗",
+    "familyId": "f-21437",
+    "path": null,
+    "bpm": null,
+    "aliases": [],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-21437",
+      "count": 20,
+      "archive": false,
+      "childIds": [
+        "g-21487",
+        "g-21519",
+        "g-21541",
+        "g-21551",
+        "g-21563",
+        "g-21575",
+        "g-21585",
+        "g-21595",
+        "g-21607",
+        "g-21619",
+        "g-21631",
+        "g-21641",
+        "g-21651",
+        "g-21661",
+        "g-21673",
+        "g-21683",
+        "g-21693"
+      ]
+    }
+  },
+  {
+    "id": "family:reggae",
+    "type": "family",
+    "title": "Reggae 补遗",
+    "text": "# Reggae 补遗\n\n本族收录 1 个条目，1 个直接下级。\n\n补充 Reggae 谱系的根节点条目。本地分类库此前已收录 Dub Reggae、Euro Reggae、Reggaestep、Reggaeton 等分支，但缺少它们共同的母体。这一节只补这一个条目，说明 Reggae 与电子音乐的技术血缘——Dub 正是电子音乐中\"制作即作曲\"这一观念的第一个成熟范例。 例曲：Various - Reggae\n\n## 直接下级\n\n- Reggae",
+    "family": "Reggae 补遗",
+    "familyId": "f-21704",
+    "path": null,
+    "bpm": null,
+    "aliases": [],
+    "examples": [],
+    "source": {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc"
+    },
+    "metadata": {
+      "kind": "family",
+      "familyId": "f-21704",
+      "count": 1,
+      "archive": false,
+      "childIds": [
+        "g-21716"
+      ]
+    }
+  },
+  {
     "id": "guide:overview",
     "type": "guide",
     "title": "电音档案：使用导览",
-    "text": "先做出一段 Loop，再谈风格。\n\n按真实制作流程走：先搭工程和鼓组，再做低频、和弦与音色，最后编曲、混音、导出。每个概念都能回到知识库查原理，再从课程回到工程里动手。\n\n一个以做歌为主线的电音制作站。示例由浏览器实时合成，不是原曲；风格分类来自民间协作资料，不把自己装成标准答案。\n\n## 三个入口\n\n- 01 / COURSE：按制作流程学——8 个阶段、22 节短课，从工程模板做到导出成曲。每课有产出、验收点和前置课。\n- 02 / LIBRARY：查一个概念——1205 个条目、144 个知识文档；检索结果会提示对应制作课，条目页也会反链回课程。\n- 03 / LAB：先调一个音色——在音色实验室里推推子、换波形，再回到课程理解音色链与频谱分工。\n\n## 怎么用\n\n- 首页和导览页是编辑整理，适合第一次接触电音的人按顺序读。\n- 风格图谱保留原文档的条目、关系与例曲，适合查词、做选题、顺藤摸瓜。\n- “制作”页把第 02–04 期的结构、七组音色和音色链整理成一套入门框架；它不替代系统的乐理与混音课程。\n- 搜索会匹配风格名、别名、家族、描述和例曲；BPM 筛选只对 134 个有明确数值的条目生效。\n- 例曲只是文字索引，不提供音频；版权归原作者，引用请回到原始视频/文档。",
+    "text": "先做出一段 Loop，再谈风格。\n\n按真实制作流程走：先搭工程和鼓组，再做低频、和弦与音色，最后编曲、混音、导出。每个概念都能回到知识库查原理，再从课程回到工程里动手。\n\n一个以做歌为主线的电音制作站。示例由浏览器实时合成，不是原曲；风格分类来自民间协作资料，不把自己装成标准答案。\n\n## 三个入口\n\n- 01 / COURSE：按制作流程学——8 个阶段、22 节短课，从工程模板做到导出成曲。每课有产出、验收点和前置课。\n- 02 / LIBRARY：查一个概念——1376 个条目、158 个知识文档；检索结果会提示对应制作课，条目页也会反链回课程。\n- 03 / LAB：先调一个音色——在音色实验室里推推子、换波形，再回到课程理解音色链与频谱分工。\n\n## 怎么用\n\n- 首页和导览页是编辑整理，适合第一次接触电音的人按顺序读。\n- 风格图谱保留原文档的条目、关系与例曲，适合查词、做选题、顺藤摸瓜。\n- “制作”页把第 02–04 期的结构、七组音色和音色链整理成一套入门框架；它不替代系统的乐理与混音课程。\n- 搜索会匹配风格名、别名、家族、描述和例曲；BPM 筛选只对 181 个有明确数值的条目生效。\n- 例曲只是文字索引，不提供音频；版权归原作者，引用请回到原始视频/文档。\n- 本知识库在 2026-10 参照 Electronic Music Wiki 的分类体系做了覆盖度校对：正式大族从 16 个扩展到 24 个，另加 5 个补充收纳桶（编辑性分组，不计入大族）；条目从 1205 增至 1376。新增内容按本地既有格式书写，不搬运外部原文。",
     "family": null,
     "familyId": null,
     "path": null,
@@ -737,7 +1151,7 @@
     "id": "guide:entry-points",
     "type": "guide",
     "title": "三个入口：听辨、查风格、理解现场",
-    "text": "- 按制作流程学：8 个阶段、22 节短课，从工程模板做到导出成曲。每课有产出、验收点和前置课。\n- 查一个概念：1205 个条目、144 个知识文档；检索结果会提示对应制作课，条目页也会反链回课程。\n- 先调一个音色：在音色实验室里推推子、换波形，再回到课程理解音色链与频谱分工。",
+    "text": "- 按制作流程学：8 个阶段、22 节短课，从工程模板做到导出成曲。每课有产出、验收点和前置课。\n- 查一个概念：1376 个条目、158 个知识文档；检索结果会提示对应制作课，条目页也会反链回课程。\n- 先调一个音色：在音色实验室里推推子、换波形，再回到课程理解音色链与频谱分工。",
     "family": null,
     "familyId": null,
     "path": null,
@@ -756,7 +1170,7 @@
     "id": "guide:coordinates",
     "type": "guide",
     "title": "听辨的三个坐标：BPM、鼓组、音色",
-    "text": "## BPM：速度是第一道筛子，不是答案\n110–125 的 Deep House 可以很松弛，150 的 Hardstyle 可以很硬，但 140 的 Trap 听上去反而像半速。BPM 只能帮你缩小范围，真正的差异在鼓组和音色。\n\n## DRUMS：鼓组决定身体怎么动\n四四拍的 Kick 让你每拍点头；碎拍把节奏切碎，身体会跟着找缝隙；Half-time 让 140 BPM 听起来像 70。先听 Kick 落在哪里，再听 Hi-hat 在做什么。\n\n## TIMBRE：音色决定情绪的颜色\nSupersaw 把和弦铺成一片光，303 的酸性线条像电流，808 把低频压成一块石头，Reverse Bass 把冲击力反过来推。先描述声音，再记风格名。",
+    "text": "## BPM：速度是第一道筛子，不是答案\n110–125 的 Deep House 可以很松弛，150 的 Hardstyle 可以很硬，但 140 的 Trap 听上去反而像半速。BPM 只能帮你缩小范围，真正的差异在鼓组和音色。\n\n## DRUMS：鼓组决定身体怎么动\n四四拍的 Kick 让你每拍点头；碎拍把节奏切碎，身体会跟着找缝隙；Half-time 让 140 BPM 听起来像 70。先听 Kick 落在哪里，再听 Hi-hat 在做什么。\n\n## TIMBRE：音色决定情绪的颜色\nSupersaw 把和弦铺成一片光，303 的酸性线条像电流，808 把低频压成一块石头，Reverse Bass 把冲击力反过来推。先描述声音，再记风格名。\n\n## LOW-END：低频怎么动，决定了这一族怎么听\nFunk 的低频是短促、切分、带休止的，像打击乐；House 的低频是稳定推进的四分音符，托着整个律动；Trap 的 808 是一条长长的滑音，占满整拍；Drum & Bass 的低频是持续的低沉嗡鸣，速度感来自鼓组而非低音。先判断低频是点还是线，能一下子缩小范围。\n\n## VOCAL：人声被怎么处理，比唱了什么更有信息\nR&B 的人声是主角，被多层叠加、精细压缩、放在混音最前；Chillwave 的人声被埋进混响深处，歌词几乎听不清；Hyperpop 的人声被升调、切片、失真到失去自然感；Chiptune 的人声常被做成极短采样或干脆没有。听人声的存在方式，比听旋律更快分辨风格。\n\n## SPEED：同一速度可以完全不像同一首歌\n140 BPM 可以是 Trap（Half-time，听感像70）、Psytrance（全速推进），也可以是 Bigroom（每拍一击）。速度只是网格，真正决定听感的是 Kick 落在哪里、Hi-hat 做什么、以及低频是点还是线。判断速度时永远要问我数的是 Kick 还是 Hi-hat。",
     "family": null,
     "familyId": null,
     "path": null,
@@ -775,7 +1189,7 @@
     "id": "guide:listen-practice",
     "type": "guide",
     "title": "听辨练习：先找 Drop、只听鼓、换一首同 BPM",
-    "text": "## 1. 先找 Drop\n选一首你喜欢的歌，标出它第一次“低频全部砸下来”的时间点。再看它之前做了什么铺垫。\n\n## 2. 只听鼓\n把注意力放在 Kick 和 Hi-hat 上。它是每拍都有 Kick，还是切碎、留白、半速？这比旋律更能区分风格。\n\n## 3. 换一首同 BPM\n找一首 BPM 接近但风格不同的歌，比较音色和情绪。你会发现 BPM 相同，身体的感觉可以完全不同。",
+    "text": "## 1. 先找 Drop\n选一首你喜欢的歌，标出它第一次“低频全部砸下来”的时间点。再看它之前做了什么铺垫。\n\n## 2. 只听鼓\n把注意力放在 Kick 和 Hi-hat 上。它是每拍都有 Kick，还是切碎、留白、半速？这比旋律更能区分风格。\n\n## 3. 换一首同 BPM\n找一首 BPM 接近但风格不同的歌，比较音色和情绪。你会发现 BPM 相同，身体的感觉可以完全不同。\n\n## 4. 先听低频属于哪一族\nBass / Club、Funk、R&B 三族的区别不在速度，而在低频的动作。Funk 的低音是短促的、带切分的、和人声互相咬合的；Bass / Club 的低音是持续的、占满整拍的、几乎不给人声留空间；R&B 的低音通常托住人声，力度柔和不抢戏。选三首同 BPM 的歌，只听低频，判断它在说话还是在推人。\n\n## 5. 用有没有副歌区分电子流行与舞曲\nElectronic Pop 与 EDM 的分界线是高潮在哪里。电子流行的最高点通常是一段歌手唱出来的副歌；EDM 的最高点通常是一段没有人声的器乐 Drop。拿一首 House-Pop 和一首 Bigroom 对比，注意人声在最高点的位置——前者仍在唱，后者通常已经退出。\n\n## 6. 在 Chiptune 里数通道\nChiptune 的编配受硬件通道数限制（如 NES 的 2A03 只有五个通道）。听的时候试着数：同时最多有几条声部在响？如果和弦听起来是快速抖动的单音而不是同时发声，那就是琶音器在模拟和弦——这是芯片音乐最明确的指纹。\n\n## 7. Remix 与 Edit 听改动幅度\n同一首歌找三个版本：原曲、Edit、Remix。Edit 只改动结构与低频，原曲的身份完全保留；Remix 通常替换掉鼓组、低音与和声，只留人声；Bootleg 在技术上与 Remix 相同，区别只在是否获得授权。用如果去掉人声还剩多少原曲来判断改动幅度。",
     "family": null,
     "familyId": null,
     "path": null,
@@ -794,7 +1208,7 @@
     "id": "guide:listen-confusions",
     "type": "guide",
     "title": "听辨的两个易混点：EDM 与 Dubstep",
-    "text": "## EDM 不是一种风格。\n它更像一个面向音乐节和主流市场的伞形标签。Bigroom House、EDM Trap、Future Bass 都可以被放进“EDM”的货架，但它们的鼓组、音色和来路完全不同。\n\n## “Dubstep”在中文语境里经常特指 Brostep / US Dubstep。\n英式 Dubstep 更重视低频和空间，美式 Brostep 更重视中高频的撕裂感。把它们当成同一个东西，会错过很多差别。",
+    "text": "## EDM 不是一种风格。\n它更像一个面向音乐节和主流市场的伞形标签。Bigroom House、EDM Trap、Future Bass 都可以被放进“EDM”的货架，但它们的鼓组、音色和来路完全不同。\n\n## “Dubstep”在中文语境里经常特指 Brostep / US Dubstep。\n英式 Dubstep 更重视低频和空间，美式 Brostep 更重视中高频的撕裂感。把它们当成同一个东西，会错过很多差别。\n\n## Hyperpop 不是一种音色，是一种处理强度。\nHyperpop 的定义不在用哪些音色，而在每个元素都被推到失真。同样使用合成器与鼓机，Hyperpop 会把人声极端升调、把鼓组爆音当打击乐、把副歌压缩到几秒；而 Electropop 只是把电子音色放进流行歌。判断标准是有没有哪个元素被故意做得过分。\n\n## Funk 与 Disco 的低频分工不同。\n两者都是四四拍、都强调舞池，但 Funk 的贝斯是旋律性的打击乐——大量十六分音符、断奏、与人声互答；Disco 的贝斯更连续、更少切分，通常配合弦乐与 Hi-hat 的四分音符推进。听的时候注意贝斯是在说话还是在铺底。\n\n## Chiptune 与 Bit Music 不是同义词。\nBit Music 是上位概念，涵盖所有由声音芯片或音序器创作的音乐（含 FM Synthesis、Tracker Music、Game Boy Music）；Chiptune 特指其中以方波与噪声通道为核心的 8-bit 形态。所有 Chiptune 都属于 Bit Music，但 FM Synthesis 与 Tracker Music 不属于 Chiptune。\n\n## Nightcore 是手法，不是风格。\nNightcore 只描述加速加升调这一处理，原曲可以是 Eurodance、Trance、流行甚至摇滚。因此一首歌是不是 Nightcore 取决于有没有被这样处理，而不取决于它原本是什么风格。同理，Daycore 是反向处理。\n\n## 同名不同族是常态，不是资料错误。\n本地分类库里有 70 多组同名条目，例如 Hard House 在英式 Hard Dance 与芝加哥 House 中是两种音乐，Deep Trance 与 Dark Ambient 各自出现在多个大族下。判断时永远先看大族与路径，再看条目名——条目名只在本族内有意义。",
     "family": null,
     "familyId": null,
     "path": null,
@@ -3518,7 +3932,7 @@
     "id": "source:feishu-taxonomy",
     "type": "source",
     "title": "来源：电音风格项目丨第四期",
-    "text": "类型：飞书文档 / 分类库\n\n作者：Tim2354 及编辑团队\n\n16 个活跃大族、1205 个条目；图谱数据、条目解释与例曲主要来自这份文档。原文仍有未完成和存疑条目。\n\n链接：https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc",
+    "text": "类型：飞书文档 / 分类库\n\n作者：Tim2354 及编辑团队\n\n本地核心分类库：24 个正式大族 + 5 个补充收纳桶、1376 个条目；图谱数据、条目解释与例曲主要来自这份文档。原文仍有未完成和存疑条目，2026-10 又按 Electronic Music Wiki 的分类体系做了覆盖度补全。\n\n链接：https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc",
     "family": null,
     "familyId": null,
     "path": null,
@@ -3641,6 +4055,27 @@
     }
   },
   {
+    "id": "source:electronic-music-wiki-list-of-genres",
+    "type": "source",
+    "title": "来源：Electronic Music Wiki / List of Genres",
+    "text": "类型：Wiki 分类体系 / 外部参照\n\n作者：Fandom 社区协作编辑\n\n2026-10 参照。用于校对本知识库在顶层分类上的覆盖度（26 个分类、约 500 个风格名），以及补齐本地此前未展开的分支。该 Wiki 条目多为短条目，且大量参考 RYM 与 Wikipedia；本地只采用其中可交叉验证的听辨特征，不直接搬运原文。\n\n链接：https://electronicmusic.fandom.com/wiki/List_of_Genres",
+    "family": null,
+    "familyId": null,
+    "path": null,
+    "bpm": null,
+    "aliases": [],
+    "examples": [],
+    "source": {
+      "id": "curated-notes",
+      "title": "电音档案精编内容"
+    },
+    "metadata": {
+      "kind": "curated",
+      "aboutSourceId": null,
+      "url": "https://electronicmusic.fandom.com/wiki/List_of_Genres"
+    }
+  },
+  {
     "id": "guide:corrections",
     "type": "guide",
     "title": "转写校正：自动语音识别常见误差",
@@ -3663,7 +4098,7 @@
     "id": "guide:usage",
     "type": "guide",
     "title": "知识库使用与版权说明",
-    "text": "- 首页和导览页是编辑整理，适合第一次接触电音的人按顺序读。\n- 风格图谱保留原文档的条目、关系与例曲，适合查词、做选题、顺藤摸瓜。\n- “制作”页把第 02–04 期的结构、七组音色和音色链整理成一套入门框架；它不替代系统的乐理与混音课程。\n- 搜索会匹配风格名、别名、家族、描述和例曲；BPM 筛选只对 134 个有明确数值的条目生效。\n- 例曲只是文字索引，不提供音频；版权归原作者，引用请回到原始视频/文档。",
+    "text": "- 首页和导览页是编辑整理，适合第一次接触电音的人按顺序读。\n- 风格图谱保留原文档的条目、关系与例曲，适合查词、做选题、顺藤摸瓜。\n- “制作”页把第 02–04 期的结构、七组音色和音色链整理成一套入门框架；它不替代系统的乐理与混音课程。\n- 搜索会匹配风格名、别名、家族、描述和例曲；BPM 筛选只对 181 个有明确数值的条目生效。\n- 例曲只是文字索引，不提供音频；版权归原作者，引用请回到原始视频/文档。\n- 本知识库在 2026-10 参照 Electronic Music Wiki 的分类体系做了覆盖度校对：正式大族从 16 个扩展到 24 个，另加 5 个补充收纳桶（编辑性分组，不计入大族）；条目从 1205 增至 1376。新增内容按本地既有格式书写，不搬运外部原文。",
     "family": null,
     "familyId": null,
     "path": null,

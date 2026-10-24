@@ -7,6 +7,9 @@
       getDemoForEntry: () => null,
       onState: () => () => {},
       playDemo: () => false,
+      playFingerprint: () => false,
+      setFingerprintLayers: () => [],
+      getFingerprint: () => null,
       stop: () => {},
       toggleMute: () => false,
       setVolume: () => {},
@@ -16,6 +19,14 @@
       playStructure: () => false,
       playMetronome: () => false,
       structureSections: [],
+      startStudio: () => false,
+      updateStudio: () => {},
+      stopStudio: () => {},
+      setChainOrder: () => false,
+      auditionTrack: () => false,
+      getStudioPlayhead: () => null,
+      getPlayhead: () => null,
+      previewStudio: () => false,
     };
     return;
   }
@@ -34,6 +45,7 @@
 
   const engine = {
     ctx: null,
+    studioFx: null,
     master: null,
     compressor: null,
     output: null,
@@ -41,6 +53,8 @@
     reverbInput: null,
     noise: null,
     session: null,
+    fingerprint: null,
+    fpMute: new Set(),
     volume: 0.72,
     muted: false,
     listeners: new Set(),
@@ -164,6 +178,13 @@
       this.stepDuration = 60 / bpm / (stepsPerBar / 4);
       this.totalSteps = bars * stepsPerBar;
       this.step = 0;
+      // Monotonic counters. `step` wraps at totalSteps so a 4-bar loop always
+      // reports bar 0..3, which is what the grid needs. But the arrangement in
+      // the song module runs far longer than 4 bars, so the gate has to know
+      // which bar of the *whole song* is playing. `loops` never resets, so
+      // absBar = loops * bars + bar gives a position that keeps counting up.
+      this.loops = 0;
+      this.absStep = 0;
       this.startTime = ctx.currentTime + 0.1;
       this.nextTime = this.startTime;
       this.running = true;
@@ -192,13 +213,18 @@
       while (this.nextTime < this.ctx.currentTime + 0.12) {
         const step = this.step % this.stepsPerBar;
         const bar = Math.floor(this.step / this.stepsPerBar);
+        // Absolute position across the whole performance, not just this loop.
+        // The song gate reads this so the arrangement follows the audio clock
+        // instead of the UI frame rate.
+        const absBar = this.loops * this.bars + bar;
         try {
-          this.pattern({ session: this, time: this.nextTime, step, bar, globalStep: this.step });
+          this.pattern({ session: this, time: this.nextTime, step, bar, globalStep: this.step, absBar });
         } catch (error) {
           console.error('Audio pattern error', error);
         }
         this.nextTime += this.stepDuration;
         this.step += 1;
+        this.absStep += 1;
         if (!this.loop) {
           if (this.step >= this.totalSteps) {
             this.running = false;
@@ -207,6 +233,7 @@
           }
         } else if (this.step >= this.totalSteps) {
           this.step = 0;
+          this.loops += 1;
         }
       }
     }
@@ -896,6 +923,181 @@
     return DEMO_LIST.find((demo) => demo.entryId === entryId) || null;
   }
 
+  /* ------------------------------------------------------------------------
+     配方引擎 / FINGERPRINT ENGINE
+
+     配方是 data/fingerprints.js 里的数据，不是代码。这里只做翻译：
+     16 格图案 → Web Audio 调用。加一个风格不需要动这个文件。
+
+     分层的意义：drums / bass / chord / lead 可以单独静音，
+     所以「只听低音」是一个真实的操作，而不是一句形容词。
+     ------------------------------------------------------------------------ */
+
+  function fpBank() {
+    return (window.EM_FINGERPRINTS && window.EM_FINGERPRINTS.recipes) || null;
+  }
+
+  function fpRecipe(id) {
+    const bank = fpBank();
+    return (bank && bank[id]) || null;
+  }
+
+  function fpHit(pattern, index) {
+    if (!pattern) return false;
+    const ch = pattern[index % pattern.length];
+    return ch === 'x' || ch === 'o';
+  }
+
+  function fpIndex(bar, step) {
+    return bar * 16 + step;
+  }
+
+  function renderFingerprint(fp, { session, time, step, bar }) {
+    if (!fp) return;
+    const mute = engine.fpMute;
+    const at = (voice) => fpHit(voice && voice.p, fpIndex(bar, step));
+    const chordNotes = fp.chords ? fp.chords[bar % fp.chords.length] : (fp.chord && fp.chord.notes) || [0, 3, 7];
+
+    if (!mute.has('drums')) {
+      if (at(fp.kick)) {
+        kick(session, time, {
+          pitch: fp.kick.pitch, endPitch: fp.kick.end, gain: fp.kick.gain,
+          decay: fp.kick.decay, drive: fp.kick.drive,
+        });
+      }
+      if (at(fp.snare)) {
+        snare(session, time, { gain: fp.snare.gain, decay: fp.snare.decay, tone: fp.snare.tone });
+      }
+      if (at(fp.clap)) {
+        clap(session, time, { gain: fp.clap.gain });
+      }
+      if (at(fp.hat)) {
+        hat(session, time, { gain: fp.hat.gain, open: fp.hat.open });
+        if (fp.hat.rolls && step % 4 === 3) {
+          hat(session, time + 0.055, { gain: (fp.hat.gain || 0.02) * 0.7 });
+        }
+      }
+    }
+
+    if (!mute.has('bass') && at(fp.bass)) {
+      const offset = (fp.bass.note || 0);
+      const note = fp.key + offset;
+      bass(session, time, {
+        note,
+        duration: fp.bass.dur,
+        type: fp.bass.wave,
+        cutoff: fp.bass.cut,
+        cutoffEnd: fp.bass.cutEnd,
+        resonance: fp.bass.res,
+        gain: fp.bass.gain,
+        drive: fp.bass.drive,
+        reverse: fp.bass.reverse,
+        reverb: fp.bass.rev,
+        lfo: fp.bass.lfo,
+        lfoDepth: fp.bass.lfoDepth,
+        slideTo: fp.bass.slide ? note - 3 : (fp.bass.log ? note - 5 : undefined),
+      });
+    }
+
+    if (!mute.has('chord')) {
+      if (at(fp.chord)) {
+        chord(session, time, {
+          notes: chordNotes.map((n) => fp.key + 24 + n),
+          duration: fp.chord.dur,
+          type: fp.chord.type,
+          cutoff: fp.chord.cut,
+          gain: fp.chord.gain,
+          attack: fp.chord.attack,
+          detune: fp.chord.detune,
+          reverb: fp.chord.rev,
+        });
+      }
+      if (at(fp.pad)) {
+        pad(session, time, {
+          notes: ((fp.pad.notes || chordNotes)).map((n) => fp.key + 24 + n),
+          duration: fp.pad.dur,
+          cutoff: fp.pad.cut,
+          gain: fp.pad.gain,
+          reverb: fp.pad.rev,
+        });
+      }
+    }
+
+    if (!mute.has('lead')) {
+      if (at(fp.lead)) {
+        lead(session, time, {
+          note: fp.key + 36 + (fp.lead.note || 0),
+          duration: fp.lead.dur,
+          type: fp.lead.type,
+          cutoff: fp.lead.cut,
+          gain: fp.lead.gain,
+          detune: fp.lead.detune,
+          reverb: fp.lead.rev,
+        });
+      }
+      if (at(fp.arp)) {
+        const pick = chordNotes[Math.floor(step / 2) % chordNotes.length] + 12;
+        pluck(session, time, {
+          note: fp.key + 36 + pick,
+          duration: fp.arp.dur,
+          cutoff: fp.arp.cut,
+          gain: fp.arp.gain,
+          reverb: fp.arp.rev,
+        });
+      }
+      if (at(fp.pluck)) {
+        pluck(session, time, {
+          note: fp.key + 36 + (fp.pluck.note || 0),
+          duration: fp.pluck.dur,
+          cutoff: fp.pluck.cut,
+          gain: fp.pluck.gain,
+          reverb: fp.pluck.rev,
+        });
+      }
+      if (at(fp.spark)) {
+        pluck(session, time, {
+          note: fp.key + 60,
+          duration: fp.spark.dur,
+          type: 'sine',
+          cutoff: fp.spark.cut,
+          gain: fp.spark.gain,
+          reverb: fp.spark.rev,
+        });
+      }
+    }
+  }
+
+  function playFingerprint(id, options = {}) {
+    const fp = fpRecipe(id);
+    if (!fp) return false;
+    ensure();
+    const bpm = clamp(Number(options.bpm) || fp.bpm, 60, 200);
+    const barSeconds = 240 / bpm;
+    // 卡片上写「听 8 秒」，那就真的是 8 秒左右，而不是两小节循环
+    const bars = options.bars || Math.max(2, Math.min(8, Math.round(8 / barSeconds)));
+    engine.fingerprint = fp;
+    if (options.resetLayers !== false) engine.fpMute = new Set();
+    startSession({
+      bpm,
+      bars,
+      loop: options.loop !== false,
+      label: options.label || fp.label,
+      demoId: 'fp:' + id,
+      pattern: (args) => renderFingerprint(fp, args),
+    });
+    return true;
+  }
+
+  function setFingerprintLayers(muted) {
+    engine.fpMute = new Set(Array.isArray(muted) ? muted : []);
+    notify();
+    return [...engine.fpMute];
+  }
+
+  function getFingerprint(id) {
+    return fpRecipe(id);
+  }
+
   function playDemo(id) {
     const demo = DEMOS[id];
     if (!demo) return false;
@@ -1075,6 +1277,601 @@
     return true;
   }
 
+
+  // --------------------------------------------------------------------------
+  // Studio: one looping 4-bar session that reads a live project object on every
+  // 16th note. Edits are heard on the next step, without stopping playback —
+  // the same "always running loop" feel as a hardware groovebox.
+  // --------------------------------------------------------------------------
+
+  const STUDIO_BARS = 4;
+
+  // --------------------------------------------------------------------------
+  // Insert effects for the signal-chain module.
+  //
+  // That module teaches exactly one thing: the ORDER of effects changes the
+  // result. So every insert has a fixed setting and a stable in/out pair, and
+  // reordering only rewires connections — it never touches a parameter. If the
+  // settings moved between takes, an A/B comparison would be comparing two
+  // sounds instead of two orders, and the lesson would be a lie.
+  // --------------------------------------------------------------------------
+
+  const CHAIN_EFFECT_IDS = ['distortion', 'eq', 'compressor', 'reverb'];
+
+  // One insert: a stable input/output pair wrapping however the effect is built
+  // internally. Keeping the pair means the chain can be wired in any order
+  // without the caller knowing anything about the inside.
+  function makeInsert(ctx, id) {
+    const input = ctx.createGain();
+    const output = ctx.createGain();
+
+    if (id === 'distortion') {
+      const shaper = ctx.createWaveShaper();
+      shaper.curve = distortionCurve(14);
+      shaper.oversample = '2x';
+      // Hard clipping lifts the average level a lot. Without this trim,
+      // "distortion first" would win every A/B test on volume alone, which
+      // teaches the wrong thing.
+      const trim = ctx.createGain();
+      trim.gain.value = 0.5;
+      input.connect(shaper);
+      shaper.connect(trim);
+      trim.connect(output);
+      return { id, input, output, nodes: [input, shaper, trim, output] };
+    }
+
+    if (id === 'eq') {
+      // A mid-scoop plus a presence lift, deliberately not a lowpass: the sound
+      // module already owns the master lowpass, so this is a different tool
+      // with a different job. Push a bright signal into the distortion after
+      // this and it clips harder — which is the whole point of the module.
+      const scoop = ctx.createBiquadFilter();
+      scoop.type = 'peaking';
+      scoop.frequency.value = 380;
+      scoop.Q.value = 0.9;
+      scoop.gain.value = -8;
+      const presence = ctx.createBiquadFilter();
+      presence.type = 'peaking';
+      presence.frequency.value = 2800;
+      presence.Q.value = 0.9;
+      presence.gain.value = 7;
+      input.connect(scoop);
+      scoop.connect(presence);
+      presence.connect(output);
+      return { id, input, output, nodes: [input, scoop, presence, output] };
+    }
+
+    if (id === 'compressor') {
+      const comp = ctx.createDynamicsCompressor();
+      comp.threshold.value = -26;
+      comp.knee.value = 8;
+      comp.ratio.value = 6;
+      comp.attack.value = 0.005;
+      comp.release.value = 0.2;
+      // Makeup gain, so "compressor first" is not just "compressor quieter".
+      const makeup = ctx.createGain();
+      makeup.gain.value = 1.45;
+      input.connect(comp);
+      comp.connect(makeup);
+      makeup.connect(output);
+      return { id, input, output, nodes: [input, comp, makeup, output] };
+    }
+
+    // Reverb as a serial insert with a wet/dry mix. A send would not let the
+    // order matter the way the lesson describes: put it before the distortion
+    // and the tail itself gets clipped; put it after and it stays smooth.
+    const convolver = ctx.createConvolver();
+    convolver.buffer = makeImpulse(ctx, 2.4, 2.4);
+    const wet = ctx.createGain();
+    wet.gain.value = 0.42;
+    const dry = ctx.createGain();
+    dry.gain.value = 0.68;
+    input.connect(convolver);
+    convolver.connect(wet);
+    wet.connect(output);
+    input.connect(dry);
+    dry.connect(output);
+    return { id, input, output, nodes: [input, convolver, wet, dry, output] };
+  }
+
+  // Rewire only the chain segment: chainInput → inserts (in fx.order) → chainOut.
+  // The session, the master bus and the global reverb are never touched, so a
+  // reorder is heard on the next note without dropping the running loop.
+  function wireStudioChain(fx) {
+    try {
+      fx.chainInput.disconnect();
+    } catch (error) {
+      // Not connected yet.
+    }
+    for (const insert of fx.inserts) {
+      try {
+        insert.output.disconnect();
+      } catch (error) {
+        // Not connected yet.
+      }
+    }
+    let tail = fx.chainInput;
+    for (const id of fx.order) {
+      const insert = fx.inserts.find((item) => item.id === id);
+      if (!insert) continue;
+      tail.connect(insert.input);
+      tail = insert.output;
+    }
+    tail.connect(fx.chainOut);
+  }
+
+  function studioChain(session, project) {
+    const ctx = session.ctx;
+    const bpm = session.bpm;
+
+    // Everything that should pass through the inserts enters here: the looping
+    // session and the single-voice auditions alike. Auditioning anywhere else
+    // would make "点轨道头试听" play a signal that never met the chain.
+    const chainInput = ctx.createGain();
+    const inserts = CHAIN_EFFECT_IDS.map((id) => makeInsert(ctx, id));
+
+    // Master tone, owned by the sound module. It sits after the chain so the
+    // two modules stack the way an insert → bus chain does in a real project:
+    // the chain changes order, the bus changes tone.
+    const drive = ctx.createWaveShaper();
+    drive.oversample = '2x';
+
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+
+    const chainOut = ctx.createGain();
+    chainOut.gain.value = 1;
+
+    // Re-route the session output into the chain.
+    try {
+      session.gain.disconnect();
+    } catch (error) {
+      // Already disconnected.
+    }
+    session.gain.connect(chainInput);
+
+    const chainState = (project && project.chain) || {};
+    const wanted = Array.isArray(chainState)
+      ? chainState
+      : chainState[chainState.slot === 'b' ? 'b' : 'a'];
+    const order = (Array.isArray(wanted) ? wanted : []).filter((id) => CHAIN_EFFECT_IDS.includes(id));
+    // Every effect stays in the chain exactly once. A chain that silently
+    // dropped one would make A/B compare two different chains rather than two
+    // orders of the same one.
+    for (const id of CHAIN_EFFECT_IDS) if (!order.includes(id)) order.push(id);
+
+    const fx = { ctx, session, chainInput, inserts, order, chainOut, drive, filter };
+    wireStudioChain(fx);
+    chainOut.connect(drive);
+    drive.connect(filter);
+    filter.connect(engine.master);
+
+    // Delay send with feedback, tapped after the master tone.
+    const delay = ctx.createDelay(1.5);
+    delay.delayTime.value = (60 / bpm) * 0.75;
+    const feedback = ctx.createGain();
+    feedback.gain.value = 0.18;
+    const delaySend = ctx.createGain();
+    delaySend.gain.value = 0;
+    const delayTone = ctx.createBiquadFilter();
+    delayTone.type = 'lowpass';
+    delayTone.frequency.value = 2600;
+    filter.connect(delaySend);
+    delaySend.connect(delay);
+    delay.connect(delayTone);
+    delayTone.connect(feedback);
+    feedback.connect(delay);
+    // Straight to the master, not back into the chain: feeding the delay into
+    // the chain input would create a feedback loop through the inserts.
+    delayTone.connect(engine.master);
+
+    Object.assign(fx, { delay, feedback, delaySend, delayTone });
+    engine.studioFx = fx;
+    applyStudioFx(project);
+    return fx;
+  }
+
+  function applyStudioFx(project) {
+    const fx = engine.studioFx;
+    if (!fx || !fx.session) return;
+    const ctx = fx.session.ctx;
+    const now = ctx.currentTime;
+    const sound = project.sound || {};
+    const cutoff = clamp(Number(sound.cutoff) || 12000, 220, 18000);
+    const resonance = clamp(Number(sound.resonance) ?? 0.9, 0, 16);
+    const driveAmount = clamp(Number(sound.drive) || 0, 0, 1);
+    const delayAmount = clamp(Number(sound.delay) || 0, 0, 1);
+    const reverbAmount = clamp(Number(sound.reverb) || 0, 0, 1);
+
+    fx.filter.frequency.setTargetAtTime(cutoff, now, 0.03);
+    fx.filter.Q.setTargetAtTime(resonance, now, 0.03);
+    fx.drive.curve = driveAmount > 0.02 ? distortionCurve(1 + driveAmount * 24) : null;
+    fx.delaySend.gain.setTargetAtTime(delayAmount * 0.55, now, 0.04);
+    fx.feedback.gain.setTargetAtTime(0.1 + delayAmount * 0.46, now, 0.04);
+    fx.delay.delayTime.setTargetAtTime((60 / fx.session.bpm) * 0.75, now, 0.05);
+    // Reverb is a per-voice send; scaling the bus gives one global amount.
+    fx.session.reverbSend.gain.setTargetAtTime(0.06 + reverbAmount * 0.5, now, 0.04);
+
+    applyChainOrder(project.chain);
+  }
+
+  // Reorder the insert chain without interrupting the loop.
+  //
+  // Reordering means reconnecting nodes, which is safe to do while audio is
+  // flowing: already-scheduled voices keep their old path until they finish,
+  // and everything scheduled from here on takes the new one. That is what makes
+  // "drag it while the loop runs" audible instead of a stop-and-restart.
+  function applyChainOrder(chain) {
+    const fx = engine.studioFx;
+    if (!fx || !fx.inserts) return false;
+    const wanted = Array.isArray(chain)
+      ? chain
+      : ((chain || {})[((chain || {}).slot === 'b' ? 'b' : 'a')]);
+    if (!Array.isArray(wanted) || !wanted.length) return false;
+    const order = wanted.filter((id) => CHAIN_EFFECT_IDS.includes(id));
+    for (const id of CHAIN_EFFECT_IDS) if (!order.includes(id)) order.push(id);
+    if (order.length !== fx.order.length || order.some((id, index) => id !== fx.order[index])) {
+      fx.order = order;
+      wireStudioChain(fx);
+      return true;
+    }
+    return false;
+  }
+
+  function chordRootFor(project, bar) {
+    const name = (project.chords || [])[bar];
+    const chord = CHORDS[name];
+    if (!chord) return 53;
+    return chord[0];
+  }
+
+  function scaleNote(project, degree) {
+    const scale = project.scaleIntervals && project.scaleIntervals.length
+      ? project.scaleIntervals
+      : [0, 2, 3, 5, 7, 8, 10];
+    const base = Number(project.melodyBase) || 65;
+    const size = scale.length;
+    const octave = Math.floor(degree / size);
+    return base + scale[((degree % size) + size) % size] + octave * 12;
+  }
+
+  function startStudio({ read }) {
+    if (typeof read !== 'function') return false;
+    ensure();
+    const project = read();
+    engine.stopStudioPending = true;
+    const bpm = clamp(Number(project.bpm) || 124, 60, 180);
+
+    const session = startSession({
+      bpm,
+      bars: STUDIO_BARS,
+      stepsPerBar: 16,
+      loop: true,
+      label: '工作室循环',
+      demoId: 'studio',
+      pattern: ({ session: live, time, step, bar, absBar }) => {
+        // absBar is the bar of the whole performance, not of the 4-bar loop.
+        // The song gate uses it to decide which arrangement block is sounding,
+        // so the arrangement follows the audio clock instead of the UI frame
+        // rate. read() ignores the argument outside song mode.
+        const state = read(absBar);
+        const swing = clamp(Number(state.swing) || 0, 0, 0.6);
+        // Push the off-beat 16ths later for a shuffled feel.
+        const t = time + (step % 2 === 1 ? live.stepDuration * swing * 0.5 : 0);
+        const drums = state.drums || {};
+        const sound = state.sound || {};
+        const osc = sound.osc || 'sawtooth';
+
+        if (drums.kick && drums.kick[step]) kick(live, t, { gain: 0.8, decay: 0.3 });
+        if (drums.clap && drums.clap[step]) clap(live, t, { gain: 0.42, decay: 0.16 });
+        if (drums.hat && drums.hat[step]) hat(live, t, { gain: 0.05 });
+        if (drums.openhat && drums.openhat[step]) hat(live, t, { gain: 0.042, open: true });
+
+        const root = chordRootFor(state, bar);
+        const chordName = (state.chords || [])[bar];
+        if (step === 0 && CHORDS[chordName]) {
+          const duration = live.stepDuration * 15.2;
+          if (sound.chordVoice === 'pad') {
+            pad(live, t, {
+              notes: CHORDS[chordName],
+              duration,
+              gain: 0.032,
+              cutoff: Math.min(Number(sound.cutoff) || 2000, 2200),
+            });
+          } else {
+            chord(live, t, {
+              notes: CHORDS[chordName],
+              duration,
+              gain: 0.048,
+              cutoff: Math.min(Number(sound.cutoff) || 2400, 3600),
+              detune: sound.chordVoice === 'stab' ? 0 : 7,
+              attack: sound.chordVoice === 'pad' ? 0.35 : 0.012,
+              reverb: 0.24,
+            });
+          }
+        }
+
+        // Bass rows are chord tones, so the line always follows the harmony.
+        const bassRows = state.bass || [];
+        const bassOffsets = [0, 7, 12];
+        for (let row = 0; row < bassRows.length; row += 1) {
+          if (!bassRows[row] || !bassRows[row][step]) continue;
+          bass(live, t, {
+            note: root - 12 + (bassOffsets[row] || 0),
+            duration: live.stepDuration * 1.7,
+            gain: 0.2,
+            cutoff: clamp(Number(sound.bassCutoff) || 620, 180, 2400),
+            resonance: 3,
+            type: osc,
+            drive: sound.bassDrive || 0,
+          });
+        }
+
+        // Melody rows are scale degrees, so it stays in key when chords change.
+        const melodyRows = state.melody || [];
+        for (let row = 0; row < melodyRows.length; row += 1) {
+          if (!melodyRows[row] || !melodyRows[row][step]) continue;
+          const note = scaleNote(state, row);
+          if (sound.melodyVoice === 'lead') {
+            lead(live, t, {
+              note,
+              duration: live.stepDuration * 1.5,
+              gain: 0.05,
+              cutoff: clamp((Number(sound.cutoff) || 3200) * 0.9, 600, 8000),
+              detune: 6,
+              reverb: 0.3,
+            });
+          } else {
+            pluck(live, t, {
+              note,
+              duration: live.stepDuration * 1.4,
+              gain: 0.055,
+              cutoff: clamp((Number(sound.cutoff) || 4200) * 0.8, 600, 9000),
+              type: sound.melodyVoice === 'bell' ? 'sine' : 'triangle',
+            });
+          }
+        }
+      },
+    });
+
+    studioChain(session, project);
+    engine.stopStudioPending = false;
+    return true;
+  }
+
+  // Reorder the running chain from the UI.
+  //
+  // Returns true when a live chain was rewired, false when there was nothing to
+  // rewire (no session yet, or the order is already in force). "No session" is
+  // not a failure: the order lives in the project and startStudio() reads it
+  // when playback begins, so a reorder made while stopped still takes effect.
+  function setChainOrder(chain) {
+    return applyChainOrder(chain);
+  }
+
+  function updateStudio(project) {
+    if (project) applyStudioFx(project);
+  }
+
+  function stopStudio() {
+    const fx = engine.studioFx;
+    engine.studioFx = null;
+    if (engine.session && engine.session.demoId === 'studio') engine.session.stop('stop');
+    if (!fx) return;
+    setTimeout(() => {
+      try {
+        for (const insert of fx.inserts || []) {
+          for (const node of insert.nodes) {
+            try {
+              node.disconnect();
+            } catch (error) {
+              // Already disconnected.
+            }
+          }
+        }
+        fx.chainInput.disconnect();
+        fx.chainOut.disconnect();
+        fx.filter.disconnect();
+        fx.drive.disconnect();
+      } catch (error) {
+        // Already disconnected.
+      }
+    }, 260);
+  }
+
+  // Position of a running session, derived from the audio clock rather than a
+  // UI timer. Anything that highlights the current step reads this, so the
+  // picture can never drift away from the sound.
+  function getPlayhead(demoId) {
+    const session = engine.session;
+    if (!session || !session.ctx || !session.running) return null;
+    if (demoId && session.demoId !== demoId) return null;
+    const stepsPerBar = session.stepsPerBar;
+    // startTime sits ~0.1s in the future so the first note is scheduled safely.
+    // Before it arrives the elapsed time is negative: report position zero
+    // instead of letting the modulo wrap it to the end of the loop, which would
+    // flash every readout to 100% for the first frame.
+    const elapsed = Math.max(0, session.ctx.currentTime - session.startTime);
+    const total = session.totalSteps;
+    let pos = (elapsed / session.stepDuration) % total;
+    if (!Number.isFinite(pos)) return null;
+    if (pos < 0) pos += total;
+    // Absolute bar across the whole performance, derived from the same elapsed
+    // time as everything else.
+    //
+    // This must NOT use session.loops. The scheduler runs ~120ms ahead, so
+    // `loops` increments before the playhead actually crosses the loop point;
+    // mixing a look-ahead counter with a current-time position made absBar jump
+    // forward and then fall back at every boundary. Deriving it from `elapsed`
+    // keeps it monotonic and exactly consistent with `step` and `bar`.
+    const absPos = elapsed / session.stepDuration;
+    const absBar = Math.floor(absPos / stepsPerBar);
+    return {
+      demoId: session.demoId,
+      step: Math.floor(pos) % stepsPerBar,
+      bar: Math.floor(pos / stepsPerBar),
+      absBar: Number.isFinite(absBar) ? absBar : 0,
+      phase: pos % 1,
+      stepsPerBar,
+      bars: session.bars,
+      loop: session.loop,
+      progress: pos / total,
+      bpm: session.bpm,
+    };
+  }
+
+  function getStudioPlayhead() {
+    return getPlayhead('studio');
+  }
+
+  // One-off audition that plays over the running loop instead of replacing it.
+  //
+  // It enters the studio chain when one exists, so an audition hears the same
+  // inserts as the loop. That is the point of the signal-chain module: clicking
+  // a track head or a chain node should demonstrate the current order, not a
+  // bypassed copy of it.
+  function previewStudio({ notes = [60], duration = 0.9, type = 'triangle', gain = 0.07, reverb = 0.25, throughChain = true } = {}) {
+    const ctx = ensure();
+    const now = ctx.currentTime + 0.02;
+    const fx = engine.studioFx;
+    const bus = ctx.createGain();
+    bus.gain.value = gain;
+    const target = throughChain && fx && fx.chainInput ? fx.chainInput : engine.master;
+    bus.connect(target);
+    let send = null;
+    // A serial reverb insert already wets the signal. Adding the global send on
+    // top would make the audition drier-or-wetter than the loop it is meant to
+    // represent, so skip it when the signal is already going through the chain.
+    const useSend = reverb > 0 && target !== (fx && fx.chainInput);
+    if (useSend) {
+      send = ctx.createGain();
+      send.gain.value = reverb;
+      bus.connect(send);
+      send.connect(engine.reverbInput);
+    }
+    for (const note of notes) {
+      const osc = ctx.createOscillator();
+      const env = ctx.createGain();
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 3600;
+      osc.type = type;
+      osc.frequency.value = midi(note);
+      env.gain.setValueAtTime(0.0001, now);
+      env.gain.exponentialRampToValueAtTime(1, now + 0.012);
+      env.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+      osc.connect(filter);
+      filter.connect(env);
+      env.connect(bus);
+      osc.start(now);
+      osc.stop(now + duration + 0.05);
+      osc.onended = () => {
+        try {
+          env.disconnect();
+          bus.disconnect();
+          if (send) send.disconnect();
+        } catch (error) {
+          // Already disconnected.
+        }
+      };
+    }
+    return true;
+  }
+
+  // Audition one track on its own: the same voice functions the loop uses, so
+  // "点轨道头试听" hears that track's actual sound and not a placeholder beep.
+  //
+  // `voice` names a track, not a synthesis method — the five track types come
+  // from the glossary (drums / bass / chords / lead / fx). A track with nothing
+  // programmed still answers, because the point is to hear which instrument
+  // owns that track before you put notes in it.
+  function auditionTrack({ voice = 'chords', project = {} } = {}) {
+    const ctx = ensure();
+    const fx = engine.studioFx;
+    const target = fx && fx.chainInput ? fx.chainInput : engine.master;
+    const now = ctx.currentTime + 0.03;
+
+    // A minimal session-shaped object. The voice helpers only ever read
+    // `ctx`, `gain`, `reverbSend` and the `route`/`track` methods, so this
+    // lets them run without a scheduler. `route` points straight at the
+    // chain input when there is one, which keeps the audition in the chain.
+    const fake = {
+      ctx,
+      gain: ctx.createGain(),
+      reverbSend: ctx.createGain(),
+      route(node, reverb = 0) {
+        node.connect(this.gain);
+        const extra = [];
+        if (reverb > 0) {
+          const send = ctx.createGain();
+          send.gain.value = reverb;
+          node.connect(send);
+          send.connect(this.reverbSend);
+          extra.push(send);
+        }
+        return extra;
+      },
+      track(source, nodes) {
+        source.onended = () => {
+          for (const node of nodes) {
+            try {
+              node.disconnect();
+            } catch (error) {
+              // Already disconnected.
+            }
+          }
+          try {
+            this.gain.disconnect();
+            this.reverbSend.disconnect();
+          } catch (error) {
+            // Already disconnected.
+          }
+        };
+      },
+    };
+    fake.gain.gain.value = 0.9;
+    fake.gain.connect(target);
+    fake.reverbSend.connect(target);
+
+    const sound = project.sound || {};
+    const root = 53; // F3, the tonic the starter progression sits on.
+
+    if (voice === 'drums') {
+      kick(fake, now, { gain: 0.8, decay: 0.3 });
+      clap(fake, now + 0.25, { gain: 0.42, decay: 0.16 });
+      hat(fake, now + 0.5, { gain: 0.05 });
+      hat(fake, now + 0.625, { gain: 0.042, open: true });
+    } else if (voice === 'bass') {
+      bass(fake, now, {
+        note: root - 12,
+        duration: 0.5,
+        gain: 0.22,
+        cutoff: clamp(Number(sound.bassCutoff) || 620, 180, 2400),
+        resonance: 3,
+        type: sound.osc || 'sawtooth',
+        drive: sound.bassDrive || 0,
+      });
+    } else if (voice === 'chords') {
+      if (sound.chordVoice === 'pad') {
+        pad(fake, now, { notes: [53, 56, 60], duration: 1.5, gain: 0.036, cutoff: Math.min(Number(sound.cutoff) || 2000, 2200) });
+      } else {
+        chord(fake, now, { notes: [53, 56, 60], duration: 1.2, gain: 0.05, cutoff: Math.min(Number(sound.cutoff) || 2400, 3600), detune: 7, reverb: 0.24 });
+      }
+    } else if (voice === 'lead') {
+      if (sound.melodyVoice === 'lead') {
+        lead(fake, now, { note: 77, duration: 0.5, gain: 0.055, cutoff: clamp((Number(sound.cutoff) || 3200) * 0.9, 600, 8000), detune: 6, reverb: 0.3 });
+      } else {
+        pluck(fake, now, { note: 77, duration: 0.45, gain: 0.06, cutoff: clamp((Number(sound.cutoff) || 4200) * 0.8, 600, 9000), type: sound.melodyVoice === 'bell' ? 'sine' : 'triangle' });
+      }
+    } else if (voice === 'fx') {
+      fxRiser(fake, now, { duration: 1.1, gain: 0.09 });
+      impact(fake, now + 0.15, { gain: 0.22 });
+    } else {
+      return false;
+    }
+    return true;
+  }
+
   window.EMAudio = {
     supported: true,
     demos: DEMO_LIST,
@@ -1088,6 +1885,9 @@
       return engine.levelData;
     },
     playDemo,
+    playFingerprint,
+    setFingerprintLayers,
+    getFingerprint,
     stop,
     toggleMute,
     setVolume,
@@ -1096,6 +1896,14 @@
     startDrumMachine,
     setDrumPattern,
     previewChord,
+    startStudio,
+    updateStudio,
+    stopStudio,
+    setChainOrder,
+    auditionTrack,
+    getStudioPlayhead,
+    getPlayhead,
+    previewStudio,
     playStructure,
     playMetronome,
     get isMuted() {
