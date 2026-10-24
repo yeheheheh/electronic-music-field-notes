@@ -259,6 +259,7 @@ node scripts/regression/live-mobile.mjs         # 移动端 9 项
 
 - **`data/genres.csv` 不用传**：它是模块产物，页面不引用。线上没这个文件，请求会 fallback 到 `index.html`。
 - **`sw.js` 必须放在 `/music/` 根目录**：Service Worker 的作用域跟着文件位置走，放到子目录会让 `#/quick` 之外的路由拿不到缓存。改完前端要同步 `sw.js` 里的 `VERSION`，否则老访客会继续吃旧缓存。
+- **离线能力需要 HTTPS**：浏览器只在安全上下文（https 或 localhost）提供 `navigator.serviceWorker`。现在线上是 `http://IP`，所以 `#/quick` 能打开但没有真正的离线缓存；`check-listen.mjs` 在这种环境下会把两项标成 SKIP，不会假装通过。换域名 + 证书后自动生效，代码不用改。
 - **`data/` 是两套数据来源**：`#/library` 读 `kb.js`，`#/module` 读 `web.js`。两者必须同时更新，否则同一屏会出现两套数字。
 - **回滚**：`cd /var/www/electronic-music && tar xzf backup-serve-<时间戳>.tar.gz`。
 - **gzip 在 `location /music/` 内单独开启**（全局未开）；`kb.js` 从 3.4 MB 压到约 820 KB。改 nginx 配置前先备份 `conf.d/drink-ai.conf`。
