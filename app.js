@@ -1743,6 +1743,7 @@
           <input class="filter-input" id="bpmMax" type="number" inputmode="numeric" min="60" max="300" placeholder="300" value="${escapeHtml(state.bpmMax)}" aria-label="最高 BPM" data-tooltip="仅对原始资料明确写出 BPM 数字的 ${formatNumber(KB.meta.stats.bpmEntries)} 个条目生效">
         </div>
         <button class="toolbar-button${state.examplesOnly ? ' is-active' : ''}" id="examplesOnly" type="button" aria-pressed="${state.examplesOnly}" data-tooltip="只显示原始资料列有例曲的条目">有例曲</button>
+        <a class="toolbar-button" href="#/listen" data-tooltip="按速度与律动找，不需要先知道流派名">按听感找</a>
         <button class="toolbar-button" id="atlasClear" type="button">清除</button>
       </div>
       <div class="atlas-layout">
@@ -1959,14 +1960,15 @@
             ${entry.description ? `<div class="detail-description">${escapeHtml(entry.description)}</div>` : `<div class="detail-stub-note">原始资料没有展开这一条目的描述。你仍可以从右侧关系和例曲继续探索。</div>`}
             <section class="detail-section">
               <h2>例曲索引</h2>
-              <p class="section-sub">只保存原文中的文字索引，不提供音频。版权归原作者。</p>
+              <p class="section-sub">原文只保存文字索引。试听走 Apple Music 的 30 秒官方预览（有就播，没有就转去 B 站 / 网易云搜），本站不托管任何音频。</p>
               ${entry.examples.length ? `<ul class="example-list">${entry.examples.map((example) => `
                 <li class="example-item">
                   <div>
                     <div class="example-title">${escapeHtml(example.title)}</div>
                     ${example.artist ? `<div class="example-artist">${escapeHtml(example.artist)}</div>` : ''}
+                    <div class="example-feedback" hidden></div>
                   </div>
-                  ${example.url ? `<a class="example-link" href="${escapeHtml(example.url)}" target="_blank" rel="noopener noreferrer">原始链接 ↗</a>` : ''}
+                  ${exampleActions(example)}
                 </li>`).join('')}</ul>` : '<p class="aside-relation-note">原始资料未列例曲。</p>'}
             </section>
             <nav class="detail-nav" aria-label="同族前后条目">
@@ -3382,6 +3384,7 @@
     const activeFamilies = KB.families.filter((family) => !family.archive && !family.supplement);
     const families = activeFamilies.slice(0, 8);
     const tools = [
+      { title: '按速度找风格', text: '不知道叫什么？用多快、鼓怎么落地、低音什么样来查。', href: '#/listen', meta: 'LISTEN', icon: 'listen' },
       { title: '风格图谱', text: '按大族、BPM、别名与上下位关系查。', href: '#/atlas', meta: 'ATLAS', icon: 'atlas' },
       { title: '术语手册', text: '曲式、鼓组、音色、设备、乐理与效果。', href: '#/guide/glossary', meta: 'GLOSSARY', icon: 'library' },
       { title: '结构与音色', text: '八段结构、七组音色与频谱分工。', href: '#/guide/production', meta: 'GUIDE', icon: 'lab' },
@@ -3908,15 +3911,43 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     return Boolean(listenState.band || listenState.groove || listenState.low);
   }
 
+  // 「听」的状态是地址栏的一部分：筛选、选中项都写进 hash，
+  // 这样 听 → 条目 → 返回、刷新、把链接发给别人，看到的都是同一屏。
+  function listenQuery() {
+    const query = new URLSearchParams();
+    if (listenState.band) query.set('band', listenState.band);
+    if (listenState.groove) query.set('groove', listenState.groove);
+    if (listenState.low) query.set('low', listenState.low);
+    if (listenState.selected) query.set('s', listenState.selected);
+    const text = query.toString();
+    return text ? `?${text}` : '';
+  }
+
+  function syncListenHash() {
+    // replaceState 不触发 hashchange，所以不会让 render 递归
+    replaceHash(`#/listen${listenQuery()}`);
+  }
+
+  let pendingScrollToSelected = false;
+
   /* ---------------------------------------------------------------- 入口页 */
 
   function renderListen(route) {
     const styles = listenStyles();
-    // 支持从大族页深链进来：?band=fast&groove=floor
-    if (route.params.get('band')) listenState.band = route.params.get('band');
-    if (route.params.get('groove')) listenState.groove = route.params.get('groove');
-    const selectedId = route.params.get('s') || listenState.selected || (styles[0] && styles[0].id) || '';
+    const params = route.params;
+    const deepLink = ['band', 'groove', 'low', 's'].some((key) => params.has(key));
+    if (deepLink) {
+      // 从条目页、大族页或别人发的链接进来：以链接为准
+      listenState.band = params.get('band') || '';
+      listenState.groove = params.get('groove') || '';
+      listenState.low = params.get('low') || '';
+      listenState.selected = params.get('s') || '';
+      pendingScrollToSelected = params.has('s');
+    }
+    // 没有参数 = 从导航回来，沿用上次的状态
+    const selectedId = listenState.selected || (styles[0] && styles[0].id) || '';
     listenState.selected = selectedId;
+    syncListenHash();
 
     main.innerHTML = `
       ${pageHead({
@@ -3992,8 +4023,10 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
       } else if (listenFilterActive()) {
         count.innerHTML = `收到 <b>${matched.length}</b> 个候选 · 点任意一个直接听`;
       } else {
-        const familyCount = new Set(styles.map((item) => item.entry.familyId)).size;
-        count.innerHTML = `${styles.length} 个风格 · ${familyCount} 个大族 · 每个都能听 8 秒`;
+        // 待归档不是大族，不计入这句统计
+        const activeFamilyCount = [...new Set(styles.map((item) => item.entry.familyId))]
+          .filter((id) => !familyById.get(id)?.archive).length;
+        count.innerHTML = `${styles.length} 个风格 · ${activeFamilyCount} 个大族 · 每个都能听 8 秒`;
       }
     }
 
@@ -4005,7 +4038,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
         const item = styles.find((style) => style.id === button.dataset.style);
         if (!item) return;
         listenState.selected = item.id;
-        replaceHash(`#/listen?s=${item.id}`);
+        syncListenHash();
         renderListenBody();
         playListen(item);
       });
@@ -4016,6 +4049,19 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
         renderListenBody();
       });
     });
+
+    if (pendingScrollToSelected) {
+      pendingScrollToSelected = false;
+      const chip = matrix.querySelector(`[data-style="${listenState.selected}"]`);
+      const wrap = matrix.closest('.listen-matrix-wrap');
+      if (chip && wrap) {
+        const chipBox = chip.getBoundingClientRect();
+        const wrapBox = wrap.getBoundingClientRect();
+        if (chipBox.left < wrapBox.left || chipBox.right > wrapBox.right) {
+          wrap.scrollLeft += chipBox.left - wrapBox.left - 14;
+        }
+      }
+    }
   }
 
   function matrixCell(band, groove, styles) {
@@ -4077,6 +4123,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
         });
         const reset = row.querySelector('[data-lf-reset]');
         if (reset) reset.textContent = listenState[kind] ? '清除' : '';
+        syncListenHash();
         renderListenBody();
       });
     });
@@ -4087,6 +4134,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
         listenState.low = '';
         document.querySelectorAll('[data-lf]').forEach((chip) => chip.classList.remove('is-on'));
         document.querySelectorAll('[data-lf-reset]').forEach((reset) => { reset.textContent = ''; });
+        syncListenHash();
         renderListenBody();
       });
     });
@@ -4168,6 +4216,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
             <div class="lc-actions">
               <button class="button-primary" type="button" data-genre-play>播放 8 秒</button>
               <button class="button-ghost" type="button" data-genre-share>做成卡片</button>
+              <a class="button-ghost" href="#/listen?band=${model.band.id}&groove=${model.groove.id}&s=${model.id}">在矩阵里看 →</a>
             </div>
             <p class="lc-note">BPM 来源：${source}（${escapeHtml(model.bpmLabel)}）。试听是浏览器实时合成的骨架，不是原曲；下面的正文才是完整的风格资料。</p>
           </div>
@@ -4185,11 +4234,12 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
         <span class="mono-label">LISTEN / 同族参考</span>
         <p>这一条还没有专属听感文案。先听 <b>${escapeHtml(fam.fpLabel)}</b> 的骨架——它属于这个族，但不是这一条独有的声音。</p>
         <button class="button-ghost" type="button" data-ref-play>播放同族示例</button>
-        <a class="button-ghost" href="#/listen">用 BPM 找风格</a>
+        <a class="button-ghost" href="#/listen?band=${fam.band.id}&groove=${fam.groove.id}">用 BPM 找风格</a>
       </section>`;
   }
 
   function mountListenBlock(entry) {
+    bindExamplePreviews();
     const canvas = document.getElementById('genreListenCanvas');
     const model = listenModel(entry);
     if (canvas && model && window.EMShare) window.EMShare.draw(canvas, model);
@@ -4471,6 +4521,130 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     // 链接是真实路由，交给浏览器即可；这里只保留钩子，便于以后加埋点。
   }
 
+  /* -------------------------------------------- 例曲试听（Apple 30 秒预览）
+
+     站点不托管任何音频。能播的只有 Apple Music 的官方 30 秒预览：
+     iTunes Search API 不支持 CORS，所以用 JSONP；拿不到就退回到搜索链接。
+     找不到预览是常态（地下/白标发行不进 Apple 曲库），所以按钮必须有第二条路。
+     ------------------------------------------------------------------------ */
+
+  let exampleAudio = null;
+  let examplePreviewSeq = 0;
+  const previewCache = new Map();
+
+  function exampleActions(example) {
+    const term = [example.artist, example.title].filter(Boolean).join(' ').trim();
+    const query = encodeURIComponent(term || example.title);
+    const original = example.url
+      ? `<a class="example-link" href="${escapeHtml(example.url)}" target="_blank" rel="noopener noreferrer">原始链接 ↗</a>`
+      : '';
+    return `
+      <div class="example-actions">
+        <button class="example-preview" type="button" data-preview="${escapeHtml(term)}">试听 30 秒</button>
+        <a class="example-link" href="https://search.bilibili.com/all?keyword=${query}" target="_blank" rel="noopener noreferrer">B 站 ↗</a>
+        <a class="example-link" href="https://music.163.com/#/search/m/?s=${query}" target="_blank" rel="noopener noreferrer">网易云 ↗</a>
+        ${original}
+      </div>`;
+  }
+
+  function stopExamplePreview() {
+    if (exampleAudio) {
+      exampleAudio.pause();
+      exampleAudio = null;
+    }
+    document.querySelectorAll('.example-preview.is-playing').forEach((button) => {
+      button.classList.remove('is-playing');
+      button.textContent = '试听 30 秒';
+    });
+    document.querySelectorAll('.example-feedback').forEach((node) => { node.hidden = true; });
+  }
+
+  function searchItunesPreview(term, callback) {
+    const name = `__emItunes${(examplePreviewSeq += 1)}`;
+    const script = document.createElement('script');
+    const timer = window.setTimeout(() => {
+      cleanup();
+      callback(null);
+    }, 8000);
+    function cleanup() {
+      window.clearTimeout(timer);
+      try { delete window[name]; } catch { window[name] = undefined; }
+      script.remove();
+    }
+    window[name] = (data) => {
+      cleanup();
+      const hit = data && Array.isArray(data.results) ? data.results[0] : null;
+      callback(hit && hit.previewUrl
+        ? { previewUrl: hit.previewUrl, trackName: hit.trackName, artistName: hit.artistName }
+        : null);
+    };
+    script.onerror = () => {
+      cleanup();
+      callback(null);
+    };
+    script.src = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=song&limit=1&callback=${name}`;
+    document.head.appendChild(script);
+  }
+
+  function playExamplePreview(button) {
+    const term = button.dataset.preview;
+    if (!term) return;
+    if (button.classList.contains('is-playing')) {
+      stopExamplePreview();
+      return;
+    }
+    const item = button.closest('.example-item');
+    const feedback = item ? item.querySelector('.example-feedback') : null;
+    stopExamplePreview();
+
+    const finish = (payload) => {
+      button.classList.remove('is-loading');
+      if (!payload || !payload.previewUrl) {
+        button.textContent = '没有预览';
+        if (feedback) {
+          feedback.hidden = false;
+          feedback.textContent = 'Apple 曲库里没有这一条。用右边的 B 站 / 网易云搜同名曲。';
+        }
+        window.setTimeout(() => { button.textContent = '试听 30 秒'; }, 2600);
+        return;
+      }
+      exampleAudio = new window.Audio(payload.previewUrl); // 站点自己的 Audio 是 EMAudio，这里必须用 window.Audio
+      exampleAudio.volume = 0.85;
+      exampleAudio.play().then(() => {
+        button.classList.add('is-playing');
+        button.textContent = '停止';
+        if (feedback) {
+          feedback.hidden = false;
+          feedback.textContent = `正在试听：${payload.trackName} — ${payload.artistName}（30 秒官方预览）`;
+        }
+      }).catch(() => {
+        button.textContent = '播放失败';
+        if (feedback) {
+          feedback.hidden = false;
+          feedback.textContent = '浏览器拦下了这次播放，再点一次试试。';
+        }
+      });
+      exampleAudio.addEventListener('ended', stopExamplePreview, { once: true });
+    };
+
+    if (previewCache.has(term)) {
+      finish(previewCache.get(term));
+      return;
+    }
+    button.classList.add('is-loading');
+    button.textContent = '查询中…';
+    searchItunesPreview(term, (payload) => {
+      previewCache.set(term, payload);
+      finish(payload);
+    });
+  }
+
+  function bindExamplePreviews() {
+    document.querySelectorAll('[data-preview]').forEach((button) => {
+      button.addEventListener('click', () => playExamplePreview(button));
+    });
+  }
+
   /* ------------------------------------------------------ 现场速查（离线） */
 
   let quickKeyHandler = null;
@@ -4631,6 +4805,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
       document.removeEventListener('keydown', quickKeyHandler);
       quickKeyHandler = null;
     }
+    stopExamplePreview();
     hideTooltip();
     hideHeaderSearchPopover();
     closeMobileNav();

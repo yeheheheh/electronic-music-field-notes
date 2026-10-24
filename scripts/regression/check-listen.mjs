@@ -47,7 +47,7 @@ const familyIds = new Set(KB.families.map((family) => family.id));
 const recipes = new Set(Object.keys(FP.recipes));
 
 const entries = Object.entries(LISTEN.entries);
-check('听感层覆盖 60 条高频风格', entries.length === 60, `${entries.length} 条`);
+check('听感层覆盖 ≥ 90 条高频风格', entries.length >= 90, `${entries.length} 条`);
 check('配方数 ≥ 50', recipes.size >= 50, `${recipes.size} 个`);
 check('大族默认值覆盖 29 个族', Object.keys(LISTEN.families).length === 29, `${Object.keys(LISTEN.families).length} 个`);
 
@@ -63,7 +63,7 @@ for (const [id, data] of entries) {
   if (!Array.isArray(data.hear) || data.hear.length !== 3) badHear.push(id);
   if ([...data.oneLine].length > 18) longLine.push(`${id}(${[...data.oneLine].length})`);
   if (!data.bpm || !data.bpm.source || data.bpm.min > data.bpm.max) badBpm.push(id);
-  if (!['slow', 'mid', 'fast', 'xfast'].includes(data.band) || !['floor', 'half', 'break', 'swing'].includes(data.groove)) badDim.push(id);
+  if (!['slow', 'mid', 'fast', 'xfast'].includes(data.band) || !['floor', 'half', 'break', 'swing', 'none'].includes(data.groove)) badDim.push(id);
 }
 check('所有 entryId 在知识库里存在', missingEntry.length === 0, missingEntry.join(', '));
 check('所有 fp 引用都能找到配方', missingFp.length === 0, missingFp.join(', '));
@@ -83,11 +83,11 @@ for (const data of Object.values(LISTEN.entries)) {
 }
 const emptyCells = [];
 for (const band of ['slow', 'mid', 'fast', 'xfast']) {
-  for (const groove of ['floor', 'half', 'break', 'swing']) {
+  for (const groove of ['floor', 'half', 'break', 'swing', 'none']) {
     if (!cells[`${band}/${groove}`]) emptyCells.push(`${band}/${groove}`);
   }
 }
-check('矩阵不超过 6 个空格', emptyCells.length <= 6, `空 ${emptyCells.length} 格：${emptyCells.join(' ')}`);
+check('矩阵不超过 8 个空格', emptyCells.length <= 8, `空 ${emptyCells.length} 格：${emptyCells.join(' ')}`);
 
 /* -------------------------------------------------------------- 浏览器层 */
 
@@ -185,8 +185,8 @@ try {
     docW: document.documentElement.scrollWidth,
     vw: window.innerWidth,
   })`);
-  check('矩阵渲染 16 个格子', home.cells === 16, `${home.cells} 格`);
-  check('矩阵有 4 行律动', home.rows === 4, `${home.rows} 行`);
+  check('矩阵渲染 20 个格子（4 速度 × 5 律动）', home.cells === 20, `${home.cells} 格`);
+  check('矩阵有 5 行律动', home.rows === 5, `${home.rows} 行`);
   check('首屏可见风格数 ≥ 16', home.chips >= 16, `${home.chips} 个`);
   check('默认选中一个风格并出卡', home.panel === true);
   check('1440 下无横向溢出', home.docW <= home.vw, `${home.docW}/${home.vw}`);
@@ -270,6 +270,55 @@ try {
   })`);
   check('没有文案的条目显示「同族参考」而不是假装有', ref.ref === true && ref.card === false && ref.hasPlay === true);
 
+  /* 听 ↔ 查：状态要能带过去、带回来 */
+  await goto('#/listen?band=fast&groove=floor&s=g-2529', 1300);
+  const deep = await cdp.eval(`({
+    onChips: document.querySelectorAll('.lf-chip.is-on').length,
+    selected: document.querySelector('.lp-name')?.textContent || '',
+    hash: location.hash,
+  })`);
+  check('深链进「听」：筛选与选中都还原', deep.onChips === 2 && /hard techno/i.test(deep.selected), `${deep.onChips} 个条件 · ${deep.selected}`);
+
+  const swap = await cdp.eval(`(async () => {
+    // 用格子首屏可见的条目（快/每拍一脚里 128 BPM 的那几个）
+    document.querySelector('.lm-chip[data-style="g-1525"]')?.click();
+    await new Promise(r => setTimeout(r, 400));
+    return { hash: location.hash };
+  })()`);
+  check('切风格时筛选条件不丢', swap.hash.includes('band=fast') && swap.hash.includes('groove=floor') && swap.hash.includes('s=g-1525'), swap.hash);
+
+  const roundTrip = await cdp.eval(`(async () => {
+    location.hash = '#/genre/g-1525';
+    await new Promise(r => setTimeout(r, 900));
+    const onGenre = {
+      card: !!document.querySelector('.listen-card'),
+      back: document.querySelector('a[href*="#/listen?band="]')?.getAttribute('href') || '',
+      preview: document.querySelectorAll('.example-preview').length,
+      bili: document.querySelector('.example-actions a[href*="bilibili"]')?.getAttribute('href') || '',
+      netease: document.querySelector('.example-actions a[href*="music.163.com"]')?.getAttribute('href') || '',
+    };
+    const button = document.querySelector('.example-preview');
+    if (button) {
+      button.click();
+      await new Promise(r => setTimeout(r, 150));
+      onGenre.started = button.textContent.trim() !== '试听 30 秒';
+      onGenre.label = button.textContent.trim();
+    }
+    location.hash = '#/listen';
+    await new Promise(r => setTimeout(r, 900));
+    return {
+      onGenre,
+      chips: document.querySelectorAll('.lf-chip.is-on').length,
+      selected: document.querySelector('.lp-name')?.textContent || '',
+      hash: location.hash,
+    };
+  })()`);
+  check('条目页能回到矩阵，且带着自己的位置', roundTrip.onGenre.card && roundTrip.onGenre.back.includes('s=g-1525'), roundTrip.onGenre.back);
+  check('听 → 条目 → 听：筛选与选中都还在', roundTrip.chips === 2 && /electro/i.test(roundTrip.selected), `${roundTrip.chips} 个条件 · ${roundTrip.selected}`);
+  check('例曲有试听按钮', roundTrip.onGenre.preview > 0, `${roundTrip.onGenre.preview} 条`);
+  check('例曲有 B 站 / 网易云 兜底外链', roundTrip.onGenre.bili.includes('search.bilibili.com') && roundTrip.onGenre.netease.includes('music.163.com'));
+  check('点「试听」会去查预览而不是没反应', roundTrip.onGenre.started === true, roundTrip.onGenre.label || '');
+
   /* DJ 页 */
   await goto('#/dj', 900);
   const dj = await cdp.eval(`(async () => {
@@ -316,7 +365,7 @@ try {
       offlineBadge: !!document.getElementById('quickOffline'),
     };
   })()`);
-  check('速查页有 60 张单屏卡', quick.slides === 60, `${quick.slides} 张`);
+  check('速查页与听感层同数量（92 张）', quick.slides === 92, `${quick.slides} 张`);
   check('速查页按屏幕吸附（可以滑动换风格）', String(quick.snap).includes('mandatory'), quick.snap);
 
   const quickNav = await cdp.eval(`(async () => {
@@ -367,7 +416,7 @@ try {
     await cdp.send('Network.emulateNetworkConditions', {
       offline: false, latency: 0, downloadThroughput: -1, uploadThroughput: -1,
     });
-    check('断网后速查页仍能打开', offline.slides === 60, `${offline.slides} 张 · online=${offline.online}`);
+    check('断网后速查页仍能打开', offline.slides === 92, `${offline.slides} 张 · online=${offline.online}`);
     check('离线时显示「离线可用」标记', offline.badge === true);
   }
 

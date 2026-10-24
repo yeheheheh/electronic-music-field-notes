@@ -969,6 +969,61 @@ body.has-card-layer {
   margin-left: 5px;
 }
 
+/* ---------------------------------------------------------- 例曲试听 */
+
+.example-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: start;
+  max-width: 260px;
+}
+
+.example-preview {
+  border: 1px solid rgba(255, 176, 0, .45);
+  background: rgba(255, 176, 0, .08);
+  color: var(--sodium);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .06em;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background .12s var(--cut), color .12s var(--cut);
+}
+
+.example-preview:hover {
+  background: rgba(255, 176, 0, .18);
+}
+
+.example-preview.is-playing {
+  background: var(--laser);
+  border-color: var(--laser);
+  color: var(--ink);
+}
+
+.example-preview.is-loading {
+  opacity: .55;
+  cursor: progress;
+}
+
+.example-feedback {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: .02em;
+  line-height: 1.6;
+  color: var(--cyan);
+}
+
+@media (max-width: 640px) {
+  .example-actions {
+    max-width: none;
+    justify-content: flex-start;
+  }
+}
+
 /* ---------------------------------------------------------- 现场速查页 */
 
 /* 现场速查是全屏工具，不需要页脚那三段说明 */

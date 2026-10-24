@@ -139,13 +139,13 @@
     const sy = 604;
     const x0 = PAD;
     const x1 = W - PAD;
-    const map = (v) => x0 + ((v - 60) / (200 - 60)) * (x1 - x0);
+    const map = (v) => x0 + ((v - 60) / (260 - 60)) * (x1 - x0);
     g.strokeStyle = 'rgba(242,237,227,.18)';
     g.beginPath();
     g.moveTo(x0, sy + .5);
     g.lineTo(x1, sy + .5);
     g.stroke();
-    [60, 90, 120, 150, 180].forEach((v) => {
+    [60, 110, 160, 210, 260].forEach((v) => {
       const x = map(v);
       g.beginPath();
       g.moveTo(x, sy);

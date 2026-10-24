@@ -53,9 +53,45 @@
 
 **为什么没做这两项。** Set 曲线要拖 8 段、导出图片、还要和邻接表共用数据，工作量接近前面半个 sprint，而它只服务「准备 set」这一个场景；先把过渡检查和邻接表跑稳更划算。识曲 P1 需要 onset + 自相关 + 拍型分类，代码量不小，且精度必须用真实录音验证——用合成信号验收会得出漂亮但没意义的结论。这两项留在方案里，等前面四项有真实使用数据再决定。
 
-**两处必须知道的取舍。**
+**两处必须知道的取舍.**
 1. 矩阵 4 × 4 里有 5 格是空的（慢/碎、中/半拍、中/碎、中/切分、极快/切分）。这是真实分布，不是没做完——中速的舞曲几乎都是四拍落地。页面写「少见」，不硬凑数据。
 2. 60 条风格的 BPM 大多是「编辑推断」（区间中点），卡片和面板都标了来源。只有原文明确写了数字的才标「原文明确」。**推断值不能当唱片上的数字用。**
+
+---
+
+## 0.2 第二轮：覆盖补齐与例曲试听（2026-10-24 晚）
+
+### 缺口是「声音」，不是「类型」
+
+拿 Wikipedia 的 electronic music genres 全集逐条对照本地 1376 条：**84 个经典类型库里都有条目，但一条专属试听都没有**；真正缺条目的只有 13 个，而且大多是别名（Dubstep = US/UK Dubstep、Hardstyle = Early/Nu/Raw Hardstyle、2-step 收在 UK Garage 里）。所以这一轮没有重建知识库，只补听感层。
+
+按大族统计，有 9 个正式大族原本是零覆盖：Post-Internet、早期流派、Ambient、Industrial、Electronic Rock、Bass/Club、Remix & Edit、R&B、Fusion。
+
+### 这一轮加了什么
+
+| 项 | 之前 | 现在 |
+| --- | --- | --- |
+| 有专属文案与试听的风格 | 60 | **92**（覆盖 24 个大族，无零覆盖族） |
+| 合成配方 | 55 | **86** |
+| 矩阵 | 4 速度 × 4 律动 = 16 格 | **4 × 5 = 20 格**，新增「没有鼓 / NO DRUMS」一行 |
+| 速度带上限 | 140–200 | **140–260**（Speedcore 240 BPM 不进矩阵就会被钳在边上） |
+| 例曲 | 纯文字索引 | **Apple Music 30 秒官方预览 + B 站 / 网易云兜底链接** |
+
+新增的 32 条里，9 个大族各补了 2–4 条（Dark Ambient / Drone / Illbient / Ambient Techno、EBM / Dark Electro / Power Noise / New Beat、Electronic Rock / Electronicore、Vaporwave / Nightcore、Bass-Club / East Coast Club、Trap Soul / Contemporary R&B、Mashup / Chopped and Screwed、Glitch / New Age、New Wave / Dark Wave / Electroclash），另外补了 Gabber、Speedcore、Goa Trance、French House、Liquid Funk、Big Beat、Grime、Italo-Disco、Nu Jazz 这些「wiki 上排得很前、本地一直没声音」的类型。
+
+「没有鼓」这一行的存在是必要的：Ambient / Drone / New Age 没有鼓，硬塞进「两拍一下」会直接教错。
+
+### 例曲为什么不是 Folia
+
+用户提到用 GitHub 上的 Folia 播放器放例曲。查过之后没有接，原因三条：
+
+1. **Folia 是应用，不是播放器组件**（`chthollyphile/folia-major`）：TypeScript + React + Electron，Web 端要 Node 24 后端与 Docker/Vercel 部署，不是 `npm i` 之后 `<FoliaPlayer src>` 那种东西。
+2. **AGPL-3.0**：改造成分组件嵌进站点，等于把整个站点置于 AGPL 的网络服务条款下。本站是公开仓库，但这不是一个可以顺手做的决定。
+3. **它播的是流媒体接口**（网易云 / 酷狗 / QQ / Navidrome），需要账号 cookie，版权与稳定性都不成立。而本站 1654 条例曲**没有任何音频文件**，接什么播放器都没有东西可播。
+
+真正能解决「点一下听到歌」的是 Apple 的 iTunes Search API：JSONP 查询（它不发 CORS 头），拿 `previewUrl`，用 `<audio>` 播 30 秒官方预览。本站不托管、不转码、不缓存音频。拿不到预览（地下/白标发行很常见）就退到 B 站与网易云的搜索链接。
+
+如果以后确实想要 Folia 的界面，正确做法是**把 Folia 单独部署成一个服务，在条目页外链过去**，而不是把它的播放器抠进静态站。
 
 
 ---

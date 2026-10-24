@@ -20,7 +20,7 @@ window.KB_LISTEN = {
     { id: 'slow', name: '慢', range: '60–110', feel: '可以走路' },
     { id: 'mid', name: '中', range: '110–128', feel: '可以点头' },
     { id: 'fast', name: '快', range: '128–140', feel: '想抬脚' },
-    { id: 'xfast', name: '极快', range: '140–200', feel: '只能跳' },
+    { id: 'xfast', name: '极快', range: '140–260', feel: '只能跳' },
   ],
 
   /* 落地方式：用拟声词，不用术语 */
@@ -29,6 +29,7 @@ window.KB_LISTEN = {
     { id: 'half', name: '两拍一下', tech: 'HALF-TIME', hint: '咚——咚——' },
     { id: 'break', name: '碎的', tech: 'BREAKBEAT', hint: '咚哒咚咚哒' },
     { id: 'swing', name: '切开的', tech: 'SYNCOPATED', hint: '咚—哒，不在正拍上' },
+    { id: 'none', name: '没有鼓', tech: 'NO DRUMS', hint: '只有和声和空间' },
   ],
 
   lows: [
@@ -454,6 +455,220 @@ window.KB_LISTEN = {
       hear: ['碎的，有标志性的三连', '低音短，跟着踢', '干，人声切片多'],
       when: '舞池中间，有人开始 Battle',
       bpm: { min: 135, max: 145, source: 'editorial' }, band: 'xfast', groove: 'break', low: 'pulse', fp: 'club',
+    },
+
+    /* ------------------------------------------- 第二轮：补齐零覆盖大族 */
+
+    /* Ambient / 氛围：这一族原本一条试听都没有 */
+    'g-12043': {
+      oneLine: '没有节奏，只有一片很远的低频。',
+      hear: ['几乎没有鼓', '低音是一层雾', '混响大到听不出房间'],
+      when: '耳机里，关灯以后',
+      bpm: { min: 60, max: 70, source: 'editorial' }, band: 'slow', groove: 'none', low: 'none', fp: 'darkambient',
+    },
+    'g-12123': {
+      oneLine: '一个音可以持续十分钟。',
+      hear: ['没有鼓，也没有拍', '低音几乎不动', '空间无限大'],
+      when: '写东西、睡着之前',
+      bpm: { min: 55, max: 65, source: 'editorial' }, band: 'slow', groove: 'none', low: 'none', fp: 'drone',
+    },
+    'g-12231': {
+      oneLine: '城市的声音被拆开，重新拼起来。',
+      hear: ['鼓只在远处响', '低音是噪声', '混响像地下车库'],
+      when: '凌晨的城市，戴耳机走',
+      bpm: { min: 80, max: 90, source: 'editorial' }, band: 'slow', groove: 'break', low: 'none', fp: 'illbient',
+    },
+    'g-2315': {
+      oneLine: 'Techno 的骨架，裹在一层雾里。',
+      hear: ['每拍一脚，但很轻', '低音只铺一层', '混响长，像在山洞'],
+      when: '日出前的最后一段',
+      bpm: { min: 115, max: 125, source: 'editorial' }, band: 'mid', groove: 'floor', low: 'sustain', fp: 'ambienttechno',
+    },
+
+    /* Industrial / 工业：同样是零覆盖 */
+    'g-15522': {
+      oneLine: '像军队在流水线上踏步。',
+      hear: ['每拍一脚，很硬', '低音短，像液压', '干，有人声在喊'],
+      when: '工业风的俱乐部之夜',
+      bpm: { min: 115, max: 125, source: 'editorial' }, band: 'mid', groove: 'floor', low: 'grit', fp: 'ebm',
+    },
+    'g-15650': {
+      oneLine: '冷、暗，人声像从管道里出来。',
+      hear: ['每拍一脚，鼓很干', '低音粗，带金属', '混响短，空间封闭'],
+      when: '凌晨，灯光只剩红色',
+      bpm: { min: 120, max: 130, source: 'editorial' }, band: 'mid', groove: 'floor', low: 'grit', fp: 'darkelectro',
+    },
+    'g-15694': {
+      oneLine: '整首歌就是一次持续的撞击。',
+      hear: ['每拍一脚，全是失真', '低音糊成一片噪声', '没有空间，只有墙'],
+      when: '最极端的那一小段',
+      bpm: { min: 135, max: 150, source: 'editorial' }, band: 'xfast', groove: 'floor', low: 'grit', fp: 'powernoise',
+    },
+    'g-15586': {
+      oneLine: '慢半拍的舞曲，样本拼出来的。',
+      hear: ['每拍一脚，但很慢', '低音短，重复一句', '干，像 80 年代的录像'],
+      when: '复古派对的开场',
+      bpm: { min: 105, max: 115, source: 'editorial' }, band: 'slow', groove: 'floor', low: 'pulse', fp: 'newbeat',
+    },
+
+    /* Electronic Rock / 电子摇滚 */
+    'g-19802': {
+      oneLine: '吉他的失真，接在合成器上。',
+      hear: ['每拍一脚，鼓很实', '低音是失真和弦的根', '混响中等，像排练房'],
+      when: '游戏、番剧、体育集锦',
+      bpm: { min: 100, max: 120, source: 'editorial' }, band: 'slow', groove: 'floor', low: 'grit', fp: 'rocktronica',
+    },
+    'g-19858': {
+      oneLine: '一半是金属，一半是电子。',
+      hear: ['碎的，鼓点很密', '低音在失真里滚', '空间被墙压住'],
+      when: '二次元现场，人群会跳',
+      bpm: { min: 145, max: 160, source: 'editorial' }, band: 'xfast', groove: 'break', low: 'grit', fp: 'electronicore',
+    },
+
+    /* Post-Internet / 后互联网 */
+    'g-13882': {
+      oneLine: '旧商场里的音乐，慢下来、糊掉。',
+      hear: ['两拍一下，很懒', '低音被拉长、变糊', '混响像空置的商场'],
+      when: '深夜刷图、发呆',
+      bpm: { min: 75, max: 85, source: 'editorial' }, band: 'slow', groove: 'half', low: 'none', fp: 'vaporwave',
+    },
+    'g-20735': {
+      oneLine: '同一首歌，被调快、调高。',
+      hear: ['每拍一脚，很快', '低音被抬高、变薄', '高频亮，人声变尖'],
+      when: '剪辑、游戏、短视频',
+      bpm: { min: 160, max: 180, source: 'editorial' }, band: 'xfast', groove: 'floor', low: 'pulse', fp: 'nightcore',
+    },
+
+    /* Bass / Club / 低频俱乐部 */
+    'g-20361': {
+      oneLine: '低音是主角，鼓只是路标。',
+      hear: ['碎的，位置很怪', '低音短，一下一下', '干，贴脸'],
+      when: '地下俱乐部的后半场',
+      bpm: { min: 135, max: 145, source: 'editorial' }, band: 'xfast', groove: 'break', low: 'pulse', fp: 'juke',
+    },
+    'g-20437': {
+      oneLine: '口号、鼓点、切分，全在抢拍。',
+      hear: ['碎的，鼓点密集', '低音短，喊叫式', '干，全是剪辑'],
+      when: '东岸的俱乐部',
+      bpm: { min: 130, max: 140, source: 'editorial' }, band: 'fast', groove: 'break', low: 'pulse', fp: 'club',
+    },
+
+    /* R&B / 节奏布鲁斯 */
+    'g-19703': {
+      oneLine: '鼓很慢，人声贴在耳朵上。',
+      hear: ['两拍一下，很空', '808 拖得很长', '混响多，像在雾里'],
+      when: '深夜，一个人开车',
+      bpm: { min: 130, max: 150, source: 'source' }, band: 'xfast', groove: 'half', low: 'sink', fp: 'trapsoul', felt: 70,
+    },
+    'g-19691': {
+      oneLine: '鼓很软，人声在中间。',
+      hear: ['两拍一下，很轻', '低音托着人声', '混响干净'],
+      when: '车里、店里、睡前',
+      bpm: { min: 90, max: 105, source: 'editorial' }, band: 'slow', groove: 'half', low: 'sink', fp: 'contemprnb',
+    },
+
+    /* Remix & Edit / 重混与编辑 */
+    'g-20699': {
+      oneLine: '两首歌被硬塞进同一段。',
+      hear: ['每拍一脚，很规整', '低音来自另一首歌', '干，全靠剪辑'],
+      when: '派对中段，所有人都会唱',
+      bpm: { min: 124, max: 132, source: 'editorial' }, band: 'fast', groove: 'floor', low: 'pulse', fp: 'mashup',
+    },
+    'g-20777': {
+      oneLine: '整首歌被放慢、拉长、糊掉。',
+      hear: ['两拍一下，极慢', '低音拖到变形', '全是磁带和混响'],
+      when: '深夜，车开得很慢',
+      bpm: { min: 60, max: 80, source: 'editorial' }, band: 'slow', groove: 'half', low: 'sink', fp: 'chopped',
+    },
+
+    /* 早期流派 / 手法 / 理念 */
+    'g-16160': {
+      oneLine: '声音被切成碎片，再拼错位。',
+      hear: ['碎的，位置不对', '低音是短促的碎片', '干，全是毛刺'],
+      when: '实验、装置、耳机里',
+      bpm: { min: 90, max: 110, source: 'editorial' }, band: 'slow', groove: 'break', low: 'grit', fp: 'glitch',
+    },
+    'g-16544': {
+      oneLine: '像风铃，也像很远的水。',
+      hear: ['没有鼓', '低音很轻，几乎不动', '混响极大，像在山谷'],
+      when: '瑜伽、冥想、睡前',
+      bpm: { min: 60, max: 80, source: 'editorial' }, band: 'slow', groove: 'none', low: 'none', fp: 'newage',
+    },
+
+    /* Fusion / 融合 */
+    'g-18064': {
+      oneLine: '合成器很亮，鼓很直接。',
+      hear: ['每拍一脚，很快', '低音短，跟着和弦', '混响中等，像舞台'],
+      when: '八十年代的舞会',
+      bpm: { min: 125, max: 135, source: 'editorial' }, band: 'fast', groove: 'floor', low: 'pulse', fp: 'newwave',
+    },
+    'g-18090': {
+      oneLine: '冷的合成器，唱的是阴影。',
+      hear: ['每拍一脚，但很沉', '低音长，压着走', '混响大，空间很暗'],
+      when: '雨夜，一个人',
+      bpm: { min: 100, max: 120, source: 'editorial' }, band: 'slow', groove: 'floor', low: 'sustain', fp: 'darkwave',
+    },
+    'g-18274': {
+      oneLine: '电子的骨架，朋克的嗓门。',
+      hear: ['每拍一脚，很干', '低音粗，带失真', '没有混响，贴脸'],
+      when: '2000 年代的仓库派对',
+      bpm: { min: 125, max: 135, source: 'editorial' }, band: 'fast', groove: 'floor', low: 'grit', fp: 'electroclash',
+    },
+
+    /* 大牌缺口：wiki 上排得很前，但库里一直没有声音 */
+    'g-7027': {
+      oneLine: '鼓被失真到只剩一个形状。',
+      hear: ['每拍一脚，极硬', '低音是失真的方块', '空间全满'],
+      when: '硬核场，灯全开',
+      bpm: { min: 160, max: 180, source: 'editorial' }, band: 'xfast', groove: 'floor', low: 'grit', fp: 'gabber',
+    },
+    'g-7307': {
+      oneLine: '速度已经超出身体能跟的范围。',
+      hear: ['每拍一脚，像连发', '低音糊成一条线', '没有空间'],
+      when: '最后十分钟',
+      bpm: { min: 220, max: 260, source: 'source' }, band: 'xfast', groove: 'floor', low: 'grit', fp: 'speedcore',
+    },
+    'g-3225': {
+      oneLine: '旋律一直在绕，像螺旋楼梯。',
+      hear: ['每拍一脚，很快', '低音在滚，不断', '混响长，有回声'],
+      when: '日出前，眼睛闭着',
+      bpm: { min: 140, max: 150, source: 'editorial' }, band: 'xfast', groove: 'floor', low: 'sustain', fp: 'goa',
+    },
+    'g-793': {
+      oneLine: '滤波器一开一合，像在水下。',
+      hear: ['每拍一脚，很稳', '低音被滤得很闷', '混响中等，很暖'],
+      when: '日落后的派对',
+      bpm: { min: 115, max: 125, source: 'editorial' }, band: 'mid', groove: 'floor', low: 'sustain', fp: 'frenchhouse',
+    },
+    'g-4941': {
+      oneLine: '鼓在跑，和声却很喜欢。',
+      hear: ['碎的，但很顺', '低音长，很暖', '混响多，像在海里'],
+      when: '凌晨，情绪上来的时候',
+      bpm: { min: 170, max: 178, source: 'editorial' }, band: 'xfast', groove: 'break', low: 'sub', fp: 'liquid',
+    },
+    'g-3913': {
+      oneLine: '鼓是采样的，像在砸东西。',
+      hear: ['碎的，重音很歪', '低音很粗', '干、脏'],
+      when: '九十年代的广告和游戏',
+      bpm: { min: 100, max: 120, source: 'source' }, band: 'slow', groove: 'break', low: 'grit', fp: 'bigbeat',
+    },
+    'g-5543': {
+      oneLine: '冷、空，人声在缝隙里冲。',
+      hear: ['两拍一下，很空', '低音是短促的脉冲', '干，几乎没有混响'],
+      when: '伦敦的深夜电台',
+      bpm: { min: 135, max: 145, source: 'editorial' }, band: 'xfast', groove: 'half', low: 'grit', fp: 'grime',
+    },
+    'g-11687': {
+      oneLine: '合成器在跑，像霓虹在闪。',
+      hear: ['每拍一脚，很亮', '低音在走音阶', '混响大，像舞厅'],
+      when: '复古派对，灯球转起来',
+      bpm: { min: 115, max: 125, source: 'editorial' }, band: 'mid', groove: 'floor', low: 'pulse', fp: 'italodisco',
+    },
+    'g-20224': {
+      oneLine: '鼓是碎的，和声是爵士的。',
+      hear: ['碎的，但很松', '低音在走旋律', '混响暖，像小场地'],
+      when: '下午的咖啡馆',
+      bpm: { min: 85, max: 100, source: 'editorial' }, band: 'slow', groove: 'swing', low: 'sustain', fp: 'nujazz',
     },
   },
 };
