@@ -1,0 +1,33 @@
+{
+  "name": "electronic-music-kb-module",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "可独立生成、可被 Agent 通过 MCP/CLI/HTTP 接入的电子音乐知识库模块。",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "em-kb": "bin/kb.mjs",
+    "em-kb-mcp": "bin/mcp-server.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "schema",
+    "config",
+    "inputs",
+    "agent",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node bin/kb.mjs build",
+    "search": "node bin/kb.mjs search",
+    "context": "node bin/kb.mjs context",
+    "verify": "node bin/kb.mjs verify",
+    "mcp": "node bin/mcp-server.mjs",
+    "serve": "node bin/kb.mjs serve",
+    "test": "node --test tests/module.test.mjs"
+  }
+}

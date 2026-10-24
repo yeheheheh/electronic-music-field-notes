@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "electronic-music-kb": {
+      "command": "node",
+      "args": [
+        "<ABS_PATH>/kb-module/bin/mcp-server.mjs",
+        "--dist",
+        "<ABS_PATH>/kb-module/dist"
+      ],
+      "env": {}
+    }
+  }
+}

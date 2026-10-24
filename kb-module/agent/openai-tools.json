@@ -1,0 +1,74 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "kb_search",
+      "description": "检索电子音乐知识库。返回带 ID 的风格条目、大族概览、术语、结构、音色、历史或现场内容。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "检索词，例如 uplifting trance、808 bass、七组音色。" },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 20, "default": 6 },
+          "family": { "type": "string", "description": "大族名或 ID，如 House、Trance、f-165。" },
+          "type": {
+            "type": "string",
+            "enum": ["entry", "family", "guide", "style", "instrument", "glossary", "timeline", "live", "source"]
+          },
+          "bpm_min": { "type": "number" },
+          "bpm_max": { "type": "number" }
+        },
+        "required": ["query"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "kb_context",
+      "description": "检索并生成一段可直接放入提示词的 Markdown 上下文，带 [ID] 引用。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 20, "default": 5 },
+          "max_chars": { "type": "integer", "minimum": 800, "maximum": 24000, "default": 6000 },
+          "family": { "type": "string" },
+          "type": { "type": "string" },
+          "bpm_min": { "type": "number" },
+          "bpm_max": { "type": "number" }
+        },
+        "required": ["query"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "kb_get",
+      "description": "按 ID 读取条目或精编文档的完整内容、关系、例曲与来源。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "例如 g-1581、family:house、style:bigroom-house、guide:production-structure。" }
+        },
+        "required": ["id"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "kb_families",
+      "description": "列出全部大族及条目数量。",
+      "parameters": { "type": "object", "properties": {} }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "kb_manifest",
+      "description": "返回知识库版本、构建时间、数据规模与来源。",
+      "parameters": { "type": "object", "properties": {} }
+    }
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "sources": [
+    {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "type": "taxonomy",
+      "path": "taxonomy.md",
+      "author": "Tim2354 及编辑团队",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc",
+      "licenseNote": "民间协作整理；公开分发前请确认原作者授权。",
+      "note": "约 1200 个风格/概念条目，含上下位关系、别名、例曲与原文行号。"
+    },
+    {
+      "id": "bilibili-ep01",
+      "title": "【电音圣经】01. 如何秒懂十大电子舞曲风格",
+      "type": "video_transcript",
+      "path": "transcripts/dianying-bible-ep01.json",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV13a4y1W7bT/",
+      "licenseNote": "视频版权归原作者；本模块只保存转写文本用于检索。",
+      "note": "十大风格的听辨入门。"
+    },
+    {
+      "id": "bilibili-ep02",
+      "title": "【电音圣经】02. 一张图看懂 EDM 电子舞曲结构！",
+      "type": "video_transcript",
+      "path": "transcripts/dianying-bible-ep02.json",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1dK4y1V77o/",
+      "licenseNote": "视频版权归原作者；本模块只保存转写文本用于检索。",
+      "note": "拍、小节、乐句、乐段与八段 EDM 结构。"
+    },
+    {
+      "id": "bilibili-ep03",
+      "title": "【电音圣经】03. 电子舞曲七大乐器组音色详解",
+      "type": "video_transcript_local_asr",
+      "path": "transcripts/dianying-bible-ep03-asr.txt",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV18p4y1s76n/",
+      "licenseNote": "视频版权归原作者；该期无公开字幕，文本为本地 Whisper 转写，仅用于核对内容。",
+      "note": "打击乐、贝斯、和弦旋律、人声、主奏、氛围、音效七组音色。"
+    },
+    {
+      "id": "bilibili-ep04",
+      "title": "【电音圣经】04. 音色之源：合成器、采样器、效果器",
+      "type": "video_transcript",
+      "path": "transcripts/dianying-bible-ep04.json",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1rb4y197Pe/",
+      "licenseNote": "视频版权归原作者；本模块只保存转写文本用于检索。",
+      "note": "MIDI → 音源 → 效果器 → 总线的信号链。"
+    },
+    {
+      "id": "bilibili-podcast-ep31",
+      "title": "多新鲜呐 ep31：电音玩家 VS 摇滚老炮",
+      "type": "video_transcript",
+      "path": "transcripts/duoxinxian-ep31.json",
+      "author": "于谦、小拉与一位电音制作人",
+      "url": null,
+      "licenseNote": "视频版权归原作者；节目含品牌赞助，本模块只提炼电音文化内容。",
+      "note": "现场文化、音乐节体验、社群与行业视角。"
+    },
+    {
+      "id": "curated-notes",
+      "title": "电音档案精编内容",
+      "type": "curated",
+      "path": "curated.json",
+      "author": "本知识库编辑",
+      "url": null,
+      "licenseNote": "二次整理内容；引用请注明原文档与视频。",
+      "note": "听辨、制作、历史、现场、术语与勘误。"
+    }
+  ]
+}

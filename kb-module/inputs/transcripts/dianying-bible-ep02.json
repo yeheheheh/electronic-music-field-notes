@@ -1,0 +1,1754 @@
+[
+  {
+    "from": 2.88,
+    "to": 3.6,
+    "sid": 1,
+    "location": 2,
+    "content": "大家好",
+    "music": 0
+  },
+  {
+    "from": 3.6,
+    "to": 4.5,
+    "sid": 2,
+    "location": 2,
+    "content": "不是烧的",
+    "music": 0
+  },
+  {
+    "from": 6.72,
+    "to": 10.32,
+    "sid": 3,
+    "location": 2,
+    "content": "这个视频我将会教大家如何通过一张图看懂EDM",
+    "music": 0
+  },
+  {
+    "from": 10.32,
+    "to": 12.58,
+    "sid": 4,
+    "location": 2,
+    "content": "电子舞曲结构编排",
+    "music": 0
+  },
+  {
+    "from": 12.58,
+    "to": 15.43,
+    "sid": 5,
+    "location": 2,
+    "content": "好建议大家已经完全掌握了",
+    "music": 0
+  },
+  {
+    "from": 15.43,
+    "to": 18.82,
+    "sid": 6,
+    "location": 2,
+    "content": "我们下期视频见",
+    "music": 0
+  },
+  {
+    "from": 20.079,
+    "to": 23.5,
+    "sid": 7,
+    "location": 2,
+    "content": "在上期视频如何秒懂十大电子舞曲风格中",
+    "music": 0
+  },
+  {
+    "from": 23.5,
+    "to": 26.11,
+    "sid": 8,
+    "location": 2,
+    "content": "我们了解到电子舞曲种类繁多",
+    "music": 0
+  },
+  {
+    "from": 26.11,
+    "to": 28.69,
+    "sid": 9,
+    "location": 2,
+    "content": "它们的编排结构也不尽相同",
+    "music": 0
+  },
+  {
+    "from": 28.69,
+    "to": 30.74,
+    "sid": 10,
+    "location": 2,
+    "content": "所以在这期视频里",
+    "music": 0
+  },
+  {
+    "from": 30.74,
+    "to": 33.56,
+    "sid": 11,
+    "location": 2,
+    "content": "我会以典型的edm house舞曲作为蓝本",
+    "music": 0
+  },
+  {
+    "from": 33.56,
+    "to": 35.16,
+    "sid": 12,
+    "location": 2,
+    "content": "为大家进行讲解",
+    "music": 0
+  },
+  {
+    "from": 35.16,
+    "to": 38.52,
+    "sid": 13,
+    "location": 2,
+    "content": "当然舞曲的结构编排并没有完全的定式",
+    "music": 0
+  },
+  {
+    "from": 38.52,
+    "to": 39.72,
+    "sid": 14,
+    "location": 2,
+    "content": "或者是抛砖引玉",
+    "music": 0
+  },
+  {
+    "from": 39.72,
+    "to": 42.16,
+    "sid": 15,
+    "location": 2,
+    "content": "请大家自行拓展学习研究",
+    "music": 0
+  },
+  {
+    "from": 42.16,
+    "to": 45.73,
+    "sid": 16,
+    "location": 2,
+    "content": "首先我来给大家介绍几个基础的乐理概念",
+    "music": 0
+  },
+  {
+    "from": 45.73,
+    "to": 50.96,
+    "sid": 17,
+    "location": 2,
+    "content": "拍beat小杰宝二越剧freight和乐段section",
+    "music": 0.2167487631342674
+  },
+  {
+    "from": 52.04,
+    "to": 55.22,
+    "sid": 18,
+    "location": 2,
+    "content": "拍摄越剧时间维度上的最基本单位",
+    "music": 0
+  },
+  {
+    "from": 59.1,
+    "to": 61.58,
+    "sid": 19,
+    "location": 2,
+    "content": "在电子舞曲最常用的四四拍中",
+    "music": 0
+  },
+  {
+    "from": 61.58,
+    "to": 63.71,
+    "sid": 20,
+    "location": 2,
+    "content": "即为以四分音符为一拍",
+    "music": 0
+  },
+  {
+    "from": 63.71,
+    "to": 66.68,
+    "sid": 21,
+    "location": 2,
+    "content": "四拍组成一小节",
+    "music": 0
+  },
+  {
+    "from": 68.94,
+    "to": 71.45,
+    "sid": 22,
+    "location": 2,
+    "content": "接着小杰又组成了越剧",
+    "music": 0
+  },
+  {
+    "from": 71.45,
+    "to": 74.78,
+    "sid": 23,
+    "location": 2,
+    "content": "在电子舞曲中通常以八小节为一个越剧",
+    "music": 0
+  },
+  {
+    "from": 74.78,
+    "to": 75.74,
+    "sid": 24,
+    "location": 2,
+    "content": "一般而言",
+    "music": 0
+  },
+  {
+    "from": 75.74,
+    "to": 78.75,
+    "sid": 25,
+    "location": 2,
+    "content": "一个越剧会包含最基本的旋律和节奏型",
+    "music": 0
+  },
+  {
+    "from": 78.75,
+    "to": 80.4,
+    "sid": 26,
+    "location": 2,
+    "content": "是一首歌曲的和声",
+    "music": 0
+  },
+  {
+    "from": 80.4,
+    "to": 81.96,
+    "sid": 27,
+    "location": 2,
+    "content": "而相邻的两个乐句间",
+    "music": 0
+  },
+  {
+    "from": 81.96,
+    "to": 84.39,
+    "sid": 28,
+    "location": 2,
+    "content": "又往往会有些许元素的变化",
+    "music": 0
+  },
+  {
+    "from": 84.39,
+    "to": 87,
+    "sid": 29,
+    "location": 2,
+    "content": "也是听众时刻保持新鲜感",
+    "music": 0
+  },
+  {
+    "from": 87,
+    "to": 90.06,
+    "sid": 30,
+    "location": 2,
+    "content": "诸如大家所熟知的progressive渐进类舞曲",
+    "music": 0
+  },
+  {
+    "from": 90.06,
+    "to": 93.54,
+    "sid": 31,
+    "location": 2,
+    "content": "就是以越剧为单位进行渐进发展的",
+    "music": 0
+  },
+  {
+    "from": 108.759,
+    "to": 111.039,
+    "sid": 32,
+    "location": 2,
+    "content": "若干个越剧就组成了乐段",
+    "music": 0
+  },
+  {
+    "from": 111.039,
+    "to": 113.559,
+    "sid": 33,
+    "location": 2,
+    "content": "♪ It was a trance ♪",
+    "music": 0.9999998888889013
+  },
+  {
+    "from": 114.639,
+    "to": 119.039,
+    "sid": 34,
+    "location": 2,
+    "content": "And i just need to know now",
+    "music": 0.4803127483855669
+  },
+  {
+    "from": 119.1,
+    "to": 122.67,
+    "sid": 35,
+    "location": 2,
+    "content": "而乐段则进而组成整首舞曲",
+    "music": 0
+  },
+  {
+    "from": 122.67,
+    "to": 124.65,
+    "sid": 36,
+    "location": 2,
+    "content": "这就是本期视频的正题",
+    "music": 0
+  },
+  {
+    "from": 124.65,
+    "to": 127.78,
+    "sid": 37,
+    "location": 2,
+    "content": "电子舞曲的结构编排",
+    "music": 0
+  },
+  {
+    "from": 134.26,
+    "to": 136.44,
+    "sid": 38,
+    "location": 2,
+    "content": "一首典型的EDM电子舞曲",
+    "music": 0
+  },
+  {
+    "from": 136.44,
+    "to": 139.3,
+    "sid": 39,
+    "location": 2,
+    "content": "一般由以下八个月段组合而成",
+    "music": 0
+  },
+  {
+    "from": 139.3,
+    "to": 141.19,
+    "sid": 40,
+    "location": 2,
+    "content": "intro前奏部分",
+    "music": 0
+  },
+  {
+    "from": 141.19,
+    "to": 142,
+    "sid": 41,
+    "location": 2,
+    "content": "Breakdown",
+    "music": 0
+  },
+  {
+    "from": 142,
+    "to": 143.17,
+    "sid": 42,
+    "location": 2,
+    "content": "间奏部分",
+    "music": 0
+  },
+  {
+    "from": 143.17,
+    "to": 145.18,
+    "sid": 43,
+    "location": 2,
+    "content": "有的渐进部分",
+    "music": 0
+  },
+  {
+    "from": 145.18,
+    "to": 146.77,
+    "sid": 44,
+    "location": 2,
+    "content": "drop高潮部分",
+    "music": 0
+  },
+  {
+    "from": 146.77,
+    "to": 148.81,
+    "sid": 45,
+    "location": 2,
+    "content": "第二段breakdown build up",
+    "music": 0
+  },
+  {
+    "from": 148.81,
+    "to": 150.42,
+    "sid": 46,
+    "location": 2,
+    "content": "drop部分",
+    "music": 0
+  },
+  {
+    "from": 150.42,
+    "to": 152.76,
+    "sid": 47,
+    "location": 2,
+    "content": "以及最后的ultra尾奏部分",
+    "music": 0
+  },
+  {
+    "from": 152.76,
+    "to": 153.72,
+    "sid": 48,
+    "location": 2,
+    "content": "备注一下",
+    "music": 0
+  },
+  {
+    "from": 153.72,
+    "to": 156.36,
+    "sid": 49,
+    "location": 2,
+    "content": "有时breakdown buildup和drop部分",
+    "music": 0
+  },
+  {
+    "from": 156.36,
+    "to": 159.45,
+    "sid": 50,
+    "location": 2,
+    "content": "也会根据流行音乐的叫法称为verse主歌",
+    "music": 0
+  },
+  {
+    "from": 159.45,
+    "to": 162.88,
+    "sid": 51,
+    "location": 2,
+    "content": "pre cover前副歌和chorus副歌",
+    "music": 0
+  },
+  {
+    "from": 162.88,
+    "to": 166.76,
+    "sid": 52,
+    "location": 2,
+    "content": "此外break down有时也会简称为break",
+    "music": 0
+  },
+  {
+    "from": 166.76,
+    "to": 169.34,
+    "sid": 53,
+    "location": 2,
+    "content": "从这里的乐曲波形图可以看出",
+    "music": 0
+  },
+  {
+    "from": 169.34,
+    "to": 172.11,
+    "sid": 54,
+    "location": 2,
+    "content": "每一个乐段的波形都有各自的特色",
+    "music": 0
+  },
+  {
+    "from": 172.11,
+    "to": 175.8,
+    "sid": 55,
+    "location": 2,
+    "content": "而这些波形也反映出每个乐段的听觉感受",
+    "music": 0
+  },
+  {
+    "from": 175.8,
+    "to": 177.15,
+    "sid": 56,
+    "location": 2,
+    "content": "根据波形图",
+    "music": 0
+  },
+  {
+    "from": 177.15,
+    "to": 180.15,
+    "sid": 57,
+    "location": 2,
+    "content": "我进一步抽象绘制出了乐曲的音响效果",
+    "music": 0
+  },
+  {
+    "from": 180.15,
+    "to": 181.8,
+    "sid": 58,
+    "location": 2,
+    "content": "结构图包括鼓组",
+    "music": 0
+  },
+  {
+    "from": 181.8,
+    "to": 183.54,
+    "sid": 59,
+    "location": 2,
+    "content": "乐器氛围旋律",
+    "music": 0
+  },
+  {
+    "from": 183.54,
+    "to": 184.26,
+    "sid": 60,
+    "location": 2,
+    "content": "人声",
+    "music": 0
+  },
+  {
+    "from": 184.26,
+    "to": 185.34,
+    "sid": 61,
+    "location": 2,
+    "content": "主奏旋律",
+    "music": 0
+  },
+  {
+    "from": 185.34,
+    "to": 190.09,
+    "sid": 62,
+    "location": 2,
+    "content": "贝斯和FX音效可以看到在不同的阶段",
+    "music": 0
+  },
+  {
+    "from": 190.09,
+    "to": 193.06,
+    "sid": 63,
+    "location": 2,
+    "content": "歌曲的音响效果由不同的音色叠加而成",
+    "music": 0
+  },
+  {
+    "from": 193.06,
+    "to": 196.69,
+    "sid": 64,
+    "location": 2,
+    "content": "并且和我们听觉感受到的乐曲能量层级相匹配",
+    "music": 0
+  },
+  {
+    "from": 197.89,
+    "to": 199.03,
+    "sid": 65,
+    "location": 2,
+    "content": "这里做一个预告",
+    "music": 0
+  },
+  {
+    "from": 199.03,
+    "to": 201.34,
+    "sid": 66,
+    "location": 2,
+    "content": "关于电子舞曲的音色配器",
+    "music": 0
+  },
+  {
+    "from": 201.34,
+    "to": 203.59,
+    "sid": 67,
+    "location": 2,
+    "content": "我会在后续视频中进行详细介绍",
+    "music": 0
+  },
+  {
+    "from": 203.59,
+    "to": 205.11,
+    "sid": 68,
+    "location": 2,
+    "content": "大家敬请关注",
+    "music": 0
+  },
+  {
+    "from": 205.29,
+    "to": 208.89,
+    "sid": 69,
+    "location": 2,
+    "content": "如果我们把一首EDM电子舞曲的听觉感受",
+    "music": 0
+  },
+  {
+    "from": 208.89,
+    "to": 210.48,
+    "sid": 70,
+    "location": 2,
+    "content": "比作一次过山车旅程",
+    "music": 0
+  },
+  {
+    "from": 210.48,
+    "to": 212.32,
+    "sid": 71,
+    "location": 2,
+    "content": "就非常容易理解了",
+    "music": 0
+  },
+  {
+    "from": 212.32,
+    "to": 215.68,
+    "sid": 72,
+    "location": 2,
+    "content": "intro前奏的音色最少听起来比较平淡",
+    "music": 0
+  },
+  {
+    "from": 215.68,
+    "to": 218.8,
+    "sid": 73,
+    "location": 2,
+    "content": "就像过山车的起步阶段",
+    "music": 0
+  },
+  {
+    "from": 225.92,
+    "to": 227.78,
+    "sid": 74,
+    "location": 2,
+    "content": "1breakdown",
+    "music": 0
+  },
+  {
+    "from": 227.78,
+    "to": 231.5,
+    "sid": 75,
+    "location": 2,
+    "content": "间奏部分四肢且伴随着音色的渐多渐强",
+    "music": 0
+  },
+  {
+    "from": 231.5,
+    "to": 233.51,
+    "sid": 76,
+    "location": 2,
+    "content": "听起来感觉渐入佳境",
+    "music": 0
+  },
+  {
+    "from": 233.51,
+    "to": 235.46,
+    "sid": 77,
+    "location": 2,
+    "content": "就像过山车步入正轨",
+    "music": 0
+  },
+  {
+    "from": 235.46,
+    "to": 236.82,
+    "sid": 78,
+    "location": 2,
+    "content": "有些小的起伏",
+    "music": 0
+  },
+  {
+    "from": 236.82,
+    "to": 239.73,
+    "sid": 79,
+    "location": 2,
+    "content": "♪ Then i'll be needing somebody ♪",
+    "music": 0.9999999489795944
+  },
+  {
+    "from": 239.73,
+    "to": 242.84,
+    "sid": 80,
+    "location": 2,
+    "content": "I can lean on u up",
+    "music": 0.5841583869228526
+  },
+  {
+    "from": 242.84,
+    "to": 244.55,
+    "sid": 81,
+    "location": 2,
+    "content": "渐进部分则更进一步",
+    "music": 0.2514619735987178
+  },
+  {
+    "from": 244.55,
+    "to": 246.8,
+    "sid": 82,
+    "location": 2,
+    "content": "通过更多音色效果的叠加",
+    "music": 0.02283104918578908
+  },
+  {
+    "from": 246.8,
+    "to": 249.709,
+    "sid": 83,
+    "location": 2,
+    "content": "以及古典旋律频度的变化与抽离",
+    "music": 0
+  },
+  {
+    "from": 249.709,
+    "to": 251.209,
+    "sid": 84,
+    "location": 2,
+    "content": "营造出山雨欲来",
+    "music": 0
+  },
+  {
+    "from": 251.209,
+    "to": 252.38,
+    "sid": 85,
+    "location": 2,
+    "content": "风满楼之势",
+    "music": 0
+  },
+  {
+    "from": 252.38,
+    "to": 254.48,
+    "sid": 86,
+    "location": 2,
+    "content": "就像过山车被轨道上的钢炼",
+    "music": 0
+  },
+  {
+    "from": 254.48,
+    "to": 256.7,
+    "sid": 87,
+    "location": 2,
+    "content": "吱嘎吱嘎的往最高处牵引",
+    "music": 0
+  },
+  {
+    "from": 256.7,
+    "to": 257.48,
+    "sid": 88,
+    "location": 2,
+    "content": "此刻上演",
+    "music": 0
+  },
+  {
+    "from": 257.48,
+    "to": 259.94,
+    "sid": 89,
+    "location": 2,
+    "content": "乘客的内心只剩紧张和期待",
+    "music": 0
+  },
+  {
+    "from": 259.94,
+    "to": 263.5,
+    "sid": 90,
+    "location": 2,
+    "content": "♪ When i go at the end of f ♪",
+    "music": 0.9999999579831951
+  },
+  {
+    "from": 268.22,
+    "to": 270,
+    "sid": 91,
+    "location": 2,
+    "content": "如果大家觉得这个视频有帮助",
+    "music": 0
+  },
+  {
+    "from": 270,
+    "to": 272.08,
+    "sid": 92,
+    "location": 2,
+    "content": "请一定要三连关注支持我",
+    "music": 0
+  },
+  {
+    "from": 278.78,
+    "to": 281.6,
+    "sid": 93,
+    "location": 2,
+    "content": "DMP高潮部分也是最终主奏音色",
+    "music": 0.1323529363105575
+  },
+  {
+    "from": 281.6,
+    "to": 283.68,
+    "sid": 94,
+    "location": 2,
+    "content": "以及各声部乐器的节奏",
+    "music": 0.2708333192274492
+  },
+  {
+    "from": 283.68,
+    "to": 285.9,
+    "sid": 95,
+    "location": 2,
+    "content": "展现出最丰满的音响效果",
+    "music": 0
+  },
+  {
+    "from": 285.9,
+    "to": 288.32,
+    "sid": 96,
+    "location": 2,
+    "content": "和最高的听觉能量层级",
+    "music": 0
+  },
+  {
+    "from": 288.32,
+    "to": 290.72,
+    "sid": 97,
+    "location": 2,
+    "content": "ultra尾奏部分则像是过山车",
+    "music": 0
+  },
+  {
+    "from": 290.72,
+    "to": 293.66,
+    "sid": 98,
+    "location": 2,
+    "content": "带着意犹未尽的乘客又回归了平淡",
+    "music": 0
+  },
+  {
+    "from": 293.66,
+    "to": 295.88,
+    "sid": 99,
+    "location": 2,
+    "content": "并准备开启下一段旅程",
+    "music": 0
+  },
+  {
+    "from": 299.58,
+    "to": 302.09,
+    "sid": 100,
+    "location": 2,
+    "content": "所以一首悠久的EDM电子舞曲",
+    "music": 0.06060605798241577
+  },
+  {
+    "from": 302.09,
+    "to": 304.78,
+    "sid": 101,
+    "location": 2,
+    "content": "一般都具有鲜明的层次感和变化感",
+    "music": 0
+  },
+  {
+    "from": 304.78,
+    "to": 308.54,
+    "sid": 102,
+    "location": 2,
+    "content": "可以带着听众领略其情绪的起伏和能量的变化",
+    "music": 0
+  },
+  {
+    "from": 308.54,
+    "to": 311.57,
+    "sid": 103,
+    "location": 2,
+    "content": "接下来我就来为大家讲解每个乐段",
+    "music": 0
+  },
+  {
+    "from": 311.57,
+    "to": 314.13,
+    "sid": 104,
+    "location": 2,
+    "content": "首先我们来看intro前奏部分",
+    "music": 0
+  },
+  {
+    "from": 314.13,
+    "to": 315.15,
+    "sid": 105,
+    "location": 2,
+    "content": "顾名思义",
+    "music": 0
+  },
+  {
+    "from": 315.15,
+    "to": 317.19,
+    "sid": 106,
+    "location": 2,
+    "content": "前奏就是一首舞曲的开头",
+    "music": 0
+  },
+  {
+    "from": 317.19,
+    "to": 319.35,
+    "sid": 107,
+    "location": 2,
+    "content": "这部分一般以简单的旋律",
+    "music": 0
+  },
+  {
+    "from": 319.35,
+    "to": 321.69,
+    "sid": 108,
+    "location": 2,
+    "content": "音色或者鼓组乐器呈现出来",
+    "music": 0
+  },
+  {
+    "from": 321.69,
+    "to": 324.32,
+    "sid": 109,
+    "location": 2,
+    "content": "通常长度为2~16小节",
+    "music": 0
+  },
+  {
+    "from": 359.58,
+    "to": 362.36,
+    "sid": 110,
+    "location": 2,
+    "content": "经常听舞曲的小伙伴可能会留意到",
+    "music": 0
+  },
+  {
+    "from": 362.36,
+    "to": 365.57,
+    "sid": 111,
+    "location": 2,
+    "content": "很多舞曲除了原版original mix以外",
+    "music": 0
+  },
+  {
+    "from": 365.57,
+    "to": 370.56,
+    "sid": 112,
+    "location": 2,
+    "content": "经常还会有叫做extended mix或者club mix的加长版本",
+    "music": 0
+  },
+  {
+    "from": 370.56,
+    "to": 372.81,
+    "sid": 113,
+    "location": 2,
+    "content": "这些加长版本最大的特色",
+    "music": 0
+  },
+  {
+    "from": 372.81,
+    "to": 373.26,
+    "sid": 114,
+    "location": 2,
+    "content": "就是",
+    "music": 0
+  },
+  {
+    "from": 373.26,
+    "to": 373.74,
+    "sid": 115,
+    "location": 2,
+    "content": "拥有了",
+    "music": 0
+  },
+  {
+    "from": 373.74,
+    "to": 377.4,
+    "sid": 116,
+    "location": 2,
+    "content": "长达16~32小节的前奏和尾奏部分",
+    "music": 0
+  },
+  {
+    "from": 377.4,
+    "to": 380.91,
+    "sid": 117,
+    "location": 2,
+    "content": "这些强调古典弱化旋律的前奏与尾奏",
+    "music": 0
+  },
+  {
+    "from": 380.91,
+    "to": 384.88,
+    "sid": 118,
+    "location": 2,
+    "content": "主要是用以帮助DJ们更方便的混音接歌",
+    "music": 0
+  },
+  {
+    "from": 384.88,
+    "to": 387.28,
+    "sid": 119,
+    "location": 2,
+    "content": "例如大家耳熟能详的beautiful now",
+    "music": 0
+  },
+  {
+    "from": 387.28,
+    "to": 390.7,
+    "sid": 120,
+    "location": 2,
+    "content": "original mix的前奏已经有两小节",
+    "music": 0
+  },
+  {
+    "from": 393.06,
+    "to": 396.58,
+    "sid": 121,
+    "location": 2,
+    "content": "extended mix版本的则长达36小节",
+    "music": 0
+  },
+  {
+    "from": 419.78,
+    "to": 422.74,
+    "sid": 122,
+    "location": 2,
+    "content": "intro前奏部分过后更是first break down",
+    "music": 0.11510790952848879
+  },
+  {
+    "from": 422.74,
+    "to": 424.09,
+    "sid": 123,
+    "location": 2,
+    "content": "第一个间奏部分",
+    "music": 0.44444440917108363
+  },
+  {
+    "from": 424.09,
+    "to": 427.5,
+    "sid": 124,
+    "location": 2,
+    "content": "随着鼓点以及氛围的减弱以及旋律的明晰",
+    "music": 0
+  },
+  {
+    "from": 427.5,
+    "to": 430.02,
+    "sid": 125,
+    "location": 2,
+    "content": "人声各类合成器音色的进入",
+    "music": 0.11111110596708136
+  },
+  {
+    "from": 430.02,
+    "to": 433.47,
+    "sid": 126,
+    "location": 2,
+    "content": "整首歌曲的主题在听众面前呈现开来",
+    "music": 0
+  },
+  {
+    "from": 433.47,
+    "to": 438.58,
+    "sid": 127,
+    "location": 2,
+    "content": "第一个breakdown给听众最直观的感觉便是啊开始了",
+    "music": 0
+  },
+  {
+    "from": 438.58,
+    "to": 441.97,
+    "sid": 128,
+    "location": 2,
+    "content": "♪ There was a time you ♪",
+    "music": 0.9999999300699349
+  },
+  {
+    "from": 441.97,
+    "to": 450.66,
+    "sid": 129,
+    "location": 2,
+    "content": "♪ And i get faded together on the floor so high ♪",
+    "music": 0.9999999753086425
+  },
+  {
+    "from": 450.66,
+    "to": 453.5,
+    "sid": 130,
+    "location": 2,
+    "content": "♪ And i'll stay there forever ♪",
+    "music": 0.9999999528301909
+  },
+  {
+    "from": 453.5,
+    "to": 456.44,
+    "sid": 131,
+    "location": 2,
+    "content": "breakdown部分通常拥有16~32小节",
+    "music": 0
+  },
+  {
+    "from": 456.44,
+    "to": 458.18,
+    "sid": 132,
+    "location": 2,
+    "content": "也就是2~4个月剧",
+    "music": 0
+  },
+  {
+    "from": 458.18,
+    "to": 459.159,
+    "sid": 133,
+    "location": 2,
+    "content": "通常而言",
+    "music": 0
+  },
+  {
+    "from": 459.159,
+    "to": 461.139,
+    "sid": 134,
+    "location": 2,
+    "content": "每个越剧相较于前面一个",
+    "music": 0
+  },
+  {
+    "from": 461.139,
+    "to": 462.819,
+    "sid": 135,
+    "location": 2,
+    "content": "会通过增加诸如lapse",
+    "music": 0
+  },
+  {
+    "from": 462.819,
+    "to": 463.509,
+    "sid": 136,
+    "location": 2,
+    "content": "拍手",
+    "music": 0
+  },
+  {
+    "from": 463.509,
+    "to": 465.159,
+    "sid": 137,
+    "location": 2,
+    "content": "high had等各类progression",
+    "music": 0
+  },
+  {
+    "from": 465.159,
+    "to": 466.82,
+    "sid": 138,
+    "location": 2,
+    "content": "打击乐器等等的说法",
+    "music": 0
+  },
+  {
+    "from": 466.82,
+    "to": 468.65,
+    "sid": 139,
+    "location": 2,
+    "content": "产生一个渐进的效果",
+    "music": 0
+  },
+  {
+    "from": 468.65,
+    "to": 470.96,
+    "sid": 140,
+    "location": 2,
+    "content": "使得听觉感受逐渐丰富",
+    "music": 0
+  },
+  {
+    "from": 470.96,
+    "to": 472.92,
+    "sid": 141,
+    "location": 2,
+    "content": "能量层级坚强",
+    "music": 0
+  },
+  {
+    "from": 472.92,
+    "to": 476.46,
+    "sid": 142,
+    "location": 2,
+    "content": "乐曲的主题得以发展开来",
+    "music": 0.22695034656204016
+  },
+  {
+    "from": 477.86,
+    "to": 483.34,
+    "sid": 143,
+    "location": 2,
+    "content": "♪ I took the bottle a little taste of freedom ♪",
+    "music": 0.9999999683544314
+  },
+  {
+    "from": 483.34,
+    "to": 485.86,
+    "sid": 144,
+    "location": 2,
+    "content": "♪ But i got the feeling that ♪",
+    "music": 0.999999940476194
+  },
+  {
+    "from": 485.86,
+    "to": 488.05,
+    "sid": 145,
+    "location": 2,
+    "content": "♪ I'll be needing somebody ♪",
+    "music": 0.9999999354838751
+  },
+  {
+    "from": 488.05,
+    "to": 490.26,
+    "sid": 146,
+    "location": 2,
+    "content": "♪ I can lean on ♪",
+    "music": 0.9999999186991936
+  },
+  {
+    "from": 490.26,
+    "to": 493.02,
+    "sid": 147,
+    "location": 2,
+    "content": "接下来就到了承上启下的build up",
+    "music": 0
+  },
+  {
+    "from": 493.02,
+    "to": 494.13,
+    "sid": 148,
+    "location": 2,
+    "content": "渐进部分",
+    "music": 0
+  },
+  {
+    "from": 494.13,
+    "to": 497.05,
+    "sid": 149,
+    "location": 2,
+    "content": "在这一部分旋律会趋于简化",
+    "music": 0
+  },
+  {
+    "from": 497.05,
+    "to": 500.53,
+    "sid": 150,
+    "location": 2,
+    "content": "而打击乐器组的snare军鼓通通鼓",
+    "music": 0
+  },
+  {
+    "from": 500.53,
+    "to": 502.2,
+    "sid": 151,
+    "location": 2,
+    "content": "更强烈的class拍手",
+    "music": 0
+  },
+  {
+    "from": 502.2,
+    "to": 504.69,
+    "sid": 152,
+    "location": 2,
+    "content": "甚至kick低谷都纷纷加入进来",
+    "music": 0
+  },
+  {
+    "from": 504.69,
+    "to": 506.49,
+    "sid": 153,
+    "location": 2,
+    "content": "在八小节的build里",
+    "music": 0
+  },
+  {
+    "from": 506.49,
+    "to": 507.62,
+    "sid": 154,
+    "location": 2,
+    "content": "这些愈发密集",
+    "music": 0
+  },
+  {
+    "from": 507.62,
+    "to": 511.43,
+    "sid": 155,
+    "location": 2,
+    "content": "鼓点配上不断加强的riser等各类效果器",
+    "music": 0
+  },
+  {
+    "from": 511.43,
+    "to": 514.01,
+    "sid": 156,
+    "location": 2,
+    "content": "使得乐曲的能量层级持续增加",
+    "music": 0
+  },
+  {
+    "from": 514.01,
+    "to": 518.5,
+    "sid": 157,
+    "location": 2,
+    "content": "将整首乐曲逐渐推荐高潮部分",
+    "music": 0.20418847633016454
+  },
+  {
+    "from": 524.38,
+    "to": 530.44,
+    "sid": 158,
+    "location": 2,
+    "content": "♪ 啊啦啦啦啦 ♪",
+    "music": 0.9999999509803946
+  },
+  {
+    "from": 532.46,
+    "to": 534.72,
+    "sid": 159,
+    "location": 2,
+    "content": "在诸如big room house的曲风里",
+    "music": 0
+  },
+  {
+    "from": 534.72,
+    "to": 537.33,
+    "sid": 160,
+    "location": 2,
+    "content": "build up有时会把旋律完全抽离",
+    "music": 0
+  },
+  {
+    "from": 537.33,
+    "to": 540.52,
+    "sid": 161,
+    "location": 2,
+    "content": "把这个效果发挥得更为淋漓尽致",
+    "music": 0
+  },
+  {
+    "from": 553.05,
+    "to": 557.48,
+    "sid": 162,
+    "location": 2,
+    "content": "rain在随之而来的DP高潮部分",
+    "music": 0.4316353771679539
+  },
+  {
+    "from": 557.48,
+    "to": 560.09,
+    "sid": 163,
+    "location": 2,
+    "content": "伴随着lead主奏音色的强势进入",
+    "music": 0
+  },
+  {
+    "from": 560.09,
+    "to": 562.12,
+    "sid": 164,
+    "location": 2,
+    "content": "base与kick deque的交相辉映",
+    "music": 0
+  },
+  {
+    "from": 562.12,
+    "to": 565.63,
+    "sid": 165,
+    "location": 2,
+    "content": "简洁洗脑的旋律以震撼人心的音响效果",
+    "music": 0
+  },
+  {
+    "from": 565.63,
+    "to": 567.64,
+    "sid": 166,
+    "location": 2,
+    "content": "直冲云霄的能量层级",
+    "music": 0
+  },
+  {
+    "from": 567.64,
+    "to": 569.86,
+    "sid": 167,
+    "location": 2,
+    "content": "冲击到听众的耳膜",
+    "music": 0
+  },
+  {
+    "from": 569.86,
+    "to": 571.96,
+    "sid": 168,
+    "location": 2,
+    "content": "在这8~16小节里",
+    "music": 0
+  },
+  {
+    "from": 571.96,
+    "to": 573.97,
+    "sid": 169,
+    "location": 2,
+    "content": "你会感觉到已经站在了人声之巅",
+    "music": 0
+  },
+  {
+    "from": 573.97,
+    "to": 575.96,
+    "sid": 170,
+    "location": 2,
+    "content": "拥有了整个世界",
+    "music": 0
+  },
+  {
+    "from": 592.24,
+    "to": 595.32,
+    "sid": 171,
+    "location": 2,
+    "content": "高潮之后便进入第二个breakdown间奏部分",
+    "music": 0.07586206634959096
+  },
+  {
+    "from": 595.32,
+    "to": 597.78,
+    "sid": 172,
+    "location": 2,
+    "content": "我把它称之为贤者间奏",
+    "music": 0
+  },
+  {
+    "from": 597.78,
+    "to": 601.35,
+    "sid": 173,
+    "location": 2,
+    "content": "在这段16~32小节的breakdown贤者间奏里",
+    "music": 0
+  },
+  {
+    "from": 601.35,
+    "to": 602.37,
+    "sid": 174,
+    "location": 2,
+    "content": "强劲的古典",
+    "music": 0
+  },
+  {
+    "from": 602.37,
+    "to": 604.48,
+    "sid": 175,
+    "location": 2,
+    "content": "高亢的主奏全部退赛",
+    "music": 0
+  },
+  {
+    "from": 604.48,
+    "to": 606.78,
+    "sid": 176,
+    "location": 2,
+    "content": "回归到简单的旋律与人声",
+    "music": 0
+  },
+  {
+    "from": 606.78,
+    "to": 608.4,
+    "sid": 177,
+    "location": 2,
+    "content": "重生了乐曲的主题",
+    "music": 0
+  },
+  {
+    "from": 608.4,
+    "to": 610.02,
+    "sid": 178,
+    "location": 2,
+    "content": "听众就像无欲无求",
+    "music": 0
+  },
+  {
+    "from": 610.02,
+    "to": 611.32,
+    "sid": 179,
+    "location": 2,
+    "content": "胜如佛的贤者",
+    "music": 0
+  },
+  {
+    "from": 611.32,
+    "to": 613.12,
+    "sid": 180,
+    "location": 2,
+    "content": "享受着火山爆发般",
+    "music": 0
+  },
+  {
+    "from": 613.12,
+    "to": 613.93,
+    "sid": 181,
+    "location": 2,
+    "content": "高潮过后",
+    "music": 0
+  },
+  {
+    "from": 613.93,
+    "to": 616.24,
+    "sid": 182,
+    "location": 2,
+    "content": "片刻的宁静与抽离",
+    "music": 0
+  },
+  {
+    "from": 620.66,
+    "to": 622.48,
+    "sid": 183,
+    "location": 2,
+    "content": "♪ Comes the sun ♪",
+    "music": 0.9999998387097035
+  },
+  {
+    "from": 622.48,
+    "to": 624.44,
+    "sid": 184,
+    "location": 2,
+    "content": "♪ Comes the rain ♪",
+    "music": 0.9999998611111305
+  },
+  {
+    "from": 627.54,
+    "to": 629.42,
+    "sid": 185,
+    "location": 2,
+    "content": "当然贤者间奏",
+    "music": 0
+  },
+  {
+    "from": 629.42,
+    "to": 632.52,
+    "sid": 186,
+    "location": 2,
+    "content": "同时也是另一场暴风雨前的短暂宁静",
+    "music": 0
+  },
+  {
+    "from": 632.52,
+    "to": 634.11,
+    "sid": 187,
+    "location": 2,
+    "content": "在片刻的休息之后",
+    "music": 0
+  },
+  {
+    "from": 634.11,
+    "to": 637.56,
+    "sid": 188,
+    "location": 2,
+    "content": "随之而来的便是更猛烈的一段狂风暴雨",
+    "music": 0
+  },
+  {
+    "from": 637.56,
+    "to": 640.83,
+    "sid": 189,
+    "location": 2,
+    "content": "在紧随其后的第二轮buildup和drop中",
+    "music": 0
+  },
+  {
+    "from": 640.83,
+    "to": 644.04,
+    "sid": 190,
+    "location": 2,
+    "content": "有时会基于第一轮的基础上进行旋律",
+    "music": 0
+  },
+  {
+    "from": 644.04,
+    "to": 645.99,
+    "sid": 191,
+    "location": 2,
+    "content": "base或古典的变化",
+    "music": 0
+  },
+  {
+    "from": 645.99,
+    "to": 647.94,
+    "sid": 192,
+    "location": 2,
+    "content": "或再加一些新的音乐元素",
+    "music": 0
+  },
+  {
+    "from": 647.94,
+    "to": 651.82,
+    "sid": 193,
+    "location": 2,
+    "content": "使整首乐曲的听觉感受和音响效果更多样化",
+    "music": 0
+  },
+  {
+    "from": 651.82,
+    "to": 655.84,
+    "sid": 194,
+    "location": 2,
+    "content": "♪ And my heart is what i do will i learn to love again ♪",
+    "music": 0.9999999709302334
+  },
+  {
+    "from": 655.84,
+    "to": 656.56,
+    "sid": 195,
+    "location": 2,
+    "content": "♪ The rule ♪",
+    "music": 0.9999997826087429
+  },
+  {
+    "from": 656.56,
+    "to": 657.92,
+    "sid": 196,
+    "location": 2,
+    "content": "♪ What we memory ♪",
+    "music": 0.999999903846163
+  },
+  {
+    "from": 670.68,
+    "to": 672.17,
+    "sid": 197,
+    "location": 2,
+    "content": "第二轮的drop过后",
+    "music": 0
+  },
+  {
+    "from": 672.17,
+    "to": 674.39,
+    "sid": 198,
+    "location": 2,
+    "content": "乐曲的主要内容就基本结束了",
+    "music": 0
+  },
+  {
+    "from": 674.39,
+    "to": 676.92,
+    "sid": 199,
+    "location": 2,
+    "content": "进入了ultra尾奏部分",
+    "music": 0
+  },
+  {
+    "from": 676.92,
+    "to": 678.36,
+    "sid": 200,
+    "location": 2,
+    "content": "这一部分的听觉感受",
+    "music": 0
+  },
+  {
+    "from": 678.36,
+    "to": 681.06,
+    "sid": 201,
+    "location": 2,
+    "content": "与开头的intro前奏部分十分相似",
+    "music": 0
+  },
+  {
+    "from": 681.06,
+    "to": 684.42,
+    "sid": 202,
+    "location": 2,
+    "content": "主要是以简单的鼓组乐器或旋律呈现",
+    "music": 0.1381578901921951
+  },
+  {
+    "from": 684.42,
+    "to": 685.29,
+    "sid": 203,
+    "location": 2,
+    "content": "不同的是",
+    "music": 0
+  },
+  {
+    "from": 685.29,
+    "to": 687.75,
+    "sid": 204,
+    "location": 2,
+    "content": "intro部分的元素是不断增加的",
+    "music": 0
+  },
+  {
+    "from": 687.75,
+    "to": 690.14,
+    "sid": 205,
+    "location": 2,
+    "content": "能量层级是渐强的",
+    "music": 0
+  },
+  {
+    "from": 690.14,
+    "to": 692.06,
+    "sid": 206,
+    "location": 2,
+    "content": "而ultra部分则与之相反",
+    "music": 0
+  },
+  {
+    "from": 692.06,
+    "to": 693.02,
+    "sid": 207,
+    "location": 2,
+    "content": "都是慢慢减弱",
+    "music": 0
+  },
+  {
+    "from": 693.02,
+    "to": 697.16,
+    "sid": 208,
+    "location": 2,
+    "content": "归于平静的",
+    "music": 0.3728813243321173
+  },
+  {
+    "from": 698.22,
+    "to": 699.62,
+    "sid": 209,
+    "location": 2,
+    "content": "如前面所言",
+    "music": 0.24999997596154075
+  },
+  {
+    "from": 699.62,
+    "to": 701.99,
+    "sid": 210,
+    "location": 2,
+    "content": "在部分舞曲的extended mix版本中",
+    "music": 0.45283016731934794
+  },
+  {
+    "from": 701.99,
+    "to": 705.68,
+    "sid": 211,
+    "location": 2,
+    "content": "会有长达16~32小节的ultra尾奏",
+    "music": 0.1030302999081838
+  },
+  {
+    "from": 705.68,
+    "to": 708.83,
+    "sid": 212,
+    "location": 2,
+    "content": "它一般会保留相当能量层级的古典",
+    "music": 0.0588235272491252
+  },
+  {
+    "from": 708.83,
+    "to": 712.26,
+    "sid": 213,
+    "location": 2,
+    "content": "主要是为了让DJ有更充裕的素材与时间",
+    "music": 0.03999999866666823
+  },
+  {
+    "from": 712.26,
+    "to": 714.42,
+    "sid": 214,
+    "location": 2,
+    "content": "可以衔接播放下一首舞曲",
+    "music": 0.2211538355214208
+  },
+  {
+    "from": 717.24,
+    "to": 719.89,
+    "sid": 215,
+    "location": 2,
+    "content": "好了以上就是这期视频的全部内容",
+    "music": 0
+  },
+  {
+    "from": 719.89,
+    "to": 723.16,
+    "sid": 216,
+    "location": 2,
+    "content": "下期视频我将为大家带来EDM电子舞曲",
+    "music": 0
+  },
+  {
+    "from": 723.16,
+    "to": 724.75,
+    "sid": 217,
+    "location": 2,
+    "content": "音色配器的介绍",
+    "music": 0
+  },
+  {
+    "from": 724.75,
+    "to": 726.56,
+    "sid": 218,
+    "location": 2,
+    "content": "大家敬请关注",
+    "music": 0
+  },
+  {
+    "from": 726.56,
+    "to": 728.9,
+    "sid": 219,
+    "location": 2,
+    "content": "最后祝大家蹦迪开心",
+    "music": 0
+  }
+]

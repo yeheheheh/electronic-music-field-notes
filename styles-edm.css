@@ -1,0 +1,4145 @@
+/* ==========================================================================
+   CLUB RIG — visual system v3
+   Loaded after styles.css and intentionally overrides it.
+
+   Grammar, not decoration:
+   · one bar = 16 steps; every page is measured in bars, beats and channels
+   · colour is a signal (amber = position/action, laser = live/alert, ice = reference)
+   · surfaces are hairline-ruled, not card-stacked
+   · motion is quantised like a sequencer, and only runs while something is playing
+   ========================================================================== */
+
+:root {
+  --ink: #060607;
+  --ink-2: #0a0b0d;
+  --panel: #0d0f11;
+  --panel-2: #121418;
+  --paper: #f2ede3;
+  --muted: #b3aea4;
+  --muted-2: #8d8980;
+  --line: rgba(242, 237, 227, 0.1);
+  --line-strong: rgba(242, 237, 227, 0.22);
+  --sodium: #ffb000;
+  --laser: #ff2e63;
+  --cyan: #2fd8ff;
+  --heat: #ff5c1a;
+  --violet: var(--laser);
+  --violet-text: #ff7397;
+  --heat-text: #ff9b62;
+  --phosphor: var(--sodium);
+  --ice: var(--cyan);
+  --archive: #5d5b57;
+  --shadow: 0 40px 90px rgba(0, 0, 0, 0.55);
+  --font-display: "Bahnschrift", "Bahnschrift SemiCondensed", "Arial Narrow", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-body: "Segoe UI Variable Text", "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-mono: "Cascadia Mono", "Consolas", "SFMono-Regular", "Roboto Mono", monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --snap: cubic-bezier(0.2, 0.9, 0.15, 1);
+  --cut: cubic-bezier(1, 0, 0, 1);
+  --bpm: 128;
+  --beat: calc(60s / var(--bpm));
+  --header-h: 64px;
+}
+
+/* --------------------------------------------------------------------------
+   Floor: a measured grid, not a gradient wash
+   -------------------------------------------------------------------------- */
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 15.5px;
+  line-height: 1.72;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 176, 0, 0.07), transparent 18%),
+    repeating-linear-gradient(90deg, rgba(242, 237, 227, 0.026) 0 1px, transparent 1px 120px),
+    var(--ink);
+}
+
+body::after {
+  content: none;
+}
+
+::selection {
+  background: var(--sodium);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--sodium);
+  outline-offset: 2px;
+}
+
+.site-shell {
+  width: min(100%, 1560px);
+  padding: 0 clamp(18px, 4vw, 52px);
+}
+
+/* Sections are beats, not chapters: keep the gap tight so the rail keeps moving. */
+.section {
+  padding: clamp(38px, 4.4vw, 64px) 0;
+}
+
+.section-head {
+  margin-bottom: 18px;
+}
+
+/* One meter, one colour. Family tone survives only as the cap of each bar. */
+.spectrum-bars {
+  background-image: linear-gradient(to top, var(--line) 1px, transparent 1px);
+  background-size: 100% 25%;
+}
+
+.spectrum-bar .bar {
+  background: linear-gradient(180deg, var(--family) 0 3px, var(--sodium) 3px);
+  opacity: 0.5;
+  animation: none;
+  transform-origin: bottom;
+  transition: opacity 0.12s var(--cut);
+}
+
+.spectrum-bar:hover .bar,
+.spectrum-bar:focus-visible .bar {
+  opacity: 1;
+  filter: none;
+}
+
+.spectrum-legend a {
+  font-size: 8.5px;
+}
+
+.spectrum-legend a span {
+  color: var(--muted-2);
+}
+
+/* Home knowledge: flat index rows instead of four bordered tiles */
+.knowledge-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.knowledge-link {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 14px;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px 13px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  background: none;
+  transition: background 0.1s var(--cut);
+}
+
+.knowledge-link:nth-child(4n) {
+  border-right: 0;
+}
+
+.knowledge-link:hover {
+  background: rgba(242, 237, 227, 0.03);
+}
+
+.knowledge-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line);
+  color: var(--sodium);
+}
+
+.knowledge-link strong {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+}
+
+.knowledge-link small {
+  font-size: 10.5px;
+  color: var(--muted-2);
+}
+
+.knowledge-quick {
+  margin-top: 14px;
+}
+
+/* Practice / lab entry slabs */
+.tool-band {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid var(--line-strong);
+}
+
+.tool-slab {
+  position: relative;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: var(--ink-2);
+  padding: 18px 20px;
+  transition: background 0.1s var(--cut);
+}
+
+.tool-slab:last-child {
+  border-right: 0;
+}
+
+.tool-slab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--sodium);
+  opacity: 0.7;
+}
+
+.tool-slab.is-lab::before {
+  background: var(--cyan);
+}
+
+.tool-slab:hover {
+  background: rgba(242, 237, 227, 0.035);
+}
+
+.tool-slab strong {
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.tool-slab small {
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.tool-slab-cta {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: var(--sodium);
+}
+
+.tool-slab.is-lab .tool-slab-cta {
+  color: var(--cyan);
+}
+
+/* --------------------------------------------------------------------------
+   Type: condensed display, tabular data, no decorative English labels
+   -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.mono-label {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--muted-2);
+}
+
+.mono-label:empty {
+  display: none;
+}
+
+.section-kicker,
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sodium);
+}
+
+.section-kicker::before,
+.hero-kicker::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--sodium);
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.section-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition: color 0.12s var(--cut), border-color 0.12s var(--cut);
+}
+
+.section-link:hover {
+  color: var(--sodium);
+  border-color: var(--sodium);
+}
+
+/* Guide / about pages share the same compact header scale as the app pages. */
+.guide-hero,
+.about-hero,
+.atlas-hero {
+  padding: clamp(24px, 3.4vw, 40px) 0 clamp(16px, 2vw, 24px);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.atlas-hero h1,
+.guide-hero h1,
+.about-hero h1 {
+  margin-top: 10px;
+  font-size: clamp(1.7rem, 2.9vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.guide-hero h1 em,
+.about-hero h1 em {
+  font-style: normal;
+  color: var(--sodium);
+  background: none;
+  -webkit-text-fill-color: var(--sodium);
+}
+
+.guide-hero .hero-lead,
+.about-hero .hero-lead {
+  max-width: 70ch;
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.72;
+}
+
+.guide-note {
+  max-width: 72ch;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-left: 2px solid var(--cyan);
+  font-size: 11.5px;
+  color: var(--muted-2);
+}
+
+.guide-body {
+  padding-top: 20px;
+}
+
+/* Detail pages keep a large name — that is the one place a word can be big. */
+.detail,
+.lesson-page,
+.library-body,
+.search-body,
+.course-body,
+.lab-body,
+.practice-body {
+  padding-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Header: a rack unit with a live transport along its bottom edge
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  min-height: var(--header-h);
+  background: rgba(6, 6, 7, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px) saturate(120%);
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(14px, 2.6vw, 38px);
+}
+
+.site-header::after {
+  content: none;
+}
+
+.brand-mark {
+  width: 26px;
+  height: 22px;
+  gap: 2px;
+}
+
+.brand-mark span {
+  width: 3px;
+}
+
+.brand-type strong {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.brand-type small {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.3em;
+  color: var(--sodium);
+}
+
+.brand:hover .brand-mark span {
+  animation-duration: calc(var(--beat) * 0.5);
+}
+
+.site-nav a {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  padding: 6px 0;
+  transition: color 0.12s var(--cut);
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--sodium);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.16s var(--snap);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--paper);
+}
+
+.site-nav a[aria-current="page"]::after,
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.header-actions {
+  gap: 10px;
+}
+
+/* Real FFT meter — twelve bars fed from the master bus. */
+.header-meter {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  width: 46px;
+  height: 20px;
+  margin-right: 2px;
+}
+
+.header-meter i {
+  flex: 1 1 0;
+  height: 100%;
+  background: linear-gradient(180deg, var(--laser), var(--sodium) 62%);
+  transform: scaleY(var(--level, 0.06));
+  transform-origin: bottom;
+  transition: transform 0.07s linear;
+  opacity: 0.9;
+}
+
+.header-progress {
+  border-radius: 0;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--sodium);
+  letter-spacing: 0.1em;
+}
+
+.header-progress i {
+  background: var(--sodium);
+}
+
+.header-progress:hover {
+  background: rgba(255, 176, 0, 0.1);
+}
+
+.header-search input {
+  border-bottom: 1px solid var(--line-strong);
+  border-radius: 0;
+  font-size: 11px;
+}
+
+.header-search input:focus {
+  border-color: var(--sodium);
+}
+
+.sound-toggle,
+.search-open,
+.menu-toggle {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  transition: border-color 0.12s var(--cut), color 0.12s var(--cut);
+}
+
+.sound-toggle:hover,
+.search-open:hover,
+.menu-toggle:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.transport {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255, 176, 0, 0.5) 0 1px, transparent 1px 25%),
+    repeating-linear-gradient(90deg, rgba(242, 237, 227, 0.16) 0 1px, transparent 1px 6.25%);
+}
+
+.transport-head {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 2px;
+  height: 6px;
+  background: var(--laser);
+  box-shadow: 0 0 10px rgba(255, 46, 99, 0.85);
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.transport.is-playing .transport-head {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Controls: square, hard-edged, quantised
+   -------------------------------------------------------------------------- */
+
+.button-primary,
+.button-ghost {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.1s var(--cut), color 0.1s var(--cut), border-color 0.1s var(--cut);
+}
+
+.button-primary {
+  border-color: var(--sodium);
+  background: var(--sodium);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.button-primary:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+}
+
+.button-ghost {
+  color: var(--paper);
+}
+
+.button-ghost:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.segment {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 11px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.07em;
+  color: var(--muted-2);
+  cursor: pointer;
+  transition: color 0.1s var(--cut), border-color 0.1s var(--cut), background 0.1s var(--cut);
+}
+
+.segment:hover {
+  color: var(--paper);
+  border-color: var(--sodium);
+}
+
+.segment.is-active {
+  background: var(--sodium);
+  border-color: var(--sodium);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.chip {
+  border-radius: 0;
+  border-color: var(--line);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  transition: border-color 0.1s var(--cut), color 0.1s var(--cut);
+}
+
+.chip:hover {
+  border-color: var(--sodium);
+  color: var(--paper);
+}
+
+.chip.is-done {
+  border-color: rgba(255, 176, 0, 0.4);
+  color: var(--sodium);
+}
+
+kbd {
+  display: inline-block;
+  min-width: 18px;
+  padding: 1px 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Page header — replaces the repeated slogan hero on every inner route
+   -------------------------------------------------------------------------- */
+
+.page-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: end;
+  gap: clamp(18px, 3vw, 44px);
+  padding: clamp(26px, 3.6vw, 44px) 0 clamp(16px, 2vw, 24px);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.page-head-index {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 4px;
+}
+
+.page-head-code {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 3.4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 0.78;
+  letter-spacing: -0.05em;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.page-head-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  color: var(--muted-2);
+}
+
+.page-head-copy h1 {
+  font-size: clamp(1.8rem, 2.9vw, 2.7rem);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+}
+
+.page-head-copy p {
+  max-width: 66ch;
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.page-head-stats {
+  display: flex;
+  gap: clamp(16px, 2.2vw, 30px);
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.page-head-stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+
+.page-head-stats dt {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+
+.page-head-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.7vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--paper);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.page-head-stats dd span {
+  font-size: 0.62em;
+  color: var(--muted-2);
+}
+
+.page-head-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: end;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--sodium);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--sodium);
+  white-space: nowrap;
+  transition: background 0.1s var(--cut), color 0.1s var(--cut);
+}
+
+.page-head-action:hover {
+  background: var(--sodium);
+  color: var(--ink);
+}
+
+.page-head-action .ui-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Home hero — the only place a full flyer headline belongs
+   -------------------------------------------------------------------------- */
+
+.hero.hero-home {
+  position: relative;
+  min-height: 0;
+  padding: clamp(44px, 6vw, 84px) 0 clamp(40px, 5vw, 66px);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.hero.hero-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(242, 237, 227, 0.13) 1px, transparent 1px);
+  background-size: 7px 7px;
+  mask-image: radial-gradient(120% 78% at 88% 4%, #000 0%, transparent 62%);
+  opacity: 0.5;
+}
+
+.hero-home .hero-topline {
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.hero-home .hero-title {
+  font-size: clamp(2.9rem, 6vw, 7.4rem);
+  line-height: 0.84;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+}
+
+.hero-home .hero-title em {
+  color: var(--sodium);
+  text-shadow:
+    3px 0 0 rgba(255, 46, 99, 0.5),
+    -2px 2px 0 rgba(47, 216, 255, 0.28);
+  -webkit-text-fill-color: var(--sodium);
+}
+
+.hero-home .hero-lead {
+  max-width: 60ch;
+  margin-top: clamp(18px, 2.4vw, 28px);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 26px;
+  gap: 10px;
+}
+
+.hero-index {
+  gap: 14px 26px;
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-index strong {
+  font-size: 1.3rem;
+}
+
+.hero-home .hero-note {
+  margin-top: 16px;
+  padding-left: 10px;
+  border-left: 2px solid var(--sodium);
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+/* Drum console becomes a channel strip, not a floating card. */
+.hero-console {
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  background: var(--ink-2);
+  box-shadow: none;
+}
+
+.hero-console::before {
+  height: 2px;
+  background: linear-gradient(90deg, var(--sodium), var(--laser) 58%, var(--cyan));
+}
+
+.console-top,
+.console-heading,
+.console-sequencer,
+.console-actions,
+.console-foot {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.console-top {
+  padding-top: 12px;
+}
+
+.console-heading h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.console-step {
+  height: 24px;
+  border-radius: 0;
+  transition: background 0.08s var(--cut), border-color 0.08s var(--cut), box-shadow 0.08s var(--cut);
+}
+
+.console-step.is-on {
+  box-shadow: 0 0 10px rgba(255, 176, 0, 0.3);
+}
+
+.console-step.is-playhead {
+  transform: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 1px var(--cyan) inset, 0 0 16px rgba(47, 216, 255, 0.5);
+}
+
+.console-play {
+  border-radius: 0;
+  min-height: 38px;
+}
+
+/* --------------------------------------------------------------------------
+   Home path: 8 rows, compressed to a tracklist
+   -------------------------------------------------------------------------- */
+
+.home-path-head {
+  align-items: end;
+}
+
+.stage-list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.stage-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto 16px;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 10px 11px 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.1s var(--cut);
+}
+
+.stage-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--family);
+  opacity: 0;
+  transition: opacity 0.1s var(--cut);
+}
+
+.stage-row:hover,
+.stage-row.is-current {
+  background: rgba(242, 237, 227, 0.028);
+}
+
+.stage-row:hover::before,
+.stage-row.is-current::before {
+  opacity: 1;
+}
+
+.stage-row-index {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.stage-row.is-current .stage-row-index {
+  color: var(--sodium);
+}
+
+.stage-row.is-complete .stage-row-index {
+  color: var(--family);
+}
+
+.stage-row-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.stage-row-copy strong {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.stage-row-copy small {
+  overflow: hidden;
+  font-size: 11px;
+  color: var(--muted-2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stage-row-kicker {
+  display: none;
+}
+
+.stage-row-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.stage-row-meter i {
+  width: 5px;
+  height: 14px;
+  background: rgba(242, 237, 227, 0.12);
+}
+
+.stage-row-meter i.is-done {
+  background: var(--family);
+}
+
+.stage-row-meter i.is-next {
+  background: var(--sodium);
+  box-shadow: 0 0 8px rgba(255, 176, 0, 0.55);
+}
+
+.stage-row-meter em {
+  margin-left: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-style: normal;
+  color: var(--muted-2);
+}
+
+.stage-row-enter {
+  color: var(--muted-2);
+  transition: color 0.1s var(--cut), transform 0.12s var(--snap);
+}
+
+.stage-row:hover .stage-row-enter {
+  color: var(--sodium);
+  transform: translate(2px, -2px);
+}
+
+/* --------------------------------------------------------------------------
+   Course map: one path deck + flat tracklist
+   -------------------------------------------------------------------------- */
+
+.learn-head {
+  padding-bottom: 8px;
+}
+
+.path-deck {
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(242, 237, 227, 0.022), transparent 72%);
+}
+
+.path-deck-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.path-deck-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--sodium);
+}
+
+.path-deck-count {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.path-deck-filters {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.path-ruler.is-interactive {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.8vw, 22px);
+  height: 46px;
+  padding: 10px 14px;
+  background: none;
+}
+
+.path-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 3px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.path-tick {
+  flex: 0 0 9px;
+  width: 9px;
+  min-width: 0;
+  height: 100%;
+  background: rgba(242, 237, 227, 0.1);
+  transition: background 0.1s var(--cut), box-shadow 0.1s var(--cut);
+}
+
+.path-readout {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+
+.path-readout strong {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.path-tick:hover {
+  background: var(--paper);
+  box-shadow: 0 0 0 1px rgba(242, 237, 227, 0.35);
+}
+
+.path-tick.is-done {
+  background: var(--sodium);
+}
+
+.path-tick.is-next {
+  background: var(--laser);
+  box-shadow: 0 0 10px rgba(255, 46, 99, 0.6);
+}
+
+.path-deck-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 14px 10px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.path-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.path-legend i {
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  background: rgba(242, 237, 227, 0.12);
+}
+
+.path-legend i:first-child {
+  margin-left: 0;
+}
+
+.path-legend i.is-done {
+  background: var(--sodium);
+}
+
+.path-legend i.is-next {
+  background: var(--laser);
+}
+
+.course-tracklist {
+  border-top: 1px solid var(--line-strong);
+}
+
+.stage-card {
+  position: relative;
+  padding: 18px 0 4px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+}
+
+.stage-card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 3px;
+  height: 30px;
+  background: var(--family);
+  opacity: 0.7;
+}
+
+.stage-card.is-current::before {
+  height: 42px;
+  opacity: 1;
+  box-shadow: 0 0 14px var(--family);
+}
+
+.stage-card-head {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 14px;
+  padding-left: 16px;
+}
+
+.stage-card-index {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--family);
+  font-variant-numeric: tabular-nums;
+}
+
+.stage-card-title h2 {
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  letter-spacing: -0.02em;
+}
+
+.stage-card-title p {
+  margin-top: 4px;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--muted-2);
+}
+
+.stage-card-meter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.stage-card-meter strong {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.stage-meter-bars {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.stage-meter-bars i {
+  display: block;
+  width: 8px;
+  height: 12px;
+  background: rgba(242, 237, 227, 0.12);
+}
+
+.stage-meter-bars i.is-done {
+  background: var(--family, var(--sodium));
+}
+
+.stage-card .stage-meter-bars i.is-done {
+  background: var(--family);
+}
+
+.stage-meter-bars i.is-next {
+  background: var(--sodium);
+  box-shadow: 0 0 8px rgba(255, 176, 0, 0.5);
+}
+
+.stage-card-outcome {
+  display: none;
+}
+
+.stage-card-lessons {
+  margin-top: 8px;
+  padding-left: 16px;
+}
+
+.track-lesson {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 42px 54px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px 9px 0;
+  border-top: 1px solid var(--line);
+  transition: background 0.1s var(--cut);
+}
+
+.track-lesson:first-child {
+  border-top: 0;
+}
+
+.track-lesson:hover {
+  background: rgba(242, 237, 227, 0.035);
+}
+
+.track-lesson-index {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.track-lesson-copy strong {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--paper);
+}
+
+.track-lesson-copy small {
+  margin-top: 1px;
+  font-size: 10.5px;
+  color: var(--muted-2);
+}
+
+.track-lesson-minutes {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  text-align: right;
+}
+
+.track-lesson-state {
+  display: inline-flex;
+  justify-content: flex-end;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.track-lesson.is-done .track-lesson-index,
+.track-lesson.is-done .track-lesson-state {
+  color: var(--sodium);
+}
+
+.track-lesson.is-current {
+  background: rgba(255, 176, 0, 0.06);
+}
+
+.track-lesson.is-current .track-lesson-index,
+.track-lesson.is-current .track-lesson-state {
+  color: var(--sodium);
+}
+
+.course-empty {
+  padding: 28px 0;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+.course-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.course-footer p {
+  max-width: 70ch;
+  font-size: 11.5px;
+  color: var(--muted-2);
+}
+
+/* --------------------------------------------------------------------------
+   Library: a rack index instead of six equal marketing cards
+   -------------------------------------------------------------------------- */
+
+.library-body {
+  padding-top: 22px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 4px 0 14px;
+  border: 1px solid var(--line-strong);
+  background: rgba(242, 237, 227, 0.02);
+  transition: border-color 0.1s var(--cut);
+}
+
+.search-bar:focus-within {
+  border-color: var(--sodium);
+}
+
+.search-bar.is-large {
+  height: 60px;
+}
+
+.search-bar-icon {
+  display: inline-flex;
+  color: var(--muted-2);
+}
+
+.search-bar input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: none;
+  font-size: 14px;
+  color: var(--paper);
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: var(--muted-2);
+}
+
+.search-bar button {
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 0;
+  background: var(--sodium);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.1s var(--cut);
+}
+
+.search-bar button:hover {
+  background: var(--paper);
+}
+
+.tool-index {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.tool-index-row {
+  display: grid;
+  grid-template-columns: 34px 34px minmax(0, 1fr) 74px 14px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 6px 12px 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.1s var(--cut), padding-left 0.12s var(--snap);
+}
+
+.tool-index-row:hover {
+  padding-left: 6px;
+  background: rgba(242, 237, 227, 0.03);
+}
+
+.tool-index-num {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.tool-index-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  color: var(--sodium);
+}
+
+.tool-index-row:hover .tool-index-icon {
+  border-color: var(--sodium);
+}
+
+.tool-index-copy strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--paper);
+}
+
+.tool-index-copy small {
+  display: block;
+  margin-top: 1px;
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.tool-index-meta {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+  text-align: right;
+}
+
+.tool-index-row .ui-icon:last-child {
+  color: var(--muted-2);
+}
+
+.tool-index-row:hover .ui-icon:last-child {
+  color: var(--sodium);
+}
+
+.cross-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--cyan);
+  background: rgba(47, 216, 255, 0.04);
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.cross-note-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+}
+
+.cross-note a {
+  color: var(--cyan);
+  border-bottom: 1px solid rgba(47, 216, 255, 0.4);
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.library-body .family-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.family-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  background: none;
+  padding: 14px 16px 14px;
+  transition: background 0.1s var(--cut);
+}
+
+.family-card:nth-child(3n) {
+  border-right: 0;
+}
+
+.library-body .family-card:nth-child(4n) {
+  border-right: 0;
+}
+
+.family-card:hover {
+  background: rgba(242, 237, 227, 0.03);
+}
+
+.family-card::before {
+  height: 2px;
+  opacity: 0.55;
+}
+
+.family-card:hover::before {
+  opacity: 1;
+}
+
+.family-card h3,
+.family-card h2 {
+  margin-top: 8px;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.family-card .family-zh {
+  margin-top: 2px;
+  font-size: 10.5px;
+}
+
+.family-card p {
+  margin-top: 8px;
+  font-size: 11.5px;
+  line-height: 1.62;
+  color: var(--muted-2);
+  -webkit-line-clamp: 3;
+}
+
+.family-card .family-card-foot {
+  padding-top: 10px;
+  font-size: 8px;
+}
+
+/* The taxonomy tree is a signal path, not a purple panel. */
+.tree-panel {
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--ink-2);
+}
+
+.tree-family {
+  padding: 6px 3px;
+}
+
+.tree-family-link {
+  font-size: 9.5px;
+}
+
+.tree-family.is-selected {
+  background: rgba(255, 176, 0, 0.07);
+}
+
+/* --------------------------------------------------------------------------
+   Search
+   -------------------------------------------------------------------------- */
+
+.search-console {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0 18px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.search-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.search-filter {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+  line-height: 24px;
+  transition: color 0.1s var(--cut), border-color 0.1s var(--cut);
+}
+
+.search-filter:hover {
+  color: var(--paper);
+  border-color: var(--sodium);
+}
+
+.search-filter.is-active {
+  background: var(--sodium);
+  border-color: var(--sodium);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.course-match-panel {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 16px 0 4px;
+  padding: 10px 12px;
+  border-left: 2px solid var(--laser);
+  background: rgba(255, 46, 99, 0.05);
+}
+
+.course-match-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--laser);
+  white-space: nowrap;
+}
+
+.search-result {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  padding: 14px 4px;
+  transition: background 0.1s var(--cut), padding-left 0.12s var(--snap);
+}
+
+.search-result:hover {
+  padding-left: 10px;
+  background: rgba(242, 237, 227, 0.028);
+}
+
+.search-result h3 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.result-open {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.search-result:hover .result-open {
+  color: var(--sodium);
+}
+
+/* --------------------------------------------------------------------------
+   Lesson: a brief, one task, one checklist, one completion gate
+   -------------------------------------------------------------------------- */
+
+.lesson-page {
+  padding-top: 10px;
+}
+
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted-2);
+}
+
+.lesson-head {
+  padding: clamp(20px, 3vw, 34px) 0 18px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.lesson-head-index {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.lesson-stage-code {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--sodium);
+}
+
+.lesson-stage-name {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+}
+
+.lesson-head h1 {
+  font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.lesson-sub {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.lesson-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+}
+
+.lesson-meta-item.is-done {
+  padding: 2px 7px;
+  border: 1px solid rgba(255, 176, 0, 0.45);
+  color: var(--sodium);
+}
+
+.lesson-brief {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.brief-cell {
+  padding: 16px 18px 16px 0;
+}
+
+.brief-cell + .brief-cell {
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+}
+
+.brief-label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--sodium);
+}
+
+.brief-cell p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--paper);
+}
+
+.lesson-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 268px;
+  gap: clamp(24px, 4vw, 56px);
+  padding-top: 26px;
+}
+
+.lesson-concept p {
+  margin: 0 0 14px;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.lesson-concept p:first-child {
+  color: var(--paper);
+}
+
+.lesson-keyterms {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 4px 0 18px;
+}
+
+.lesson-task {
+  position: relative;
+  margin: 22px 0 18px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--sodium);
+  background: rgba(255, 176, 0, 0.05);
+}
+
+.lesson-task h2 {
+  margin: 6px 0 8px;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+}
+
+.lesson-task p {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--paper);
+}
+
+.lesson-checkpoints {
+  margin: 0 0 20px;
+  border: 1px solid var(--line-strong);
+}
+
+.check-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.check-head h2 {
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.check-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-item {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+  transition: background 0.1s var(--cut);
+}
+
+.check-item:first-child {
+  border-top: 0;
+}
+
+.check-item:hover {
+  background: rgba(242, 237, 227, 0.03);
+}
+
+.check-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.check-box {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  transition: background 0.08s var(--cut), border-color 0.08s var(--cut);
+}
+
+.check-box .ui-icon {
+  width: 11px;
+  height: 11px;
+  stroke-width: 2.6;
+}
+
+.check-item.is-done .check-box {
+  border-color: var(--sodium);
+  background: var(--sodium);
+}
+
+.check-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.check-item.is-done .check-text {
+  color: var(--muted-2);
+  text-decoration: line-through;
+  text-decoration-color: rgba(242, 237, 227, 0.25);
+}
+
+.lesson-kb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.lesson-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 2px;
+}
+
+.lesson-progress,
+.lesson-prereqs,
+.lesson-outline {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lesson-progress-note {
+  margin: 0;
+  font-size: 10.5px;
+  color: var(--muted-2);
+}
+
+.aside-relation-note {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted-2);
+}
+
+.aside-relation-note.is-warn {
+  padding-left: 8px;
+  border-left: 2px solid var(--laser);
+  color: var(--heat-text);
+}
+
+.lesson-outline-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 8px;
+  padding: 5px 0;
+  border-top: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--muted-2);
+  transition: color 0.1s var(--cut);
+}
+
+.lesson-outline-item span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+
+.lesson-outline-item:hover {
+  color: var(--paper);
+}
+
+.lesson-outline-item.is-current {
+  color: var(--sodium);
+}
+
+.lesson-outline-item.is-done span {
+  color: var(--sodium);
+}
+
+/* Action bar reads as the master channel strip. */
+.lesson-actionbar {
+  background: rgba(8, 9, 10, 0.97);
+  border-top: 1px solid var(--line-strong);
+  backdrop-filter: blur(16px);
+}
+
+.lesson-action-complete {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+  background: var(--sodium);
+  border: 1px solid var(--sodium);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  transition: background 0.1s var(--cut);
+}
+
+.lesson-action-complete small {
+  padding-left: 8px;
+  border-left: 1px solid rgba(6, 6, 7, 0.3);
+  font-size: 9px;
+  opacity: 0.75;
+}
+
+.lesson-action-complete:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+}
+
+.lesson-action-complete.is-complete {
+  background: transparent;
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.lesson-action-step {
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Lab: seven channel strips
+   -------------------------------------------------------------------------- */
+
+.lab-body {
+  padding-top: 22px;
+}
+
+.lab-deck {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--ink-2);
+}
+
+.lab-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--sodium);
+  background: var(--sodium);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.1s var(--cut);
+}
+
+.lab-play:hover,
+.lab-play.is-playing {
+  background: var(--paper);
+  border-color: var(--paper);
+}
+
+.lab-bpm {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lab-bpm-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--muted-2);
+}
+
+.lab-bpm output {
+  min-width: 30px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-deck-actions {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.lab-hint {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.lab-channels {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.lab-channel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 12px 14px;
+  background: var(--ink-2);
+  transition: background 0.12s var(--cut), opacity 0.12s var(--cut);
+}
+
+.lab-channel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--family);
+  opacity: 0.18;
+  transition: opacity 0.12s var(--cut);
+}
+
+.lab-channel.is-on::before {
+  opacity: 1;
+  box-shadow: 0 0 12px var(--family);
+}
+
+.lab-channel.is-dim {
+  opacity: 0.32;
+}
+
+.lab-channel-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lab-channel-num {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--muted-2);
+}
+
+.lab-channel-role {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  color: var(--family-text);
+}
+
+.lab-solo {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  cursor: pointer;
+  transition: color 0.1s var(--cut), border-color 0.1s var(--cut), background 0.1s var(--cut);
+}
+
+.lab-solo:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.lab-solo[aria-pressed="true"] {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.lab-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lab-toggle strong {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--muted-2);
+  transition: color 0.1s var(--cut);
+}
+
+.lab-channel.is-on .lab-toggle strong {
+  color: var(--paper);
+}
+
+.lab-toggle small {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted-2);
+}
+
+.lab-fader {
+  display: block;
+  height: 4px;
+  margin: 8px 0 4px;
+  background: rgba(242, 237, 227, 0.1);
+}
+
+.lab-fader i {
+  display: block;
+  height: 100%;
+  width: calc(var(--fill, 0.12) * 100%);
+  background: var(--family);
+  transition: width 0.18s var(--snap);
+}
+
+.lab-channel em {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--muted-2);
+}
+
+.lab-channel.is-on em {
+  color: var(--family-text);
+}
+
+.lab-channel p {
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--muted-2);
+}
+
+.lab-explain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.lab-explain h2 {
+  font-size: 1.3rem;
+}
+
+.lab-explain p {
+  max-width: 76ch;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Practice
+   -------------------------------------------------------------------------- */
+
+.practice-body {
+  padding-top: 18px;
+}
+
+.practice-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.practice-switch-hint {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.practice-panel {
+  margin-top: 18px;
+  border: 1px solid var(--line-strong);
+  background: var(--ink-2);
+}
+
+.practice-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.practice-question {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.practice-q-index {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--laser);
+}
+
+.practice-question h2 {
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+}
+
+.practice-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.practice-option {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 22px;
+  grid-template-areas:
+    "key name mark"
+    "key zh mark";
+  align-items: center;
+  gap: 0 12px;
+  padding: 16px 18px;
+  background: var(--ink-2);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s var(--cut);
+}
+
+.practice-option:hover:not([disabled]) {
+  background: rgba(242, 237, 227, 0.05);
+}
+
+.practice-option-key {
+  grid-area: key;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted-2);
+}
+
+.practice-option-name {
+  grid-area: name;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--paper);
+}
+
+.practice-option-zh {
+  grid-area: zh;
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.practice-option-mark {
+  grid-area: mark;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  text-align: center;
+}
+
+.practice-option.is-correct {
+  background: rgba(255, 176, 0, 0.12);
+  box-shadow: inset 3px 0 0 var(--sodium);
+}
+
+.practice-option.is-correct .practice-option-mark {
+  color: var(--sodium);
+}
+
+.practice-option.is-wrong {
+  background: rgba(255, 46, 99, 0.1);
+  box-shadow: inset 3px 0 0 var(--laser);
+}
+
+.practice-option.is-wrong .practice-option-mark {
+  color: var(--laser);
+}
+
+.practice-hint {
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--muted-2);
+}
+
+.practice-feedback {
+  padding: 16px 18px;
+  border-top: 2px solid var(--line-strong);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.practice-feedback.is-correct {
+  border-top-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.06);
+}
+
+.practice-feedback.is-wrong {
+  border-top-color: var(--laser);
+  background: rgba(255, 46, 99, 0.05);
+}
+
+.practice-feedback strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--paper);
+}
+
+.practice-feedback a {
+  color: var(--sodium);
+  border-bottom: 1px solid rgba(255, 176, 0, 0.4);
+}
+
+.practice-feedback > span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted-2);
+}
+
+.practice-feedback div {
+  margin-top: 12px;
+}
+
+.practice-note {
+  margin-top: 16px;
+  font-size: 11px;
+  color: var(--muted-2);
+}
+
+.practice-note a {
+  color: var(--cyan);
+  border-bottom: 1px solid rgba(47, 216, 255, 0.4);
+}
+
+.bpm-guess {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.bpm-guess output {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lesson-embedded mixer: a selector, not a second full lab page. */
+.lesson-lab-groups {
+  gap: 6px;
+}
+
+.lesson-lab-toggle {
+  position: relative;
+  min-height: 54px;
+  padding: 9px 10px 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  opacity: 0.62;
+  transition: opacity 0.1s var(--cut), border-color 0.1s var(--cut);
+}
+
+.lesson-lab-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--family);
+  opacity: 0.22;
+}
+
+.lesson-lab-toggle:hover {
+  opacity: 0.9;
+  border-color: var(--line-strong);
+}
+
+.lesson-lab-toggle.is-on {
+  opacity: 1;
+  border-color: var(--line-strong);
+  background: transparent;
+}
+
+.lesson-lab-toggle.is-on::before {
+  opacity: 1;
+  box-shadow: 0 0 10px var(--family);
+}
+
+.lesson-lab-toggle strong {
+  font-size: 13px;
+}
+
+.lesson-lab-toggle span {
+  font-size: 7.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Atlas: the filter bar is a rack, the tree is a signal path
+   -------------------------------------------------------------------------- */
+
+.atlas-toolbar {
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  border-radius: 0;
+  padding: 14px 0;
+  background: none;
+}
+
+.genre-card,
+.family-card,
+.subfamily-card {
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Audio dock: master strip
+   -------------------------------------------------------------------------- */
+
+.audio-dock {
+  border-radius: 0;
+  background: rgba(9, 10, 11, 0.97);
+  border: 1px solid var(--line-strong);
+  border-bottom: 0;
+}
+
+.audio-dock-pulse {
+  border-radius: 0;
+  background: var(--laser);
+}
+
+/* The dock shows a waveform, not a generic progress bar. */
+.audio-dock-progress {
+  position: relative;
+  height: 26px;
+  overflow: visible;
+  background: none;
+}
+
+.audio-dock-progress > span {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 1px;
+  background: var(--sodium);
+  box-shadow: 0 0 8px rgba(255, 176, 0, 0.6);
+}
+
+.audio-dock-wave {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.audio-dock-wave i {
+  flex: 1 1 0;
+  min-width: 1px;
+  background: rgba(242, 237, 227, 0.16);
+  transition: background 0.12s linear;
+}
+
+.audio-dock-wave i.is-past {
+  background: var(--sodium);
+}
+
+.audio-dock-wave i.is-hot {
+  background: var(--laser);
+}
+
+/* --------------------------------------------------------------------------
+   Motion: stepped, beat-length, and switched off when asked
+   -------------------------------------------------------------------------- */
+
+/* Opacity-only: a transform on <main> would become the containing block for the
+   fixed lesson action bar and break it. A hard cut also fits the sequencer feel. */
+@keyframes page-cut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-enter {
+  animation: page-cut 0.18s linear;
+}
+
+/* Never let a throttled animation leave the action bar invisible. */
+.lesson-actionbar,
+.search-layer-panel,
+.audio-dock {
+  animation: none;
+}
+
+.console-live i {
+  animation-duration: calc(var(--beat) * 2);
+}
+
+.hero-console.is-playing .console-meter i {
+  animation-duration: calc(var(--beat) * 0.5);
+}
+
+.spectrum-bar .bar {
+  transition: opacity 0.12s var(--cut), filter 0.12s var(--cut);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1240px) {
+  .page-head {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .page-head-stats {
+    grid-column: 1 / -1;
+    order: 3;
+    padding-top: 4px;
+  }
+
+  .lab-channels {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .family-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .header-meter {
+    display: none;
+  }
+
+  .home-path .stage-row {
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+  }
+
+  .stage-row-enter {
+    display: none;
+  }
+
+  .lesson-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lesson-aside {
+    order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .lesson-aside > * {
+    flex: 1 1 200px;
+  }
+
+  .lesson-brief {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .brief-cell + .brief-cell {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .lab-channels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .family-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .practice-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .page-head {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px 16px;
+  }
+
+  .page-head-code {
+    font-size: 2rem;
+  }
+
+  .page-head-action {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .page-head-stats {
+    grid-column: 1 / -1;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  .path-deck-top {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .path-deck-filters {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .path-deck-filters .segment {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .path-ruler.is-interactive {
+    flex-wrap: wrap;
+    height: auto;
+    row-gap: 12px;
+  }
+
+  .path-readout {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .tool-index-row {
+    grid-template-columns: 26px 30px minmax(0, 1fr) 12px;
+    gap: 10px;
+  }
+
+  .tool-index-meta {
+    display: none;
+  }
+
+  .practice-panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lab-hint {
+    display: none;
+  }
+
+  .lab-deck {
+    gap: 10px;
+  }
+
+  .hero-home .hero-title {
+    font-size: clamp(2.4rem, 11vw, 3.6rem);
+  }
+
+  .lesson-actionbar {
+    --lesson-bar-h: 60px;
+  }
+
+  .stage-card-head {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .stage-card-meter {
+    grid-column: 2;
+    padding-top: 0;
+  }
+
+  .knowledge-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .knowledge-link:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .knowledge-link:nth-child(4n) {
+    border-right: 1px solid var(--line);
+  }
+
+  .tool-band {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tool-slab {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* ==========================================================================
+   READING SCALE & CHAPTER HIERARCHY
+   Body copy is set for sustained reading (17px / 1.86); headings jump in
+   both size and weight so every level is unambiguous; each chapter opens with
+   a numbered rule so section boundaries never rely on whitespace alone.
+   ========================================================================== */
+
+body {
+  font-size: 17px;
+  line-height: 1.86;
+}
+
+/* Long text never runs past a comfortable measure, even on a 1560px shell. */
+.page-head-copy p {
+  max-width: 64ch;
+  font-size: 15.5px;
+  line-height: 1.78;
+}
+
+.brief-cell p {
+  max-width: 62ch;
+  font-size: 15.5px;
+  line-height: 1.78;
+}
+
+.lesson-concept p {
+  max-width: 66ch;
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+.lesson-concept p + p {
+  margin-top: 16px;
+}
+
+.lesson-task p {
+  max-width: 64ch;
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.check-text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.stage-card-title p {
+  max-width: 72ch;
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+.track-lesson-copy strong {
+  font-size: 14.5px;
+}
+
+.track-lesson-copy small {
+  font-size: 11.5px;
+}
+
+.detail-description {
+  max-width: 72ch;
+  font-size: 17px;
+  line-height: 1.92;
+}
+
+/* ---- Section headers: number + rule + title, in one repeatable grid ---- */
+
+.section {
+  padding: clamp(56px, 6.2vw, 88px) 0;
+  border-top: 1px solid var(--line-strong);
+  background-image: linear-gradient(90deg, var(--sodium) 0 56px, transparent 56px);
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 0;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(12px, 2.2vw, 26px);
+  margin-bottom: 22px;
+}
+
+.section-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  line-height: 0.78;
+  letter-spacing: -0.05em;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.section-head-copy {
+  min-width: 0;
+}
+
+.section-head-copy h2,
+.section-head h2 {
+  margin-top: 6px;
+  font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.section-head .section-kicker {
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+}
+
+.home-path-head,
+.knowledge-top,
+.home-tools-head {
+  align-items: end;
+}
+
+.home-path-aside p,
+.home-tools-head > p {
+  max-width: 46ch;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted-2);
+}
+
+.home-tools-head > p {
+  text-align: right;
+}
+
+.knowledge-top .knowledge-copy p {
+  max-width: 54ch;
+  font-size: 13.5px;
+}
+
+/* ---- Route ladder: 8 stage clips under 3 difficulty bands ---- */
+
+.route-tiers {
+  display: flex;
+  gap: 2px;
+  padding: 12px 14px 0;
+}
+
+.route-tier {
+  display: flex;
+  flex: var(--span) 1 0;
+  align-items: baseline;
+  gap: 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--muted-2);
+}
+
+.route-tier em {
+  font-style: normal;
+  color: var(--sodium);
+}
+
+.route-tier b {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--muted-2);
+}
+
+.route {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+  padding: 8px 14px 12px;
+  list-style: none;
+}
+
+.route-stage {
+  display: flex;
+  flex: var(--span) 1 0;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  padding: 9px 9px 8px;
+  border: 1px solid var(--line);
+  background: rgba(242, 237, 227, 0.015);
+  transition: border-color 0.1s var(--cut), background 0.1s var(--cut);
+}
+
+.route-stage:hover {
+  border-color: var(--line-strong);
+  background: rgba(242, 237, 227, 0.04);
+}
+
+.route-stage.is-current {
+  border-color: rgba(255, 176, 0, 0.55);
+  background: rgba(255, 176, 0, 0.055);
+}
+
+.route-stage-head {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+}
+
+.route-index {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.route-stage.is-current .route-index {
+  color: var(--sodium);
+}
+
+.route-stage.is-complete .route-index {
+  color: var(--family);
+}
+
+.route-name {
+  overflow: hidden;
+  font-size: 11.5px;
+  color: var(--muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.route-count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.route-ticks {
+  display: flex;
+  gap: 3px;
+  height: 20px;
+}
+
+.route-tick {
+  flex: 1 1 0;
+  min-width: 2px;
+  background: rgba(242, 237, 227, 0.11);
+  transition: background 0.1s var(--cut), box-shadow 0.1s var(--cut);
+}
+
+.route-tick:hover {
+  background: var(--paper);
+}
+
+.route-tick.is-done {
+  background: var(--sodium);
+}
+
+.route-tick.is-next {
+  background: var(--laser);
+  box-shadow: 0 0 8px rgba(255, 46, 99, 0.65);
+}
+
+.path-deck-next {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+
+.path-deck-next strong {
+  margin-left: 6px;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+/* ---- Stage card: level, knowledge map, entry and exit ---- */
+
+.stage-card-tier {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--family-text);
+}
+
+.stage-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 44px);
+  padding: 14px 0 16px 16px;
+}
+
+.stage-meta-label {
+  display: block;
+  margin-bottom: 9px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--sodium);
+}
+
+.stage-knowledge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.knowledge-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: border-color 0.1s var(--cut), color 0.1s var(--cut), background 0.1s var(--cut);
+}
+
+.knowledge-chip:hover {
+  border-color: var(--sodium);
+  background: rgba(255, 176, 0, 0.07);
+  color: var(--paper);
+}
+
+.stage-meta-gate p {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--muted-2);
+}
+
+.stage-meta-gate p + p {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.stage-meta-gate span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+}
+
+.stage-meta-gate p:last-child span {
+  color: var(--sodium);
+}
+
+/* ---- Lesson blocks: numbered steps with their own rule ---- */
+
+.lesson-block {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.lesson-block:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.block-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.block-num {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--sodium);
+  font-variant-numeric: tabular-nums;
+}
+
+.block-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--paper);
+}
+
+.block-hint {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+}
+
+.lesson-block .lesson-task,
+.lesson-block .lesson-checkpoints {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive additions for the route ladder and stage meta
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .stage-meta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .route {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .route-stage {
+    flex: 1 1 calc(50% - 6px);
+  }
+
+  .route-tiers {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .section-head {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 10px 14px;
+  }
+
+  .section-head > .section-link,
+  .section-head > .home-path-aside,
+  .section-head > .knowledge-search,
+  .section-head > p {
+    grid-column: 1 / -1;
+  }
+
+  .home-tools-head > p {
+    text-align: left;
+  }
+
+  .path-deck-next {
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .block-hint {
+    display: none;
+  }
+
+  .lesson-block {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+
+  .route-stage {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile refinements for the new hierarchy blocks */
+@media (max-width: 900px) {
+  /* Keep the ladder horizontal so the sequence stays a sequence. */
+  .route {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+    padding-bottom: 14px;
+  }
+
+  .route-stage {
+    flex: 0 0 128px;
+  }
+
+  .route-ticks {
+    height: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-head {
+    align-items: start;
+  }
+
+  .page-head-index {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+
+  .page-head-code {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .page-head-copy {
+    grid-column: 1 / -1;
+  }
+
+  .path-deck-filters {
+    order: 2;
+  }
+
+  .path-deck-next {
+    order: 3;
+  }
+}
+
+@media (max-width: 720px) {
+  .route-tick {
+    max-width: 26px;
+  }
+
+  .path-deck-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .path-legend {
+    flex-wrap: wrap;
+  }
+}
+
+/* Steps should read as steps: cap the tick width so a 2-lesson stage is not
+   one giant block. */
+.route-tick {
+  max-width: 30px;
+}
+
+/* Sidebar metadata follows the new reading scale instead of looking like fine print. */
+.lesson-outline-item {
+  font-size: 12.5px;
+  padding: 7px 0;
+}
+
+.aside-relation-note {
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.course-progress-label strong {
+  font-size: 12px;
+}
+
+.lesson-widget-note {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.lesson-widget-head h3 {
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+}
+
+/* Chapter rhythm inside the course map: more air before each stage, and a
+   headline that clearly outranks the lesson rows. */
+.stage-card {
+  padding: 26px 0 10px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.stage-card-title h2 {
+  font-size: clamp(1.3rem, 1.9vw, 1.7rem);
+  line-height: 1.05;
+}
+
+.stage-card-index {
+  font-size: 2.1rem;
+}
+
+.stage-card-head {
+  align-items: start;
+  padding-bottom: 2px;
+}
+
+.stage-meta {
+  margin-top: 4px;
+}
+
+/* Long-form prose and dense cards: lift anything that was set below 13px,
+   which is unreadable against a 17px body baseline. */
+.guide-section p,
+.guide-section li {
+  max-width: 72ch;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.structure-detail p,
+.unit-card p,
+.signal-step p,
+.instrument-card p,
+.practice-card p {
+  font-size: 13.5px;
+  line-height: 1.72;
+}
+
+.effect-card p,
+.frequency-band p,
+.instrument-listen p {
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+.guide-note {
+  font-size: 12.5px;
+  line-height: 1.72;
+}
+
+.hero-home .hero-lead {
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.15vw, 1.08rem);
+  line-height: 1.82;
+}
+
+.hero-home .hero-note {
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.hero-index span {
+  font-size: 10px;
+}
+
+/* A hairline between the knowledge map and the gate column keeps the two
+   pieces of stage metadata from floating apart on wide screens. */
+.stage-meta-gate {
+  padding-left: clamp(16px, 2.2vw, 32px);
+  border-left: 1px solid var(--line);
+}
+
+@media (max-width: 1100px) {
+  .stage-meta-gate {
+    padding-left: 0;
+    padding-top: 14px;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* ==========================================================================
+   LAYOUT FILL & MOBILE PASS
+   The shell used to cap at 1560px, which left symmetric black gutters on any
+   display wider than that — the "black margins" reported in review. The shell
+   is now fluid: it fills the viewport and centres its content with padding,
+   while prose keeps a readable measure through `ch` caps.
+   ========================================================================== */
+
+:root {
+  --shell-pad: clamp(16px, 2.6vw, 72px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.site-shell {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: var(--shell-pad);
+}
+
+/* Sticky bands bleed to both viewport edges so no seam appears mid-screen. */
+.site-header,
+.site-footer {
+  margin-inline: calc(var(--shell-pad) * -1);
+  padding-inline: var(--shell-pad);
+}
+
+.site-header {
+  width: auto;
+  left: 0;
+  right: 0;
+}
+
+.site-footer {
+  margin-top: 0;
+}
+
+main,
+.lesson-page,
+.course-body,
+.library-body,
+.search-body,
+.lab-body,
+.practice-body,
+.detail-body,
+.guide-body {
+  min-width: 0;
+}
+
+/* Long unbroken tokens (ids, URLs, hashes) must never force a scrollbar. */
+.lesson-concept p,
+.detail-description,
+.guide-section p,
+.guide-section li,
+.stage-card-title p,
+.brief-cell p,
+.page-head-copy p,
+.track-lesson-copy small,
+.practice-feedback {
+  overflow-wrap: break-word;
+}
+
+/* Wide screens: fill with more columns instead of stretching fewer cards. */
+@media (min-width: 1500px) {
+  .library-body .family-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .family-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .library-body .family-card:nth-child(4n) {
+    border-right: 1px solid var(--line);
+  }
+
+  .library-body .family-card:nth-child(6n),
+  .family-grid .family-card:nth-child(4n) {
+    border-right: 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .family-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .family-grid .family-card:nth-child(4n) {
+    border-right: 1px solid var(--line);
+  }
+
+  .family-grid .family-card:nth-child(5n) {
+    border-right: 0;
+  }
+
+  .knowledge-links {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile portrait: readable micro type, real tap targets, no clipping
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  /* 7–10px mono labels are unreadable on a phone; lift the whole micro scale. */
+  .mono-label,
+  .section-kicker,
+  .hero-kicker,
+  .lesson-stage-code,
+  .lesson-stage-name,
+  .lesson-meta,
+  .stage-card-tier,
+  .stage-meta-label,
+  .block-hint,
+  .path-deck-label,
+  .path-deck-count,
+  .path-deck-next,
+  .path-deck-foot,
+  .path-legend,
+  .route-count,
+  .route-tier,
+  .track-lesson-index,
+  .track-lesson-minutes,
+  .tool-index-num,
+  .lab-channel-num,
+  .lab-channel-role,
+  .lab-toggle small,
+  .lab-channel em,
+  .lab-bpm-label,
+  .console-live,
+  .console-eight,
+  .hero-index span,
+  .footer-brand span,
+  .aside-relation-note {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+
+  .track-lesson-minutes,
+  .route-count,
+  .path-deck-count {
+    font-size: 10.5px;
+  }
+
+  /* Primary actions read as buttons, not as captions. */
+  .button-primary,
+  .button-ghost {
+    min-height: 46px;
+    padding-inline: 16px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+
+  .segment {
+    height: 34px;
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+
+  .chip {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .search-filter {
+    height: 32px;
+    padding-inline: 11px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  .knowledge-chip {
+    height: 32px;
+    font-size: 12.5px;
+  }
+
+  .section-link {
+    display: inline-block;
+    padding-block: 5px;
+    font-size: 12px;
+  }
+
+  /* 32px icon buttons become comfortable 40px targets. */
+  .sound-toggle,
+  .search-open,
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .brand {
+    padding-block: 6px;
+  }
+
+  .brand-type strong {
+    font-size: 16px;
+  }
+
+  /* Step sequencer: taller pads, still eight to a row. */
+  .console-step {
+    height: 34px;
+  }
+
+  .console-step span {
+    font-size: 9px;
+  }
+
+  .lab-solo {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .route-tick {
+    min-width: 12px;
+  }
+
+  /* Horizontal strips get snap points and a visible scroll affordance. */
+  .route,
+  .structure-blocks,
+  .practice-options,
+  .family-grid,
+  .lab-channels {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .route,
+  .structure-blocks {
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .route::-webkit-scrollbar,
+  .structure-blocks::-webkit-scrollbar {
+    display: none;
+  }
+
+  .route-stage,
+  .structure-block {
+    scroll-snap-align: start;
+  }
+
+  /* Dense card copy needs to clear 13px on a phone. */
+  .lab-channel p,
+  .tool-index-copy small,
+  .family-card p,
+  .practice-option-zh,
+  .track-lesson-copy small,
+  .stage-card-title p,
+  .brief-cell p,
+  .aside-relation-note {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .practice-option-name {
+    font-size: 17px;
+  }
+
+  .practice-hint,
+  .practice-note,
+  .practice-feedback {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .block-label {
+    font-size: 15px;
+  }
+
+  .check-text {
+    font-size: 15.5px;
+  }
+
+  /* Fixed bottom bar respects the home indicator. */
+  .lesson-actionbar {
+    width: 100%;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  body.has-lesson-bar {
+    padding-bottom: calc(var(--lesson-bar-h) + 18px + env(safe-area-inset-bottom));
+  }
+
+  body.has-lesson-bar.has-audio-dock {
+    padding-bottom: calc(var(--lesson-bar-h) + 104px + env(safe-area-inset-bottom));
+  }
+
+  .lesson-actionbar .action-copy strong {
+    font-size: 11.5px;
+  }
+
+  .audio-dock {
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  /* Overlays use dynamic viewport height so the URL bar cannot clip them. */
+  .search-layer {
+    height: 100dvh;
+  }
+
+  .search-layer-panel {
+    max-height: 88dvh;
+    overflow-y: auto;
+  }
+}
+
+/* Very narrow phones (320–360px): one column, tighter chrome. */
+@media (max-width: 380px) {
+  :root {
+    --shell-pad: 14px;
+  }
+
+  body {
+    font-size: 16.5px;
+  }
+
+  .page-head-copy h1,
+  .lesson-head h1 {
+    font-size: clamp(1.55rem, 7.6vw, 2.1rem);
+  }
+
+  .hero-home .hero-title {
+    font-size: clamp(2.1rem, 10.4vw, 2.9rem);
+  }
+
+  .console-step {
+    height: 30px;
+  }
+
+  .stage-card-head {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .track-lesson {
+    grid-template-columns: 26px minmax(0, 1fr) 34px;
+  }
+
+  .track-lesson-state {
+    display: none;
+  }
+
+  .tool-index-row {
+    grid-template-columns: 22px 28px minmax(0, 1fr);
+  }
+
+  .lesson-actionbar {
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+  }
+
+  .lesson-actionbar .lesson-action-progress {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Family grid: column count through one variable.
+   Previously `.library-body .family-grid{repeat(4)}` out-specified the mobile
+   `repeat(2)` rule, so phone cards were 85px wide and their labels spilled 1px
+   past the viewport. One `--cols` cascade removes that class of bug entirely.
+   -------------------------------------------------------------------------- */
+
+.family-grid {
+  --cols: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.library-body .family-grid {
+  --cols: 4;
+}
+
+/* A hairline on every card keeps the edges aligned at any column count. */
+.family-grid .family-card,
+.family-grid .family-card:nth-child(n) {
+  min-width: 0;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.family-card-top {
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+
+.family-card-top .mono-label {
+  min-width: 0;
+  white-space: normal;
+}
+
+.family-card h3 {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+  .family-grid,
+  .library-body .family-grid {
+    --cols: 3;
+  }
+}
+
+@media (max-width: 960px) {
+  .family-grid,
+  .library-body .family-grid {
+    --cols: 2;
+  }
+}
+
+@media (max-width: 460px) {
+  .family-grid,
+  .library-body .family-grid {
+    --cols: 2;
+  }
+
+  .family-card {
+    padding: 12px 12px 13px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .family-grid {
+    --cols: 4;
+  }
+
+  .library-body .family-grid {
+    --cols: 6;
+  }
+}
+
+@media (min-width: 1800px) {
+  .family-grid {
+    --cols: 5;
+  }
+
+  .library-body .family-grid {
+    --cols: 6;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile type floor: nothing that carries meaning stays under 12px
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .page-head-label,
+  .page-head-stats dt,
+  .family-card-top .mono-label,
+  .cross-note-label,
+  .course-match-label,
+  .stage-meta-label,
+  .check-count,
+  .path-deck-next strong {
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+  }
+
+  .breadcrumb,
+  .breadcrumb a,
+  .breadcrumb span {
+    font-size: 12px;
+  }
+
+  .page-head-stats dd span {
+    font-size: 12px;
+  }
+
+  .lesson-outline-item,
+  .lesson-widget-note,
+  .aside-relation-note {
+    font-size: 12.5px;
+  }
+
+  /* Stage outcome lines: two lines read better than a one-line ellipsis. */
+  .stage-row-copy small {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  /* Footer and secondary nav links get a real touch height. */
+  .footer-links a,
+  .mobile-nav-secondary a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding-inline: 2px;
+    font-size: 12.5px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile micro scale, final pass: the specific components still sitting at
+   7–10px (drum ruler, console footer, header action, atlas tree, bar labels)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .console-ruler {
+    margin-left: 40px;
+    font-size: 9.5px;
+  }
+
+  .console-foot {
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+  }
+
+  .console-row-label {
+    font-size: 10.5px;
+  }
+
+  .console-heading h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .page-head-action {
+    height: 44px;
+    padding-inline: 18px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+
+  /* Atlas toolbar controls */
+  .atlas-toolbar {
+    gap: 10px;
+  }
+
+  .atlas-toolbar .mono-label,
+  .toolbar-group .mono-label {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  .atlas-search {
+    min-height: 44px;
+  }
+
+  .atlas-search input {
+    font-size: 14px;
+  }
+
+  .filter-select,
+  .filter-input {
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  .tree-family-link {
+    font-size: 12px;
+  }
+
+  .tree-family-count {
+    font-size: 10.5px;
+  }
+
+  .tree-panel-head .mono-label {
+    font-size: 10.5px;
+  }
+
+  /* Structure strip bar labels */
+  .structure-label strong {
+    font-size: 13px;
+  }
+
+  .structure-label small,
+  .structure-axis span {
+    font-size: 11px;
+  }
+
+  .structure-block {
+    flex-basis: 116px;
+  }
+}
+
+/* 100vw includes the scrollbar; use the client width instead. */
+.lesson-actionbar {
+  width: 100%;
+  max-width: 1120px;
+}
+
+/* Horizontal strips hide their scrollbar, so state the gesture in the caption. */
+@media (max-width: 900px) {
+  .path-deck-foot > span:first-child::after {
+    content: " · 可左右滑动";
+    color: var(--sodium);
+  }
+
+  .structure-strip-head::after {
+    content: "可左右滑动";
+    margin-left: 10px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--sodium);
+  }
+}
+
+@media (min-width: 901px) {
+  .structure-strip-head::after {
+    content: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Module page: a <pre> with a long command has a large min-content width, and
+   grid items default to `min-width: auto` — the card was forced to 402px inside
+   a 152px column, pushing the whole page sideways on phones.
+   -------------------------------------------------------------------------- */
+
+.module-card {
+  min-width: 0;
+}
+
+.module-card > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.module-code {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.module-code code {
+  white-space: pre;
+}
+
+@media (max-width: 860px) {
+  .module-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .module-card {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .module-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .module-code {
+    font-size: 12px;
+  }
+}

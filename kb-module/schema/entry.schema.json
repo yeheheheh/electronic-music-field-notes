@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "entry.schema.json",
+  "title": "Taxonomy Entry",
+  "type": "object",
+  "required": ["id", "name", "familyId", "familyName", "description", "sourceLine"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "familyId": { "type": "string" },
+    "familyName": { "type": "string" },
+    "familyZh": { "type": "string" },
+    "pathNames": { "type": "array", "items": { "type": "string" } },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "description": { "type": "string" },
+    "summary": { "type": "string" },
+    "bpm": {
+      "type": ["object", "null"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "label": { "type": "string" }
+      }
+    },
+    "examples": { "type": "array" },
+    "relations": { "type": "object" },
+    "traits": { "type": "array", "items": { "type": "string" } },
+    "stub": { "type": "boolean" },
+    "sourceLine": { "type": "number" },
+    "line": { "type": "number" }
+  },
+  "additionalProperties": true
+}

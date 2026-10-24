@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": [
+    {
+      "id": "feishu-taxonomy",
+      "title": "电音风格项目丨第四期",
+      "type": "taxonomy",
+      "path": "taxonomy.md",
+      "author": "Tim2354 及编辑团队",
+      "url": "https://my.feishu.cn/docx/doxcnC2Rbwa2saGhRoFxh1aq4Gc",
+      "licenseNote": "民间协作整理；公开分发前请确认原作者授权。",
+      "note": "约 1200 个风格/概念条目，含上下位关系、别名、例曲与原文行号。",
+      "exists": true,
+      "bytes": 1026107,
+      "sha256": "06c38b756ef55dc3c8e2eea54e5eb4a08b295902b7e3084d14680197f35c7b9e"
+    },
+    {
+      "id": "bilibili-ep01",
+      "title": "【电音圣经】01. 如何秒懂十大电子舞曲风格",
+      "type": "video_transcript",
+      "path": "transcripts/dianying-bible-ep01.json",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV13a4y1W7bT/",
+      "licenseNote": "视频版权归原作者；本模块只保存转写文本用于检索。",
+      "note": "十大风格的听辨入门。",
+      "exists": true,
+      "bytes": 44086,
+      "sha256": "d082e2ff3ccbef437ead87fdfb279560ba8153a96f7e74dc911b5b1a0b2b1212"
+    },
+    {
+      "id": "bilibili-ep02",
+      "title": "【电音圣经】02. 一张图看懂 EDM 电子舞曲结构！",
+      "type": "video_transcript",
+      "path": "transcripts/dianying-bible-ep02.json",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1dK4y1V77o/",
+      "licenseNote": "视频版权归原作者；本模块只保存转写文本用于检索。",
+      "note": "拍、小节、乐句、乐段与八段 EDM 结构。",
+      "exists": true,
+      "bytes": 32963,
+      "sha256": "6ba89ac594dddb5085239245da65a4a2b10d813064b36c3c087209eccd5471da"
+    },
+    {
+      "id": "bilibili-ep03",
+      "title": "【电音圣经】03. 电子舞曲七大乐器组音色详解",
+      "type": "video_transcript_local_asr",
+      "path": "transcripts/dianying-bible-ep03-asr.txt",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV18p4y1s76n/",
+      "licenseNote": "视频版权归原作者；该期无公开字幕，文本为本地 Whisper 转写，仅用于核对内容。",
+      "note": "打击乐、贝斯、和弦旋律、人声、主奏、氛围、音效七组音色。",
+      "exists": true,
+      "bytes": 12547,
+      "sha256": "24334944cb222a36bcbcc00be86e0fbaa715cf889cc6b9b092640028f5f24b21"
+    },
+    {
+      "id": "bilibili-ep04",
+      "title": "【电音圣经】04. 音色之源：合成器、采样器、效果器",
+      "type": "video_transcript",
+      "path": "transcripts/dianying-bible-ep04.json",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1rb4y197Pe/",
+      "licenseNote": "视频版权归原作者；本模块只保存转写文本用于检索。",
+      "note": "MIDI → 音源 → 效果器 → 总线的信号链。",
+      "exists": true,
+      "bytes": 22625,
+      "sha256": "c3805fe212ec04c9f8c43f196c20a02e2efcc8240aef1cd820e6c3fee2d62ee3"
+    },
+    {
+      "id": "bilibili-podcast-ep31",
+      "title": "多新鲜呐 ep31：电音玩家 VS 摇滚老炮",
+      "type": "video_transcript",
+      "path": "transcripts/duoxinxian-ep31.json",
+      "author": "于谦、小拉与一位电音制作人",
+      "url": null,
+      "licenseNote": "视频版权归原作者；节目含品牌赞助，本模块只提炼电音文化内容。",
+      "note": "现场文化、音乐节体验、社群与行业视角。",
+      "exists": true,
+      "bytes": 180608,
+      "sha256": "f05576060f890e56d61cd33a23fe1b6bdd8b30fea976099756c7e6f4e0b7b964"
+    },
+    {
+      "id": "curated-notes",
+      "title": "电音档案精编内容",
+      "type": "curated",
+      "path": "curated.json",
+      "author": "本知识库编辑",
+      "url": null,
+      "licenseNote": "二次整理内容；引用请注明原文档与视频。",
+      "note": "听辨、制作、历史、现场、术语与勘误。",
+      "exists": true,
+      "bytes": 50692,
+      "sha256": "dad2731bc1aa32d4bca4d7a21432f60c1bb2f90f6e7b3b253995906349bedb56"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# 本地浏览器审计产物（截图与 Chrome profile）
+.ui-audit/
+.ui-audit$name.png
+
+# 本地 UI 审计探针与截图（根目录临时文件）
+/_*.html
+/_*.png
+/_*.jpg
+
+# 本地助手工作记忆
+.workbuddy/
+
+# 构建临时目录（kb.mjs build 运行时自动生成）
+kb-module/.kb-build-*/
+
+# Floating UI 上游源码 clone；站点只引用 vendor/floating-ui-1.8.0-umd/ 的构建产物
+vendor/floating-ui/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+node_modules/
+*.log

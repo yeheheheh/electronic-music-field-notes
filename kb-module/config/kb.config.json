@@ -1,0 +1,30 @@
+{
+  "$schema": "../schema/config.schema.json",
+  "module": {
+    "id": "electronic-music-kb",
+    "name": "电音档案知识库",
+    "version": "1.0.0",
+    "language": "zh-CN",
+    "description": "可独立生成、可被 Agent 直接接入的电子音乐知识库模块。"
+  },
+  "inputs": {
+    "taxonomy": "../inputs/taxonomy.md",
+    "curated": "../inputs/curated.json",
+    "transcripts": "../inputs/transcripts",
+    "sourceMap": "../inputs/source-map.json"
+  },
+  "output": "../dist",
+  "build": {
+    "chunkMaxChars": 2200,
+    "chunkOverlap": 200,
+    "includeTranscripts": false
+  },
+  "retrieval": {
+    "defaultLimit": 6,
+    "maxLimit": 20,
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    }
+  }
+}

@@ -1,0 +1,1226 @@
+[
+  {
+    "from": 2.88,
+    "to": 3.6,
+    "sid": 1,
+    "location": 2,
+    "content": "大家好",
+    "music": 0
+  },
+  {
+    "from": 3.6,
+    "to": 4.38,
+    "sid": 2,
+    "location": 2,
+    "content": "不是烧的",
+    "music": 0
+  },
+  {
+    "from": 6.36,
+    "to": 7.65,
+    "sid": 3,
+    "location": 2,
+    "content": "在上期视频中",
+    "music": 0
+  },
+  {
+    "from": 7.65,
+    "to": 10.94,
+    "sid": 4,
+    "location": 2,
+    "content": "我们了解了电子舞曲常用的七大乐器组音色",
+    "music": 0
+  },
+  {
+    "from": 10.94,
+    "to": 13.88,
+    "sid": 5,
+    "location": 2,
+    "content": "所以这期视频我将为大家详细讲解",
+    "music": 0
+  },
+  {
+    "from": 13.88,
+    "to": 17.54,
+    "sid": 6,
+    "location": 2,
+    "content": "这些音色是如何产生的",
+    "music": 0
+  },
+  {
+    "from": 18.36,
+    "to": 22.24,
+    "sid": 7,
+    "location": 2,
+    "content": "一个电子舞曲音色的产生通常有以下三部",
+    "music": 0
+  },
+  {
+    "from": 22.24,
+    "to": 26.53,
+    "sid": 8,
+    "location": 2,
+    "content": "一编曲软件发出事先录制好的mini信号",
+    "music": 0
+  },
+  {
+    "from": 26.53,
+    "to": 30.94,
+    "sid": 9,
+    "location": 2,
+    "content": "2mini信号激发合成器或采样及音源输出",
+    "music": 0
+  },
+  {
+    "from": 30.94,
+    "to": 32.08,
+    "sid": 10,
+    "location": 2,
+    "content": "音频信号",
+    "music": 0
+  },
+  {
+    "from": 32.08,
+    "to": 35.41,
+    "sid": 11,
+    "location": 2,
+    "content": "三音频信号经过效果器的修饰",
+    "music": 0
+  },
+  {
+    "from": 35.41,
+    "to": 36.52,
+    "sid": 12,
+    "location": 2,
+    "content": "输出到总线",
+    "music": 0
+  },
+  {
+    "from": 36.52,
+    "to": 38.34,
+    "sid": 13,
+    "location": 2,
+    "content": "并从扬声器放出",
+    "music": 0
+  },
+  {
+    "from": 38.37,
+    "to": 40.08,
+    "sid": 14,
+    "location": 2,
+    "content": "这里解释一下",
+    "music": 0
+  },
+  {
+    "from": 40.08,
+    "to": 41.34,
+    "sid": 15,
+    "location": 2,
+    "content": "mini指的是音乐",
+    "music": 0
+  },
+  {
+    "from": 41.34,
+    "to": 42.12,
+    "sid": 16,
+    "location": 2,
+    "content": "数字接口",
+    "music": 0
+  },
+  {
+    "from": 42.12,
+    "to": 43.76,
+    "sid": 17,
+    "location": 2,
+    "content": "指的电脑合成器",
+    "music": 0
+  },
+  {
+    "from": 43.76,
+    "to": 47.45,
+    "sid": 18,
+    "location": 2,
+    "content": "电子乐器等能相互控制交换信息",
+    "music": 0
+  },
+  {
+    "from": 47.45,
+    "to": 49.37,
+    "sid": 19,
+    "location": 2,
+    "content": "密集信号不发送声音",
+    "music": 0
+  },
+  {
+    "from": 49.37,
+    "to": 50.92,
+    "sid": 20,
+    "location": 2,
+    "content": "而是发送像是音高",
+    "music": 0
+  },
+  {
+    "from": 50.92,
+    "to": 51.58,
+    "sid": 21,
+    "location": 2,
+    "content": "音量",
+    "music": 0
+  },
+  {
+    "from": 51.58,
+    "to": 54.22,
+    "sid": 22,
+    "location": 2,
+    "content": "持续时长等参数的数字控制信号",
+    "music": 0
+  },
+  {
+    "from": 56.68,
+    "to": 60.439,
+    "sid": 23,
+    "location": 2,
+    "content": "音源主要分为合成器thing和采样器sampler",
+    "music": 0
+  },
+  {
+    "from": 60.439,
+    "to": 62.629,
+    "sid": 24,
+    "location": 2,
+    "content": "这两种合成器性",
+    "music": 0
+  },
+  {
+    "from": 62.629,
+    "to": 67.44,
+    "sid": 25,
+    "location": 2,
+    "content": "是自主凭空生成声音信号的电子乐器",
+    "music": 0
+  },
+  {
+    "from": 70.82,
+    "to": 74.94,
+    "sid": 26,
+    "location": 2,
+    "content": "999在电子音乐发展之初",
+    "music": 0
+  },
+  {
+    "from": 74.94,
+    "to": 76.8,
+    "sid": 27,
+    "location": 2,
+    "content": "合成器都是基于硬件",
+    "music": 0
+  },
+  {
+    "from": 76.8,
+    "to": 80.86,
+    "sid": 28,
+    "location": 2,
+    "content": "例如60年代开创性的RCM声音合成器",
+    "music": 0
+  },
+  {
+    "from": 83.72,
+    "to": 85.43,
+    "sid": 29,
+    "location": 2,
+    "content": "Mark合成器",
+    "music": 0
+  },
+  {
+    "from": 92.69,
+    "to": 97.25,
+    "sid": 30,
+    "location": 2,
+    "content": "以及在80年代风靡一时的雅马哈DX7",
+    "music": 0
+  },
+  {
+    "from": 105.9,
+    "to": 109.68,
+    "sid": 31,
+    "location": 2,
+    "content": "D50等等",
+    "music": 0
+  },
+  {
+    "from": 119.24,
+    "to": 121.57,
+    "sid": 32,
+    "location": 2,
+    "content": "如今随着个人计算机的发展",
+    "music": 0
+  },
+  {
+    "from": 121.57,
+    "to": 124.84,
+    "sid": 33,
+    "location": 2,
+    "content": "以及电子音乐工作软件DW的普及",
+    "music": 0
+  },
+  {
+    "from": 124.84,
+    "to": 128.86,
+    "sid": 34,
+    "location": 2,
+    "content": "像serum massive silence",
+    "music": 0
+  },
+  {
+    "from": 128.86,
+    "to": 132.219,
+    "sid": 35,
+    "location": 2,
+    "content": "w nexus等的软件合成器",
+    "music": 0
+  },
+  {
+    "from": 132.219,
+    "to": 133.809,
+    "sid": 36,
+    "location": 2,
+    "content": "凭借机成本低",
+    "music": 0
+  },
+  {
+    "from": 133.809,
+    "to": 135.339,
+    "sid": 37,
+    "location": 2,
+    "content": "使用便捷的优势",
+    "music": 0
+  },
+  {
+    "from": 135.339,
+    "to": 137.46,
+    "sid": 38,
+    "location": 2,
+    "content": "成为音乐制作人的标配",
+    "music": 0
+  },
+  {
+    "from": 137.46,
+    "to": 139.02,
+    "sid": 39,
+    "location": 2,
+    "content": "软件合成器",
+    "music": 0
+  },
+  {
+    "from": 139.02,
+    "to": 142.24,
+    "sid": 40,
+    "location": 2,
+    "content": "sins的工作原理简单来说一般分为四部",
+    "music": 0
+  },
+  {
+    "from": 142.24,
+    "to": 144.43,
+    "sid": 41,
+    "location": 2,
+    "content": "一接收到mini信号",
+    "music": 0
+  },
+  {
+    "from": 151.08,
+    "to": 154.34,
+    "sid": 42,
+    "location": 2,
+    "content": "二波形经过滤波器filter",
+    "music": 0
+  },
+  {
+    "from": 154.34,
+    "to": 157.64,
+    "sid": 43,
+    "location": 2,
+    "content": "滤掉不需要的声波频段",
+    "music": 0
+  },
+  {
+    "from": 161.58,
+    "to": 163.4,
+    "sid": 44,
+    "location": 2,
+    "content": "三过滤后的波形",
+    "music": 0
+  },
+  {
+    "from": 163.4,
+    "to": 165.62,
+    "sid": 45,
+    "location": 2,
+    "content": "通过ADSRENVELO包络",
+    "music": 0
+  },
+  {
+    "from": 165.62,
+    "to": 168.97,
+    "sid": 46,
+    "location": 2,
+    "content": "对声波进行时间维度上变化的控制",
+    "music": 0
+  },
+  {
+    "from": 168.97,
+    "to": 170.95,
+    "sid": 47,
+    "location": 2,
+    "content": "我们可以把包落理解为",
+    "music": 0
+  },
+  {
+    "from": 170.95,
+    "to": 173.64,
+    "sid": 48,
+    "location": 2,
+    "content": "控制每一个音的起承转合",
+    "music": 0
+  },
+  {
+    "from": 179.459,
+    "to": 180.199,
+    "sid": 49,
+    "location": 2,
+    "content": "四",
+    "music": 0
+  },
+  {
+    "from": 180.199,
+    "to": 183.529,
+    "sid": 50,
+    "location": 2,
+    "content": "最好由LFO低频振荡器",
+    "music": 0
+  },
+  {
+    "from": 183.529,
+    "to": 186.18,
+    "sid": 51,
+    "location": 2,
+    "content": "对声波进行周期性变化的控制",
+    "music": 0
+  },
+  {
+    "from": 191.14,
+    "to": 195.16,
+    "sid": 52,
+    "location": 2,
+    "content": "并最终输出给后续的效果器进行修饰",
+    "music": 0
+  },
+  {
+    "from": 200.47,
+    "to": 204.78,
+    "sid": 53,
+    "location": 2,
+    "content": "当然合成器细分的话还可以分为加法合成器",
+    "music": 0
+  },
+  {
+    "from": 204.78,
+    "to": 206.16,
+    "sid": 54,
+    "location": 2,
+    "content": "减法合成器",
+    "music": 0
+  },
+  {
+    "from": 206.16,
+    "to": 207.96,
+    "sid": 55,
+    "location": 2,
+    "content": "FM调频合成器",
+    "music": 0
+  },
+  {
+    "from": 207.96,
+    "to": 210.72,
+    "sid": 56,
+    "location": 2,
+    "content": "回复table波表合成器等等",
+    "music": 0
+  },
+  {
+    "from": 210.72,
+    "to": 214.42,
+    "sid": 57,
+    "location": 2,
+    "content": "每个合成器都有其独特的功能和音色",
+    "music": 0
+  },
+  {
+    "from": 214.42,
+    "to": 217.72,
+    "sid": 58,
+    "location": 2,
+    "content": "并且每个合成器内部还有大量的控制器",
+    "music": 0
+  },
+  {
+    "from": 217.72,
+    "to": 219.4,
+    "sid": 59,
+    "location": 2,
+    "content": "来进行参数的调节",
+    "music": 0
+  },
+  {
+    "from": 219.4,
+    "to": 222.68,
+    "sid": 60,
+    "location": 2,
+    "content": "感兴趣的小伙伴可以继续深入研究",
+    "music": 0
+  },
+  {
+    "from": 223.5,
+    "to": 225.56,
+    "sid": 61,
+    "location": 2,
+    "content": "接着我们来看采样器",
+    "music": 0
+  },
+  {
+    "from": 225.56,
+    "to": 229.1,
+    "sid": 62,
+    "location": 2,
+    "content": "SAMSON和凭空生成声音信号的合成器相反",
+    "music": 0
+  },
+  {
+    "from": 229.1,
+    "to": 231.68,
+    "sid": 63,
+    "location": 2,
+    "content": "采样器是将音色采样",
+    "music": 0
+  },
+  {
+    "from": 231.68,
+    "to": 235.459,
+    "sid": 64,
+    "location": 2,
+    "content": "sample事先采集储存起来的一种音源",
+    "music": 0
+  },
+  {
+    "from": 243.7,
+    "to": 244.6,
+    "sid": 65,
+    "location": 2,
+    "content": "当",
+    "music": 0
+  },
+  {
+    "from": 247.36,
+    "to": 249.52,
+    "sid": 66,
+    "location": 2,
+    "content": "采样器接收到mini信号后",
+    "music": 0
+  },
+  {
+    "from": 249.52,
+    "to": 251.32,
+    "sid": 67,
+    "location": 2,
+    "content": "相对应的音色采样",
+    "music": 0
+  },
+  {
+    "from": 251.32,
+    "to": 255.34,
+    "sid": 68,
+    "location": 2,
+    "content": "如果根据谜底信号的内容进行输出",
+    "music": 0.06626505824502817
+  },
+  {
+    "from": 259.82,
+    "to": 262.54,
+    "sid": 69,
+    "location": 2,
+    "content": "我们首先打开contact采样器",
+    "music": 0
+  },
+  {
+    "from": 262.54,
+    "to": 264.94,
+    "sid": 70,
+    "location": 2,
+    "content": "加载施坦威钢琴的音源",
+    "music": 0
+  },
+  {
+    "from": 264.94,
+    "to": 268.78,
+    "sid": 71,
+    "location": 2,
+    "content": "这个音源就是曾经用非常专业的录音设备",
+    "music": 0
+  },
+  {
+    "from": 268.78,
+    "to": 272.74,
+    "sid": 72,
+    "location": 2,
+    "content": "录制的某一架斯坦威钢琴的所有音色",
+    "music": 0
+  },
+  {
+    "from": 273.02,
+    "to": 276.4,
+    "sid": 73,
+    "location": 2,
+    "content": "然后我们在编曲软件的钢琴卷帘窗内",
+    "music": 0
+  },
+  {
+    "from": 276.4,
+    "to": 278.22,
+    "sid": 74,
+    "location": 2,
+    "content": "输入一个中央c do",
+    "music": 0
+  },
+  {
+    "from": 278.28,
+    "to": 282.18,
+    "sid": 75,
+    "location": 2,
+    "content": "这个都伴随着事先设置好的弹奏力度",
+    "music": 0
+  },
+  {
+    "from": 282.18,
+    "to": 282.9,
+    "sid": 76,
+    "location": 2,
+    "content": "时长",
+    "music": 0
+  },
+  {
+    "from": 282.9,
+    "to": 284.96,
+    "sid": 77,
+    "location": 2,
+    "content": "延音踏板等等信息",
+    "music": 0
+  },
+  {
+    "from": 284.96,
+    "to": 288.41,
+    "sid": 78,
+    "location": 2,
+    "content": "就会以mini信号的形式输入到采样器",
+    "music": 0
+  },
+  {
+    "from": 288.41,
+    "to": 292.38,
+    "sid": 79,
+    "location": 2,
+    "content": "最好采样器就会调取当时录制的那个对应的",
+    "music": 0
+  },
+  {
+    "from": 292.38,
+    "to": 294.18,
+    "sid": 80,
+    "location": 2,
+    "content": "中央C音色采样",
+    "music": 0
+  },
+  {
+    "from": 294.18,
+    "to": 297.99,
+    "sid": 81,
+    "location": 2,
+    "content": "并根据其他的控制信息对音色采样进行调整",
+    "music": 0
+  },
+  {
+    "from": 297.99,
+    "to": 299.42,
+    "sid": 82,
+    "location": 2,
+    "content": "并播放出来",
+    "music": 0
+  },
+  {
+    "from": 300.66,
+    "to": 303.62,
+    "sid": 83,
+    "location": 2,
+    "content": "采样器center的基本原理便是如此",
+    "music": 0
+  },
+  {
+    "from": 303.62,
+    "to": 305.06,
+    "sid": 84,
+    "location": 2,
+    "content": "当然实际情况中",
+    "music": 0
+  },
+  {
+    "from": 305.06,
+    "to": 306.68,
+    "sid": 85,
+    "location": 2,
+    "content": "根据不同乐器的音色",
+    "music": 0
+  },
+  {
+    "from": 306.68,
+    "to": 309.71,
+    "sid": 86,
+    "location": 2,
+    "content": "演奏方法是相当复杂和专业的",
+    "music": 0
+  },
+  {
+    "from": 309.71,
+    "to": 312.54,
+    "sid": 87,
+    "location": 2,
+    "content": "比如小提琴这单独的一把乐器中",
+    "music": 0
+  },
+  {
+    "from": 312.54,
+    "to": 314.07,
+    "sid": 88,
+    "location": 2,
+    "content": "连弓跳弓",
+    "music": 0
+  },
+  {
+    "from": 314.07,
+    "to": 318.46,
+    "sid": 89,
+    "location": 2,
+    "content": "颤音揉弦等等的音色就完全不同",
+    "music": 0
+  },
+  {
+    "from": 320,
+    "to": 322.96,
+    "sid": 90,
+    "location": 2,
+    "content": "无论是合成器采样器发出的音色",
+    "music": 0
+  },
+  {
+    "from": 322.96,
+    "to": 325.63,
+    "sid": 91,
+    "location": 2,
+    "content": "还是录制的人声与乐器音色",
+    "music": 0
+  },
+  {
+    "from": 325.63,
+    "to": 329.3,
+    "sid": 92,
+    "location": 2,
+    "content": "通常都还会需要通过效果器进行修饰",
+    "music": 0
+  },
+  {
+    "from": 329.3,
+    "to": 334.04,
+    "sid": 93,
+    "location": 2,
+    "content": "效果器物名字义就是给音色添加效果的单元",
+    "music": 0
+  },
+  {
+    "from": 334.04,
+    "to": 336.47,
+    "sid": 94,
+    "location": 2,
+    "content": "所有效果器可以分为四大类",
+    "music": 0
+  },
+  {
+    "from": 336.47,
+    "to": 341.2,
+    "sid": 95,
+    "location": 2,
+    "content": "动态dynamics音色TONO时机",
+    "music": 0
+  },
+  {
+    "from": 341.2,
+    "to": 343.81,
+    "sid": 96,
+    "location": 2,
+    "content": "high based和失真饱和",
+    "music": 0
+  },
+  {
+    "from": 343.81,
+    "to": 345.92,
+    "sid": 97,
+    "location": 2,
+    "content": "Distortion and situation",
+    "music": 0
+  },
+  {
+    "from": 345.92,
+    "to": 348.26,
+    "sid": 98,
+    "location": 2,
+    "content": "动态dynamics类效果器",
+    "music": 0
+  },
+  {
+    "from": 348.26,
+    "to": 350.78,
+    "sid": 99,
+    "location": 2,
+    "content": "通常用于录制的人声或者乐器",
+    "music": 0
+  },
+  {
+    "from": 350.78,
+    "to": 354.2,
+    "sid": 100,
+    "location": 2,
+    "content": "用来限制或增强特定的音频信号",
+    "music": 0
+  },
+  {
+    "from": 354.2,
+    "to": 356.54,
+    "sid": 101,
+    "location": 2,
+    "content": "例如compressor压缩器",
+    "music": 0
+  },
+  {
+    "from": 356.54,
+    "to": 359.09,
+    "sid": 102,
+    "location": 2,
+    "content": "它会将超过阈值的音频信号",
+    "music": 0
+  },
+  {
+    "from": 359.09,
+    "to": 361.68,
+    "sid": 103,
+    "location": 2,
+    "content": "按照给定的比例进行压缩",
+    "music": 0
+  },
+  {
+    "from": 361.68,
+    "to": 365.7,
+    "sid": 104,
+    "location": 2,
+    "content": "由于录制的人生经常会有很大的动态变化",
+    "music": 0
+  },
+  {
+    "from": 365.7,
+    "to": 366.84,
+    "sid": 105,
+    "location": 2,
+    "content": "自己有的地方轻",
+    "music": 0
+  },
+  {
+    "from": 366.84,
+    "to": 368.07,
+    "sid": 106,
+    "location": 2,
+    "content": "有的地方小",
+    "music": 0
+  },
+  {
+    "from": 368.07,
+    "to": 369.72,
+    "sid": 107,
+    "location": 2,
+    "content": "全pressure压缩器",
+    "music": 0
+  },
+  {
+    "from": 369.72,
+    "to": 373.42,
+    "sid": 108,
+    "location": 2,
+    "content": "便会把高于某个分贝音频信号的音量进行压缩",
+    "music": 0
+  },
+  {
+    "from": 373.42,
+    "to": 377.08,
+    "sid": 109,
+    "location": 2,
+    "content": "使得整体的音量更为均衡",
+    "music": 0.2926829179060048
+  },
+  {
+    "from": 379.46,
+    "to": 381.88,
+    "sid": 110,
+    "location": 2,
+    "content": "With the sunrise in her eyes",
+    "music": 0.999999923076929
+  },
+  {
+    "from": 383.14,
+    "to": 384.94,
+    "sid": 111,
+    "location": 2,
+    "content": "All that you see",
+    "music": 0.7352940635813114
+  },
+  {
+    "from": 384.94,
+    "to": 389.48,
+    "sid": 112,
+    "location": 2,
+    "content": "音色total类效果器通常用来进行混音mixing",
+    "music": 0
+  },
+  {
+    "from": 389.48,
+    "to": 391.22,
+    "sid": 113,
+    "location": 2,
+    "content": "例如EQ效果器",
+    "music": 0
+  },
+  {
+    "from": 391.22,
+    "to": 395.68,
+    "sid": 114,
+    "location": 2,
+    "content": "就可以用来增强或削弱某部分频段的声音",
+    "music": 0
+  },
+  {
+    "from": 417.34,
+    "to": 419.96,
+    "sid": 115,
+    "location": 2,
+    "content": "实际time base类效果器",
+    "music": 0
+  },
+  {
+    "from": 419.96,
+    "to": 423.74,
+    "sid": 116,
+    "location": 2,
+    "content": "这是让音色基于时间维度进行改变的",
+    "music": 0
+  },
+  {
+    "from": 423.74,
+    "to": 425.94,
+    "sid": 117,
+    "location": 2,
+    "content": "例如常用的reverb混响",
+    "music": 0
+  },
+  {
+    "from": 425.94,
+    "to": 427.83,
+    "sid": 118,
+    "location": 2,
+    "content": "delay延迟效果器",
+    "music": 0
+  },
+  {
+    "from": 427.83,
+    "to": 432.58,
+    "sid": 119,
+    "location": 2,
+    "content": "可以通过对声音的叠加产生空间感",
+    "music": 0.09036144306140594
+  },
+  {
+    "from": 435.04,
+    "to": 437.46,
+    "sid": 120,
+    "location": 2,
+    "content": "How you left me like you",
+    "music": 0
+  },
+  {
+    "from": 437.46,
+    "to": 438.35,
+    "sid": 121,
+    "location": 2,
+    "content": "Did it",
+    "music": 0
+  },
+  {
+    "from": 438.35,
+    "to": 439.13,
+    "sid": 122,
+    "location": 2,
+    "content": "Yes",
+    "music": 0.9999990909099173
+  },
+  {
+    "from": 439.13,
+    "to": 440.75,
+    "sid": 123,
+    "location": 2,
+    "content": "I know why did you",
+    "music": 0.9999999019607939
+  },
+  {
+    "from": 440.75,
+    "to": 445.04,
+    "sid": 124,
+    "location": 2,
+    "content": "Ain't shouldn't know you to get everything",
+    "music": 0.3705179135252011
+  },
+  {
+    "from": 445.04,
+    "to": 447.41,
+    "sid": 125,
+    "location": 2,
+    "content": "Never thought it breaks so hard",
+    "music": 0.9999999431818214
+  },
+  {
+    "from": 447.41,
+    "to": 448.4,
+    "sid": 126,
+    "location": 2,
+    "content": "I'm up here",
+    "music": 0.9999998611111305
+  },
+  {
+    "from": 448.4,
+    "to": 449,
+    "sid": 127,
+    "location": 2,
+    "content": "Alone",
+    "music": 0.9999997500000625
+  },
+  {
+    "from": 449,
+    "to": 450.86,
+    "sid": 128,
+    "location": 2,
+    "content": "Just a fall in star",
+    "music": 0.999999923076929
+  },
+  {
+    "from": 450.86,
+    "to": 452.21,
+    "sid": 129,
+    "location": 2,
+    "content": "But i do it again",
+    "music": 0.9999999206349269
+  },
+  {
+    "from": 452.21,
+    "to": 452.72,
+    "sid": 130,
+    "location": 2,
+    "content": "Again",
+    "music": 0.9999983333361111
+  },
+  {
+    "from": 452.72,
+    "to": 454.16,
+    "sid": 131,
+    "location": 2,
+    "content": "Again again again",
+    "music": 0.9999998837209438
+  },
+  {
+    "from": 454.24,
+    "to": 455.68,
+    "sid": 132,
+    "location": 2,
+    "content": "失真饱和",
+    "music": 0
+  },
+  {
+    "from": 455.68,
+    "to": 458.16,
+    "sid": 133,
+    "location": 2,
+    "content": "distortion and saturation类效果器",
+    "music": 0
+  },
+  {
+    "from": 458.16,
+    "to": 461.55,
+    "sid": 134,
+    "location": 2,
+    "content": "主要是用来给音色加入泛音和颗粒",
+    "music": 0
+  },
+  {
+    "from": 461.55,
+    "to": 464.96,
+    "sid": 135,
+    "location": 2,
+    "content": "使得音色可以从具有攻击性的冰冷感",
+    "music": 0
+  },
+  {
+    "from": 464.96,
+    "to": 469.22,
+    "sid": 136,
+    "location": 2,
+    "content": "调整为令人愉悦的温暖感",
+    "music": 0.1101694868572233
+  },
+  {
+    "from": 481.3,
+    "to": 482.64,
+    "sid": 137,
+    "location": 2,
+    "content": "值得注意的是",
+    "music": 0
+  },
+  {
+    "from": 482.64,
+    "to": 486.06,
+    "sid": 138,
+    "location": 2,
+    "content": "音轨里的效果器就像工厂的流水线一样",
+    "music": 0
+  },
+  {
+    "from": 486.06,
+    "to": 487.47,
+    "sid": 139,
+    "location": 2,
+    "content": "是按顺序排布",
+    "music": 0
+  },
+  {
+    "from": 487.47,
+    "to": 489.7,
+    "sid": 140,
+    "location": 2,
+    "content": "依次对声音进行处理的",
+    "music": 0
+  },
+  {
+    "from": 489.7,
+    "to": 493.06,
+    "sid": 141,
+    "location": 2,
+    "content": "每个效果器都只会处理前一个效果器",
+    "music": 0
+  },
+  {
+    "from": 493.06,
+    "to": 495.11,
+    "sid": 142,
+    "location": 2,
+    "content": "修饰完的声音信号",
+    "music": 0
+  },
+  {
+    "from": 495.11,
+    "to": 498.44,
+    "sid": 143,
+    "location": 2,
+    "content": "因此效果器的放置排布顺序",
+    "music": 0
+  },
+  {
+    "from": 498.44,
+    "to": 502.69,
+    "sid": 144,
+    "location": 2,
+    "content": "对于最终音色的形成也是起着决定性作用的",
+    "music": 0
+  },
+  {
+    "from": 502.69,
+    "to": 505.52,
+    "sid": 145,
+    "location": 2,
+    "content": "在经过这一系列效果器的处理后",
+    "music": 0
+  },
+  {
+    "from": 505.52,
+    "to": 508.61,
+    "sid": 146,
+    "location": 2,
+    "content": "原本干涩的音色被修饰的悦耳动人",
+    "music": 0
+  },
+  {
+    "from": 508.61,
+    "to": 512.159,
+    "sid": 147,
+    "location": 2,
+    "content": "最终被大家所听到",
+    "music": 0
+  },
+  {
+    "from": 517.059,
+    "to": 520.409,
+    "sid": 148,
+    "location": 2,
+    "content": "音色作为电子舞曲最标志性的特点",
+    "music": 0
+  },
+  {
+    "from": 520.409,
+    "to": 522.269,
+    "sid": 149,
+    "location": 2,
+    "content": "是个极其深广的课题",
+    "music": 0
+  },
+  {
+    "from": 522.269,
+    "to": 524.98,
+    "sid": 150,
+    "location": 2,
+    "content": "这两节课的内容只是抛砖引玉",
+    "music": 0
+  },
+  {
+    "from": 524.98,
+    "to": 527.29,
+    "sid": 151,
+    "location": 2,
+    "content": "希望大家继续深入细致的学习",
+    "music": 0
+  },
+  {
+    "from": 527.29,
+    "to": 529.32,
+    "sid": 152,
+    "location": 2,
+    "content": "并加以实践研究",
+    "music": 0
+  },
+  {
+    "from": 529.32,
+    "to": 532.8,
+    "sid": 153,
+    "location": 2,
+    "content": "最后祝大家蹦迪开心",
+    "music": 0
+  }
+]

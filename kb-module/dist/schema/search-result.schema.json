@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "search-result.schema.json",
+  "title": "Knowledge Base Search Result",
+  "type": "object",
+  "required": ["query", "count", "results", "meta"],
+  "properties": {
+    "query": { "type": "string" },
+    "count": { "type": "number" },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "title", "score", "snippet", "source"],
+        "properties": {
+          "id": { "type": "string", "description": "底层文档 ID（entry 或 curated doc）" },
+          "chunk_id": { "type": "string" },
+          "type": { "type": "string" },
+          "title": { "type": "string" },
+          "family": { "type": ["string", "null"] },
+          "path": { "type": ["string", "null"] },
+          "bpm": { "type": ["object", "null"] },
+          "score": { "type": "number" },
+          "snippet": { "type": "string" },
+          "source": { "type": "object" },
+          "metadata": { "type": "object" }
+        }
+      }
+    },
+    "meta": { "type": "object" }
+  }
+}

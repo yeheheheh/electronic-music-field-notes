@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manifest.schema.json",
+  "title": "Knowledge Base Module Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "module", "builtAt", "stats", "retrieval", "storage", "capabilities", "tools", "sources", "files"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "module": {
+      "type": "object",
+      "required": ["id", "name", "version", "language"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "language": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "builtAt": { "type": "string", "format": "date-time" },
+    "tokenizer": { "type": "string" },
+    "stats": { "type": "object" },
+    "retrieval": { "type": "object" },
+    "storage": { "type": "object" },
+    "capabilities": { "type": "array", "items": { "type": "string" } },
+    "tools": { "type": "array", "items": { "type": "string" } },
+    "sourceHashes": { "type": "object" },
+    "sources": { "type": "array" },
+    "files": { "type": "object" },
+    "counts": { "type": "object" }
+  },
+  "additionalProperties": true
+}

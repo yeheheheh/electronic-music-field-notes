@@ -1,0 +1,1413 @@
+{
+  "schemaVersion": "1.0.0",
+  "unresolvedRelationNames": [
+    "Modern Piano House",
+    "Ballroom Club",
+    "Techno",
+    "UK Acid House",
+    "UK Deep House",
+    "House",
+    "Latin music",
+    "South African Music",
+    "Sghubu",
+    "Jazz",
+    "Afro Pop",
+    "Bacardi",
+    "Ọjà",
+    "Blackman Music",
+    "South American and African Tribe music",
+    "Ibiza Trance/Balearic Trance",
+    "Soul",
+    "Funk",
+    "Rock",
+    "Pop",
+    "Electronic Dance Music",
+    "French Electro",
+    "French Touch",
+    "Totalism",
+    "Swing",
+    "Gospel",
+    "Ballroom Culture",
+    "pop EDM",
+    "Electro Tech House",
+    "Minimal Tech House",
+    "Naughty Tech House",
+    "Nu-Jazz",
+    "Rave",
+    "Bass Music",
+    "Bro House",
+    "Riddm Dubstep",
+    "Trance",
+    "Electro Pop/Electroclash",
+    "Pop EDM",
+    "Dubstep",
+    "Mákina",
+    "Vina Pop",
+    "R&B",
+    "Gabber/Early Hardcore",
+    "US Gabber",
+    "Diva House/Hardbag",
+    "Classic Scouse House",
+    "Hardstyle",
+    "Hardcore",
+    "Belgian Hard House",
+    "US Bass",
+    "J-Rave Techno",
+    "J-Rave",
+    "Nerdcore/J-core",
+    "Rave Music",
+    "Candombe",
+    "Bargin' Techno",
+    "Raw Techno",
+    "Dark Raw Techno",
+    "Bigroom Techno",
+    "EDM House",
+    "Classical",
+    "Hard Acid Techno",
+    "Freefrom Hardcore",
+    "EDM Progressive Trance",
+    "Complextro Trance",
+    "Future Bounce/Hands Up",
+    "Psychedelic Trance",
+    "Old-School Nitzhonot",
+    "Greek Uplifting",
+    "Nitzhogoa",
+    "Heavy Metal/Buttrock",
+    "Full-on Psy",
+    "Dark Full-On",
+    "Breaks",
+    "Industrial Breaks",
+    "Ska",
+    "Indonesian Folk",
+    "Disko Tanah",
+    "Proto Funk Carioca",
+    "Hard House",
+    "Rave Piano",
+    "Hardcore Breaks",
+    "Breakcore Revival",
+    "Reggae",
+    "Hardstep",
+    "Atmospheric Breaks/Drum & Bass/Breakcore",
+    "Drum & Bass(Hardstep",
+    "Neurofunk etc.)",
+    "Future Jungle",
+    "Furry EDM",
+    "Baroque Pop",
+    "Classical Crossover",
+    "Metal",
+    "Noisecore",
+    "Sadcore",
+    "Chiptune",
+    "Drenchcore",
+    "Dariacore",
+    "Dancefloor Drum & Bass",
+    "Nu Jump Up",
+    "Jump up (Mainstream)/EDM Drum & Bass",
+    "Halftime Neuro Funk (Tag)",
+    "Samba",
+    "Latin Jazz",
+    "Minimal Drum & Bass",
+    "Minimal DnB",
+    "Technoid/Techno Drum & Bass",
+    "Melodic Drum & Bass",
+    "J-core/Nerdcore",
+    "Requiem Trancecore",
+    "Artcore Drum and Bass",
+    "Donk",
+    "Organ Bassline Revival",
+    "Bassline/4×4 Bassline Garage",
+    "Indie Rock",
+    "East Asian Traditional Music/Asian Underground",
+    "Comtemporary R&B",
+    "UK Dance",
+    "Beat Scene",
+    "Alternative R&B",
+    "Riddim/Trench",
+    "PC Music",
+    "Future Drumstep",
+    "Experimental Raw Hardstyle",
+    "Driddim/Riddim Drumstep",
+    "Viking Metal",
+    "Riddim Vomitstep",
+    "Vomit House",
+    "Samba/Latin Music",
+    "Hentaistep",
+    "Death Metal",
+    "Deathcore",
+    "Doomstep",
+    "Tearout",
+    "Slam Down",
+    "Melodic Brostep",
+    "Cinematic Music/Can Music",
+    "Epic Music",
+    "Cellostep",
+    "Orchestra Music",
+    "Heavy Metal",
+    "Rockstep",
+    "Horror Music",
+    "Neuro Drumstep",
+    "Psy (Rock/Trance)",
+    "Shoegaze",
+    "Industrial Music",
+    "Doom Techno",
+    "Gabba",
+    "Early Hardcore",
+    "Dark Ambient Scoress",
+    "*Uptempo Hardcore",
+    "Darkcore",
+    "Newskool Industrial Hardcore",
+    "Oldskool Industrial Hardcore",
+    "Frenchcore",
+    "Drum 'n' Core",
+    "French Hardtek",
+    "Cheapcore",
+    "Giltch",
+    "Cybercore",
+    "Gabbar",
+    "Splitterflash",
+    "Extraflash",
+    "Happy Speed Bass",
+    "Anti Music Sport",
+    "Hardtek",
+    "Tribetek",
+    "Spiral Tribe (Personal Tag/Genre)",
+    "Mental Hardfloor",
+    "Mentalcore",
+    "Tribecore Freecore",
+    "Melodicious Tribecore",
+    "EDM (Old Fasion)",
+    "Modern Frenchcore",
+    "Hardcore (Mainstream)",
+    "Modern Frenchore",
+    "UK Hardcore",
+    "Mash Up Tek",
+    "Acidtek",
+    "Japanese Pumpcore",
+    "Gabber Trance",
+    "Dutch Freeform",
+    "Acid",
+    "*Makinastomp",
+    "*Bigroom Hardcore",
+    "UK Hardcore (Modern)",
+    "Garmen Trance",
+    "Germen Trance",
+    "Fake Makina",
+    "German Happy Gabber",
+    "Liquid Funk/Dubstep",
+    "Euphoric Rawstyle",
+    "Extra Rawstyle",
+    "Experimetal Rawstyle",
+    "Raw Hardtyle",
+    "J-Hard Drop",
+    "Zakistyle",
+    "Dark Techstep",
+    "Hardstyel",
+    "Psy Hardcore",
+    "Trance（Uplifting Trance）",
+    "Ardkore",
+    "UK Trancecore",
+    "J-Trancecore*",
+    "Renaissance Hardcore",
+    "Classical Hardcore",
+    "Makinastomp",
+    "Dozens Culture",
+    "Political Poetry",
+    "Rap",
+    "Old School Hip-Hop",
+    "Pop Funk",
+    "Electronic Music",
+    "Hard Rock",
+    "Hardcore Punk",
+    "Oldschool Hip Hop",
+    "Punk Rock",
+    "New School Hip-Hop",
+    "Gangsta Rap",
+    "Post Trip Hop",
+    "Sigilkore",
+    "Abstract Rap",
+    "Pain (Rap)",
+    "Pop Music",
+    "Mumble Rap",
+    "Melodic Rap",
+    "Digicore",
+    "Merengue",
+    "Meren Rap",
+    "Jazz Fusion",
+    "Goregrind",
+    "Gansta Rap",
+    "Indiehop",
+    "Dirty South",
+    "Car Audio Bass",
+    "Atlanta Rap",
+    "Post Hardcore",
+    "Snap&B",
+    "Freestyle Rap",
+    "Emo",
+    "Wavy Phonk",
+    "HDM",
+    "Lyrical Rap",
+    "New Wave Rap",
+    "Drak Trap",
+    "Afrobeat",
+    "Hardstyle/Rawstyle",
+    "Twerkcore (Tag)",
+    "Stutter Twerk (Microgerne)",
+    "HexD/Surge",
+    "US Drill",
+    "NY Drill",
+    "Bronx Jersey Drill",
+    "Bronx Snap",
+    "SpaceJugg",
+    "Contemporary R&B",
+    "Nod",
+    "Chill Future Bass",
+    "Future Urban",
+    "EDM",
+    "Philly Soul",
+    "Boogie",
+    "Eurobeat",
+    "Hispanic American Music",
+    "Urban Cowboy",
+    "Morning Music",
+    "Deep Disco",
+    "Synth Funk",
+    "Modern Disco",
+    "Alternative Dance",
+    "Super Eurobeat",
+    "J-Euro",
+    "Black Metal",
+    "Progressive Rock",
+    "​",
+    "Northern American Music",
+    "Trillbient",
+    "Progressive Electronics",
+    "Modern Classical",
+    "Goa Ambient",
+    "Classical Music",
+    "Avant-Garde Music",
+    "(Atmospheric) Black Metal",
+    "Garden Synth",
+    "Mushroom Synth",
+    "Japanese Folk Music",
+    "Samurai Synth",
+    "Japan Synth",
+    "Koto Ambient",
+    "Tanzelcore",
+    "Cyber Punk Culture",
+    "Retro Culture",
+    "Retrowave",
+    "Retro Electro",
+    "Neo 80s",
+    "Soviet Culture",
+    "Trumpwave",
+    "Simpsonwave",
+    "Polishwave",
+    "Cyber Punk Art",
+    "Dark Synth Pop",
+    "Dark Synth-pop",
+    "Dark Synthpop",
+    "Film Score",
+    "AOR",
+    "Proto-Flashcore",
+    "Pure Flashcore",
+    "Industrial Flashcore",
+    "Flash",
+    "Electro Jazz",
+    "Hypnogogic Pop",
+    "Chip Funk",
+    "FM Synthesis Funk",
+    "Demoscene",
+    "MIDI Piano",
+    "PC Technology",
+    "VOCALOID",
+    "Livetronica",
+    "Music Programming Technology",
+    "UTAU Technology",
+    "Electro-Boogie",
+    "Midtempo Bass",
+    "Emotional Dance Music",
+    "Emo Dance Music",
+    "Christian Music (Gospel",
+    "Poem etc.)",
+    "Easy Listening",
+    "Vapor",
+    "Vapour",
+    "Muzak",
+    "Vapornoize",
+    "Urban Music",
+    "Fringewave",
+    "J-EDM/Anisong",
+    "Dark Ambient/Black Ambient",
+    "Spookwave",
+    "Vaporwave/Post-Vaporwave",
+    "Cleancore {Aesthetics}",
+    "Grunge",
+    "Ocean Punk {Aesthetics}",
+    "HexD Trance",
+    "Hyper Pop/Sigilkore",
+    "Nightstep",
+    "Slowed + Reverb",
+    "Hyperflip",
+    "Comedy Hip-Hop",
+    "下位：Plugg",
+    "Memphis Revival",
+    "Anime Soundtrack",
+    "Funk Mandelão",
+    "Wave Music",
+    "Cyber Wave (Tag)",
+    "UK Dance(Jungle",
+    "Eco-Futurism",
+    "Hyper UK Hardcore (Tag)",
+    "Hyper Hardcore",
+    "Gamelan Music",
+    "Newari Folk",
+    "Gharana",
+    "Post-Intenet",
+    "Microtonal",
+    "Weirdcore",
+    "Dreamcore",
+    "Traumacore {Aesthetics}",
+    "Extremist Aesthetics",
+    "Industrial Rock",
+    "Industrial Metal",
+    "Belgian Acid House",
+    "Neofolk",
+    "Neo Classicalism",
+    "Electric Instrument",
+    "Acousmatic",
+    "Free Improvisation",
+    "Experimental Jazz",
+    "Avant-Garde",
+    "Cinematic Music",
+    "Space Age Pop",
+    "Animal Sounds",
+    "Birdsong",
+    "Whale Song",
+    "Holy Minimalism",
+    "Post-Minimalism",
+    "Nightcore/Anti-Nightcore",
+    "Cut & Paste",
+    "Plunderphonic Hip-Hop",
+    "Early Club Mashups",
+    "Spamwave",
+    "Turntablism",
+    "Camelliacore",
+    "Hyper Glitch",
+    "Folk",
+    "European Music",
+    "Kirtan",
+    "Himalaya Bowl",
+    "Mixing Techniques",
+    "Experimental Psy",
+    "PsyBient",
+    "Afro Music",
+    "Deejay",
+    "Roots Reggae",
+    "Calypso",
+    "Zimbabwean Music",
+    "Caribbean Music",
+    "Ragga Soca",
+    "Asian Ethnic Music",
+    "Sham Music",
+    "Balkan Folk",
+    "Euro Beat",
+    "Dirty Rap",
+    "Percussion Music(Instrument: Djembe",
+    "Balafon etc.)",
+    "Makossa",
+    "Bikutsi",
+    "West Coast Folk Music",
+    "West Coast African Music",
+    "South-Afrian Folk Music",
+    "Kwasa Kwasa",
+    "Acoustic Rock",
+    "African Jazz",
+    "Reggeaton",
+    "Genge/Kenyan Hip Hop",
+    "Kadongo Kamu",
+    "Coladeira",
+    "Morna",
+    "Egypt Folk Music",
+    "Cuban Dance Music",
+    "Haitian Folk Music",
+    "Konpa",
+    "Haitian Rara",
+    "African Folk Music",
+    "Guonea-Bissau Folk Music",
+    "Tijuana Traditional Music",
+    "Ethnic Music",
+    "Tribal Culture",
+    "Fiji Folk Music",
+    "Jazz/Blues",
+    "Poem",
+    "Alternative Rock",
+    "Psy Rock",
+    "Britpop",
+    "Dream Pop",
+    "Bristol Sound",
+    "Electronics/Electro",
+    "Disco/HI-NRG",
+    "Space Rock",
+    "Pop Rock",
+    "Indie Sleaze",
+    "Kosmische Musik",
+    "Chiptune/VGM",
+    "Melodic Metalcore",
+    "Pop Punk",
+    "Grindcore",
+    "Gabbergrind",
+    "Cyber Goregrind",
+    "Animegrind",
+    "Dance Grindcore",
+    "Post Metal",
+    "Anti-Music Sport",
+    "Proto Punk",
+    "Doomerwave",
+    "Post Rock",
+    "UK Post Punk",
+    "Schlager",
+    "Gothrock",
+    "Gothic Rock",
+    "Indie Folk",
+    "Apocalpse Folk",
+    "Neo Folk",
+    "Idol Kāyo",
+    "Kāyokyoku",
+    "EDM(Disco",
+    "HI-NRG etc.)",
+    "Nu Disco/Post-Disco",
+    "Boy Band Culture",
+    "Latin Music",
+    "Synth Pop/Electro Pop",
+    "Sophisti-Pop",
+    "Chamber Pop",
+    "Lounge",
+    "Yé-yé",
+    "Akishibuya-kei",
+    "Post Shibuya-kei",
+    "J-Pop/Denpa",
+    "Dark Pop",
+    "Bedroom Pop",
+    "Psychedelic Rock",
+    "Chiptune (Plus)",
+    "Eurodance/Euro Disco",
+    "French Pop",
+    "New Music",
+    "Soft Rock",
+    "Synth Pop/Electro Pop/Dance Pop",
+    "J-Rock",
+    "Noctural Scene",
+    "Akiba-Pop",
+    "Doujin Activity",
+    "Doujin Trancecore",
+    "Korea Folk",
+    "Trot",
+    "K-Pop",
+    "DPNK-Pop",
+    "Vina Folk",
+    "K-Pop/J-Pop",
+    "Synth Djent",
+    "Screamo Rap",
+    "Nu Metalcore",
+    "Neo Soul",
+    "Brega",
+    "carimbó",
+    "lambada",
+    "Cumbia",
+    "Tango Dance",
+    "Nu Jazz",
+    "Jazz Funk",
+    "ECM Style Jazz",
+    "Smooth Jazz",
+    "Dark Jazz",
+    "Jazz Hop",
+    "Swing/Swing Revival",
+    "Symphony/Orchestra",
+    "Can Music",
+    "Furnishment music",
+    "Italian Soundtrack",
+    "Orchestral Soundtrack",
+    "Breakflash"
+  ],
+  "duplicateNames": [
+    [
+      {
+        "id": "g-657",
+        "name": "Bongopiano",
+        "family": "House"
+      },
+      {
+        "id": "g-17248",
+        "name": "Bongopiano",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-663",
+        "name": "Bique",
+        "family": "House"
+      },
+      {
+        "id": "g-17200",
+        "name": "Bique",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-721",
+        "name": "Ambient House",
+        "family": "House"
+      },
+      {
+        "id": "g-12360",
+        "name": "Ambient House",
+        "family": "Ambient"
+      }
+    ],
+    [
+      {
+        "id": "g-777",
+        "name": "Nu-Disco",
+        "family": "House"
+      },
+      {
+        "id": "g-11639",
+        "name": "Nu-Disco",
+        "family": "Disco / Hi-NRG"
+      }
+    ],
+    [
+      {
+        "id": "g-1059",
+        "name": "Changa Tuki",
+        "family": "House"
+      },
+      {
+        "id": "g-17448",
+        "name": "Changa Tuki",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-1075",
+        "name": "Kidandali",
+        "family": "House"
+      },
+      {
+        "id": "g-17276",
+        "name": "Kidandali",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-1433",
+        "name": "Pizzicato Prog",
+        "family": "House"
+      },
+      {
+        "id": "g-2913",
+        "name": "Pizzicato Prog",
+        "family": "Trance"
+      }
+    ],
+    [
+      {
+        "id": "g-1513",
+        "name": "Glitch House",
+        "family": "House"
+      },
+      {
+        "id": "g-19254",
+        "name": "Glitch House",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-1641",
+        "name": "EDM PSY",
+        "family": "House"
+      },
+      {
+        "id": "g-3537",
+        "name": "EDM PSY",
+        "family": "Trance"
+      }
+    ],
+    [
+      {
+        "id": "g-1723",
+        "name": "UC Hard House",
+        "family": "House"
+      },
+      {
+        "id": "g-8432",
+        "name": "UC Hard House",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-1833",
+        "name": "Hard-NRG",
+        "family": "House"
+      },
+      {
+        "id": "g-8494",
+        "name": "Hard-NRG",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-1879",
+        "name": "Bumping",
+        "family": "House"
+      },
+      {
+        "id": "g-19260",
+        "name": "Bumping",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-1947",
+        "name": "Hard Bass",
+        "family": "House"
+      },
+      {
+        "id": "g-8444",
+        "name": "Hard Bass",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-2315",
+        "name": "Ambient Techno",
+        "family": "Techno"
+      },
+      {
+        "id": "g-12366",
+        "name": "Ambient Techno",
+        "family": "Ambient"
+      }
+    ],
+    [
+      {
+        "id": "g-2429",
+        "name": "Nortec",
+        "family": "Techno"
+      },
+      {
+        "id": "g-17418",
+        "name": "Nortec",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-2495",
+        "name": "Industrial Techno",
+        "family": "Techno"
+      },
+      {
+        "id": "g-15782",
+        "name": "Industrial Techno",
+        "family": "Industrial"
+      }
+    ],
+    [
+      {
+        "id": "g-2523",
+        "name": "TBM",
+        "family": "Techno"
+      },
+      {
+        "id": "g-15560",
+        "name": "TBM",
+        "family": "Industrial"
+      }
+    ],
+    [
+      {
+        "id": "g-2543",
+        "name": "Hard Acid",
+        "family": "Techno"
+      },
+      {
+        "id": "g-2847",
+        "name": "Hard Acid",
+        "family": "Trance"
+      }
+    ],
+    [
+      {
+        "id": "g-2607",
+        "name": "Psy Techno",
+        "family": "Techno"
+      },
+      {
+        "id": "g-3561",
+        "name": "Psy Techno",
+        "family": "Trance"
+      }
+    ],
+    [
+      {
+        "id": "g-2893",
+        "name": "Deep Trance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-19280",
+        "name": "Deep Trance",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-2907",
+        "name": "Ambient Trance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-12390",
+        "name": "Ambient Trance",
+        "family": "Ambient"
+      }
+    ],
+    [
+      {
+        "id": "g-2987",
+        "name": "Hard Trance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-8456",
+        "name": "Hard Trance",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-3149",
+        "name": "Deep Progressive Trance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-19286",
+        "name": "Deep Progressive Trance",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-3549",
+        "name": "Psydub",
+        "family": "Trance"
+      },
+      {
+        "id": "g-16788",
+        "name": "Psydub",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-3555",
+        "name": "Psybreaks",
+        "family": "Trance"
+      },
+      {
+        "id": "g-4115",
+        "name": "Psy Breaks",
+        "family": "Breakbeat"
+      }
+    ],
+    [
+      {
+        "id": "g-3567",
+        "name": "NEO-Trance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-15076",
+        "name": "NEO-Trance",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-3573",
+        "name": "Hyper Trance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-15110",
+        "name": "Hyper Trance",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-3579",
+        "name": "Sextrance",
+        "family": "Trance"
+      },
+      {
+        "id": "g-14724",
+        "name": "Sextrance",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-3913",
+        "name": "Big Beat",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-19170",
+        "name": "Big Beat",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-4065",
+        "name": "Progressive Breaks",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-19160",
+        "name": "Progressive Breaks",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-4083",
+        "name": "Atmospheric Breaks",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-19144",
+        "name": "Atmospheric Breaks",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-4573",
+        "name": "Glitchcore",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-8279",
+        "name": "Glitchcore",
+        "family": "HDM"
+      },
+      {
+        "id": "g-14904",
+        "name": "Glitchcore",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-4667",
+        "name": "Mashcore",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-8270",
+        "name": "Mashcore",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-4693",
+        "name": "Lolicore",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-8260",
+        "name": "Lolicore",
+        "family": "HDM"
+      },
+      {
+        "id": "g-19192",
+        "name": "Lolicore",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-4737",
+        "name": "Atmospheric Breakcore",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-8289",
+        "name": "Atmospheric Breakcore",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-4749",
+        "name": "Depressive Breakcore",
+        "family": "Breakbeat"
+      },
+      {
+        "id": "g-8299",
+        "name": "Depressive Breakcore",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-5677",
+        "name": "UK Dubstep",
+        "family": "UK Bass"
+      },
+      {
+        "id": "g-16824",
+        "name": "UK Dubstep",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-5829",
+        "name": "UK Riddim",
+        "family": "UK Bass"
+      },
+      {
+        "id": "g-19298",
+        "name": "UK Riddim",
+        "family": "待归档"
+      }
+    ],
+    [
+      {
+        "id": "g-6348",
+        "name": "Melodic Bass",
+        "family": "US Bass"
+      },
+      {
+        "id": "g-11303",
+        "name": "Melodic Bass",
+        "family": "Hip-Hop / Trap / Future Bass"
+      }
+    ],
+    [
+      {
+        "id": "g-6458",
+        "name": "Crunkstep",
+        "family": "US Bass"
+      },
+      {
+        "id": "g-10153",
+        "name": "Crunkstep",
+        "family": "Hip-Hop / Trap / Future Bass"
+      }
+    ],
+    [
+      {
+        "id": "g-6472",
+        "name": "Trapstep",
+        "family": "US Bass"
+      },
+      {
+        "id": "g-10227",
+        "name": "Trapstep",
+        "family": "Hip-Hop / Trap / Future Bass"
+      }
+    ],
+    [
+      {
+        "id": "g-6564",
+        "name": "Futurestep",
+        "family": "US Bass"
+      },
+      {
+        "id": "g-11297",
+        "name": "Future-step",
+        "family": "Hip-Hop / Trap / Future Bass"
+      }
+    ],
+    [
+      {
+        "id": "g-7319",
+        "name": "J-Speedcore",
+        "family": "HDM"
+      },
+      {
+        "id": "g-9155",
+        "name": "J-Speedcore",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-8387",
+        "name": "J-Makina",
+        "family": "HDM"
+      },
+      {
+        "id": "g-9141",
+        "name": "J-Makina",
+        "family": "HDM"
+      }
+    ],
+    [
+      {
+        "id": "g-8560",
+        "name": "Xpiritualism Jumpstyle",
+        "family": "HDM"
+      },
+      {
+        "id": "g-14706",
+        "name": "Xpiritualism Jumpstyle",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-8744",
+        "name": "Freestyle",
+        "family": "HDM"
+      },
+      {
+        "id": "g-18422",
+        "name": "Freestyle",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-9117",
+        "name": "Future-core",
+        "family": "HDM"
+      },
+      {
+        "id": "g-11309",
+        "name": "Future-core",
+        "family": "Hip-Hop / Trap / Future Bass"
+      }
+    ],
+    [
+      {
+        "id": "g-9799",
+        "name": "Surge",
+        "family": "Hip-Hop / Trap / Future Bass"
+      },
+      {
+        "id": "g-14762",
+        "name": "Surge",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-10263",
+        "name": "Drift Phonk",
+        "family": "Hip-Hop / Trap / Future Bass"
+      },
+      {
+        "id": "g-15240",
+        "name": "Drift Phonk",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-11627",
+        "name": "Disco Polo",
+        "family": "Disco / Hi-NRG"
+      },
+      {
+        "id": "g-18348",
+        "name": "Disco Polo",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-11633",
+        "name": "Disco Pop",
+        "family": "Disco / Hi-NRG"
+      },
+      {
+        "id": "g-18330",
+        "name": "Disco Pop",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-12043",
+        "name": "Dark Ambient",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-15474",
+        "name": "Dark Ambient",
+        "family": "Industrial"
+      }
+    ],
+    [
+      {
+        "id": "g-12137",
+        "name": "Lowercase",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-16126",
+        "name": "Lowercase",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-12151",
+        "name": "Microsound",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-16176",
+        "name": "Microsound",
+        "family": "早期流派 / 手法 / 理念"
+      },
+      {
+        "id": "g-16240",
+        "name": "Microsound",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-12255",
+        "name": "Ambient Noise Wall",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-16474",
+        "name": "Ambient Noise Wall",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-12338",
+        "name": "Psybient/Psychill",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-13226",
+        "name": "Psybient/Psychill",
+        "family": "Indie"
+      }
+    ],
+    [
+      {
+        "id": "g-12372",
+        "name": "Ambient Dub",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-16800",
+        "name": "Ambient Dub",
+        "family": "Ethnic"
+      }
+    ],
+    [
+      {
+        "id": "g-12402",
+        "name": "Ambient Pop",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-18538",
+        "name": "Ambient Pop",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-12420",
+        "name": "Hauntology",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-16392",
+        "name": "Hauntology",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-12434",
+        "name": "Dungeon Synth",
+        "family": "Ambient"
+      },
+      {
+        "id": "g-18838",
+        "name": "Dungeon Synth",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-12796",
+        "name": "Chillsynth",
+        "family": "Indie"
+      },
+      {
+        "id": "g-13178",
+        "name": "Chillsynth",
+        "family": "Indie"
+      }
+    ],
+    [
+      {
+        "id": "g-13304",
+        "name": "Skweee",
+        "family": "Indie"
+      },
+      {
+        "id": "g-13530",
+        "name": "Skweee",
+        "family": "Indie"
+      }
+    ],
+    [
+      {
+        "id": "g-13484",
+        "name": "Electro",
+        "family": "Indie"
+      },
+      {
+        "id": "g-17860",
+        "name": "Electro",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-14068",
+        "name": "Browser Beats",
+        "family": "Post-Internet"
+      },
+      {
+        "id": "g-16372",
+        "name": "Browser Beats",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-14380",
+        "name": "Oceangrunge",
+        "family": "Post-Internet"
+      },
+      {
+        "id": "g-14668",
+        "name": "Ocean Grunge",
+        "family": "Post-Internet"
+      }
+    ],
+    [
+      {
+        "id": "g-14768",
+        "name": "Nightcore",
+        "family": "Post-Internet"
+      },
+      {
+        "id": "g-16352",
+        "name": "Nightcore",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-15146",
+        "name": "Deconstructed Club",
+        "family": "Post-Internet"
+      },
+      {
+        "id": "g-15480",
+        "name": "Deconstructed Club",
+        "family": "Industrial"
+      }
+    ],
+    [
+      {
+        "id": "g-15424",
+        "name": "Power Electronics",
+        "family": "Industrial"
+      },
+      {
+        "id": "g-16486",
+        "name": "Power Electronics",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-15694",
+        "name": "Power Noise",
+        "family": "Industrial"
+      },
+      {
+        "id": "g-16480",
+        "name": "Power Noise",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-15776",
+        "name": "Epic Collage",
+        "family": "Industrial"
+      },
+      {
+        "id": "g-16228",
+        "name": "Epic Collage",
+        "family": "早期流派 / 手法 / 理念"
+      }
+    ],
+    [
+      {
+        "id": "g-16518",
+        "name": "Black Noise",
+        "family": "早期流派 / 手法 / 理念"
+      },
+      {
+        "id": "g-18844",
+        "name": "Black Noise",
+        "family": "Fusion"
+      }
+    ],
+    [
+      {
+        "id": "g-16998",
+        "name": "Turbo-Folk",
+        "family": "Ethnic"
+      },
+      {
+        "id": "g-18932",
+        "name": "Turbo-Folk",
+        "family": "Fusion"
+      }
+    ]
+  ]
+}

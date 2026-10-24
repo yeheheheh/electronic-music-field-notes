@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chunk.schema.json",
+  "title": "Knowledge Base Chunk",
+  "type": "object",
+  "required": ["id", "docId", "type", "title", "text", "source", "metadata"],
+  "properties": {
+    "id": { "type": "string" },
+    "docId": { "type": "string" },
+    "type": {
+      "enum": ["entry", "family", "guide", "style", "instrument", "glossary", "timeline", "live", "source", "transcript"]
+    },
+    "title": { "type": "string" },
+    "text": { "type": "string" },
+    "family": { "type": ["string", "null"] },
+    "familyId": { "type": ["string", "null"] },
+    "path": { "type": ["string", "null"] },
+    "bpm": {
+      "type": ["object", "null"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "label": { "type": "string" }
+      },
+      "required": ["min", "max", "label"]
+    },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "examples": { "type": "array", "items": { "type": "string" } },
+    "source": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": ["string", "null"] },
+        "line": { "type": ["number", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": true
+}

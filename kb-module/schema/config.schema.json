@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "config.schema.json",
+  "title": "Knowledge Base Module Config",
+  "type": "object",
+  "required": ["module", "inputs", "output"],
+  "properties": {
+    "module": {
+      "type": "object",
+      "required": ["id", "name", "version", "language"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "language": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "inputs": {
+      "type": "object",
+      "required": ["taxonomy", "curated"],
+      "properties": {
+        "taxonomy": { "type": "string", "description": "Markdown 分类库，相对 config 文件解析。" },
+        "curated": { "type": "string", "description": "精编内容 JSON，相对 config 文件解析。" },
+        "transcripts": { "type": "string", "description": "可选转写目录。" },
+        "sourceMap": { "type": "string", "description": "可选来源映射 JSON。" }
+      },
+      "additionalProperties": false
+    },
+    "output": { "type": "string", "description": "产物目录，相对 config 文件解析。" },
+    "build": {
+      "type": "object",
+      "properties": {
+        "chunkMaxChars": { "type": "integer", "minimum": 200 },
+        "chunkOverlap": { "type": "integer", "minimum": 0 },
+        "includeTranscripts": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "retrieval": {
+      "type": "object",
+      "properties": {
+        "defaultLimit": { "type": "integer", "minimum": 1, "maximum": 50 },
+        "maxLimit": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "bm25": {
+          "type": "object",
+          "properties": {
+            "k1": { "type": "number", "minimum": 0 },
+            "b": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
