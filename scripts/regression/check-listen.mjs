@@ -174,6 +174,48 @@ const goto = async (hash, wait = 900) => {
 };
 
 try {
+  /* 首页四轨 */
+  await goto('#/', 1500);
+  const homeRack = await cdp.eval(`({
+    tracks: [...document.querySelectorAll('.track')].map(t => ({
+      title: t.querySelector('.track-title')?.textContent.trim() || '',
+      code: t.querySelector('.track-code')?.textContent.trim() || '',
+      links: t.querySelectorAll('.track-links a').length,
+      href: t.querySelector('.track-title a')?.getAttribute('href') || '',
+    })),
+    scale: !!document.querySelector('.hero-scale'),
+    daily: document.querySelector('[data-daily-name]')?.textContent || '',
+    docW: document.documentElement.scrollWidth,
+    vw: window.innerWidth,
+  })`);
+  check('首页有四个入口', homeRack.tracks.length === 4, homeRack.tracks.map((t) => t.title).join(' / '));
+  check('四条轨分别指向 听 / 查 / 练 / 做', homeRack.tracks.map((t) => t.code).join(',') === 'LISTEN,SEARCH,TRAIN,MAKE', homeRack.tracks.map((t) => t.href).join(' '));
+  check('每条轨至少三个入口链接', homeRack.tracks.every((t) => t.links >= 3), homeRack.tracks.map((t) => t.links).join('/'));
+  check('首页有「今天听这条」', homeRack.daily.length > 0, homeRack.daily);
+
+  const daily = await cdp.eval(`(async () => {
+    const before = document.querySelector('[data-daily-name]').textContent;
+    document.querySelector('[data-daily-play]').click();
+    await new Promise(r => setTimeout(r, 700));
+    const state = window.EMAudio.getState();
+    document.querySelector('[data-daily-shuffle]').click();
+    await new Promise(r => setTimeout(r, 250));
+    const after = document.querySelector('[data-daily-name]').textContent;
+    window.EMAudio.stop();
+    return { playing: state.playing, demoId: state.demoId, before, after };
+  })()`);
+  check('首页「今天听这条」能直接出声', daily.playing === true, daily.demoId);
+  check('「换一条」真的换了一条', daily.before !== daily.after, `${daily.before} → ${daily.after}`);
+
+  const searchJump = await cdp.eval(`(async () => {
+    const form = document.getElementById('homeKbSearch');
+    form.querySelector('input').value = 'Sidechain';
+    form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    await new Promise(r => setTimeout(r, 600));
+    return location.hash;
+  })()`);
+  check('首页搜索框跳到全库检索', String(searchJump).startsWith('#/search?q='), searchJump);
+
   /* 入口页 */
   await goto('#/listen', 1600);
   const home = await cdp.eval(`({
@@ -461,13 +503,13 @@ try {
   let overflow = [];
   for (const width of widths) {
     await cdp.send('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: width < 600 });
-    for (const hash of ['#/listen', '#/dj', '#/quick']) {
+    for (const hash of ['#/', '#/listen', '#/dj', '#/quick']) {
       await goto(hash, 700);
       const doc = await cdp.eval('({ docW: document.documentElement.scrollWidth, vw: window.innerWidth })');
       if (doc.docW > doc.vw) overflow.push(`${width}${hash}`);
     }
   }
-  check('9 档宽度 × 3 个新页面零横向溢出', overflow.length === 0, overflow.join(' '));
+  check('9 档宽度 × 4 个入口零横向溢出', overflow.length === 0, overflow.join(' '));
 
   check('全程无运行时报错', cdp.logs.length === 0, cdp.logs.slice(0, 2).join(' | '));
 } catch (error) {

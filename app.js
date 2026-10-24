@@ -1232,36 +1232,65 @@
     const stats = KB.meta.stats;
     const nextLesson = firstIncompleteLesson();
     const completedCount = courseCompleted.size;
-    const startHref = nextLesson ? `#/learn/${nextLesson.id}` : '#/learn';
     const total = COURSE_LESSONS.length;
     const familyTotal = KB.families.filter((family) => !family.archive && !family.supplement).length;
+    const styles = listenStyles();
+    const styleTotal = styles.length;
+    const cellCount = {};
+    for (const item of styles) {
+      const key = `${item.data.band}/${item.data.groove}`;
+      cellCount[key] = (cellCount[key] || 0) + 1;
+    }
+    const nextNumber = nextLesson ? COURSE_LESSONS.findIndex((lesson) => lesson.id === nextLesson.id) + 1 : 0;
+    const startHref = nextLesson ? `#/learn/${nextLesson.id}` : '#/learn';
+    // 今天听这条：按天取模，同一天打开是同一条；「换一条」才随机
+    const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+    homeDaily = styles[dayOfYear % Math.max(1, styles.length)] || styles[0] || null;
+    const randomStyle = styles[(dayOfYear * 7 + 3) % Math.max(1, styles.length)] || null;
+
     heroPattern = {
       kick: [true, false, false, false, true, false, false, false],
       snare: [false, false, true, false, false, false, true, false],
       hat: [true, true, true, true, true, true, true, true],
     };
+
+    const mm = LISTEN.grooves.map((groove) => `
+      <div class="mm-row">
+        ${LISTEN.bands.map((band) => {
+          const count = cellCount[`${band.id}/${groove.id}`] || 0;
+          const fill = count ? Math.min(1, 0.3 + count * 0.08) : 0;
+          return `<span class="mm-cell${count ? ' is-on' : ''}" style="--fill:${fill.toFixed(2)}"></span>`;
+        }).join('')}
+      </div>`).join('');
+
+    const steps8 = COURSE_CHAPTERS.map((chapter) => {
+      const done = chapter.lessons.filter((lesson) => courseCompleted.has(lesson.id)).length;
+      const state = done === chapter.lessons.length && done > 0 ? 'is-done' : done ? 'is-part' : '';
+      return `<i class="${state}" title="${escapeHtml(chapter.title)}：${done}/${chapter.lessons.length}"></i>`;
+    }).join('');
+
     main.innerHTML = `
-      <section class="hero hero-home">
+      <section class="hero hero-home hero-compact">
         <div class="hero-copy">
           <div class="hero-topline">
-            <span class="hero-kicker">${escapeHtml(CUR.hero.kicker)}</span>
-            <span class="mono-label">FIELD NOTES / 2026</span>
+            <span class="hero-kicker">ELECTRONIC MUSIC FIELD NOTES / 电音档案</span>
+            <span class="mono-label">${familyTotal} 大族 · ${formatNumber(stats.entries)} 条</span>
           </div>
           <h1 class="hero-title">
-            <span class="hero-title-line">先做出一段 Loop，</span>
-            <span class="hero-title-line"><em>再谈风格</em>。</span>
+            <span class="hero-title-line">听得懂，</span>
+            <span class="hero-title-line"><em>才做得出来</em>。</span>
           </h1>
-          <p class="hero-lead">${escapeHtml(CUR.hero.lead)}</p>
+          <p class="hero-lead">四个入口：想知道这是什么、想查一个词、想练耳朵、想自己做。四条路都通向同一件事——你能听出区别。</p>
           <div class="hero-actions">
-            <a class="button-primary" href="${startHref}">${completedCount ? '继续制作' : '开始第一课'}${nextLesson ? ` · ${escapeHtml(nextLesson.title)}` : ''}</a>
-            <a class="button-ghost" href="#/library">打开知识库</a>
+            <a class="button-primary" href="#/listen">从「听」进来 · ${styleTotal} 个风格</a>
+            <a class="button-ghost" href="${startHref}">${completedCount ? `继续第 ${nextNumber} 课` : '直接看制作课'}</a>
           </div>
-          <div class="hero-index" aria-label="网站规模">
-            <span><strong>${total}</strong> 节制作课</span>
-            <span><strong>${formatNumber(stats.entries)}</strong> 条知识</span>
-            <span><strong>${familyTotal}</strong> 个大族</span>
-          </div>
-          <p class="hero-note">${escapeHtml(CUR.hero.note)}</p>
+          <p class="hero-scale">
+            <span><b>${styleTotal}</b> 段可听</span>
+            <span><b>${formatNumber(stats.entries)}</b> 条资料</span>
+            <span><b>${total}</b> 节课</span>
+            <span><b>${familyTotal}</b> 个大族</span>
+          </p>
         </div>
         <aside class="hero-console" data-hero-console>
           <div class="console-top">
@@ -1278,7 +1307,7 @@
           ${heroSequencerHTML(heroPattern)}
           <div class="console-actions">
             <button class="console-play" type="button" data-hero-play>${uiIcon('play')} 播放这一小节</button>
-            <a class="console-start" href="#/learn">完整路径 ${uiIcon('arrow')}</a>
+            <a class="console-start" href="#/lab">进实验室 ${uiIcon('arrow')}</a>
           </div>
           <div class="console-foot">
             <span>点格子改节奏，再播放</span>
@@ -1288,121 +1317,159 @@
         </aside>
       </section>
 
-      <a class="listen-door" href="#/listen">
-        <span class="listen-door-kicker">ONLY WANT TO LISTEN? / 只想先听懂</span>
-        <p><b>不用记流派名。</b>多快、鼓怎么落地、低音什么样——三个问题就能把范围收到几个，每一个都能直接听 8 秒。</p>
-        <span class="listen-door-arrow">用 BPM 找风格 →</span>
-      </a>
-
-      <section class="section home-path">
-        <div class="home-path-head section-head">
-          <span class="section-num">01</span>
-          <div class="section-head-copy">
-            <div class="section-kicker">学习路线</div>
-            <h2>八段，像八小节一样推进。</h2>
+      <section class="rack" aria-labelledby="rackTitle">
+        <div class="rack-head">
+          <div>
+            <span class="mono-label">FOUR TRACKS / 四个入口</span>
+            <h2 id="rackTitle">同一份资料，四种用法。</h2>
           </div>
-          <div class="home-path-aside">
-            <p>顺序由制作依赖决定：先让声音出来，再让低频、和声与结构成立，最后混音和导出。</p>
-            <a class="section-link" href="#/learn">完整课程地图</a>
-          </div>
+          <p>不用先想清楚自己属于哪一类——从你现在的问题进去就行。四个入口互相通着，随时可以换轨。</p>
         </div>
-        <div class="stage-list">
-          ${COURSE_CHAPTERS.map((chapter) => {
-            const done = chapter.lessons.filter((lesson) => courseCompleted.has(lesson.id)).length;
-            const chapterNext = chapter.lessons.find((lesson) => !courseCompleted.has(lesson.id));
-            const target = chapterNext || chapter.lessons[0];
-            const isCurrent = Boolean(nextLesson && nextLesson.chapterId === chapter.id);
-            return `
-              <a class="stage-row ${familyClass(chapter.color)}${isCurrent ? ' is-current' : ''}${chapterNext ? '' : ' is-complete'}" href="#/learn/${target.id}">
-                <span class="stage-row-index">${escapeHtml(chapter.index)}</span>
-                <span class="stage-row-copy">
-                  <strong>${escapeHtml(chapter.title)}</strong>
-                  <small>${escapeHtml(chapter.outcome)}</small>
-                </span>
-                <span class="stage-row-meter" aria-hidden="true">
-                  ${chapter.lessons.map((lesson) => `<i class="${courseCompleted.has(lesson.id) ? 'is-done' : lesson.id === nextLesson?.id ? 'is-next' : ''}"></i>`).join('')}
-                  <em>${done}/${chapter.lessons.length}</em>
-                </span>
-                <span class="stage-row-enter">${uiIcon('arrow')}</span>
-              </a>`;
-          }).join('')}
+        <div class="rack-grid">
+
+          <article class="track track-listen" aria-labelledby="trackListen">
+            <header class="track-head">
+              <span class="track-num" aria-hidden="true">01</span>
+              <span class="track-code">LISTEN</span>
+              <span class="track-stat">${styleTotal} 个风格</span>
+            </header>
+            <h3 class="track-title" id="trackListen"><a href="#/listen">听</a></h3>
+            <p class="track-line">不知道这是什么？多快、鼓怎么落地、低音什么样——三步把范围收到几个候选，每个都能直接听 8 秒。</p>
+            <div class="track-visual">
+              <div class="mm" role="img" aria-label="${LISTEN.bands.length} 档速度 × ${LISTEN.grooves.length} 种律动，共 ${LISTEN.bands.length * LISTEN.grooves.length} 格，${styleTotal} 个风格分布其中">${mm}</div>
+              <p class="visual-cap">4 档速度 × 5 种律动 · 亮点表示那一格的风格数</p>
+            </div>
+            <ul class="track-links">
+              <li><a href="#/listen">风格矩阵</a></li>
+              <li><a href="#/quick">现场速查</a></li>
+              ${randomStyle ? `<li><a href="#/genre/${randomStyle.id}">随便听一条</a></li>` : ''}
+            </ul>
+          </article>
+
+          <article class="track track-search" aria-labelledby="trackSearch">
+            <header class="track-head">
+              <span class="track-num" aria-hidden="true">02</span>
+              <span class="track-code">SEARCH</span>
+              <span class="track-stat">${formatNumber(stats.entries)} 条</span>
+            </header>
+            <h3 class="track-title" id="trackSearch"><a href="#/library">查</a></h3>
+            <p class="track-line">每个名词都有出处。检索条目、术语、结构文档，再沿上下位与相似关系一路追下去。</p>
+            <div class="track-visual">
+              <form class="track-search" id="homeKbSearch" role="search">
+                <label class="sr-only" for="homeKbSearchInput">搜索知识库</label>
+                <input id="homeKbSearchInput" name="q" type="search" placeholder="Sidechain、808、八段结构…" autocomplete="off">
+                <button type="submit" aria-label="检索">${uiIcon('search')}</button>
+              </form>
+              <div class="track-chips">
+                ${['Supersaw', 'Sidechain', '808', 'Acid'].map((term) => `<a class="chip" href="#/search?q=${encodeURIComponent(term)}">${escapeHtml(term)}</a>`).join('')}
+              </div>
+            </div>
+            <ul class="track-links">
+              <li><a href="#/search">全库检索</a></li>
+              <li><a href="#/atlas">风格图谱</a></li>
+              <li><a href="#/guide/glossary">术语手册</a></li>
+            </ul>
+          </article>
+
+          <article class="track track-train" aria-labelledby="trackTrain">
+            <header class="track-head">
+              <span class="track-num" aria-hidden="true">03</span>
+              <span class="track-code">TRAIN</span>
+              <span class="track-stat">2 种模式</span>
+            </header>
+            <h3 class="track-title" id="trackTrain"><a href="#/practice">练</a></h3>
+            <p class="track-line">把耳朵校准到制作决定上。风格四选一、BPM 估速，答错不是失败——它会把你送回对应的那一课。</p>
+            <div class="track-visual">
+              <div class="bpmr" aria-hidden="true">
+                <div class="bpmr-scale">
+                  ${Array.from({ length: 13 }, (_, index) => `<i class="${index % 3 === 0 ? 'is-major' : ''}"></i>`).join('')}
+                  <b style="--pos:62%"><span>128</span></b>
+                </div>
+              </div>
+              <p class="visual-cap">100 — 160 BPM · 四选一 / 估速</p>
+            </div>
+            <ul class="track-links">
+              <li><a href="#/practice">听辨练习</a></li>
+              <li><a href="#/practice?mode=bpm">BPM 估速</a></li>
+              <li><a href="#/lab">音色实验室</a></li>
+            </ul>
+          </article>
+
+          <article class="track track-make" aria-labelledby="trackMake">
+            <header class="track-head">
+              <span class="track-num" aria-hidden="true">04</span>
+              <span class="track-code">MAKE</span>
+              <span class="track-stat">${total} 课 · 9 模块</span>
+            </header>
+            <h3 class="track-title" id="trackMake"><a href="#/learn">做</a></h3>
+            <p class="track-line">顺序由制作依赖决定：先让声音出来，再让低频、和声与结构成立，最后混音和导出。九个头能动手的模块。</p>
+            <div class="track-visual">
+              <div class="steps8" role="img" aria-label="8 个阶段，已完成 ${completedCount} / ${total} 课">${steps8}</div>
+              <p class="visual-cap">8 个阶段 · 已完成 ${completedCount}/${total} 课</p>
+            </div>
+            <ul class="track-links">
+              <li><a href="${startHref}">${completedCount ? '继续学习' : '从第一课开始'}</a></li>
+              <li><a href="#/studio">工作室</a></li>
+              <li><a href="#/learn">课程地图</a></li>
+            </ul>
+          </article>
+
         </div>
       </section>
 
-      <section class="section home-knowledge">
-        <div class="knowledge-top section-head">
-          <span class="section-num">02</span>
-          <div class="section-head-copy knowledge-copy">
-            <div class="section-kicker">知识库</div>
-            <h2>卡住的时候，<em>查一下。</em></h2>
-            <p>课上的每个名词都有出处。检索条目、术语或结构文档，再回到对应的制作课。</p>
-          </div>
-          <form class="knowledge-search" id="homeKbSearch" role="search">
-            <label class="sr-only" for="homeKbSearchInput">搜索知识库</label>
-            <input id="homeKbSearchInput" name="q" type="search" placeholder="Sidechain、808、Supersaw、八段结构…" autocomplete="off">
-            <button type="submit">${uiIcon('search')} 检索</button>
-          </form>
+      <section class="daily" aria-labelledby="dailyTitle">
+        <span class="mono-label" id="dailyTitle">PICK / 今天听这条</span>
+        <div class="daily-copy">
+          <strong data-daily-name>${homeDaily ? `${escapeHtml(homeDaily.entry.name)} · ${homeDaily.model.bpm} BPM` : '—'}</strong>
+          <p data-daily-line>${homeDaily ? escapeHtml(homeDaily.model.oneLine) : ''}</p>
         </div>
-        <div class="knowledge-quick">
-          <span class="mono-label">TRY / 常查</span>
-          ${['Sidechain', '808', 'Supersaw', '八段结构'].map((term) => `<a class="chip" href="#/search?q=${encodeURIComponent(term)}">${escapeHtml(term)}</a>`).join('')}
-        </div>
-        <div class="knowledge-links">
-          <a class="knowledge-link" href="#/atlas">
-            <span class="knowledge-link-icon">${uiIcon('atlas')}</span>
-            <span><strong>风格图谱</strong><small>${familyTotal} 个大族 · ${formatNumber(stats.entries)} 条</small></span>
-            ${uiIcon('arrow')}
-          </a>
-          <a class="knowledge-link" href="#/guide/glossary">
-            <span class="knowledge-link-icon">${uiIcon('library')}</span>
-            <span><strong>术语手册</strong><small>鼓组、合成、效果与曲式</small></span>
-            ${uiIcon('arrow')}
-          </a>
-          <a class="knowledge-link" href="#/guide/production">
-            <span class="knowledge-link-icon">${uiIcon('lab')}</span>
-            <span><strong>结构与音色</strong><small>七组音色 · 八段结构</small></span>
-            ${uiIcon('arrow')}
-          </a>
-          <a class="knowledge-link" href="#/guide/history">
-            <span class="knowledge-link-icon">${uiIcon('source')}</span>
-            <span><strong>历史脉络</strong><small>技术、场景与地理</small></span>
-            ${uiIcon('arrow')}
-          </a>
-        </div>
-        ${spectrumHTML()}
-      </section>
-
-      <section class="section home-tools">
-        <div class="home-tools-head section-head">
-          <span class="section-num">03</span>
-          <div class="section-head-copy">
-            <div class="section-kicker">动手</div>
-            <h2>不只看。先听，再调。</h2>
-          </div>
-          <p>练习不是考试，是把耳朵校准到制作决定上。</p>
-        </div>
-        <div class="tool-band">
-          <a class="tool-slab is-practice" href="#/practice">
-            <span class="tool-slab-icon">${uiIcon('practice')}</span>
-            <span class="tool-slab-copy">
-              <span class="mono-label">EARTRAIN / 听辨</span>
-              <strong>风格四选一 + BPM 估速</strong>
-              <small>答错直接回到相关课时，不在原地困惑。</small>
-            </span>
-            <span class="tool-slab-cta">开始练习 ${uiIcon('arrow')}</span>
-          </a>
-          <a class="tool-slab is-lab" href="#/lab">
-            <span class="tool-slab-icon">${uiIcon('lab')}</span>
-            <span class="tool-slab-copy">
-              <span class="mono-label">SOUND LAB / 音色</span>
-              <strong>七组音色，随时开合</strong>
-              <small>先关掉所有层，再一层层加回来。</small>
-            </span>
-            <span class="tool-slab-cta">打开实验室 ${uiIcon('arrow')}</span>
-          </a>
+        <div class="daily-actions">
+          <button class="button-primary" type="button" data-daily-play>播放 8 秒</button>
+          <a class="button-ghost" data-daily-href href="${homeDaily ? `#/genre/${homeDaily.id}` : '#/listen'}">完整条目 →</a>
+          <button class="daily-shuffle" type="button" data-daily-shuffle>换一条</button>
         </div>
       </section>`;
+
     bindHomeSequencer();
+    bindHomeDaily();
+  }
+
+  let homeDaily = null;
+
+  function bindHomeDaily() {
+    const play = document.querySelector('[data-daily-play]');
+    play?.addEventListener('click', () => {
+      if (!homeDaily || !Audio) return;
+      const state = Audio.getState();
+      if (state.playing && state.demoId === `fp:${homeDaily.model.fp}`) {
+        Audio.stop();
+        return;
+      }
+      Audio.playFingerprint(homeDaily.model.fp, {
+        bpm: homeDaily.model.bpm,
+        label: `${homeDaily.entry.name} · ${homeDaily.model.bpm} BPM`,
+      });
+    });
+
+    document.querySelector('[data-daily-shuffle]')?.addEventListener('click', () => {
+      const styles = listenStyles();
+      if (!styles.length) return;
+      let pick = styles[Math.floor(Math.random() * styles.length)];
+      if (styles.length > 1 && homeDaily && pick.id === homeDaily.id) {
+        pick = styles[(styles.indexOf(pick) + 1) % styles.length];
+      }
+      homeDaily = pick;
+      const name = document.querySelector('[data-daily-name]');
+      const line = document.querySelector('[data-daily-line]');
+      const href = document.querySelector('[data-daily-href]');
+      if (name) name.textContent = `${pick.entry.name} · ${pick.model.bpm} BPM`;
+      if (line) line.textContent = pick.model.oneLine;
+      if (href) href.setAttribute('href', `#/genre/${pick.id}`);
+      if (Audio) {
+        const state = Audio.getState();
+        if (state.playing && state.demoId?.startsWith('fp:')) Audio.stop();
+      }
+    });
   }
 
   // Atlas
@@ -2537,7 +2604,9 @@
     return demo.entryId?.startsWith('f-') ? `#/family/${demo.entryId}` : `#/genre/${demo.entryId}`;
   }
 
-  function renderPractice() {
+  function renderPractice(route) {
+    const modeParam = route?.params?.get('mode');
+    if (modeParam === 'bpm' || modeParam === 'style') practiceMode = modeParam;
     if (practiceMode === 'style' && !styleQuiz) newStyleQuiz();
     if (practiceMode === 'bpm' && !bpmQuiz) newBpmQuiz();
     const quiz = practiceMode === 'style' ? styleQuiz : bpmQuiz;
@@ -2617,6 +2686,7 @@
       button.addEventListener('click', () => {
         Audio?.stop();
         practiceMode = button.dataset.practiceMode;
+        replaceHash(`#/practice?mode=${practiceMode}`);
         if (practiceMode === 'style' && !styleQuiz) newStyleQuiz();
         if (practiceMode === 'bpm' && !bpmQuiz) newBpmQuiz();
         renderPractice();
@@ -4826,7 +4896,7 @@ curl "http://127.0.0.1:8787/search?q=uplifting%20trance"</code></pre>
     else if (route.path === '/learn') renderLearn();
     else if (route.path.startsWith('/learn/')) renderLesson(route);
     else if (route.path === '/library') renderLibrary();
-    else if (route.path === '/practice') renderPractice();
+    else if (route.path === '/practice') renderPractice(route);
     else if (route.path === '/lab') renderLab();
     else if (route.path === '/search') renderSearch(route);
     else if (route.path.startsWith('/doc/')) renderDoc(route);

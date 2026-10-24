@@ -6,13 +6,14 @@
    改完前端记得同步 VERSION —— 否则老访客会继续吃旧缓存。
    ========================================================================== */
 
-const VERSION = 'em-listen-v2';
+const VERSION = 'em-home-v3';
 const CORE = [
   './index.html',
   './styles.css',
   './styles-edm.css',
   './styles-studio.css',
   './styles-listen.css',
+  './styles-home.css',
   './data/kb.js',
   './data/curated.js',
   './data/web.js',
