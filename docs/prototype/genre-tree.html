@@ -1,0 +1,1550 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>分支树导航 · 原型 / BRANCHING TREE PROTOTYPE</title>
+<style>
+/* ==========================================================================
+   分支树导航原型 / BRANCHING TREE PROTOTYPE
+
+   借鉴 Ishkur's Guide 的三件事：
+     1. 分类以「分支树」而不是下拉菜单出现 —— 看得见分叉
+     2. 每个节点都可播放 —— 结构本身就是播放列表
+     3. 家族用颜色聚簇 —— 一眼看出声音的分布
+
+   比它简单的地方：
+     1. 没有画布、没有缩放平移 —— 列 = 层级，你永远知道自己在哪
+     2. 面包屑 + 搜索直达 —— 不用靠记忆找路
+     3. 移动端不锁缩放，改为横向列滚动 + 吸附
+     4. 三步入门口令，不要求先读一篇 FAQ
+
+   视觉沿用站内 Club Rig：焦油黑打底，琥珀=当前位置/主操作，
+   洋红=正在播放，冰蓝=参考信息；大族色只出现在 2px 边线与圆点上。
+   ========================================================================== */
+
+:root {
+  --ink: #060607;
+  --ink-2: #0a0b0d;
+  --panel: #0d0f11;
+  --panel-2: #121418;
+  --paper: #f2ede3;
+  --muted: #b3aea4;
+  --muted-2: #8d8980;
+  --line: rgba(242, 237, 227, 0.1);
+  --line-strong: rgba(242, 237, 227, 0.22);
+  --sodium: #ffb000;
+  --laser: #ff2e63;
+  --cyan: #2fd8ff;
+  --heat: #ff5c1a;
+  --violet: #ff2e63;
+  --archive: #5d5b57;
+  --font-display: "Bahnschrift", "Bahnschrift SemiCondensed", "Arial Narrow", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-body: "Segoe UI Variable Text", "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-mono: "Cascadia Mono", "Consolas", "SFMono-Regular", "Roboto Mono", monospace;
+  --snap: cubic-bezier(0.2, 0.9, 0.15, 1);
+  --cut: cubic-bezier(1, 0, 0, 1);
+  --header-h: 58px;
+  --col-w: clamp(186px, 19vw, 252px);
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.66;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    linear-gradient(180deg, rgba(255, 176, 0, 0.06), transparent 16%),
+    repeating-linear-gradient(90deg, rgba(242, 237, 227, 0.024) 0 1px, transparent 1px 120px);
+  padding-bottom: 96px;
+}
+
+::selection { background: var(--sodium); color: var(--ink); }
+
+:focus-visible { outline: 2px solid var(--sodium); outline-offset: 2px; }
+
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+
+a { color: inherit; }
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.wrap { width: 100%; padding-inline: clamp(14px, 2.4vw, 56px); }
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 22px);
+  min-height: var(--header-h);
+  padding-block: 8px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(6, 6, 7, 0.94);
+  backdrop-filter: blur(8px);
+  margin-inline: calc(clamp(14px, 2.4vw, 56px) * -1);
+  padding-inline: clamp(14px, 2.4vw, 56px);
+}
+
+.brand { display: flex; align-items: center; gap: 9px; flex: 0 0 auto; }
+
+.brand-mark { display: flex; align-items: flex-end; gap: 2px; height: 20px; }
+
+.brand-mark i { display: block; width: 3px; background: var(--sodium); }
+.brand-mark i:nth-child(1) { height: 8px; }
+.brand-mark i:nth-child(2) { height: 14px; }
+.brand-mark i:nth-child(3) { height: 20px; background: var(--laser); }
+.brand-mark i:nth-child(4) { height: 11px; }
+.brand-mark i:nth-child(5) { height: 6px; background: var(--cyan); }
+
+.brand-type strong { display: block; font-family: var(--font-display); font-size: 14px; letter-spacing: 0.04em; line-height: 1.15; }
+.brand-type small { display: block; font-family: var(--font-mono); font-size: 9px; color: var(--muted-2); letter-spacing: 0.16em; }
+
+.search { position: relative; flex: 1 1 auto; min-width: 0; max-width: 380px; }
+
+.search input {
+  width: 100%;
+  min-height: 36px;
+  padding: 0 34px 0 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--paper);
+  font-size: 13px;
+  border-radius: 2px;
+}
+
+.search input::placeholder { color: var(--muted-2); }
+
+.search input:focus { border-color: var(--sodium); outline: none; }
+
+.search kbd {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted-2);
+  border: 1px solid var(--line);
+  padding: 1px 5px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.top-actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
+
+.ghost-btn {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+  border-radius: 2px;
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap);
+  white-space: nowrap;
+}
+
+.ghost-btn:hover { color: var(--paper); border-color: var(--line-strong); }
+.ghost-btn[aria-pressed="true"] { color: var(--sodium); border-color: rgba(255, 176, 0, 0.5); }
+
+/* --------------------------------------------------------------------------
+   Family rail — 全局方位感（Ishkur 用颜色聚簇，这里做成可点的标尺）
+   -------------------------------------------------------------------------- */
+
+.rail {
+  display: flex;
+  align-items: stretch;
+  gap: 1px;
+  margin-top: 10px;
+  padding: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.rail::-webkit-scrollbar { display: none; }
+
+.rail-item {
+  flex: 1 0 auto;
+  min-width: 30px;
+  padding: 5px 4px 4px;
+  background: var(--ink-2);
+  text-align: center;
+  position: relative;
+  transition: background 0.14s var(--snap);
+}
+
+.rail-item span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  letter-spacing: 0.04em;
+}
+
+.rail-item i { display: block; height: 3px; margin-top: 4px; background: var(--family, var(--archive)); opacity: 0.55; }
+
+.rail-item:hover { background: var(--panel-2); }
+.rail-item:hover span { color: var(--paper); }
+
+.rail-item.is-active { background: var(--panel-2); }
+.rail-item.is-active span { color: var(--sodium); }
+.rail-item.is-active i { opacity: 1; height: 5px; }
+
+/* --------------------------------------------------------------------------
+   Intro — 借鉴 Ishkur 的介绍页，但压成三步入门口令
+   -------------------------------------------------------------------------- */
+
+.intro {
+  margin-top: 12px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--sodium);
+  background: var(--panel);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 20px;
+  align-items: start;
+}
+
+.intro[hidden] { display: none; }
+
+.intro-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+
+.intro-head h2 { margin: 0; font-family: var(--font-display); font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+
+.intro-steps { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 8px 0 0; padding: 0; list-style: none; }
+
+.intro-steps li { display: flex; align-items: baseline; gap: 7px; font-size: 12.5px; color: var(--muted); }
+
+.intro-steps b { font-family: var(--font-mono); font-size: 10px; color: var(--sodium); }
+
+.intro-note { margin: 8px 0 0; font-size: 12px; color: var(--muted-2); max-width: 74ch; }
+
+.intro-close { align-self: start; min-height: 28px; padding: 0 10px; font-size: 11px; color: var(--muted-2); border: 1px solid var(--line); border-radius: 2px; }
+.intro-close:hover { color: var(--paper); }
+
+/* --------------------------------------------------------------------------
+   Breadcrumb
+   -------------------------------------------------------------------------- */
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 14px 0 10px;
+  min-height: 26px;
+}
+
+.crumbs-label { font-family: var(--font-mono); font-size: 10px; color: var(--muted-2); letter-spacing: 0.14em; margin-right: 4px; }
+
+.crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+  border-radius: 2px;
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap);
+}
+
+.crumb:hover { color: var(--paper); border-color: var(--line-strong); }
+
+.crumb.is-current { color: var(--ink); background: var(--sodium); border-color: var(--sodium); font-weight: 600; }
+
+.crumb-sep { color: var(--muted-2); font-size: 11px; }
+
+.crumb-play {
+  width: 16px; height: 16px;
+  display: grid; place-items: center;
+  font-size: 8px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.crumb-play:hover { opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   Layout: 列式分支树 + 详情面板
+   -------------------------------------------------------------------------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 352px);
+  gap: clamp(16px, 2vw, 30px);
+  align-items: start;
+  padding-bottom: 40px;
+}
+
+.tree {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.tree-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--ink-2);
+}
+
+.tree-head .mono { font-size: 10px; color: var(--muted-2); }
+
+.tree-hint { font-size: 11px; color: var(--muted-2); }
+
+.cols {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+  min-height: 420px;
+  max-height: min(72vh, 720px);
+}
+
+.cols::-webkit-scrollbar { height: 7px; }
+.cols::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+.col {
+  flex: 0 0 var(--col-w);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+
+.col:last-child { border-right: none; }
+
+/* 分支导轨：每一列（除首列）左侧一条竖线，读起来就是「从这里分叉」 */
+.col + .col::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--line);
+}
+
+.col-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--line);
+  background: var(--ink-2);
+  flex: 0 0 auto;
+}
+
+.col-head .mono { font-size: 9.5px; color: var(--muted-2); }
+
+.col-head b { font-family: var(--font-mono); font-size: 10px; color: var(--muted-2); font-weight: 400; }
+
+.rows { overflow-y: auto; padding: 4px 0; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; flex: 1 1 auto; min-height: 0; }
+.rows::-webkit-scrollbar { width: 6px; }
+.rows::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+/* 分组分隔：正式大族 / 补充收纳桶 / 待归档，共用一个滚动区 */
+.group-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 10px 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  letter-spacing: 0.12em;
+  border-top: 1px solid var(--line);
+  margin-top: 4px;
+}
+
+.group-label:first-child { border-top: none; margin-top: 0; }
+
+.group-label b { font-weight: 400; }
+
+.row {
+  display: grid;
+  grid-template-columns: 24px 3px minmax(0, 1fr) auto 12px;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  padding: 0 9px 0 6px;
+  min-height: 34px;
+  text-align: left;
+  position: relative;
+  transition: background 0.12s var(--snap);
+}
+
+.row:hover { background: var(--panel-2); }
+
+.row.is-selected { background: rgba(255, 176, 0, 0.07); }
+
+.row.is-selected .row-name { color: var(--paper); }
+
+/* 当前路径上的祖先：只用一条 2px 琥珀边线，不铺面 */
+.row.is-path::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 2px;
+  background: var(--sodium);
+}
+
+.row.is-selected::after { background: var(--sodium); height: auto; }
+
+.row-play {
+  /* 28px：这是全页最高频的操作，鼠标和手指都得够得着。
+     不要因为「桌面端用鼠标」就缩小——指针同样需要目标面积。 */
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 9px;
+  color: var(--muted-2);
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap), background 0.14s var(--snap);
+  flex: 0 0 auto;
+}
+
+.row:hover .row-play { color: var(--paper); border-color: var(--line-strong); }
+
+.row-play:hover { color: var(--sodium); border-color: var(--sodium); }
+
+.row.is-playing .row-play {
+  color: var(--ink);
+  background: var(--laser);
+  border-color: var(--laser);
+}
+
+.row-play[disabled] { opacity: 0.3; cursor: not-allowed; }
+
+.row-edge { width: 3px; height: 18px; background: var(--family, var(--archive)); opacity: 0.75; }
+
+.row-name {
+  font-size: 12.5px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.row.is-selected .row-name { font-weight: 600; }
+
+.row-count { font-family: var(--font-mono); font-size: 9.5px; color: var(--muted-2); }
+
+.row-chev { font-size: 12px; color: var(--muted-2); opacity: 0; transition: opacity 0.12s var(--snap); }
+.row.has-kids .row-chev { opacity: 0.5; }
+.row:hover .row-chev { opacity: 1; color: var(--sodium); }
+
+/* 播放进度：贴在行底部的一条 2px 线，读的是音频时钟 */
+.row-progress {
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--laser);
+  pointer-events: none;
+}
+
+.row.is-playing { background: rgba(255, 46, 99, 0.06); }
+
+.row-tag {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  padding: 1px 4px;
+  border: 1px solid var(--line);
+  color: var(--muted-2);
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
+
+.row-tag.is-own { color: var(--cyan); border-color: rgba(47, 216, 255, 0.35); }
+
+/* --------------------------------------------------------------------------
+   Detail panel
+   -------------------------------------------------------------------------- */
+
+.detail {
+  position: sticky;
+  top: calc(var(--header-h) + 12px);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  min-width: 0;
+}
+
+.detail-empty { padding: 22px 16px; color: var(--muted-2); font-size: 12.5px; }
+
+.detail-head {
+  padding: 13px 15px 12px;
+  border-bottom: 1px solid var(--line);
+  border-top: 2px solid var(--family, var(--sodium));
+  background: var(--ink-2);
+}
+
+.detail-kicker { font-family: var(--font-mono); font-size: 9.5px; color: var(--muted-2); letter-spacing: 0.14em; }
+
+.detail-title { margin: 5px 0 0; font-family: var(--font-display); font-size: 21px; font-weight: 600; line-height: 1.2; letter-spacing: 0.01em; word-break: break-word; }
+
+.detail-zh { margin: 3px 0 0; font-size: 12px; color: var(--muted-2); }
+
+.detail-bpm { display: flex; align-items: baseline; gap: 8px; margin-top: 9px; }
+
+.detail-bpm strong { font-family: var(--font-mono); font-size: 22px; font-weight: 500; color: var(--paper); font-variant-numeric: tabular-nums; }
+
+.detail-bpm span { font-family: var(--font-mono); font-size: 10px; color: var(--muted-2); letter-spacing: 0.1em; }
+
+.bpm-track { position: relative; height: 3px; margin-top: 7px; background: var(--line); }
+
+.bpm-track i { position: absolute; top: 0; bottom: 0; background: var(--cyan); }
+
+.bpm-scale { display: flex; justify-content: space-between; margin-top: 3px; font-family: var(--font-mono); font-size: 8.5px; color: var(--muted-2); }
+
+.detail-body { padding: 13px 15px 15px; }
+
+.detail-l1 { margin: 0; font-size: 14px; line-height: 1.72; color: var(--paper); }
+
+.detail-hear { margin: 11px 0 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+
+.detail-hear li { display: flex; gap: 8px; font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+.detail-hear li::before { content: ""; flex: 0 0 auto; width: 3px; height: 3px; margin-top: 8px; background: var(--cyan); }
+
+.detail-when { margin: 11px 0 0; font-size: 12.5px; color: var(--muted-2); border-left: 2px solid var(--line-strong); padding-left: 9px; }
+
+.detail-fallback {
+  margin: 11px 0 0;
+  padding: 8px 10px;
+  border: 1px solid rgba(47, 216, 255, 0.24);
+  background: rgba(47, 216, 255, 0.05);
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+.btn-primary {
+  min-height: 38px;
+  padding: 0 16px;
+  background: var(--sodium);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 12.5px;
+  border: 1px solid rgba(6, 6, 7, 0.55);
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 176, 0, 0.22), 0 6px 22px rgba(255, 176, 0, 0.14);
+  transition: background 0.14s var(--snap), transform 0.14s var(--snap);
+}
+
+.btn-primary:hover { background: #ffc42a; transform: translateY(-1px); }
+
+.btn-primary.is-playing { background: var(--laser); color: var(--paper); box-shadow: 0 0 0 1px rgba(255, 46, 99, 0.3), 0 6px 22px rgba(255, 46, 99, 0.2); }
+
+.btn-ghost {
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12.5px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-ghost:hover { color: var(--paper); border-color: var(--line-strong); }
+
+.detail-children { margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--line); }
+
+.detail-children h3 { margin: 0 0 8px; font-family: var(--font-mono); font-size: 9.5px; color: var(--muted-2); letter-spacing: 0.14em; font-weight: 400; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.chip {
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--muted);
+  border-radius: 2px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chip:hover { color: var(--paper); border-color: var(--line-strong); }
+
+/* --------------------------------------------------------------------------
+   Search results overlay
+   -------------------------------------------------------------------------- */
+
+.results {
+  position: absolute;
+  left: 0; right: 0;
+  top: calc(100% + 4px);
+  z-index: 60;
+  max-height: 340px;
+  overflow-y: auto;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-2);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.results[hidden] { display: none; }
+
+.result {
+  display: grid;
+  grid-template-columns: 3px minmax(0, 1fr) auto;
+  gap: 9px;
+  align-items: center;
+  width: 100%;
+  padding: 8px 11px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.result:last-child { border-bottom: none; }
+.result:hover { background: rgba(255, 176, 0, 0.08); }
+
+.result-edge { width: 3px; height: 22px; background: var(--family, var(--archive)); }
+
+.result-main { min-width: 0; }
+
+.result-name { display: block; font-size: 12.5px; color: var(--paper); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.result-path { display: block; font-size: 10.5px; color: var(--muted-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.result-bpm { font-family: var(--font-mono); font-size: 10px; color: var(--muted-2); }
+
+.result-empty { padding: 14px; font-size: 12px; color: var(--muted-2); }
+
+/* --------------------------------------------------------------------------
+   Global dock — 与站内 audio-dock 同构
+   -------------------------------------------------------------------------- */
+
+.dock {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px clamp(14px, 2.4vw, 56px);
+  border-top: 1px solid var(--line-strong);
+  background: rgba(10, 11, 13, 0.96);
+  backdrop-filter: blur(10px);
+  transform: translateY(105%);
+  transition: transform 0.22s var(--snap);
+}
+
+.dock.is-in { transform: translateY(0); }
+
+.dock-pulse { width: 7px; height: 7px; background: var(--laser); flex: 0 0 auto; animation: pulse 0.6s steps(2, end) infinite; }
+
+@keyframes pulse { 50% { opacity: 0.25; } }
+
+.dock-info { min-width: 0; }
+
+.dock-info .mono { display: block; font-size: 9px; color: var(--muted-2); }
+
+.dock-info strong { display: block; font-size: 13px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.dock-bar { flex: 1 1 auto; min-width: 40px; height: 3px; background: var(--line); position: relative; }
+
+.dock-bar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--laser); }
+
+.dock-stop { min-height: 32px; padding: 0 13px; border: 1px solid var(--line); font-size: 12px; color: var(--muted); border-radius: 2px; }
+.dock-stop:hover { color: var(--paper); border-color: var(--line-strong); }
+
+/* --------------------------------------------------------------------------
+   Toast
+   -------------------------------------------------------------------------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 78px;
+  transform: translate(-50%, 12px);
+  z-index: 80;
+  padding: 9px 15px;
+  background: var(--panel-2);
+  border: 1px solid var(--line-strong);
+  border-left: 2px solid var(--sodium);
+  font-size: 12.5px;
+  opacity: 0;
+  transition: opacity 0.18s var(--snap), transform 0.18s var(--snap);
+  pointer-events: none;
+  max-width: min(90vw, 480px);
+}
+
+.toast.is-in { opacity: 1; transform: translate(-50%, 0); }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1180px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .detail { position: static; }
+  .cols { max-height: none; min-height: 0; }
+  .rows { max-height: 420px; }
+}
+
+@media (max-width: 760px) {
+  body { font-size: 14px; }
+
+  .top { flex-wrap: wrap; gap: 8px 10px; padding-block: 9px; }
+  .search { order: 3; flex: 1 1 100%; max-width: none; }
+  .brand-type small { display: none; }
+
+  .rail { margin-top: 8px; }
+  .rail-item { min-width: 26px; }
+  .rail-item span { font-size: 8px; }
+
+  .intro { grid-template-columns: minmax(0, 1fr); padding: 12px 13px; }
+  .intro-steps { gap: 5px 16px; }
+
+  .crumbs { gap: 5px; margin: 11px 0 8px; }
+  .crumb { padding: 4px 8px; font-size: 11.5px; min-height: 28px; }
+
+  /* 列变窄，横向滚动 + 吸附；当前列自动滚进视野 */
+  :root { --col-w: min(78vw, 230px); }
+  .cols { scroll-snap-type: x mandatory; }
+  .col { scroll-snap-align: start; }
+
+  .row { min-height: 40px; }
+  .row-play { width: 32px; height: 32px; font-size: 10px; }
+
+  .detail-title { font-size: 19px; }
+
+  .dock { gap: 10px; padding-block: 8px; }
+  .dock-info strong { font-size: 12px; }
+}
+
+@media (max-width: 400px) {
+  .tree-hint { display: none; }
+  .detail-body { padding: 12px 13px 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .cols { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="brand-type"><strong>分支树</strong><small>BRANCHING TREE</small></span>
+    </div>
+
+    <div class="search">
+      <label class="sr" for="q">搜索风格</label>
+      <input id="q" type="search" placeholder="搜索风格、别名或大族…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="results">
+      <kbd>/</kbd>
+      <div class="results" id="results" hidden role="listbox"></div>
+    </div>
+
+    <div class="top-actions">
+      <button class="ghost-btn" id="guideToggle" type="button" aria-pressed="true">用法</button>
+    </div>
+  </header>
+
+  <!-- 全局方位：24 个正式大族的色标尺 -->
+  <nav class="rail" id="rail" aria-label="大族快速跳转"></nav>
+
+  <!-- 介绍页：Ishkur 有一整页，这里压成三步入门口令 -->
+  <section class="intro" id="intro" aria-label="用法说明">
+    <div>
+      <div class="intro-head">
+        <span class="mono" style="font-size:10px;color:var(--sodium)">HOW TO READ / 怎么读</span>
+        <h2>一张会出声的分类树</h2>
+      </div>
+      <ol class="intro-steps">
+        <li><b>01</b> 左列选一个大族 —— 这是树的起点</li>
+        <li><b>02</b> 一路向右点 —— 每往右一列就是一次分叉</li>
+        <li><b>03</b> 点任意节点的 <span class="mono" style="color:var(--laser)">▶</span> —— 立刻听到这条声音</li>
+      </ol>
+      <p class="intro-note">
+        比地图简单：没有缩放和平移，列就是层级，你永远知道自己在哪一列。琥珀色标记当前所在，洋红表示正在播放，
+        冰蓝表示参考信息。所有声音由浏览器实时合成，不是原曲。
+      </p>
+    </div>
+    <button class="intro-close" id="introClose" type="button">知道了</button>
+  </section>
+
+  <nav class="crumbs" id="crumbs" aria-label="当前位置"></nav>
+
+  <div class="layout">
+    <section class="tree" aria-label="分类分支树">
+      <div class="tree-head">
+        <span class="mono">TREE / 分支树</span>
+        <span class="tree-hint mono" id="treeHint">← → 换层　↑ ↓ 选择　空格 播放</span>
+      </div>
+      <div class="cols" id="cols"></div>
+    </section>
+
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </div>
+</div>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <span class="dock-pulse" aria-hidden="true"></span>
+  <div class="dock-info">
+    <span class="mono">NOW PLAYING / 合成示例</span>
+    <strong id="dockTitle">—</strong>
+  </div>
+  <div class="dock-bar" aria-hidden="true"><i id="dockBar"></i></div>
+  <button class="dock-stop" id="dockStop" type="button">停止</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../../data/kb.js"></script>
+<script src="../../data/listen.js"></script>
+<script src="../../data/fingerprints.js"></script>
+<script src="../../audio.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  // --------------------------------------------------------------------------
+  // Data
+  // --------------------------------------------------------------------------
+
+  const KB = window.KB_DATA;
+  const LISTEN = window.KB_LISTEN || { bands: [], grooves: [], lows: [], families: {}, entries: {} };
+  const FP = (window.EM_FINGERPRINTS && window.EM_FINGERPRINTS.recipes) || {};
+  const Audio = window.EMAudio;
+
+  const $ = (id) => document.getElementById(id);
+  const colsEl = $('cols');
+  const detailEl = $('detail');
+  const crumbsEl = $('crumbs');
+  const railEl = $('rail');
+  const resultsEl = $('results');
+  const qEl = $('q');
+  const dockEl = $('dock');
+  const dockTitle = $('dockTitle');
+  const dockBar = $('dockBar');
+  const toastEl = $('toast');
+  const introEl = $('intro');
+  const guideToggle = $('guideToggle');
+
+  if (!KB || !Audio) {
+    colsEl.innerHTML = '<p style="padding:24px;color:#b3aea4">数据未加载。请在项目根目录启动本地服务后访问本页：<code>node scripts/serve.mjs</code></p>';
+    return;
+  }
+
+  const familyById = new Map(KB.families.map((f) => [f.id, f]));
+  const entryById = new Map(KB.entries.map((e) => [e.id, e]));
+  const bandById = new Map((LISTEN.bands || []).map((b) => [b.id, b]));
+  const BAND_MID = { slow: 95, mid: 120, fast: 134, xfast: 155 };
+
+  const activeFamilies = KB.families.filter((f) => !f.archive && !f.supplement);
+  const supplementFamilies = KB.families.filter((f) => f.supplement);
+  const archiveFamilies = KB.families.filter((f) => f.archive);
+
+  // 父指针：搜索跳转与面包屑都要靠它把路径拼回来
+  const parentOf = new Map();
+  KB.families.forEach((f) => f.childIds.forEach((c) => parentOf.set(c, 'f:' + f.id)));
+  KB.entries.forEach((e) => e.childrenIds.forEach((c) => parentOf.set(c, 'e:' + e.id)));
+
+  // --------------------------------------------------------------------------
+  // Node resolution
+  // --------------------------------------------------------------------------
+
+  function keyOf(kind, id) { return kind + ':' + id; }
+
+  function nodeOf(key) {
+    if (!key) return null;
+    const [kind, id] = key.split(':');
+    if (kind === 'f') {
+      const family = familyById.get(id);
+      return family ? { key, kind: 'family', id, family, name: family.name, zh: family.zh, color: family.color, childIds: family.childIds, count: family.count } : null;
+    }
+    const entry = entryById.get(id);
+    return entry ? { key, kind: 'entry', id, entry, name: entry.name, zh: '', color: entry.familyColor, childIds: entry.childrenIds, count: entry.childrenIds.length, familyId: entry.familyId } : null;
+  }
+
+  // 声音解析：三档覆盖 —— 专属 → 同族回退 → 无声（待归档的 18 条）
+  function soundOf(node) {
+    if (!node) return null;
+    if (node.kind === 'family') {
+      const fam = LISTEN.families[node.id];
+      if (fam && FP[fam.fp]) return { fp: fam.fp, bpm: BAND_MID[fam.band] || 120, scope: 'family' };
+      return null;
+    }
+    const own = LISTEN.entries[node.id];
+    if (own && FP[own.fp]) {
+      return { fp: own.fp, bpm: Math.round((own.bpm.min + own.bpm.max) / 2), scope: 'own', data: own };
+    }
+    const famId = node.entry.familyId;
+    const fam = LISTEN.families[famId];
+    if (fam && FP[fam.fp]) return { fp: fam.fp, bpm: BAND_MID[fam.band] || 120, scope: 'fallback', family: familyById.get(famId) };
+    return null;
+  }
+
+  function demoIdOf(node) {
+    const sound = soundOf(node);
+    return sound ? 'fp:' + sound.fp : null;
+  }
+
+  // --------------------------------------------------------------------------
+  // State
+  // --------------------------------------------------------------------------
+
+  const state = {
+    path: [],            // 已下钻的节点 key 数组
+    selected: null,      // 当前选中的节点 key
+    playing: null,       // 正在播放的节点 key
+    query: '',
+  };
+
+  let lastPlayState = null;
+
+  // --------------------------------------------------------------------------
+  // Helpers
+  // --------------------------------------------------------------------------
+
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function familyVars(color) {
+    const map = {
+      violet: 'var(--violet)',
+      heat: 'var(--heat)',
+      phosphor: 'var(--sodium)',
+      ice: 'var(--cyan)',
+      muted: 'var(--archive)',
+    };
+    return map[color] || map.muted;
+  }
+
+  function toast(message) {
+    toastEl.textContent = message;
+    toastEl.classList.add('is-in');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => toastEl.classList.remove('is-in'), 2200);
+  }
+
+  function countDescendants(node, seen) {
+    if (!node || !node.childIds.length) return 0;
+    const bag = seen || new Set();
+    let total = 0;
+    node.childIds.forEach((id) => {
+      if (bag.has(id)) return;
+      bag.add(id);
+      total += 1;
+      const child = entryById.get(id);
+      if (child) total += countDescendants({ childIds: child.childrenIds }, bag);
+    });
+    return total;
+  }
+
+  // --------------------------------------------------------------------------
+  // Columns
+  // --------------------------------------------------------------------------
+
+  function rootGroups() {
+    const groups = [{ label: '正式大族', keys: activeFamilies.map((f) => keyOf('f', f.id)) }];
+    if (supplementFamilies.length) groups.push({ label: '补充收纳桶', keys: supplementFamilies.map((f) => keyOf('f', f.id)) });
+    if (archiveFamilies.length) groups.push({ label: '待归档', keys: archiveFamilies.map((f) => keyOf('f', f.id)) });
+    return groups;
+  }
+
+  function columnsModel() {
+    const roots = rootGroups();
+    const cols = [{
+      level: 0,
+      label: 'ROOT / 大族',
+      groups: roots,
+      keys: roots.flatMap((g) => g.keys),
+      parentKey: null,
+    }];
+    state.path.forEach((key, index) => {
+      const parent = nodeOf(key);
+      if (!parent || !parent.childIds.length) return;
+      cols.push({
+        level: index + 1,
+        label: `L${index + 1} / 下级`,
+        groups: null,
+        keys: parent.childIds.map((id) => keyOf('e', id)),
+        parentKey: key,
+      });
+    });
+    return cols;
+  }
+
+  function rowHTML(key) {
+    const node = nodeOf(key);
+    if (!node) return '';
+    const isSelected = state.selected === key;
+    const isPath = state.path.includes(key);
+    const hasKids = node.childIds.length > 0;
+    const sound = soundOf(node);
+    const kids = hasKids ? countDescendants(node) : 0;
+    const classes = [
+      'row',
+      isSelected ? 'is-selected' : '',
+      isPath ? 'is-path' : '',
+      hasKids ? 'has-kids' : '',
+    ].filter(Boolean).join(' ');
+
+    return `
+      <div class="${classes}" data-key="${key}" style="--family:${familyVars(node.color)}" role="option" aria-selected="${isSelected}" tabindex="-1">
+        <button class="row-play" type="button" data-play="${key}" ${sound ? '' : 'disabled'} aria-label="${sound ? '播放 ' + escapeHtml(node.name) : escapeHtml(node.name) + ' 暂无试听'}">${sound ? '▶' : '·'}</button>
+        <span class="row-edge" aria-hidden="true"></span>
+        <span class="row-name" title="${escapeHtml(node.name)}">${escapeHtml(node.name)}</span>
+        ${sound && sound.scope === 'own' ? '<span class="row-tag is-own">专属</span>' : hasKids ? `<span class="row-count">${kids}</span>` : '<span class="row-count">—</span>'}
+        <span class="row-chev" aria-hidden="true">${hasKids ? '›' : ''}</span>
+        <span class="row-progress" data-progress="${key}"></span>
+      </div>`;
+  }
+
+  function renderColumns() {
+    const cols = columnsModel();
+    colsEl.innerHTML = cols.map((col) => {
+      const head = `<div class="col-head"><span class="mono">${escapeHtml(col.label)}</span><b>${col.keys.length}</b></div>`;
+      if (col.groups) {
+        // 首列：三组共用一个滚动区，组间用细分隔行标出，避免三段各自滚动
+        const rows = col.groups.map((group) => `
+          <div class="group-label"><span>${escapeHtml(group.label)}</span><b>${group.keys.length}</b></div>
+          ${group.keys.map(rowHTML).join('')}`).join('');
+        return `<div class="col" data-level="${col.level}">${head}<div class="rows">${rows}</div></div>`;
+      }
+      return `<div class="col" data-level="${col.level}">${head}<div class="rows">${col.keys.map(rowHTML).join('')}</div></div>`;
+    }).join('');
+
+    restoreRowScroll();
+    paintPlayingRow();
+  }
+
+  // 每列的滚动位置独立保存，避免下钻后所有列跳回顶部
+  const colScroll = new Map();
+
+  function restoreRowScroll() {
+    colsEl.querySelectorAll('.col').forEach((col) => {
+      const level = col.dataset.level;
+      const rows = col.querySelector('.rows');
+      if (rows && colScroll.has(level)) rows.scrollTop = colScroll.get(level);
+    });
+  }
+
+  function saveRowScroll() {
+    colsEl.querySelectorAll('.col').forEach((col) => {
+      const rows = col.querySelector('.rows');
+      if (rows) colScroll.set(col.dataset.level, rows.scrollTop);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // Breadcrumb
+  // --------------------------------------------------------------------------
+
+  function renderCrumbs() {
+    const parts = state.path.map((key) => {
+      const node = nodeOf(key);
+      if (!node) return '';
+      const sound = soundOf(node);
+      const isCurrent = key === state.selected;
+      return `
+        <button class="crumb${isCurrent ? ' is-current' : ''}" type="button" data-crumb="${key}">
+          ${sound ? `<span class="crumb-play" data-play="${key}" aria-hidden="true">▶</span>` : ''}
+          <span>${escapeHtml(node.name)}</span>
+        </button>`;
+    }).filter(Boolean);
+
+    crumbsEl.innerHTML = `
+      <span class="crumbs-label mono">YOU ARE HERE / 当前位置</span>
+      <button class="crumb${state.path.length ? '' : ' is-current'}" type="button" data-crumb="">全部大族</button>
+      ${parts.map((p) => `<span class="crumb-sep">›</span>${p}`).join('')}`;
+  }
+
+  // --------------------------------------------------------------------------
+  // Detail panel
+  // --------------------------------------------------------------------------
+
+  function renderDetail() {
+    const node = state.selected ? nodeOf(state.selected) : null;
+    if (!node) {
+      detailEl.innerHTML = `
+        <div class="detail-empty">
+          <p style="margin:0 0 8px;color:var(--paper);font-size:13px">从左边选一个节点。</p>
+          <p style="margin:0">每选一个节点，这里会显示它的听感卡：一句人话、三个听点、BPM 区间，以及一个播放按钮。
+          有下级的节点可以继续往右点下去。</p>
+        </div>`;
+      return;
+    }
+
+    const sound = soundOf(node);
+    const own = sound && sound.scope === 'own' ? sound.data : null;
+    const isFamily = node.kind === 'family';
+    const family = isFamily ? node.family : familyById.get(node.familyId);
+    const band = own ? bandById.get(own.band) : (sound && sound.family ? bandById.get(LISTEN.families[sound.family.id]?.band) : null);
+    const bpm = sound ? sound.bpm : null;
+
+    const bpmMin = own ? own.bpm.min : null;
+    const bpmMax = own ? own.bpm.max : null;
+    const left = bpmMin ? ((bpmMin - 60) / 200) * 100 : 0;
+    const width = bpmMin ? Math.max(((bpmMax - bpmMin) / 200) * 100, 1.2) : 0;
+
+    const kids = node.childIds.map((id) => entryById.get(id)).filter(Boolean);
+    const isPlaying = state.playing === node.key;
+
+    detailEl.innerHTML = `
+      <div class="detail-head" style="--family:${familyVars(node.color)}">
+        <div class="detail-kicker">${isFamily ? 'FAMILY / 大族' : 'STYLE / 条目'}${node.entry && node.entry.stub ? ' · 资料待补' : ''}</div>
+        <h2 class="detail-title">${escapeHtml(node.name)}</h2>
+        ${family ? `<p class="detail-zh">${escapeHtml(family.name)}${family.zh ? ' · ' + escapeHtml(family.zh) : ''} · ${node.childIds.length} 个直接下级</p>` : ''}
+        ${bpm ? `
+          <div class="detail-bpm"><strong>${bpm}</strong><span>BPM${own ? ` · ${bpmMin}–${bpmMax}` : ' · 同族参考值'}</span></div>
+          ${own ? `<div class="bpm-track"><i style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%"></i></div>
+          <div class="bpm-scale"><span>60</span><span>260</span></div>` : ''}
+        ` : ''}
+      </div>
+      <div class="detail-body">
+        ${own ? `
+          <p class="detail-l1">${escapeHtml(own.oneLine)}</p>
+          <ul class="detail-hear">${own.hear.map((h) => `<li>${escapeHtml(h)}</li>`).join('')}</ul>
+          ${own.when ? `<p class="detail-when">${escapeHtml(own.when)}</p>` : ''}
+        ` : node.entry ? `
+          <p class="detail-l1">${escapeHtml((node.entry.summary || '原始资料暂未展开这一条目。').slice(0, 220))}</p>
+        ` : `
+          <p class="detail-l1">${escapeHtml((family && family.intro ? family.intro : '').slice(0, 260))}${family && family.intro && family.intro.length > 260 ? '…' : ''}</p>
+        `}
+
+        ${sound && sound.scope === 'fallback' ? `
+          <div class="detail-fallback">
+            <b>同族参考：</b>这一条没有专属试听，下面播的是 <b>${escapeHtml(sound.family ? sound.family.name : '同族')}</b> 的骨架。
+            它不是这一条独有的声音。
+          </div>` : ''}
+
+        ${!sound ? `
+          <div class="detail-fallback" style="border-color:var(--line-strong);background:transparent">
+            这一条暂时没有可播放的合成示例（待归档条目，原始资料未给出速度与律动信息）。
+          </div>` : ''}
+
+        <div class="detail-actions">
+          ${sound ? `<button class="btn-primary${isPlaying ? ' is-playing' : ''}" type="button" data-play="${node.key}">${isPlaying ? '■ 停止' : '▶ 播放这一条'}</button>` : ''}
+          ${kids.length ? `<button class="btn-ghost" type="button" data-descend="${node.key}">继续往下 ${kids.length} 个 <span aria-hidden="true">›</span></button>` : ''}
+          ${node.kind === 'entry' ? `<a class="btn-ghost" href="#/genre/${node.id}">完整条目 <span aria-hidden="true">↗</span></a>` : `<a class="btn-ghost" href="#/family/${node.id}">大族页 <span aria-hidden="true">↗</span></a>`}
+        </div>
+
+        ${kids.length ? `
+          <div class="detail-children">
+            <h3>NEXT / 直接下级 ${kids.length}</h3>
+            <div class="chip-row">
+              ${kids.slice(0, 14).map((k) => `<button class="chip" type="button" data-crumb="e:${k.id}" data-descend="e:${k.id}">${escapeHtml(k.name)}</button>`).join('')}
+              ${kids.length > 14 ? `<span class="chip" style="cursor:default">+${kids.length - 14}</span>` : ''}
+            </div>
+          </div>` : ''}
+      </div>`;
+  }
+
+  // --------------------------------------------------------------------------
+  // Rail
+  // --------------------------------------------------------------------------
+
+  function renderRail() {
+    const currentFamily = state.path.length ? (state.path[0] || '').replace(/^f:/, '') : '';
+    railEl.innerHTML = activeFamilies.map((f) => `
+      <button class="rail-item${currentFamily === f.id ? ' is-active' : ''}" type="button" data-rail="${f.id}" style="--family:${familyVars(f.color)}" title="${escapeHtml(f.name)} · ${f.count} 个条目">
+        <span>${escapeHtml(f.name.slice(0, 3))}</span>
+        <i></i>
+      </button>`).join('');
+  }
+
+  // --------------------------------------------------------------------------
+  // Playback
+  // --------------------------------------------------------------------------
+
+  function playNode(key) {
+    const node = nodeOf(key);
+    if (!node) return;
+    const sound = soundOf(node);
+    if (!sound) { toast('这一条暂时没有可播放的合成示例。'); return; }
+
+    const current = Audio.getState();
+    if (current.playing && current.demoId === 'fp:' + sound.fp) {
+      Audio.stop();
+      return;
+    }
+
+    const ok = Audio.playFingerprint(sound.fp, { bpm: sound.bpm, label: node.name });
+    if (!ok) { toast('音频不可用：浏览器未提供 Web Audio 支持。'); return; }
+    state.playing = key;
+    paintPlayingRow();
+    if (state.selected !== key) {
+      state.selected = key;
+      renderCrumbs();
+      renderDetail();
+      markSelected();
+    }
+    syncFromEngine(Audio.getState());
+  }
+
+  function markSelected() {
+    colsEl.querySelectorAll('.row').forEach((row) => {
+      const on = row.dataset.key === state.selected;
+      row.classList.toggle('is-selected', on);
+      row.setAttribute('aria-selected', String(on));
+    });
+  }
+
+  function paintPlayingRow() {
+    colsEl.querySelectorAll('.row').forEach((row) => {
+      row.classList.toggle('is-playing', row.dataset.key === state.playing);
+    });
+    colsEl.querySelectorAll('[data-play]').forEach((btn) => {
+      const key = btn.dataset.play;
+      const node = nodeOf(key);
+      if (!node) return;
+      const sound = soundOf(node);
+      if (!sound) return;
+      const playing = state.playing === key;
+      if (btn.classList.contains('row-play')) btn.textContent = playing ? '■' : '▶';
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 播放状态同步
+  //
+  // 状态变化走引擎事件（播放 / 停止 / 换曲都能立刻收到），只有进度条需要
+  // 低频轮询。不用 requestAnimationFrame 自己轮询：后台标签页会被节流，
+  // 界面就会和音频脱节。
+  // --------------------------------------------------------------------------
+
+  let progressTimer = null;
+
+  function syncFromEngine(st) {
+    const activeKey = state.playing;
+    const node = activeKey ? nodeOf(activeKey) : null;
+    const sound = node ? soundOf(node) : null;
+    const isOurs = Boolean(st && st.playing && sound && st.demoId === 'fp:' + sound.fp);
+
+    if (isOurs) {
+      dockEl.classList.add('is-in');
+      dockEl.setAttribute('aria-hidden', 'false');
+      dockTitle.textContent = st.label || node.name;
+      const pct = Math.round((st.progress || 0) * 100);
+      dockBar.style.width = pct + '%';
+      const bar = colsEl.querySelector(`[data-progress="${activeKey}"]`);
+      if (bar) bar.style.width = pct + '%';
+      if (!progressTimer) progressTimer = setInterval(() => syncFromEngine(Audio.getState()), 140);
+      return;
+    }
+
+    if (progressTimer) { clearInterval(progressTimer); progressTimer = null; }
+    dockEl.classList.remove('is-in');
+    dockEl.setAttribute('aria-hidden', 'true');
+    dockBar.style.width = '0%';
+
+    // 会话被别的播放器接管或已停止：把行高亮和详情按钮一起复位
+    if (state.playing) {
+      state.playing = null;
+      paintPlayingRow();
+      renderDetail();
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // Navigation
+  // --------------------------------------------------------------------------
+
+  function select(key, options = {}) {
+    if (!nodeOf(key)) return;
+    state.selected = key;
+    if (options.descend) descend(key);
+    renderCrumbs();
+    renderDetail();
+    markSelected();
+    if (options.scroll !== false) scrollColumnIntoView(key);
+  }
+
+  function descend(key) {
+    const node = nodeOf(key);
+    if (!node || !node.childIds.length) return;
+    const at = state.path.indexOf(key);
+    state.path = at >= 0 ? state.path.slice(0, at + 1) : state.path.concat(key);
+    renderColumns();
+    renderRail();
+    renderCrumbs();
+    markSelected();
+    requestAnimationFrame(() => scrollColumnIntoView(key));
+  }
+
+  function ascend() {
+    if (!state.path.length) return;
+    state.path = state.path.slice(0, -1);
+    state.selected = state.path[state.path.length - 1] || null;
+    renderColumns();
+    renderRail();
+    renderCrumbs();
+    renderDetail();
+    markSelected();
+  }
+
+  function scrollColumnIntoView(key) {
+    const node = nodeOf(key);
+    const level = state.path.indexOf(key) >= 0 ? state.path.indexOf(key) : -1;
+    const target = level >= 0 ? colsEl.querySelector(`.col[data-level="${level}"]`) : colsEl.querySelector(`.col[data-level="0"]`);
+    if (target) target.scrollIntoView({ block: 'nearest', inline: 'start', behavior: 'smooth' });
+    const row = colsEl.querySelector(`.row[data-key="${key}"]`);
+    if (row) row.scrollIntoView({ block: 'nearest' });
+  }
+
+  // 搜索命中后把整条路径展开出来
+  function revealKey(key) {
+    const chain = [];
+    let cursor = key;
+    let guard = 0;
+    while (cursor && guard++ < 12) {
+      chain.unshift(cursor);
+      cursor = parentOf.get(cursor.split(':')[1]) || null;
+    }
+    // chain[0] 一定是某个大族，之后每一层都是它的下级
+    state.path = chain.slice(0, -1);
+    renderColumns();
+    renderRail();
+    select(key);
+  }
+
+  // --------------------------------------------------------------------------
+  // Search
+  // --------------------------------------------------------------------------
+
+  function search(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) { resultsEl.hidden = true; qEl.setAttribute('aria-expanded', 'false'); return; }
+
+    const hits = [];
+    for (const entry of KB.entries) {
+      if (hits.length >= 40) break;
+      const hay = (entry.name + ' ' + (entry.aliases || []).join(' ') + ' ' + (entry.summary || '')).toLowerCase();
+      if (hay.includes(q)) hits.push({ key: 'e:' + entry.id, node: entryById.get(entry.id), kind: 'entry' });
+    }
+    for (const family of KB.families) {
+      if (hits.length >= 48) break;
+      const hay = (family.name + ' ' + (family.zh || '')).toLowerCase();
+      if (hay.includes(q)) hits.push({ key: 'f:' + family.id, node: family, kind: 'family' });
+    }
+
+    if (!hits.length) {
+      resultsEl.innerHTML = '<div class="result-empty">没有匹配的风格或大族。试试更短的关键词。</div>';
+      resultsEl.hidden = false;
+      qEl.setAttribute('aria-expanded', 'true');
+      return;
+    }
+
+    resultsEl.innerHTML = hits.slice(0, 24).map((hit) => {
+      const isFamily = hit.kind === 'family';
+      const color = isFamily ? hit.node.color : hit.node.familyColor;
+      const path = isFamily ? '大族' : (hit.node.pathNames || []).slice(0, 3).join(' › ');
+      const sound = soundOf(nodeOf(hit.key));
+      return `
+        <button class="result" type="button" data-jump="${hit.key}" style="--family:${familyVars(color)}" role="option">
+          <span class="result-edge"></span>
+          <span class="result-main">
+            <span class="result-name">${escapeHtml(isFamily ? hit.node.name : hit.node.name)}</span>
+            <span class="result-path">${escapeHtml(path)}</span>
+          </span>
+          <span class="result-bpm">${sound ? sound.bpm + ' BPM' : '—'}</span>
+        </button>`;
+    }).join('');
+    resultsEl.hidden = false;
+    qEl.setAttribute('aria-expanded', 'true');
+  }
+
+  // --------------------------------------------------------------------------
+  // Events
+  // --------------------------------------------------------------------------
+
+  colsEl.addEventListener('click', (event) => {
+    const playBtn = event.target.closest('[data-play]');
+    if (playBtn) { event.stopPropagation(); playNode(playBtn.dataset.play); return; }
+
+    const row = event.target.closest('.row');
+    if (!row) return;
+    // 点有下级的节点 = 选中它并让右边长出下一列；点叶子 = 只选中，在右侧读它的听感卡
+    const key = row.dataset.key;
+    const node = nodeOf(key);
+    select(key, { descend: !!(node && node.childIds.length) });
+  });
+
+  colsEl.addEventListener('scroll', saveRowScroll, true);
+
+  detailEl.addEventListener('click', (event) => {
+    const playBtn = event.target.closest('[data-play]');
+    if (playBtn) { playNode(playBtn.dataset.play); return; }
+    const descendBtn = event.target.closest('[data-descend]');
+    if (descendBtn) { select(descendBtn.dataset.descend, { descend: true }); return; }
+    const chip = event.target.closest('[data-crumb]');
+    if (chip) { revealKey(chip.dataset.crumb); }
+  });
+
+  crumbsEl.addEventListener('click', (event) => {
+    const playBtn = event.target.closest('[data-play]');
+    if (playBtn) { playNode(playBtn.dataset.play); return; }
+    const crumb = event.target.closest('[data-crumb]');
+    if (!crumb) return;
+    const key = crumb.dataset.crumb;
+    if (!key) { state.path = []; state.selected = null; renderColumns(); renderRail(); renderCrumbs(); renderDetail(); return; }
+    const at = state.path.indexOf(key);
+    if (at >= 0) { state.path = state.path.slice(0, at + 1); state.selected = key; renderColumns(); renderRail(); renderCrumbs(); renderDetail(); markSelected(); }
+    else revealKey(key);
+  });
+
+  railEl.addEventListener('click', (event) => {
+    const item = event.target.closest('[data-rail]');
+    if (!item) return;
+    const key = 'f:' + item.dataset.rail;
+    state.path = [key];
+    state.selected = key;
+    renderColumns(); renderRail(); renderCrumbs(); renderDetail(); markSelected();
+    requestAnimationFrame(() => scrollColumnIntoView(key));
+  });
+
+  qEl.addEventListener('input', () => search(qEl.value));
+
+  qEl.addEventListener('focus', () => { if (qEl.value.trim()) search(qEl.value); });
+
+  resultsEl.addEventListener('click', (event) => {
+    const hit = event.target.closest('[data-jump]');
+    if (!hit) return;
+    qEl.value = '';
+    resultsEl.hidden = true;
+    qEl.setAttribute('aria-expanded', 'false');
+    revealKey(hit.dataset.jump);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.search')) { resultsEl.hidden = true; qEl.setAttribute('aria-expanded', 'false'); }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    const tag = (event.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') {
+      if (event.key === 'Escape') { qEl.blur(); resultsEl.hidden = true; }
+      return;
+    }
+
+    if (event.key === '/') { event.preventDefault(); qEl.focus(); return; }
+
+    const cols = columnsModel();
+    const level = Math.max(0, state.path.length);
+    const col = cols[level] || cols[0];
+    if (!col) return;
+    const keys = col.keys;
+    const at = keys.indexOf(state.selected);
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (!keys.length) return;
+      const next = event.key === 'ArrowDown'
+        ? (at < 0 ? 0 : Math.min(keys.length - 1, at + 1))
+        : (at < 0 ? keys.length - 1 : Math.max(0, at - 1));
+      select(keys[next]);
+      return;
+    }
+
+    if (event.key === 'ArrowRight' || event.key === 'Enter') {
+      const node = state.selected ? nodeOf(state.selected) : null;
+      if (node && node.childIds.length) { event.preventDefault(); select(state.selected, { descend: true }); }
+      return;
+    }
+
+    if (event.key === 'ArrowLeft' || event.key === 'Escape') {
+      if (state.path.length) { event.preventDefault(); ascend(); }
+      return;
+    }
+
+    if (event.key === ' ') {
+      if (!state.selected) return;
+      event.preventDefault();
+      playNode(state.selected);
+    }
+  });
+
+  $('dockStop').addEventListener('click', () => Audio.stop());
+
+  // 介绍条：记住了就不再出现
+  let guideDismissed = false;
+  try { guideDismissed = localStorage.getItem('em-tree-guide') === 'off'; } catch (error) { guideDismissed = false; }
+  if (guideDismissed) { introEl.hidden = true; guideToggle.setAttribute('aria-pressed', 'false'); }
+  $('introClose').addEventListener('click', () => {
+    introEl.hidden = true;
+    guideToggle.setAttribute('aria-pressed', 'false');
+    try { localStorage.setItem('em-tree-guide', 'off'); } catch (error) { /* 忽略：隐私模式下不可写 */ }
+  });
+  guideToggle.addEventListener('click', () => {
+    const showing = introEl.hidden;
+    introEl.hidden = !showing;
+    guideToggle.setAttribute('aria-pressed', String(showing));
+    if (!showing) { try { localStorage.setItem('em-tree-guide', 'off'); } catch (error) { /* 同上 */ } }
+  });
+
+  // --------------------------------------------------------------------------
+  // Boot
+  // --------------------------------------------------------------------------
+
+  renderRail();
+  renderCrumbs();
+  // 首屏就展开两层：选中首个大族，并把它的分叉直接摆出来。
+  // 一列空树看不出「分支」，两列才能让人立刻明白往右点会发生什么。
+  if (activeFamilies.length) {
+    const first = keyOf('f', activeFamilies[0].id);
+    state.selected = first;
+    if (nodeOf(first).childIds.length) state.path = [first];
+    renderColumns();
+    renderRail();
+    renderCrumbs();
+    renderDetail();
+    markSelected();
+  } else {
+    renderColumns();
+    renderDetail();
+  }
+
+  // 引擎每次状态变化都推一次；进度条再叠加一个低频轮询补间
+  Audio.onState(syncFromEngine);
+  syncFromEngine(Audio.getState());
+})();
+</script>
+</body>
+</html>

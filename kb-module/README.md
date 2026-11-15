@@ -1,6 +1,6 @@
 # 电音档案知识库模块 / Electronic Music KB Module
 
-一个零依赖、可独立生成的电子音乐知识库模块。它把分类库、精编内容和转写资料构建为结构化产物，并通过 **CLI、MCP stdio、HTTP API** 提供给 Agent 直接调用。
+一个零依赖、可独立生成的电子音乐知识库模块。它把分类库、精编内容、转写与知识笔记构建为结构化产物，并通过 **CLI、MCP stdio、HTTP API** 提供给 Agent 直接调用。
 
 模块不依赖原有网页、数据库或向量服务；只要 Node.js >= 18，即可在一台干净机器上构建和运行。
 
@@ -98,12 +98,12 @@ npm test
 | `module.version` | 是 | 语义化版本 |
 | `inputs.taxonomy` | 是 | 分类库 Markdown；标题层级 + `上位/下位` + `A.K.A.` + `例曲` |
 | `inputs.curated` | 是 | 精编内容 JSON；见 `inputs/curated.json` |
-| `inputs.transcripts` | 否 | 转写目录；默认只登记来源，不索引 |
+| `inputs.transcripts` | 否 | 转写 / 知识笔记目录；默认只登记来源，不索引 |
 | `inputs.sourceMap` | 否 | 来源元数据；用于 manifest 与来源文档 |
 | `output` | 是 | 产物目录；构建时会覆盖同名产物文件 |
 | `build.chunkMaxChars` | 否 | 单块最大字符数，默认 2200 |
 | `build.chunkOverlap` | 否 | 长文切块重叠字符数，默认 200 |
-| `build.includeTranscripts` | 否 | 是否把转写原文也加入检索；默认 false，避免噪声 |
+| `build.includeTranscripts` | 否 | 是否把转写 / 知识笔记也加入检索；默认 false，避免噪声 |
 | `retrieval.defaultLimit` | 否 | 默认返回条数 |
 | `retrieval.maxLimit` | 否 | 单次最大返回条数 |
 | `retrieval.bm25` | 否 | BM25 参数 |
@@ -513,7 +513,7 @@ kb-module/
   - `manifest.builtAt`、`sourceHashes`：构建时间与来源快照。
 - `dist/` 是生成物，不要手改；输入在 `inputs/`，构建逻辑在 `lib/`。
 
-当前规模（构建示例）：1205 个条目、144 个精编文档、1356 个分块、7 个来源文件；索引构建约 200ms。
+当前规模（构建示例）：1376 个条目、187 个精编文档、1628 个分块、48 个来源文件；索引构建约 200ms。分块中包含 41 集《DJ 修炼手册 · 基础篇》的知识笔记、8 篇章节导读、18 个 DJ 术语与 1 篇新手 FAQ。
 
 ---
 
@@ -540,7 +540,7 @@ npm test
 - 中文分词采用单字+双字+短 full-run，不是词典分词；对超短查询可能召回偏宽。
 - BPM 只覆盖原分类库明确写出数字的 134 条；不要用 BPM 筛选判断“有没有这个风格”。
 - 原分类库有 90 条待完善/交叉引用、72 组同名条目；详情页/返回结果中的 `family` 与 `path` 用于消歧。
-- 转写资料默认不进检索；开启 `includeTranscripts` 会引入 ASR 噪声。
+- 转写资料由 `includeTranscripts` 控制；当前已开启，但只索引 `video_transcript` / `video_transcript_local_asr` / `video_transcript_asr` / `video_knowledge_note` 类型的来源，不会把 `curated.json` 等输入误当转写。课程正文已从 ASR 整理稿改写为知识笔记，并按行业术语校对；原始 ASR 只作归档，不作为正文检索。
 - 例曲只是文字索引，不提供音频；版权归原作者。
 - HTTP API 无鉴权，默认只监听 localhost。
 

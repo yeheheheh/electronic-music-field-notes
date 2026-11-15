@@ -1,0 +1,23 @@
+{
+  "title": "电音档案 · 从听懂到做出来",
+  "duration": 48,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "bpm": 120,
+  "accent": "#ffb000",
+  "scenes": [
+    {"id":"hook","start":0,"end":4,"title":"只会跟着\n节奏点头？","caption":"喜欢电音，然后呢？"},
+    {"id":"brand","start":4,"end":8,"title":"电音档案","caption":"听得懂，才做得出来"},
+    {"id":"listen","start":8,"end":14,"title":"听出区别","caption":"92 个风格，从声音开始"},
+    {"id":"search","start":14,"end":20,"title":"查到门道","caption":"1,376 条资料，串起知识"},
+    {"id":"practice","start":20,"end":26,"title":"把耳朵练准","caption":"听辨风格，也练 BPM 估速"},
+    {"id":"make","start":26,"end":32,"title":"让想法出声","caption":"22 节制作课，边学边动手"},
+    {"id":"automix","start":32,"end":38,"title":"让下一首\n接得漂亮","caption":"排 Set · 乐句对齐 · 自动过渡"},
+    {"id":"product","start":38,"end":42,"title":"你的下一段 SET","caption":"本地引擎 · 离线预渲染"},
+    {"id":"end","start":42,"end":48,"title":"电音档案","caption":"从「听」进来，把喜欢做出来"}
+  ],
+  "music": {"style":"original minimal melodic house","nearSilences":[[3.5,4],[35.5,36]],"drop":36,"endResolve":46},
+  "facts": {"styles":92,"entries":1376,"lessons":22},
+  "safeArea": {"left":84,"right":164,"top":180,"bottom":340}
+}

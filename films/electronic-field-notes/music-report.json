@@ -1,0 +1,64 @@
+{
+  "files": [
+    "D:\\项目\\Electronic Music\\films\\electronic-field-notes\\music.py",
+    "D:\\项目\\Electronic Music\\films\\electronic-field-notes\\soundtrack.wav",
+    "D:\\项目\\Electronic Music\\films\\electronic-field-notes\\music-report.json"
+  ],
+  "format": "48s / 48000Hz / stereo / PCM24 / 120BPM / D minor",
+  "ffmpeg": {
+    "I_LUFS": -17.83,
+    "true_peak_dBTP": -1.8,
+    "LRA_LU": 5.3,
+    "band_energy_percent_Hz": {
+      "<20": 0.002,
+      "20-120": 36.752,
+      "120-500": 31.953,
+      "500-2000": 28.878,
+      "2000-8000": 1.707,
+      "8000-20000": 0.709,
+      ">20000": 0.0
+    },
+    "energy_method": "8th-order acrossover + astats RMS, normalized band mean-square"
+  },
+  "checks": {
+    "sample_peak_dBFS": -1.8,
+    "RMS_dBFS": -19.92,
+    "crest_dB": 18.12,
+    "near_silence_RMS_dBFS": [
+      -96.83,
+      -91.55
+    ],
+    "strongest_2s_start": 36,
+    "bar_RMS_dBFS": [
+      -24.8,
+      -24.53,
+      -20.72,
+      -20.67,
+      -19.57,
+      -19.68,
+      -19.43,
+      -20.68,
+      -21.25,
+      -21.34,
+      -19.24,
+      -19.08,
+      -19.35,
+      -18.42,
+      -19.02,
+      -18.61,
+      -22.97,
+      -21.81,
+      -16.83,
+      -17.88,
+      -18.43,
+      -19.34,
+      -19.16,
+      -31.6
+    ],
+    "sub120_side_to_mid_dB": -30.8,
+    "drum_stem_peak_after46": 0.0,
+    "last40ms_peak": 0.0,
+    "stereo_correlation": 0.8546
+  },
+  "summary": "原创振荡器/噪声合成，无人声、外部采样或版权曲。两处近静音、36秒双drop、46秒停鼓与和弦尾响已数值校验；48秒收净。未主观试听，未做最终-14LUFS归一化。"
+}

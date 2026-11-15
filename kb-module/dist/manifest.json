@@ -7,7 +7,7 @@
     "language": "zh-CN",
     "description": "可独立生成、可被 Agent 直接接入的电子音乐知识库模块。"
   },
-  "builtAt": "2026-10-24T12:06:05.618Z",
+  "builtAt": "2026-10-27T11:30:50.855Z",
   "tokenizer": "cjk-unigram-bigram-bm25-v1",
   "stats": {
     "families": 24,
@@ -21,10 +21,10 @@
     "examples": 1654,
     "bpmEntries": 181,
     "relationLinks": 4374,
-    "curatedDocs": 158,
-    "docs": 158,
-    "chunks": 1541,
-    "sourceFiles": 7
+    "curatedDocs": 187,
+    "docs": 187,
+    "chunks": 1628,
+    "sourceFiles": 48
   },
   "retrieval": {
     "method": "bm25",
@@ -77,7 +77,48 @@
     "bilibili-ep03": "24334944cb222a36bcbcc00be86e0fbaa715cf889cc6b9b092640028f5f24b21",
     "bilibili-ep04": "c3805fe212ec04c9f8c43f196c20a02e2efcc8240aef1cd820e6c3fee2d62ee3",
     "bilibili-podcast-ep31": "f05576060f890e56d61cd33a23fe1b6bdd8b30fea976099756c7e6f4e0b7b964",
-    "curated-notes": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0"
+    "curated-notes": "5c8a705f8bcce4a9155ee573557c50da7c0f7e75e047e324e93488fa5e494666",
+    "bilibili-dj-01": "4a1d1fa0912b01b3df425b1676b26387e822c718f8e7ff1c68eb9cbdd9c73704",
+    "bilibili-dj-02": "3bf266cd9a7803f237cbe65b25eb0b6e1017a0c9bf0ac1653c77f9d73ab6a1c1",
+    "bilibili-dj-03": "30f663627335faae32d53ac1b1cf49465ab999556602846139738f584a77a060",
+    "bilibili-dj-04": "6cbe03d44962a0755388281ceff331cb7c9d2b00ae449fe833361f06d9265b0a",
+    "bilibili-dj-05": "c4b3bdb83f124dad62c66cfabd977ea2979978f10d95b8a611cd3c1b9617f263",
+    "bilibili-dj-06": "56a69ac15f2956e8f208f2e4611cfd67ceabbb2040cb459ac20a3e9ee967819d",
+    "bilibili-dj-07": "b0a0c0aba0dbff7d1574a912aed6fd2d36d1bcef47bd6d5c16108e1fd6da5c58",
+    "bilibili-dj-08": "176857368b8f03c5f6c3e364c211863da47857fd0ddb67e87796ff5b2e11d138",
+    "bilibili-dj-09": "e69901effd004e39e75ac33fc354cfd69a18fefc5e9ace570f113fbe3f6f82ce",
+    "bilibili-dj-10": "20a31e3aa55a7f41aa1f5417cd0a9531bdfb91ea0ed4c809d4573e022baaefa6",
+    "bilibili-dj-11": "d33a0a54beb26e65a8dbabce1bbfbb91a95b859422c503bc68a4d6a3959ca8ba",
+    "bilibili-dj-12": "775b0458e01f45a02c4865609c2628718b535525449a1e114556998475467ea5",
+    "bilibili-dj-13": "18660c948a4d62bfa7b9b45c745d88db939aac3e016b1506d9352ba014f0b271",
+    "bilibili-dj-14": "918213a2aaaa87b7b298496bf4463049a3cfe06826bc6969582f771f25dafc31",
+    "bilibili-dj-15": "49d093614046e3dcf0d0697b1ac58fcd458a8924e991cf761d1ee86244ab15bd",
+    "bilibili-dj-16": "32cee7f6e1ab540278bff540c52b5a87d31c3169c240bc7b207287e133932a9c",
+    "bilibili-dj-17": "8d89b604c95144e7003f896cfdbd272ba05d5c730341063fef35f00fdf660870",
+    "bilibili-dj-18": "ac249f6a39cba3f16e19378d04f1a49bc0250505d382a5eb61f2900a39f1db8b",
+    "bilibili-dj-19": "7c4d23afcd20625d70c712b2b2105e15562d94a2442ed797c51b5bfa6f7e115c",
+    "bilibili-dj-20": "512030297f739bec81186a15ee23908f3c12e7213c2c3699cb67d264824c9c41",
+    "bilibili-dj-21": "9e66559afe48d927ad06d2651ca7b7b803bb091228258f26b10562da1db6842b",
+    "bilibili-dj-22": "62e73fd52c24c4c3838901619236eecaaf8830a725fb2a11210e76687332f510",
+    "bilibili-dj-23": "4b7d501cb7a2e49d484618767f7cac7901c4ea178de64e624cc6511b6ccf568c",
+    "bilibili-dj-24": "ca543bfddce73bcf674336804853af3a766c4e74884ef6e88f0e955b77a77720",
+    "bilibili-dj-25": "511739242a1702b19ac0e4fb0a1719416c2ae32cd252458d614606d6b73d69c2",
+    "bilibili-dj-26": "52a2220ae6885ea14e30fffff642a654f1a8d451b3e55a326c67c8c962f175fb",
+    "bilibili-dj-27": "a0c5a8c218fd4643039894c228dcd4a068b4e106c57d0cd7c1342edbe3879b6e",
+    "bilibili-dj-28": "35853bb42ac40911079a76a10ee35e600a0be88e233284161b4399c06a19b73d",
+    "bilibili-dj-29": "30164bc92f74c643285a8eb697e5733f9c0c68c76190dd5bcf141c2370b915bd",
+    "bilibili-dj-30": "396986273f98cb81cd119d50b15b56dc245d92a2ec528898c9b859ba8fc540fe",
+    "bilibili-dj-31": "1b71b14629718bae05e0bddf2ebc36019ac2ac530d392f6fb13600da277cfe3c",
+    "bilibili-dj-32": "a5346b0a1265be8432dcfe025347afd2c91ae4cd982edf94a4f53135bc9d846c",
+    "bilibili-dj-33": "5b87cdf956e75e11d0f455f3c2146ddeb46fc549ace81a2349fe021136155aa3",
+    "bilibili-dj-34": "bbdeebe6592d67496ee72ed20e096fd1c8ba2ba282a8938f16368bc0fad8d93e",
+    "bilibili-dj-35": "9b4e9e9f5c4401da021ea4f25850bff7d786655c644b1b83109306448a5701c7",
+    "bilibili-dj-36": "d708720de95f52d42d9b03eff1ecaa8f8503862e316e2a58a21f0bc6c347ee80",
+    "bilibili-dj-37": "ecb7eee45a3ff2008911b083f8e1e5813c58e19752f10bb3747154b2777ed5ea",
+    "bilibili-dj-38": "5cb3dd67df2779081de0d2583cbc79dac675ac7715047f19bdf7b555629fa232",
+    "bilibili-dj-39": "62a113f862fd7b6b769801389c0a78b265b85ce0e1e8b32232bb619208360609",
+    "bilibili-dj-40": "e91fa28eb7c75d370b3f3e10c4a7f00ab1a9d89f1042f06e0db34d28c710c0b7",
+    "bilibili-dj-41": "fb68218a5b939f9871e72e1318b41e6d3414a2bc195cadd09ed5f99379d36ab5"
   },
   "sources": [
     {
@@ -159,24 +200,516 @@
       "author": "本知识库编辑",
       "url": null,
       "exists": true,
-      "bytes": 56738,
-      "sha256": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0",
+      "bytes": 85596,
+      "sha256": "5c8a705f8bcce4a9155ee573557c50da7c0f7e75e047e324e93488fa5e494666",
       "licenseNote": "二次整理内容；引用请注明原文档与视频。",
       "note": "听辨、制作、历史、现场、术语与勘误。"
+    },
+    {
+      "id": "bilibili-dj-01",
+      "title": "DJ 知识笔记｜第 01 集 · 开始前必看！",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=1",
+      "exists": true,
+      "bytes": 1104,
+      "sha256": "4a1d1fa0912b01b3df425b1676b26387e822c718f8e7ff1c68eb9cbdd9c73704",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 01 集 · 2:59 · 课程介绍：为什么做这套教程，以及基础篇、进阶篇、高级篇各自学什么。"
+    },
+    {
+      "id": "bilibili-dj-02",
+      "title": "DJ 知识笔记｜第 02 集 · 准备工作：你了解电子舞曲吗",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=2",
+      "exists": true,
+      "bytes": 929,
+      "sha256": "3bf266cd9a7803f237cbe65b25eb0b6e1017a0c9bf0ac1653c77f9d73ab6a1c1",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 02 集 · 0:59 · 先把概念对齐：EDM、电音、DJ 打碟之间的关系，以及为什么先学电子舞曲。"
+    },
+    {
+      "id": "bilibili-dj-03",
+      "title": "DJ 知识笔记｜第 03 集 · 准备工作：DJ 到底在干什么",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=3",
+      "exists": true,
+      "bytes": 776,
+      "sha256": "30f663627335faae32d53ac1b1cf49465ab999556602846139738f584a77a060",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 03 集 · 1:20 · DJ 在台上到底做什么：混音接歌与现场表演两条主线。"
+    },
+    {
+      "id": "bilibili-dj-04",
+      "title": "DJ 知识笔记｜第 04 集 · 准备工作：三分钟看懂 DJ 打碟所有装备",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=4",
+      "exists": true,
+      "bytes": 1839,
+      "sha256": "6cbe03d44962a0755388281ceff331cb7c9d2b00ae449fe833361f06d9265b0a",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 04 集 · 4:40 · 三件必备硬件：打碟机（DDJ / XDJ / CDJ）、监听耳机、音箱，以及入门型号怎么选。"
+    },
+    {
+      "id": "bilibili-dj-05",
+      "title": "DJ 知识笔记｜第 05 集 · 准备工作：自学 DJ 装备-软件",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=5",
+      "exists": true,
+      "bytes": 1138,
+      "sha256": "c4b3bdb83f124dad62c66cfabd977ea2979978f10d95b8a611cd3c1b9617f263",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 05 集 · 1:37 · DJ 软件：Rekordbox 的定位、下载与硬件解锁，以及与其他软件的关系。"
+    },
+    {
+      "id": "bilibili-dj-06",
+      "title": "DJ 知识笔记｜第 06 集 · 准备工作：只有鼠标键盘也能打碟！",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=6",
+      "exists": true,
+      "bytes": 831,
+      "sha256": "56a69ac15f2956e8f208f2e4611cfd67ceabbb2040cb459ac20a3e9ee967819d",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 06 集 · 6:54 · 没有碟机也能练：用鼠标键盘控制 Rekordbox 的快捷键设置。"
+    },
+    {
+      "id": "bilibili-dj-07",
+      "title": "DJ 知识笔记｜第 07 集 · 准备工作：拓展训练包使用方法",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=7",
+      "exists": true,
+      "bytes": 1130,
+      "sha256": "b0a0c0aba0dbff7d1574a912aed6fd2d36d1bcef47bd6d5c16108e1fd6da5c58",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 07 集 · 1:55 · 拓展训练包包含什么，以及“课程曲目 → 扩展练习 → 综合歌单”的三步用法。"
+    },
+    {
+      "id": "bilibili-dj-08",
+      "title": "DJ 知识笔记｜第 08 集 · Rekordbox 操作：软件界面概览",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=8",
+      "exists": true,
+      "bytes": 1825,
+      "sha256": "176857368b8f03c5f6c3e364c211863da47857fd0ddb67e87796ff5b2e11d138",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 08 集 · 2:45 · Rekordbox 界面：Performance / Export 两种模式、Deck 布局、浏览器与播放列表。"
+    },
+    {
+      "id": "bilibili-dj-09",
+      "title": "DJ 知识笔记｜第 09 集 · Rekordbox 操作：软件设置",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=9",
+      "exists": true,
+      "bytes": 1439,
+      "sha256": "e69901effd004e39e75ac33fc354cfd69a18fefc5e9ace570f113fbe3f6f82ce",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 09 集 · 1:43 · Rekordbox 设置：语言、波形颜色、调性显示为 Camelot Wheel、BPM 分析范围。"
+    },
+    {
+      "id": "bilibili-dj-10",
+      "title": "DJ 知识笔记｜第 10 集 · Rekordbox 操作：曲目导入与分析",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=10",
+      "exists": true,
+      "bytes": 1625,
+      "sha256": "20a31e3aa55a7f41aa1f5417cd0a9531bdfb91ea0ed4c809d4573e022baaefa6",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 10 集 · 2:05 · 曲目导入、自动分析、列排序，以及文件移动后丢失曲目的重新定位。"
+    },
+    {
+      "id": "bilibili-dj-11",
+      "title": "DJ 知识笔记｜第 11 集 · DJ 乐理：BPM 速度",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=11",
+      "exists": true,
+      "bytes": 1155,
+      "sha256": "d33a0a54beb26e65a8dbabce1bbfbb91a95b859422c503bc68a4d6a3959ca8ba",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 11 集 · 3:13 · BPM 是什么、怎么数，以及 House / Techno / Dubstep 的大致速度区间。"
+    },
+    {
+      "id": "bilibili-dj-12",
+      "title": "DJ 知识笔记｜第 12 集 · DJ 乐理：拍、小节、乐句、数拍",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=12",
+      "exists": true,
+      "bytes": 1934,
+      "sha256": "775b0458e01f45a02c4865609c2628718b535525449a1e114556998475467ea5",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 12 集 · 3:28 · 拍、小节、乐句与数拍：4/4 拍、8 小节乐句，以及波形上的小节线。"
+    },
+    {
+      "id": "bilibili-dj-13",
+      "title": "DJ 知识笔记｜第 13 集 · DJ 乐理：舞曲结构与能量层级",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=13",
+      "exists": true,
+      "bytes": 3846,
+      "sha256": "18660c948a4d62bfa7b9b45c745d88db939aac3e016b1506d9352ba014f0b271",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 13 集 · 10:31 · EDM 八段结构：Intro、Breakdown、Build-up、Drop、Outro 与能量层级。"
+    },
+    {
+      "id": "bilibili-dj-14",
+      "title": "DJ 知识笔记｜第 14 集 · DJ 乐理：Rekordbox 波形详解",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=14",
+      "exists": true,
+      "bytes": 2364,
+      "sha256": "918213a2aaaa87b7b298496bf4463049a3cfe06826bc6969582f771f25dafc31",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 14 集 · 4:16 · Rekordbox 波形详解：段落形状、低频/中频/高频的红绿蓝配色。"
+    },
+    {
+      "id": "bilibili-dj-15",
+      "title": "DJ 知识笔记｜第 15 集 · DJ 乐理：T 字法 Mix In Key 调性混音",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=15",
+      "exists": true,
+      "bytes": 2115,
+      "sha256": "49d093614046e3dcf0d0697b1ac58fcd458a8924e991cf761d1ee86244ab15bd",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 15 集 · 5:03 · Mix In Key：Camelot Wheel 与 T 字法，找同调、相邻调与平行大小调。"
+    },
+    {
+      "id": "bilibili-dj-16",
+      "title": "DJ 知识笔记｜第 16 集 · 打碟机操作：第一次触摸你的打碟机！",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=16",
+      "exists": true,
+      "bytes": 3627,
+      "sha256": "32cee7f6e1ab540278bff540c52b5a87d31c3169c240bc7b207287e133932a9c",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 16 集 · 6:34 · 打碟机总览：Mixer + Deck 的结构、Load / Play / CUE / Tempo / Jog wheel 与 Shift 第二功能。"
+    },
+    {
+      "id": "bilibili-dj-17",
+      "title": "DJ 知识笔记｜第 17 集 · 打碟机操作：分辨三种 CUE 点功能",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=17",
+      "exists": true,
+      "bytes": 2348,
+      "sha256": "8d89b604c95144e7003f896cfdbd272ba05d5c730341063fef35f00fdf660870",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 17 集 · 3:33 · 三种 CUE：临时 CUE、Memory CUE、Hot CUE 的区别与设置。"
+    },
+    {
+      "id": "bilibili-dj-18",
+      "title": "DJ 知识笔记｜第 18 集 · 打碟机操作：设置 CUE 点万能套路",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=18",
+      "exists": true,
+      "bytes": 3955,
+      "sha256": "ac249f6a39cba3f16e19378d04f1a49bc0250505d382a5eb61f2900a39f1db8b",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 18 集 · 16:17 · 一分钟 CUE 点万能套路：8 个 Hot CUE 的颜色、布局与八步设置流程。"
+    },
+    {
+      "id": "bilibili-dj-19",
+      "title": "DJ 知识笔记｜第 19 集 · 打碟机操作：Trim 增益",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=19",
+      "exists": true,
+      "bytes": 1517,
+      "sha256": "7c4d23afcd20625d70c712b2b2105e15562d94a2442ed797c51b5bfa6f7e115c",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 19 集 · 2:26 · Trim 增益：防止削波、统一不同曲目的音量上限。"
+    },
+    {
+      "id": "bilibili-dj-20",
+      "title": "DJ 知识笔记｜第 20 集 · 打碟机操作：EQ 均衡器",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=20",
+      "exists": true,
+      "bytes": 1611,
+      "sha256": "512030297f739bec81186a15ee23908f3c12e7213c2c3699cb67d264824c9c41",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 20 集 · 1:51 · EQ 三段：高频、中频、低频分别控制什么，以及在接歌中的三大作用。"
+    },
+    {
+      "id": "bilibili-dj-21",
+      "title": "DJ 知识笔记｜第 21 集 · 打碟机操作：EQ 的两种设置方法",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=21",
+      "exists": true,
+      "bytes": 1279,
+      "sha256": "9e66559afe48d927ad06d2651ca7b7b803bb091228258f26b10562da1db6842b",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 21 集 · 2:13 · EQ 与 Isolator 两种模式：-26 dB 衰减与完全消除，分别适合什么曲风。"
+    },
+    {
+      "id": "bilibili-dj-22",
+      "title": "DJ 知识笔记｜第 22 集 · 打碟机操作：Filter 滤波器",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=22",
+      "exists": true,
+      "bytes": 694,
+      "sha256": "62e73fd52c24c4c3838901619236eecaaf8830a725fb2a11210e76687332f510",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 22 集 · 1:16 · Filter 滤波器：LPF 低通与 HPF 高通，怎么用来过渡和做效果。"
+    },
+    {
+      "id": "bilibili-dj-23",
+      "title": "DJ 知识笔记｜第 23 集 · 打碟机操作：监听耳机使用方法",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=23",
+      "exists": true,
+      "bytes": 2330,
+      "sha256": "4b7d501cb7a2e49d484618767f7cac7901c4ea178de64e624cc6511b6ccf568c",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 23 集 · 2:40 · 监听耳机：CUE 监听、Master 监听、Mix 比例与单耳监听的习惯。"
+    },
+    {
+      "id": "bilibili-dj-24",
+      "title": "DJ 知识笔记｜第 24 集 · 基础对拍（软件辅助）",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=24",
+      "exists": true,
+      "bytes": 2843,
+      "sha256": "ca543bfddce73bcf674336804853af3a766c4e74884ef6e88f0e955b77a77720",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 24 集 · 7:21 · 基础对拍三步：调 BPM、按小节切入、用 Jog wheel 把 Kick 对齐。"
+    },
+    {
+      "id": "bilibili-dj-25",
+      "title": "DJ 知识笔记｜第 25 集 · 进阶对拍（耳对）",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=25",
+      "exists": true,
+      "bytes": 1548,
+      "sha256": "511739242a1702b19ac0e4fb0a1719416c2ae32cd252458d614606d6b73d69c2",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 25 集 · 3:15 · 进阶对拍：只看耳朵不看波形，判断快慢并往复微调。"
+    },
+    {
+      "id": "bilibili-dj-26",
+      "title": "DJ 知识笔记｜第 26 集 · 自动对拍",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=26",
+      "exists": true,
+      "bytes": 1315,
+      "sha256": "52a2220ae6885ea14e30fffff642a654f1a8d451b3e55a326c67c8c962f175fb",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 26 集 · 2:07 · Beat Sync 自动对拍：三步操作、适用场景与依赖它的代价。"
+    },
+    {
+      "id": "bilibili-dj-27",
+      "title": "DJ 知识笔记｜第 27 集 · 核心混音手法：音量推子法",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=27",
+      "exists": true,
+      "bytes": 1853,
+      "sha256": "a0c5a8c218fd4643039894c228dcd4a068b4e106c57d0cd7c1342edbe3879b6e",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 27 集 · 4:33 · 音量推子三法：三分慢推、底部慢推、快拉。"
+    },
+    {
+      "id": "bilibili-dj-28",
+      "title": "DJ 知识笔记｜第 28 集 · 核心混音手法：EQ 均衡器法",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=28",
+      "exists": true,
+      "bytes": 3029,
+      "sha256": "35853bb42ac40911079a76a10ee35e600a0be88e233284161b4399c06a19b73d",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 28 集 · 7:24 · EQ 混音四步：低频只留一首、中高频让位、按乐句切换、推子收尾。"
+    },
+    {
+      "id": "bilibili-dj-29",
+      "title": "DJ 知识笔记｜第 29 集 · 核心混音手法：Filter 滤波器法",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=29",
+      "exists": true,
+      "bytes": 1525,
+      "sha256": "30164bc92f74c643285a8eb697e5733f9c0c68c76190dd5bcf141c2370b915bd",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 29 集 · 4:01 · Filter 混音四步：先用 LPF 藏住后手，再右旋接入，最后按 EQ 法收尾。"
+    },
+    {
+      "id": "bilibili-dj-30",
+      "title": "DJ 知识笔记｜第 30 集 · 你的第一次混音！",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=30",
+      "exists": true,
+      "bytes": 807,
+      "sha256": "396986273f98cb81cd119d50b15b56dc245d92a2ec528898c9b859ba8fc540fe",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 30 集 · 3:49 · 第一次完整混音：调 BPM、播放、监听对拍、融合推子/EQ/Filter 接歌。"
+    },
+    {
+      "id": "bilibili-dj-31",
+      "title": "DJ 知识笔记｜第 31 集 · 核心接歌方法：黄金法则",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=31",
+      "exists": true,
+      "bytes": 2053,
+      "sha256": "1b71b14629718bae05e0bddf2ebc36019ac2ac530d392f6fb13600da277cfe3c",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 31 集 · 5:07 · 接歌黄金法则：以乐句为单位，前后各留 1–2 个乐句做对拍、混音与撤出。"
+    },
+    {
+      "id": "bilibili-dj-32",
+      "title": "DJ 知识笔记｜第 32 集 · 核心接歌方法：End 切 Start",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=32",
+      "exists": true,
+      "bytes": 1260,
+      "sha256": "a5346b0a1265be8432dcfe025347afd2c91ae4cd982edf94a4f53135bc9d846c",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 32 集 · 3:32 · End 切 Start：前首最后一拍直接切后首第一拍，靠 CUE 点与时机保证不突兀。"
+    },
+    {
+      "id": "bilibili-dj-33",
+      "title": "DJ 知识笔记｜第 33 集 · 核心接歌方法：Outro 接 Intro",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=33",
+      "exists": true,
+      "bytes": 1455,
+      "sha256": "5b87cdf956e75e11d0f455f3c2146ddeb46fc549ace81a2349fe021136155aa3",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 33 集 · 4:02 · Outro 接 Intro：利用加长版的长尾奏与长前奏，最安全的接歌方式。"
+    },
+    {
+      "id": "bilibili-dj-34",
+      "title": "DJ 知识笔记｜第 34 集 · 核心接歌方法：Drop 接 Intro",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=34",
+      "exists": true,
+      "bytes": 1014,
+      "sha256": "bbdeebe6592d67496ee72ed20e096fd1c8ba2ba282a8938f16368bc0fad8d93e",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 34 集 · 4:20 · Drop 接 Intro：不等整首放完，在 Drop 后接下一首 Intro。"
+    },
+    {
+      "id": "bilibili-dj-35",
+      "title": "DJ 知识笔记｜第 35 集 · 核心接歌方法：Build-up 接 Build-up",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=35",
+      "exists": true,
+      "bytes": 1906,
+      "sha256": "9b4e9e9f5c4401da021ea4f25850bff7d786655c644b1b83109306448a5701c7",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 35 集 · 3:52 · Build-up 接 Build-up：两首 Build-up 相接，在 Pre-drop 处完成切换。"
+    },
+    {
+      "id": "bilibili-dj-36",
+      "title": "DJ 知识笔记｜第 36 集 · 核心接歌方法：Build-up 切 Drop",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=36",
+      "exists": true,
+      "bytes": 900,
+      "sha256": "d708720de95f52d42d9b03eff1ecaa8f8503862e316e2a58a21f0bc6c347ee80",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 36 集 · 2:10 · Build-up 切 Drop：更直接粗暴，在合适时机把后手 Drop 切入。"
+    },
+    {
+      "id": "bilibili-dj-37",
+      "title": "DJ 知识笔记｜第 37 集 · 核心接歌方法：Post-drop 接 Build-up",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=37",
+      "exists": true,
+      "bytes": 1526,
+      "sha256": "ecb7eee45a3ff2008911b083f8e1e5813c58e19752f10bb3747154b2777ed5ea",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 37 集 · 3:41 · Post-Drop 接 Build-up：Drop 结束后立刻接下一首 Build-up，制造连续高潮。"
+    },
+    {
+      "id": "bilibili-dj-38",
+      "title": "DJ 知识笔记｜第 38 集 · 核心接歌方法：Downlifter 万能接歌",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=38",
+      "exists": true,
+      "bytes": 1342,
+      "sha256": "5cb3dd67df2779081de0d2583cbc79dac675ac7715047f19bdf7b555629fa232",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 38 集 · 3:41 · Downlifter 万能接歌：用能量下坠音效接 Breakdown、不同 BPM 或另一段 Downlifter。"
+    },
+    {
+      "id": "bilibili-dj-39",
+      "title": "DJ 知识笔记｜第 39 集 · 核心接歌方法：Drop 切 Drop",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=39",
+      "exists": true,
+      "bytes": 1354,
+      "sha256": "62a113f862fd7b6b769801389c0a78b265b85ce0e1e8b32232bb619208360609",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 39 集 · 3:22 · Drop 切 Drop：保持高能量，但后手 Drop 的能量要略低于前手。"
+    },
+    {
+      "id": "bilibili-dj-40",
+      "title": "DJ 知识笔记｜第 40 集 · 接下来做什么",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=40",
+      "exists": true,
+      "bytes": 715,
+      "sha256": "e91fa28eb7c75d370b3f3e10c4a7f00ab1a9d89f1042f06e0db34d28c710c0b7",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 40 集 · 1:18 · 结课建议：扩充并熟悉曲库、多在小场合演出、积累听众反馈。"
+    },
+    {
+      "id": "bilibili-dj-41",
+      "title": "DJ 知识笔记｜第 41 集 · 进阶篇、高级篇、排歌篇在这里！",
+      "type": "video_knowledge_note",
+      "author": "电音大X",
+      "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/?p=41",
+      "exists": true,
+      "bytes": 624,
+      "sha256": "fb68218a5b939f9871e72e1318b41e6d3414a2bc195cadd09ed5f99379d36ab5",
+      "licenseNote": "视频版权归原作者；本文是根据视频内容整理的知识笔记，不是逐字稿。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/。",
+      "note": "第 41 集 · 0:13 · 进阶篇、高级篇、排歌篇的入口说明。"
     }
   ],
   "files": {
     "chunks.jsonl": {
-      "bytes": 2181256,
-      "sha256": "7653b9fd186cf897ab51ea53e85148157d3758f31ec2c4ff01054ae078b27265"
+      "bytes": 2406081,
+      "sha256": "75fb922869f120e1558fc3f46c6a50d41c11c6ffa8ccf9dd3e2614faf4e12040"
     },
     "curated.json": {
-      "bytes": 56738,
-      "sha256": "4977a9beefc52dbb1b636bc65faa474a895e235a9e4d11dd64f3723cbb0bc2a0"
+      "bytes": 83761,
+      "sha256": "bebeb558e0622685f34dc4b5b05ea1a50f809205c52936030c45e8a528f3dd2d"
     },
     "docs.json": {
-      "bytes": 190279,
-      "sha256": "60608dc2852fae735d98b97809d04193db1a51b191471aff558dddf60f821145"
+      "bytes": 231665,
+      "sha256": "2e89cee782564879ca666c127a11c31c4489818442123806480fb9582ea47e26"
     },
     "entries.csv": {
       "bytes": 499455,
@@ -187,35 +720,35 @@
       "sha256": "50746f791aa5c34273d8142342d5fd2c1ac1a1fe551a3721e30ac3fdb88a50db"
     },
     "index.meta.json": {
-      "bytes": 404384,
-      "sha256": "2525757df58bcd1928e7a1dd3dfb99a10ef4d905e6a051a86c570d5b033ecef9"
+      "bytes": 430551,
+      "sha256": "d10db877e0bc5b9ab2f2d977ed49ee49e76257f8522fd1691bb26c1db44cafce"
     },
     "kb.json": {
       "bytes": 3430039,
-      "sha256": "d0e3fbffa133e04b9098efeb212209ff512c5f33c0ca40eb4e596ac224f905ed"
+      "sha256": "9e040ebdce2709d3898464c1716513c5eb5ac4196876aa5ae7ce4b444778102d"
     },
     "sources.json": {
-      "bytes": 4160,
-      "sha256": "80b645e6ab9eb19c5ea69b8896f83bbe1e93058be7178a0bdb6cdf0bfc9b3cb6"
+      "bytes": 34590,
+      "sha256": "10239a15b526f16fe30360ee300b5d49979d2749ff6dc78437630444e9baefce"
     },
     "unresolved.json": {
       "bytes": 35064,
       "sha256": "02d7643e7e9b0e424987172d91a1c4dacc53f0e25ed0c9a48192e0633bf77d8d"
     },
     "manifest.json": {
-      "bytes": 7403,
-      "sha256": "414d7bed4b67fb731afa45e0b71059c14913f2336dd026df9443356c62196d1c"
+      "bytes": 39599,
+      "sha256": "f34012cff7de747965b0dba47e4f68da7f8190f7e56a0f4f9fdd31dec6e3d6d8"
     },
     "web.js": {
-      "bytes": 2350178,
-      "sha256": "349f4ea8f27a037f7e5d0ed28a783bcfef4a1fa000750a9e281878f216e50235"
+      "bytes": 2638504,
+      "sha256": "e98d70abaa8f2dd5a946108c7f26e74084bc3b48fc19742bff560b30f7852b0f"
     }
   },
   "counts": {
     "entries": 1376,
     "families": 30,
-    "docs": 158,
-    "chunks": 1541,
-    "transcriptChunks": 0
+    "docs": 187,
+    "chunks": 1628,
+    "transcriptChunks": 58
   }
 }

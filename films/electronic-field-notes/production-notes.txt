@@ -1,0 +1,54 @@
+电音档案 / 从听懂到做出来
+48秒 · 1080×1920 · 30fps · 120 BPM · 原创配乐，无旁白
+
+选用与改编
+1. lemo-opuscar/styles/dark-keynote/STYLE.md：取暗色舞台、信息聚焦、UI展开转场；不照搬演示故事，不复制样片。
+2. lemo-opuscar/styles/swiss-motion/STYLE.md：取栅格、大字与小技术标签的比例、节拍吸附、精确裁切；改为本站黑底与琥珀黄。
+3. opus-video-prompts/prompts/16-high-end-product-video.md：取每镜头一个信息、遮罩文字、真实产品素材、节拍驱动、确定性seek(t)以及响度和关键帧自检。删除虚构视频墙和数据战报。
+   作者 zero (@twoclipping)，来源 https://youmind.com/video-prompts/high-end-product-video-prompt-11292
+4. opus-video-prompts/prompts/13-remotion-app-promo-2.md：仅借鉴紧凑产品宣传片节奏与大字切换，不要求Remotion。
+   作者 Danny Stuart，来源 https://dannystuart.substack.com/p/claude-code-opus-remotion-agentic-promo-video
+库地址 https://github.com/lemomo-ai/lemo-opuscar 与 https://github.com/joeseesun/opus-video-prompts
+
+本片创作提示词
+为中文电子音乐学习网站「电音档案 / FIELD NOTES」制作一支48秒抖音竖屏产品宣传片。主张「听得懂，才做得出来」。观众是喜欢电音但不熟悉风格、制作与DJ的入门者。以声音为主角：一个节拍经过听、查、练、做，最后进入自动接歌台。不做软件功能清单幻灯片。
+黑色#070809、纸白#f4f0e7、唯一主强调色琥珀黄#ffb000；只有来自真实网站的截图保留其原有类别颜色。大标题、干净网格、克制光照、锋利的遮罩、信息充足的留白。中文必须由代码排版，不能生成乱码。一个镜头只讲一件事。所有主体在手机安全区内，右侧预留交互栏，底部预留抖音文案区域。
+0-4秒：第一拍可见，只会跟着节奏点头？
+4-8秒：电音档案，听得懂，才做得出来
+8-14秒：听，92个风格，速度×律动矩阵，从声音开始
+14-20秒：查，1376条资料，搜索Sidechain，知识彼此连接
+20-26秒：练，听辨与BPM估速，刻度从不确定到确定
+26-32秒：做，22节制作课，步进音序器让想法出声
+32-38秒：DJ，两条音轨的乐句与drop对齐，36秒落下双drop
+38-42秒：真实自动接歌台画面，注明本地引擎与离线预渲染
+42-48秒：电音档案，从「听」进来，把喜欢做出来
+配乐为新写的120BPM minimal melodic house，无版权成曲，无流行歌采样。3.5-4秒与35.5-36秒近静音；36秒到达高潮；46秒开始结尾。无旁白，让大字与声音承担叙事。
+每帧仅由t决定。不要光污染、粒子爆炸、RGB分裂、镜头抖动、廉价光晕、频闪、弹跳。输出H.264/AAC MP4，目标-14LUFS，真峰不高于-1.2dBTP。先检查不少于20帧，再完整渲染，最终验证解码、时长和响度。
+
+结构取舍
+候选A：四入口清单——信息清楚但容易像PPT。
+候选B：一个节拍从感性到创作——选用，音画有共同主角，结尾double drop呼应开头。
+候选C：纯DJ炫技——偏离整个电音档案，不选。
+借鉴瑞士海报的比例与精确，科技发布片的聚焦；不借用其标识、配乐或具体构图。
+
+可核实事实
+92：data/listen.js，KB_LISTEN.entries共有92条。
+1376：data/kb.json，meta.stats.entries。
+22：data/course.js，EM_COURSE.chapters共8章、22课。
+自动接歌：app.js renderDjAutomix 和 dj-engine，实际为本机预渲染而非Rekordbox实时控制。
+音序器、估速与对齐动画是功能示意，不冒充真实实时录屏；实机画面另行标记。
+
+封面
+cover-4x3.jpg：1600×1200，横屏4:3，黑底、纸白、琥珀黄，主文案「电音档案 / 听得懂，才做得出来」。
+cover-3x4.jpg：1080×1440，竖屏3:4，同一套四条路与自动接歌信息，适合抖音、小红书、视频号。
+两张均由index.html的renderCover()绘制，render.mjs covers导出；不新增素材、字体或联网依赖。
+
+交付与重建
+index.html：动画源，可在浏览器打开预览。
+render.mjs：浏览器帧渲染、素材截图、封面导出与复核工具。
+music.py：原创配乐生成器。
+finish.py：双遍响度处理、封装与验证。
+build.bat：按顺序重建；需本机Chrome、Node及项目已有Python环境。
+timeline.json：画面与音乐共用时间表。
+distribution-copy.md：标题、作品描述与发布建议。
+CREDITS.txt：来源与使用说明。

@@ -1,0 +1,462 @@
+{
+  "id": "dj-course",
+  "title": "DJ 修炼手册 · 基础篇",
+  "subtitle": "38 节正课 · 41 集 · 从准备工作到第一次混音接歌",
+  "author": "电音大X",
+  "bvid": "BV1DK4y1g7QM",
+  "url": "https://www.bilibili.com/video/BV1DK4y1g7QM/",
+  "licenseNote": "视频版权归原作者。本站保存的是根据视频内容整理的知识笔记，不是逐字稿，也不替代原视频。",
+  "asrNote": "本站把 41 集视频整理为第三人称知识笔记：删除自我介绍、寒暄、训练包推广与演示歌词，并按行业通用术语校对；不是逐字稿，也不替代原视频。原始 ASR 与 ASR 整理稿归档在 sources/dj-course/asr/ 与 sources/dj-course/txt/。",
+  "builtAt": "2026-10-25",
+  "episodes": [
+    {
+      "page": 1,
+      "cid": 348653451,
+      "title": "0.开始前必看！",
+      "duration": 179,
+      "chapter": "start",
+      "summary": "课程介绍：为什么做这套教程，以及基础篇、进阶篇、高级篇各自学什么。"
+    },
+    {
+      "page": 2,
+      "cid": 348654065,
+      "title": "1.1准备工作-你了解电子舞曲吗",
+      "duration": 59,
+      "chapter": "start",
+      "summary": "先把概念对齐：EDM、电音、DJ 打碟之间的关系，以及为什么先学电子舞曲。"
+    },
+    {
+      "page": 3,
+      "cid": 348654151,
+      "title": "1.2准备工作-DJ到底在干什么",
+      "duration": 80,
+      "chapter": "start",
+      "summary": "DJ 在台上到底做什么：混音接歌与现场表演两条主线。"
+    },
+    {
+      "page": 4,
+      "cid": 349653496,
+      "title": "1.3准备工作-三分钟看懂DJ打碟所有装备",
+      "duration": 280,
+      "chapter": "start",
+      "summary": "三件必备硬件：打碟机（DDJ / XDJ / CDJ）、监听耳机、音箱，以及入门型号怎么选。"
+    },
+    {
+      "page": 5,
+      "cid": 348655181,
+      "title": "1.4准备工作-自学DJ装备-软件",
+      "duration": 97,
+      "chapter": "start",
+      "summary": "DJ 软件：Rekordbox 的定位、下载与硬件解锁，以及与其他软件的关系。"
+    },
+    {
+      "page": 6,
+      "cid": 348655479,
+      "title": "1.5准备工作-只有鼠标键盘也能打碟！",
+      "duration": 414,
+      "chapter": "start",
+      "summary": "没有碟机也能练：用鼠标键盘控制 Rekordbox 的快捷键设置。"
+    },
+    {
+      "page": 7,
+      "cid": 348656797,
+      "title": "1.6准备工作-拓展训练包使用方法",
+      "duration": 115,
+      "chapter": "start",
+      "summary": "拓展训练包包含什么，以及“课程曲目 → 扩展练习 → 综合歌单”的三步用法。"
+    },
+    {
+      "page": 8,
+      "cid": 348657186,
+      "title": "2.1Rekordbox操作-软件界面概览",
+      "duration": 165,
+      "chapter": "rekordbox",
+      "summary": "Rekordbox 界面：Performance / Export 两种模式、Deck 布局、浏览器与播放列表。"
+    },
+    {
+      "page": 9,
+      "cid": 348657376,
+      "title": "2.2Rekordbox操作-软件设置",
+      "duration": 103,
+      "chapter": "rekordbox",
+      "summary": "Rekordbox 设置：语言、波形颜色、调性显示为 Camelot Wheel、BPM 分析范围。"
+    },
+    {
+      "page": 10,
+      "cid": 348657475,
+      "title": "2.3Rekordbox操作-曲目导入与分析",
+      "duration": 125,
+      "chapter": "rekordbox",
+      "summary": "曲目导入、自动分析、列排序，以及文件移动后丢失曲目的重新定位。"
+    },
+    {
+      "page": 11,
+      "cid": 348657591,
+      "title": "3.1DJ乐理-BPM速度",
+      "duration": 193,
+      "chapter": "theory",
+      "summary": "BPM 是什么、怎么数，以及 House / Techno / Dubstep 的大致速度区间。"
+    },
+    {
+      "page": 12,
+      "cid": 348657977,
+      "title": "3.2DJ乐理-拍、小节、乐句、数拍",
+      "duration": 208,
+      "chapter": "theory",
+      "summary": "拍、小节、乐句与数拍：4/4 拍、8 小节乐句，以及波形上的小节线。"
+    },
+    {
+      "page": 13,
+      "cid": 348658590,
+      "title": "3.3DJ乐理-舞曲结构与能量层级",
+      "duration": 631,
+      "chapter": "theory",
+      "summary": "EDM 八段结构：Intro、Breakdown、Build-up、Drop、Outro 与能量层级。"
+    },
+    {
+      "page": 14,
+      "cid": 348659998,
+      "title": "3.4DJ乐理-Rekordbox波形详解",
+      "duration": 256,
+      "chapter": "theory",
+      "summary": "Rekordbox 波形详解：段落形状、低频/中频/高频的红绿蓝配色。"
+    },
+    {
+      "page": 15,
+      "cid": 348660470,
+      "title": "3.5DJ乐理-T字法Mix In Key调性混音",
+      "duration": 303,
+      "chapter": "theory",
+      "summary": "Mix In Key：Camelot Wheel 与 T 字法，找同调、相邻调与平行大小调。"
+    },
+    {
+      "page": 16,
+      "cid": 348661256,
+      "title": "4.1打碟机操作-第一次触摸你的打碟机！",
+      "duration": 394,
+      "chapter": "deck",
+      "summary": "打碟机总览：Mixer + Deck 的结构、Load / Play / CUE / Tempo / Jog wheel 与 Shift 第二功能。"
+    },
+    {
+      "page": 17,
+      "cid": 348661924,
+      "title": "4.2打碟机操作-分辨三种CUE点功能",
+      "duration": 213,
+      "chapter": "deck",
+      "summary": "三种 CUE：临时 CUE、Memory CUE、Hot CUE 的区别与设置。"
+    },
+    {
+      "page": 18,
+      "cid": 348662438,
+      "title": "4.3打碟机操作-设置CUE点万能套路",
+      "duration": 977,
+      "chapter": "deck",
+      "summary": "一分钟 CUE 点万能套路：8 个 Hot CUE 的颜色、布局与八步设置流程。"
+    },
+    {
+      "page": 19,
+      "cid": 348665693,
+      "title": "4.4打碟机操作-Trim增益",
+      "duration": 146,
+      "chapter": "deck",
+      "summary": "Trim 增益：防止削波、统一不同曲目的音量上限。"
+    },
+    {
+      "page": 20,
+      "cid": 348665948,
+      "title": "4.5打碟机操作-EQ均衡器",
+      "duration": 111,
+      "chapter": "deck",
+      "summary": "EQ 三段：高频、中频、低频分别控制什么，以及在接歌中的三大作用。"
+    },
+    {
+      "page": 21,
+      "cid": 348666279,
+      "title": "4.6打碟机操作-EQ的两种设置方法",
+      "duration": 133,
+      "chapter": "deck",
+      "summary": "EQ 与 Isolator 两种模式：-26 dB 衰减与完全消除，分别适合什么曲风。"
+    },
+    {
+      "page": 22,
+      "cid": 348666716,
+      "title": "4.7打碟机操作-Filter滤波器",
+      "duration": 76,
+      "chapter": "deck",
+      "summary": "Filter 滤波器：LPF 低通与 HPF 高通，怎么用来过渡和做效果。"
+    },
+    {
+      "page": 23,
+      "cid": 348666902,
+      "title": "4.8打碟机操作-监听耳机使用方法",
+      "duration": 160,
+      "chapter": "deck",
+      "summary": "监听耳机：CUE 监听、Master 监听、Mix 比例与单耳监听的习惯。"
+    },
+    {
+      "page": 24,
+      "cid": 348667161,
+      "title": "5.1基础对拍（软件辅助）",
+      "duration": 441,
+      "chapter": "beatmatch",
+      "summary": "基础对拍三步：调 BPM、按小节切入、用 Jog wheel 把 Kick 对齐。"
+    },
+    {
+      "page": 25,
+      "cid": 348668473,
+      "title": "5.2进阶对拍（耳对）",
+      "duration": 195,
+      "chapter": "beatmatch",
+      "summary": "进阶对拍：只看耳朵不看波形，判断快慢并往复微调。"
+    },
+    {
+      "page": 26,
+      "cid": 348669001,
+      "title": "5.3自动对拍",
+      "duration": 127,
+      "chapter": "beatmatch",
+      "summary": "Beat Sync 自动对拍：三步操作、适用场景与依赖它的代价。"
+    },
+    {
+      "page": 27,
+      "cid": 348669355,
+      "title": "6.1核心混音手法-音量推子法",
+      "duration": 273,
+      "chapter": "mixing",
+      "summary": "音量推子三法：三分慢推、底部慢推、快拉。"
+    },
+    {
+      "page": 28,
+      "cid": 348669825,
+      "title": "6.2核心混音手法-EQ均衡器法",
+      "duration": 444,
+      "chapter": "mixing",
+      "summary": "EQ 混音四步：低频只留一首、中高频让位、按乐句切换、推子收尾。"
+    },
+    {
+      "page": 29,
+      "cid": 348671061,
+      "title": "6.3核心混音手法-Filter滤波器法",
+      "duration": 241,
+      "chapter": "mixing",
+      "summary": "Filter 混音四步：先用 LPF 藏住后手，再右旋接入，最后按 EQ 法收尾。"
+    },
+    {
+      "page": 30,
+      "cid": 348671497,
+      "title": "7.你的第一次混音！",
+      "duration": 229,
+      "chapter": "mixing",
+      "summary": "第一次完整混音：调 BPM、播放、监听对拍、融合推子/EQ/Filter 接歌。"
+    },
+    {
+      "page": 31,
+      "cid": 348672092,
+      "title": "8.1核心接歌方法-黄金法则",
+      "duration": 307,
+      "chapter": "transitions",
+      "summary": "接歌黄金法则：以乐句为单位，前后各留 1–2 个乐句做对拍、混音与撤出。"
+    },
+    {
+      "page": 32,
+      "cid": 348672846,
+      "title": "8.2核心接歌方法-End切Start",
+      "duration": 212,
+      "chapter": "transitions",
+      "summary": "End 切 Start：前首最后一拍直接切后首第一拍，靠 CUE 点与时机保证不突兀。"
+    },
+    {
+      "page": 33,
+      "cid": 348673229,
+      "title": "8.3核心接歌方法-Outro接Intro",
+      "duration": 242,
+      "chapter": "transitions",
+      "summary": "Outro 接 Intro：利用加长版的长尾奏与长前奏，最安全的接歌方式。"
+    },
+    {
+      "page": 34,
+      "cid": 348673899,
+      "title": "8.4核心接歌方法-Drop接Intro",
+      "duration": 260,
+      "chapter": "transitions",
+      "summary": "Drop 接 Intro：不等整首放完，在 Drop 后接下一首 Intro。"
+    },
+    {
+      "page": 35,
+      "cid": 348674714,
+      "title": "8.5核心接歌方法-Build-up接Build-up",
+      "duration": 232,
+      "chapter": "transitions",
+      "summary": "Build-up 接 Build-up：两首 Build-up 相接，在 Pre-drop 处完成切换。"
+    },
+    {
+      "page": 36,
+      "cid": 348675448,
+      "title": "8.6核心接歌方法-Build-up切Drop",
+      "duration": 130,
+      "chapter": "transitions",
+      "summary": "Build-up 切 Drop：更直接粗暴，在合适时机把后手 Drop 切入。"
+    },
+    {
+      "page": 37,
+      "cid": 348675853,
+      "title": "8.7核心接歌方法-Post-drop接Build-up",
+      "duration": 221,
+      "chapter": "transitions",
+      "summary": "Post-Drop 接 Build-up：Drop 结束后立刻接下一首 Build-up，制造连续高潮。"
+    },
+    {
+      "page": 38,
+      "cid": 348676257,
+      "title": "8.8核心接歌方法-Downlifter万能接歌",
+      "duration": 221,
+      "chapter": "transitions",
+      "summary": "Downlifter 万能接歌：用能量下坠音效接 Breakdown、不同 BPM 或另一段 Downlifter。"
+    },
+    {
+      "page": 39,
+      "cid": 348677014,
+      "title": "8.9核心接歌方法-Drop切Drop",
+      "duration": 202,
+      "chapter": "transitions",
+      "summary": "Drop 切 Drop：保持高能量，但后手 Drop 的能量要略低于前手。"
+    },
+    {
+      "page": 40,
+      "cid": 348677332,
+      "title": "9.接下来做什么",
+      "duration": 78,
+      "chapter": "next",
+      "summary": "结课建议：扩充并熟悉曲库、多在小场合演出、积累听众反馈。"
+    },
+    {
+      "page": 41,
+      "cid": 496806805,
+      "title": "进阶篇、高级篇、排歌篇在这里！",
+      "duration": 13,
+      "chapter": "next",
+      "summary": "进阶篇、高级篇、排歌篇的入口说明。"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "start",
+      "index": "00",
+      "title": "开始之前",
+      "subtitle": "课程说明与准备工作",
+      "from": 1,
+      "to": 7,
+      "keywords": [
+        "DJ",
+        "装备",
+        "Rekordbox"
+      ],
+      "guideId": "guide:dj-00"
+    },
+    {
+      "id": "rekordbox",
+      "index": "01",
+      "title": "Rekordbox 曲库",
+      "subtitle": "界面、设置、导入与分析",
+      "from": 8,
+      "to": 10,
+      "keywords": [
+        "Rekordbox",
+        "曲库",
+        "BPM"
+      ],
+      "guideId": "guide:dj-01"
+    },
+    {
+      "id": "theory",
+      "index": "02",
+      "title": "DJ 乐理",
+      "subtitle": "BPM、拍、小节、乐句、结构与调性",
+      "from": 11,
+      "to": 15,
+      "keywords": [
+        "BPM",
+        "乐句",
+        "结构",
+        "Camelot Wheel"
+      ],
+      "guideId": "guide:dj-02"
+    },
+    {
+      "id": "deck",
+      "index": "03",
+      "title": "碟机与混音台",
+      "subtitle": "按键、CUE、Trim、EQ、Filter、监听",
+      "from": 16,
+      "to": 23,
+      "keywords": [
+        "CUE",
+        "Hot CUE",
+        "EQ",
+        "Filter",
+        "监听耳机"
+      ],
+      "guideId": "guide:dj-03"
+    },
+    {
+      "id": "beatmatch",
+      "index": "04",
+      "title": "对拍",
+      "subtitle": "软件辅助、听觉判断与自动对拍",
+      "from": 24,
+      "to": 26,
+      "keywords": [
+        "对拍",
+        "Beat Sync",
+        "Jog wheel"
+      ],
+      "guideId": "guide:dj-04"
+    },
+    {
+      "id": "mixing",
+      "index": "05",
+      "title": "核心混音手法",
+      "subtitle": "推子、EQ、Filter 与第一次混音",
+      "from": 27,
+      "to": 30,
+      "keywords": [
+        "音量推子",
+        "EQ",
+        "Filter",
+        "混音"
+      ],
+      "guideId": "guide:dj-05"
+    },
+    {
+      "id": "transitions",
+      "index": "06",
+      "title": "接歌方法",
+      "subtitle": "黄金法则与 8 种接歌场景",
+      "from": 31,
+      "to": 39,
+      "keywords": [
+        "接歌",
+        "Intro",
+        "Outro",
+        "Drop",
+        "Build-up",
+        "Downlifter"
+      ],
+      "guideId": "guide:dj-06"
+    },
+    {
+      "id": "next",
+      "index": "07",
+      "title": "结课与下一步",
+      "subtitle": "扩充曲库、积累现场与进阶路径",
+      "from": 40,
+      "to": 41,
+      "keywords": [
+        "曲库",
+        "现场",
+        "进阶"
+      ],
+      "guideId": "guide:dj-07"
+    }
+  ]
+}

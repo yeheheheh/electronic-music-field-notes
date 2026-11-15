@@ -18,6 +18,7 @@
       setLabGroups: () => {},
       playStructure: () => false,
       playMetronome: () => false,
+      playPracticeMetronome: () => false,
       structureSections: [],
       startStudio: () => false,
       updateStudio: () => {},
@@ -703,11 +704,12 @@
 
   function metronome(session, time, accent) {
     const ctx = session.ctx;
+    const level = accent === 'phrase' ? 2 : accent === 'bar' || accent === true ? 1 : 0;
     const osc = ctx.createOscillator();
     osc.type = 'sine';
-    osc.frequency.value = accent ? 1480 : 980;
+    osc.frequency.value = level === 2 ? 1760 : level === 1 ? 1480 : 980;
     const gain = ctx.createGain();
-    gain.gain.setValueAtTime(accent ? 0.12 : 0.07, time);
+    gain.gain.setValueAtTime(level === 2 ? 0.14 : level === 1 ? 0.1 : 0.07, time);
     gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.045);
     osc.connect(gain);
     gain.connect(session.gain);
@@ -1272,6 +1274,27 @@
       demoId: 'metronome',
       pattern: ({ session, time, step }) => {
         if (step % 4 === 0) metronome(session, time, step === 0);
+      },
+    });
+    return true;
+  }
+
+  function playPracticeMetronome(bpm = 124, bars = 64) {
+    ensure();
+    const safeBpm = clamp(Number(bpm) || 124, 80, 180);
+    const safeBars = clamp(Number(bars) || 64, 8, 128);
+    startSession({
+      bpm: safeBpm,
+      bars: safeBars,
+      stepsPerBar: 16,
+      loop: false,
+      label: `${safeBpm} BPM · 乐句训练`,
+      demoId: 'practice-metronome',
+      pattern: ({ session, time, step, bar }) => {
+        if (step % 4 !== 0) return;
+        const isBarStart = step === 0;
+        const isPhraseStart = isBarStart && bar % 8 === 0;
+        metronome(session, time, isPhraseStart ? 'phrase' : isBarStart ? 'bar' : false);
       },
     });
     return true;
@@ -1906,6 +1929,7 @@
     previewStudio,
     playStructure,
     playMetronome,
+    playPracticeMetronome,
     get isMuted() {
       return engine.muted;
     },

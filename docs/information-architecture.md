@@ -21,6 +21,9 @@
 ├─ 知识库检索 / 常查词 / 大族信号条
 └─ 练习与实验室两个动手入口
 
+新手起步 START
+└─ #/start：三条路径、7 天 21 任务、进度面板与 FAQ
+
 制作课 COURSE
 ├─ 课程地图 #/learn
 │  ├─ 页头：总进度、阶段数、知识点数、继续下一课
@@ -42,10 +45,22 @@
    ├─ 侧栏：学习进度、前置课、阶段大纲
    └─ 固定底部操作条：上一课 / 标记完成 / 下一课
 
+DJ 修炼手册 DJ COURSE
+├─ 过渡检查 #/dj：BPM / 律动 / 低频三条规则、BPM 邻接表、现场判定
+├─ 自动接歌台 #/dj/automix：选风格 → 排 set → 五种过渡 → 本地引擎渲染；线上回退 demo
+│  └─ Rekordbox 来源：读 RB7 库、排 set、写播放列表 / 导出 XML
+├─ 现场手册 #/dj/field-guide：出门 / 到场 / 上台三章清单，可打印
+└─ #/dj/course：41 集目录 + 当前集知识笔记阅读器
+   ├─ 8 章 tracklist（开始 / Rekordbox / 乐理 / 碟机 / 对拍 / 混音 / 接歌 / 结课）
+   ├─ 选集切换与上一集 / 下一集
+   ├─ 第三人称知识笔记（非逐字稿）、原片链接、知识库全文入口
+   ├─ 8 篇章节导读 #/doc/guide:dj-00…07（含关键概念、逐集路线、练习与误区）
+   └─ 章节关键词 → 全库检索
+
 知识库 LIBRARY
 ├─ 知识库主页 #/library
 │  ├─ 全库检索入口
-│  ├─ 六个工具入口（检索 / 图谱 / 术语 / 历史 / 现场 / 制作指南）
+│  ├─ 七个工具入口（检索 / 图谱 / 术语 / 历史 / 现场 / 制作指南 / DJ 修炼手册）
 │  ├─ 大族概览
 │  └─ 课程 ↔ 知识库关联说明
 ├─ 全库检索 #/search?q=
@@ -245,7 +260,7 @@ daw-and-tracks → signal-chain-basics → drum-programming
 
 ## 4. 知识库模块
 
-- 内容：1376 个分类条目、158 个知识文档、1541 个检索分块、24 个正式大族 + 5 个补充收纳桶。
+- 内容：1376 个分类条目、187 个知识文档、1628 个检索分块、24 个正式大族 + 5 个补充收纳桶；其中 41 个分块来自《DJ 修炼手册 · 基础篇》的逐集知识笔记，另有 8 篇章节导读、18 个 DJ 术语与 1 篇新手 FAQ。
 - 检索：浏览器内同源 BM25（中文单字/双字切分，字段加权，大族/类型/BPM 过滤）。
 - 入口：
   - 搜索框（全库检索）
@@ -342,7 +357,10 @@ daw-and-tracks → signal-chain-basics → drum-programming
 
 | 层 | 文件/机制 |
 | --- | --- |
-| 课程内容 | `data/course.js`（8 阶段 22 课，手工维护，含 outcome/deliverable/prerequisites/kbLinks） |
+| 制作课程内容 | `data/course.js`（8 阶段 22 课，手工维护，含 outcome/deliverable/prerequisites/kbLinks） |
+| DJ 课程元数据 | `data/dj-course.js`（41 集目录、章节、时长与 B 站链接；正文来自知识库笔记分块） |
+| DJ 课程原始资料 | `sources/dj-course/`（ASR 原始 JSON、ASR 整理稿、知识笔记、集数清单、章节导读源文件） |
+| 新手与现场内容 | `data/start.js`（三条路径、7 天计划、现场清单）；页面样式在 `styles-start.css` |
 | 知识库产物 | `data/web.js`（chunks + docs + manifest） |
 | 条目/文档 | `data/kb.js`、`data/curated.js` |
 | 音频 | `audio.js`（Web Audio 实时合成） |

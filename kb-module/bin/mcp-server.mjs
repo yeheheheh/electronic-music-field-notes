@@ -21,7 +21,7 @@ const TOOLS = [
         family: { type: 'string', description: '按大族过滤：大族名或 ID，如 House、Trance、f-165。' },
         type: {
           type: 'string',
-          enum: ['entry', 'family', 'guide', 'style', 'instrument', 'glossary', 'timeline', 'live', 'source'],
+          enum: ['entry', 'family', 'guide', 'style', 'instrument', 'glossary', 'timeline', 'live', 'source', 'transcript'],
           description: '按文档类型过滤。',
         },
         bpm_min: { type: 'number', description: '最低 BPM；仅对原文明确标注 BPM 的条目生效。' },
@@ -43,7 +43,7 @@ const TOOLS = [
         family: { type: 'string' },
         type: {
           type: 'string',
-          enum: ['entry', 'family', 'guide', 'style', 'instrument', 'glossary', 'timeline', 'live', 'source'],
+          enum: ['entry', 'family', 'guide', 'style', 'instrument', 'glossary', 'timeline', 'live', 'source', 'transcript'],
         },
         bpm_min: { type: 'number' },
         bpm_max: { type: 'number' },
@@ -54,7 +54,7 @@ const TOOLS = [
   },
   {
     name: 'kb_get',
-    description: '按 ID 读取一个风格条目或精编文档的完整内容、关系、例曲与来源。',
+    description: '按 ID 读取一个风格条目、精编文档或课程知识笔记的完整内容、关系、例曲与来源。',
     inputSchema: {
       type: 'object',
       properties: {

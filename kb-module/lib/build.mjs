@@ -226,7 +226,7 @@ function curatedDocs(curated, sources) {
       bpm: extra.bpm || null,
       aliases: extra.aliases || [],
       examples: extra.examples || [],
-      source: { id: 'curated-notes', title: '电音档案精编内容' },
+      source: extra.source || { id: 'curated-notes', title: '电音档案精编内容' },
       metadata: { kind: 'curated', ...(extra.metadata || {}) },
     });
   };
@@ -465,12 +465,56 @@ function curatedDocs(curated, sources) {
     );
   }
 
+  for (const guide of curated.djGuides || []) {
+    add(
+      guide.guideId || `guide:dj-${guide.index}`,
+      'guide',
+      guide.title,
+      joinParts(guide.summary, guide.body),
+      {
+        aliases: guide.keywords || [],
+        metadata: {
+          kind: 'dj-guide',
+          courseId: 'dj-course',
+          chapterId: guide.id,
+          guideIndex: guide.index,
+          episodeIds: guide.episodes || [],
+          keywords: guide.keywords || [],
+        },
+        source: {
+          id: 'bilibili-dj-01',
+          title: 'DJ 修炼手册 · 基础篇',
+          url: 'https://www.bilibili.com/video/BV1DK4y1g7QM/',
+        },
+      }
+    );
+  }
+
+  if (curated.djFaq?.length) {
+    add(
+      'guide:dj-faq',
+      'guide',
+      'DJ 新手 FAQ：设备、练习、上台与听力',
+      joinParts(...curated.djFaq.map((item) => `## ${item.q}
+${item.a}`)),
+      {
+        aliases: ['DJ FAQ', '新手问题', '设备选择', '对拍', '上台', 'U 盘'],
+        metadata: { kind: 'dj-faq', courseId: 'dj-course' },
+        source: {
+          id: 'bilibili-dj-01',
+          title: 'DJ 修炼手册 · 基础篇',
+          url: 'https://www.bilibili.com/video/BV1DK4y1g7QM/',
+        },
+      }
+    );
+  }
+
   add(
     'guide:corrections',
     'guide',
     '转写校正：自动语音识别常见误差',
     joinParts(
-      '两期节目使用自动转写，术语和人名存在明显误差。精编页按分类库与上下文校正；图谱条目以原文为准。',
+      '部分视频使用自动转写，术语和人名存在明显误差。精编页按分类库与上下文校正；图谱条目以原文为准。',
       ...(curated.corrections || []).map((item) => `- ${item.from} → ${item.to}（${item.note}）`)
     )
   );
@@ -600,8 +644,10 @@ function docChunks(docs, options) {
 function transcriptChunks(sources, options) {
   if (!options.includeTranscripts) return [];
   const chunks = [];
+  const transcriptTypes = new Set(['video_transcript', 'video_transcript_local_asr', 'video_transcript_asr', 'video_knowledge_note']);
   for (const source of sources) {
-    if (!source.exists || !/\.(json|txt)$/i.test(source.path)) continue;
+    if (!transcriptTypes.has(source.type)) continue;
+    if (!source.exists || !/\.(json|txt|md)$/i.test(source.path)) continue;
     const raw = readText(source.path);
     let text = raw;
     if (/\.json$/i.test(source.path)) {
@@ -646,7 +692,13 @@ function transcriptChunks(sources, options) {
         aliases: [],
         examples: [],
         source: { id: source.id, title: source.title, url: source.url || null },
-        metadata: { author: source.author, licenseNote: source.licenseNote },
+        metadata: {
+          author: source.author,
+          licenseNote: source.licenseNote,
+          episode: source.episode ?? null,
+          courseId: source.courseId ?? null,
+          duration: source.duration ?? null,
+        },
       });
     });
   }

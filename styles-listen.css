@@ -2,52 +2,12 @@
    LISTEN LAYER — 听感层
    加在 styles-edm.css 之后。只新增，不覆盖已有页面。
    语法沿用 Club Rig：琥珀 = 主操作，洋红 = 正在播放，冰蓝 = 参考 / solo。
+
+   注：BPM × 律动矩阵页（#/listen）已下线，能力并入风格树（#/tree）。
+   矩阵页专属样式（.lm-* / .lp-* / .listen-matrix / .listen-layout）已删除；
+   下面留下的 .lf-chip 仍被 #/quick 现场速查使用，
+   .listen-card / .lc-* / .listen-ref 仍被条目页与大族页使用。
    ========================================================================== */
-
-/* ---------------------------------------------------------------- 入口页 */
-
-.page-head-copy h1 em {
-  font-style: normal;
-  color: var(--sodium);
-}
-
-.listen-asks {
-  display: grid;
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  margin: clamp(18px, 2.4vw, 28px) 0 0;
-}
-
-.lf-row {
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 14px;
-  background: var(--ink-2);
-}
-
-.lf-label {
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: .14em;
-  color: var(--muted-2);
-}
-
-.lf-label b {
-  display: inline-block;
-  margin-right: 7px;
-  font-weight: 400;
-  color: var(--sodium);
-  letter-spacing: .08em;
-}
-
-.lf-opts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
 
 .lf-chip {
   border: 1px solid var(--line);
@@ -80,340 +40,6 @@
 
 .lf-chip.is-on small {
   color: var(--sodium);
-}
-
-.lf-reset {
-  border: 0;
-  background: none;
-  color: var(--muted-2);
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: .1em;
-  cursor: pointer;
-  padding: 4px 0;
-}
-
-.lf-reset:hover {
-  color: var(--sodium);
-}
-
-.listen-count {
-  margin: 10px 0 0;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: .06em;
-  color: var(--muted-2);
-}
-
-.listen-count b {
-  color: var(--sodium);
-  font-weight: 400;
-}
-
-.listen-scroll {
-  display: none;
-  margin: 8px 0 0;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: .1em;
-  color: var(--muted-2);
-}
-
-@media (max-width: 1100px) {
-  .listen-scroll {
-    display: block;
-  }
-}
-
-.listen-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.28fr) minmax(0, .72fr);
-  gap: clamp(18px, 2.4vw, 32px);
-  margin: clamp(20px, 2.6vw, 30px) 0 0;
-  align-items: start;
-}
-
-@media (max-width: 1100px) {
-  .listen-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-.listen-matrix-wrap {
-  min-width: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 2px;
-}
-
-.listen-matrix {
-  display: grid;
-  grid-template-columns: 106px repeat(4, minmax(0, 1fr));
-  min-width: 660px;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
-.lm-head {
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 8px 10px 10px;
-}
-
-.lm-head span {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: .14em;
-  color: var(--muted-2);
-}
-
-.lm-head strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 600;
-  margin-top: 2px;
-}
-
-.lm-head em {
-  display: block;
-  font-style: normal;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--muted-2);
-}
-
-.lm-row {
-  background: rgba(242, 237, 227, .018);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 9px 10px 11px;
-}
-
-.lm-row strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 13.5px;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.lm-row span {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: .08em;
-  color: var(--muted-2);
-  margin-top: 5px;
-}
-
-.lm-cell {
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 8px 9px 10px;
-  min-width: 0;
-  min-height: 84px;
-}
-
-.lm-cell.is-dim {
-  opacity: .28;
-}
-
-.lm-empty {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--muted-2);
-  padding-top: 8px;
-}
-
-.lm-chip {
-  display: block;
-  width: 100%;
-  text-align: left;
-  border: 1px solid transparent;
-  background: none;
-  color: var(--muted);
-  padding: 4px 6px;
-  margin: 0 0 2px;
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 12.5px;
-  line-height: 1.35;
-  transition: color .1s var(--cut), background .1s var(--cut), border-color .1s var(--cut);
-}
-
-.lm-chip b {
-  display: block;
-  font-weight: 500;
-}
-
-.lm-chip span {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--muted-2);
-}
-
-.lm-chip:hover {
-  color: var(--paper);
-  background: rgba(242, 237, 227, .05);
-}
-
-.lm-chip.is-on {
-  border-color: rgba(255, 176, 0, .55);
-  background: rgba(255, 176, 0, .1);
-  color: var(--paper);
-}
-
-.lm-chip.is-on span {
-  color: var(--sodium);
-}
-
-.lm-more {
-  border: 0;
-  background: none;
-  color: var(--cyan);
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: .06em;
-  padding: 3px 6px;
-  cursor: pointer;
-}
-
-.lm-more:hover {
-  color: var(--paper);
-}
-
-/* ------------------------------------------------------------ 右侧卡片 */
-
-.listen-panel {
-  border: 1px solid var(--line);
-  background: var(--panel);
-  padding: 18px 18px 16px;
-  position: sticky;
-  top: 84px;
-}
-
-@media (max-width: 1100px) {
-  .listen-panel {
-    position: static;
-  }
-}
-
-.lp-empty {
-  color: var(--muted-2);
-  font-size: 12.5px;
-  line-height: 1.7;
-  margin: 6px 0 0;
-}
-
-.lp-name {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -.02em;
-  margin: 4px 0 2px;
-  line-height: 1;
-}
-
-.lp-meta {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: .08em;
-  color: var(--muted-2);
-  margin: 0 0 12px;
-}
-
-.lp-line {
-  font-size: 17px;
-  line-height: 1.6;
-  color: var(--paper);
-  margin: 0 0 12px;
-}
-
-.lp-hear {
-  list-style: none;
-  margin: 0 0 12px;
-  padding: 0;
-  border-top: 1px solid var(--line);
-}
-
-.lp-hear li {
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
-  padding: 7px 0;
-  border-bottom: 1px solid rgba(242, 237, 227, .06);
-  font-size: 12.5px;
-  color: var(--muted);
-}
-
-.lp-hear b {
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  font-weight: 400;
-  color: var(--sodium);
-  flex: 0 0 16px;
-}
-
-.lp-hear em {
-  font-style: normal;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--muted-2);
-  flex: 0 0 34px;
-}
-
-.lp-when {
-  font-size: 12.5px;
-  color: var(--muted);
-  margin: 0 0 14px;
-}
-
-.lp-when span {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: .1em;
-  color: var(--muted-2);
-  display: block;
-  margin-bottom: 3px;
-}
-
-.lp-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.lp-solo {
-  border: 1px solid var(--line);
-  background: none;
-  color: var(--muted-2);
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: .06em;
-  padding: 6px 8px;
-  cursor: pointer;
-}
-
-.lp-solo.is-on {
-  border-color: rgba(47, 216, 255, .5);
-  color: var(--cyan);
-  background: rgba(47, 216, 255, .08);
-}
-
-.lp-solo.is-mute {
-  opacity: .45;
-  text-decoration: line-through;
-}
-
-.lp-foot {
-  margin: 12px 0 0;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: .06em;
-  color: var(--muted-2);
 }
 
 /* ------------------------------------------------------- 条目页的听感卡 */
@@ -545,6 +171,126 @@
   line-height: 1.6;
 }
 
+/* --------------------------------------------------------------------------
+   听感卡里的例曲
+   播放走 Apple 30 秒官方预览，所以这一块必须是「可播的列表」，
+   而不是又一个读完就走的文字段。三首封顶，再多就该去条目页看了。
+   -------------------------------------------------------------------------- */
+
+.lc-examples {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.lc-examples-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.lc-autoplay {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  color: var(--muted-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.lc-autoplay input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: var(--laser);
+  cursor: pointer;
+}
+
+.lc-autoplay:hover { color: var(--muted); }
+
+.lc-example-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  counter-reset: lc-ex;
+}
+
+.lc-example-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* 序号用 CSS 计数器画，避免手写数字和真实顺序对不上 */
+.lc-example-item::before {
+  counter-increment: lc-ex;
+  content: counter(lc-ex, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.lc-example-meta {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.lc-example-title {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.lc-example-artist {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+  overflow-wrap: anywhere;
+}
+
+.lc-example-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* 反馈文字横跨两列，落在标题与按钮下方 */
+.lc-example-item .example-feedback {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.lc-examples-note {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  color: var(--muted-2);
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .lc-example-item { grid-template-columns: minmax(0, 1fr); }
+  .lc-example-actions { justify-content: flex-start; }
+}
+
 .lc-preview {
   display: flex;
   flex-direction: column;
@@ -614,7 +360,7 @@
   place-items: center;
   padding: 16px;
   background: rgba(3, 3, 4, .78);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
 }
 
 .card-layer[hidden] {

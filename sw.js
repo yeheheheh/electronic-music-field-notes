@@ -6,7 +6,7 @@
    改完前端记得同步 VERSION —— 否则老访客会继续吃旧缓存。
    ========================================================================== */
 
-const VERSION = 'em-home-v3';
+const VERSION = 'em-archive-v15';
 const CORE = [
   './index.html',
   './styles.css',
@@ -14,12 +14,19 @@ const CORE = [
   './styles-studio.css',
   './styles-listen.css',
   './styles-home.css',
+  './styles-dj.css',
+  './styles-start.css',
+  './styles-tree.css',
   './data/kb.js',
   './data/curated.js',
   './data/web.js',
+  './data/tree.js',
+  './data/dj-course.js',
   './data/course.js',
   './data/fingerprints.js',
   './data/listen.js',
+  './data/start.js',
+  './data/dj-automix-demo.js',
   './audio.js',
   './share.js',
   './app.js',

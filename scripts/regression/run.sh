@@ -26,6 +26,8 @@ ROUTES=(
   "learn" "learn/kick-and-bass" "learn/drum-programming" "learn/daw-and-tracks"
   "learn/structure-eight" "learn/chord-progressions" "learn/synth-controls"
   "library" "atlas" "practice" "lab" "about"
+  "dj" "dj/course?ep=18" "dj/automix" "doc/guide:dj-04"
+  "start" "dj/field-guide" "practice?mode=phrase" "doc/guide:dj-faq"
 )
 WIDTHS=(320 390 768 1440 1920)
 

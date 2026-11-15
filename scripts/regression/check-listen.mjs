@@ -1,12 +1,12 @@
 // 听感层验收：数据完整性 + 页面行为 + 音频真的在响 + 卡片真的画出来了。
-// 用法： node scripts/regression/check-listen.mjs [http://127.0.0.1:5601/]
+// 用法： node scripts/regression/check-listen.mjs [http://127.0.0.1:5501/]
 // 前置： node scripts/serve.mjs
 import { spawn } from 'node:child_process';
-import { mkdtempSync, readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const BASE = process.argv[2] || 'http://127.0.0.1:5601/';
+const BASE = process.argv[2] || 'http://127.0.0.1:5501/';
 const CHROME = process.env.CHROME || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
 const PORT = 9450;
 
@@ -175,7 +175,11 @@ const goto = async (hash, wait = 900) => {
 
 try {
   /* 首页四轨 */
-  await goto('#/', 1500);
+  await goto('#/', 3000);
+  // 本脚本测的是「手动点试听」。自动播放默认开启，进条目页时第一首已在播，
+  // 再点它等于按「停止」，文本会回到「试听 30 秒」而误判为失败。
+  // 这里显式关掉；自动播放本身由 check-listen-examples.mjs 专门覆盖。
+  await cdp.eval(`localStorage.setItem('em.listen.autoplay', '0')`);
   const homeRack = await cdp.eval(`({
     tracks: [...document.querySelectorAll('.track')].map(t => ({
       title: t.querySelector('.track-title')?.textContent.trim() || '',
@@ -216,58 +220,146 @@ try {
   })()`);
   check('首页搜索框跳到全库检索', String(searchJump).startsWith('#/search?q='), searchJump);
 
-  /* 入口页 */
-  await goto('#/listen', 1600);
+  await goto('#/');
+  const archiveJump = await cdp.eval(`(async () => {
+    document.querySelector('[data-archive-entry]')?.click();
+    await new Promise(r => setTimeout(r, 300));
+    return { hash: location.hash, title: document.querySelector('h1')?.textContent };
+  })()`);
+  check('首页可以进入独立档案总览', archiveJump.hash === '#/archive' && archiveJump.title?.includes('电音档案'));
+
+  await goto('#/archive');
+  const archive = await cdp.eval(`({
+    families: document.querySelectorAll('[data-archive-family]').length,
+    sections: document.querySelectorAll('.archive-nav a').length,
+    current: document.querySelector('.archive-nav [aria-current="page"]')?.textContent,
+    title: document.title,
+  })`);
+  check('档案总览展示全部 24 个主大族', archive.families === 24, String(archive.families));
+  check('档案站提供四个可导航分区', archive.sections === 4 && archive.current?.includes('风格档案'));
+  check('档案页面使用独立标题', archive.title.includes('档案总览'));
+  const archiveSupplement = await cdp.eval(`(async () => {
+    document.querySelector('.archive-note a')?.click();
+    await new Promise(r => setTimeout(r, 300));
+    return { hash: location.hash, supplement: document.querySelector('#main')?.textContent.includes('补充收纳桶'), archive: document.querySelector('#main')?.textContent.includes('待归档') };
+  })()`);
+  check('补遗与归档入口显示补充收纳桶和待归档资料', archiveSupplement.hash === '#/atlas' && archiveSupplement.supplement && archiveSupplement.archive);
+  await goto('#/archive');
+  const archiveSearch = await cdp.eval(`(async () => {
+    const form = document.getElementById('archiveSearch');
+    if (!form) return '';
+    form.querySelector('input').value = 'House & Techno';
+    form.requestSubmit();
+    await new Promise(r => setTimeout(r, 300));
+    return new URLSearchParams(location.hash.split('?')[1]).get('q');
+  })()`);
+  check('档案检索完整保留输入中的特殊字符', archiveSearch === 'House & Techno');
+  for (const [section, href] of [['learn', '#/learn'], ['tools', '#/dj/automix'], ['sources', '#/about']]) {
+    await goto('#/archive');
+    const sectionResult = await cdp.eval(`(async () => {
+      document.querySelector('.archive-nav a[href="#/archive?section=${section}"]')?.click();
+      await new Promise(r => setTimeout(r, 300));
+      const active = document.querySelector('.archive-nav [aria-current="page"]')?.getAttribute('href');
+      document.querySelector('.archive-content a[href="${href}"]')?.click();
+      await new Promise(r => setTimeout(r, 400));
+      return {
+        active,
+        destination: location.hash,
+        heading: !!document.querySelector('#main h1'),
+      };
+    })()`);
+    check('档案分区可切换并进入核心模块：' + section, sectionResult.active === '#/archive?section=' + section && sectionResult.destination === href && sectionResult.heading);
+  }
+  await goto('#/archive?section=unknown');
+  check('未知档案分区回到风格总览', await cdp.eval(`document.querySelectorAll('[data-archive-family]').length === 24`));
+  for (const width of [320, 390, 768, 1440]) {
+    await cdp.send('Emulation.setDeviceMetricsOverride', { width, height: 1000, deviceScaleFactor: 1, mobile: false });
+    for (const hash of ['#/', '#/archive', '#/archive?section=learn', '#/archive?section=tools', '#/archive?section=sources']) {
+      await goto(hash, 300);
+      check(width + ' 下无横向溢出：' + hash, await cdp.eval(`document.documentElement.scrollWidth <= innerWidth`));
+      if (process.env.CAPTURE_ARCHIVE && [390, 1440].includes(width) && ['#/', '#/archive'].includes(hash)) {
+        const screenshot = await cdp.send('Page.captureScreenshot', { format: 'png' });
+        writeFileSync(`.ui-audit/${hash === '#/' ? 'home-refresh' : 'archive'}-${width}.png`, Buffer.from(screenshot.data, 'base64'));
+      }
+    }
+  }
+  await cdp.send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 1200, deviceScaleFactor: 1, mobile: false });
+
+  /* 入口页：矩阵页已下线，能力并入风格树。
+     老链接（含 ?s= 深链）必须重定向到树，而不是 404 —— 那些地址
+     可能已经发进群里、存进收藏夹，是外部依赖，不能随手作废。 */
+  await goto('#/listen', 1800);
   const home = await cdp.eval(`({
-    cells: document.querySelectorAll('.lm-cell').length,
-    chips: document.querySelectorAll('.lm-chip').length,
-    rows: document.querySelectorAll('.lm-row').length,
-    heads: document.querySelectorAll('.lm-head').length,
-    panel: !!document.querySelector('.lp-name'),
+    hash: location.hash,
+    onTree: !!document.querySelector('.tree-page'),
+    cols: document.querySelectorAll('.tree-col').length,
+    rows: document.querySelectorAll('[data-tree-key]').length,
+    crumbs: !!document.querySelector('.tree-crumbs'),
     docW: document.documentElement.scrollWidth,
     vw: window.innerWidth,
   })`);
-  check('矩阵渲染 20 个格子（4 速度 × 5 律动）', home.cells === 20, `${home.cells} 格`);
-  check('矩阵有 5 行律动', home.rows === 5, `${home.rows} 行`);
-  check('首屏可见风格数 ≥ 16', home.chips >= 16, `${home.chips} 个`);
-  check('默认选中一个风格并出卡', home.panel === true);
+  check('#/listen 重定向到风格树', home.hash.includes('/tree'), home.hash);
+  check('重定向后确实渲染了树', home.onTree === true);
+  check('树首屏有列与行', home.cols >= 1 && home.rows >= 20, `cols=${home.cols} rows=${home.rows}`);
+  check('树有路径提示（面包屑）', home.crumbs === true);
   check('1440 下无横向溢出', home.docW <= home.vw, `${home.docW}/${home.vw}`);
 
-  /* 点一个风格：出卡 + 真的开始播 */
+  /* 带 s= 的老链接要精确落到那一条，而不是丢到树根 */
+  await goto('#/', 900);
+  await goto('#/listen?s=g-2183', 1800);
+  const deep = await cdp.eval(`(() => {
+    const sel = document.querySelector('.tree-row.is-selected, .tree-flat-row.is-selected');
+    return { hash: location.hash, key: sel ? sel.dataset.treeKey : '' };
+  })()`);
+  check('带 s= 的老链接落到对应风格', /g-2183/.test(deep.key || ''), `key=${deep.key}`);
+  check('深链把祖先路径一起展开', /path=/.test(deep.hash), deep.hash);
+
+  /* 点树里的一行：试听 + 展开下级，一次完成 */
   const picked = await cdp.eval(`(async () => {
-    const chips = [...document.querySelectorAll('.lm-chip')];
-    const target = chips.find(b => b.dataset.style === 'g-2183') || chips[0];
-    target.click();
+    // 选一个有下级的行：点它应该既开始播、又展开出子列
+    const row = [...document.querySelectorAll('[data-tree-key]')].find(r => r.classList.contains('has-kids'));
+    const before = document.querySelectorAll('.tree-col').length;
+    row.click();
     await new Promise(r => setTimeout(r, 700));
     const state = window.EMAudio.getState();
     return {
-      id: target.dataset.style,
-      name: document.querySelector('.lp-name')?.textContent || '',
+      name: row.querySelector('.tree-row-name')?.textContent || '',
       playing: state.playing,
       demoId: state.demoId,
-      hash: location.hash,
-      muted: window.EMAudio.setFingerprintLayers([]),
+      after: document.querySelectorAll('.tree-col').length,
+      before,
+      selected: document.querySelector('.tree-row.is-selected') ? true : false,
     };
   })()`);
-  check('点风格后卡片切到该风格', picked.name.length > 0, picked.name);
-  check('点风格后音频真的在播', picked.playing === true, `demoId=${picked.demoId}`);
+  check('点行后音频真的在播', picked.playing === true, `demoId=${picked.demoId}`);
   check('播放的是配方会话', String(picked.demoId).startsWith('fp:'), picked.demoId);
-  check('地址栏记住选中的风格', picked.hash.includes('s='), picked.hash);
+  check('点行同时展开下一列', picked.after > picked.before, `${picked.before} → ${picked.after} 列`);
+  check('点行后该行被选中', picked.selected === true, picked.name);
 
-  /* 分层 solo：鼓 */
-  const solo = await cdp.eval(`(async () => {
-    const btn = [...document.querySelectorAll('[data-solo]')].find(b => b.dataset.solo === 'drums');
+  /* 折叠：收起父级时，它右侧的列要一起消失，不能留下断链 */
+  const fold = await cdp.eval(`(async () => {
+    const before = document.querySelectorAll('.tree-col').length;
+    const btn = document.querySelector('.tree-row.is-selected .tree-row-chev.is-toggle')
+      || document.querySelector('.tree-row-chev.is-toggle');
+    const wasPlaying = window.EMAudio.getState().playing;
     btn.click();
-    await new Promise(r => setTimeout(r, 250));
-    return { muted: window.EMAudio.setFingerprintLayers(['drums']), state: window.EMAudio.getState().playing };
+    await new Promise(r => setTimeout(r, 400));
+    return {
+      before,
+      after: document.querySelectorAll('.tree-col').length,
+      playing: window.EMAudio.getState().playing,
+      wasPlaying,
+    };
   })()`);
-  check('可以只留鼓（分层是操作不是形容词）', solo.muted.includes('drums'), JSON.stringify(solo.muted));
-  check('切层不打断播放', solo.state === true);
+  check('点折叠钮收起该列及右侧', fold.after < fold.before, `${fold.before} → ${fold.after} 列`);
+  check('折叠动作不触发播放', fold.playing === fold.wasPlaying, `playing=${fold.playing}`);
   await cdp.eval(`window.EMAudio.stop()`);
 
   /* 分享卡：弹层里必须是 <img> */
   const share = await cdp.eval(`(async () => {
-    document.querySelector('[data-lp-share]').click();
+    document.querySelector('[data-tree-play]').click();
+    await new Promise(r => setTimeout(r, 200));
+    window.EMShare.open({ name: 'Techno', bpm: 130, bpmLabel: '125–135', bandName: '快', bandFeel: '推进', grooveName: '落地', lowName: '厚', oneLine: '测试', hear: ['a', 'b', 'c'], when: '测试', fpLabel: 'test', id: 'g-2183', zh: 'Techno' });
     await new Promise(r => setTimeout(r, 400));
     const img = document.querySelector('[data-card-img]');
     return {
@@ -312,29 +404,33 @@ try {
   })`);
   check('没有文案的条目显示「同族参考」而不是假装有', ref.ref === true && ref.card === false && ref.hasPlay === true);
 
-  /* 听 ↔ 查：状态要能带过去、带回来 */
-  await goto('#/listen?band=fast&groove=floor&s=g-2529', 1300);
-  const deep = await cdp.eval(`({
-    onChips: document.querySelectorAll('.lf-chip.is-on').length,
-    selected: document.querySelector('.lp-name')?.textContent || '',
+  /* 树 ↔ 条目：位置要能带过去、带回来 */
+  await goto('#/tree?path=f-2077&sel=g-2529', 1300);
+  const deepTree = await cdp.eval(`({
+    cols: document.querySelectorAll('.tree-col').length,
+    selected: document.querySelector('.tree-detail h2')?.textContent || '',
+    crumbs: document.querySelector('.tree-crumbs')?.textContent?.trim() || '',
     hash: location.hash,
   })`);
-  check('深链进「听」：筛选与选中都还原', deep.onChips === 2 && /hard techno/i.test(deep.selected), `${deep.onChips} 个条件 · ${deep.selected}`);
+  check('深链进树：路径与选中都还原', deepTree.cols >= 2 && /techno/i.test(deepTree.selected), `${deepTree.cols} 列 · ${deepTree.selected}`);
+  check('面包屑显示当前位置', deepTree.crumbs.includes('Techno'), deepTree.crumbs.slice(0, 60));
 
   const swap = await cdp.eval(`(async () => {
-    // 用格子首屏可见的条目（快/每拍一脚里 128 BPM 的那几个）
-    document.querySelector('.lm-chip[data-style="g-1525"]')?.click();
-    await new Promise(r => setTimeout(r, 400));
-    return { hash: location.hash };
+    const row = [...document.querySelectorAll('[data-tree-key]')].find(r => r.dataset.treeKey === 'e:g-2183');
+    row?.click();
+    await new Promise(r => setTimeout(r, 600));
+    return { hash: location.hash, sel: document.querySelector('.tree-detail h2')?.textContent || '' };
   })()`);
-  check('切风格时筛选条件不丢', swap.hash.includes('band=fast') && swap.hash.includes('groove=floor') && swap.hash.includes('s=g-1525'), swap.hash);
+  check('点另一个节点后地址栏跟着走', swap.hash.includes('sel=g-2183'), swap.hash);
+  check('详情切到新节点', swap.sel.length > 0, swap.sel);
+  await cdp.eval(`window.EMAudio.stop()`);
 
   const roundTrip = await cdp.eval(`(async () => {
     location.hash = '#/genre/g-1525';
     await new Promise(r => setTimeout(r, 900));
     const onGenre = {
       card: !!document.querySelector('.listen-card'),
-      back: document.querySelector('a[href*="#/listen?band="]')?.getAttribute('href') || '',
+      back: document.querySelector('a[href*="#/tree?sel="]')?.getAttribute('href') || '',
       preview: document.querySelectorAll('.example-preview').length,
       bili: document.querySelector('.example-actions a[href*="bilibili"]')?.getAttribute('href') || '',
       netease: document.querySelector('.example-actions a[href*="music.163.com"]')?.getAttribute('href') || '',
@@ -346,17 +442,17 @@ try {
       onGenre.started = button.textContent.trim() !== '试听 30 秒';
       onGenre.label = button.textContent.trim();
     }
-    location.hash = '#/listen';
+    location.hash = '#/tree?sel=g-1525';
     await new Promise(r => setTimeout(r, 900));
     return {
       onGenre,
-      chips: document.querySelectorAll('.lf-chip.is-on').length,
-      selected: document.querySelector('.lp-name')?.textContent || '',
+      onTree: !!document.querySelector('.tree-page'),
+      selected: document.querySelector('.tree-detail h2')?.textContent || '',
       hash: location.hash,
     };
   })()`);
-  check('条目页能回到矩阵，且带着自己的位置', roundTrip.onGenre.card && roundTrip.onGenre.back.includes('s=g-1525'), roundTrip.onGenre.back);
-  check('听 → 条目 → 听：筛选与选中都还在', roundTrip.chips === 2 && /electro/i.test(roundTrip.selected), `${roundTrip.chips} 个条件 · ${roundTrip.selected}`);
+  check('条目页能回到树，且带着自己的位置', roundTrip.onGenre.card && roundTrip.onGenre.back.includes('g-1525'), roundTrip.onGenre.back);
+  check('树 → 条目 → 树：位置还在', roundTrip.onTree === true && roundTrip.selected.length > 0, roundTrip.selected);
   check('例曲有试听按钮', roundTrip.onGenre.preview > 0, `${roundTrip.onGenre.preview} 条`);
   check('例曲有 B 站 / 网易云 兜底外链', roundTrip.onGenre.bili.includes('search.bilibili.com') && roundTrip.onGenre.netease.includes('music.163.com'));
   check('点「试听」会去查预览而不是没反应', roundTrip.onGenre.started === true, roundTrip.onGenre.label || '');
@@ -491,11 +587,11 @@ try {
     if (btn) btn.click();
     await new Promise(r => setTimeout(r, 600));
     const state = window.EMAudio.getState();
-    return { strip, playing: state.playing, demoId: state.demoId, link: document.querySelector('a[href*="#/listen"]')?.getAttribute('href') || '' };
+    return { strip, playing: state.playing, demoId: state.demoId, link: document.querySelector('a[href*="#/tree"]')?.getAttribute('href') || '' };
   })()`);
   check('大族页有「这一族的声音」', family.strip === true);
   check('大族页能直接出声', family.playing === true, family.demoId);
-  check('大族页能跳回矩阵', family.link.includes('#/listen'), family.link);
+  check('大族页能跳到风格树', family.link.includes('#/tree'), family.link);
   await cdp.eval('window.EMAudio.stop()');
 
   /* 宽度扫描 */

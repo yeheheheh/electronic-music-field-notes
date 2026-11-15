@@ -1,0 +1,34 @@
+电音档案 · 从听懂到做出来
+
+画面与内容
+为本次宣传片新写的Canvas动态图形、节拍对齐示意与版式。
+产品名称、品牌配色、功能与实机界面来自用户的Electronic Music工作区。
+assets/home.png、assets/automix.png：2026-10-27截取本地网站，非第三方样片。
+92个风格、1376条资料、22节制作课：以当前项目数据核验。
+功能动画是重新排版的示意，不是每个页面的真实屏幕录制；实机片段已注明REAL PRODUCT CAPTURE。
+
+声音
+music.py：为本片新写的120BPM、D小调电子配乐。
+Kick / clap / hat / snare / bass / pluck / pad / FX均由振荡器与噪声合成。
+没有使用流行歌曲、外部录音、曲库演示音频、样片配音或第三方音乐采样。
+无旁白；主要中文文案直接绘入画面，另提供可编辑SRT内容轨。
+
+字体
+调用本机已安装的Microsoft YaHei、Bahnschrift、Cascadia Mono或Consolas；没有复制或再分发字体文件。
+动画源在其他机器可用Noto Sans SC / 系统sans-serif回退，但字形和度量可能不同，重建后应重新检查版面。
+
+方法与提示词参考
+Lemo-Opuscar / LemoLab：https://github.com/lemomo-ai/lemo-opuscar
+采用其代码影片、确定性render(t)、暗色科技发布、瑞士动态排版的方法，未复制demo视频、图片、音乐或人物设计。
+该库代码与文档标注MIT；用户用库方法创作的影片无须在画面署名。
+
+Opus Video Prompts / 向阳乔木：https://github.com/joeseesun/opus-video-prompts
+第16号高端极简产品片：zero (@twoclipping)
+https://youmind.com/video-prompts/high-end-product-video-prompt-11292
+第13号App宣传片：Danny Stuart
+https://dannystuart.substack.com/p/claude-code-opus-remotion-agentic-promo-video
+参考其镜头语法与制作约束，重新创作本片脚本；不把提示词作者的案例、统计或画面作为本站事实。
+
+工具
+Chrome / Canvas 2D、Node.js、Python、NumPy、SciPy、SoundFile、imageio-ffmpeg / FFmpeg。
+本文件是来源记录，不是对原始知识库内容整体版权的法律确认。若用于公开宣传，请确认你对项目名称、界面与相关原始资料拥有相应使用权。

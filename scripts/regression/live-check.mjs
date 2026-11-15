@@ -3,34 +3,30 @@
 // 所以这里换成 CDP：从浏览器外部发指令，不受同源策略限制。
 //
 // 用法： node scripts/regression/live-check.mjs [线上地址]
-import { spawn } from 'node:child_process';
-import { mkdtempSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+//
+// ⚠️ 2026-11-12：本脚本曾把调试端口写死为 9333，而那正是 WorkBuddy 自己的端口，
+// 一度连到宿主窗口上。现在统一走 cdp-launch.mjs（随机端口 + 目标白名单 + 退出清理）。
+import { launchChrome, sleep } from './cdp-launch.mjs';
 
 const TARGET = process.argv[2] || 'http://47.94.222.72/music/';
 const CHROME = process.env.CHROME || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
-const PORT = 9333;
 
-const profile = mkdtempSync(join(tmpdir(), 'cdp-live-'));
-const chrome = spawn(CHROME, [
-  '--headless=new', '--disable-gpu', '--no-first-run', '--mute-audio',
-  `--remote-debugging-port=${PORT}`, `--user-data-dir=${profile}`,
-  '--window-size=1440,1100', 'about:blank',
-], { stdio: 'ignore' });
+// 允许导航到的地址：本次要测的线上地址。
+// 需要额外的测试地址时，用 --allow=<regex> 追加，不要放宽成「任意地址」。
+const extraAllow = process.argv
+  .filter((a) => a.startsWith('--allow='))
+  .map((a) => new RegExp(a.slice('--allow='.length)));
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const launched = await launchChrome({
+  chrome: CHROME,
+  allow: [new RegExp('^' + TARGET.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), ...extraAllow],
+  args: ['--mute-audio', '--window-size=1440,1100'],
+});
+const chrome = launched.proc;
+const wsUrl = launched.wsUrl;
 
 async function findTarget() {
-  for (let i = 0; i < 40; i += 1) {
-    try {
-      const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
-      const page = list.find((t) => t.type === 'page');
-      if (page?.webSocketDebuggerUrl) return page.webSocketDebuggerUrl;
-    } catch { /* 浏览器还没起来，继续等 */ }
-    await sleep(250);
-  }
-  throw new Error('Chrome 调试端口未就绪');
+  return wsUrl;
 }
 
 class Cdp {
@@ -94,6 +90,7 @@ try {
   await cdp.send('Page.enable');
 
   // 1. 首页可达 + 资源全 200
+  launched.assertNavigable(TARGET);
   await cdp.send('Page.navigate', { url: TARGET });
   await sleep(3500);
   const home = await cdp.eval(`(() => ({
@@ -221,13 +218,13 @@ try {
   // 8. 无运行时报错
   check('无 JS 运行时报错', cdp.logs.length === 0, cdp.logs.slice(0, 3).join(' | ') || '无');
 
-  chrome.kill();
+  await launched.close();
   const failed = report.checks.filter((c) => !c.ok);
   console.log(JSON.stringify(report, null, 2));
   console.log(`\n结果：${report.checks.length - failed.length}/${report.checks.length} 通过`);
   process.exit(failed.length ? 1 : 0);
 } catch (error) {
-  chrome.kill();
+  await launched.close();
   console.error('验证脚本失败:', error.message);
   console.log(JSON.stringify(report, null, 2));
   process.exit(2);

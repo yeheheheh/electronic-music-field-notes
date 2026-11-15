@@ -1,0 +1,27 @@
+{
+  "file": "D:\\项目\\Electronic Music\\films\\electronic-field-notes\\electronic-field-notes-douyin.mp4",
+  "bytes": 9007218,
+  "durationSeconds": 48.0,
+  "frames": 1440,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "video": "H.264 yuv420p BT.709",
+  "audio": "AAC stereo 48000Hz 320kbps",
+  "integratedLUFS": -14.39,
+  "truePeakDBTP": -2.62,
+  "fullDecode": "passed",
+  "blankFrames": [],
+  "sourceLayoutAudit": {
+    "checked": 10922,
+    "violations": [],
+    "width": 1080,
+    "height": 1920,
+    "duration": 48,
+    "deterministic": true
+  },
+  "review": "29 source frames + final decoded contact sheet + drop strip. No subjective audio audition performed.",
+  "soundtrack": "Original synthesized electronic composition, no external song samples"
+}

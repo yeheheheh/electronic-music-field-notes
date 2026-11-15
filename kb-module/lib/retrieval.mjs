@@ -43,6 +43,21 @@ export function uniqueQueryTokens(value) {
   return [...new Set(tokenize(value))];
 }
 
+function fixQuery(value) {
+  return String(value ?? '')
+    .replace(/beat\s*mach(?:ing|ed)?/gi, 'beatmatch')
+    .replace(/rekord\s*box/gi, 'rekordbox')
+    .replace(/hot\s*cues?/gi, 'hot cue')
+    .replace(/memor(?:y|ies)\s*cues?/gi, 'memory cue')
+    .replace(/q\s*点/gi, 'cue 点')
+    .replace(/q\s*键/gi, 'cue 键')
+    .replace(/接割|接构|皆割/g, '接歌')
+    .replace(/对排|对派/g, '对拍')
+    .replace(/碟姬|打碟姬/g, '碟机')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function expandQuery(query) {
   const additions = [];
   if (/七组|七件/.test(query)) additions.push('七大乐器组');
@@ -50,8 +65,25 @@ function expandQuery(query) {
   if (/drum/i.test(query)) additions.push('鼓组');
   if (/结构/.test(query)) additions.push('段落');
   if (/音色组/.test(query)) additions.push('乐器组');
-  return additions;
+  const rules = [
+    [/cue|q点|cue点/i, ['CUE 点', 'Hot CUE', 'Memory CUE']],
+    [/对拍|beatmatch|跑马|跑拍/i, ['对拍', 'Beatmatch']],
+    [/接歌|过渡|切歌|transition/i, ['接歌', 'Transition', '乐句']],
+    [/碟机|cdj|xdj|ddj|打碟机/i, ['打碟机', 'CDJ', 'XDJ', 'DDJ']],
+    [/u盘|usb|导出|rekordbox/i, ['U 盘', 'Rekordbox', '导出']],
+    [/调性|camelot|harmonic|mix in key/i, ['Camelot Wheel', '调性混音', '关系大小调']],
+    [/上台|演出|现场|gig|set/i, ['现场', 'Set', '演出']],
+    [/设备|耳机|音箱|监听/i, ['设备', '监听耳机', '音箱']],
+    [/没有设备|没设备|零基础|新手/i, ['新手', '入门', '设备']],
+    [/quantize|量化/i, ['Quantize', '量化']],
+  ];
+  for (const [pattern, terms] of rules) {
+    if (pattern.test(query)) additions.push(...terms);
+  }
+  return [...new Set(additions)];
 }
+
+const INTENT_RE = /怎么|如何|是什么|为什么|区别|推荐|入门|新手|多久|哪里|能不能|要不要|怎么练/;
 
 const TYPE_WEIGHT = {
   source: 0.5,
@@ -65,6 +97,26 @@ const TYPE_WEIGHT = {
   timeline: 1,
   live: 1,
 };
+
+function diverseResults(results, limit) {
+  const picked = [];
+  const types = new Set();
+  for (const item of results) {
+    if (picked.length >= limit) break;
+    if (picked.length < 2 || !types.has(item.type)) {
+      picked.push(item);
+      types.add(item.type);
+    }
+  }
+  if (picked.length < limit) {
+    for (const item of results) {
+      if (picked.includes(item)) continue;
+      picked.push(item);
+      if (picked.length >= limit) break;
+    }
+  }
+  return picked;
+}
 
 function readText(filePath) {
   return fs.readFileSync(filePath, 'utf8');
@@ -90,8 +142,18 @@ function round(value, digits = 3) {
   return Math.round(value * factor) / factor;
 }
 
+function plainText(text) {
+  return String(text || '')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/^[-*]\s+/gm, '')
+    .replace(/\n{2,}/g, '\n')
+    .trim();
+}
+
 function snippet(text, query, maxLength = 220) {
-  const source = String(text || '').replace(/\s+/g, ' ').trim();
+  const source = plainText(text).replace(/\s+/g, ' ').trim();
   if (!source) return '';
   const lower = source.toLowerCase();
   const candidates = uniqueQueryTokens(query).map((token) => token.toLowerCase());
@@ -215,13 +277,14 @@ class KnowledgeBase {
   search(query, options = {}) {
     const q = String(query ?? '').trim();
     const limit = clamp(Number(options.limit) || this.defaultLimit, 1, this.maxLimit);
-    this._lastQuery = q;
+    const fixedQuery = fixQuery(q);
+    this._lastQuery = fixedQuery || q;
     if (!q) {
-      return { query: q, count: 0, results: [], meta: { limit, filters: {} } };
+      return { query: q, count: 0, results: [], meta: { limit, filters: {}, normalizedQuery: null } };
     }
-    const tokens = uniqueQueryTokens([q, ...expandQuery(q)].join(' '));
+    const tokens = uniqueQueryTokens([fixedQuery, ...expandQuery(fixedQuery)].join(' '));
     if (!tokens.length) {
-      return { query: q, count: 0, results: [], meta: { limit, filters: {} } };
+      return { query: q, count: 0, results: [], meta: { limit, filters: {}, normalizedQuery: fixedQuery !== q ? fixedQuery : null } };
     }
     const scores = new Map();
     for (const token of tokens) {
@@ -237,7 +300,8 @@ class KnowledgeBase {
         scores.set(index, (scores.get(index) || 0) + score);
       }
     }
-    const phrase = normalizePhrase(q);
+    const phrase = normalizePhrase(fixedQuery);
+    const intentQuery = INTENT_RE.test(fixedQuery);
     const candidates = [];
     for (const [index, baseScore] of scores) {
       const record = this.records[index];
@@ -264,6 +328,10 @@ class KnowledgeBase {
       }
       score *= 0.55 + (0.45 * coverage) / tokens.length;
       score *= TYPE_WEIGHT[chunk.type] ?? 1;
+      if (intentQuery) {
+        if (chunk.type === 'guide' || chunk.type === 'glossary') score *= 1.12;
+        if (chunk.type === 'transcript') score *= 0.96;
+      }
       candidates.push({ record, score });
     }
     candidates.sort((a, b) => {
@@ -288,6 +356,7 @@ class KnowledgeBase {
         limit,
         totalMatched: deduped.length,
         tokens,
+        normalizedQuery: fixedQuery !== q ? fixedQuery : null,
         filters: {
           family: options.family || null,
           type: options.type || null,
@@ -382,8 +451,9 @@ class KnowledgeBase {
   context(query, options = {}) {
     const limit = clamp(Number(options.limit) || 5, 1, this.maxLimit);
     const maxChars = clamp(Number(options.maxChars) || 6000, 800, 24000);
-    const result = this.search(query, { ...options, limit });
-    if (!result.results.length) {
+    const result = this.search(query, { ...options, limit: Math.min(this.maxLimit, Math.max(limit * 3, limit)) });
+    const picked = diverseResults(result.results, limit);
+    if (!picked.length) {
       return {
         query,
         markdown: `# 知识库检索上下文\n\n查询：${query}\n\n未找到相关条目。请换一个关键词，或先调用 kb_families / kb_list 浏览分类。`,
@@ -394,7 +464,7 @@ class KnowledgeBase {
     const sections = [];
     const citations = [];
     let used = 0;
-    for (const [index, item] of result.results.entries()) {
+    for (const [index, item] of picked.entries()) {
       const full = this.get(item.id);
       const body = full?.description || full?.text || item.snippet;
       const examples = (full?.examples || []).map((example) => typeof example === 'string' ? example : `${example.title}${example.artist ? ` - ${example.artist}` : ''}`);
@@ -407,6 +477,7 @@ class KnowledgeBase {
         family ? `- 大族：${family}` : null,
         `- BPM：${bpm}`,
         source?.title ? `- 来源：${source.title}${source.line ? ` 第 ${source.line} 行` : ''}` : null,
+        source?.url ? `- 链接：${source.url}` : null,
         item.path ? `- 路径：${item.path}` : null,
       ].filter(Boolean).join('\n');
       const excerpt = String(body || '').replace(/\r\n/g, '\n').replace(/\n{3,}/g, '\n\n').replace(/[ \t]+/g, ' ').trim();
@@ -421,12 +492,12 @@ class KnowledgeBase {
       '# 知识库检索上下文',
       '',
       `查询：${query}`,
-      `命中：${result.count} 条；以下是前 ${sections.length} 条。`,
+      `命中：${result.count} 条；以下是 ${sections.length} 条（已做类型去重）。`,
       '使用说明：回答时请用 [ID] 引用来源；资料不足时明确说明，不要补造。',
       '',
       sections.join('\n\n---\n\n'),
     ].join('\n');
-    return { query, markdown, citations, results: result.results };
+    return { query, markdown, citations, results: picked };
   }
 }
 

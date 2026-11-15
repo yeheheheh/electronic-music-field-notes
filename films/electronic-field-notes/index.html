@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>电音档案 · 从听懂到做出来</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#050607;color:#f4f0e7;font-family:'Microsoft YaHei',sans-serif;display:grid;place-items:center;min-height:100vh}canvas{height:100vh;width:auto;max-width:100vw;object-fit:contain}#controls{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:12px;align-items:center;background:#14171bea;padding:12px 16px;border:1px solid #434344;border-radius:8px}button{border:0;padding:9px 14px;background:#ffb000;font-weight:700;cursor:pointer}input{width:200px}body.render #controls{display:none}</style>
+<canvas width="1080" height="1920" aria-label="电音档案宣传动画"></canvas>
+<div id="controls"><button id="play">播放 / 暂停</button><input id="scrub" aria-label="时间" type="range" min="0" max="47.99" step="0.01" value="0"><span id="clock">0:00</span></div>
+<audio id="music" src="soundtrack.wav" preload="none"></audio>
+<script>
+'use strict';
+const canvas=document.querySelector('canvas'), c=canvas.getContext('2d',{alpha:false});
+const W=1080,H=1920,A='#ffb000',P='#f4f0e7',M='#a6a7a6',BG='#070809',LINE='#303236';
+const FONT='"Microsoft YaHei", "Noto Sans SC", sans-serif', NUM='"Bahnschrift", "Impact", sans-serif', MONO='"Cascadia Mono", "Consolas", monospace';
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),lerp=(a,b,t)=>a+(b-a)*t;
+const smooth=x=>{x=clamp(x);return x*x*(3-2*x)},out=x=>1-Math.pow(1-clamp(x),4),range=(t,a,b)=>clamp((t-a)/(b-a));
+const hash=n=>{let x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x)};
+const imgs={}; let boxes=[];
+const scenes=[['hook',0,4],['brand',4,8],['listen',8,14],['search',14,20],['practice',20,26],['make',26,32],['automix',32,38],['product',38,42],['end',42,48]];
+window.DUR=48;
+function rect(x,y,w,h,col,r=0){c.fillStyle=col;c.beginPath();c.roundRect(x,y,w,h,r);c.fill()}
+function stroke(x,y,w,h,col=LINE,r=0,width=1){c.strokeStyle=col;c.lineWidth=width;c.beginPath();c.roundRect(x,y,w,h,r);c.stroke()}
+function line(x,y,x2,y2,col=LINE,width=1){c.beginPath();c.strokeStyle=col;c.lineWidth=width;c.moveTo(x,y);c.lineTo(x2,y2);c.stroke()}
+function txt(s,x,y,size=36,col=P,weight=500,font=FONT,align='left',audit=true){
+ c.font=`${weight} ${size}px ${font}`;c.textAlign=align;c.textBaseline='alphabetic';c.fillStyle=col;c.fillText(s,x,y);
+ if(audit){const m=c.measureText(s);let left=x-(align==='center'?m.width/2:align==='right'?m.width:0);const tr=c.getTransform();const p0=new DOMPoint(left,y-size).matrixTransform(tr),p1=new DOMPoint(left+m.width,y+size*.25).matrixTransform(tr);boxes.push({text:s,x:p0.x,y:p0.y,w:p1.x-p0.x,h:p1.y-p0.y});}
+}
+function reveal(s,x,y,size,col,t,delay=0,weight=800,font=FONT){let q=out((t-delay)/.55);c.save();c.beginPath();c.rect(x-4,y-size-12,930-x,size+42);c.clip();txt(s,x,y+(1-q)*(size+38),size,col,weight,font,'left',q>.98);c.restore()}
+function label(s,y,col=M){txt(s,88,y,25,col,500,MONO)}
+function section(n,name,t){label('0'+n+' / '+name.toUpperCase(),322,A);line(88,350,905,350,'#404145');}
+function title(s,y,t,size=86){reveal(s,84,y,size,P,t,.07)}
+function note(s,y=1500){line(88,y-57,900,y-57,LINE);txt(s,88,y,33,P,500)}
+function mark(x,y,s=1){const hs=[18,40,60,30,48];hs.forEach((v,i)=>rect(x+i*10*s,y-v*s,6*s,v*s,i===2?A:P));}
+function pulse(t){return Math.exp(-((t%.5)/.09))}
+function wave(x,y,w,h,t,col=A,seed=1,revealP=1){
+ const n=Math.round(w/7);c.save();c.beginPath();c.rect(x,y-h/2,w*revealP,h);c.clip();
+ let beat=.7+.3*pulse(t);if((t>=3.5&&t<4)||(t>=35.5&&t<36))beat=.12;
+ for(let i=0;i<n;i++){let z=i/n;let shape=.18+.82*Math.pow(Math.sin(z*Math.PI),.7);let v=shape*(.2+.55*hash(i+seed*300)+.25*Math.sin(i*.42+seed));v*=beat*(.65+.35*Math.abs(Math.sin(z*17-t*1.9)));rect(x+i*7,y-h*v/2,4,h*v,col)}c.restore();
+}
+function curveWave(t){
+ c.save();c.strokeStyle='#ffffff07';c.lineWidth=1.4;
+ for(let j=0;j<16;j++){c.beginPath();for(let x=-30;x<=1110;x+=6){let z=x/1080;let y=1000+Math.sin(z*5.3+t*.08+j*.07)*180+Math.sin(z*9.1-j*.17)*100+j*18;if(x===-30)c.moveTo(x,y);else c.lineTo(x,y)}c.stroke()}c.restore();
+}
+function bg(t){rect(0,0,W,H,BG);let g=c.createRadialGradient(690,720,10,690,720,890);g.addColorStop(0,'#171b21');g.addColorStop(1,BG);rect(0,0,W,H,g);curveWave(t);line(52,136,1028,136,'#ffffff14');line(52,1720,1028,1720,'#ffffff14');}
+function chrome(t,index){
+ mark(88,226,.65);txt('电音档案',137,209,25,P,800);txt('FIELD NOTES',137,234,15,M,500,MONO);
+ txt('SOUND / UNDERSTOOD',902,214,17,M,500,MONO,'right');
+ let labels=['听','查','练','做'];labels.forEach((s,i)=>{let active=index===i+2;txt(s,88+i*112,1640,28,active?A:'#777c80',700);if(active)rect(88+i*112,1660,30,3,A)});
+ txt('ELECTRONIC MUSIC',905,1640,18,'#777c80',500,MONO,'right');
+ rect(88,1700,816,2,'#282b2f');rect(88,1700,816*t/48,2,A);
+}
+function badge(s,x,y,w,active=false){rect(x,y,w,52,active?A:'#171b20',3);stroke(x,y,w,52,active?A:'#353940',3);txt(s,x+w/2,y+35,24,active?BG:P,600,FONT,'center');}
+function drawHook(u,t){
+ label('FOR THE ONES WHO FEEL THE BEAT',344);
+ reveal('只会跟着',84,540,106,P,u,-.15);
+ reveal('节奏点头？',84,680,106,A,u,.12);
+ // A physical, wide sound strip — it later becomes the matrix grid.
+ let p=pulse(t);wave(88,1030,810,300,t,A,4,out(u/.6));
+ line(88,1270,904,1270,LINE);[0,1,2,3].forEach(i=>{let xx=112+i*238;rect(xx,1270-18,4,36,i===Math.floor((t%2)/.5)?A:'#64615a');txt(String(i+1).padStart(2,'0'),xx,1340,25,M,500,MONO)});
+ txt('喜欢电音，然后呢？',88,1510,38,P,500);
+}
+function drawBrand(u,t){
+ label('LESS GUESSING. MORE LISTENING.',344,A);
+ reveal('电音档案',84,582,156,P,u);
+ reveal('听得懂',88,738,88,P,u,.18);
+ reveal('才做得出来',88,850,88,A,u,.3);
+ const names=['听','查','练','做'];names.forEach((s,i)=>{let q=out((u-.55-i*.10)/.5);let x=88+i*209;rect(x,1050+(1-q)*90,184,236,i===0?A:'#171b20',3);txt('0'+(i+1),x+20,1090+(1-q)*90,19,i===0?BG:M,500,MONO);txt(s,x+92,1232+(1-q)*90,90,i===0?BG:P,800,FONT,'center',q>.98)});
+ note('听 / 查 / 练 / 做    四条路，一个起点');
+}
+const counts=[[6,18,14,14],[7,0,1,9],[3,0,3,8],[5,0,1,0],[3,0,0,0]];
+function drawListen(u,t){
+ section(1,'LISTEN',u);title('听出区别',495,u);
+ reveal('92',80,788,284,A,u,.18,600,NUM);txt('个风格',407,752,42,P,600);txt('从声音开始',410,806,27,M,500);
+ ['慢','中','快','极快'].forEach((s,k)=>txt(s,282+k*169,914,26,M,500,FONT,'center'));
+ ['每拍一脚','两拍一下','碎的','切开的','没有鼓'].forEach((s,j)=>{
+ txt(s,88,986+j*91,23,M,500);for(let i=0;i<4;i++){let xx=221+i*169,yy=942+j*91,filled=counts[j][i],q=out((u-.35-j*.055-i*.05)/.5);let selected=j===0&&i===1&&u>1.7;rect(xx,yy,148,69,selected?A:filled?`rgba(255,176,0,${(.09+filled*.023)*q})`:'#13171b',3);stroke(xx,yy,148,69,selected?A:'#383329',3);if(filled)txt(String(filled),xx+74,yy+44,26,selected?BG:'#cbbf9f',600,NUM,'center')}
+ });
+ if(u>1.7){line(400,936,400,924,A,3);txt('速度 × 律动',88,1450,26,A,500)}
+ note('不知道名字，也能找到喜欢的声音',1535);
+}
+function drawSearch(u,t){
+ section(2,'SEARCH',u);title('查到门道',495,u);
+ reveal('1,376',81,756,218,A,u,.13,600,NUM);txt('条资料',88,832,35,P,500);
+ rect(88,904,816,103,'#101419',4);stroke(88,904,816,103,'#5d512f',4);txt('⌕',115,974,56,A,500,FONT);let word='Sidechain';let typed=word.slice(0,Math.min(word.length,Math.floor(Math.max(0,u-.4)*13)));txt(typed,184,972,44,P,600,NUM);if(u<2)rect(184+c.measureText(typed).width+8,934,3,48,A);
+ const rows=[['Sidechain','侧链','让一个信号，控制另一个信号'],['压缩 / 动态','CONNECTION','让节奏拥有呼吸感'],['制作课 / 混音','LEARN BY DOING','从概念回到动手']];
+ rows.forEach((r,i)=>{let q=out((u-.95-i*.15)/.45);c.save();c.globalAlpha=q;let y=1060+i*133;rect(88,y,4,86,i===0?A:'#484a4c');txt(r[0],116,y+32,34,P,700);txt(r[1],893,y+28,19,M,500,MONO,'right');txt(r[2],116,y+78,26,M);c.restore()});
+}
+function drawPractice(u,t){
+ section(3,'TRAIN',u);title('把耳朵练准',495,u,82);
+ txt('猜猜这一段的速度',88,629,35,M,500);
+ const correct=u>=2.5;reveal(correct?'120':'???',82,908,256,correct?A:P,u,.2,600,NUM);txt('BPM',651,895,54,M,600,NUM);
+ // The dial resolves to the tempo of the actual original soundtrack.
+ let value=lerp(106,120,out((u-.5)/2));const x0=110,ww=770;
+ for(let i=0;i<=30;i++){let xx=x0+i*ww/30;line(xx,1107,xx,1107-(i%5?22:48),'#55595d',i%5?1:2);if(i%5===0)txt(String(100+i*2),xx,1155,24,M,500,MONO,'center')}
+ let xx=x0+(value-100)/60*ww;rect(xx-3,1004,6,119,A);c.beginPath();c.moveTo(xx,1127);c.lineTo(xx-9,1142);c.lineTo(xx+9,1142);c.closePath();c.fillStyle=A;c.fill();
+ [100,110,120,140].forEach((n,i)=>badge(String(n),88+i*209,1250,184,correct&&n===120));
+ note(correct?'不只听热闹，开始听懂细节':'听辨风格 · BPM 估速',1495);
+ txt('功能示意 · 跟着本片配乐试试看',88,1555,20,'#818588',400);
+}
+function drawMake(u,t){
+ section(4,'MAKE',u);title('让想法出声',495,u,84);
+ reveal('22',81,784,260,A,u,.12,600,NUM);txt('节制作课',416,755,45,P,600);txt('从第一声，到一段 LOOP',88,875,34,M,500);
+ rect(88,953,816,382,'#0c1014',4);stroke(88,953,816,382,'#45403a',4);label('LIVE PATCH / 8 STEPS',997,A);
+ let step=Math.floor(t/.25)%8;const ps=[[1,0,1,0,1,0,1,0],[0,0,1,0,0,0,1,0],[1,1,1,1,1,1,1,1]];
+ ['KICK','CLAP','HAT'].forEach((s,j)=>{txt(s,112,1068+j*93,22,M,500,MONO);for(let i=0;i<8;i++){let x=222+i*80,y=1026+j*93;let on=ps[j][i];rect(x,y,65,65,on?(step===i?P:A):'#1b2025',3);stroke(x,y,65,65,step===i?P:'#3f4448',3,step===i?3:1)}});
+ rect(222+step*80,1320,65,4,A);
+ badge('鼓组',88,1392,169,true);badge('低频',274,1392,169);badge('编曲',460,1392,169);badge('混音',646,1392,169);
+ note('边学边动手，把想法变成声音',1550);
+}
+function drawAutomix(u,t){
+ section(5,'AUTOMIX LAB',u);reveal('让下一首',84,493,100,P,u);reveal('接得漂亮',84,618,100,A,u,.14);
+ const aligned=u>=3.75,drop=u>=4;
+ label('PHRASE ALIGNMENT / 乐句对齐',773);
+ let shift=lerp(150,0,out((u-.6)/2.7));
+ [['A',877,0,2],['B',1100,shift,5]].forEach(([name,y,offset,seed])=>{
+ txt(name,88,y+12,41,P,600,NUM);rect(151,y-79,753,157,'#0c1014',3);stroke(151,y-79,753,157,'#363a3f',3);
+ c.save();c.beginPath();c.rect(152,y-78,751,155);c.clip();
+ for(let i=0;i<12;i++)line(151+i*75+offset,y-78,151+i*75+offset,y+78,'#ffffff0c');
+ wave(159+offset,y,730,112,t, name==='A'?A:'#b7c0c9',seed);
+ let dx=570+offset;rect(dx,y-79,3,158,A);txt('DROP',dx+12,y-44,20,A,500,MONO);c.restore();
+ });
+ if(aligned){line(572,956,572,1021,A,2);txt('LOCKED',610,998,20,A,500,MONO)}
+ txt(drop?'DOUBLE DROP':'MERGE → HOLD',88,1330,drop?83:62,drop?A:P,700,NUM);
+ txt(drop?'两首的能量，在同一拍落下':'让结构、速度与低频各就各位',88,1410,31,P,500);
+ txt('排 Set · 乐句对齐 · 自动过渡',88,1525,31,M,500);
+}
+function drawProduct(u,t){
+ label('AUTOMIX / REAL PRODUCT CAPTURE',334,A);
+ reveal('你的下一段',84,495,86,P,u);reveal('SET',80,703,184,A,u,.12,700,NUM);
+ let q=out(u/.8),zoom=1+range(u,0,4)*.035;let im=imgs.automix;
+ c.save();c.translate(496,1058+(1-q)*70);c.scale(zoom,zoom);c.beginPath();c.roundRect(-408,-277,816,595,5);c.clip();
+ if(im)c.drawImage(im,0,0,im.width,Math.min(im.height,617),-408,-277,816,595);c.restore();stroke(88,781,816,595,'#706044',5);
+ txt('本地引擎 · 离线预渲染',88,1480,35,P,500);txt('可导出音频与 Rekordbox 播放列表',88,1540,25,M);
+}
+function drawEnd(u,t){
+ label('FROM FEELING TO MAKING',344,A);
+ reveal('电音档案',80,586,162,P,u);
+ reveal('听得懂',88,749,90,P,u,.15);reveal('才做得出来',88,863,90,A,u,.27);
+ ['听','查','练','做'].forEach((s,i)=>{let x=88+i*211;line(x,1029,x+182,1029,i===0?A:LINE,2);txt(s,x,1127,66,i===0?A:P,700);txt(['LISTEN','SEARCH','TRAIN','MAKE'][i],x,1177,20,M,500,MONO)});
+ rect(88,1300,814,108,A,4);txt('从「听」进来',127,1372,44,BG,800);txt('↗',857,1376,53,BG,500,FONT,'right');
+ txt('把喜欢做出来',88,1480,38,P,500);
+ txt('ELECTRONIC MUSIC FIELD NOTES',88,1552,23,M,500,MONO);
+}
+/* --- Cover compositions: 4:3 landscape and 3:4 portrait --- */
+function coverBg(w,h,gx,gy){
+ rect(0,0,w,h,BG);
+ let g=c.createRadialGradient(gx,gy,10,gx,gy,Math.max(w,h)*.62);
+ g.addColorStop(0,'#181d24');g.addColorStop(1,BG);rect(0,0,w,h,g);
+ c.save();c.strokeStyle='#ffffff07';c.lineWidth=1.4;
+ for(let j=0;j<14;j++){c.beginPath();for(let x=-40;x<=w+40;x+=8){let z=x/w;let y=gy+Math.sin(z*5.3+j*.14)*h*.12+Math.sin(z*9.1-j*.2)*h*.055+j*10;if(x===-40)c.moveTo(x,y);else c.lineTo(x,y)}c.stroke()}
+ c.restore();
+}
+function coverBars(x,y,w,h,seed=1,alpha=1){
+ const n=Math.round(w/7),bw=4;
+ c.save();c.globalAlpha=alpha;
+ for(let i=0;i<n;i++){let z=i/n,shape=.16+.84*Math.pow(Math.sin(z*Math.PI),.75);
+  let v=shape*(.16+.58*hash(i+seed*311)+.26*Math.sin(i*.43+seed*.7));
+  v*= .62+.38*Math.abs(Math.sin(z*13.4+seed*.9));
+  rect(x+i*7,y-h*v/2,bw,h*v,i%23===0?P:A)}
+ c.restore();
+}
+function coverChrome(w,pad,top){
+ mark(pad,top+90,.62);txt('电音档案',pad+48,top+74,24,P,800);txt('FIELD NOTES',pad+48,top+98,14,M,500,MONO);
+ txt('SOUND / UNDERSTOOD',w-pad,top+72,15,M,500,MONO,'right');
+ line(pad,top+128,w-pad,top+128,'#ffffff16');
+}
+function coverStats(x,y,size=28,gap=38){
+ const items=[['92','个风格'],['1,376','条资料'],['22','节制作课']];
+ let xx=x;
+ for(const [n,s] of items){txt(n,xx,y,size*1.62,A,600,NUM);let nw=c.measureText(n).width;txt(s,xx+nw+10,y,size*.8,P,500);xx+=nw+10+c.measureText(s).width+gap}
+}
+function coverWaveLabel(x,y,w,label){
+ txt(label,x,y,17,M,500,MONO);txt('乐句对齐 · 双 DROP · 本地离线渲染',x+w,y,19,A,500,FONT,'right');
+}
+function renderCoverLandscape(){
+ const w=1600,h=1200;canvas.width=w;canvas.height=h;c.setTransform(1,0,0,1,0,0);c.globalAlpha=1;
+ coverBg(w,h,1160,430);
+ coverChrome(w,96,64);
+ txt('FROM FEELING TO MAKING',96,272,23,A,500,MONO);
+ txt('电音档案',92,472,172,P,800);
+ txt('听得懂，',96,618,74,P,500);txt('才做得出来',96,712,74,A,600);
+ coverStats(96,818,27,44);
+ rect(96,890,620,78,A,3);
+ txt('从「听」进来，把喜欢做出来',124,942,29,BG,700);
+ txt('本地引擎 · 离线预渲染 · 自动接歌',96,1068,23,M,500);
+ txt('FILM / 48s · 120 BPM',1504,1068,18,M,500,MONO,'right');
+ line(96,1112,1504,1112,'#ffffff18');
+ // right: four ways in, plus automix strip
+ rect(900,228,604,792,'#0c1014',4);stroke(900,228,604,792,'#453d2c',4);
+ txt('FOUR WAYS IN / 四条路，一个起点',936,286,18,A,500,MONO);
+ line(936,306,1468,306,'#ffffff18');
+ const rows=[['01','听','LISTEN','听出区别'],['02','查','SEARCH','查到门道'],['03','练','TRAIN','把耳朵练准'],['04','做','MAKE','让想法出声']];
+ rows.forEach((r,i)=>{let y=376+i*132;txt(r[0],936,y,18,i===0?A:'#8b8d8d',500,MONO);txt(r[1],1002,y+18,64,i===0?A:P,700);txt(r[2],1090,y-4,17,M,500,MONO);txt(r[3],1090,y+34,22,i===0?P:'#b9b6ae',500);line(936,y+64,1468,y+64,'#ffffff10')});
+ txt('AUTOMIX LAB / 自动接歌',936,900,17,A,500,MONO);
+ coverBars(936,956,532,84,6,.95);
+ txt('LISTEN / SEARCH / TRAIN / MAKE',936,1004,14,'#777c80',500,MONO);
+ return canvas.toDataURL('image/jpeg',.95);
+}
+function renderCoverPortrait(){
+ const w=1080,h=1440;canvas.width=w;canvas.height=h;c.setTransform(1,0,0,1,0,0);c.globalAlpha=1;
+ coverBg(w,h,760,520);
+ coverChrome(w,72,56);
+ txt('FROM FEELING TO MAKING',72,258,21,A,500,MONO);
+ txt('电音档案',68,438,138,P,800);
+ txt('听得懂，',72,562,66,P,500);txt('才做得出来',72,648,66,A,600);
+ coverStats(72,740,24,34);
+ const names=[['01','听','LISTEN'],['02','查','SEARCH'],['03','练','TRAIN'],['04','做','MAKE']];
+ names.forEach((r,i)=>{let x=72+i*234;line(x,806,x+206,806,i===0?A:LINE,2);txt(r[0],x,844,14,i===0?A:M,500,MONO);txt(r[1],x,918,62,i===0?A:P,700);txt(r[2],x,952,15,M,500,MONO)});
+ txt('AUTOMIX LAB / 自动接歌',72,1042,17,A,500,MONO);txt('PHRASE ALIGNED / DOUBLE DROP',1008,1042,15,M,500,MONO,'right');
+ coverBars(72,1116,936,86,9,.95);
+ line(72,1184,1008,1184,'#ffffff16');
+ rect(72,1216,936,74,A,3);
+ txt('从「听」进来，把喜欢做出来',100,1264,27,BG,700);txt('↗',976,1266,34,BG,500,FONT,'right');
+ txt('ELECTRONIC MUSIC FIELD NOTES',72,1364,15,'#777c80',500,MONO);
+ return canvas.toDataURL('image/jpeg',.95);
+}
+window.renderCover=function(kind){
+ boxes=[];c.setTransform(1,0,0,1,0,0);
+ return kind==='landscape'?renderCoverLandscape():renderCoverPortrait();
+};
+const drawers=[drawHook,drawBrand,drawListen,drawSearch,drawPractice,drawMake,drawAutomix,drawProduct,drawEnd];
+window.render=function(t){
+ t=clamp(t,0,47.999);boxes=[];let idx=scenes.findIndex(s=>t>=s[1]&&t<s[2]);let u=t-scenes[idx][1];
+ c.setTransform(1,0,0,1,0,0);c.globalAlpha=1;bg(t);
+ c.save();
+ // Editorial camera vocabulary: settle, pull-back, lateral track, slow push.
+ let z=idx===0?lerp(1.025,1,smooth(u/4)):idx===2?lerp(1.02,1,smooth(u/6)):idx===4?lerp(1,1.018,smooth(u/6)):1;
+ let dx=idx===3?lerp(10,0,smooth(u/6)):0;
+ c.translate(496+dx,960);c.scale(z,z);c.translate(-496,-960);
+ drawers[idx](u,t);c.restore();
+ // Thin ruled edge sweep introduces a new chapter without flashing the background.
+ if(idx>0&&u<.38){let x=lerp(88,904,out(u/.38));line(x,301,x,1565,`rgba(255,176,0,${(1-u/.38)*.30})`,2)}
+ chrome(t,idx);
+ return {scene:scenes[idx][0],time:t};
+};
+window.audit=function(times){let checked=0,violations=[];for(const t of times){window.render(t);for(const b of boxes){checked++;if(![b.x,b.y,b.w,b.h].every(Number.isFinite)||b.x<50||b.x+b.w>1000||b.y<140||b.y+b.h>1735)violations.push({t,...b})}}return{checked,violations,width:W,height:H,duration:48}};
+window.contactSheet=function(times){const sheet=document.createElement('canvas');sheet.width=5*216;sheet.height=Math.ceil(times.length/5)*410;const q=sheet.getContext('2d');q.fillStyle='#15171a';q.fillRect(0,0,sheet.width,sheet.height);times.forEach((t,i)=>{window.render(t);let x=i%5*216,y=Math.floor(i/5)*410;q.drawImage(canvas,x,y,216,384);q.fillStyle='#ffb000';q.font='15px Consolas';q.fillText(t.toFixed(2)+'s',x+9,y+403)});return sheet.toDataURL('image/jpeg',.92)};
+(async()=>{
+ for(const name of ['automix','home']){imgs[name]=await new Promise((resolve,reject)=>{let im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(Error('Missing asset '+name));im.src='assets/'+name+'.png'})}
+ await document.fonts.ready;window.READY=true;window.render(0);
+ if(location.search.includes('render=1')){document.body.classList.add('render');return;}
+ let playing=false,at=0,base=0;const audio=document.querySelector('audio'),scrub=document.querySelector('#scrub');
+ function frame(now){if(playing){at=(now-base)/1000;if(at>=48){playing=false;at=0;audio.pause();audio.currentTime=0}window.render(at);scrub.value=at;document.querySelector('#clock').textContent='0:'+String(Math.floor(at)).padStart(2,'0')}requestAnimationFrame(frame)}requestAnimationFrame(frame);
+ document.querySelector('#play').onclick=()=>{playing=!playing;if(playing){base=performance.now()-at*1000;audio.currentTime=at;audio.play().catch(()=>{})}else audio.pause()};
+ scrub.oninput=()=>{at=+scrub.value;base=performance.now()-at*1000;audio.currentTime=at;window.render(at)};
+})();
+</script></html>

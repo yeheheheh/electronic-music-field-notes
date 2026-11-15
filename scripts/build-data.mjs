@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { buildModule } from '../kb-module/lib/build.mjs';
 
@@ -9,6 +10,9 @@ const DIST = path.join(ROOT, 'kb-module', 'dist');
 const DATA = path.join(ROOT, 'data');
 
 fs.mkdirSync(DATA, { recursive: true });
+
+// 课程元数据也是生成物；先刷新它，再构建知识库并同步网页数据。
+execFileSync(process.execPath, [path.join(ROOT, 'scripts', 'build-dj-course.mjs')], { stdio: 'inherit' });
 
 const result = buildModule({ configPath: CONFIG });
 const kb = fs.readFileSync(path.join(DIST, 'kb.json'), 'utf8');

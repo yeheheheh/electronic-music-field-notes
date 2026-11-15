@@ -1,0 +1,45 @@
+电音档案 · Automix Portable — Third-party notices
+=================================================
+
+This package bundles the following third-party software. The djcore engine
+itself is MIT-licensed; its source is available at
+https://github.com/yeheheheh/rekordbox-automix
+
+Python 3.12
+  License: PSF-2.0
+  https://docs.python.org/3/license.html
+
+PyTorch 2.9.1 / torchaudio
+  License: BSD-3-Clause
+  Full text: runtime/Lib/site-packages/torch-*.dist-info/LICENSE
+  https://github.com/pytorch/pytorch
+
+Demucs (htdemucs)
+  License: MIT
+  https://github.com/facebookresearch/demucs
+
+FFmpeg 7.1 (gyan.dev essentials build, GPLv3)
+  License: GPL-3.0
+  Full text: licenses/GPL-3.0.txt
+  Binary source: https://www.gyan.dev/ffmpeg/builds/
+  FFmpeg source: https://ffmpeg.org/download.html
+  FFmpeg is invoked as a separate executable by the engine.
+
+Rubber Band Library r3
+  License: GPL-2.0
+  Full text: licenses/GPL-2.0.txt
+  Source: https://breakfastquay.com/rubberband/
+  rubberband.exe is invoked as a separate executable by the engine.
+
+Python dependencies
+  librosa (ISC), numpy (BSD-3), scipy (BSD-3), numba (BSD-2),
+  llvmlite (BSD-2), soundfile (BSD-3), fastapi (MIT), uvicorn (BSD-3),
+  pydantic (MIT), mcp (MIT), pyrekordbox (MIT), pyloudnorm (MIT),
+  imageio-ffmpeg (BSD-2), httpx (BSD-3), sqlalchemy (MIT),
+  networkx (BSD-3), sympy (BSD-3), scikit-learn (BSD-3).
+  Full license texts are included in the corresponding
+  runtime/Lib/site-packages/*.dist-info/ directories.
+
+The bundled learning site (site/) is part of the same project and is provided
+for personal learning use. Audio examples are synthesized in the browser; no
+copyrighted recordings are included.

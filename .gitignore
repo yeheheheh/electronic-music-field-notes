@@ -15,6 +15,7 @@ kb-module/.kb-build-*/
 
 # 分享壳页产物（scripts/build-share.mjs 生成，含 60 张 og 图约 11 MB，不入库）
 dist-share/
+dist-site/
 
 # 数据编辑前的本地快照（*.bak），不随仓库分发
 .backup/
@@ -27,3 +28,15 @@ vendor/floating-ui/
 Thumbs.db
 node_modules/
 *.log
+
+# DJ 引擎：本地运行时与可再生的大文件
+dj-engine/.venv/
+dj-engine/tools/
+dj-engine/outputs/
+dj-engine/models/
+dj-engine/fixtures/audio/*.wav
+dj-engine/.pytest_cache/
+dj-engine/packaging/build/
+dj-engine/packaging/dist/
+__pycache__/
+*.pyc

@@ -107,6 +107,28 @@ test('context is prompt-ready and includes citations', () => {
   assert.ok(context.markdown.length <= 4000);
 });
 
+test('DJ beginner queries expand to the right guide', () => {
+  const beat = kb.search('对拍怎么练', { limit: 3 });
+  assert.equal(beat.results[0].id, 'guide:dj-04');
+  const cue = kb.search('CUE 点怎么设', { limit: 3 });
+  assert.equal(cue.results[0].id, 'guide:dj-03');
+  const faq = kb.search('没有设备能学 DJ 吗', { limit: 3 });
+  assert.ok(faq.results.some((item) => item.id === 'guide:dj-faq'));
+});
+
+test('common DJ misspellings are normalized', () => {
+  const result = kb.search('beatmach', { limit: 3 });
+  assert.equal(result.meta.normalizedQuery, 'beatmatch');
+  assert.ok(result.results.some((item) => item.id === 'glossary:beatmatch'));
+});
+
+test('context diversity includes more than one content type', () => {
+  const context = kb.context('CUE 点怎么设', { limit: 4, maxChars: 6000 });
+  const types = new Set(context.results.map((item) => item.type));
+  assert.ok(types.size >= 2, `types=${[...types].join(',')}`);
+  assert.ok(context.citations.length > 0);
+});
+
 test('manifest exposes tools and source hashes', () => {
   const manifest = kb.manifestInfo();
   assert.ok(manifest.tools.includes('kb_search'));

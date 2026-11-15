@@ -3,9 +3,11 @@
 一个以「制作课 + 知识库」为双核心的电子音乐学习站。制作课按真实做歌流程推进，知识库负责查原理、找关系、回源头；两者共用同一套知识源与合成音频示例。
 
 - **制作课**：8 个阶段、22 节短课，从工程模板做到导出成曲。每课有产出、完成标准、前置课与相关知识库链接。
-- **知识库**：1376 个条目、158 个知识文档、1541 个检索分块；支持全库检索、风格图谱、大族/条目/文档详情。
-- **听感层**：92 条风格的「一句人话 + 三个听点 + 8 秒试听」，4 × 5 速度×律动矩阵（含「没有鼓」一行），1080 × 1440 分享卡；覆盖全部 24 个大族，其余条目走同族回退，都有声音。
+- **知识库**：1376 个条目、187 个知识文档、1628 个检索分块；支持全库检索、风格图谱、大族/条目/文档详情。
+- **风格树**：1406 个节点按风格分类逐级展开，点一行就听到它的声音并展开下级，节点可折叠。桌面端横向列式、移动端纵向缩进树，当前路径有色条与面包屑双重提示。每行都能试听（专属配方 121 条，其余走同族回退，全库仅 19 条无声），详情卡里还有 1080 × 1440 分享卡。
 - **DJ 工具**：两首歌能不能接（BPM / 律动 / 低频三条规则）、BPM 邻接表、现场判定；离线速查卡断网可用。
+- **自动接歌台**：选风格或一句 prompt → 排 set → 五种过渡（长混音 / 低频交换 / 滤波 / 硬切 / 双 drop）→ Demucs 分轨 + 逐拍 EQ/变速渲染；支持示例曲与 **Rekordbox 7 曲库**，可写播放列表或导出 XML。
+- **DJ 修炼手册**：41 集、约 2 小时 38 分的 B 站课程知识笔记与 8 篇章节导读已进入知识库；新增 `#/dj/course` 逐集阅读页，支持按章目录、全集切换、章节导读互链与「课程」检索过滤。
 - **工作室**：六个可动手模块（节拍、和弦、低音、旋律、音色、结构），共用一个 4 小节循环，边播边改。
 - **课程内动手**：每节课的「动手」区块可就地展开对应工作室模块，不跳页、不打断阅读。
 - **练习 / 实验室**：风格听辨、BPM 估速、七组音色实时开关。
@@ -223,17 +225,49 @@ node scripts/serve.mjs
 
 建议使用较新的 Chrome / Edge。页面适配了桌面、平板和手机，并尊重 `prefers-reduced-motion`。浏览器默认不允许自动播放，点击任意“播放 / 试听”按钮后声音才会启动；页头右侧可以随时静音。
 
+### 自动接歌台（可选本地引擎）
+
+`#/dj/automix` 默认读 `data/dj-automix-demo.js`，不需要任何后端。要真实分析曲目并重新渲染：
+
+```bash
+cd dj-engine
+uv venv .venv --python 3.12
+uv pip install --python .venv/Scripts/python.exe -e .
+.venv/Scripts/python -m djcore.adapters.api   # 127.0.0.1:5601
+```
+
+另开一个终端启动站点；开发服务器会把 `/api` 代理到 5601：
+
+```bash
+node scripts/serve.mjs
+```
+
+站点按自身目录解析 API：本地根路径是 `/api`，部署在 `/music/` 时是 `/music/api`。线上没有代理或引擎时会自动回退 demo；若要线上启用真实引擎，需要把 `/music/api` 反代到 `127.0.0.1:5601`，并加 Basic Auth/限流，不要直接把 5601 暴露公网。`/music/api/rekordbox/*` 能读写本地库，默认只应在可信环境开放。
+
+引擎依赖、GPU 版 PyTorch、fixture 与 MCP 接入见 [dj-engine/README.md](dj-engine/README.md)。独立插件仓库（含一键安装包）：[yeheheheh/rekordbox-automix](https://github.com/yeheheheh/rekordbox-automix)。
+
+Rekordbox 7 桥接：
+
+```bash
+cd dj-engine
+.venv/Scripts/python -m djcore.adapters.cli rekordbox status
+.venv/Scripts/python -m djcore.adapters.cli rekordbox scan
+```
+
+写库前必须关闭 Rekordbox；程序会自动备份 `master.db`。开发验收请先指定 DB 副本：`--db-path outputs/rekordbox-test/master.db`。
+
 ## 部署
 
 线上地址：**http://47.94.222.72/music/**（阿里云，nginx `location /music/` + alias）。
 
-站点只依赖静态文件，**不部署 `kb-module/`、`scripts/`、`docs/`、`sources/`**。需要上传的就是页面本体加 `data/`：
+站点只依赖静态文件，**不部署 `kb-module/`、`dj-engine/`、`scripts/`、`docs/`、`sources/`**。需要上传的就是页面本体、`data/` 与 `assets/`：
 
 ```bash
-# 1. 打包（页面本体 + 数据 + vendor）
+# 1. 打包（页面本体 + 数据 + demo 音频 + vendor）
 tar czf /tmp/em-site.tar.gz index.html app.js audio.js share.js sw.js studio.js \
-  styles.css styles-edm.css styles-studio.css styles-listen.css \
-  data/kb.js data/web.js data/curated.js data/course.js data/fingerprints.js data/listen.js \
+  styles.css styles-edm.css styles-studio.css styles-listen.css styles-home.css styles-dj.css styles-start.css styles-tree.css \
+  data/kb.js data/web.js data/curated.js data/course.js data/dj-course.js data/start.js data/fingerprints.js data/listen.js data/dj-automix-demo.js data/tree.js \
+  assets/dj-automix \
   vendor/floating-ui-1.8.0-umd
 
 # 2. 先在服务器备份现网版本（可回滚）
@@ -249,8 +283,13 @@ node scripts/build-share.mjs --origin http://47.94.222.72 --path /music/ --image
 scp -r dist-share/g dist-share/s dist-share/og root@47.94.222.72:/var/www/electronic-music/serve/
 
 # 4. 验证
-node scripts/regression/check-listen.mjs        # 本地听感层 49 项
-node scripts/regression/check-live-deploy.mjs   # 本轮改动是否真的上线
+node scripts/regression/check-listen.mjs        # 本地听感层 97 项（含矩阵页下线后的重定向与树深链）
+node scripts/regression/check-site-tree.mjs     # 风格树 54 项（主站 #/tree，按断点分别验列式与纵向树）
+node scripts/regression/check-tree-fold.mjs     # 风格树折叠与试听 28 项（点行试听+展开、三角折叠、移动端纵向树、老链接重定向、深链补全）
+node scripts/regression/check-tree-examples.mjs # 树详情例曲试听 26 项（渲染 + 真能播 + 互斥 + 切节点清理）
+node scripts/regression/check-listen-examples.mjs # 例曲与 30 秒预览 24 项（含数据卫生）
+node scripts/regression/check-live-tree.mjs     # 线上分支树 22 项（HTTP + 渲染 + 移动端）
+node scripts/regression/check-live-examples.mjs # 线上例曲 24 项（资源类型 + 真能播 + 自动播放 + 树例曲）
 node scripts/regression/live-check.mjs          # 端到端 28 项
 node scripts/regression/live-mobile.mjs         # 移动端 9 项
 ```
@@ -258,6 +297,8 @@ node scripts/regression/live-mobile.mjs         # 移动端 9 项
 要点：
 
 - **`data/genres.csv` 不用传**：它是模块产物，页面不引用。线上没这个文件，请求会 fallback 到 `index.html`。
+- **⚠️ SPA fallback 会掩盖漏传**：nginx 对任何不存在的路径都返回 `index.html`（**HTTP 200 + `Content-Type: text/html`**）。漏传一个 `.js` 时，浏览器会把 HTML 当脚本解析然后报语法错，但任何只看状态码的检查都会显示「200 正常」。所以验收必须看 `Content-Type`，不能只看 HTTP 状态。2026-11-13 部署分支树时就用这个方式确认了 `data/tree.js` 真的到位（`application/javascript` + 1,370,044B），而不是拿到了一个 200 的 HTML。
+- **验证部署完整性用 md5**：`diff <(本地 28 个文件的 md5) <(线上同样 28 个文件)` 比肉眼和状态码都可靠。
 - **`sw.js` 必须放在 `/music/` 根目录**：Service Worker 的作用域跟着文件位置走，放到子目录会让 `#/quick` 之外的路由拿不到缓存。改完前端要同步 `sw.js` 里的 `VERSION`，否则老访客会继续吃旧缓存。
 - **离线能力需要 HTTPS**：浏览器只在安全上下文（https 或 localhost）提供 `navigator.serviceWorker`。现在线上是 `http://IP`，所以 `#/quick` 能打开但没有真正的离线缓存；`check-listen.mjs` 在这种环境下会把两项标成 SKIP，不会假装通过。换域名 + 证书后自动生效，代码不用改。
 - **`data/` 是两套数据来源**：`#/library` 读 `kb.js`，`#/module` 读 `web.js`。两者必须同时更新，否则同一屏会出现两套数字。
@@ -314,19 +355,24 @@ node scripts/regression/live-mobile.mjs         # 移动端 9 项
 
 | 页面 | 内容 |
 | --- | --- |
-| 首页 | **四轨入口（听 / 查 / 练 / 做）**：每轨一个微可视化（速度×律动矩阵、搜索框、BPM 标尺、八阶段进度）、三条直达链接；上方是紧凑 hero + 可编辑的单小节鼓机，下方是「今天听这条」（可直接播 8 秒） |
-| 听 `#/listen` | 三问筛选（多快 / 鼓怎么落地 / 低音）、4 × 4 速度×律动矩阵、点任意风格即刻试听并出卡 |
+| 首页 | **四轨入口（树 / 查 / 练 / 做）**：每轨一个微可视化（风格分类缩进示意、搜索框、BPM 标尺、八阶段进度）、三条直达链接；上方是紧凑 hero + 可编辑的单小节鼓机，下方是「今天听这条」（可直接播 8 秒） |
+| 新手起步 `#/start` | 三条路径（听懂 / 学 DJ / 做歌）、7 天 21 个任务、制作课 / DJ 课 / 计划 / 现场清单四格进度、4 条常见问题；勾选保存在本机 |
+| 风格树 `#/tree` | 1406 个节点按分类逐级展开；**点行 = 试听 + 展开下级**，三角单独控制折叠；桌面端横向列式、移动端纵向缩进树；当前路径有色条 + 面包屑；支持搜索、键盘导航与深链 |
+| ~~听 `#/listen`~~ | **已下线**，重定向到风格树。老链接（含 `?s=g-xxx` 深链）会精确落到对应节点，不会 404 |
 | 现场速查 `#/quick` | 一屏一个风格，左右滑动切换，Service Worker 缓存后断网可用，可请求屏幕常亮 |
 | DJ 工具 `#/dj` | 过渡检查（三条规则 + 三条动作）、BPM 邻接表（点一下换 B）、现场判定（三问出候选并直接听） |
+| 自动接歌台 `#/dj/automix` | 选风格 / prompt → 排 4 首 set → 五种过渡规划 → 本地引擎渲染；可切到 Rekordbox 7 曲库，写播放列表或导出 XML；线上回退 demo |
+| DJ 现场手册 `#/dj/field-guide` | 出门前 / 到场 / 上台三章 24 项清单，支持勾选、进度、打印与重置 |
 | 风格卡 `#/card/:id` | 一张 1080 × 1440 的图 + 播放入口，给「发链接」用；正文仍只在条目页 |
 | 制作课 `#/learn` | 8 个阶段、22 课，显示总进度、阶段产出、每阶段知识库概念数与继续学习 |
 | 课时 `#/learn/:id` | 本课产出、概念、互动组件、制作任务、交付物、自检清单、前置课提示、相关知识库、阶段大纲、标记完成、上一课/下一课 |
-| 知识库 `#/library` | 双模块关系说明、全库检索入口、六大知识工具、大族概览 |
+| 知识库 `#/library` | 双模块关系说明、全库检索入口、七个工具入口（含 DJ 修炼手册）、大族概览 |
 | 全库检索 `#/search` | 覆盖条目、大族、指南、术语、乐器组、历史、现场与来源；同时显示相关课程 |
 | 知识文档 `#/doc/:id` | 任意模块文档的完整正文、来源、BPM、所属大族、Agent ID 与相关课程 |
 | 风格图谱 `#/atlas` | 24 个正式大族 + 5 个补充收纳桶 + 1 个待归档分组；搜索、BPM 筛选、分类树、随机条目 |
+| 分支树 `#/tree` | 列式分支树：每一列是一层上下位关系，往右点继续深入；每个节点带播放圆钮（专属配方或同族回退）；详情卡显示听感、可试听的例曲与跨族派生关系；支持搜索直达、面包屑、↑↓/Enter/Esc 键盘操作与深链 |
 | 大族 / 条目 | 大族简介与下级分类（大族页顶部有「这一族的声音」）；条目页顶部是听感卡（L1 + 三个听点 + 试听 + 分享），下面的例曲可以点「试听 30 秒」播 Apple Music 的官方预览 |
-| 练习 `#/practice` | 风格听辨选择题与 BPM 估速训练，带得分与连对反馈 |
+| 练习 `#/practice` | 风格听辨、BPM 估速，以及 8 小节乐句计数训练（64 小节节拍器 + 边界点击 + 偏差反馈） |
 | 实验室 `#/lab` | 七组乐器实时开关、BPM 调节，边听边理解层次与频段分工 |
 | 专题页 | 听辨入门、结构与音色、历史、现场、术语、图谱说明 |
 | 知识库模块 `#/module` | 模块统计、CLI/MCP/HTTP 接入方式、来源快照与本地 API 检测 |
@@ -340,22 +386,36 @@ node scripts/regression/live-mobile.mjs         # 移动端 9 项
 index.html                 网页骨架
 styles.css                 基础布局与旧版视觉层
 styles-edm.css             Club Rig 视觉系统（后加载，覆盖基础层）
-styles-listen.css          听感层：矩阵、听感卡、分享弹层、DJ 页、现场速查（只新增，不覆盖）
+styles-listen.css          听感层：听感卡、分享弹层、现场速查（矩阵页已下线，矩阵专属样式已删）
 styles-home.css            首页四轨机架：紧凑 hero、四轨面板、微可视化、今天听这条
+styles-dj.css              DJ 课程页、章节导读互链、DJ 课程进度、自动接歌台
+styles-start.css           新手起步、7 天计划、DJ 现场手册、乐句计数
+styles-tree.css            风格树：桌面横向列式 + 移动端纵向缩进树、行内播放、折叠钮、路径色条、详情卡（只新增，不覆盖）
 studio.js                  工作室：六个交互模块、项目状态、进度、内嵌模式、课程来源条
 styles-studio.css          工作室样式 + 内嵌模式与课程「动手」入口（步进网格、推子、结构编排、移动端）
-app.js                     网页路由、搜索、筛选、渲染、音频交互、听感层与 DJ 工具
+app.js                     网页路由、搜索、筛选、渲染、音频交互、风格树与 DJ 工具
 audio.js                   Web Audio 合成引擎、风格循环、配方渲染、实验室、结构播放器、主总线分析器
 share.js                   风格卡：canvas 绘制、导出 PNG、长按保存用的 <img> 弹层
-sw.js                      Service Worker：缓存 18 个核心文件，让 #/quick 断网可用（改版要改 VERSION）
+sw.js                      Service Worker：缓存核心文件，让 #/quick 断网可用（改版要改 VERSION）
 data/                      网页消费的数据（生成物不要手改）
   kb.js / kb.json          条目与大族
   curated.js               精编内容
   web.js                   全库检索 bundle（chunks + docs + manifest）
   course.js                制作课数据：8 阶段 22 课、产出/前置/组件/kbLinks（手工维护）
+  dj-course.js             DJ 课程目录：41 集、8 章、时长与 B 站链接（生成）
+  dj-automix-demo.js       自动接歌台 demo：SetPlan + RenderResult + 音频路径（由 djcore export-demo 生成）
+  start.js                 新手路径、7 天计划、现场清单（手工维护）
   fingerprints.js          55 个合成配方（24 个基础 + 变体），纯数据，不含合成逻辑
   listen.js                听感层文案：60 条 L1/听点/场景 + 29 个大族默认值（手工维护）
+  tree.js                  分支树索引：1406 个节点的 children/sound/派生关系/搜索串（由 scripts/build-tree.mjs 生成）
   genres.csv               条目表
+assets/dj-automix/         自动接歌台 demo 音频（由 djcore export-demo 生成）
+dj-engine/                 本地 DJ 引擎：分析 / 排 set / 过渡规划 / Demucs 渲染 / API / MCP
+                          详见 dj-engine/README.md；不参与站点静态部署
+scripts/export-genre-models.mjs
+                           从 data/listen.js 导出 92 条风格模型给 dj-engine
+scripts/regression/check-dj-automix.mjs
+                           自动接歌台回归：demo 数据、页面 DOM、横向溢出
 docs/information-architecture.md
                            双模块信息架构、制作课模型、关联规则与交互流程
 docs/listener-layer-plan.md
@@ -368,12 +428,13 @@ dist-share/                分享壳页产物（生成，不进仓库；由 scri
   s/<slug>/index.html      短链，纯跳转
   og/<slug>.png            1080 × 1440 分享图
 scripts/build-data.mjs     构建模块，并把模块产物同步为网页数据
+scripts/build-dj-course.mjs 刷新 data/dj-course.js 的 41 集目录
 scripts/build-share.mjs    生成 60 组分享壳页与 og 图（可选 --images，需要本地服务与 Chrome）
 scripts/serve.mjs          本地静态服务器
 scripts/regression/        全站回归与线上验证（不参与部署）
   probe.html               被测探针页（iframe 加载站点，注入点击与溢出检测）
   run.sh                   全站回归：5 档宽度 × 15 路由 × 2 状态
-  check-listen.mjs         听感层验收：数据完整性 + 音频 + 卡片 + 离线 + 49 项断言
+  check-listen.mjs         听感层验收：数据完整性 + 音频 + 卡片 + 离线 + 63 项断言
   live-check.mjs           线上端到端：CDP 驱动，28 项功能检查
   live-mobile.mjs          线上移动端抽查：3 档窄屏 × 3 节课
 sources/                   原始资料参考副本
@@ -417,9 +478,35 @@ kb-module/
 - **八段结构播放器**：16 小节、约 30 秒的结构示例，依次走过 Intro、Breakdown、Build-up、Drop、第二次间奏、第二次渐进、第二次 Drop、Outro，并高亮当前段落。
 - **听辨练习**：风格四选一与 BPM 估速；带得分、连对与即时反馈。片段都是合成循环。
 - **全局声音控制**：页头声音开关、底部播放条、进度条与音量；切换页面时播放状态保持，可随时停止。
-- **不使用音频文件**：所有声音由 `audio.js` 通过 Web Audio API 实时合成，没有原曲录音，也没有版权音频下载。
+- **本站合成的部分不使用音频文件**：风格骨架、制作课、音色实验室、结构播放器、听辨练习全部由 `audio.js` 通过 Web Audio API 实时合成，没有原曲录音，也没有版权音频下载。
+- **例曲试听走 Apple Music 官方 30 秒预览**：这是唯一的第三方音频，由 Apple 托管，本站不存储、不转存。听感卡、条目页与**分支树详情卡**的例曲都带「试听 30 秒」按钮；曲库里没有的（地下 / 白标发行）改跳 B 站或网易云搜索。
+- **同一时刻只有一个声音**：合成骨架与例曲预览互斥（点树行圆钮会先停掉例曲，反之亦然），避免两段不相关的音乐叠着响。切换节点或离开页面时，例曲预览跟着停 —— 不留「响着但界面上没有按钮能停」的游离音频。
 
 首次播放需要用户点击（浏览器自动播放策略）。如果浏览器不支持 Web Audio，按钮会提示不可用，但文字、图谱与检索仍然正常工作。
+
+### 例曲搜索：为什么需要三级候选词
+
+例曲数据是手工整理的，作者把编辑备注直接写进了字段：`Sutra [1:06起始]`、`Closer【专辑：As Is】`、`早期——Acceleration`、`(偏Eurodance/Italodance) Oh Le Le`。这些字面量喂给 Apple 曲库一定搜不到 —— 全库 1654 条例曲里有 232 条（14%）带这类批注。
+
+清理分两档，因为「显示」和「搜索」的要求相反：
+
+| 用途 | 函数 | 策略 |
+|---|---|---|
+| 给眼睛看 | `cleanExampleText` | **保守**。只剥掉一眼可知不是曲名的（方括号批注、`【】`、开头整段括号说明、`早期——`前缀）。`Rain Falls (David's 12" Soakin Wet Mix)` 里的版本说明保留 —— 那是有效信息。只改写 2.8% |
+| 给 API 用 | `cleanForSearch` | **激进**。在显示版基础上再去掉所有括号内容（含 `feat.`），Apple 曲库存的是 `Rain Falls` |
+
+搜索按三级候选词逐级放宽：① 清理后的「艺人 + 曲名」→ ② 只留曲名（艺人名写法差异大，反而是噪声）→ ③ 原始串（清理可能误伤，留退路）。
+
+实测（60 条样本）：**旧策略命中 72%，新策略 100%**。救回的例子：`Don Diablo 早期——Acceleration`（旧查询搜不到，新查询 `Don Diablo Acceleration` 命中）、`Kabza De Small / DJ Maphorisa Alalahi (feat. Vyno Miller...)`（去掉 feat. 后命中）。
+
+### 自动播放
+
+听感卡右上角有「进入即播」开关，默认开。进入任何风格页会自动依次试这一页的例曲，第一首能播的就播；全都没预览就静默退回按钮状态。
+
+- **不弹错误**。自动播放拿不到预览是常态（地下发行不进 Apple 曲库），用户没做任何操作，弹「播放失败」只会让人困惑。
+- **被浏览器拦下就停手**。换多少首都一样会被拦，不必重试。
+- **合成骨架与原曲预览互斥**。点「播放 8 秒」会先停掉预览，反之亦然 —— 否则两段不相关的音乐叠着响。
+- **开关状态存 localStorage**（`em.listen.autoplay`），跨页面保持。
 
 ## 数据来源
 
@@ -438,6 +525,10 @@ kb-module/
 4. **Electronic Music Wiki / List of Genres**（Fandom 社区协作编辑）
    - 26 个顶层分类、约 500 个风格名的外部参照表，用于校对本库的顶层覆盖度并定位缺口。
    - 只作分类参照与覆盖度校对，不复制原文段落；听辨特征须与本地资料交叉验证后才写入。
+5. **《DJ 修炼手册 · 基础篇》**（B 站，电音大X / 视频作者）
+   - 41 集（38 节正课 + 课程说明/结课/预告）、约 2 小时 38 分；从装备与 Rekordbox 讲起，覆盖 CUE、对拍、EQ/Filter 混音与 8 种接歌方法。
+   - 视频没有公开字幕。先用 SiliconFlow SenseVoice 做 ASR，再把 ASR 整理稿改写为第三人称知识笔记；删除自我介绍、寒暄、训练包推广与演示歌词，并按行业术语校对。原始 ASR 与 ASR 整理稿归档在 `sources/dj-course/`，知识库正文使用 `sources/dj-course/notes/`。
+   - 知识笔记不是逐字稿，也不替代原视频；课程页与文档页都标注了整理来源。
 
 原始链接与转写校正见页面「来源与勘误」。
 
@@ -447,7 +538,7 @@ kb-module/
 
 - `taxonomy.md`：分类库 Markdown。
 - `curated.json`：精编内容（含首页文案与入口）。
-- `transcripts/`：转写资料。
+- `transcripts/`：知识笔记与转写资料。
 - `source-map.json`：来源、作者、链接与许可说明。
 
 修改输入后运行：
@@ -458,9 +549,14 @@ node kb-module/bin/kb.mjs build
 
 # 或：构建模块并同步网页数据
 node scripts/build-data.mjs
+
+# 改了分类树结构或声音回退规则后，重建分支树索引
+node scripts/build-tree.mjs
 ```
 
-`scripts/build-data.mjs` 会先生成 `kb-module/dist/`，再生成网页使用的 `data/kb.json`、`data/kb.js`、`data/curated.js`、`data/web.js` 与 `data/genres.csv`。网页不再单独维护解析逻辑。
+`scripts/build-data.mjs` 会先刷新 `data/dj-course.js`，再生成 `kb-module/dist/`，最后生成网页使用的 `data/kb.json`、`data/kb.js`、`data/curated.js`、`data/web.js` 与 `data/genres.csv`。网页不再单独维护解析逻辑。
+
+`scripts/build-tree.mjs` 单独生成 `data/tree.js`（分支树索引）。它读 `kb.js` + `listen.js` + `fingerprints.js`，把上下位关系、声音回退结果与派生关系预计算好。**改了条目结构或 `listen.js` 的声音映射后必须重跑**，否则树页会缺节点或声音对不上。构建期会自检断链、孤儿与环引用，不自洽就直接失败。
 
 课程内容 `data/course.js` 是手工编排的编辑层，不由模块生成；修改课时、任务、产出或 `kbLinks` 后刷新页面即可，不需要重新构建知识库。
 
@@ -515,19 +611,19 @@ MCP 工具：`kb_search`、`kb_context`、`kb_get`、`kb_families`、`kb_manifes
 ```bash
 node scripts/serve.mjs                                  # 先起本地服务
 ./scripts/regression/run.sh                             # 全站回归（150 组合，约 5 分钟）
-node scripts/regression/check-listen.mjs                # 听感层 + DJ 工具 + 离线（49 项）
+node scripts/regression/check-listen.mjs                # 听感层 + DJ 工具 + 离线（63 项）
 node scripts/regression/check-p0.mjs                    # 结构门控（10 项）
-node scripts/regression/check-p1.mjs                    # 九模块骨架（25 项）
-node scripts/regression/check-p2.mjs                    # 信号链模块（35 项）
+node scripts/regression/check-p1.mjs                    # 九模块骨架（26 项）
+node scripts/regression/check-p2.mjs                    # 信号链模块（44 项）
 node scripts/regression/check-chain-layout.mjs          # 信号链面板布局：重叠/截断/越界（7 项）
 node scripts/regression/check-embed-narrow.mjs          # 内嵌窄屏（2 项）
 node scripts/regression/check-spectrum-codes.mjs        # 频谱代号（6 项）
-node scripts/regression/check-live-deploy.mjs           # 部署后专项：本轮改动真的上线了吗（15 项）
+node scripts/regression/check-live-deploy.mjs           # 部署后专项：本轮改动真的上线了吗（44 项）
 node scripts/regression/live-check.mjs                  # 线上端到端（28 项）
 node scripts/regression/live-mobile.mjs                 # 线上移动端（9 项）
 ```
 
-`check-live-deploy.mjs` 与 `live-check.mjs` 的分工：后者验证「站点还能不能用」，前者验证「新东西上没上线」（信号条根数、补充桶分区、九模块标签这类具体特性）。每次部署后跑它，能避免「文件传了但页面还是旧的」这种静默失败。
+`check-live-deploy.mjs` 与 `live-check.mjs` 的分工：后者验证「站点还能不能用」，前者验证「新东西上没上线」（顶部继续学习、拼写修正、AI 复制、自动接歌台、新手起步、现场清单、乐句计数、DJ 课程进度、章节导读回链、九模块标签这类具体特性）。每次部署后跑它，能避免「文件传了但页面还是旧的」这种静默失败。
 
 跑子集做冒烟：`ROUTES_OVERRIDE="learn/kick-and-bass|library" WIDTHS_OVERRIDE="320 1920" ./scripts/regression/run.sh`
 
@@ -556,3 +652,7 @@ node scripts/regression/live-mobile.mjs                 # 线上移动端（9 �
 ## 版权与引用
 
 本库是二次整理，不是原文档或视频的替代品。引用条目解释与例曲时，请优先引用原文档与视频，并注明本库只是整理。若要公开分发，请先确认原始资料的授权范围。
+
+**音频边界**：本站不托管任何原曲录音。合成部分（风格骨架、制作课、音色实验室、结构播放器、听辨练习）是 Web Audio 实时生成的，不是原曲。例曲试听使用 Apple Music 的官方 30 秒预览（iTunes Search API），音频由 Apple 托管，本站只做跳转与播放控制，不下载、不转存、不代理。曲库里没有的条目，页面给的是 B 站 / 网易云的搜索链接，用户在原平台收听。
+
+**没有抓取 Ishkur's Guide to Electronic Music 的音频。** 那个站点的例曲是受版权保护的商业唱片原声，站方对非浏览器请求返回 406，明确在防抓取；即使技术上能拿到，把原曲音频搬到另一个公开站点也不属于合理使用。所以本项目只借鉴了「看得见分叉」这种**浏览方式**，声音全部来自 Apple 官方预览接口。

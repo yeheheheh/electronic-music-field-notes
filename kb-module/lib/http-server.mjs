@@ -92,7 +92,13 @@ export async function startHttpServer({ kb, port = 8787, host = '127.0.0.1' } = 
         return;
       }
       if (request.method === 'POST' && pathname === '/search') {
-        const body = JSON.parse((await readBody(request)) || '{}');
+        let body;
+        try {
+          body = JSON.parse((await readBody(request)) || '{}');
+        } catch {
+          sendJson(response, 400, { error: '请求体必须是合法 JSON' });
+          return;
+        }
         const query = body.query || body.q || '';
         if (!String(query).trim()) {
           sendJson(response, 400, { error: 'query 不能为空' });

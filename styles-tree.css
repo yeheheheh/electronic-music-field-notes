@@ -1,0 +1,1244 @@
+/* ==========================================================================
+   分支树 / BRANCH TREE
+   --------------------------------------------------------------------------
+   借鉴 Ishkur's Guide 的两件事：
+     1. 分类以「看得见分叉」的树出现，而不是下拉菜单
+     2. 每个节点都可播放 —— 结构本身就是播放列表
+
+   比它简单的地方：
+     1. 没有画布、没有缩放平移 —— 列 = 层级，你永远知道自己在哪
+     2. 面包屑 + 搜索直达 —— 不用靠记忆找路
+     3. 移动端不锁缩放，改为横向列滚动 + 吸附
+
+   视觉沿用站内 Club Rig 令牌：焦油黑打底，琥珀 = 当前位置 / 主操作，
+   洋红 = 正在播放；大族色只出现在 3px 边条上，不铺面。
+
+   本文件依赖 styles.css / styles-edm.css 先加载（变量与基础组件）。
+   ========================================================================== */
+
+.tree-page {
+  --col-w: clamp(196px, 19vw, 256px);
+  padding: 22px 0 96px;
+}
+
+/* --------------------------------------------------------------------------
+   Toolbar：搜索 + 三步入门口令
+   -------------------------------------------------------------------------- */
+
+.tree-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tree-search {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 420px;
+  min-width: 0;
+}
+
+.tree-search input {
+  width: 100%;
+  padding: 9px 34px 9px 32px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.16s var(--snap);
+}
+
+.tree-search input:focus { border-color: var(--sodium); }
+
+.tree-search input::placeholder { color: var(--muted-2); }
+
+.tree-search .tree-search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted-2);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.tree-search .tree-search-clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: transparent;
+  color: var(--muted-2);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tree-search.has-value .tree-search-clear { display: block; }
+
+.tree-search .tree-search-clear:hover { color: var(--sodium); }
+
+.tree-hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted-2);
+  letter-spacing: 0.04em;
+}
+
+.tree-hint b { color: var(--muted); font-weight: 600; }
+
+.tree-hint kbd {
+  padding: 1px 5px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   搜索结果下拉
+   -------------------------------------------------------------------------- */
+
+.tree-results {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 340px;
+  overflow: auto;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-2);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.tree-results.is-open { display: block; }
+
+.tree-result {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 10px;
+  width: 100%;
+  padding: 8px 11px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--paper);
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.tree-result:last-child { border-bottom: 0; }
+
+.tree-result:hover,
+.tree-result.is-active { background: rgba(255, 176, 0, 0.1); }
+
+.tree-result-name {
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree-result-name mark {
+  background: transparent;
+  color: var(--sodium);
+  font-weight: 600;
+}
+
+.tree-result-path {
+  grid-column: 1 / -1;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree-result-kind {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+  align-self: center;
+}
+
+.tree-results-empty {
+  padding: 14px 12px;
+  font-size: 12px;
+  color: var(--muted-2);
+}
+
+/* --------------------------------------------------------------------------
+   色标尺：24 个大族的快速跳转
+   -------------------------------------------------------------------------- */
+
+.tree-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.tree-rail-dot {
+  width: 22px;
+  height: 5px;
+  border: 0;
+  padding: 0;
+  background: var(--family, var(--archive));
+  opacity: 0.42;
+  cursor: pointer;
+  transition: opacity 0.14s var(--snap), transform 0.14s var(--snap);
+}
+
+.tree-rail-dot:hover { opacity: 0.9; transform: scaleY(1.6); }
+
+.tree-rail-dot.is-active { opacity: 1; transform: scaleY(2); }
+
+/* --------------------------------------------------------------------------
+   面包屑
+   -------------------------------------------------------------------------- */
+
+.tree-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  min-height: 22px;
+}
+
+.tree-crumb {
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap);
+}
+
+.tree-crumb:hover { color: var(--sodium); border-color: var(--sodium); }
+
+.tree-crumb.is-current {
+  color: var(--ink);
+  background: var(--sodium);
+  border-color: var(--sodium);
+  font-weight: 600;
+}
+
+.tree-crumb-sep { color: var(--muted-2); font-size: 11px; }
+
+/* --------------------------------------------------------------------------
+   主体：列区 + 详情
+   -------------------------------------------------------------------------- */
+
+.tree-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 18px;
+  align-items: start;
+}
+
+.tree-columns {
+  display: flex;
+  gap: 0;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.tree-columns::-webkit-scrollbar { height: 8px; }
+
+.tree-columns::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+.tree-col {
+  flex: 0 0 var(--col-w);
+  min-width: 0;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-col:last-child { border-right: 0; }
+
+.tree-col-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 11px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-2);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.tree-col-head .mono {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+}
+
+.tree-col-head b {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.tree-rows {
+  overflow-y: auto;
+  max-height: min(64vh, 620px);
+  padding: 4px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.tree-rows::-webkit-scrollbar { width: 6px; }
+
+.tree-rows::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+.tree-group-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 11px 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  border-top: 1px solid var(--line);
+}
+
+.tree-group-label:first-child { border-top: 0; }
+
+/* --------------------------------------------------------------------------
+   行
+   -------------------------------------------------------------------------- */
+
+.tree-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 3px minmax(0, 1fr) auto 12px;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 8px 0 5px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background 0.12s var(--snap);
+}
+
+.tree-row:hover { background: rgba(242, 237, 227, 0.045); }
+
+.tree-row.is-selected { background: rgba(255, 176, 0, 0.11); }
+
+.tree-row.is-selected .tree-row-name { color: var(--paper); font-weight: 600; }
+
+.tree-row.is-path .tree-row-edge { opacity: 1; }
+
+/* 当前路径上的行：左侧留一条色条，把「从根到选中」这条链串起来。
+   比只高亮单个选中项更能说明「我从哪来」。 */
+.tree-row.is-path::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--family, var(--archive));
+  opacity: 0.85;
+}
+
+/* 已展开的那一列：列头点亮，一眼看出这一列是从哪展开的 */
+.tree-col.is-open-col > .tree-col-head {
+  border-bottom-color: var(--sodium);
+}
+
+.tree-col.is-open-col > .tree-col-head .mono { color: var(--sodium); }
+
+.tree-row.is-playing .tree-row-name { color: var(--laser-text, #ff7397); }
+
+.tree-row-play {
+  /* 30px：全页最高频的操作，鼠标和手指都得够得着。
+     不要因为「桌面端用鼠标」就缩小——指针同样需要目标面积。 */
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted-2);
+  font-size: 9px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap), background 0.14s var(--snap);
+}
+
+.tree-row:hover .tree-row-play { color: var(--paper); border-color: var(--line-strong); }
+
+.tree-row-play:hover { color: var(--sodium); border-color: var(--sodium); }
+
+.tree-row.is-playing .tree-row-play {
+  color: var(--ink);
+  background: var(--laser);
+  border-color: var(--laser);
+}
+
+.tree-row-play[disabled] { opacity: 0.28; cursor: not-allowed; }
+
+.tree-row-edge {
+  width: 3px;
+  height: 18px;
+  background: var(--family, var(--archive));
+  opacity: 0.72;
+}
+
+.tree-row-name {
+  font-size: 12.5px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.tree-row-count {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+}
+
+.tree-row-tag {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+  padding: 1px 4px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted-2);
+}
+
+.tree-row-tag.is-own { border-color: var(--sodium); color: var(--sodium); }
+
+/* 待补：原始资料没写全的条目。标出来比装作完整更诚实 */
+.tree-row-tag.is-stub { border-color: var(--line-strong); color: var(--muted-2); border-style: dashed; }
+
+.tree-row-chev {
+  font-size: 12px;
+  color: var(--muted-2);
+  opacity: 0;
+  transition: opacity 0.12s var(--snap);
+}
+
+.tree-row.has-kids .tree-row-chev { opacity: 0.5; }
+
+.tree-row:hover .tree-row-chev { opacity: 1; color: var(--sodium); }
+
+/* 折叠钮：可点击，所以要有独立的目标面积。
+   视觉上仍然很轻 —— 它是个辅助控件，不该和播放钮抢注意力。
+   宽高给到 28×30：指针和手指都够得着，又不至于把行名挤掉。 */
+.tree-row-chev.is-toggle {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 30px;
+  padding: 0;
+  margin-right: -4px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.62;
+}
+
+.tree-row-chev.is-toggle:hover { opacity: 1; color: var(--sodium); }
+
+/* 已展开的那一支：箭头常亮，路径上的一眼能看出走到哪了 */
+.tree-row.is-open .tree-row-chev { opacity: 0.92; color: var(--sodium); }
+
+/* 播放进度：贴在行底部的一条 2px 线，读的是音频时钟 */
+.tree-row-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--laser);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   详情面板
+   -------------------------------------------------------------------------- */
+
+.tree-detail {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  min-height: 260px;
+}
+
+.tree-detail-head {
+  padding: 14px 15px 12px;
+  border-bottom: 1px solid var(--line);
+  border-left: 3px solid var(--family, var(--archive));
+}
+
+.tree-detail-kicker {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+}
+
+.tree-detail-title {
+  margin: 6px 0 0;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.tree-detail-zh {
+  margin: 5px 0 0;
+  font-size: 11.5px;
+  color: var(--muted-2);
+}
+
+.tree-detail-bpm {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.tree-detail-bpm strong {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--sodium);
+  line-height: 1;
+}
+
+.tree-detail-bpm span {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+}
+
+.tree-bpm-track {
+  position: relative;
+  height: 4px;
+  margin-top: 8px;
+  background: rgba(242, 237, 227, 0.08);
+}
+
+.tree-bpm-track i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--sodium);
+}
+
+.tree-bpm-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--muted-2);
+}
+
+.tree-detail-body { padding: 13px 15px 15px; }
+
+.tree-detail-l1 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.72;
+  color: var(--paper);
+}
+
+.tree-detail-hear {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 5px;
+}
+
+.tree-detail-hear li {
+  position: relative;
+  padding-left: 15px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.tree-detail-hear li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--sodium);
+  font-size: 9px;
+  top: 3px;
+}
+
+.tree-detail-when {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border-left: 2px solid var(--cyan);
+  background: rgba(47, 216, 255, 0.05);
+  font-size: 11.5px;
+  line-height: 1.62;
+  color: var(--muted);
+}
+
+.tree-detail-note {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  font-size: 11.5px;
+  line-height: 1.62;
+  color: var(--muted-2);
+}
+
+.tree-detail-note b { color: var(--muted); }
+
+/* 派生关系：跨族源头 / 后继 / 相关 */
+.tree-rel {
+  margin: 0 0 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.tree-rel h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* 派生关系的 chip 复用全站的 .chip / .chip-row，
+   这里只补「跨族」这一条语义：虚线 = 不在同一个大族里。 */
+.tree-rel .chip.is-cross {
+  border-style: dashed;
+  border-color: var(--line-strong);
+  color: var(--muted-2);
+}
+
+.tree-rel .chip.is-cross:hover {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.tree-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 12px 0 0;
+}
+
+.tree-detail-children { margin-top: 14px; }
+
+.tree-detail-children h3 {
+  margin: 0 0 7px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tree-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tree-chip {
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  cursor: pointer;
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap);
+}
+
+.tree-chip:hover { color: var(--sodium); border-color: var(--sodium); }
+
+/* 例曲：曲名 + 30 秒预览按钮。面板只有 320px 宽，按钮排到曲名下方，
+   横着放会把曲名挤成一行两个字。 */
+.tree-examples-block { margin-bottom: 12px; }
+
+/* h3 里那截说明：小字、跟标签同色，不抢标题 */
+.tree-examples-block h3 span {
+  margin-left: 6px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted-2);
+}
+
+.tree-examples {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+  counter-reset: tree-ex;
+}
+
+.tree-example-item {
+  display: grid;
+  gap: 4px;
+  padding-left: 20px;
+  position: relative;
+  border-left: 2px solid var(--line);
+}
+
+/* 序号用计数器画，和听感卡的例曲列表保持同一种读法 */
+.tree-example-item::before {
+  counter-increment: tree-ex;
+  content: counter(tree-ex, decimal-leading-zero);
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-2);
+}
+
+.tree-example-meta {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.tree-example-title {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.tree-example-artist {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--muted-2);
+  overflow-wrap: anywhere;
+}
+
+.tree-example-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 9px;
+}
+
+/* 例曲按钮在窄面板里要够大。听感卡那套是 9px 字号，在这里按不动。 */
+.tree-example-actions .example-preview {
+  font-size: 9.5px;
+  padding: 5px 9px;
+  min-height: 26px;
+}
+
+.tree-example-item .example-feedback {
+  margin-top: 0;
+}
+
+.tree-examples-note {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: var(--muted-2);
+  margin: 9px 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   窄屏纵向树
+   --------------------------------------------------------------------------
+   横向列式在手机上要左右滑才看得见下一层，新手常常滑不到、
+   也看不出「这一支下面还有东西」。改成一屏从上往下读：
+   缩进表示层级，三角控制折叠，参考线把分支串起来。 */
+
+.tree-layout.is-flat { grid-template-columns: minmax(0, 1fr); }
+
+.tree-flat {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  max-height: 68vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.tree-flat::-webkit-scrollbar { width: 6px; }
+
+.tree-flat::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+.tree-flat-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 11px 12px 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  border-top: 1px solid var(--line);
+}
+
+.tree-flat-group:first-child { border-top: 0; }
+
+.tree-flat-group b {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.tree-flat-row {
+  position: relative;
+  display: grid;
+  /* 第一列宽度 = 折叠钮宽度，窄了会把三角压扁 */
+  grid-template-columns: 32px 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px;
+  /* 缩进跟着层级走。用 padding-left 而不是 margin：整行仍可点击，
+     手指点在缩进空白处也算这一行。 */
+  padding: 0 12px 0 calc(6px + var(--depth, 0) * 17px);
+  min-height: 44px;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: background 0.12s var(--snap);
+}
+
+.tree-flat-row:hover { background: rgba(242, 237, 227, 0.045); }
+
+/* 层级参考线：每一层缩进处画一条淡竖线，让分支关系看得见。
+   位置对齐三角按钮的视觉中心（缩进起点 + 三角半宽），
+   否则线会穿过三角、看着像渲染错位。 */
+.tree-flat-row::before {
+  content: '';
+  position: absolute;
+  left: calc(6px + var(--depth, 0) * 17px + 16px);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+  opacity: 0;
+}
+
+.tree-flat-row[data-depth="0"]::before { display: none; }
+
+.tree-flat-row:not([data-depth="0"])::before { opacity: 0.55; }
+
+/* 大族色条：一级节点用所属大族的颜色标出来，和桌面端同一套色 */
+.tree-flat-row[data-depth="0"] { border-left-color: var(--family, var(--archive)); }
+
+/* 当前路径：从根到选中项的这一条要一眼可辨，
+   否则用户展开几层之后就不知道自己站在哪一支上。
+   用左侧色条而不是改字色 —— 名字本身还要区分「可点/待补」等状态，
+   混在一起会互相盖掉。 */
+.tree-flat-row.is-path {
+  border-left-color: var(--family, var(--sodium));
+  background: rgba(255, 176, 0, 0.045);
+}
+
+.tree-flat-row.is-path .tree-flat-name { color: var(--paper); }
+
+/* 选中项是路径终点，再重一档：底色更实、色条更亮 */
+.tree-flat-row.is-selected {
+  background: rgba(255, 176, 0, 0.13);
+  border-left-color: var(--sodium);
+}
+
+.tree-flat-row.is-selected .tree-flat-name { color: var(--paper); font-weight: 600; }
+
+.tree-flat-row.is-playing .tree-flat-name { color: var(--laser-text, #ff7397); }
+
+.tree-flat-row.is-playing .tree-flat-play {
+  color: var(--ink);
+  background: var(--laser);
+  border-color: var(--laser);
+}
+
+.tree-flat-toggle {
+  /* 32×32：窄屏全屏触控，三角是折叠的唯一入口，
+     给足目标面积，手指点偏一点也能中 */
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted-2);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tree-flat-toggle.is-leaf { opacity: 0.3; cursor: default; font-size: 14px; }
+
+.tree-flat-row.has-kids .tree-flat-toggle { color: var(--sodium); }
+
+.tree-flat-row.is-open > .tree-flat-toggle { color: var(--sodium); }
+
+.tree-flat-play {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted-2);
+  font-size: 9px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.14s var(--snap), border-color 0.14s var(--snap);
+}
+
+.tree-flat-row:hover .tree-flat-play { color: var(--paper); border-color: var(--line-strong); }
+
+.tree-flat-play[disabled] { opacity: 0.28; cursor: not-allowed; }
+
+.tree-flat-name {
+  font-size: 13px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.tree-flat-row .tree-row-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--laser);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   响应式
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1199px) {
+  .tree-layout { grid-template-columns: minmax(0, 1fr); }
+  .tree-detail { max-width: 640px; }
+  .tree-rows { max-height: 52vh; }
+}
+
+@media (max-width: 767px) {
+  .tree-page { padding: 14px 0 80px; }
+  /* 窄屏走纵向树，横向列式不再参与渲染（JS 那边也已按断点切换） */
+  .tree-flat { max-height: none; }
+  /* 缩进量比宽屏略收，窄屏每一像素都要省给行名 */
+  .tree-flat-row { padding-left: calc(6px + var(--depth, 0) * 15px); }
+  .tree-flat-row::before { left: calc(6px + var(--depth, 0) * 15px + 16px); }
+  .tree-detail-title { font-size: 19px; }
+  .tree-hint { display: none; }
+  .tree-search { flex: 1 1 100%; max-width: none; }
+  /* 面包屑吸顶：纵向树会滚很长，路径提示不能跟着滚出屏幕 */
+  .tree-crumbs {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 5;
+    background: var(--ink);
+    padding: 8px 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* ==========================================================================
+   Ishkur 资料层 / ISHKUR REFERENCE
+
+   来自 Ishkur's Guide 的独立编目。它是一套「外来说法」，所以视觉上要跟
+   本库自己的正文分开：用左侧竖线 + 略暗的字色，读起来像引文而不是站内观点。
+   ========================================================================== */
+
+.ishkur-section {
+  border-top: 1px solid var(--line-strong);
+  margin-top: 8px;
+  padding-top: 28px;
+}
+
+.ishkur-section-head h2 { margin-bottom: 6px; }
+.ishkur-section-head .section-sub { max-width: 62ch; }
+
+.ishkur-note {
+  margin: 10px 0 0;
+  padding: 8px 12px;
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted-2);
+  font-size: 13px;
+}
+
+.ishkur-entry { margin-top: 26px; }
+
+.ishkur-head { margin-bottom: 14px; }
+.ishkur-head h3 {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+.ishkur-head .ishkur-zh {
+  margin-left: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+.ishkur-meta,
+.ishkur-aka {
+  margin: 4px 0 0;
+  color: var(--muted-2);
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+}
+
+/* 正文：左侧竖线标出「这是别人的说法」 */
+.ishkur-body {
+  border-left: 2px solid var(--line);
+  padding-left: 16px;
+  margin: 0 0 18px;
+}
+.ishkur-p {
+  margin: 0 0 13px;
+  line-height: 1.78;
+  font-size: 15px;
+  color: var(--paper);
+}
+.ishkur-p:last-child { margin-bottom: 0; }
+/* 未翻译的段落：字色压暗一档，让人一眼看出这段还是原文 */
+.ishkur-p.is-en {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ishkur-en-tag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  vertical-align: 2px;
+}
+
+/* 配图 */
+.ishkur-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+.ishkur-figure {
+  margin: 0;
+  flex: 1 1 220px;
+  max-width: 340px;
+}
+/* 少数原站配图抓不到（源站限流）。加载失败时整块收起，不留破图占位。 */
+.ishkur-figure.is-missing { display: none; }
+.ishkur-figures.is-empty { display: none; }
+.ishkur-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--ink-2);
+}
+.ishkur-figure figcaption {
+  margin-top: 6px;
+  color: var(--muted-2);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* 例曲清单 */
+.ishkur-tracks { margin: 0 0 18px; }
+.ishkur-sub-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.ishkur-more-hint { color: var(--muted-2); font-size: 12px; }
+
+.ishkur-track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.ishkur-track-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ishkur-track-year {
+  flex: 0 0 42px;
+  color: var(--muted-2);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.ishkur-track-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.ishkur-track-song {
+  font-size: 14px;
+  color: var(--paper);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ishkur-track-artist {
+  font-size: 12px;
+  color: var(--muted-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ishkur-track-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ishkur-links { margin-top: 4px; }
+
+/* 风格树详情面板里的紧凑版 */
+.ishkur-compact .ishkur-compact-body {
+  border-left: 2px solid var(--line);
+  padding-left: 12px;
+  margin: 8px 0 12px;
+}
+.ishkur-compact .ishkur-p { font-size: 13.5px; line-height: 1.7; margin-bottom: 9px; }
+.ishkur-compact .ishkur-p.is-en { font-size: 12.5px; }
+.ishkur-compact .ishkur-track-song { font-size: 13px; }
+.ishkur-compact-note {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+}
+.ishkur-compact-note a { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+
+/* 大族页汇总 */
+.ishkur-family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.ishkur-family-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--ink-2);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.ishkur-family-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+.ishkur-family-card strong { font-size: 14px; color: var(--paper); font-weight: 600; }
+.ishkur-family-card span { font-size: 12.5px; color: var(--muted); }
+.ishkur-family-card em { font-size: 11.5px; color: var(--muted-2); font-style: normal; }
+
+@media (max-width: 720px) {
+  .ishkur-body { padding-left: 12px; }
+  .ishkur-track-item { flex-wrap: wrap; gap: 6px; }
+  .ishkur-track-meta { flex-basis: calc(100% - 54px); }
+  .ishkur-track-actions { flex-basis: 100%; padding-left: 54px; }
+  .ishkur-figure { flex-basis: 100%; max-width: none; }
+  .ishkur-family-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tree-rail-dot,
+  .tree-row,
+  .tree-row-play,
+  .tree-crumb,
+  .tree-rel .chip,
+  .ishkur-family-card { transition: none; }
+}
+
+/* 例曲查询中的加载态：iTunes 查询要几秒，按钮要有反馈，
+   否则用户会以为「点了没反应」再点一次，把查询叠起来。 */
+.tree-row-play.is-loading,
+.tree-flat-play.is-loading {
+  opacity: 0.55;
+  cursor: progress;
+  animation: treePlayPulse 1.1s ease-in-out infinite;
+}
+
+.button-primary.is-loading {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+@keyframes treePlayPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.25; }
+}

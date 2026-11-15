@@ -17,7 +17,7 @@
   "build": {
     "chunkMaxChars": 2200,
     "chunkOverlap": 200,
-    "includeTranscripts": false
+    "includeTranscripts": true
   },
   "retrieval": {
     "defaultLimit": 6,
