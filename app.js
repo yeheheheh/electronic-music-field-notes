@@ -2897,8 +2897,8 @@
       if (treeIsNarrow()) {
         treeState.expanded.add(key);
       } else {
-        const at = treeState.path.indexOf(key);
-        treeState.path = at >= 0 ? treeState.path.slice(0, at + 1) : [...treeState.path, key];
+        // 按真实祖先链重建列，而不是「已在 path 里就截断、否则追加」
+        treeState.path = treePathFor(key);
       }
     }
     treePaintRows();
@@ -2933,8 +2933,14 @@
       return;
     }
     const at = treeState.path.indexOf(key);
-    if (at >= 0) treeState.path = treeState.path.slice(0, at);
-    else treeState.path = [...treeState.path, key];
+    if (at >= 0) {
+      // 收起：砍掉它自己与右侧所有列
+      treeState.path = treeState.path.slice(0, at);
+    } else {
+      // 展开同列里的另一个分支：按祖先链重建。直接追加会把这一支
+      // 接到当前链尾（也就是挂到别的父级下），层级会串成假血缘。
+      treeState.path = treePathFor(key);
+    }
     treePaintRows();
     treeUpdateURL();
     if (at < 0) {
@@ -2948,8 +2954,9 @@
   function treeDescend(key) {
     const node = treeNode(key);
     if (!node || !node.children.length) return;
-    const at = treeState.path.indexOf(key);
-    treeState.path = at >= 0 ? treeState.path.slice(0, at + 1) : [...treeState.path, key];
+    // 「继续往下」= 展开这一支：列要按真实祖先链重建，
+    // 否则从详情卡跳到同层另一支时会把旧链留在左边。
+    treeState.path = treePathFor(key);
     treeState.selected = key;
     treePaintRows();
     treePaintDetail();
@@ -3016,7 +3023,15 @@
         // 手改 hash 也会这样。不补祖先链的话，选中项落在没渲染的列里，
         // 详情卡显示着它、列表上却一处高亮都没有。
         const chain = treeAncestorChain(key);
-        if (chain.length > treeState.path.length) treeState.path = chain;
+        /* 判「现有 path 是否已经展开到它的父级」，而不是比长度：
+           残留的旧路径（上一条 deep link 留下的）可能更长，却和 sel 毫无关系，
+           留着就会变成「选中 Deep House、面包屑却写着 Techno › Minimal Techno」。
+           显式 path 能覆盖 sel 的父级时才保留 —— 那种情况下用户是想看更宽的范围。 */
+        const parentKey = (treeNode(key) || {}).parent || null;
+        const pathCovers = parentKey
+          ? treeState.path.includes(parentKey)
+          : treeState.path.length === 0;
+        if (!pathCovers) treeState.path = chain;
       }
     }
   }
@@ -3033,6 +3048,18 @@
       chain.unshift(cursor.key);
     }
     return chain;
+  }
+
+  /* 展开某个节点所需的完整 path：祖先链 + 自身。
+     不能用 treeState.path.indexOf(key) 判断它在第几列 —— 两者不是一回事：
+     点的是同一列里的另一个分支时，key 根本不在 path 里，indexOf 返回 -1，
+     「追加到链尾」会把不相关的一支接到已有链后面，层级立刻串成
+     「House › Deep House › Electro House」这种假血缘。
+     按 parent 上溯重建，path 永远等于真实祖先链，列数恒定等于深度 + 1。 */
+  function treePathFor(key) {
+    const node = treeNode(key);
+    if (!node) return treeState.path.slice();
+    return [...treeAncestorChain(key), key];
   }
 
   // 搜索：只搜名字与别名，命中后把整条路径展开，而不是只给一个孤立结果
@@ -3091,10 +3118,18 @@
       treeApplyParams(route.params);
     }
     if (!treeState.selected && TREE.roots.length) {
-      const first = TREE.roots[0];
-      treeState.selected = first;
-      const node = treeNode(first);
-      if (node && node.children.length) treeState.path = [first];
+      // 深链只给了 path 没给 sel 时，选中最深展开的那个节点，
+      // 不要把 path 覆盖成首个大族 —— 那会让 ?path=... 的分享链接失效
+      // （用户打开链接看到的是 House，而不是链接里写的分支）。
+      const deepest = treeState.path[treeState.path.length - 1];
+      if (deepest) {
+        treeState.selected = deepest;
+      } else {
+        const first = TREE.roots[0];
+        treeState.selected = first;
+        const node = treeNode(first);
+        if (node && node.children.length) treeState.path = [first];
+      }
     }
     // 移动端：把选中节点的祖先链展开，否则深链进来只看到一排大族
     if (treeState.selected) treeExpandAncestors(treeState.selected);
@@ -3206,8 +3241,11 @@
       const crumb = event.target.closest('[data-tree-jump]');
       if (crumb) {
         const key = crumb.dataset.treeJump;
+        // 面包屑每段都是当前 path 的一环，截断到它即可；
+        // 若 key 不在 path 里（手改 hash 等），按祖先链重建而不是原样不动，
+        // 否则点了没反应，选中项还会落在没渲染的列里。
         const at = treeState.path.indexOf(key);
-        treeState.path = at >= 0 ? treeState.path.slice(0, at + 1) : treeState.path;
+        treeState.path = at >= 0 ? treeState.path.slice(0, at + 1) : treePathFor(key);
         treeState.selected = key;
         stopTreePlayIfAny();
         treePaintRows(); treePaintDetail(); treeUpdateURL();
@@ -3225,7 +3263,7 @@
       if (jump) {
         const key = jump.dataset.treeJump;
         const at = treeState.path.indexOf(key);
-        treeState.path = at >= 0 ? treeState.path.slice(0, at + 1) : treeState.path;
+        treeState.path = at >= 0 ? treeState.path.slice(0, at + 1) : treePathFor(key);
         treeState.selected = key;
         treePaintRows(); treePaintDetail(); treeUpdateURL();
       }

@@ -6,7 +6,7 @@
    改完前端记得同步 VERSION —— 否则老访客会继续吃旧缓存。
    ========================================================================== */
 
-const VERSION = 'em-archive-v15';
+const VERSION = 'em-archive-v16';
 const CORE = [
   './index.html',
   './styles.css',
