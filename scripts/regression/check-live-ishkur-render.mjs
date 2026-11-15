@@ -3,7 +3,7 @@
  *
  * 与 check-live-ishkur-images.mjs 的区别：那个只查 URL 可达性（HTTP 层），
  * 这个查浏览器里图片是否真的显示（渲染层）—— 覆盖 onerror 隐藏、
- * 路径拼接错误、CSP 拦截等只在浏览器里才暴露的问题。
+ * 路径拼接错误、CSP 拦截、lazy 加载等只在浏览器里才暴露的问题。
  *
  * 用法：node scripts/regression/check-live-ishkur-render.mjs
  */
@@ -13,7 +13,7 @@ import { launchChrome } from './cdp-launch.mjs';
 const ORIGIN = process.env.LIVE_ORIGIN || 'http://47.94.222.72';
 const PATH_PREFIX = '/music';
 // 带配图的条目（nodeId 取自 data/ishkur.js 的 byNode 映射）：
-// Electroclash 2 张、Synthwave 2 张、Asian Pop 4 张、Eurotrance 6 张
+// Electroclash 2 张、Synthwave 2 张、Asian Pop 4 张
 const TARGETS = ['g-19608', 'g-12730', 'g-18624'];
 
 const { wsUrl, close } = await launchChrome({ allow: [new RegExp('^' + ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/')] });
