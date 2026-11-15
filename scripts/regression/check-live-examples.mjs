@@ -204,17 +204,22 @@ try {
   })()`);
   check('线上树例曲能播（真拿到 Apple 预览）', treePlay.ok === true, `「${treePlay.term}」${treePlay.ok ? treePlay.waited + 'ms' : treePlay.why}`);
 
-  // 树行圆钮与例曲互斥：点合成播放要先停掉例曲
+  // 树播放钮与例曲互斥：点播放钮后，无论走随机例曲还是合成兜底，
+  // 两种声源不得同时响。
+  // 2026-11-15 播放逻辑改造：点播放钮默认随机播该节点例曲（不再直接播合成），
+  // 等待时间从 1.2s 放宽到 9s 以覆盖 iTunes 查询；断言语义从
+  // 「例曲按钮被停掉」改为「例曲与合成不同时响」。
   if (treePlay.ok) {
     const treeMix = await ev(`(async () => {
       document.querySelector('#treeDetail [data-tree-play]')?.click();
-      await new Promise((r) => setTimeout(r, 1200));
+      await new Promise((r) => setTimeout(r, 9000));
       return {
         examplePlaying: !!document.querySelector('.tree-example-item .example-preview.is-playing'),
         synthPlaying: window.EMAudio ? window.EMAudio.getState().playing : null,
       };
     })()`);
-    check('线上树例曲与合成不同时播', treeMix.examplePlaying === false, `例曲=${treeMix.examplePlaying} 合成=${treeMix.synthPlaying}`);
+    const exclusive = !(treeMix.examplePlaying && treeMix.synthPlaying);
+    check('线上树例曲与合成不同时播', exclusive, `例曲=${treeMix.examplePlaying} 合成=${treeMix.synthPlaying}`);
     await ev(`window.EMAudio && window.EMAudio.stop()`);
   } else {
     console.log('SKIP  线上树例曲与合成不同时播  — 未取到预览');
